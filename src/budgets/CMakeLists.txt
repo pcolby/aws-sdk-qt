@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSBUDGETS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsBudgets
+add_library(
+  QtAwsBudgets
   qtawsbudgetsglobal.h
   budgetsclient.h
   budgetsclient_p.h
@@ -151,9 +152,12 @@ add_library(QtAwsBudgets
   updatenotificationrequest.cpp
   updatenotificationresponse.cpp
   updatesubscriberrequest.cpp
-  updatesubscriberresponse.cpp)
+  updatesubscriberresponse.cpp
+)
 
 target_link_libraries(QtAwsBudgets
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsBudgets PRIVATE QTAWSBUDGETS_LIBRARY)

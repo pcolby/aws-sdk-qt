@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSECURITYHUB_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSecurityHub
+add_library(
+  QtAwsSecurityHub
   qtawssecurityhubglobal.h
   securityhubclient.h
   securityhubclient_p.h
@@ -349,9 +350,12 @@ add_library(QtAwsSecurityHub
   updatesecurityhubconfigurationrequest.cpp
   updatesecurityhubconfigurationresponse.cpp
   updatestandardscontrolrequest.cpp
-  updatestandardscontrolresponse.cpp)
+  updatestandardscontrolresponse.cpp
+)
 
 target_link_libraries(QtAwsSecurityHub
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSecurityHub PRIVATE QTAWSSECURITYHUB_LIBRARY)

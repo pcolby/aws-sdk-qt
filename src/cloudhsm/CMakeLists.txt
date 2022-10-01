@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCLOUDHSM_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsCloudHsm
+add_library(
+  QtAwsCloudHsm
   qtawscloudhsmglobal.h
   cloudhsmclient.h
   cloudhsmclient_p.h
@@ -133,9 +134,12 @@ add_library(QtAwsCloudHsm
   modifylunaclientrequest.cpp
   modifylunaclientresponse.cpp
   removetagsfromresourcerequest.cpp
-  removetagsfromresourceresponse.cpp)
+  removetagsfromresourceresponse.cpp
+)
 
 target_link_libraries(QtAwsCloudHsm
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsCloudHsm PRIVATE QTAWSCLOUDHSM_LIBRARY)

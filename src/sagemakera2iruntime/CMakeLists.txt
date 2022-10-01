@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSAGEMAKERA2IRUNTIME_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSageMakerA2IRuntime
+add_library(
+  QtAwsSageMakerA2IRuntime
   qtawssagemakera2iruntimeglobal.h
   sagemakera2iruntimeclient.h
   sagemakera2iruntimeclient_p.h
@@ -43,9 +44,12 @@ add_library(QtAwsSageMakerA2IRuntime
   starthumanlooprequest.cpp
   starthumanloopresponse.cpp
   stophumanlooprequest.cpp
-  stophumanloopresponse.cpp)
+  stophumanloopresponse.cpp
+)
 
 target_link_libraries(QtAwsSageMakerA2IRuntime
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSageMakerA2IRuntime PRIVATE QTAWSSAGEMAKERA2IRUNTIME_LIBRARY)

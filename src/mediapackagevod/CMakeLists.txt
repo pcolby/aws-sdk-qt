@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSMEDIAPACKAGEVOD_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsMediaPackageVod
+add_library(
+  QtAwsMediaPackageVod
   qtawsmediapackagevodglobal.h
   mediapackagevodclient.h
   mediapackagevodclient_p.h
@@ -115,9 +116,12 @@ add_library(QtAwsMediaPackageVod
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updatepackaginggrouprequest.cpp
-  updatepackaginggroupresponse.cpp)
+  updatepackaginggroupresponse.cpp
+)
 
 target_link_libraries(QtAwsMediaPackageVod
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsMediaPackageVod PRIVATE QTAWSMEDIAPACKAGEVOD_LIBRARY)

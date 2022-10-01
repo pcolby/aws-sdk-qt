@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSAUTOSCALINGPLANS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsAutoScalingPlans
+add_library(
+  QtAwsAutoScalingPlans
   qtawsautoscalingplansglobal.h
   autoscalingplansclient.h
   autoscalingplansclient_p.h
@@ -49,9 +50,12 @@ add_library(QtAwsAutoScalingPlans
   getscalingplanresourceforecastdatarequest.cpp
   getscalingplanresourceforecastdataresponse.cpp
   updatescalingplanrequest.cpp
-  updatescalingplanresponse.cpp)
+  updatescalingplanresponse.cpp
+)
 
 target_link_libraries(QtAwsAutoScalingPlans
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsAutoScalingPlans PRIVATE QTAWSAUTOSCALINGPLANS_LIBRARY)

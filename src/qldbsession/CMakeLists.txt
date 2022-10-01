@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSQLDBSESSION_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsQldbSession
+add_library(
+  QtAwsQldbSession
   qtawsqldbsessionglobal.h
   qldbsessionclient.h
   qldbsessionclient_p.h
@@ -19,9 +20,12 @@ add_library(QtAwsQldbSession
   qldbsessionrequest.cpp
   qldbsessionresponse.cpp
   sendcommandrequest.cpp
-  sendcommandresponse.cpp)
+  sendcommandresponse.cpp
+)
 
 target_link_libraries(QtAwsQldbSession
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsQldbSession PRIVATE QTAWSQLDBSESSION_LIBRARY)

@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCOMPUTEOPTIMIZER_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsComputeOptimizer
+add_library(
+  QtAwsComputeOptimizer
   qtawscomputeoptimizerglobal.h
   computeoptimizerclient.h
   computeoptimizerclient_p.h
@@ -121,9 +122,12 @@ add_library(QtAwsComputeOptimizer
   putrecommendationpreferencesrequest.cpp
   putrecommendationpreferencesresponse.cpp
   updateenrollmentstatusrequest.cpp
-  updateenrollmentstatusresponse.cpp)
+  updateenrollmentstatusresponse.cpp
+)
 
 target_link_libraries(QtAwsComputeOptimizer
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsComputeOptimizer PRIVATE QTAWSCOMPUTEOPTIMIZER_LIBRARY)

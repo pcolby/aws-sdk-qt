@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSES_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSes
+add_library(
+  QtAwsSes
   qtawssesglobal.h
   sesclient.h
   sesclient_p.h
@@ -439,9 +440,12 @@ add_library(QtAwsSes
   verifyemailaddressrequest.cpp
   verifyemailaddressresponse.cpp
   verifyemailidentityrequest.cpp
-  verifyemailidentityresponse.cpp)
+  verifyemailidentityresponse.cpp
+)
 
 target_link_libraries(QtAwsSes
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSes PRIVATE QTAWSSES_LIBRARY)

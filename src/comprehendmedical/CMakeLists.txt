@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCOMPREHENDMEDICAL_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsComprehendMedical
+add_library(
+  QtAwsComprehendMedical
   qtawscomprehendmedicalglobal.h
   comprehendmedicalclient.h
   comprehendmedicalclient_p.h
@@ -169,9 +170,12 @@ add_library(QtAwsComprehendMedical
   stoprxnorminferencejobrequest.cpp
   stoprxnorminferencejobresponse.cpp
   stopsnomedctinferencejobrequest.cpp
-  stopsnomedctinferencejobresponse.cpp)
+  stopsnomedctinferencejobresponse.cpp
+)
 
 target_link_libraries(QtAwsComprehendMedical
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsComprehendMedical PRIVATE QTAWSCOMPREHENDMEDICAL_LIBRARY)

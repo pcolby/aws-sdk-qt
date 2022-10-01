@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSMWAA_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsMwaa
+add_library(
+  QtAwsMwaa
   qtawsmwaaglobal.h
   mwaaclient.h
   mwaaclient_p.h
@@ -79,9 +80,12 @@ add_library(QtAwsMwaa
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updateenvironmentrequest.cpp
-  updateenvironmentresponse.cpp)
+  updateenvironmentresponse.cpp
+)
 
 target_link_libraries(QtAwsMwaa
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsMwaa PRIVATE QTAWSMWAA_LIBRARY)

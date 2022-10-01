@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSINSPECTOR_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsInspector
+add_library(
+  QtAwsInspector
   qtawsinspectorglobal.h
   inspectorclient.h
   inspectorclient_p.h
@@ -235,9 +236,12 @@ add_library(QtAwsInspector
   unsubscribefromeventrequest.cpp
   unsubscribefromeventresponse.cpp
   updateassessmenttargetrequest.cpp
-  updateassessmenttargetresponse.cpp)
+  updateassessmenttargetresponse.cpp
+)
 
 target_link_libraries(QtAwsInspector
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsInspector PRIVATE QTAWSINSPECTOR_LIBRARY)

@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSERVERLESSAPPLICATIONREPOSITORY_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsServerlessApplicationRepository
+add_library(
+  QtAwsServerlessApplicationRepository
   qtawsserverlessapplicationrepositoryglobal.h
   serverlessapplicationrepositoryclient.h
   serverlessapplicationrepositoryclient_p.h
@@ -97,9 +98,12 @@ add_library(QtAwsServerlessApplicationRepository
   unshareapplicationrequest.cpp
   unshareapplicationresponse.cpp
   updateapplicationrequest.cpp
-  updateapplicationresponse.cpp)
+  updateapplicationresponse.cpp
+)
 
 target_link_libraries(QtAwsServerlessApplicationRepository
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsServerlessApplicationRepository PRIVATE QTAWSSERVERLESSAPPLICATIONREPOSITORY_LIBRARY)

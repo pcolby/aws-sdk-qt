@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSMACHINELEARNING_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsMachineLearning
+add_library(
+  QtAwsMachineLearning
   qtawsmachinelearningglobal.h
   machinelearningclient.h
   machinelearningclient_p.h
@@ -181,9 +182,12 @@ add_library(QtAwsMachineLearning
   updateevaluationrequest.cpp
   updateevaluationresponse.cpp
   updatemlmodelrequest.cpp
-  updatemlmodelresponse.cpp)
+  updatemlmodelresponse.cpp
+)
 
 target_link_libraries(QtAwsMachineLearning
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsMachineLearning PRIVATE QTAWSMACHINELEARNING_LIBRARY)

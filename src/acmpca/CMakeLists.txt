@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSACMPCA_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsAcmPca
+add_library(
+  QtAwsAcmPca
   qtawsacmpcaglobal.h
   acmpcaclient.h
   acmpcaclient_p.h
@@ -151,9 +152,12 @@ add_library(QtAwsAcmPca
   untagcertificateauthorityrequest.cpp
   untagcertificateauthorityresponse.cpp
   updatecertificateauthorityrequest.cpp
-  updatecertificateauthorityresponse.cpp)
+  updatecertificateauthorityresponse.cpp
+)
 
 target_link_libraries(QtAwsAcmPca
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsAcmPca PRIVATE QTAWSACMPCA_LIBRARY)

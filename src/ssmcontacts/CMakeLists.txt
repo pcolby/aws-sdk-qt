@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSSMCONTACTS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSsmContacts
+add_library(
+  QtAwsSsmContacts
   qtawsssmcontactsglobal.h
   ssmcontactsclient.h
   ssmcontactsclient_p.h
@@ -175,9 +176,12 @@ add_library(QtAwsSsmContacts
   updatecontactrequest.cpp
   updatecontactresponse.cpp
   updatecontactchannelrequest.cpp
-  updatecontactchannelresponse.cpp)
+  updatecontactchannelresponse.cpp
+)
 
 target_link_libraries(QtAwsSsmContacts
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSsmContacts PRIVATE QTAWSSSMCONTACTS_LIBRARY)

@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSTRANSCRIBE_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsTranscribe
+add_library(
+  QtAwsTranscribe
   qtawstranscribeglobal.h
   transcribeclient.h
   transcribeclient_p.h
@@ -247,9 +248,12 @@ add_library(QtAwsTranscribe
   updatevocabularyrequest.cpp
   updatevocabularyresponse.cpp
   updatevocabularyfilterrequest.cpp
-  updatevocabularyfilterresponse.cpp)
+  updatevocabularyfilterresponse.cpp
+)
 
 target_link_libraries(QtAwsTranscribe
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsTranscribe PRIVATE QTAWSTRANSCRIBE_LIBRARY)

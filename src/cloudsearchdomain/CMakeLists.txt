@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCLOUDSEARCHDOMAIN_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsCloudSearchDomain
+add_library(
+  QtAwsCloudSearchDomain
   qtawscloudsearchdomainglobal.h
   cloudsearchdomainclient.h
   cloudsearchdomainclient_p.h
@@ -31,9 +32,12 @@ add_library(QtAwsCloudSearchDomain
   suggestrequest.cpp
   suggestresponse.cpp
   uploaddocumentsrequest.cpp
-  uploaddocumentsresponse.cpp)
+  uploaddocumentsresponse.cpp
+)
 
 target_link_libraries(QtAwsCloudSearchDomain
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsCloudSearchDomain PRIVATE QTAWSCLOUDSEARCHDOMAIN_LIBRARY)

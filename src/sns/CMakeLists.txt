@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSNS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSns
+add_library(
+  QtAwsSns
   qtawssnsglobal.h
   snsclient.h
   snsclient_p.h
@@ -265,9 +266,12 @@ add_library(QtAwsSns
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   verifysmssandboxphonenumberrequest.cpp
-  verifysmssandboxphonenumberresponse.cpp)
+  verifysmssandboxphonenumberresponse.cpp
+)
 
 target_link_libraries(QtAwsSns
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSns PRIVATE QTAWSSNS_LIBRARY)

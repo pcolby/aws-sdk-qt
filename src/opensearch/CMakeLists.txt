@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSOPENSEARCH_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsOpenSearch
+add_library(
+  QtAwsOpenSearch
   qtawsopensearchglobal.h
   opensearchclient.h
   opensearchclient_p.h
@@ -253,9 +254,12 @@ add_library(QtAwsOpenSearch
   updatepackagerequest.cpp
   updatepackageresponse.cpp
   upgradedomainrequest.cpp
-  upgradedomainresponse.cpp)
+  upgradedomainresponse.cpp
+)
 
 target_link_libraries(QtAwsOpenSearch
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsOpenSearch PRIVATE QTAWSOPENSEARCH_LIBRARY)

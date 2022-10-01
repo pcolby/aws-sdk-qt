@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSSM_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSsm
+add_library(
+  QtAwsSsm
   qtawsssmglobal.h
   ssmclient.h
   ssmclient_p.h
@@ -823,9 +824,12 @@ add_library(QtAwsSsm
   updateresourcedatasyncrequest.cpp
   updateresourcedatasyncresponse.cpp
   updateservicesettingrequest.cpp
-  updateservicesettingresponse.cpp)
+  updateservicesettingresponse.cpp
+)
 
 target_link_libraries(QtAwsSsm
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSsm PRIVATE QTAWSSSM_LIBRARY)

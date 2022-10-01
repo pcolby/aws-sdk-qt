@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCHIMESDKIDENTITY_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsChimeSdkIdentity
+add_library(
+  QtAwsChimeSdkIdentity
   qtawschimesdkidentityglobal.h
   chimesdkidentityclient.h
   chimesdkidentityclient_p.h
@@ -157,9 +158,12 @@ add_library(QtAwsChimeSdkIdentity
   updateappinstanceuserrequest.cpp
   updateappinstanceuserresponse.cpp
   updateappinstanceuserendpointrequest.cpp
-  updateappinstanceuserendpointresponse.cpp)
+  updateappinstanceuserendpointresponse.cpp
+)
 
 target_link_libraries(QtAwsChimeSdkIdentity
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsChimeSdkIdentity PRIVATE QTAWSCHIMESDKIDENTITY_LIBRARY)

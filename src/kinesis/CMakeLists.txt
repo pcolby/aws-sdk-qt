@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSKINESIS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsKinesis
+add_library(
+  QtAwsKinesis
   qtawskinesisglobal.h
   kinesisclient.h
   kinesisclient_p.h
@@ -187,9 +188,12 @@ add_library(QtAwsKinesis
   updateshardcountrequest.cpp
   updateshardcountresponse.cpp
   updatestreammoderequest.cpp
-  updatestreammoderesponse.cpp)
+  updatestreammoderesponse.cpp
+)
 
 target_link_libraries(QtAwsKinesis
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsKinesis PRIVATE QTAWSKINESIS_LIBRARY)

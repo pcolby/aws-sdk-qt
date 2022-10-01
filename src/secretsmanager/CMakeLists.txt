@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSECRETSMANAGER_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSecretsManager
+add_library(
+  QtAwsSecretsManager
   qtawssecretsmanagerglobal.h
   secretsmanagerclient.h
   secretsmanagerclient_p.h
@@ -145,9 +146,12 @@ add_library(QtAwsSecretsManager
   updatesecretversionstagerequest.cpp
   updatesecretversionstageresponse.cpp
   validateresourcepolicyrequest.cpp
-  validateresourcepolicyresponse.cpp)
+  validateresourcepolicyresponse.cpp
+)
 
 target_link_libraries(QtAwsSecretsManager
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSecretsManager PRIVATE QTAWSSECRETSMANAGER_LIBRARY)

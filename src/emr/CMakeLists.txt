@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSEMR_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsEmr
+add_library(
+  QtAwsEmr
   qtawsemrglobal.h
   emrclient.h
   emrclient_p.h
@@ -325,9 +326,12 @@ add_library(QtAwsEmr
   updatestudiorequest.cpp
   updatestudioresponse.cpp
   updatestudiosessionmappingrequest.cpp
-  updatestudiosessionmappingresponse.cpp)
+  updatestudiosessionmappingresponse.cpp
+)
 
 target_link_libraries(QtAwsEmr
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsEmr PRIVATE QTAWSEMR_LIBRARY)

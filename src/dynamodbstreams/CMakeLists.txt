@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSDYNAMODBSTREAMS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsDynamoDbStreams
+add_library(
+  QtAwsDynamoDbStreams
   qtawsdynamodbstreamsglobal.h
   dynamodbstreamsclient.h
   dynamodbstreamsclient_p.h
@@ -37,9 +38,12 @@ add_library(QtAwsDynamoDbStreams
   getsharditeratorrequest.cpp
   getsharditeratorresponse.cpp
   liststreamsrequest.cpp
-  liststreamsresponse.cpp)
+  liststreamsresponse.cpp
+)
 
 target_link_libraries(QtAwsDynamoDbStreams
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsDynamoDbStreams PRIVATE QTAWSDYNAMODBSTREAMS_LIBRARY)

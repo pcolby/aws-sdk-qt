@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSAVINGSPLANS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSavingsPlans
+add_library(
+  QtAwsSavingsPlans
   qtawssavingsplansglobal.h
   savingsplansclient.h
   savingsplansclient_p.h
@@ -67,9 +68,12 @@ add_library(QtAwsSavingsPlans
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
-  untagresourceresponse.cpp)
+  untagresourceresponse.cpp
+)
 
 target_link_libraries(QtAwsSavingsPlans
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSavingsPlans PRIVATE QTAWSSAVINGSPLANS_LIBRARY)

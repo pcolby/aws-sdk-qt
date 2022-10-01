@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSS3OUTPOSTS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsS3Outposts
+add_library(
+  QtAwsS3Outposts
   qtawss3outpostsglobal.h
   s3outpostsclient.h
   s3outpostsclient_p.h
@@ -37,9 +38,12 @@ add_library(QtAwsS3Outposts
   listendpointsrequest.cpp
   listendpointsresponse.cpp
   listsharedendpointsrequest.cpp
-  listsharedendpointsresponse.cpp)
+  listsharedendpointsresponse.cpp
+)
 
 target_link_libraries(QtAwsS3Outposts
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsS3Outposts PRIVATE QTAWSS3OUTPOSTS_LIBRARY)

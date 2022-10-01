@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSGREENGRASSV2_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsGreengrassV2
+add_library(
+  QtAwsGreengrassV2
   qtawsgreengrassv2global.h
   greengrassv2client.h
   greengrassv2client_p.h
@@ -187,9 +188,12 @@ add_library(QtAwsGreengrassV2
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updateconnectivityinforequest.cpp
-  updateconnectivityinforesponse.cpp)
+  updateconnectivityinforesponse.cpp
+)
 
 target_link_libraries(QtAwsGreengrassV2
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsGreengrassV2 PRIVATE QTAWSGREENGRASSV2_LIBRARY)

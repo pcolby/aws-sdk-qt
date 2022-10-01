@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSGREENGRASS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsGreengrass
+add_library(
+  QtAwsGreengrass
   qtawsgreengrassglobal.h
   greengrassclient.h
   greengrassclient_p.h
@@ -565,9 +566,12 @@ add_library(QtAwsGreengrass
   updatesubscriptiondefinitionrequest.cpp
   updatesubscriptiondefinitionresponse.cpp
   updatethingruntimeconfigurationrequest.cpp
-  updatethingruntimeconfigurationresponse.cpp)
+  updatethingruntimeconfigurationresponse.cpp
+)
 
 target_link_libraries(QtAwsGreengrass
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsGreengrass PRIVATE QTAWSGREENGRASS_LIBRARY)

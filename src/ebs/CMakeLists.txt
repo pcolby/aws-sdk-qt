@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSEBS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsEbs
+add_library(
+  QtAwsEbs
   qtawsebsglobal.h
   ebsclient.h
   ebsclient_p.h
@@ -49,9 +50,12 @@ add_library(QtAwsEbs
   putsnapshotblockrequest.cpp
   putsnapshotblockresponse.cpp
   startsnapshotrequest.cpp
-  startsnapshotresponse.cpp)
+  startsnapshotresponse.cpp
+)
 
 target_link_libraries(QtAwsEbs
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsEbs PRIVATE QTAWSEBS_LIBRARY)

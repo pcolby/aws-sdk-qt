@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSIOT1CLICKPROJECTS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsIoT1ClickProjects
+add_library(
+  QtAwsIoT1ClickProjects
   qtawsiot1clickprojectsglobal.h
   iot1clickprojectsclient.h
   iot1clickprojectsclient_p.h
@@ -109,9 +110,12 @@ add_library(QtAwsIoT1ClickProjects
   updateplacementrequest.cpp
   updateplacementresponse.cpp
   updateprojectrequest.cpp
-  updateprojectresponse.cpp)
+  updateprojectresponse.cpp
+)
 
 target_link_libraries(QtAwsIoT1ClickProjects
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsIoT1ClickProjects PRIVATE QTAWSIOT1CLICKPROJECTS_LIBRARY)

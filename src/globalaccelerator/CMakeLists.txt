@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSGLOBALACCELERATOR_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsGlobalAccelerator
+add_library(
+  QtAwsGlobalAccelerator
   qtawsglobalacceleratorglobal.h
   globalacceleratorclient.h
   globalacceleratorclient_p.h
@@ -295,9 +296,12 @@ add_library(QtAwsGlobalAccelerator
   updatelistenerrequest.cpp
   updatelistenerresponse.cpp
   withdrawbyoipcidrrequest.cpp
-  withdrawbyoipcidrresponse.cpp)
+  withdrawbyoipcidrresponse.cpp
+)
 
 target_link_libraries(QtAwsGlobalAccelerator
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsGlobalAccelerator PRIVATE QTAWSGLOBALACCELERATOR_LIBRARY)

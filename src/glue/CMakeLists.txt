@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSGLUE_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsGlue
+add_library(
+  QtAwsGlue
   qtawsglueglobal.h
   glueclient.h
   glueclient_p.h
@@ -1117,9 +1118,12 @@ add_library(QtAwsGlue
   updateuserdefinedfunctionrequest.cpp
   updateuserdefinedfunctionresponse.cpp
   updateworkflowrequest.cpp
-  updateworkflowresponse.cpp)
+  updateworkflowresponse.cpp
+)
 
 target_link_libraries(QtAwsGlue
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsGlue PRIVATE QTAWSGLUE_LIBRARY)

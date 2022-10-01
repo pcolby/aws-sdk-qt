@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSPINPOINTEMAIL_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsPinpointEmail
+add_library(
+  QtAwsPinpointEmail
   qtawspinpointemailglobal.h
   pinpointemailclient.h
   pinpointemailclient_p.h
@@ -265,9 +266,12 @@ add_library(QtAwsPinpointEmail
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updateconfigurationseteventdestinationrequest.cpp
-  updateconfigurationseteventdestinationresponse.cpp)
+  updateconfigurationseteventdestinationresponse.cpp
+)
 
 target_link_libraries(QtAwsPinpointEmail
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsPinpointEmail PRIVATE QTAWSPINPOINTEMAIL_LIBRARY)

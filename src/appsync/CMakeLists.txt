@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSAPPSYNC_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsAppSync
+add_library(
+  QtAwsAppSync
   qtawsappsyncglobal.h
   appsyncclient.h
   appsyncclient_p.h
@@ -313,9 +314,12 @@ add_library(QtAwsAppSync
   updateresolverrequest.cpp
   updateresolverresponse.cpp
   updatetyperequest.cpp
-  updatetyperesponse.cpp)
+  updatetyperesponse.cpp
+)
 
 target_link_libraries(QtAwsAppSync
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsAppSync PRIVATE QTAWSAPPSYNC_LIBRARY)

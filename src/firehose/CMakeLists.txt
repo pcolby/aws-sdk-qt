@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSFIREHOSE_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsFirehose
+add_library(
+  QtAwsFirehose
   qtawsfirehoseglobal.h
   firehoseclient.h
   firehoseclient_p.h
@@ -85,9 +86,12 @@ add_library(QtAwsFirehose
   untagdeliverystreamrequest.cpp
   untagdeliverystreamresponse.cpp
   updatedestinationrequest.cpp
-  updatedestinationresponse.cpp)
+  updatedestinationresponse.cpp
+)
 
 target_link_libraries(QtAwsFirehose
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsFirehose PRIVATE QTAWSFIREHOSE_LIBRARY)

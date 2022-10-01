@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCUSTOMERPROFILES_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsCustomerProfiles
+add_library(
+  QtAwsCustomerProfiles
   qtawscustomerprofilesglobal.h
   customerprofilesclient.h
   customerprofilesclient_p.h
@@ -241,9 +242,12 @@ add_library(QtAwsCustomerProfiles
   updatedomainrequest.cpp
   updatedomainresponse.cpp
   updateprofilerequest.cpp
-  updateprofileresponse.cpp)
+  updateprofileresponse.cpp
+)
 
 target_link_libraries(QtAwsCustomerProfiles
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsCustomerProfiles PRIVATE QTAWSCUSTOMERPROFILES_LIBRARY)

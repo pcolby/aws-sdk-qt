@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSHONEYCODE_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsHoneycode
+add_library(
+  QtAwsHoneycode
   qtawshoneycodeglobal.h
   honeycodeclient.h
   honeycodeclient_p.h
@@ -103,9 +104,12 @@ add_library(QtAwsHoneycode
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
-  untagresourceresponse.cpp)
+  untagresourceresponse.cpp
+)
 
 target_link_libraries(QtAwsHoneycode
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsHoneycode PRIVATE QTAWSHONEYCODE_LIBRARY)

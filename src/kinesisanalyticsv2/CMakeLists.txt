@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSKINESISANALYTICSV2_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsKinesisAnalyticsV2
+add_library(
+  QtAwsKinesisAnalyticsV2
   qtawskinesisanalyticsv2global.h
   kinesisanalyticsv2client.h
   kinesisanalyticsv2client_p.h
@@ -199,9 +200,12 @@ add_library(QtAwsKinesisAnalyticsV2
   updateapplicationrequest.cpp
   updateapplicationresponse.cpp
   updateapplicationmaintenanceconfigurationrequest.cpp
-  updateapplicationmaintenanceconfigurationresponse.cpp)
+  updateapplicationmaintenanceconfigurationresponse.cpp
+)
 
 target_link_libraries(QtAwsKinesisAnalyticsV2
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsKinesisAnalyticsV2 PRIVATE QTAWSKINESISANALYTICSV2_LIBRARY)

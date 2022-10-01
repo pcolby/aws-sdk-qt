@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSPI_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsPi
+add_library(
+  QtAwsPi
   qtawspiglobal.h
   piclient.h
   piclient_p.h
@@ -49,9 +50,12 @@ add_library(QtAwsPi
   listavailableresourcedimensionsrequest.cpp
   listavailableresourcedimensionsresponse.cpp
   listavailableresourcemetricsrequest.cpp
-  listavailableresourcemetricsresponse.cpp)
+  listavailableresourcemetricsresponse.cpp
+)
 
 target_link_libraries(QtAwsPi
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsPi PRIVATE QTAWSPI_LIBRARY)

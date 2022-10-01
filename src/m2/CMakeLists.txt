@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSM2_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsM2
+add_library(
+  QtAwsM2
   qtawsm2global.h
   m2client.h
   m2client_p.h
@@ -205,9 +206,12 @@ add_library(QtAwsM2
   updateapplicationrequest.cpp
   updateapplicationresponse.cpp
   updateenvironmentrequest.cpp
-  updateenvironmentresponse.cpp)
+  updateenvironmentresponse.cpp
+)
 
 target_link_libraries(QtAwsM2
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsM2 PRIVATE QTAWSM2_LIBRARY)

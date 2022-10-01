@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSAMPLIFYUIBUILDER_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsAmplifyUIBuilder
+add_library(
+  QtAwsAmplifyUIBuilder
   qtawsamplifyuibuilderglobal.h
   amplifyuibuilderclient.h
   amplifyuibuilderclient_p.h
@@ -145,9 +146,12 @@ add_library(QtAwsAmplifyUIBuilder
   updateformrequest.cpp
   updateformresponse.cpp
   updatethemerequest.cpp
-  updatethemeresponse.cpp)
+  updatethemeresponse.cpp
+)
 
 target_link_libraries(QtAwsAmplifyUIBuilder
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsAmplifyUIBuilder PRIVATE QTAWSAMPLIFYUIBUILDER_LIBRARY)

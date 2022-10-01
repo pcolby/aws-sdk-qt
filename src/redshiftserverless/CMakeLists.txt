@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSREDSHIFTSERVERLESS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsRedshiftServerless
+add_library(
+  QtAwsRedshiftServerless
   qtawsredshiftserverlessglobal.h
   redshiftserverlessclient.h
   redshiftserverlessclient_p.h
@@ -235,9 +236,12 @@ add_library(QtAwsRedshiftServerless
   updateusagelimitrequest.cpp
   updateusagelimitresponse.cpp
   updateworkgrouprequest.cpp
-  updateworkgroupresponse.cpp)
+  updateworkgroupresponse.cpp
+)
 
 target_link_libraries(QtAwsRedshiftServerless
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsRedshiftServerless PRIVATE QTAWSREDSHIFTSERVERLESS_LIBRARY)

@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCODESTARCONNECTIONS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsCodeStarconnections
+add_library(
+  QtAwsCodeStarconnections
   qtawscodestarconnectionsglobal.h
   codestarconnectionsclient.h
   codestarconnectionsclient_p.h
@@ -85,9 +86,12 @@ add_library(QtAwsCodeStarconnections
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updatehostrequest.cpp
-  updatehostresponse.cpp)
+  updatehostresponse.cpp
+)
 
 target_link_libraries(QtAwsCodeStarconnections
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsCodeStarconnections PRIVATE QTAWSCODESTARCONNECTIONS_LIBRARY)

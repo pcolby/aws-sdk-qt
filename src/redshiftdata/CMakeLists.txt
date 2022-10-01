@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSREDSHIFTDATA_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsRedshiftData
+add_library(
+  QtAwsRedshiftData
   qtawsredshiftdataglobal.h
   redshiftdataclient.h
   redshiftdataclient_p.h
@@ -73,9 +74,12 @@ add_library(QtAwsRedshiftData
   liststatementsrequest.cpp
   liststatementsresponse.cpp
   listtablesrequest.cpp
-  listtablesresponse.cpp)
+  listtablesresponse.cpp
+)
 
 target_link_libraries(QtAwsRedshiftData
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsRedshiftData PRIVATE QTAWSREDSHIFTDATA_LIBRARY)

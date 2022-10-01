@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSROUTE53_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsRoute53
+add_library(
+  QtAwsRoute53
   qtawsroute53global.h
   route53client.h
   route53client_p.h
@@ -433,9 +434,12 @@ add_library(QtAwsRoute53
   updatetrafficpolicycommentrequest.cpp
   updatetrafficpolicycommentresponse.cpp
   updatetrafficpolicyinstancerequest.cpp
-  updatetrafficpolicyinstanceresponse.cpp)
+  updatetrafficpolicyinstanceresponse.cpp
+)
 
 target_link_libraries(QtAwsRoute53
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsRoute53 PRIVATE QTAWSROUTE53_LIBRARY)

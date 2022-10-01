@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSPINPOINTSMSVOICEV2_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsPinpointSmsVoiceV2
+add_library(
+  QtAwsPinpointSmsVoiceV2
   qtawspinpointsmsvoicev2global.h
   pinpointsmsvoicev2client.h
   pinpointsmsvoicev2client_p.h
@@ -271,9 +272,12 @@ add_library(QtAwsPinpointSmsVoiceV2
   updatephonenumberrequest.cpp
   updatephonenumberresponse.cpp
   updatepoolrequest.cpp
-  updatepoolresponse.cpp)
+  updatepoolresponse.cpp
+)
 
 target_link_libraries(QtAwsPinpointSmsVoiceV2
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsPinpointSmsVoiceV2 PRIVATE QTAWSPINPOINTSMSVOICEV2_LIBRARY)

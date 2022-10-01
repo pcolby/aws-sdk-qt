@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSIGNER_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSigner
+add_library(
+  QtAwsSigner
   qtawssignerglobal.h
   signerclient.h
   signerclient_p.h
@@ -115,9 +116,12 @@ add_library(QtAwsSigner
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
-  untagresourceresponse.cpp)
+  untagresourceresponse.cpp
+)
 
 target_link_libraries(QtAwsSigner
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSigner PRIVATE QTAWSSIGNER_LIBRARY)

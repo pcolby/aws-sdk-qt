@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSHEALTH_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsHealth
+add_library(
+  QtAwsHealth
   qtawshealthglobal.h
   healthclient.h
   healthclient_p.h
@@ -91,9 +92,12 @@ add_library(QtAwsHealth
   disablehealthserviceaccessfororganizationrequest.cpp
   disablehealthserviceaccessfororganizationresponse.cpp
   enablehealthserviceaccessfororganizationrequest.cpp
-  enablehealthserviceaccessfororganizationresponse.cpp)
+  enablehealthserviceaccessfororganizationresponse.cpp
+)
 
 target_link_libraries(QtAwsHealth
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsHealth PRIVATE QTAWSHEALTH_LIBRARY)

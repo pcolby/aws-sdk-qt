@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSAGEMAKEREDGE_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSagemakerEdge
+add_library(
+  QtAwsSagemakerEdge
   qtawssagemakeredgeglobal.h
   sagemakeredgeclient.h
   sagemakeredgeclient_p.h
@@ -31,9 +32,12 @@ add_library(QtAwsSagemakerEdge
   getdeviceregistrationrequest.cpp
   getdeviceregistrationresponse.cpp
   sendheartbeatrequest.cpp
-  sendheartbeatresponse.cpp)
+  sendheartbeatresponse.cpp
+)
 
 target_link_libraries(QtAwsSagemakerEdge
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSagemakerEdge PRIVATE QTAWSSAGEMAKEREDGE_LIBRARY)

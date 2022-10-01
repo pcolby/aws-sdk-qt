@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSERVICECATALOGAPPREGISTRY_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsServiceCatalogAppRegistry
+add_library(
+  QtAwsServiceCatalogAppRegistry
   qtawsservicecatalogappregistryglobal.h
   servicecatalogappregistryclient.h
   servicecatalogappregistryclient_p.h
@@ -145,9 +146,12 @@ add_library(QtAwsServiceCatalogAppRegistry
   updateapplicationrequest.cpp
   updateapplicationresponse.cpp
   updateattributegrouprequest.cpp
-  updateattributegroupresponse.cpp)
+  updateattributegroupresponse.cpp
+)
 
 target_link_libraries(QtAwsServiceCatalogAppRegistry
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsServiceCatalogAppRegistry PRIVATE QTAWSSERVICECATALOGAPPREGISTRY_LIBRARY)

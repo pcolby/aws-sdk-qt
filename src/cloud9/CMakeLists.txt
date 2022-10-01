@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCLOUD9_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsCloud9
+add_library(
+  QtAwsCloud9
   qtawscloud9global.h
   cloud9client.h
   cloud9client_p.h
@@ -91,9 +92,12 @@ add_library(QtAwsCloud9
   updateenvironmentrequest.cpp
   updateenvironmentresponse.cpp
   updateenvironmentmembershiprequest.cpp
-  updateenvironmentmembershipresponse.cpp)
+  updateenvironmentmembershipresponse.cpp
+)
 
 target_link_libraries(QtAwsCloud9
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsCloud9 PRIVATE QTAWSCLOUD9_LIBRARY)

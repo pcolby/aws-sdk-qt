@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSRESILIENCEHUB_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsResilienceHub
+add_library(
+  QtAwsResilienceHub
   qtawsresiliencehubglobal.h
   resiliencehubclient.h
   resiliencehubclient_p.h
@@ -247,9 +248,12 @@ add_library(QtAwsResilienceHub
   updateapprequest.cpp
   updateappresponse.cpp
   updateresiliencypolicyrequest.cpp
-  updateresiliencypolicyresponse.cpp)
+  updateresiliencypolicyresponse.cpp
+)
 
 target_link_libraries(QtAwsResilienceHub
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsResilienceHub PRIVATE QTAWSRESILIENCEHUB_LIBRARY)

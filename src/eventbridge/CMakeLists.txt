@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSEVENTBRIDGE_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsEventBridge
+add_library(
+  QtAwsEventBridge
   qtawseventbridgeglobal.h
   eventbridgeclient.h
   eventbridgeclient_p.h
@@ -349,9 +350,12 @@ add_library(QtAwsEventBridge
   updateconnectionrequest.cpp
   updateconnectionresponse.cpp
   updateendpointrequest.cpp
-  updateendpointresponse.cpp)
+  updateendpointresponse.cpp
+)
 
 target_link_libraries(QtAwsEventBridge
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsEventBridge PRIVATE QTAWSEVENTBRIDGE_LIBRARY)

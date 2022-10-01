@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSNEPTUNE_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsNeptune
+add_library(
+  QtAwsNeptune
   qtawsneptuneglobal.h
   neptuneclient.h
   neptuneclient_p.h
@@ -427,9 +428,12 @@ add_library(QtAwsNeptune
   startdbclusterrequest.cpp
   startdbclusterresponse.cpp
   stopdbclusterrequest.cpp
-  stopdbclusterresponse.cpp)
+  stopdbclusterresponse.cpp
+)
 
 target_link_libraries(QtAwsNeptune
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsNeptune PRIVATE QTAWSNEPTUNE_LIBRARY)

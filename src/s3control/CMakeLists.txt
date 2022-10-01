@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSS3CONTROL_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsS3Control
+add_library(
+  QtAwsS3Control
   qtawss3controlglobal.h
   s3controlclient.h
   s3controlclient_p.h
@@ -367,9 +368,12 @@ add_library(QtAwsS3Control
   updatejobpriorityrequest.cpp
   updatejobpriorityresponse.cpp
   updatejobstatusrequest.cpp
-  updatejobstatusresponse.cpp)
+  updatejobstatusresponse.cpp
+)
 
 target_link_libraries(QtAwsS3Control
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsS3Control PRIVATE QTAWSS3CONTROL_LIBRARY)

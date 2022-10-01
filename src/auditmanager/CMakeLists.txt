@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSAUDITMANAGER_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsAuditManager
+add_library(
+  QtAwsAuditManager
   qtawsauditmanagerglobal.h
   auditmanagerclient.h
   auditmanagerclient_p.h
@@ -379,9 +380,12 @@ add_library(QtAwsAuditManager
   updatesettingsrequest.cpp
   updatesettingsresponse.cpp
   validateassessmentreportintegrityrequest.cpp
-  validateassessmentreportintegrityresponse.cpp)
+  validateassessmentreportintegrityresponse.cpp
+)
 
 target_link_libraries(QtAwsAuditManager
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsAuditManager PRIVATE QTAWSAUDITMANAGER_LIBRARY)

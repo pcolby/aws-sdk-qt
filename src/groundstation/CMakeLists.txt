@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSGROUNDSTATION_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsGroundStation
+add_library(
+  QtAwsGroundStation
   qtawsgroundstationglobal.h
   groundstationclient.h
   groundstationclient_p.h
@@ -163,9 +164,12 @@ add_library(QtAwsGroundStation
   updateconfigrequest.cpp
   updateconfigresponse.cpp
   updatemissionprofilerequest.cpp
-  updatemissionprofileresponse.cpp)
+  updatemissionprofileresponse.cpp
+)
 
 target_link_libraries(QtAwsGroundStation
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsGroundStation PRIVATE QTAWSGROUNDSTATION_LIBRARY)

@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSAPIGATEWAY_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsApiGateway
+add_library(
+  QtAwsApiGateway
   qtawsapigatewayglobal.h
   apigatewayclient.h
   apigatewayclient_p.h
@@ -733,9 +734,12 @@ add_library(QtAwsApiGateway
   updateusageplanrequest.cpp
   updateusageplanresponse.cpp
   updatevpclinkrequest.cpp
-  updatevpclinkresponse.cpp)
+  updatevpclinkresponse.cpp
+)
 
 target_link_libraries(QtAwsApiGateway
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsApiGateway PRIVATE QTAWSAPIGATEWAY_LIBRARY)

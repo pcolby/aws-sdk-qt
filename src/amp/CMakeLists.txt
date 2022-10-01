@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSAMP_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsAmp
+add_library(
+  QtAwsAmp
   qtawsampglobal.h
   ampclient.h
   ampclient_p.h
@@ -139,9 +140,12 @@ add_library(QtAwsAmp
   updateloggingconfigurationrequest.cpp
   updateloggingconfigurationresponse.cpp
   updateworkspacealiasrequest.cpp
-  updateworkspacealiasresponse.cpp)
+  updateworkspacealiasresponse.cpp
+)
 
 target_link_libraries(QtAwsAmp
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsAmp PRIVATE QTAWSAMP_LIBRARY)

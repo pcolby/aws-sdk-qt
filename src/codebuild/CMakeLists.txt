@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCODEBUILD_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsCodeBuild
+add_library(
+  QtAwsCodeBuild
   qtawscodebuildglobal.h
   codebuildclient.h
   codebuildclient_p.h
@@ -283,9 +284,12 @@ add_library(QtAwsCodeBuild
   updatereportgrouprequest.cpp
   updatereportgroupresponse.cpp
   updatewebhookrequest.cpp
-  updatewebhookresponse.cpp)
+  updatewebhookresponse.cpp
+)
 
 target_link_libraries(QtAwsCodeBuild
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsCodeBuild PRIVATE QTAWSCODEBUILD_LIBRARY)

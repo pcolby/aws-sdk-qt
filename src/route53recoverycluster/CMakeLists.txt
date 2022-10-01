@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSROUTE53RECOVERYCLUSTER_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsRoute53RecoveryCluster
+add_library(
+  QtAwsRoute53RecoveryCluster
   qtawsroute53recoveryclusterglobal.h
   route53recoveryclusterclient.h
   route53recoveryclusterclient_p.h
@@ -37,9 +38,12 @@ add_library(QtAwsRoute53RecoveryCluster
   updateroutingcontrolstaterequest.cpp
   updateroutingcontrolstateresponse.cpp
   updateroutingcontrolstatesrequest.cpp
-  updateroutingcontrolstatesresponse.cpp)
+  updateroutingcontrolstatesresponse.cpp
+)
 
 target_link_libraries(QtAwsRoute53RecoveryCluster
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsRoute53RecoveryCluster PRIVATE QTAWSROUTE53RECOVERYCLUSTER_LIBRARY)

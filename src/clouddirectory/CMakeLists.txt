@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCLOUDDIRECTORY_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsCloudDirectory
+add_library(
+  QtAwsCloudDirectory
   qtawsclouddirectoryglobal.h
   clouddirectoryclient.h
   clouddirectoryclient_p.h
@@ -409,9 +410,12 @@ add_library(QtAwsCloudDirectory
   upgradeappliedschemarequest.cpp
   upgradeappliedschemaresponse.cpp
   upgradepublishedschemarequest.cpp
-  upgradepublishedschemaresponse.cpp)
+  upgradepublishedschemaresponse.cpp
+)
 
 target_link_libraries(QtAwsCloudDirectory
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsCloudDirectory PRIVATE QTAWSCLOUDDIRECTORY_LIBRARY)

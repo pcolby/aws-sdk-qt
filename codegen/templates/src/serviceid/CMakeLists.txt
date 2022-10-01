@@ -1,9 +1,11 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-{% with service.canonicalId as ServiceName %}add_compile_definitions(QTAWS{{ServiceName|upper}}_LIBRARY)
+{% with service.canonicalId as ServiceName %}
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAws{{ServiceName}}
+add_library(
+  QtAws{{ServiceName}}
   qtaws{{ServiceName|lower}}global.h
   {{ServiceName|lower}}client.h
   {{ServiceName|lower}}client_p.h
@@ -21,10 +23,13 @@ add_library(QtAws{{ServiceName}}
   {{ServiceName|lower}}response.cpp
 {% for name,op in service.operations.items %}
   {{name|lower}}request.cpp
-  {{name|lower}}response.cpp{% endfor %})
+  {{name|lower}}response.cpp{% endfor %}
+)
 
 target_link_libraries(QtAws{{ServiceName}}
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAws{{ServiceName}} PRIVATE QTAWS{{ServiceName|upper}}_LIBRARY)
 {% endwith %}

@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCLOUDSEARCH_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsCloudSearch
+add_library(
+  QtAwsCloudSearch
   qtawscloudsearchglobal.h
   cloudsearchclient.h
   cloudsearchclient_p.h
@@ -169,9 +170,12 @@ add_library(QtAwsCloudSearch
   updatescalingparametersrequest.cpp
   updatescalingparametersresponse.cpp
   updateserviceaccesspoliciesrequest.cpp
-  updateserviceaccesspoliciesresponse.cpp)
+  updateserviceaccesspoliciesresponse.cpp
+)
 
 target_link_libraries(QtAwsCloudSearch
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsCloudSearch PRIVATE QTAWSCLOUDSEARCH_LIBRARY)

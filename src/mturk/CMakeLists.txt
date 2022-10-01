@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSMTURK_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsMTurk
+add_library(
+  QtAwsMTurk
   qtawsmturkglobal.h
   mturkclient.h
   mturkclient_p.h
@@ -247,9 +248,12 @@ add_library(QtAwsMTurk
   updatenotificationsettingsrequest.cpp
   updatenotificationsettingsresponse.cpp
   updatequalificationtyperequest.cpp
-  updatequalificationtyperesponse.cpp)
+  updatequalificationtyperesponse.cpp
+)
 
 target_link_libraries(QtAwsMTurk
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsMTurk PRIVATE QTAWSMTURK_LIBRARY)

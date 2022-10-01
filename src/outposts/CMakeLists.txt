@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSOUTPOSTS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsOutposts
+add_library(
+  QtAwsOutposts
   qtawsoutpostsglobal.h
   outpostsclient.h
   outpostsclient_p.h
@@ -169,9 +170,12 @@ add_library(QtAwsOutposts
   updatesiteaddressrequest.cpp
   updatesiteaddressresponse.cpp
   updatesiterackphysicalpropertiesrequest.cpp
-  updatesiterackphysicalpropertiesresponse.cpp)
+  updatesiterackphysicalpropertiesresponse.cpp
+)
 
 target_link_libraries(QtAwsOutposts
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsOutposts PRIVATE QTAWSOUTPOSTS_LIBRARY)

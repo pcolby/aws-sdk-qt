@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSHIELD_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsShield
+add_library(
+  QtAwsShield
   qtawsshieldglobal.h
   shieldclient.h
   shieldclient_p.h
@@ -229,9 +230,12 @@ add_library(QtAwsShield
   updateprotectiongrouprequest.cpp
   updateprotectiongroupresponse.cpp
   updatesubscriptionrequest.cpp
-  updatesubscriptionresponse.cpp)
+  updatesubscriptionresponse.cpp
+)
 
 target_link_libraries(QtAwsShield
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsShield PRIVATE QTAWSSHIELD_LIBRARY)

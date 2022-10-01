@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSMIGRATIONHUB_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsMigrationHub
+add_library(
+  QtAwsMigrationHub
   qtawsmigrationhubglobal.h
   migrationhubclient.h
   migrationhubclient_p.h
@@ -115,9 +116,12 @@ add_library(QtAwsMigrationHub
   notifymigrationtaskstaterequest.cpp
   notifymigrationtaskstateresponse.cpp
   putresourceattributesrequest.cpp
-  putresourceattributesresponse.cpp)
+  putresourceattributesresponse.cpp
+)
 
 target_link_libraries(QtAwsMigrationHub
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsMigrationHub PRIVATE QTAWSMIGRATIONHUB_LIBRARY)

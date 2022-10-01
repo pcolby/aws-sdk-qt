@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSLEXRUNTIME_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsLexRuntime
+add_library(
+  QtAwsLexRuntime
   qtawslexruntimeglobal.h
   lexruntimeclient.h
   lexruntimeclient_p.h
@@ -43,9 +44,12 @@ add_library(QtAwsLexRuntime
   posttextrequest.cpp
   posttextresponse.cpp
   putsessionrequest.cpp
-  putsessionresponse.cpp)
+  putsessionresponse.cpp
+)
 
 target_link_libraries(QtAwsLexRuntime
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsLexRuntime PRIVATE QTAWSLEXRUNTIME_LIBRARY)

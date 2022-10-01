@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSPERSONALIZERUNTIME_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsPersonalizeRuntime
+add_library(
+  QtAwsPersonalizeRuntime
   qtawspersonalizeruntimeglobal.h
   personalizeruntimeclient.h
   personalizeruntimeclient_p.h
@@ -25,9 +26,12 @@ add_library(QtAwsPersonalizeRuntime
   getpersonalizedrankingrequest.cpp
   getpersonalizedrankingresponse.cpp
   getrecommendationsrequest.cpp
-  getrecommendationsresponse.cpp)
+  getrecommendationsresponse.cpp
+)
 
 target_link_libraries(QtAwsPersonalizeRuntime
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsPersonalizeRuntime PRIVATE QTAWSPERSONALIZERUNTIME_LIBRARY)

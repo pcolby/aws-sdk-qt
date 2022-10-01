@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSRDS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsRds
+add_library(
+  QtAwsRds
   qtawsrdsglobal.h
   rdsclient.h
   rdsclient_p.h
@@ -835,9 +836,12 @@ add_library(QtAwsRds
   stopdbinstanceautomatedbackupsreplicationrequest.cpp
   stopdbinstanceautomatedbackupsreplicationresponse.cpp
   switchoverreadreplicarequest.cpp
-  switchoverreadreplicaresponse.cpp)
+  switchoverreadreplicaresponse.cpp
+)
 
 target_link_libraries(QtAwsRds
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsRds PRIVATE QTAWSRDS_LIBRARY)

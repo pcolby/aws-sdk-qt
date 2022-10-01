@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSIMAGEBUILDER_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsImageBuilder
+add_library(
+  QtAwsImageBuilder
   qtawsimagebuilderglobal.h
   imagebuilderclient.h
   imagebuilderclient_p.h
@@ -313,9 +314,12 @@ add_library(QtAwsImageBuilder
   updateimagepipelinerequest.cpp
   updateimagepipelineresponse.cpp
   updateinfrastructureconfigurationrequest.cpp
-  updateinfrastructureconfigurationresponse.cpp)
+  updateinfrastructureconfigurationresponse.cpp
+)
 
 target_link_libraries(QtAwsImageBuilder
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsImageBuilder PRIVATE QTAWSIMAGEBUILDER_LIBRARY)

@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSQS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSqs
+add_library(
+  QtAwsSqs
   qtawssqsglobal.h
   sqsclient.h
   sqsclient_p.h
@@ -133,9 +134,12 @@ add_library(QtAwsSqs
   tagqueuerequest.cpp
   tagqueueresponse.cpp
   untagqueuerequest.cpp
-  untagqueueresponse.cpp)
+  untagqueueresponse.cpp
+)
 
 target_link_libraries(QtAwsSqs
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSqs PRIVATE QTAWSSQS_LIBRARY)

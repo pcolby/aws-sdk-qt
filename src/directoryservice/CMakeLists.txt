@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSDIRECTORYSERVICE_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsDirectoryService
+add_library(
+  QtAwsDirectoryService
   qtawsdirectoryserviceglobal.h
   directoryserviceclient.h
   directoryserviceclient_p.h
@@ -403,9 +404,12 @@ add_library(QtAwsDirectoryService
   updatetrustrequest.cpp
   updatetrustresponse.cpp
   verifytrustrequest.cpp
-  verifytrustresponse.cpp)
+  verifytrustresponse.cpp
+)
 
 target_link_libraries(QtAwsDirectoryService
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsDirectoryService PRIVATE QTAWSDIRECTORYSERVICE_LIBRARY)

@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSIOTTHINGSGRAPH_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsIoTThingsGraph
+add_library(
+  QtAwsIoTThingsGraph
   qtawsiotthingsgraphglobal.h
   iotthingsgraphclient.h
   iotthingsgraphclient_p.h
@@ -223,9 +224,12 @@ add_library(QtAwsIoTThingsGraph
   updatesystemtemplaterequest.cpp
   updatesystemtemplateresponse.cpp
   uploadentitydefinitionsrequest.cpp
-  uploadentitydefinitionsresponse.cpp)
+  uploadentitydefinitionsresponse.cpp
+)
 
 target_link_libraries(QtAwsIoTThingsGraph
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsIoTThingsGraph PRIVATE QTAWSIOTTHINGSGRAPH_LIBRARY)

@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCLOUDFRONT_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsCloudFront
+add_library(
+  QtAwsCloudFront
   qtawscloudfrontglobal.h
   cloudfrontclient.h
   cloudfrontclient_p.h
@@ -601,9 +602,12 @@ add_library(QtAwsCloudFront
   updateresponseheaderspolicyrequest.cpp
   updateresponseheaderspolicyresponse.cpp
   updatestreamingdistributionrequest.cpp
-  updatestreamingdistributionresponse.cpp)
+  updatestreamingdistributionresponse.cpp
+)
 
 target_link_libraries(QtAwsCloudFront
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsCloudFront PRIVATE QTAWSCLOUDFRONT_LIBRARY)

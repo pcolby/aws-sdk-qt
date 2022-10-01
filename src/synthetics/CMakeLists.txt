@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSYNTHETICS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSynthetics
+add_library(
+  QtAwsSynthetics
   qtawssyntheticsglobal.h
   syntheticsclient.h
   syntheticsclient_p.h
@@ -139,9 +140,12 @@ add_library(QtAwsSynthetics
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updatecanaryrequest.cpp
-  updatecanaryresponse.cpp)
+  updatecanaryresponse.cpp
+)
 
 target_link_libraries(QtAwsSynthetics
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSynthetics PRIVATE QTAWSSYNTHETICS_LIBRARY)

@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCODEARTIFACT_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsCodeArtifact
+add_library(
+  QtAwsCodeArtifact
   qtawscodeartifactglobal.h
   codeartifactclient.h
   codeartifactclient_p.h
@@ -229,9 +230,12 @@ add_library(QtAwsCodeArtifact
   updatepackageversionsstatusrequest.cpp
   updatepackageversionsstatusresponse.cpp
   updaterepositoryrequest.cpp
-  updaterepositoryresponse.cpp)
+  updaterepositoryresponse.cpp
+)
 
 target_link_libraries(QtAwsCodeArtifact
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsCodeArtifact PRIVATE QTAWSCODEARTIFACT_LIBRARY)

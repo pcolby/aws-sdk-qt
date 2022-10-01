@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSIOTWIRELESS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsIoTWireless
+add_library(
+  QtAwsIoTWireless
   qtawsiotwirelessglobal.h
   iotwirelessclient.h
   iotwirelessclient_p.h
@@ -601,9 +602,12 @@ add_library(QtAwsIoTWireless
   updatewirelessdevicerequest.cpp
   updatewirelessdeviceresponse.cpp
   updatewirelessgatewayrequest.cpp
-  updatewirelessgatewayresponse.cpp)
+  updatewirelessgatewayresponse.cpp
+)
 
 target_link_libraries(QtAwsIoTWireless
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsIoTWireless PRIVATE QTAWSIOTWIRELESS_LIBRARY)

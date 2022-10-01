@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSGUARDDUTY_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsGuardDuty
+add_library(
+  QtAwsGuardDuty
   qtawsguarddutyglobal.h
   guarddutyclient.h
   guarddutyclient_p.h
@@ -403,9 +404,12 @@ add_library(QtAwsGuardDuty
   updatepublishingdestinationrequest.cpp
   updatepublishingdestinationresponse.cpp
   updatethreatintelsetrequest.cpp
-  updatethreatintelsetresponse.cpp)
+  updatethreatintelsetresponse.cpp
+)
 
 target_link_libraries(QtAwsGuardDuty
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsGuardDuty PRIVATE QTAWSGUARDDUTY_LIBRARY)

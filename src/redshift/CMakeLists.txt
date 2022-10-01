@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSREDSHIFT_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsRedshift
+add_library(
+  QtAwsRedshift
   qtawsredshiftglobal.h
   redshiftclient.h
   redshiftclient_p.h
@@ -727,9 +728,12 @@ add_library(QtAwsRedshift
   rotateencryptionkeyrequest.cpp
   rotateencryptionkeyresponse.cpp
   updatepartnerstatusrequest.cpp
-  updatepartnerstatusresponse.cpp)
+  updatepartnerstatusresponse.cpp
+)
 
 target_link_libraries(QtAwsRedshift
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsRedshift PRIVATE QTAWSREDSHIFT_LIBRARY)

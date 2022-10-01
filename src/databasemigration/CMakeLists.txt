@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSDATABASEMIGRATION_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsDatabaseMigration
+add_library(
+  QtAwsDatabaseMigration
   qtawsdatabasemigrationglobal.h
   databasemigrationclient.h
   databasemigrationclient_p.h
@@ -403,9 +404,12 @@ add_library(QtAwsDatabaseMigration
   testconnectionrequest.cpp
   testconnectionresponse.cpp
   updatesubscriptionstoeventbridgerequest.cpp
-  updatesubscriptionstoeventbridgeresponse.cpp)
+  updatesubscriptionstoeventbridgeresponse.cpp
+)
 
 target_link_libraries(QtAwsDatabaseMigration
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsDatabaseMigration PRIVATE QTAWSDATABASEMIGRATION_LIBRARY)

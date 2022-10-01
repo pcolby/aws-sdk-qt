@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSAPPMESH_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsAppMesh
+add_library(
+  QtAwsAppMesh
   qtawsappmeshglobal.h
   appmeshclient.h
   appmeshclient_p.h
@@ -241,9 +242,12 @@ add_library(QtAwsAppMesh
   updatevirtualrouterrequest.cpp
   updatevirtualrouterresponse.cpp
   updatevirtualservicerequest.cpp
-  updatevirtualserviceresponse.cpp)
+  updatevirtualserviceresponse.cpp
+)
 
 target_link_libraries(QtAwsAppMesh
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsAppMesh PRIVATE QTAWSAPPMESH_LIBRARY)

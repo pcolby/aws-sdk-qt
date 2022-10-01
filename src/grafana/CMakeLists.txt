@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSGRAFANA_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsGrafana
+add_library(
+  QtAwsGrafana
   qtawsgrafanaglobal.h
   grafanaclient.h
   grafanaclient_p.h
@@ -109,9 +110,12 @@ add_library(QtAwsGrafana
   updateworkspacerequest.cpp
   updateworkspaceresponse.cpp
   updateworkspaceauthenticationrequest.cpp
-  updateworkspaceauthenticationresponse.cpp)
+  updateworkspaceauthenticationresponse.cpp
+)
 
 target_link_libraries(QtAwsGrafana
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsGrafana PRIVATE QTAWSGRAFANA_LIBRARY)

@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCODEDEPLOY_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsCodeDeploy
+add_library(
+  QtAwsCodeDeploy
   qtawscodedeployglobal.h
   codedeployclient.h
   codedeployclient_p.h
@@ -295,9 +296,12 @@ add_library(QtAwsCodeDeploy
   updateapplicationrequest.cpp
   updateapplicationresponse.cpp
   updatedeploymentgrouprequest.cpp
-  updatedeploymentgroupresponse.cpp)
+  updatedeploymentgroupresponse.cpp
+)
 
 target_link_libraries(QtAwsCodeDeploy
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsCodeDeploy PRIVATE QTAWSCODEDEPLOY_LIBRARY)

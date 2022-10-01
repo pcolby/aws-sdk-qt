@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCLOUDCONTROL_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsCloudControl
+add_library(
+  QtAwsCloudControl
   qtawscloudcontrolglobal.h
   cloudcontrolclient.h
   cloudcontrolclient_p.h
@@ -61,9 +62,12 @@ add_library(QtAwsCloudControl
   listresourcesrequest.cpp
   listresourcesresponse.cpp
   updateresourcerequest.cpp
-  updateresourceresponse.cpp)
+  updateresourceresponse.cpp
+)
 
 target_link_libraries(QtAwsCloudControl
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsCloudControl PRIVATE QTAWSCLOUDCONTROL_LIBRARY)

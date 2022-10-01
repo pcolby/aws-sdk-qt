@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSMEDIATAILOR_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsMediaTailor
+add_library(
+  QtAwsMediaTailor
   qtawsmediatailorglobal.h
   mediatailorclient.h
   mediatailorclient_p.h
@@ -265,9 +266,12 @@ add_library(QtAwsMediaTailor
   updatesourcelocationrequest.cpp
   updatesourcelocationresponse.cpp
   updatevodsourcerequest.cpp
-  updatevodsourceresponse.cpp)
+  updatevodsourceresponse.cpp
+)
 
 target_link_libraries(QtAwsMediaTailor
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsMediaTailor PRIVATE QTAWSMEDIATAILOR_LIBRARY)

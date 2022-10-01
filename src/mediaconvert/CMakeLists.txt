@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSMEDIACONVERT_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsMediaConvert
+add_library(
+  QtAwsMediaConvert
   qtawsmediaconvertglobal.h
   mediaconvertclient.h
   mediaconvertclient_p.h
@@ -181,9 +182,12 @@ add_library(QtAwsMediaConvert
   updatepresetrequest.cpp
   updatepresetresponse.cpp
   updatequeuerequest.cpp
-  updatequeueresponse.cpp)
+  updatequeueresponse.cpp
+)
 
 target_link_libraries(QtAwsMediaConvert
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsMediaConvert PRIVATE QTAWSMEDIACONVERT_LIBRARY)

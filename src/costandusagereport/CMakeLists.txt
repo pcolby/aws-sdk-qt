@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCOSTANDUSAGEREPORT_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsCostandUsageReport
+add_library(
+  QtAwsCostandUsageReport
   qtawscostandusagereportglobal.h
   costandusagereportclient.h
   costandusagereportclient_p.h
@@ -37,9 +38,12 @@ add_library(QtAwsCostandUsageReport
   modifyreportdefinitionrequest.cpp
   modifyreportdefinitionresponse.cpp
   putreportdefinitionrequest.cpp
-  putreportdefinitionresponse.cpp)
+  putreportdefinitionresponse.cpp
+)
 
 target_link_libraries(QtAwsCostandUsageReport
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsCostandUsageReport PRIVATE QTAWSCOSTANDUSAGEREPORT_LIBRARY)

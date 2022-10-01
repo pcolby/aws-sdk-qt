@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSSMINCIDENTS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSsmIncidents
+add_library(
+  QtAwsSsmIncidents
   qtawsssmincidentsglobal.h
   ssmincidentsclient.h
   ssmincidentsclient_p.h
@@ -187,9 +188,12 @@ add_library(QtAwsSsmIncidents
   updateresponseplanrequest.cpp
   updateresponseplanresponse.cpp
   updatetimelineeventrequest.cpp
-  updatetimelineeventresponse.cpp)
+  updatetimelineeventresponse.cpp
+)
 
 target_link_libraries(QtAwsSsmIncidents
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSsmIncidents PRIVATE QTAWSSSMINCIDENTS_LIBRARY)

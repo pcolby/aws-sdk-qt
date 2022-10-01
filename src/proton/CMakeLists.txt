@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSPROTON_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsProton
+add_library(
+  QtAwsProton
   qtawsprotonglobal.h
   protonclient.h
   protonclient_p.h
@@ -463,9 +464,12 @@ add_library(QtAwsProton
   updateservicetemplateversionrequest.cpp
   updateservicetemplateversionresponse.cpp
   updatetemplatesyncconfigrequest.cpp
-  updatetemplatesyncconfigresponse.cpp)
+  updatetemplatesyncconfigresponse.cpp
+)
 
 target_link_libraries(QtAwsProton
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsProton PRIVATE QTAWSPROTON_LIBRARY)

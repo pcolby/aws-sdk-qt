@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSKINESISVIDEO_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsKinesisVideo
+add_library(
+  QtAwsKinesisVideo
   qtawskinesisvideoglobal.h
   kinesisvideoclient.h
   kinesisvideoclient_p.h
@@ -151,9 +152,12 @@ add_library(QtAwsKinesisVideo
   updatesignalingchannelrequest.cpp
   updatesignalingchannelresponse.cpp
   updatestreamrequest.cpp
-  updatestreamresponse.cpp)
+  updatestreamresponse.cpp
+)
 
 target_link_libraries(QtAwsKinesisVideo
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsKinesisVideo PRIVATE QTAWSKINESISVIDEO_LIBRARY)

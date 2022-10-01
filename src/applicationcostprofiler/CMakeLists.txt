@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSAPPLICATIONCOSTPROFILER_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsApplicationCostProfiler
+add_library(
+  QtAwsApplicationCostProfiler
   qtawsapplicationcostprofilerglobal.h
   applicationcostprofilerclient.h
   applicationcostprofilerclient_p.h
@@ -49,9 +50,12 @@ add_library(QtAwsApplicationCostProfiler
   putreportdefinitionrequest.cpp
   putreportdefinitionresponse.cpp
   updatereportdefinitionrequest.cpp
-  updatereportdefinitionresponse.cpp)
+  updatereportdefinitionresponse.cpp
+)
 
 target_link_libraries(QtAwsApplicationCostProfiler
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsApplicationCostProfiler PRIVATE QTAWSAPPLICATIONCOSTPROFILER_LIBRARY)

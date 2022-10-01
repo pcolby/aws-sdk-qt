@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSWAFREGIONAL_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsWafRegional
+add_library(
+  QtAwsWafRegional
   qtawswafregionalglobal.h
   wafregionalclient.h
   wafregionalclient_p.h
@@ -499,9 +500,12 @@ add_library(QtAwsWafRegional
   updatewebaclrequest.cpp
   updatewebaclresponse.cpp
   updatexssmatchsetrequest.cpp
-  updatexssmatchsetresponse.cpp)
+  updatexssmatchsetresponse.cpp
+)
 
 target_link_libraries(QtAwsWafRegional
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsWafRegional PRIVATE QTAWSWAFREGIONAL_LIBRARY)

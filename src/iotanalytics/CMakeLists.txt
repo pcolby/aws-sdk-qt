@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSIOTANALYTICS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsIoTAnalytics
+add_library(
+  QtAwsIoTAnalytics
   qtawsiotanalyticsglobal.h
   iotanalyticsclient.h
   iotanalyticsclient_p.h
@@ -217,9 +218,12 @@ add_library(QtAwsIoTAnalytics
   updatedatastorerequest.cpp
   updatedatastoreresponse.cpp
   updatepipelinerequest.cpp
-  updatepipelineresponse.cpp)
+  updatepipelineresponse.cpp
+)
 
 target_link_libraries(QtAwsIoTAnalytics
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsIoTAnalytics PRIVATE QTAWSIOTANALYTICS_LIBRARY)

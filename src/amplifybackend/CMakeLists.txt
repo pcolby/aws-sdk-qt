@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSAMPLIFYBACKEND_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsAmplifyBackend
+add_library(
+  QtAwsAmplifyBackend
   qtawsamplifybackendglobal.h
   amplifybackendclient.h
   amplifybackendclient_p.h
@@ -199,9 +200,12 @@ add_library(QtAwsAmplifyBackend
   updatebackendjobrequest.cpp
   updatebackendjobresponse.cpp
   updatebackendstoragerequest.cpp
-  updatebackendstorageresponse.cpp)
+  updatebackendstorageresponse.cpp
+)
 
 target_link_libraries(QtAwsAmplifyBackend
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsAmplifyBackend PRIVATE QTAWSAMPLIFYBACKEND_LIBRARY)

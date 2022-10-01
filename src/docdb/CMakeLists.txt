@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSDOCDB_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsDocDb
+add_library(
+  QtAwsDocDb
   qtawsdocdbglobal.h
   docdbclient.h
   docdbclient_p.h
@@ -331,9 +332,12 @@ add_library(QtAwsDocDb
   startdbclusterrequest.cpp
   startdbclusterresponse.cpp
   stopdbclusterrequest.cpp
-  stopdbclusterresponse.cpp)
+  stopdbclusterresponse.cpp
+)
 
 target_link_libraries(QtAwsDocDb
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsDocDb PRIVATE QTAWSDOCDB_LIBRARY)

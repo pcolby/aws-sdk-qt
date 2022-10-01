@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSVOICEID_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsVoiceId
+add_library(
+  QtAwsVoiceId
   qtawsvoiceidglobal.h
   voiceidclient.h
   voiceidclient_p.h
@@ -139,9 +140,12 @@ add_library(QtAwsVoiceId
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updatedomainrequest.cpp
-  updatedomainresponse.cpp)
+  updatedomainresponse.cpp
+)
 
 target_link_libraries(QtAwsVoiceId
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsVoiceId PRIVATE QTAWSVOICEID_LIBRARY)

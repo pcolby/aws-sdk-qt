@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSEVIDENTLY_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsEvidently
+add_library(
+  QtAwsEvidently
   qtawsevidentlyglobal.h
   evidentlyclient.h
   evidentlyclient_p.h
@@ -241,9 +242,12 @@ add_library(QtAwsEvidently
   updateprojectrequest.cpp
   updateprojectresponse.cpp
   updateprojectdatadeliveryrequest.cpp
-  updateprojectdatadeliveryresponse.cpp)
+  updateprojectdatadeliveryresponse.cpp
+)
 
 target_link_libraries(QtAwsEvidently
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsEvidently PRIVATE QTAWSEVIDENTLY_LIBRARY)

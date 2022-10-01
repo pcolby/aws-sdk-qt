@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSCONNECT_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsConnect
+add_library(
+  QtAwsConnect
   qtawsconnectglobal.h
   connectclient.h
   connectclient_p.h
@@ -937,9 +938,12 @@ add_library(QtAwsConnect
   updateuserroutingprofilerequest.cpp
   updateuserroutingprofileresponse.cpp
   updateusersecurityprofilesrequest.cpp
-  updateusersecurityprofilesresponse.cpp)
+  updateusersecurityprofilesresponse.cpp
+)
 
 target_link_libraries(QtAwsConnect
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsConnect PRIVATE QTAWSCONNECT_LIBRARY)

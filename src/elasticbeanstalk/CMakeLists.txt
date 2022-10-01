@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSELASTICBEANSTALK_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsElasticBeanstalk
+add_library(
+  QtAwsElasticBeanstalk
   qtawselasticbeanstalkglobal.h
   elasticbeanstalkclient.h
   elasticbeanstalkclient_p.h
@@ -295,9 +296,12 @@ add_library(QtAwsElasticBeanstalk
   updatetagsforresourcerequest.cpp
   updatetagsforresourceresponse.cpp
   validateconfigurationsettingsrequest.cpp
-  validateconfigurationsettingsresponse.cpp)
+  validateconfigurationsettingsresponse.cpp
+)
 
 target_link_libraries(QtAwsElasticBeanstalk
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsElasticBeanstalk PRIVATE QTAWSELASTICBEANSTALK_LIBRARY)

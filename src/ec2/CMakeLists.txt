@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSEC2_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsEc2
+add_library(
+  QtAwsEc2
   qtawsec2global.h
   ec2client.h
   ec2client_p.h
@@ -3265,9 +3266,12 @@ add_library(QtAwsEc2
   updatesecuritygroupruledescriptionsingressrequest.cpp
   updatesecuritygroupruledescriptionsingressresponse.cpp
   withdrawbyoipcidrrequest.cpp
-  withdrawbyoipcidrresponse.cpp)
+  withdrawbyoipcidrresponse.cpp
+)
 
 target_link_libraries(QtAwsEc2
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsEc2 PRIVATE QTAWSEC2_LIBRARY)

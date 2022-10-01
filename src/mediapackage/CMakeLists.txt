@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSMEDIAPACKAGE_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsMediaPackage
+add_library(
+  QtAwsMediaPackage
   qtawsmediapackageglobal.h
   mediapackageclient.h
   mediapackageclient_p.h
@@ -127,9 +128,12 @@ add_library(QtAwsMediaPackage
   updatechannelrequest.cpp
   updatechannelresponse.cpp
   updateoriginendpointrequest.cpp
-  updateoriginendpointresponse.cpp)
+  updateoriginendpointresponse.cpp
+)
 
 target_link_libraries(QtAwsMediaPackage
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsMediaPackage PRIVATE QTAWSMEDIAPACKAGE_LIBRARY)

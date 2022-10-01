@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
 # SPDX-License-Identifier: LGPL-3.0-or-later
 
-add_compile_definitions(QTAWSSMS_LIBRARY)
+cmake_minimum_required(VERSION 3.0)
 
-add_library(QtAwsSms
+add_library(
+  QtAwsSms
   qtawssmsglobal.h
   smsclient.h
   smsclient_p.h
@@ -223,9 +224,12 @@ add_library(QtAwsSms
   updateapprequest.cpp
   updateappresponse.cpp
   updatereplicationjobrequest.cpp
-  updatereplicationjobresponse.cpp)
+  updatereplicationjobresponse.cpp
+)
 
 target_link_libraries(QtAwsSms
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
+
+target_compile_definitions(QtAwsSms PRIVATE QTAWSSMS_LIBRARY)
