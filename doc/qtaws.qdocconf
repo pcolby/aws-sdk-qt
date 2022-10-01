@@ -1,8 +1,0 @@
-include(global/qtaws-defaults.qdocconf)
-
-project = QtAws
-description = Unnoficial AWS SDK for Qt
-headerdirs  = src
-sourcedirs  = src
-
-navigation.landingtitle = "QtAws"
