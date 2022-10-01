@@ -1,0 +1,67 @@
+name: Documentation
+
+on: [push, pull_request]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: true
+    - name: Install Doxygen
+      run: |
+        sudo apt update && sudo apt upgrade && sudo apt install graphviz libclang1-9 libclang-cpp9 qtbase5-dev qtbase5-doc-dev
+        wget --quiet https://doxygen.nl/files/doxygen-1.9.5.linux.bin.tar.gz --output-document "$RUNNER_TEMP/doxygen-1.9.5.linux.bin.tar.gz"
+        tar --extract --file "$RUNNER_TEMP/doxygen-1.9.5.linux.bin.tar.gz" --directory "$RUNNER_TEMP"
+        "$RUNNER_TEMP/doxygen-1.9.5/bin/doxygen" --version
+    - name: Build docs
+      run: |
+        cmake -D "DOXYGEN_EXECUTABLE=$RUNNER_TEMP/doxygen-1.9.5/bin/doxygen" -D "QT_TAGFILES_PATH=/usr/share/qt5/doc" -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
+        cmake --build "$RUNNER_TEMP" --target doc doc-internal
+    - name: Upload public docs
+      uses: actions/upload-artifact@v3
+      with:
+        name: public-docs
+        path: "${{ runner.temp }}/doc/public"
+        if-no-files-found: error
+    - name: Upload internal docs
+      uses: actions/upload-artifact@v3
+      with:
+        name: internal-docs
+        path: "${{ runner.temp }}/doc/internal"
+        if-no-files-found: error
+
+  publish:
+    runs-on: ubuntu-latest
+    if: success() && (github.ref == 'refs/heads/main')
+    needs: generate
+    steps:
+    - uses: actions/checkout@v3
+      with: { ref: doc }
+    - name: Clear previous docs
+      run: rm -rf main/{doc,int}
+    - name: Download public docs
+      uses: actions/download-artifact@v3
+      with:
+        name: public-docs
+        path: main/doc
+    - name: Download internal docs
+      uses: actions/download-artifact@v3
+      with:
+        name: internal-docs
+        path: main/int
+    - name: Inspect changes # for diagnostics only.
+      run: |
+        git status
+        git diff
+    - name: Push updates
+      run: |
+        [[ -z $(git status --porcelain) ]] || {
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git pull
+          git add .
+          git commit -m "Update generated docs for ${GITHUB_SHA}"
+          git push
+        }

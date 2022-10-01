@@ -1,43 +1,74 @@
-name: Build
+name: Build and Test
 
 on: [push, pull_request]
 
 jobs:
-  linux:
-    runs-on: ${{ matrix.os }}
+  linux0:
+    runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        os: [ ubuntu-latest ]
         env:
         - { cc: clang, cxx: clang++ }
         - { cc: gcc, cxx: g++ }
     steps:
     - uses: actions/checkout@v3
-    - name: Install Grantlee
-      run: sudo apt install libgrantlee5-dev
+    - name: Install Qt
+      run: sudo apt update && sudo apt upgrade && sudo apt install lcov qtbase5-dev
     - name: Build
       env:
         CC:  ${{ matrix.env.cc }}
         CXX: ${{ matrix.env.cxx }}
       run: |
-        cmake -D BUILD_CODEGEN=YES -D CMAKE_BUILD_TYPE=Release -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
-        cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
+        cmake -D CMAKE_BUILD_TYPE=Release -D ENABLE_COVERAGE=${{ startsWith(matrix.env.cc, 'gcc') && 'ON' || 'OFF'}} -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
+        cmake --build "$RUNNER_TEMP"
+    - name: Test
+      run: ctest --test-dir "$RUNNER_TEMP" --verbose
+    - name: Collate test coverage
+      if: startsWith(matrix.env.cc, 'gcc')
+      run: cmake --build "$RUNNER_TEMP" --target coverage
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results-linux-${{ matrix.env.cc }}
+        path: |
+          ${{ runner.temp }}/coverage.info
+          ${{ runner.temp }}/removeHtmlDates.sh
+          ${{ runner.temp }}/test/unit/*.tap
+        if-no-files-found: ignore
+    - name: Report parallel coverage to Coveralls
+      if: startsWith(matrix.env.cc, 'gcc')
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        path-to-lcov: ${{ runner.temp }}/coverage.info
+        flag-name: linux0-${{ matrix.env.cc }}
+        parallel: true
+    - name: Setup artifacts
+      run: echo "projectVersion=$(cat "$RUNNER_TEMP/version.txt")" >> $GITHUB_ENV
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: aws-sdk-qt-${{ env.projectVersion }}+${{ github.run_number }}.linux.x86-64.${{ matrix.env.cc }}
+        path: |
+          ${{ runner.temp }}/src/core/libQtAwsCore.so
+        if-no-files-found: error
 
-  linux-qts:
-    runs-on: ${{ matrix.os }}
+  linux:
+    runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        os: [ ubuntu-latest ]
-        qt: [ '5.9.9', '5.12.11', '5.15.2' ]
+        qt: [ '5.9.9', '5.10.1', '5.11.3', '5.12.12', '5.13.2', '5.14.2', '5.15.2', '6.0.4', '6.1.3', '6.2.4', '6.3.2', '6.4.0' ]
         env:
         - { cc: clang, cxx: clang++ }
         - { cc: gcc, cxx: g++ }
     steps:
     - uses: actions/checkout@v3
     - name: Install Tools
-      run: sudo apt install clang
+      run: sudo apt update && sudo apt upgrade && sudo apt install clang lcov
     - name: Install Qt
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v3
       with:
         version: ${{ matrix.qt }}
     - name: Build
@@ -45,64 +76,300 @@ jobs:
         CC:  ${{ matrix.env.cc }}
         CXX: ${{ matrix.env.cxx }}
       run: |
-        # We don't build codegen when using jurplel Qt's, because installing libgrantlee5-dev
-        # pulls in Ubuntu's own Qt5 libraries, which is not ideal.
-        cmake -D BUILD_CODEGEN=NO -D CMAKE_BUILD_TYPE=Release -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
-        cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
+        cmake -D CMAKE_BUILD_TYPE=Release -D ENABLE_COVERAGE=${{ startsWith(matrix.env.cc, 'gcc') && 'ON' || 'OFF'}} -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
+        cmake --build "$RUNNER_TEMP"
+    - name: Test
+      run: ctest --test-dir "$RUNNER_TEMP" --verbose
+    - name: Collate test coverage
+      if: startsWith(matrix.env.cc, 'gcc')
+      run: cmake --build "$RUNNER_TEMP" --target coverage
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results-linux-${{ matrix.env.cc }}-${{ matrix.qt }}
+        path: |
+          ${{ runner.temp }}/coverage.info
+          ${{ runner.temp }}/test/unit/*.tap
+        if-no-files-found: ignore
+    - name: Report parallel coverage to Coveralls
+      if: startsWith(matrix.env.cc, 'gcc')
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        path-to-lcov: ${{ runner.temp }}/coverage.info
+        flag-name: linux-${{ matrix.env.cc }}-${{ matrix.qt }}
+        parallel: true
+    - name: Setup artifacts
+      run: echo "projectVersion=$(cat "$RUNNER_TEMP/version.txt")" >> $GITHUB_ENV
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: aws-sdk-qt-${{ env.projectVersion }}+${{ github.run_number }}.linux.x86-64.${{ matrix.env.cc }}.qt-${{ matrix.qt }}
+        path: ${{ runner.temp }}/src/lib/libQtAwsCore.so
+        if-no-files-found: error
 
   mac:
-    runs-on: ${{ matrix.os }}
+    runs-on: macos-latest
     strategy:
+      fail-fast: false
       matrix:
-        os: [ macOs-latest ]
-        qt: [ '5.9.9', '5.12.11', '5.15.2' ]
+        qt: [ '5.9.9', '5.10.1', '5.11.3', '5.12.12', '5.13.2', '5.14.2', '5.15.2', '6.2.4', '6.3.2', '6.4.0' ]
         env:
         - { cc: clang, cxx: clang++ }
         - { cc: gcc-11, cxx: g++-11 }
+        exclude:
+          # Exclude Qt 5.10 with GCC on macOS. See https://bugreports.qt.io/browse/QTBUG-66585
+          - qt: '5.10.1'
+            env: { cc: gcc-11, cxx: g++-11 }
+          # Exclude Qt 6.2 and 6.3 with GCC on macOS for now, as GCC (only) fails to find the
+          # QJsonObject initialiser list constructor. This is probably a GCC, or Qt binary bug.
+          # \todo Report this upstream sometime, and/or check if its been fixed yet.
+          - qt: '6.2.4'
+            env: { cc: gcc-11, cxx: g++-11 }
+          - qt: '6.3.2'
+            env: { cc: gcc-11, cxx: g++-11 }
+          # Exclude 6.4 with GCC on macOS for now, as GCC (only) failed with internal QMetaType
+          # symbol errors when linking.
+          - qt: '6.4.0'
+            env: { cc: gcc-11, cxx: g++-11 }
+          # Note, for Qt6 we build "universal" binaries (arm64 + x86_64), which gcc-11 does not
+          # yet support. So if we didn't happen to exclude all 6.x GCC builds above, then we'd
+          # need to selectively enable/disable universal builds for clang/gcc-11 respectively
+          # in the Build step below, at least until such time as GCC adds support.
     steps:
     - uses: actions/checkout@v3
+    - name: Install lcov
+      run: brew install lcov
     - name: Install Qt
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v3
       with:
         version: ${{ matrix.qt }}
     - name: Build
       env:
         CC:  ${{ matrix.env.cc }}
         CXX: ${{ matrix.env.cxx }}
+        CMAKE_OSX_ARCHITECTURES: ${{ startsWith(matrix.qt, '6') && 'arm64;' || '' }}x86_64
       run: |
-        cmake -D BUILD_CODEGEN=NO -D CMAKE_BUILD_TYPE=Release -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
-        cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
+        cmake -D CMAKE_BUILD_TYPE=Release \
+              -D CODECOV_GCOV=${{ startsWith(matrix.env.cc, 'gcc') && '/usr/local/bin/gcov-11' || '/usr/bin/gcov'}} \
+              -D ENABLE_COVERAGE=${{ startsWith(matrix.env.cc, 'gcc') && 'ON' || 'OFF'}} \
+              -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
+        cmake --build "$RUNNER_TEMP" -- VERBOSE=1
+    - name: Test
+      run: ctest --test-dir "$RUNNER_TEMP" --verbose
+    - name: Collate test coverage
+      if: startsWith(matrix.env.cc, 'gcc')
+      run: cmake --build "$RUNNER_TEMP" --target coverage
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results-mac-${{ matrix.env.cc }}-${{ matrix.qt }}
+        path: |
+          ${{ runner.temp }}/coverage.info
+          ${{ runner.temp }}/test/unit/*.tap
+        if-no-files-found: ignore
+    - name: Report parallel coverage to Coveralls
+      if: startsWith(matrix.env.cc, 'gcc')
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        path-to-lcov: ${{ runner.temp }}/coverage.info
+        flag-name: mac-${{ matrix.env.cc }}-${{ matrix.qt }}
+        parallel: true
+    - name: Setup artifacts
+      run: echo "projectVersion=$(cat "$RUNNER_TEMP/version.txt")" >> $GITHUB_ENV
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: aws-sdk-qt-${{ env.projectVersion }}+${{ github.run_number }}.mac.${{ startsWith(matrix.qt, '6') && 'arm64-' || '' }}x86_64.${{ matrix.env.cc }}.qt-${{ matrix.qt }}
+        path: ${{ runner.temp }}/src/lib/libQtAwsCore.dylib
+        if-no-files-found: error
 
   win:
-    runs-on: ${{ matrix.os }}
+    runs-on: windows-latest
     defaults: { run: { shell: cmd } }
     strategy:
+      fail-fast: false
       matrix:
-        os: [ windows-latest ]
-        qt: [ '5.12.11', '5.15.2' ]
+        qt: [ '5.9.9', '5.10.1', '5.11.3', '5.12.12', '5.13.2', '5.14.2', '5.15.2', '6.0.4', '6.1.3', '6.2.4', '6.3.2', '6.4.0' ]
         generator: [ 'MinGW Makefiles', 'NMake Makefiles' ]
-        include:
-        - qt: '5.12.11'
-          arch: win64_mingw73
-        - qt: '5.15.2'
-          arch: win64_mingw81
+        arch: [ x86, x86-64, arm64 ]
+        exclude:
+        # Exclude arm64 builds for Qt's earlier than 6.2, since Qt only added (Windows) arm64
+        # 'Technology Preview' support in 6.2.
+        - { arch: arm64, qt: '5.9.9'   }
+        - { arch: arm64, qt: '5.10.1'  }
+        - { arch: arm64, qt: '5.11.3'  }
+        - { arch: arm64, qt: '5.12.12' }
+        - { arch: arm64, qt: '5.13.2'  }
+        - { arch: arm64, qt: '5.14.2'  }
+        - { arch: arm64, qt: '5.15.2'  }
+        - { arch: arm64, qt: '6.0.4'   }
+        - { arch: arm64, qt: '6.1.3'   }
+        # Exclude MinGW builds for arm64, since MinGW has no arm64 support.
+        - { arch: arm64, generator: 'MinGW Makefiles' }
+        # Exclude MinGW builds for x86 (32-bit), since the GitHub Actions Windows runners only
+        # includes MinGW-w64, and not MinGW (32-bit).
+        - { arch: x86, generator: 'MinGW Makefiles' }
+        # Exclude x86 (32-bit) builds for Qt 5.10.1 with MSVC, for QTBUG-67259.
+        # See https://bugreports.qt.io/browse/QTBUG-67259
+        - { arch: x86, qt: '5.10.1', generator: 'NMake Makefiles' }
+        # Exclude x86 (32-bit) builds for Qt 6.x, since the Qt online installer doesn't provide
+        # those binaries for Qt6.
+        - { arch: x86, qt: '6.0.4' }
+        - { arch: x86, qt: '6.1.3' }
+        - { arch: x86, qt: '6.2.4' }
+        - { arch: x86, qt: '6.3.2' }
+        - { arch: x86, qt: '6.4.0' }
+        # Exclude MinGW builds for x86-64 with Qt's earlier than 5.12, since the Qt online
+        # installer (as used by aqtinstaller) did not include x86-64 binaries until Qt 5.12.
+        - { arch: x86-64, qt: '5.9.9',  generator: 'MinGW Makefiles' }
+        - { arch: x86-64, qt: '5.10.1', generator: 'MinGW Makefiles' }
+        - { arch: x86-64, qt: '5.11.3', generator: 'MinGW Makefiles' }
+        # Exclude MinGW builds for Qt 6.0.x, for QTBUG-89977.
+        # See https://bugreports.qt.io/browse/QTBUG-89977
+        - { arch: x86-64, qt: '6.0.4',  generator: 'MinGW Makefiles' }
+        # Exclude MinGW builds for 6.2.2+ for now, as Qt binary builds shifted to MinGW-w64 v11.2.0
+        # in Qt 6.2.2, and GitHub Windows runners only inlucde MinGW-w64 8.1.0 for now. See
+        # https://wiki.qt.io/MinGW#Toolchains_used_in_Qt_binary_packages
+        #- { qt: '6.2.4',  generator: 'MinGW Makefiles' }
+        #- { qt: '6.3.2',  generator: 'MinGW Makefiles' }
+        #- { qt: '6.4.0',  generator: 'MinGW Makefiles' }
+        include: # Override default arch's for install-qt-action and msvc-dev-cmd.
+        - { generator: 'MinGW Makefiles', qt: '5.12.12', qtArch: win64_mingw73 }
+        - { generator: 'MinGW Makefiles', qt: '5.13.2',  qtArch: win64_mingw73 }
+        - { generator: 'MinGW Makefiles', qt: '5.14.2',  qtArch: win64_mingw73 }
+        - { generator: 'MinGW Makefiles', qt: '5.15.2',  qtArch: win64_mingw81 }
+        - { generator: 'MinGW Makefiles', qt: '6.1.3',   qtArch: win64_mingw81 }
+        - { generator: 'MinGW Makefiles', qt: '6.2.4',   qtArch: win64_mingw   }
+        - { generator: 'MinGW Makefiles', qt: '6.3.2',   qtArch: win64_mingw   }
+        - { generator: 'MinGW Makefiles', qt: '6.4.0',   qtArch: win64_mingw   }
+        - { generator: 'NMake Makefiles', arch: x86, qt: '5.9.9',   qtArch: win32_msvc2015 }
+        - { generator: 'NMake Makefiles', arch: x86, qt: '5.11.3',  qtArch: win32_msvc2015 }
+        - { generator: 'NMake Makefiles', arch: x86, qt: '5.12.12', qtArch: win32_msvc2017 }
+        - { generator: 'NMake Makefiles', arch: x86, qt: '5.13.2',  qtArch: win32_msvc2017 }
+        - { generator: 'NMake Makefiles', arch: x86, qt: '5.14.2',  qtArch: win32_msvc2017 }
+        - { generator: 'NMake Makefiles', arch: x86, qt: '5.15.2',  qtArch: win32_msvc2019 }
+        - { generator: 'NMake Makefiles', arch: arm64,  qtArch: win64_msvc2019_arm64 }
+        - { generator: 'NMake Makefiles', arch: arm64,  msvcArch: amd64_arm64 }
+        - { generator: 'NMake Makefiles', arch: x86,    msvcArch: amd64_x86 }
+        - { generator: 'NMake Makefiles', arch: x86-64, msvcArch: amd64 }
+        # Define the toolchain and dll names per generator (for artifiact naming mostly).
+        - { generator: 'NMake Makefiles', tool: msvc,  dll:    QtAwsCore.dll }
+        - { generator: 'MinGW Makefiles', tool: mingw, dll: libQtAwsCore.dll }
     steps:
     - uses: actions/checkout@v3
-    - name: Install Qt (mingw)
-      if: ${{ contains(matrix.generator, 'mingw') }}
-      uses: jurplel/install-qt-action@v2
+    - name: Install host Qt for cross-compilation
+      if: matrix.arch == 'arm64'
+      uses: jurplel/install-qt-action@v3
       with:
         version: ${{ matrix.qt }}
-        arch: ${{ matrix.arch }}
-    - name: Install Qt (msvc)
-      if: ${{ contains(matrix.generator, 'nmake') }}
-      uses: jurplel/install-qt-action@v2
+        arch: win64_msvc2019_64
+        set-env: false
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v3
       with:
         version: ${{ matrix.qt }}
+        arch: ${{ matrix.qtArch }}
+    - name: Configure cross-compilation
+      if: matrix.arch == 'arm64'
+      shell: bash
+      run: |
+        echo "CMAKE_TOOLCHAIN_FILE=${Qt6_DIR/_64/_arm64/}\lib\cmake\Qt6\qt.toolchain.cmake" >> $GITHUB_ENV
+        echo "qtHostPath=${Qt6_DIR/_arm64/_64}" >> $GITHUB_ENV
     - name: Configure MSVC
       if: ${{ contains(matrix.generator, 'nmake') }}
       uses: ilammy/msvc-dev-cmd@v1
+      with:
+        arch: ${{ matrix.msvcArch }}
     - name: Build
       run: |
-        cmake -D BUILD_CODEGEN=NO -D CMAKE_BUILD_TYPE=Release -G "${{ matrix.generator }}" -S "%GITHUB_WORKSPACE%" -B "%RUNNER_TEMP%"
-        cmake --build "%RUNNER_TEMP%" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
+        cmake -D CMAKE_BUILD_TYPE=Release -D QT_HOST_PATH=%qtHostPath% -G "${{ matrix.generator }}" -S "%GITHUB_WORKSPACE%" -B "%RUNNER_TEMP%"
+        cmake --build "%RUNNER_TEMP%"
+    - name: Install DLL for tests
+      run: copy /v /b src\lib\${{ matrix.dll }} /b test\unit
+      working-directory: ${{ runner.temp }}
+    - name: Test # We can't execute arm64 binaries on an x86-64 host.
+      if: matrix.arch != 'arm64'
+      run: ctest --test-dir "%RUNNER_TEMP%" --verbose
+    - name: Upload test results
+      if: matrix.arch != 'arm64'
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results-win-${{ matrix.arch }}-${{ matrix.tool }}-${{ matrix.qt }}
+        path: ${{ runner.temp }}/test/unit/*.tap
+        if-no-files-found: ignore
+    - name: Setup artifacts
+      shell: bash
+      run: echo "projectVersion=$(cat "$RUNNER_TEMP/version.txt")" >> $GITHUB_ENV
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: aws-sdk-qt-${{ env.projectVersion }}+${{ github.run_number }}.win.${{ matrix.arch }}.${{ matrix.tool }}.qt-${{ matrix.qt }}
+        path: ${{ runner.temp }}/src/lib/${{ matrix.dll }}
+        if-no-files-found: error
+
+  collate-test-results:
+    needs: [ linux0, linux, mac, win ]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: sudo apt update && sudo apt upgrade && sudo apt install lcov
+    - name: Download all artifacts
+      uses: actions/download-artifact@v3
+      with:
+        path: ${{ runner.temp }}/artifacts
+    - name: Generate test summary
+      uses: pcolby/tap-summary@v1
+      with:
+        path: ${{ runner.temp }}/artifacts/**/*.tap
+    - name: Generate HTML coverage report
+      run: |
+        shopt -s globstar
+        # Update source code paths from macOS tracefiles to match Linux.
+        sed -i -Ee 's|^SF:/Users|SF:/home|' artifacts/**/coverage.info
+        # Combine all tracefiles into one.
+        lcov $(find artifacts -name '*.info' -type f -printf '-a %p\n') -o coverage.info
+        # Generate the HTML report.
+        echo 'genhtml_sort = 0' >> ~/.lcovrc
+        genhtml --output-directory coverage coverage.info
+        /usr/bin/env bash ./artifacts/test-results-linux-gcc/removeHtmlDates.sh
+      working-directory: ${{ runner.temp }}
+    - name: Upload HTML coverage report
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: "${{ runner.temp }}/coverage"
+        if-no-files-found: error
+    - name: Report parallel-finished to Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        parallel-finished: true
+
+  update-tests-on-doc-branch:
+    runs-on: ubuntu-latest
+    if: success() && (github.ref == 'refs/heads/main')
+    needs: collate-test-results
+    steps:
+    - uses: actions/checkout@v3
+      with: { ref: doc }
+    - name: Clear previous coverage report
+      run: rm -rf main/cov
+    - name: Download HTML report
+      uses: actions/download-artifact@v3
+      with:
+        name: coverage-report
+        path: main/cov
+    - name: Inspect changes # for diagnostics only.
+      run: git status && git diff
+    - name: Push updates
+      run: |
+        [[ -z $(git status --porcelain) ]] || {
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git pull
+          git add .
+          git commit -m "Update coverage report for ${GITHUB_SHA}"
+          git push
+        }
