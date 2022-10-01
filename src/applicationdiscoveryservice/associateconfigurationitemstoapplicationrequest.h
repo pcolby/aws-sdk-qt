@@ -20,14 +20,14 @@
 #ifndef QTAWS_ASSOCIATECONFIGURATIONITEMSTOAPPLICATIONREQUEST_H
 #define QTAWS_ASSOCIATECONFIGURATIONITEMSTOAPPLICATIONREQUEST_H
 
-#include "applicationdiscoveryservicerequest.h"
+#include "applicationdiscoveryrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class AssociateConfigurationItemsToApplicationRequestPrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT AssociateConfigurationItemsToApplicationRequest : public ApplicationDiscoveryServiceRequest {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT AssociateConfigurationItemsToApplicationRequest : public ApplicationDiscoveryRequest {
 
 public:
     AssociateConfigurationItemsToApplicationRequest(const AssociateConfigurationItemsToApplicationRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

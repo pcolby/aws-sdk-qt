@@ -20,16 +20,16 @@
 #include "addtagstoresourcerequest.h"
 #include "addtagstoresourcerequest_p.h"
 #include "addtagstoresourceresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::AddTagsToResourceRequest
- * \brief The AddTagsToResourceRequest class provides an interface for DatabaseMigrationService AddTagsToResource requests.
+ * \class QtAws::DatabaseMigration::AddTagsToResourceRequest
+ * \brief The AddTagsToResourceRequest class provides an interface for DatabaseMigration AddTagsToResource requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::addTagsToResource
+ * \sa DatabaseMigrationClient::addTagsToResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceRequest &other)
-    : DatabaseMigrationServiceRequest(new AddTagsToResourceRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new AddTagsToResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceReques
  * Constructs a AddTagsToResourceRequest object.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest()
-    : DatabaseMigrationServiceRequest(new AddTagsToResourceRequestPrivate(DatabaseMigrationServiceRequest::AddTagsToResourceAction, this))
+    : DatabaseMigrationRequest(new AddTagsToResourceRequestPrivate(DatabaseMigrationRequest::AddTagsToResourceAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::AddTagsToResourceRequestPrivate
+ * \class QtAws::DatabaseMigration::AddTagsToResourceRequestPrivate
  * \brief The AddTagsToResourceRequestPrivate class provides private implementation for AddTagsToResourceRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a AddTagsToResourceRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a AddTagsToResourceRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, AddTagsToResourceRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, AddTagsToResourceRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const AddTagsToResourceRequestPrivate &other, AddTagsToResourceRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

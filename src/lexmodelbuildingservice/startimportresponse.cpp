@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::StartImportResponse
- * \brief The StartImportResponse class provides an interace for LexModelBuildingService StartImport responses.
+ * \class QtAws::LexModelBuilding::StartImportResponse
+ * \brief The StartImportResponse class provides an interace for LexModelBuilding StartImport responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::startImport
+ * \sa LexModelBuildingClient::startImport
  */
 
 /*!
@@ -48,7 +48,7 @@ StartImportResponse::StartImportResponse(
         const StartImportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new StartImportResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new StartImportResponsePrivate(this), parent)
 {
     setRequest(new StartImportRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const StartImportRequest * StartImportResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService StartImport \a response.
+ * Parses a successful LexModelBuilding StartImport \a response.
  */
 void StartImportResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void StartImportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::StartImportResponsePrivate
+ * \class QtAws::LexModelBuilding::StartImportResponsePrivate
  * \brief The StartImportResponsePrivate class provides private implementation for StartImportResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a StartImportResponsePrivate object with public implementation \a q.
  */
 StartImportResponsePrivate::StartImportResponsePrivate(
-    StartImportResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    StartImportResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService StartImport response element from \a xml.
+ * Parses a LexModelBuilding StartImport response element from \a xml.
  */
 void StartImportResponsePrivate::parseStartImportResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void StartImportResponsePrivate::parseStartImportResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

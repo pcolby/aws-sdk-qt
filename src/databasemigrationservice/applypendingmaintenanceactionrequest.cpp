@@ -20,16 +20,16 @@
 #include "applypendingmaintenanceactionrequest.h"
 #include "applypendingmaintenanceactionrequest_p.h"
 #include "applypendingmaintenanceactionresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::ApplyPendingMaintenanceActionRequest
- * \brief The ApplyPendingMaintenanceActionRequest class provides an interface for DatabaseMigrationService ApplyPendingMaintenanceAction requests.
+ * \class QtAws::DatabaseMigration::ApplyPendingMaintenanceActionRequest
+ * \brief The ApplyPendingMaintenanceActionRequest class provides an interface for DatabaseMigration ApplyPendingMaintenanceAction requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::applyPendingMaintenanceAction
+ * \sa DatabaseMigrationClient::applyPendingMaintenanceAction
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ApplyPendingMaintenanceActionRequest::ApplyPendingMaintenanceActionRequest(const ApplyPendingMaintenanceActionRequest &other)
-    : DatabaseMigrationServiceRequest(new ApplyPendingMaintenanceActionRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new ApplyPendingMaintenanceActionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ ApplyPendingMaintenanceActionRequest::ApplyPendingMaintenanceActionRequest(const
  * Constructs a ApplyPendingMaintenanceActionRequest object.
  */
 ApplyPendingMaintenanceActionRequest::ApplyPendingMaintenanceActionRequest()
-    : DatabaseMigrationServiceRequest(new ApplyPendingMaintenanceActionRequestPrivate(DatabaseMigrationServiceRequest::ApplyPendingMaintenanceActionAction, this))
+    : DatabaseMigrationRequest(new ApplyPendingMaintenanceActionRequestPrivate(DatabaseMigrationRequest::ApplyPendingMaintenanceActionAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * ApplyPendingMaintenanceActionRequest::respons
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::ApplyPendingMaintenanceActionRequestPrivate
+ * \class QtAws::DatabaseMigration::ApplyPendingMaintenanceActionRequestPrivate
  * \brief The ApplyPendingMaintenanceActionRequestPrivate class provides private implementation for ApplyPendingMaintenanceActionRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a ApplyPendingMaintenanceActionRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a ApplyPendingMaintenanceActionRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, ApplyPendingMaintenanceActionRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, ApplyPendingMaintenanceActionRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionReques
  */
 ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionRequestPrivate(
     const ApplyPendingMaintenanceActionRequestPrivate &other, ApplyPendingMaintenanceActionRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -17,33 +17,33 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "marketplaceentitlementservicerequest.h"
-#include "marketplaceentitlementservicerequest_p.h"
+#include "marketplaceentitlementrequest.h"
+#include "marketplaceentitlementrequest_p.h"
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
 /*!
- * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceRequest
- * \brief The MarketplaceEntitlementServiceRequest class provides an interface for MarketplaceEntitlementService requests.
+ * \class QtAws::MarketplaceEntitlement::MarketplaceEntitlementRequest
+ * \brief The MarketplaceEntitlementRequest class provides an interface for MarketplaceEntitlement requests.
  *
- * \inmodule QtAwsMarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlement
  */
 
 /*!
- * \enum MarketplaceEntitlementServiceRequest::Action
+ * \enum MarketplaceEntitlementRequest::Action
  *
- * This enum describes the actions that can be performed as MarketplaceEntitlementService
+ * This enum describes the actions that can be performed as MarketplaceEntitlement
  * requests.
  *
- * \value GetEntitlementsAction MarketplaceEntitlementService GetEntitlements action.
+ * \value GetEntitlementsAction MarketplaceEntitlement GetEntitlements action.
  */
 
 /*!
- * Constructs a MarketplaceEntitlementServiceRequest object for MarketplaceEntitlementService \a action.
+ * Constructs a MarketplaceEntitlementRequest object for MarketplaceEntitlement \a action.
  */
-MarketplaceEntitlementServiceRequest::MarketplaceEntitlementServiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new MarketplaceEntitlementServiceRequestPrivate(action, this))
+MarketplaceEntitlementRequest::MarketplaceEntitlementRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new MarketplaceEntitlementRequestPrivate(action, this))
 {
 
 }
@@ -51,18 +51,18 @@ MarketplaceEntitlementServiceRequest::MarketplaceEntitlementServiceRequest(const
 /*!
  * Constructs a copy of \a other.
  */
-MarketplaceEntitlementServiceRequest::MarketplaceEntitlementServiceRequest(const MarketplaceEntitlementServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new MarketplaceEntitlementServiceRequestPrivate(*other.d_func(), this))
+MarketplaceEntitlementRequest::MarketplaceEntitlementRequest(const MarketplaceEntitlementRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new MarketplaceEntitlementRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the MarketplaceEntitlementServiceRequest object to be equal to \a other.
+ * Sets the MarketplaceEntitlementRequest object to be equal to \a other.
  */
-MarketplaceEntitlementServiceRequest& MarketplaceEntitlementServiceRequest::operator=(const MarketplaceEntitlementServiceRequest &other)
+MarketplaceEntitlementRequest& MarketplaceEntitlementRequest::operator=(const MarketplaceEntitlementRequest &other)
 {
-    Q_D(MarketplaceEntitlementServiceRequest);
+    Q_D(MarketplaceEntitlementRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -70,57 +70,57 @@ MarketplaceEntitlementServiceRequest& MarketplaceEntitlementServiceRequest::oper
 }
 
 /*!
- * Constructs aa MarketplaceEntitlementServiceRequest object with private implementation \a d.
+ * Constructs aa MarketplaceEntitlementRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from MarketplaceEntitlementServiceRequestPrivate.
+ * implementation that inherits from MarketplaceEntitlementRequestPrivate.
  */
-MarketplaceEntitlementServiceRequest::MarketplaceEntitlementServiceRequest(MarketplaceEntitlementServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+MarketplaceEntitlementRequest::MarketplaceEntitlementRequest(MarketplaceEntitlementRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the MarketplaceEntitlementService action to be performed by this request.
+ * Returns the MarketplaceEntitlement action to be performed by this request.
  */
-MarketplaceEntitlementServiceRequest::Action MarketplaceEntitlementServiceRequest::action() const
+MarketplaceEntitlementRequest::Action MarketplaceEntitlementRequest::action() const
 {
-    Q_D(const MarketplaceEntitlementServiceRequest);
+    Q_D(const MarketplaceEntitlementRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the MarketplaceEntitlementService action to be performed by this request.
+ * Returns the name of the MarketplaceEntitlement action to be performed by this request.
  */
-QString MarketplaceEntitlementServiceRequest::actionString() const
+QString MarketplaceEntitlementRequest::actionString() const
 {
-    return MarketplaceEntitlementServiceRequestPrivate::toString(action());
+    return MarketplaceEntitlementRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the MarketplaceEntitlementService API version implemented by this request.
+ * Returns the MarketplaceEntitlement API version implemented by this request.
  */
-QString MarketplaceEntitlementServiceRequest::apiVersion() const
+QString MarketplaceEntitlementRequest::apiVersion() const
 {
-    Q_D(const MarketplaceEntitlementServiceRequest);
+    Q_D(const MarketplaceEntitlementRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the MarketplaceEntitlementService action to be performed by this request to \a action.
+ * Sets the MarketplaceEntitlement action to be performed by this request to \a action.
  */
-void MarketplaceEntitlementServiceRequest::setAction(const Action action)
+void MarketplaceEntitlementRequest::setAction(const Action action)
 {
-    Q_D(MarketplaceEntitlementServiceRequest);
+    Q_D(MarketplaceEntitlementRequest);
     d->action = action;
 }
 
 /*!
- * Sets the MarketplaceEntitlementService API version to include in this request to \a version.
+ * Sets the MarketplaceEntitlement API version to include in this request to \a version.
  */
-void MarketplaceEntitlementServiceRequest::setApiVersion(const QString &version)
+void MarketplaceEntitlementRequest::setApiVersion(const QString &version)
 {
-    Q_D(MarketplaceEntitlementServiceRequest);
+    Q_D(MarketplaceEntitlementRequest);
     d->apiVersion = version;
 }
 
@@ -132,7 +132,7 @@ void MarketplaceEntitlementServiceRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool MarketplaceEntitlementServiceRequest::operator==(const MarketplaceEntitlementServiceRequest &other) const
+bool MarketplaceEntitlementRequest::operator==(const MarketplaceEntitlementRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -141,19 +141,19 @@ bool MarketplaceEntitlementServiceRequest::operator==(const MarketplaceEntitleme
 }
 
 /*
- * Returns \c tue if \a queueName is a valid MarketplaceEntitlementService queue name.
+ * Returns \c tue if \a queueName is a valid MarketplaceEntitlement queue name.
  *
- * @par From MarketplaceEntitlementService FAQs:
+ * @par From MarketplaceEntitlement FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid MarketplaceEntitlementService queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid MarketplaceEntitlement queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool MarketplaceEntitlementServiceRequest::isValidQueueName(const QString &queueName)
+/*bool MarketplaceEntitlementRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -163,45 +163,45 @@ bool MarketplaceEntitlementServiceRequest::operator==(const MarketplaceEntitleme
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int MarketplaceEntitlementServiceRequest::clearParameter(const QString &name)
+int MarketplaceEntitlementRequest::clearParameter(const QString &name)
 {
-    Q_D(MarketplaceEntitlementServiceRequest);
+    Q_D(MarketplaceEntitlementRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void MarketplaceEntitlementServiceRequest::clearParameters()
+void MarketplaceEntitlementRequest::clearParameters()
 {
-    Q_D(MarketplaceEntitlementServiceRequest);
+    Q_D(MarketplaceEntitlementRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant MarketplaceEntitlementServiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant MarketplaceEntitlementRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const MarketplaceEntitlementServiceRequest);
+    Q_D(const MarketplaceEntitlementRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &MarketplaceEntitlementServiceRequest::parameters() const
+const QVariantMap &MarketplaceEntitlementRequest::parameters() const
 {
-    Q_D(const MarketplaceEntitlementServiceRequest);
+    Q_D(const MarketplaceEntitlementRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void MarketplaceEntitlementServiceRequest::setParameter(const QString &name, const QVariant &value)
+void MarketplaceEntitlementRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(MarketplaceEntitlementServiceRequest);
+    Q_D(MarketplaceEntitlementRequest);
     d->parameters.insert(name, value);
 }
 
@@ -209,41 +209,41 @@ void MarketplaceEntitlementServiceRequest::setParameter(const QString &name, con
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void MarketplaceEntitlementServiceRequest::setParameters(const QVariantMap &parameters)
+void MarketplaceEntitlementRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(MarketplaceEntitlementServiceRequest);
+    Q_D(MarketplaceEntitlementRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the MarketplaceEntitlementService request using the given
+ * Returns a network request for the MarketplaceEntitlement request using the given
  * \a endpoint.
  *
- * This MarketplaceEntitlementService implementation builds request URLs by combining the
+ * This MarketplaceEntitlement implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest MarketplaceEntitlementServiceRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest MarketplaceEntitlementRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const MarketplaceEntitlementServiceRequest);
+    //Q_D(const MarketplaceEntitlementRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceRequestPrivate
- * \brief The MarketplaceEntitlementServiceRequestPrivate class provides private implementation for MarketplaceEntitlementServiceRequest.
+ * \class QtAws::MarketplaceEntitlement::MarketplaceEntitlementRequestPrivate
+ * \brief The MarketplaceEntitlementRequestPrivate class provides private implementation for MarketplaceEntitlementRequest.
  * \internal
  *
- * \inmodule QtAwsMarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlement
  */
 
 /*!
- * Constructs a MarketplaceEntitlementServiceRequestPrivate object for MarketplaceEntitlementService \a action,
+ * Constructs a MarketplaceEntitlementRequestPrivate object for MarketplaceEntitlement \a action,
  * with public implementation \a q.
  */
-MarketplaceEntitlementServiceRequestPrivate::MarketplaceEntitlementServiceRequestPrivate(const MarketplaceEntitlementServiceRequest::Action action, MarketplaceEntitlementServiceRequest * const q)
+MarketplaceEntitlementRequestPrivate::MarketplaceEntitlementRequestPrivate(const MarketplaceEntitlementRequest::Action action, MarketplaceEntitlementRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-01-11"))
 {
 
@@ -255,10 +255,10 @@ MarketplaceEntitlementServiceRequestPrivate::MarketplaceEntitlementServiceReques
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the MarketplaceEntitlementServiceRequest class's copy constructor.
+ * This is required to support the MarketplaceEntitlementRequest class's copy constructor.
  */
-MarketplaceEntitlementServiceRequestPrivate::MarketplaceEntitlementServiceRequestPrivate(const MarketplaceEntitlementServiceRequestPrivate &other,
-                                     MarketplaceEntitlementServiceRequest * const q)
+MarketplaceEntitlementRequestPrivate::MarketplaceEntitlementRequestPrivate(const MarketplaceEntitlementRequestPrivate &other,
+                                     MarketplaceEntitlementRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -269,14 +269,14 @@ MarketplaceEntitlementServiceRequestPrivate::MarketplaceEntitlementServiceReques
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts MarketplaceEntitlementServiceRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the MarketplaceEntitlementService service's Action
+ * This function converts MarketplaceEntitlementRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the MarketplaceEntitlement service's Action
  * query parameters.
  */
-QString MarketplaceEntitlementServiceRequestPrivate::toString(const MarketplaceEntitlementServiceRequest::Action &action)
+QString MarketplaceEntitlementRequestPrivate::toString(const MarketplaceEntitlementRequest::Action &action)
 {
     #define ActionToString(action) \
-        case MarketplaceEntitlementServiceRequest::action##Action: return QStringLiteral(#action)
+        case MarketplaceEntitlementRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(GetEntitlements);
         default:
@@ -286,5 +286,5 @@ QString MarketplaceEntitlementServiceRequestPrivate::toString(const MarketplaceE
     return QString();
 }
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws

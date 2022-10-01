@@ -20,18 +20,18 @@
 #ifndef QTAWS_DESCRIBEAPPLICABLEINDIVIDUALASSESSMENTSREQUEST_P_H
 #define QTAWS_DESCRIBEAPPLICABLEINDIVIDUALASSESSMENTSREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "describeapplicableindividualassessmentsrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DescribeApplicableIndividualAssessmentsRequest;
 
-class DescribeApplicableIndividualAssessmentsRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class DescribeApplicableIndividualAssessmentsRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    DescribeApplicableIndividualAssessmentsRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    DescribeApplicableIndividualAssessmentsRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    DescribeApplicableIndividualAssessmentsRequest * const q);
     DescribeApplicableIndividualAssessmentsRequestPrivate(const DescribeApplicableIndividualAssessmentsRequestPrivate &other,
                                    DescribeApplicableIndividualAssessmentsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

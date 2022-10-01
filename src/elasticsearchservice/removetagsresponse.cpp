@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::RemoveTagsResponse
- * \brief The RemoveTagsResponse class provides an interace for ElasticsearchService RemoveTags responses.
+ * \class QtAws::Elasticsearch::RemoveTagsResponse
+ * \brief The RemoveTagsResponse class provides an interace for Elasticsearch RemoveTags responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::removeTags
+ * \sa ElasticsearchClient::removeTags
  */
 
 /*!
@@ -61,7 +61,7 @@ RemoveTagsResponse::RemoveTagsResponse(
         const RemoveTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new RemoveTagsResponsePrivate(this), parent)
+    : ElasticsearchResponse(new RemoveTagsResponsePrivate(this), parent)
 {
     setRequest(new RemoveTagsRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const RemoveTagsRequest * RemoveTagsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService RemoveTags \a response.
+ * Parses a successful Elasticsearch RemoveTags \a response.
  */
 void RemoveTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void RemoveTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::RemoveTagsResponsePrivate
+ * \class QtAws::Elasticsearch::RemoveTagsResponsePrivate
  * \brief The RemoveTagsResponsePrivate class provides private implementation for RemoveTagsResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a RemoveTagsResponsePrivate object with public implementation \a q.
  */
 RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
-    RemoveTagsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    RemoveTagsResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService RemoveTags response element from \a xml.
+ * Parses a Elasticsearch RemoveTags response element from \a xml.
  */
 void RemoveTagsResponsePrivate::parseRemoveTagsResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void RemoveTagsResponsePrivate::parseRemoveTagsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

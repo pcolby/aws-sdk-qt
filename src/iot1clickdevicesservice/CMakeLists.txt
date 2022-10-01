@@ -1,13 +1,13 @@
-add_compile_definitions(QTAWSIOT1CLICKDEVICESSERVICE_LIBRARY)
+add_compile_definitions(QTAWSIOT1CLICKDEVICES_LIBRARY)
 
-add_library(QtAwsIoT1ClickDevicesService
-  qtawsiot1clickdevicesserviceglobal.h
-  iot1clickdevicesserviceclient.h
-  iot1clickdevicesserviceclient_p.h
-  iot1clickdevicesservicerequest.h
-  iot1clickdevicesservicerequest_p.h
-  iot1clickdevicesserviceresponse.h
-  iot1clickdevicesserviceresponse_p.h
+add_library(QtAwsIoT1ClickDevices
+  qtawsiot1clickdevicesglobal.h
+  iot1clickdevicesclient.h
+  iot1clickdevicesclient_p.h
+  iot1clickdevicesrequest.h
+  iot1clickdevicesrequest_p.h
+  iot1clickdevicesresponse.h
+  iot1clickdevicesresponse_p.h
   claimdevicesbyclaimcoderequest.h
   claimdevicesbyclaimcoderequest_p.h
   claimdevicesbyclaimcoderesponse.h
@@ -60,9 +60,9 @@ add_library(QtAwsIoT1ClickDevicesService
   updatedevicestaterequest_p.h
   updatedevicestateresponse.h
   updatedevicestateresponse_p.h
-  iot1clickdevicesserviceclient.cpp
-  iot1clickdevicesservicerequest.cpp
-  iot1clickdevicesserviceresponse.cpp
+  iot1clickdevicesclient.cpp
+  iot1clickdevicesrequest.cpp
+  iot1clickdevicesresponse.cpp
   claimdevicesbyclaimcoderequest.cpp
   claimdevicesbyclaimcoderesponse.cpp
   describedevicerequest.cpp
@@ -90,7 +90,7 @@ add_library(QtAwsIoT1ClickDevicesService
   updatedevicestaterequest.cpp
   updatedevicestateresponse.cpp)
 
-target_link_libraries(QtAwsIoT1ClickDevicesService
+target_link_libraries(QtAwsIoT1ClickDevices
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

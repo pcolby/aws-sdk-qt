@@ -20,16 +20,16 @@
 #include "deleteelasticsearchdomainrequest.h"
 #include "deleteelasticsearchdomainrequest_p.h"
 #include "deleteelasticsearchdomainresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DeleteElasticsearchDomainRequest
- * \brief The DeleteElasticsearchDomainRequest class provides an interface for ElasticsearchService DeleteElasticsearchDomain requests.
+ * \class QtAws::Elasticsearch::DeleteElasticsearchDomainRequest
+ * \brief The DeleteElasticsearchDomainRequest class provides an interface for Elasticsearch DeleteElasticsearchDomain requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::deleteElasticsearchDomain
+ * \sa ElasticsearchClient::deleteElasticsearchDomain
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteElasticsearchDomainRequest::DeleteElasticsearchDomainRequest(const DeleteElasticsearchDomainRequest &other)
-    : ElasticsearchServiceRequest(new DeleteElasticsearchDomainRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new DeleteElasticsearchDomainRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DeleteElasticsearchDomainRequest::DeleteElasticsearchDomainRequest(const DeleteE
  * Constructs a DeleteElasticsearchDomainRequest object.
  */
 DeleteElasticsearchDomainRequest::DeleteElasticsearchDomainRequest()
-    : ElasticsearchServiceRequest(new DeleteElasticsearchDomainRequestPrivate(ElasticsearchServiceRequest::DeleteElasticsearchDomainAction, this))
+    : ElasticsearchRequest(new DeleteElasticsearchDomainRequestPrivate(ElasticsearchRequest::DeleteElasticsearchDomainAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DeleteElasticsearchDomainRequest::response(QN
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DeleteElasticsearchDomainRequestPrivate
+ * \class QtAws::Elasticsearch::DeleteElasticsearchDomainRequestPrivate
  * \brief The DeleteElasticsearchDomainRequestPrivate class provides private implementation for DeleteElasticsearchDomainRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a DeleteElasticsearchDomainRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a DeleteElasticsearchDomainRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, DeleteElasticsearchDomainRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, DeleteElasticsearchDomainRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate
  */
 DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate(
     const DeleteElasticsearchDomainRequestPrivate &other, DeleteElasticsearchDomainRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

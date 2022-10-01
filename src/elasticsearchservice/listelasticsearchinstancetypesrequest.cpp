@@ -20,16 +20,16 @@
 #include "listelasticsearchinstancetypesrequest.h"
 #include "listelasticsearchinstancetypesrequest_p.h"
 #include "listelasticsearchinstancetypesresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::ListElasticsearchInstanceTypesRequest
- * \brief The ListElasticsearchInstanceTypesRequest class provides an interface for ElasticsearchService ListElasticsearchInstanceTypes requests.
+ * \class QtAws::Elasticsearch::ListElasticsearchInstanceTypesRequest
+ * \brief The ListElasticsearchInstanceTypesRequest class provides an interface for Elasticsearch ListElasticsearchInstanceTypes requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::listElasticsearchInstanceTypes
+ * \sa ElasticsearchClient::listElasticsearchInstanceTypes
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListElasticsearchInstanceTypesRequest::ListElasticsearchInstanceTypesRequest(const ListElasticsearchInstanceTypesRequest &other)
-    : ElasticsearchServiceRequest(new ListElasticsearchInstanceTypesRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new ListElasticsearchInstanceTypesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ ListElasticsearchInstanceTypesRequest::ListElasticsearchInstanceTypesRequest(con
  * Constructs a ListElasticsearchInstanceTypesRequest object.
  */
 ListElasticsearchInstanceTypesRequest::ListElasticsearchInstanceTypesRequest()
-    : ElasticsearchServiceRequest(new ListElasticsearchInstanceTypesRequestPrivate(ElasticsearchServiceRequest::ListElasticsearchInstanceTypesAction, this))
+    : ElasticsearchRequest(new ListElasticsearchInstanceTypesRequestPrivate(ElasticsearchRequest::ListElasticsearchInstanceTypesAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * ListElasticsearchInstanceTypesRequest::respon
 }
 
 /*!
- * \class QtAws::ElasticsearchService::ListElasticsearchInstanceTypesRequestPrivate
+ * \class QtAws::Elasticsearch::ListElasticsearchInstanceTypesRequestPrivate
  * \brief The ListElasticsearchInstanceTypesRequestPrivate class provides private implementation for ListElasticsearchInstanceTypesRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a ListElasticsearchInstanceTypesRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a ListElasticsearchInstanceTypesRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 ListElasticsearchInstanceTypesRequestPrivate::ListElasticsearchInstanceTypesRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, ListElasticsearchInstanceTypesRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, ListElasticsearchInstanceTypesRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ ListElasticsearchInstanceTypesRequestPrivate::ListElasticsearchInstanceTypesRequ
  */
 ListElasticsearchInstanceTypesRequestPrivate::ListElasticsearchInstanceTypesRequestPrivate(
     const ListElasticsearchInstanceTypesRequestPrivate &other, ListElasticsearchInstanceTypesRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

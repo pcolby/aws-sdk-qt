@@ -20,18 +20,18 @@
 #ifndef QTAWS_LISTDOMAINSFORPACKAGEREQUEST_P_H
 #define QTAWS_LISTDOMAINSFORPACKAGEREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "listdomainsforpackagerequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class ListDomainsForPackageRequest;
 
-class ListDomainsForPackageRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class ListDomainsForPackageRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    ListDomainsForPackageRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    ListDomainsForPackageRequestPrivate(const ElasticsearchRequest::Action action,
                                    ListDomainsForPackageRequest * const q);
     ListDomainsForPackageRequestPrivate(const ListDomainsForPackageRequestPrivate &other,
                                    ListDomainsForPackageRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

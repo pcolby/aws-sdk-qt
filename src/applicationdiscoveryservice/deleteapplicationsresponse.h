@@ -20,15 +20,15 @@
 #ifndef QTAWS_DELETEAPPLICATIONSRESPONSE_H
 #define QTAWS_DELETEAPPLICATIONSRESPONSE_H
 
-#include "applicationdiscoveryserviceresponse.h"
+#include "applicationdiscoveryresponse.h"
 #include "deleteapplicationsrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class DeleteApplicationsResponsePrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT DeleteApplicationsResponse : public ApplicationDiscoveryServiceResponse {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT DeleteApplicationsResponse : public ApplicationDiscoveryResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

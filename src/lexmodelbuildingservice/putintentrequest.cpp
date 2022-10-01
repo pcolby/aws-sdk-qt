@@ -20,30 +20,30 @@
 #include "putintentrequest.h"
 #include "putintentrequest_p.h"
 #include "putintentresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::PutIntentRequest
- * \brief The PutIntentRequest class provides an interface for LexModelBuildingService PutIntent requests.
+ * \class QtAws::LexModelBuilding::PutIntentRequest
+ * \brief The PutIntentRequest class provides an interface for LexModelBuilding PutIntent requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::putIntent
+ * \sa LexModelBuildingClient::putIntent
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutIntentRequest::PutIntentRequest(const PutIntentRequest &other)
-    : LexModelBuildingServiceRequest(new PutIntentRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new PutIntentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ PutIntentRequest::PutIntentRequest(const PutIntentRequest &other)
  * Constructs a PutIntentRequest object.
  */
 PutIntentRequest::PutIntentRequest()
-    : LexModelBuildingServiceRequest(new PutIntentRequestPrivate(LexModelBuildingServiceRequest::PutIntentAction, this))
+    : LexModelBuildingRequest(new PutIntentRequestPrivate(LexModelBuildingRequest::PutIntentAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * PutIntentRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::PutIntentRequestPrivate
+ * \class QtAws::LexModelBuilding::PutIntentRequestPrivate
  * \brief The PutIntentRequestPrivate class provides private implementation for PutIntentRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a PutIntentRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a PutIntentRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 PutIntentRequestPrivate::PutIntentRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, PutIntentRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, PutIntentRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ PutIntentRequestPrivate::PutIntentRequestPrivate(
  */
 PutIntentRequestPrivate::PutIntentRequestPrivate(
     const PutIntentRequestPrivate &other, PutIntentRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

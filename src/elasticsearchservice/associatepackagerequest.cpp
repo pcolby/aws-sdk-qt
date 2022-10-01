@@ -20,16 +20,16 @@
 #include "associatepackagerequest.h"
 #include "associatepackagerequest_p.h"
 #include "associatepackageresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::AssociatePackageRequest
- * \brief The AssociatePackageRequest class provides an interface for ElasticsearchService AssociatePackage requests.
+ * \class QtAws::Elasticsearch::AssociatePackageRequest
+ * \brief The AssociatePackageRequest class provides an interface for Elasticsearch AssociatePackage requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::associatePackage
+ * \sa ElasticsearchClient::associatePackage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 AssociatePackageRequest::AssociatePackageRequest(const AssociatePackageRequest &other)
-    : ElasticsearchServiceRequest(new AssociatePackageRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new AssociatePackageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ AssociatePackageRequest::AssociatePackageRequest(const AssociatePackageRequest &
  * Constructs a AssociatePackageRequest object.
  */
 AssociatePackageRequest::AssociatePackageRequest()
-    : ElasticsearchServiceRequest(new AssociatePackageRequestPrivate(ElasticsearchServiceRequest::AssociatePackageAction, this))
+    : ElasticsearchRequest(new AssociatePackageRequestPrivate(ElasticsearchRequest::AssociatePackageAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * AssociatePackageRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::ElasticsearchService::AssociatePackageRequestPrivate
+ * \class QtAws::Elasticsearch::AssociatePackageRequestPrivate
  * \brief The AssociatePackageRequestPrivate class provides private implementation for AssociatePackageRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a AssociatePackageRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a AssociatePackageRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 AssociatePackageRequestPrivate::AssociatePackageRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, AssociatePackageRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, AssociatePackageRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ AssociatePackageRequestPrivate::AssociatePackageRequestPrivate(
  */
 AssociatePackageRequestPrivate::AssociatePackageRequestPrivate(
     const AssociatePackageRequestPrivate &other, AssociatePackageRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

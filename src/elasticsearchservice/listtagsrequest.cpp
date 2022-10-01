@@ -20,16 +20,16 @@
 #include "listtagsrequest.h"
 #include "listtagsrequest_p.h"
 #include "listtagsresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::ListTagsRequest
- * \brief The ListTagsRequest class provides an interface for ElasticsearchService ListTags requests.
+ * \class QtAws::Elasticsearch::ListTagsRequest
+ * \brief The ListTagsRequest class provides an interface for Elasticsearch ListTags requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::listTags
+ * \sa ElasticsearchClient::listTags
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
-    : ElasticsearchServiceRequest(new ListTagsRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new ListTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
  * Constructs a ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
-    : ElasticsearchServiceRequest(new ListTagsRequestPrivate(ElasticsearchServiceRequest::ListTagsAction, this))
+    : ElasticsearchRequest(new ListTagsRequestPrivate(ElasticsearchRequest::ListTagsAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
 }
 
 /*!
- * \class QtAws::ElasticsearchService::ListTagsRequestPrivate
+ * \class QtAws::Elasticsearch::ListTagsRequestPrivate
  * \brief The ListTagsRequestPrivate class provides private implementation for ListTagsRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a ListTagsRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a ListTagsRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, ListTagsRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, ListTagsRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const ListTagsRequestPrivate &other, ListTagsRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

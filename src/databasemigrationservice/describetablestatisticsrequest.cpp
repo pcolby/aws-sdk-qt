@@ -20,16 +20,16 @@
 #include "describetablestatisticsrequest.h"
 #include "describetablestatisticsrequest_p.h"
 #include "describetablestatisticsresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeTableStatisticsRequest
- * \brief The DescribeTableStatisticsRequest class provides an interface for DatabaseMigrationService DescribeTableStatistics requests.
+ * \class QtAws::DatabaseMigration::DescribeTableStatisticsRequest
+ * \brief The DescribeTableStatisticsRequest class provides an interface for DatabaseMigration DescribeTableStatistics requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeTableStatistics
+ * \sa DatabaseMigrationClient::describeTableStatistics
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeTableStatisticsRequest::DescribeTableStatisticsRequest(const DescribeTableStatisticsRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribeTableStatisticsRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribeTableStatisticsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeTableStatisticsRequest::DescribeTableStatisticsRequest(const DescribeTab
  * Constructs a DescribeTableStatisticsRequest object.
  */
 DescribeTableStatisticsRequest::DescribeTableStatisticsRequest()
-    : DatabaseMigrationServiceRequest(new DescribeTableStatisticsRequestPrivate(DatabaseMigrationServiceRequest::DescribeTableStatisticsAction, this))
+    : DatabaseMigrationRequest(new DescribeTableStatisticsRequestPrivate(DatabaseMigrationRequest::DescribeTableStatisticsAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribeTableStatisticsRequest::response(QNet
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeTableStatisticsRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribeTableStatisticsRequestPrivate
  * \brief The DescribeTableStatisticsRequestPrivate class provides private implementation for DescribeTableStatisticsRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribeTableStatisticsRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribeTableStatisticsRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribeTableStatisticsRequestPrivate::DescribeTableStatisticsRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribeTableStatisticsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribeTableStatisticsRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribeTableStatisticsRequestPrivate::DescribeTableStatisticsRequestPrivate(
  */
 DescribeTableStatisticsRequestPrivate::DescribeTableStatisticsRequestPrivate(
     const DescribeTableStatisticsRequestPrivate &other, DescribeTableStatisticsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

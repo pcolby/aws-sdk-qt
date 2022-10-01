@@ -20,26 +20,26 @@
 #include "startreportcreationrequest.h"
 #include "startreportcreationrequest_p.h"
 #include "startreportcreationresponse.h"
-#include "resourcegroupstaggingapirequest_p.h"
+#include "resourcegroupstaggingrequest_p.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::StartReportCreationRequest
- * \brief The StartReportCreationRequest class provides an interface for ResourceGroupsTaggingApi StartReportCreation requests.
+ * \class QtAws::ResourceGroupsTagging::StartReportCreationRequest
+ * \brief The StartReportCreationRequest class provides an interface for ResourceGroupsTagging StartReportCreation requests.
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  *
  *
- * \sa ResourceGroupsTaggingApiClient::startReportCreation
+ * \sa ResourceGroupsTaggingClient::startReportCreation
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartReportCreationRequest::StartReportCreationRequest(const StartReportCreationRequest &other)
-    : ResourceGroupsTaggingApiRequest(new StartReportCreationRequestPrivate(*other.d_func(), this))
+    : ResourceGroupsTaggingRequest(new StartReportCreationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ StartReportCreationRequest::StartReportCreationRequest(const StartReportCreation
  * Constructs a StartReportCreationRequest object.
  */
 StartReportCreationRequest::StartReportCreationRequest()
-    : ResourceGroupsTaggingApiRequest(new StartReportCreationRequestPrivate(ResourceGroupsTaggingApiRequest::StartReportCreationAction, this))
+    : ResourceGroupsTaggingRequest(new StartReportCreationRequestPrivate(ResourceGroupsTaggingRequest::StartReportCreationAction, this))
 {
 
 }
@@ -73,20 +73,20 @@ QtAws::Core::AwsAbstractResponse * StartReportCreationRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::StartReportCreationRequestPrivate
+ * \class QtAws::ResourceGroupsTagging::StartReportCreationRequestPrivate
  * \brief The StartReportCreationRequestPrivate class provides private implementation for StartReportCreationRequest.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  */
 
 /*!
- * Constructs a StartReportCreationRequestPrivate object for ResourceGroupsTaggingApi \a action,
+ * Constructs a StartReportCreationRequestPrivate object for ResourceGroupsTagging \a action,
  * with public implementation \a q.
  */
 StartReportCreationRequestPrivate::StartReportCreationRequestPrivate(
-    const ResourceGroupsTaggingApiRequest::Action action, StartReportCreationRequest * const q)
-    : ResourceGroupsTaggingApiRequestPrivate(action, q)
+    const ResourceGroupsTaggingRequest::Action action, StartReportCreationRequest * const q)
+    : ResourceGroupsTaggingRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +99,10 @@ StartReportCreationRequestPrivate::StartReportCreationRequestPrivate(
  */
 StartReportCreationRequestPrivate::StartReportCreationRequestPrivate(
     const StartReportCreationRequestPrivate &other, StartReportCreationRequest * const q)
-    : ResourceGroupsTaggingApiRequestPrivate(other, q)
+    : ResourceGroupsTaggingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws

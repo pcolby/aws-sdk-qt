@@ -20,30 +20,30 @@
 #include "deleteintentrequest.h"
 #include "deleteintentrequest_p.h"
 #include "deleteintentresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteIntentRequest
- * \brief The DeleteIntentRequest class provides an interface for LexModelBuildingService DeleteIntent requests.
+ * \class QtAws::LexModelBuilding::DeleteIntentRequest
+ * \brief The DeleteIntentRequest class provides an interface for LexModelBuilding DeleteIntent requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::deleteIntent
+ * \sa LexModelBuildingClient::deleteIntent
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteIntentRequest::DeleteIntentRequest(const DeleteIntentRequest &other)
-    : LexModelBuildingServiceRequest(new DeleteIntentRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new DeleteIntentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteIntentRequest::DeleteIntentRequest(const DeleteIntentRequest &other)
  * Constructs a DeleteIntentRequest object.
  */
 DeleteIntentRequest::DeleteIntentRequest()
-    : LexModelBuildingServiceRequest(new DeleteIntentRequestPrivate(LexModelBuildingServiceRequest::DeleteIntentAction, this))
+    : LexModelBuildingRequest(new DeleteIntentRequestPrivate(LexModelBuildingRequest::DeleteIntentAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * DeleteIntentRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteIntentRequestPrivate
+ * \class QtAws::LexModelBuilding::DeleteIntentRequestPrivate
  * \brief The DeleteIntentRequestPrivate class provides private implementation for DeleteIntentRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a DeleteIntentRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a DeleteIntentRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, DeleteIntentRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, DeleteIntentRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
  */
 DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
     const DeleteIntentRequestPrivate &other, DeleteIntentRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

@@ -20,15 +20,15 @@
 #ifndef QTAWS_GETSLOTTYPESRESPONSE_H
 #define QTAWS_GETSLOTTYPESRESPONSE_H
 
-#include "lexmodelbuildingserviceresponse.h"
+#include "lexmodelbuildingresponse.h"
 #include "getslottypesrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class GetSlotTypesResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT GetSlotTypesResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDING_EXPORT GetSlotTypesResponse : public LexModelBuildingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

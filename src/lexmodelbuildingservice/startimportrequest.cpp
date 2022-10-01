@@ -20,30 +20,30 @@
 #include "startimportrequest.h"
 #include "startimportrequest_p.h"
 #include "startimportresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::StartImportRequest
- * \brief The StartImportRequest class provides an interface for LexModelBuildingService StartImport requests.
+ * \class QtAws::LexModelBuilding::StartImportRequest
+ * \brief The StartImportRequest class provides an interface for LexModelBuilding StartImport requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::startImport
+ * \sa LexModelBuildingClient::startImport
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartImportRequest::StartImportRequest(const StartImportRequest &other)
-    : LexModelBuildingServiceRequest(new StartImportRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new StartImportRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ StartImportRequest::StartImportRequest(const StartImportRequest &other)
  * Constructs a StartImportRequest object.
  */
 StartImportRequest::StartImportRequest()
-    : LexModelBuildingServiceRequest(new StartImportRequestPrivate(LexModelBuildingServiceRequest::StartImportAction, this))
+    : LexModelBuildingRequest(new StartImportRequestPrivate(LexModelBuildingRequest::StartImportAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * StartImportRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::StartImportRequestPrivate
+ * \class QtAws::LexModelBuilding::StartImportRequestPrivate
  * \brief The StartImportRequestPrivate class provides private implementation for StartImportRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a StartImportRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a StartImportRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 StartImportRequestPrivate::StartImportRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, StartImportRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, StartImportRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ StartImportRequestPrivate::StartImportRequestPrivate(
  */
 StartImportRequestPrivate::StartImportRequestPrivate(
     const StartImportRequestPrivate &other, StartImportRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

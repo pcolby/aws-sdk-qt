@@ -20,18 +20,18 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_P_H
 #define QTAWS_UNTAGRESOURCEREQUEST_P_H
 
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 class UntagResourceRequest;
 
-class UntagResourceRequestPrivate : public IoT1ClickDevicesServiceRequestPrivate {
+class UntagResourceRequestPrivate : public IoT1ClickDevicesRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const IoT1ClickDevicesServiceRequest::Action action,
+    UntagResourceRequestPrivate(const IoT1ClickDevicesRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

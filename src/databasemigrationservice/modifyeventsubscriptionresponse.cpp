@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::ModifyEventSubscriptionResponse
- * \brief The ModifyEventSubscriptionResponse class provides an interace for DatabaseMigrationService ModifyEventSubscription responses.
+ * \class QtAws::DatabaseMigration::ModifyEventSubscriptionResponse
+ * \brief The ModifyEventSubscriptionResponse class provides an interace for DatabaseMigration ModifyEventSubscription responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::modifyEventSubscription
+ * \sa DatabaseMigrationClient::modifyEventSubscription
  */
 
 /*!
@@ -55,7 +55,7 @@ ModifyEventSubscriptionResponse::ModifyEventSubscriptionResponse(
         const ModifyEventSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new ModifyEventSubscriptionResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new ModifyEventSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new ModifyEventSubscriptionRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const ModifyEventSubscriptionRequest * ModifyEventSubscriptionResponse::request(
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService ModifyEventSubscription \a response.
+ * Parses a successful DatabaseMigration ModifyEventSubscription \a response.
  */
 void ModifyEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void ModifyEventSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::ModifyEventSubscriptionResponsePrivate
+ * \class QtAws::DatabaseMigration::ModifyEventSubscriptionResponsePrivate
  * \brief The ModifyEventSubscriptionResponsePrivate class provides private implementation for ModifyEventSubscriptionResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a ModifyEventSubscriptionResponsePrivate object with public implementation \a q.
  */
 ModifyEventSubscriptionResponsePrivate::ModifyEventSubscriptionResponsePrivate(
-    ModifyEventSubscriptionResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    ModifyEventSubscriptionResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService ModifyEventSubscription response element from \a xml.
+ * Parses a DatabaseMigration ModifyEventSubscription response element from \a xml.
  */
 void ModifyEventSubscriptionResponsePrivate::parseModifyEventSubscriptionResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void ModifyEventSubscriptionResponsePrivate::parseModifyEventSubscriptionRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -20,16 +20,16 @@
 #include "createapplicationrequest.h"
 #include "createapplicationrequest_p.h"
 #include "createapplicationresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::CreateApplicationRequest
- * \brief The CreateApplicationRequest class provides an interface for ApplicationDiscoveryService CreateApplication requests.
+ * \class QtAws::ApplicationDiscovery::CreateApplicationRequest
+ * \brief The CreateApplicationRequest class provides an interface for ApplicationDiscovery CreateApplication requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::createApplication
+ * \sa ApplicationDiscoveryClient::createApplication
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateApplicationRequest::CreateApplicationRequest(const CreateApplicationRequest &other)
-    : ApplicationDiscoveryServiceRequest(new CreateApplicationRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new CreateApplicationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ CreateApplicationRequest::CreateApplicationRequest(const CreateApplicationReques
  * Constructs a CreateApplicationRequest object.
  */
 CreateApplicationRequest::CreateApplicationRequest()
-    : ApplicationDiscoveryServiceRequest(new CreateApplicationRequestPrivate(ApplicationDiscoveryServiceRequest::CreateApplicationAction, this))
+    : ApplicationDiscoveryRequest(new CreateApplicationRequestPrivate(ApplicationDiscoveryRequest::CreateApplicationAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * CreateApplicationRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::CreateApplicationRequestPrivate
+ * \class QtAws::ApplicationDiscovery::CreateApplicationRequestPrivate
  * \brief The CreateApplicationRequestPrivate class provides private implementation for CreateApplicationRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a CreateApplicationRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a CreateApplicationRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, CreateApplicationRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, CreateApplicationRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
  */
 CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
     const CreateApplicationRequestPrivate &other, CreateApplicationRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

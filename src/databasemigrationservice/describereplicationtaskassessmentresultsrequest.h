@@ -20,14 +20,14 @@
 #ifndef QTAWS_DESCRIBEREPLICATIONTASKASSESSMENTRESULTSREQUEST_H
 #define QTAWS_DESCRIBEREPLICATIONTASKASSESSMENTRESULTSREQUEST_H
 
-#include "databasemigrationservicerequest.h"
+#include "databasemigrationrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DescribeReplicationTaskAssessmentResultsRequestPrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribeReplicationTaskAssessmentResultsRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATION_EXPORT DescribeReplicationTaskAssessmentResultsRequest : public DatabaseMigrationRequest {
 
 public:
     DescribeReplicationTaskAssessmentResultsRequest(const DescribeReplicationTaskAssessmentResultsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

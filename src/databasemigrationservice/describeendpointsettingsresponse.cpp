@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeEndpointSettingsResponse
- * \brief The DescribeEndpointSettingsResponse class provides an interace for DatabaseMigrationService DescribeEndpointSettings responses.
+ * \class QtAws::DatabaseMigration::DescribeEndpointSettingsResponse
+ * \brief The DescribeEndpointSettingsResponse class provides an interace for DatabaseMigration DescribeEndpointSettings responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeEndpointSettings
+ * \sa DatabaseMigrationClient::describeEndpointSettings
  */
 
 /*!
@@ -55,7 +55,7 @@ DescribeEndpointSettingsResponse::DescribeEndpointSettingsResponse(
         const DescribeEndpointSettingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeEndpointSettingsResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DescribeEndpointSettingsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEndpointSettingsRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DescribeEndpointSettingsRequest * DescribeEndpointSettingsResponse::reques
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DescribeEndpointSettings \a response.
+ * Parses a successful DatabaseMigration DescribeEndpointSettings \a response.
  */
 void DescribeEndpointSettingsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DescribeEndpointSettingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeEndpointSettingsResponsePrivate
+ * \class QtAws::DatabaseMigration::DescribeEndpointSettingsResponsePrivate
  * \brief The DescribeEndpointSettingsResponsePrivate class provides private implementation for DescribeEndpointSettingsResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DescribeEndpointSettingsResponsePrivate object with public implementation \a q.
  */
 DescribeEndpointSettingsResponsePrivate::DescribeEndpointSettingsResponsePrivate(
-    DescribeEndpointSettingsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DescribeEndpointSettingsResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DescribeEndpointSettings response element from \a xml.
+ * Parses a DatabaseMigration DescribeEndpointSettings response element from \a xml.
  */
 void DescribeEndpointSettingsResponsePrivate::parseDescribeEndpointSettingsResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribeEndpointSettingsResponsePrivate::parseDescribeEndpointSettingsRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

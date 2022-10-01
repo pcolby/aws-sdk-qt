@@ -20,15 +20,15 @@
 #ifndef QTAWS_UPGRADEELASTICSEARCHDOMAINRESPONSE_H
 #define QTAWS_UPGRADEELASTICSEARCHDOMAINRESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "upgradeelasticsearchdomainrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class UpgradeElasticsearchDomainResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT UpgradeElasticsearchDomainResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT UpgradeElasticsearchDomainResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

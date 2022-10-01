@@ -20,18 +20,18 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class ListTagsForResourceRequest;
 
-class ListTagsForResourceRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class ListTagsForResourceRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    ListTagsForResourceRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

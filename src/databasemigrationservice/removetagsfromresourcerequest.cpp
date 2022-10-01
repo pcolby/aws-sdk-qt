@@ -20,16 +20,16 @@
 #include "removetagsfromresourcerequest.h"
 #include "removetagsfromresourcerequest_p.h"
 #include "removetagsfromresourceresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::RemoveTagsFromResourceRequest
- * \brief The RemoveTagsFromResourceRequest class provides an interface for DatabaseMigrationService RemoveTagsFromResource requests.
+ * \class QtAws::DatabaseMigration::RemoveTagsFromResourceRequest
+ * \brief The RemoveTagsFromResourceRequest class provides an interface for DatabaseMigration RemoveTagsFromResource requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::removeTagsFromResource
+ * \sa DatabaseMigrationClient::removeTagsFromResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other)
-    : DatabaseMigrationServiceRequest(new RemoveTagsFromResourceRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new RemoveTagsFromResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFro
  * Constructs a RemoveTagsFromResourceRequest object.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest()
-    : DatabaseMigrationServiceRequest(new RemoveTagsFromResourceRequestPrivate(DatabaseMigrationServiceRequest::RemoveTagsFromResourceAction, this))
+    : DatabaseMigrationRequest(new RemoveTagsFromResourceRequestPrivate(DatabaseMigrationRequest::RemoveTagsFromResourceAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::RemoveTagsFromResourceRequestPrivate
+ * \class QtAws::DatabaseMigration::RemoveTagsFromResourceRequestPrivate
  * \brief The RemoveTagsFromResourceRequestPrivate class provides private implementation for RemoveTagsFromResourceRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a RemoveTagsFromResourceRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a RemoveTagsFromResourceRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, RemoveTagsFromResourceRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, RemoveTagsFromResourceRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const RemoveTagsFromResourceRequestPrivate &other, RemoveTagsFromResourceRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

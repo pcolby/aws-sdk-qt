@@ -20,15 +20,15 @@
 #ifndef QTAWS_DELETESLOTTYPERESPONSE_H
 #define QTAWS_DELETESLOTTYPERESPONSE_H
 
-#include "lexmodelbuildingserviceresponse.h"
+#include "lexmodelbuildingresponse.h"
 #include "deleteslottyperequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class DeleteSlotTypeResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT DeleteSlotTypeResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDING_EXPORT DeleteSlotTypeResponse : public LexModelBuildingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

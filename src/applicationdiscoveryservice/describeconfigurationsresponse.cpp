@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeConfigurationsResponse
- * \brief The DescribeConfigurationsResponse class provides an interace for ApplicationDiscoveryService DescribeConfigurations responses.
+ * \class QtAws::ApplicationDiscovery::DescribeConfigurationsResponse
+ * \brief The DescribeConfigurationsResponse class provides an interace for ApplicationDiscovery DescribeConfigurations responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::describeConfigurations
+ * \sa ApplicationDiscoveryClient::describeConfigurations
  */
 
 /*!
@@ -152,7 +152,7 @@ DescribeConfigurationsResponse::DescribeConfigurationsResponse(
         const DescribeConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new DescribeConfigurationsResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new DescribeConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeConfigurationsRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const DescribeConfigurationsRequest * DescribeConfigurationsResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService DescribeConfigurations \a response.
+ * Parses a successful ApplicationDiscovery DescribeConfigurations \a response.
  */
 void DescribeConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void DescribeConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeConfigurationsResponsePrivate
+ * \class QtAws::ApplicationDiscovery::DescribeConfigurationsResponsePrivate
  * \brief The DescribeConfigurationsResponsePrivate class provides private implementation for DescribeConfigurationsResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a DescribeConfigurationsResponsePrivate object with public implementation \a q.
  */
 DescribeConfigurationsResponsePrivate::DescribeConfigurationsResponsePrivate(
-    DescribeConfigurationsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    DescribeConfigurationsResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService DescribeConfigurations response element from \a xml.
+ * Parses a ApplicationDiscovery DescribeConfigurations response element from \a xml.
  */
 void DescribeConfigurationsResponsePrivate::parseDescribeConfigurationsResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void DescribeConfigurationsResponsePrivate::parseDescribeConfigurationsResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

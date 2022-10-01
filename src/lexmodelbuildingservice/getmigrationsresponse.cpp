@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetMigrationsResponse
- * \brief The GetMigrationsResponse class provides an interace for LexModelBuildingService GetMigrations responses.
+ * \class QtAws::LexModelBuilding::GetMigrationsResponse
+ * \brief The GetMigrationsResponse class provides an interace for LexModelBuilding GetMigrations responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getMigrations
+ * \sa LexModelBuildingClient::getMigrations
  */
 
 /*!
@@ -48,7 +48,7 @@ GetMigrationsResponse::GetMigrationsResponse(
         const GetMigrationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetMigrationsResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new GetMigrationsResponsePrivate(this), parent)
 {
     setRequest(new GetMigrationsRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const GetMigrationsRequest * GetMigrationsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService GetMigrations \a response.
+ * Parses a successful LexModelBuilding GetMigrations \a response.
  */
 void GetMigrationsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void GetMigrationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetMigrationsResponsePrivate
+ * \class QtAws::LexModelBuilding::GetMigrationsResponsePrivate
  * \brief The GetMigrationsResponsePrivate class provides private implementation for GetMigrationsResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a GetMigrationsResponsePrivate object with public implementation \a q.
  */
 GetMigrationsResponsePrivate::GetMigrationsResponsePrivate(
-    GetMigrationsResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    GetMigrationsResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService GetMigrations response element from \a xml.
+ * Parses a LexModelBuilding GetMigrations response element from \a xml.
  */
 void GetMigrationsResponsePrivate::parseGetMigrationsResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void GetMigrationsResponsePrivate::parseGetMigrationsResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

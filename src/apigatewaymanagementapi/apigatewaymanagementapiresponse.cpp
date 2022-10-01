@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "apigatewaymanagementapiresponse.h"
-#include "apigatewaymanagementapiresponse_p.h"
+#include "apigatewaymanagementresponse.h"
+#include "apigatewaymanagementresponse_p.h"
 
 #include <QDebug>
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::ApiGatewayManagementApiResponse
- * \brief The ApiGatewayManagementApiResponse class provides an interface for ApiGatewayManagementApi responses.
+ * \class QtAws::ApiGatewayManagement::ApiGatewayManagementResponse
+ * \brief The ApiGatewayManagementResponse class provides an interface for ApiGatewayManagement responses.
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  */
 
 /*!
- * Constructs a ApiGatewayManagementApiResponse object with parent \a parent.
+ * Constructs a ApiGatewayManagementResponse object with parent \a parent.
  */
-ApiGatewayManagementApiResponse::ApiGatewayManagementApiResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ApiGatewayManagementApiResponsePrivate(this), parent)
+ApiGatewayManagementResponse::ApiGatewayManagementResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new ApiGatewayManagementResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a ApiGatewayManagementApiResponse object with private implementation \a d,
+ * Constructs a ApiGatewayManagementResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from ApiGatewayManagementApiResponsePrivate.
+ * implementation that inherits from ApiGatewayManagementResponsePrivate.
  */
-ApiGatewayManagementApiResponse::ApiGatewayManagementApiResponse(ApiGatewayManagementApiResponsePrivate * const d, QObject * const parent)
+ApiGatewayManagementResponse::ApiGatewayManagementResponse(ApiGatewayManagementResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ ApiGatewayManagementApiResponse::ApiGatewayManagementApiResponse(ApiGatewayManag
 /*!
  * \reimp
  */
-void ApiGatewayManagementApiResponse::parseFailure(QIODevice &response)
+void ApiGatewayManagementResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(ApiGatewayManagementApiResponse);
+    //Q_D(ApiGatewayManagementResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void ApiGatewayManagementApiResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::ApiGatewayManagementApiResponsePrivate
- * \brief The ApiGatewayManagementApiResponsePrivate class provides private implementation for ApiGatewayManagementApiResponse.
+ * \class QtAws::ApiGatewayManagement::ApiGatewayManagementResponsePrivate
+ * \brief The ApiGatewayManagementResponsePrivate class provides private implementation for ApiGatewayManagementResponse.
  * \internal
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  */
 
 /*!
- * Constructs a ApiGatewayManagementApiResponsePrivate object with public implementation \a q.
+ * Constructs a ApiGatewayManagementResponsePrivate object with public implementation \a q.
  */
-ApiGatewayManagementApiResponsePrivate::ApiGatewayManagementApiResponsePrivate(
-    ApiGatewayManagementApiResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+ApiGatewayManagementResponsePrivate::ApiGatewayManagementResponsePrivate(
+    ApiGatewayManagementResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws

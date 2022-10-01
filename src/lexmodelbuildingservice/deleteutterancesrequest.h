@@ -20,14 +20,14 @@
 #ifndef QTAWS_DELETEUTTERANCESREQUEST_H
 #define QTAWS_DELETEUTTERANCESREQUEST_H
 
-#include "lexmodelbuildingservicerequest.h"
+#include "lexmodelbuildingrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class DeleteUtterancesRequestPrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT DeleteUtterancesRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDING_EXPORT DeleteUtterancesRequest : public LexModelBuildingRequest {
 
 public:
     DeleteUtterancesRequest(const DeleteUtterancesRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

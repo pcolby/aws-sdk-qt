@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "applicationdiscoveryserviceresponse.h"
-#include "applicationdiscoveryserviceresponse_p.h"
+#include "applicationdiscoveryresponse.h"
+#include "applicationdiscoveryresponse_p.h"
 
 #include <QDebug>
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceResponse
- * \brief The ApplicationDiscoveryServiceResponse class provides an interface for ApplicationDiscoveryService responses.
+ * \class QtAws::ApplicationDiscovery::ApplicationDiscoveryResponse
+ * \brief The ApplicationDiscoveryResponse class provides an interface for ApplicationDiscovery responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a ApplicationDiscoveryServiceResponse object with parent \a parent.
+ * Constructs a ApplicationDiscoveryResponse object with parent \a parent.
  */
-ApplicationDiscoveryServiceResponse::ApplicationDiscoveryServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ApplicationDiscoveryServiceResponsePrivate(this), parent)
+ApplicationDiscoveryResponse::ApplicationDiscoveryResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new ApplicationDiscoveryResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a ApplicationDiscoveryServiceResponse object with private implementation \a d,
+ * Constructs a ApplicationDiscoveryResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from ApplicationDiscoveryServiceResponsePrivate.
+ * implementation that inherits from ApplicationDiscoveryResponsePrivate.
  */
-ApplicationDiscoveryServiceResponse::ApplicationDiscoveryServiceResponse(ApplicationDiscoveryServiceResponsePrivate * const d, QObject * const parent)
+ApplicationDiscoveryResponse::ApplicationDiscoveryResponse(ApplicationDiscoveryResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ ApplicationDiscoveryServiceResponse::ApplicationDiscoveryServiceResponse(Applica
 /*!
  * \reimp
  */
-void ApplicationDiscoveryServiceResponse::parseFailure(QIODevice &response)
+void ApplicationDiscoveryResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(ApplicationDiscoveryServiceResponse);
+    //Q_D(ApplicationDiscoveryResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void ApplicationDiscoveryServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceResponsePrivate
- * \brief The ApplicationDiscoveryServiceResponsePrivate class provides private implementation for ApplicationDiscoveryServiceResponse.
+ * \class QtAws::ApplicationDiscovery::ApplicationDiscoveryResponsePrivate
+ * \brief The ApplicationDiscoveryResponsePrivate class provides private implementation for ApplicationDiscoveryResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a ApplicationDiscoveryServiceResponsePrivate object with public implementation \a q.
+ * Constructs a ApplicationDiscoveryResponsePrivate object with public implementation \a q.
  */
-ApplicationDiscoveryServiceResponsePrivate::ApplicationDiscoveryServiceResponsePrivate(
-    ApplicationDiscoveryServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+ApplicationDiscoveryResponsePrivate::ApplicationDiscoveryResponsePrivate(
+    ApplicationDiscoveryResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

@@ -20,16 +20,16 @@
 #include "updatepackagerequest.h"
 #include "updatepackagerequest_p.h"
 #include "updatepackageresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::UpdatePackageRequest
- * \brief The UpdatePackageRequest class provides an interface for ElasticsearchService UpdatePackage requests.
+ * \class QtAws::Elasticsearch::UpdatePackageRequest
+ * \brief The UpdatePackageRequest class provides an interface for Elasticsearch UpdatePackage requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::updatePackage
+ * \sa ElasticsearchClient::updatePackage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdatePackageRequest::UpdatePackageRequest(const UpdatePackageRequest &other)
-    : ElasticsearchServiceRequest(new UpdatePackageRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new UpdatePackageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ UpdatePackageRequest::UpdatePackageRequest(const UpdatePackageRequest &other)
  * Constructs a UpdatePackageRequest object.
  */
 UpdatePackageRequest::UpdatePackageRequest()
-    : ElasticsearchServiceRequest(new UpdatePackageRequestPrivate(ElasticsearchServiceRequest::UpdatePackageAction, this))
+    : ElasticsearchRequest(new UpdatePackageRequestPrivate(ElasticsearchRequest::UpdatePackageAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * UpdatePackageRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::ElasticsearchService::UpdatePackageRequestPrivate
+ * \class QtAws::Elasticsearch::UpdatePackageRequestPrivate
  * \brief The UpdatePackageRequestPrivate class provides private implementation for UpdatePackageRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a UpdatePackageRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a UpdatePackageRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 UpdatePackageRequestPrivate::UpdatePackageRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, UpdatePackageRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, UpdatePackageRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ UpdatePackageRequestPrivate::UpdatePackageRequestPrivate(
  */
 UpdatePackageRequestPrivate::UpdatePackageRequestPrivate(
     const UpdatePackageRequestPrivate &other, UpdatePackageRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

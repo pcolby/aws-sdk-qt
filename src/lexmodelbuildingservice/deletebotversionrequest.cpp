@@ -20,30 +20,30 @@
 #include "deletebotversionrequest.h"
 #include "deletebotversionrequest_p.h"
 #include "deletebotversionresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteBotVersionRequest
- * \brief The DeleteBotVersionRequest class provides an interface for LexModelBuildingService DeleteBotVersion requests.
+ * \class QtAws::LexModelBuilding::DeleteBotVersionRequest
+ * \brief The DeleteBotVersionRequest class provides an interface for LexModelBuilding DeleteBotVersion requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::deleteBotVersion
+ * \sa LexModelBuildingClient::deleteBotVersion
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteBotVersionRequest::DeleteBotVersionRequest(const DeleteBotVersionRequest &other)
-    : LexModelBuildingServiceRequest(new DeleteBotVersionRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new DeleteBotVersionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteBotVersionRequest::DeleteBotVersionRequest(const DeleteBotVersionRequest &
  * Constructs a DeleteBotVersionRequest object.
  */
 DeleteBotVersionRequest::DeleteBotVersionRequest()
-    : LexModelBuildingServiceRequest(new DeleteBotVersionRequestPrivate(LexModelBuildingServiceRequest::DeleteBotVersionAction, this))
+    : LexModelBuildingRequest(new DeleteBotVersionRequestPrivate(LexModelBuildingRequest::DeleteBotVersionAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * DeleteBotVersionRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteBotVersionRequestPrivate
+ * \class QtAws::LexModelBuilding::DeleteBotVersionRequestPrivate
  * \brief The DeleteBotVersionRequestPrivate class provides private implementation for DeleteBotVersionRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a DeleteBotVersionRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a DeleteBotVersionRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 DeleteBotVersionRequestPrivate::DeleteBotVersionRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, DeleteBotVersionRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, DeleteBotVersionRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ DeleteBotVersionRequestPrivate::DeleteBotVersionRequestPrivate(
  */
 DeleteBotVersionRequestPrivate::DeleteBotVersionRequestPrivate(
     const DeleteBotVersionRequestPrivate &other, DeleteBotVersionRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

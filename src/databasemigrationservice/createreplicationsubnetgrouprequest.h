@@ -20,14 +20,14 @@
 #ifndef QTAWS_CREATEREPLICATIONSUBNETGROUPREQUEST_H
 #define QTAWS_CREATEREPLICATIONSUBNETGROUPREQUEST_H
 
-#include "databasemigrationservicerequest.h"
+#include "databasemigrationrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class CreateReplicationSubnetGroupRequestPrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT CreateReplicationSubnetGroupRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATION_EXPORT CreateReplicationSubnetGroupRequest : public DatabaseMigrationRequest {
 
 public:
     CreateReplicationSubnetGroupRequest(const CreateReplicationSubnetGroupRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

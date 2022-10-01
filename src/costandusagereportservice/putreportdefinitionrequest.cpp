@@ -20,16 +20,16 @@
 #include "putreportdefinitionrequest.h"
 #include "putreportdefinitionrequest_p.h"
 #include "putreportdefinitionresponse.h"
-#include "costandusagereportservicerequest_p.h"
+#include "costandusagereportrequest_p.h"
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 /*!
- * \class QtAws::CostandUsageReportService::PutReportDefinitionRequest
- * \brief The PutReportDefinitionRequest class provides an interface for CostandUsageReportService PutReportDefinition requests.
+ * \class QtAws::CostandUsageReport::PutReportDefinitionRequest
+ * \brief The PutReportDefinitionRequest class provides an interface for CostandUsageReport PutReportDefinition requests.
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  *
  *  The AWS Cost and Usage Report API enables you to programmatically create, query, and delete AWS Cost and Usage report
  * 
@@ -49,14 +49,14 @@ namespace CostandUsageReportService {
  * 
  *  endpoint> <ul> <li>
  *
- * \sa CostandUsageReportServiceClient::putReportDefinition
+ * \sa CostandUsageReportClient::putReportDefinition
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutReportDefinitionRequest::PutReportDefinitionRequest(const PutReportDefinitionRequest &other)
-    : CostandUsageReportServiceRequest(new PutReportDefinitionRequestPrivate(*other.d_func(), this))
+    : CostandUsageReportRequest(new PutReportDefinitionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ PutReportDefinitionRequest::PutReportDefinitionRequest(const PutReportDefinition
  * Constructs a PutReportDefinitionRequest object.
  */
 PutReportDefinitionRequest::PutReportDefinitionRequest()
-    : CostandUsageReportServiceRequest(new PutReportDefinitionRequestPrivate(CostandUsageReportServiceRequest::PutReportDefinitionAction, this))
+    : CostandUsageReportRequest(new PutReportDefinitionRequestPrivate(CostandUsageReportRequest::PutReportDefinitionAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * PutReportDefinitionRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::CostandUsageReportService::PutReportDefinitionRequestPrivate
+ * \class QtAws::CostandUsageReport::PutReportDefinitionRequestPrivate
  * \brief The PutReportDefinitionRequestPrivate class provides private implementation for PutReportDefinitionRequest.
  * \internal
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  */
 
 /*!
- * Constructs a PutReportDefinitionRequestPrivate object for CostandUsageReportService \a action,
+ * Constructs a PutReportDefinitionRequestPrivate object for CostandUsageReport \a action,
  * with public implementation \a q.
  */
 PutReportDefinitionRequestPrivate::PutReportDefinitionRequestPrivate(
-    const CostandUsageReportServiceRequest::Action action, PutReportDefinitionRequest * const q)
-    : CostandUsageReportServiceRequestPrivate(action, q)
+    const CostandUsageReportRequest::Action action, PutReportDefinitionRequest * const q)
+    : CostandUsageReportRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ PutReportDefinitionRequestPrivate::PutReportDefinitionRequestPrivate(
  */
 PutReportDefinitionRequestPrivate::PutReportDefinitionRequestPrivate(
     const PutReportDefinitionRequestPrivate &other, PutReportDefinitionRequest * const q)
-    : CostandUsageReportServiceRequestPrivate(other, q)
+    : CostandUsageReportRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws

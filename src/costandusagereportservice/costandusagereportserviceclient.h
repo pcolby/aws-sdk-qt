@@ -17,19 +17,19 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_COSTANDUSAGEREPORTSERVICECLIENT_H
-#define QTAWS_COSTANDUSAGEREPORTSERVICECLIENT_H
+#ifndef QTAWS_COSTANDUSAGEREPORTCLIENT_H
+#define QTAWS_COSTANDUSAGEREPORTCLIENT_H
 
 #include "core/awsabstractclient.h"
 
-#include "qtawscostandusagereportserviceglobal.h"
+#include "qtawscostandusagereportglobal.h"
 
 class QNetworkReply;
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
-class CostandUsageReportServiceClientPrivate;
+class CostandUsageReportClientPrivate;
 class DeleteReportDefinitionRequest;
 class DeleteReportDefinitionResponse;
 class DescribeReportDefinitionsRequest;
@@ -39,17 +39,17 @@ class ModifyReportDefinitionResponse;
 class PutReportDefinitionRequest;
 class PutReportDefinitionResponse;
 
-class QTAWSCOSTANDUSAGEREPORTSERVICE_EXPORT CostandUsageReportServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCOSTANDUSAGEREPORT_EXPORT CostandUsageReportClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    CostandUsageReportServiceClient(
+    CostandUsageReportClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit CostandUsageReportServiceClient(
+    explicit CostandUsageReportClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -61,12 +61,12 @@ public slots:
     PutReportDefinitionResponse * putReportDefinition(const PutReportDefinitionRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(CostandUsageReportServiceClient)
-    Q_DISABLE_COPY(CostandUsageReportServiceClient)
+    Q_DECLARE_PRIVATE(CostandUsageReportClient)
+    Q_DISABLE_COPY(CostandUsageReportClient)
 
 };
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws
 
 #endif

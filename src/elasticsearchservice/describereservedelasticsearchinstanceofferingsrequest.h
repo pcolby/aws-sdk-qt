@@ -20,14 +20,14 @@
 #ifndef QTAWS_DESCRIBERESERVEDELASTICSEARCHINSTANCEOFFERINGSREQUEST_H
 #define QTAWS_DESCRIBERESERVEDELASTICSEARCHINSTANCEOFFERINGSREQUEST_H
 
-#include "elasticsearchservicerequest.h"
+#include "elasticsearchrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class DescribeReservedElasticsearchInstanceOfferingsRequestPrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT DescribeReservedElasticsearchInstanceOfferingsRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCH_EXPORT DescribeReservedElasticsearchInstanceOfferingsRequest : public ElasticsearchRequest {
 
 public:
     DescribeReservedElasticsearchInstanceOfferingsRequest(const DescribeReservedElasticsearchInstanceOfferingsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

@@ -20,15 +20,15 @@
 #ifndef QTAWS_EXPORTCONFIGURATIONSRESPONSE_H
 #define QTAWS_EXPORTCONFIGURATIONSRESPONSE_H
 
-#include "applicationdiscoveryserviceresponse.h"
+#include "applicationdiscoveryresponse.h"
 #include "exportconfigurationsrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class ExportConfigurationsResponsePrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT ExportConfigurationsResponse : public ApplicationDiscoveryServiceResponse {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT ExportConfigurationsResponse : public ApplicationDiscoveryResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

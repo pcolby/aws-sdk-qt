@@ -17,30 +17,30 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_IOT1CLICKDEVICESSERVICECLIENT_P_H
-#define QTAWS_IOT1CLICKDEVICESSERVICECLIENT_P_H
+#ifndef QTAWS_IOT1CLICKDEVICESCLIENT_P_H
+#define QTAWS_IOT1CLICKDEVICESCLIENT_P_H
 
 #include "core/awsabstractclient_p.h"
 
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
-class IoT1ClickDevicesServiceClient;
+class IoT1ClickDevicesClient;
 
-class IoT1ClickDevicesServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoT1ClickDevicesClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit IoT1ClickDevicesServiceClientPrivate(IoT1ClickDevicesServiceClient * const q);
+    explicit IoT1ClickDevicesClientPrivate(IoT1ClickDevicesClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(IoT1ClickDevicesServiceClient)
-    Q_DISABLE_COPY(IoT1ClickDevicesServiceClientPrivate)
+    Q_DECLARE_PUBLIC(IoT1ClickDevicesClient)
+    Q_DISABLE_COPY(IoT1ClickDevicesClientPrivate)
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

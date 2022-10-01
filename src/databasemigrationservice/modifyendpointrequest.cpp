@@ -20,16 +20,16 @@
 #include "modifyendpointrequest.h"
 #include "modifyendpointrequest_p.h"
 #include "modifyendpointresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::ModifyEndpointRequest
- * \brief The ModifyEndpointRequest class provides an interface for DatabaseMigrationService ModifyEndpoint requests.
+ * \class QtAws::DatabaseMigration::ModifyEndpointRequest
+ * \brief The ModifyEndpointRequest class provides an interface for DatabaseMigration ModifyEndpoint requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::modifyEndpoint
+ * \sa DatabaseMigrationClient::modifyEndpoint
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ModifyEndpointRequest::ModifyEndpointRequest(const ModifyEndpointRequest &other)
-    : DatabaseMigrationServiceRequest(new ModifyEndpointRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new ModifyEndpointRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ ModifyEndpointRequest::ModifyEndpointRequest(const ModifyEndpointRequest &other)
  * Constructs a ModifyEndpointRequest object.
  */
 ModifyEndpointRequest::ModifyEndpointRequest()
-    : DatabaseMigrationServiceRequest(new ModifyEndpointRequestPrivate(DatabaseMigrationServiceRequest::ModifyEndpointAction, this))
+    : DatabaseMigrationRequest(new ModifyEndpointRequestPrivate(DatabaseMigrationRequest::ModifyEndpointAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * ModifyEndpointRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::ModifyEndpointRequestPrivate
+ * \class QtAws::DatabaseMigration::ModifyEndpointRequestPrivate
  * \brief The ModifyEndpointRequestPrivate class provides private implementation for ModifyEndpointRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a ModifyEndpointRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a ModifyEndpointRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 ModifyEndpointRequestPrivate::ModifyEndpointRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, ModifyEndpointRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, ModifyEndpointRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ ModifyEndpointRequestPrivate::ModifyEndpointRequestPrivate(
  */
 ModifyEndpointRequestPrivate::ModifyEndpointRequestPrivate(
     const ModifyEndpointRequestPrivate &other, ModifyEndpointRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -20,14 +20,14 @@
 #ifndef QTAWS_CREATETAGSREQUEST_H
 #define QTAWS_CREATETAGSREQUEST_H
 
-#include "applicationdiscoveryservicerequest.h"
+#include "applicationdiscoveryrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class CreateTagsRequestPrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT CreateTagsRequest : public ApplicationDiscoveryServiceRequest {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT CreateTagsRequest : public ApplicationDiscoveryRequest {
 
 public:
     CreateTagsRequest(const CreateTagsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

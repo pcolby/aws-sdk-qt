@@ -20,16 +20,16 @@
 #include "describetagsrequest.h"
 #include "describetagsrequest_p.h"
 #include "describetagsresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeTagsRequest
- * \brief The DescribeTagsRequest class provides an interface for ApplicationDiscoveryService DescribeTags requests.
+ * \class QtAws::ApplicationDiscovery::DescribeTagsRequest
+ * \brief The DescribeTagsRequest class provides an interface for ApplicationDiscovery DescribeTags requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::describeTags
+ * \sa ApplicationDiscoveryClient::describeTags
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
-    : ApplicationDiscoveryServiceRequest(new DescribeTagsRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new DescribeTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
  * Constructs a DescribeTagsRequest object.
  */
 DescribeTagsRequest::DescribeTagsRequest()
-    : ApplicationDiscoveryServiceRequest(new DescribeTagsRequestPrivate(ApplicationDiscoveryServiceRequest::DescribeTagsAction, this))
+    : ApplicationDiscoveryRequest(new DescribeTagsRequestPrivate(ApplicationDiscoveryRequest::DescribeTagsAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeTagsRequestPrivate
+ * \class QtAws::ApplicationDiscovery::DescribeTagsRequestPrivate
  * \brief The DescribeTagsRequestPrivate class provides private implementation for DescribeTagsRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a DescribeTagsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a DescribeTagsRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, DescribeTagsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, DescribeTagsRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const DescribeTagsRequestPrivate &other, DescribeTagsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

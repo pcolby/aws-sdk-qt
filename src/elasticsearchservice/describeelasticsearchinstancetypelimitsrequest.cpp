@@ -20,16 +20,16 @@
 #include "describeelasticsearchinstancetypelimitsrequest.h"
 #include "describeelasticsearchinstancetypelimitsrequest_p.h"
 #include "describeelasticsearchinstancetypelimitsresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeElasticsearchInstanceTypeLimitsRequest
- * \brief The DescribeElasticsearchInstanceTypeLimitsRequest class provides an interface for ElasticsearchService DescribeElasticsearchInstanceTypeLimits requests.
+ * \class QtAws::Elasticsearch::DescribeElasticsearchInstanceTypeLimitsRequest
+ * \brief The DescribeElasticsearchInstanceTypeLimitsRequest class provides an interface for Elasticsearch DescribeElasticsearchInstanceTypeLimits requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describeElasticsearchInstanceTypeLimits
+ * \sa ElasticsearchClient::describeElasticsearchInstanceTypeLimits
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeElasticsearchInstanceTypeLimitsRequest::DescribeElasticsearchInstanceTypeLimitsRequest(const DescribeElasticsearchInstanceTypeLimitsRequest &other)
-    : ElasticsearchServiceRequest(new DescribeElasticsearchInstanceTypeLimitsRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new DescribeElasticsearchInstanceTypeLimitsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DescribeElasticsearchInstanceTypeLimitsRequest::DescribeElasticsearchInstanceTyp
  * Constructs a DescribeElasticsearchInstanceTypeLimitsRequest object.
  */
 DescribeElasticsearchInstanceTypeLimitsRequest::DescribeElasticsearchInstanceTypeLimitsRequest()
-    : ElasticsearchServiceRequest(new DescribeElasticsearchInstanceTypeLimitsRequestPrivate(ElasticsearchServiceRequest::DescribeElasticsearchInstanceTypeLimitsAction, this))
+    : ElasticsearchRequest(new DescribeElasticsearchInstanceTypeLimitsRequestPrivate(ElasticsearchRequest::DescribeElasticsearchInstanceTypeLimitsAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticsearchInstanceTypeLimitsReques
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeElasticsearchInstanceTypeLimitsRequestPrivate
+ * \class QtAws::Elasticsearch::DescribeElasticsearchInstanceTypeLimitsRequestPrivate
  * \brief The DescribeElasticsearchInstanceTypeLimitsRequestPrivate class provides private implementation for DescribeElasticsearchInstanceTypeLimitsRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a DescribeElasticsearchInstanceTypeLimitsRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a DescribeElasticsearchInstanceTypeLimitsRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 DescribeElasticsearchInstanceTypeLimitsRequestPrivate::DescribeElasticsearchInstanceTypeLimitsRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, DescribeElasticsearchInstanceTypeLimitsRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, DescribeElasticsearchInstanceTypeLimitsRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DescribeElasticsearchInstanceTypeLimitsRequestPrivate::DescribeElasticsearchInst
  */
 DescribeElasticsearchInstanceTypeLimitsRequestPrivate::DescribeElasticsearchInstanceTypeLimitsRequestPrivate(
     const DescribeElasticsearchInstanceTypeLimitsRequestPrivate &other, DescribeElasticsearchInstanceTypeLimitsRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

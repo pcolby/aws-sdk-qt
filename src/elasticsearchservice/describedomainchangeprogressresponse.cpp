@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeDomainChangeProgressResponse
- * \brief The DescribeDomainChangeProgressResponse class provides an interace for ElasticsearchService DescribeDomainChangeProgress responses.
+ * \class QtAws::Elasticsearch::DescribeDomainChangeProgressResponse
+ * \brief The DescribeDomainChangeProgressResponse class provides an interace for Elasticsearch DescribeDomainChangeProgress responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describeDomainChangeProgress
+ * \sa ElasticsearchClient::describeDomainChangeProgress
  */
 
 /*!
@@ -61,7 +61,7 @@ DescribeDomainChangeProgressResponse::DescribeDomainChangeProgressResponse(
         const DescribeDomainChangeProgressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DescribeDomainChangeProgressResponsePrivate(this), parent)
+    : ElasticsearchResponse(new DescribeDomainChangeProgressResponsePrivate(this), parent)
 {
     setRequest(new DescribeDomainChangeProgressRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DescribeDomainChangeProgressRequest * DescribeDomainChangeProgressResponse
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService DescribeDomainChangeProgress \a response.
+ * Parses a successful Elasticsearch DescribeDomainChangeProgress \a response.
  */
 void DescribeDomainChangeProgressResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DescribeDomainChangeProgressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeDomainChangeProgressResponsePrivate
+ * \class QtAws::Elasticsearch::DescribeDomainChangeProgressResponsePrivate
  * \brief The DescribeDomainChangeProgressResponsePrivate class provides private implementation for DescribeDomainChangeProgressResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a DescribeDomainChangeProgressResponsePrivate object with public implementation \a q.
  */
 DescribeDomainChangeProgressResponsePrivate::DescribeDomainChangeProgressResponsePrivate(
-    DescribeDomainChangeProgressResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    DescribeDomainChangeProgressResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService DescribeDomainChangeProgress response element from \a xml.
+ * Parses a Elasticsearch DescribeDomainChangeProgress response element from \a xml.
  */
 void DescribeDomainChangeProgressResponsePrivate::parseDescribeDomainChangeProgressResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DescribeDomainChangeProgressResponsePrivate::parseDescribeDomainChangeProgr
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

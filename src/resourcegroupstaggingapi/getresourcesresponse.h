@@ -20,15 +20,15 @@
 #ifndef QTAWS_GETRESOURCESRESPONSE_H
 #define QTAWS_GETRESOURCESRESPONSE_H
 
-#include "resourcegroupstaggingapiresponse.h"
+#include "resourcegroupstaggingresponse.h"
 #include "getresourcesrequest.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 class GetResourcesResponsePrivate;
 
-class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT GetResourcesResponse : public ResourceGroupsTaggingApiResponse {
+class QTAWSRESOURCEGROUPSTAGGING_EXPORT GetResourcesResponse : public ResourceGroupsTaggingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws
 
 #endif

@@ -20,16 +20,16 @@
 #include "describeapplicableindividualassessmentsrequest.h"
 #include "describeapplicableindividualassessmentsrequest_p.h"
 #include "describeapplicableindividualassessmentsresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeApplicableIndividualAssessmentsRequest
- * \brief The DescribeApplicableIndividualAssessmentsRequest class provides an interface for DatabaseMigrationService DescribeApplicableIndividualAssessments requests.
+ * \class QtAws::DatabaseMigration::DescribeApplicableIndividualAssessmentsRequest
+ * \brief The DescribeApplicableIndividualAssessmentsRequest class provides an interface for DatabaseMigration DescribeApplicableIndividualAssessments requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeApplicableIndividualAssessments
+ * \sa DatabaseMigrationClient::describeApplicableIndividualAssessments
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeApplicableIndividualAssessmentsRequest::DescribeApplicableIndividualAssessmentsRequest(const DescribeApplicableIndividualAssessmentsRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribeApplicableIndividualAssessmentsRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribeApplicableIndividualAssessmentsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeApplicableIndividualAssessmentsRequest::DescribeApplicableIndividualAsse
  * Constructs a DescribeApplicableIndividualAssessmentsRequest object.
  */
 DescribeApplicableIndividualAssessmentsRequest::DescribeApplicableIndividualAssessmentsRequest()
-    : DatabaseMigrationServiceRequest(new DescribeApplicableIndividualAssessmentsRequestPrivate(DatabaseMigrationServiceRequest::DescribeApplicableIndividualAssessmentsAction, this))
+    : DatabaseMigrationRequest(new DescribeApplicableIndividualAssessmentsRequestPrivate(DatabaseMigrationRequest::DescribeApplicableIndividualAssessmentsAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicableIndividualAssessmentsReques
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeApplicableIndividualAssessmentsRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribeApplicableIndividualAssessmentsRequestPrivate
  * \brief The DescribeApplicableIndividualAssessmentsRequestPrivate class provides private implementation for DescribeApplicableIndividualAssessmentsRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribeApplicableIndividualAssessmentsRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribeApplicableIndividualAssessmentsRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribeApplicableIndividualAssessmentsRequestPrivate::DescribeApplicableIndividualAssessmentsRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribeApplicableIndividualAssessmentsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribeApplicableIndividualAssessmentsRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribeApplicableIndividualAssessmentsRequestPrivate::DescribeApplicableIndivid
  */
 DescribeApplicableIndividualAssessmentsRequestPrivate::DescribeApplicableIndividualAssessmentsRequestPrivate(
     const DescribeApplicableIndividualAssessmentsRequestPrivate &other, DescribeApplicableIndividualAssessmentsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

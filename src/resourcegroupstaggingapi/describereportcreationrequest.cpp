@@ -20,26 +20,26 @@
 #include "describereportcreationrequest.h"
 #include "describereportcreationrequest_p.h"
 #include "describereportcreationresponse.h"
-#include "resourcegroupstaggingapirequest_p.h"
+#include "resourcegroupstaggingrequest_p.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::DescribeReportCreationRequest
- * \brief The DescribeReportCreationRequest class provides an interface for ResourceGroupsTaggingApi DescribeReportCreation requests.
+ * \class QtAws::ResourceGroupsTagging::DescribeReportCreationRequest
+ * \brief The DescribeReportCreationRequest class provides an interface for ResourceGroupsTagging DescribeReportCreation requests.
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  *
  *
- * \sa ResourceGroupsTaggingApiClient::describeReportCreation
+ * \sa ResourceGroupsTaggingClient::describeReportCreation
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeReportCreationRequest::DescribeReportCreationRequest(const DescribeReportCreationRequest &other)
-    : ResourceGroupsTaggingApiRequest(new DescribeReportCreationRequestPrivate(*other.d_func(), this))
+    : ResourceGroupsTaggingRequest(new DescribeReportCreationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ DescribeReportCreationRequest::DescribeReportCreationRequest(const DescribeRepor
  * Constructs a DescribeReportCreationRequest object.
  */
 DescribeReportCreationRequest::DescribeReportCreationRequest()
-    : ResourceGroupsTaggingApiRequest(new DescribeReportCreationRequestPrivate(ResourceGroupsTaggingApiRequest::DescribeReportCreationAction, this))
+    : ResourceGroupsTaggingRequest(new DescribeReportCreationRequestPrivate(ResourceGroupsTaggingRequest::DescribeReportCreationAction, this))
 {
 
 }
@@ -73,20 +73,20 @@ QtAws::Core::AwsAbstractResponse * DescribeReportCreationRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::DescribeReportCreationRequestPrivate
+ * \class QtAws::ResourceGroupsTagging::DescribeReportCreationRequestPrivate
  * \brief The DescribeReportCreationRequestPrivate class provides private implementation for DescribeReportCreationRequest.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  */
 
 /*!
- * Constructs a DescribeReportCreationRequestPrivate object for ResourceGroupsTaggingApi \a action,
+ * Constructs a DescribeReportCreationRequestPrivate object for ResourceGroupsTagging \a action,
  * with public implementation \a q.
  */
 DescribeReportCreationRequestPrivate::DescribeReportCreationRequestPrivate(
-    const ResourceGroupsTaggingApiRequest::Action action, DescribeReportCreationRequest * const q)
-    : ResourceGroupsTaggingApiRequestPrivate(action, q)
+    const ResourceGroupsTaggingRequest::Action action, DescribeReportCreationRequest * const q)
+    : ResourceGroupsTaggingRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +99,10 @@ DescribeReportCreationRequestPrivate::DescribeReportCreationRequestPrivate(
  */
 DescribeReportCreationRequestPrivate::DescribeReportCreationRequestPrivate(
     const DescribeReportCreationRequestPrivate &other, DescribeReportCreationRequest * const q)
-    : ResourceGroupsTaggingApiRequestPrivate(other, q)
+    : ResourceGroupsTaggingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws

@@ -20,16 +20,16 @@
 #include "startcontinuousexportrequest.h"
 #include "startcontinuousexportrequest_p.h"
 #include "startcontinuousexportresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StartContinuousExportRequest
- * \brief The StartContinuousExportRequest class provides an interface for ApplicationDiscoveryService StartContinuousExport requests.
+ * \class QtAws::ApplicationDiscovery::StartContinuousExportRequest
+ * \brief The StartContinuousExportRequest class provides an interface for ApplicationDiscovery StartContinuousExport requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::startContinuousExport
+ * \sa ApplicationDiscoveryClient::startContinuousExport
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartContinuousExportRequest::StartContinuousExportRequest(const StartContinuousExportRequest &other)
-    : ApplicationDiscoveryServiceRequest(new StartContinuousExportRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new StartContinuousExportRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ StartContinuousExportRequest::StartContinuousExportRequest(const StartContinuous
  * Constructs a StartContinuousExportRequest object.
  */
 StartContinuousExportRequest::StartContinuousExportRequest()
-    : ApplicationDiscoveryServiceRequest(new StartContinuousExportRequestPrivate(ApplicationDiscoveryServiceRequest::StartContinuousExportAction, this))
+    : ApplicationDiscoveryRequest(new StartContinuousExportRequestPrivate(ApplicationDiscoveryRequest::StartContinuousExportAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * StartContinuousExportRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StartContinuousExportRequestPrivate
+ * \class QtAws::ApplicationDiscovery::StartContinuousExportRequestPrivate
  * \brief The StartContinuousExportRequestPrivate class provides private implementation for StartContinuousExportRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a StartContinuousExportRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a StartContinuousExportRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 StartContinuousExportRequestPrivate::StartContinuousExportRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, StartContinuousExportRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, StartContinuousExportRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ StartContinuousExportRequestPrivate::StartContinuousExportRequestPrivate(
  */
 StartContinuousExportRequestPrivate::StartContinuousExportRequestPrivate(
     const StartContinuousExportRequestPrivate &other, StartContinuousExportRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

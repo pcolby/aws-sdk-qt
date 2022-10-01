@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeReservedElasticsearchInstancesResponse
- * \brief The DescribeReservedElasticsearchInstancesResponse class provides an interace for ElasticsearchService DescribeReservedElasticsearchInstances responses.
+ * \class QtAws::Elasticsearch::DescribeReservedElasticsearchInstancesResponse
+ * \brief The DescribeReservedElasticsearchInstancesResponse class provides an interace for Elasticsearch DescribeReservedElasticsearchInstances responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describeReservedElasticsearchInstances
+ * \sa ElasticsearchClient::describeReservedElasticsearchInstances
  */
 
 /*!
@@ -61,7 +61,7 @@ DescribeReservedElasticsearchInstancesResponse::DescribeReservedElasticsearchIns
         const DescribeReservedElasticsearchInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DescribeReservedElasticsearchInstancesResponsePrivate(this), parent)
+    : ElasticsearchResponse(new DescribeReservedElasticsearchInstancesResponsePrivate(this), parent)
 {
     setRequest(new DescribeReservedElasticsearchInstancesRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DescribeReservedElasticsearchInstancesRequest * DescribeReservedElasticsea
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService DescribeReservedElasticsearchInstances \a response.
+ * Parses a successful Elasticsearch DescribeReservedElasticsearchInstances \a response.
  */
 void DescribeReservedElasticsearchInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DescribeReservedElasticsearchInstancesResponse::parseSuccess(QIODevice &res
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeReservedElasticsearchInstancesResponsePrivate
+ * \class QtAws::Elasticsearch::DescribeReservedElasticsearchInstancesResponsePrivate
  * \brief The DescribeReservedElasticsearchInstancesResponsePrivate class provides private implementation for DescribeReservedElasticsearchInstancesResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a DescribeReservedElasticsearchInstancesResponsePrivate object with public implementation \a q.
  */
 DescribeReservedElasticsearchInstancesResponsePrivate::DescribeReservedElasticsearchInstancesResponsePrivate(
-    DescribeReservedElasticsearchInstancesResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    DescribeReservedElasticsearchInstancesResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService DescribeReservedElasticsearchInstances response element from \a xml.
+ * Parses a Elasticsearch DescribeReservedElasticsearchInstances response element from \a xml.
  */
 void DescribeReservedElasticsearchInstancesResponsePrivate::parseDescribeReservedElasticsearchInstancesResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DescribeReservedElasticsearchInstancesResponsePrivate::parseDescribeReserve
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

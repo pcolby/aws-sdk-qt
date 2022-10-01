@@ -20,16 +20,16 @@
 #include "updateapplicationrequest.h"
 #include "updateapplicationrequest_p.h"
 #include "updateapplicationresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::UpdateApplicationRequest
- * \brief The UpdateApplicationRequest class provides an interface for ApplicationDiscoveryService UpdateApplication requests.
+ * \class QtAws::ApplicationDiscovery::UpdateApplicationRequest
+ * \brief The UpdateApplicationRequest class provides an interface for ApplicationDiscovery UpdateApplication requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::updateApplication
+ * \sa ApplicationDiscoveryClient::updateApplication
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateApplicationRequest::UpdateApplicationRequest(const UpdateApplicationRequest &other)
-    : ApplicationDiscoveryServiceRequest(new UpdateApplicationRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new UpdateApplicationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ UpdateApplicationRequest::UpdateApplicationRequest(const UpdateApplicationReques
  * Constructs a UpdateApplicationRequest object.
  */
 UpdateApplicationRequest::UpdateApplicationRequest()
-    : ApplicationDiscoveryServiceRequest(new UpdateApplicationRequestPrivate(ApplicationDiscoveryServiceRequest::UpdateApplicationAction, this))
+    : ApplicationDiscoveryRequest(new UpdateApplicationRequestPrivate(ApplicationDiscoveryRequest::UpdateApplicationAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::UpdateApplicationRequestPrivate
+ * \class QtAws::ApplicationDiscovery::UpdateApplicationRequestPrivate
  * \brief The UpdateApplicationRequestPrivate class provides private implementation for UpdateApplicationRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a UpdateApplicationRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a UpdateApplicationRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, UpdateApplicationRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, UpdateApplicationRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
  */
 UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
     const UpdateApplicationRequestPrivate &other, UpdateApplicationRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

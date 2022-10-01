@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::BatchDeleteImportDataResponse
- * \brief The BatchDeleteImportDataResponse class provides an interace for ApplicationDiscoveryService BatchDeleteImportData responses.
+ * \class QtAws::ApplicationDiscovery::BatchDeleteImportDataResponse
+ * \brief The BatchDeleteImportDataResponse class provides an interace for ApplicationDiscovery BatchDeleteImportData responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::batchDeleteImportData
+ * \sa ApplicationDiscoveryClient::batchDeleteImportData
  */
 
 /*!
@@ -152,7 +152,7 @@ BatchDeleteImportDataResponse::BatchDeleteImportDataResponse(
         const BatchDeleteImportDataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new BatchDeleteImportDataResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new BatchDeleteImportDataResponsePrivate(this), parent)
 {
     setRequest(new BatchDeleteImportDataRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const BatchDeleteImportDataRequest * BatchDeleteImportDataResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService BatchDeleteImportData \a response.
+ * Parses a successful ApplicationDiscovery BatchDeleteImportData \a response.
  */
 void BatchDeleteImportDataResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void BatchDeleteImportDataResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::BatchDeleteImportDataResponsePrivate
+ * \class QtAws::ApplicationDiscovery::BatchDeleteImportDataResponsePrivate
  * \brief The BatchDeleteImportDataResponsePrivate class provides private implementation for BatchDeleteImportDataResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a BatchDeleteImportDataResponsePrivate object with public implementation \a q.
  */
 BatchDeleteImportDataResponsePrivate::BatchDeleteImportDataResponsePrivate(
-    BatchDeleteImportDataResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    BatchDeleteImportDataResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService BatchDeleteImportData response element from \a xml.
+ * Parses a ApplicationDiscovery BatchDeleteImportData response element from \a xml.
  */
 void BatchDeleteImportDataResponsePrivate::parseBatchDeleteImportDataResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void BatchDeleteImportDataResponsePrivate::parseBatchDeleteImportDataResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

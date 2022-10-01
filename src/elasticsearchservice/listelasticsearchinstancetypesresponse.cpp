@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::ListElasticsearchInstanceTypesResponse
- * \brief The ListElasticsearchInstanceTypesResponse class provides an interace for ElasticsearchService ListElasticsearchInstanceTypes responses.
+ * \class QtAws::Elasticsearch::ListElasticsearchInstanceTypesResponse
+ * \brief The ListElasticsearchInstanceTypesResponse class provides an interace for Elasticsearch ListElasticsearchInstanceTypes responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::listElasticsearchInstanceTypes
+ * \sa ElasticsearchClient::listElasticsearchInstanceTypes
  */
 
 /*!
@@ -61,7 +61,7 @@ ListElasticsearchInstanceTypesResponse::ListElasticsearchInstanceTypesResponse(
         const ListElasticsearchInstanceTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new ListElasticsearchInstanceTypesResponsePrivate(this), parent)
+    : ElasticsearchResponse(new ListElasticsearchInstanceTypesResponsePrivate(this), parent)
 {
     setRequest(new ListElasticsearchInstanceTypesRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const ListElasticsearchInstanceTypesRequest * ListElasticsearchInstanceTypesResp
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService ListElasticsearchInstanceTypes \a response.
+ * Parses a successful Elasticsearch ListElasticsearchInstanceTypes \a response.
  */
 void ListElasticsearchInstanceTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void ListElasticsearchInstanceTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::ListElasticsearchInstanceTypesResponsePrivate
+ * \class QtAws::Elasticsearch::ListElasticsearchInstanceTypesResponsePrivate
  * \brief The ListElasticsearchInstanceTypesResponsePrivate class provides private implementation for ListElasticsearchInstanceTypesResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a ListElasticsearchInstanceTypesResponsePrivate object with public implementation \a q.
  */
 ListElasticsearchInstanceTypesResponsePrivate::ListElasticsearchInstanceTypesResponsePrivate(
-    ListElasticsearchInstanceTypesResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    ListElasticsearchInstanceTypesResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService ListElasticsearchInstanceTypes response element from \a xml.
+ * Parses a Elasticsearch ListElasticsearchInstanceTypes response element from \a xml.
  */
 void ListElasticsearchInstanceTypesResponsePrivate::parseListElasticsearchInstanceTypesResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void ListElasticsearchInstanceTypesResponsePrivate::parseListElasticsearchInstan
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

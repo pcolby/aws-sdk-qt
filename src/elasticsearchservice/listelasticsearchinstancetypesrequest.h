@@ -20,14 +20,14 @@
 #ifndef QTAWS_LISTELASTICSEARCHINSTANCETYPESREQUEST_H
 #define QTAWS_LISTELASTICSEARCHINSTANCETYPESREQUEST_H
 
-#include "elasticsearchservicerequest.h"
+#include "elasticsearchrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class ListElasticsearchInstanceTypesRequestPrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT ListElasticsearchInstanceTypesRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCH_EXPORT ListElasticsearchInstanceTypesRequest : public ElasticsearchRequest {
 
 public:
     ListElasticsearchInstanceTypesRequest(const ListElasticsearchInstanceTypesRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

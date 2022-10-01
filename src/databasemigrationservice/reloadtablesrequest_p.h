@@ -20,18 +20,18 @@
 #ifndef QTAWS_RELOADTABLESREQUEST_P_H
 #define QTAWS_RELOADTABLESREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "reloadtablesrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class ReloadTablesRequest;
 
-class ReloadTablesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class ReloadTablesRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    ReloadTablesRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    ReloadTablesRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    ReloadTablesRequest * const q);
     ReloadTablesRequestPrivate(const ReloadTablesRequestPrivate &other,
                                    ReloadTablesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

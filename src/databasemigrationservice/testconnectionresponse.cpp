@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::TestConnectionResponse
- * \brief The TestConnectionResponse class provides an interace for DatabaseMigrationService TestConnection responses.
+ * \class QtAws::DatabaseMigration::TestConnectionResponse
+ * \brief The TestConnectionResponse class provides an interace for DatabaseMigration TestConnection responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::testConnection
+ * \sa DatabaseMigrationClient::testConnection
  */
 
 /*!
@@ -55,7 +55,7 @@ TestConnectionResponse::TestConnectionResponse(
         const TestConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new TestConnectionResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new TestConnectionResponsePrivate(this), parent)
 {
     setRequest(new TestConnectionRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const TestConnectionRequest * TestConnectionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService TestConnection \a response.
+ * Parses a successful DatabaseMigration TestConnection \a response.
  */
 void TestConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void TestConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::TestConnectionResponsePrivate
+ * \class QtAws::DatabaseMigration::TestConnectionResponsePrivate
  * \brief The TestConnectionResponsePrivate class provides private implementation for TestConnectionResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a TestConnectionResponsePrivate object with public implementation \a q.
  */
 TestConnectionResponsePrivate::TestConnectionResponsePrivate(
-    TestConnectionResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    TestConnectionResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService TestConnection response element from \a xml.
+ * Parses a DatabaseMigration TestConnection response element from \a xml.
  */
 void TestConnectionResponsePrivate::parseTestConnectionResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void TestConnectionResponsePrivate::parseTestConnectionResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

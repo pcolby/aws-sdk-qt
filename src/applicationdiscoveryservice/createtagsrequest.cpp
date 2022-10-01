@@ -20,16 +20,16 @@
 #include "createtagsrequest.h"
 #include "createtagsrequest_p.h"
 #include "createtagsresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::CreateTagsRequest
- * \brief The CreateTagsRequest class provides an interface for ApplicationDiscoveryService CreateTags requests.
+ * \class QtAws::ApplicationDiscovery::CreateTagsRequest
+ * \brief The CreateTagsRequest class provides an interface for ApplicationDiscovery CreateTags requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::createTags
+ * \sa ApplicationDiscoveryClient::createTags
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
-    : ApplicationDiscoveryServiceRequest(new CreateTagsRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new CreateTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
  * Constructs a CreateTagsRequest object.
  */
 CreateTagsRequest::CreateTagsRequest()
-    : ApplicationDiscoveryServiceRequest(new CreateTagsRequestPrivate(ApplicationDiscoveryServiceRequest::CreateTagsAction, this))
+    : ApplicationDiscoveryRequest(new CreateTagsRequestPrivate(ApplicationDiscoveryRequest::CreateTagsAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::CreateTagsRequestPrivate
+ * \class QtAws::ApplicationDiscovery::CreateTagsRequestPrivate
  * \brief The CreateTagsRequestPrivate class provides private implementation for CreateTagsRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a CreateTagsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a CreateTagsRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, CreateTagsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, CreateTagsRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const CreateTagsRequestPrivate &other, CreateTagsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

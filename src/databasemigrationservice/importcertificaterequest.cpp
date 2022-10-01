@@ -20,16 +20,16 @@
 #include "importcertificaterequest.h"
 #include "importcertificaterequest_p.h"
 #include "importcertificateresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::ImportCertificateRequest
- * \brief The ImportCertificateRequest class provides an interface for DatabaseMigrationService ImportCertificate requests.
+ * \class QtAws::DatabaseMigration::ImportCertificateRequest
+ * \brief The ImportCertificateRequest class provides an interface for DatabaseMigration ImportCertificate requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::importCertificate
+ * \sa DatabaseMigrationClient::importCertificate
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ImportCertificateRequest::ImportCertificateRequest(const ImportCertificateRequest &other)
-    : DatabaseMigrationServiceRequest(new ImportCertificateRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new ImportCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ ImportCertificateRequest::ImportCertificateRequest(const ImportCertificateReques
  * Constructs a ImportCertificateRequest object.
  */
 ImportCertificateRequest::ImportCertificateRequest()
-    : DatabaseMigrationServiceRequest(new ImportCertificateRequestPrivate(DatabaseMigrationServiceRequest::ImportCertificateAction, this))
+    : DatabaseMigrationRequest(new ImportCertificateRequestPrivate(DatabaseMigrationRequest::ImportCertificateAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::ImportCertificateRequestPrivate
+ * \class QtAws::DatabaseMigration::ImportCertificateRequestPrivate
  * \brief The ImportCertificateRequestPrivate class provides private implementation for ImportCertificateRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a ImportCertificateRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a ImportCertificateRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, ImportCertificateRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, ImportCertificateRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
     const ImportCertificateRequestPrivate &other, ImportCertificateRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

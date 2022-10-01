@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
 /*!
- * \class QtAws::MarketplaceEntitlementService::GetEntitlementsResponse
- * \brief The GetEntitlementsResponse class provides an interace for MarketplaceEntitlementService GetEntitlements responses.
+ * \class QtAws::MarketplaceEntitlement::GetEntitlementsResponse
+ * \brief The GetEntitlementsResponse class provides an interace for MarketplaceEntitlement GetEntitlements responses.
  *
- * \inmodule QtAwsMarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlement
  *
  *  <fullname>AWS Marketplace Entitlement Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace MarketplaceEntitlementService {
  * 
  *  <i>GetEntitlements</i>- Gets the entitlements for a Marketplace
  *
- * \sa MarketplaceEntitlementServiceClient::getEntitlements
+ * \sa MarketplaceEntitlementClient::getEntitlements
  */
 
 /*!
@@ -61,7 +61,7 @@ GetEntitlementsResponse::GetEntitlementsResponse(
         const GetEntitlementsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MarketplaceEntitlementServiceResponse(new GetEntitlementsResponsePrivate(this), parent)
+    : MarketplaceEntitlementResponse(new GetEntitlementsResponsePrivate(this), parent)
 {
     setRequest(new GetEntitlementsRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const GetEntitlementsRequest * GetEntitlementsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful MarketplaceEntitlementService GetEntitlements \a response.
+ * Parses a successful MarketplaceEntitlement GetEntitlements \a response.
  */
 void GetEntitlementsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void GetEntitlementsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MarketplaceEntitlementService::GetEntitlementsResponsePrivate
+ * \class QtAws::MarketplaceEntitlement::GetEntitlementsResponsePrivate
  * \brief The GetEntitlementsResponsePrivate class provides private implementation for GetEntitlementsResponse.
  * \internal
  *
- * \inmodule QtAwsMarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlement
  */
 
 /*!
  * Constructs a GetEntitlementsResponsePrivate object with public implementation \a q.
  */
 GetEntitlementsResponsePrivate::GetEntitlementsResponsePrivate(
-    GetEntitlementsResponse * const q) : MarketplaceEntitlementServiceResponsePrivate(q)
+    GetEntitlementsResponse * const q) : MarketplaceEntitlementResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a MarketplaceEntitlementService GetEntitlements response element from \a xml.
+ * Parses a MarketplaceEntitlement GetEntitlements response element from \a xml.
  */
 void GetEntitlementsResponsePrivate::parseGetEntitlementsResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void GetEntitlementsResponsePrivate::parseGetEntitlementsResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws

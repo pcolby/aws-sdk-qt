@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_COSTANDUSAGEREPORTSERVICERESPONSE_H
-#define QTAWS_COSTANDUSAGEREPORTSERVICERESPONSE_H
+#ifndef QTAWS_COSTANDUSAGEREPORTRESPONSE_H
+#define QTAWS_COSTANDUSAGEREPORTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
 
-#include "qtawscostandusagereportserviceglobal.h"
+#include "qtawscostandusagereportglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
-class CostandUsageReportServiceResponsePrivate;
+class CostandUsageReportResponsePrivate;
 
-class QTAWSCOSTANDUSAGEREPORTSERVICE_EXPORT CostandUsageReportServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCOSTANDUSAGEREPORT_EXPORT CostandUsageReportResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    CostandUsageReportServiceResponse(QObject * const parent = 0);
+    CostandUsageReportResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    CostandUsageReportServiceResponse(CostandUsageReportServiceResponsePrivate * const d, QObject * const parent);
+    CostandUsageReportResponse(CostandUsageReportResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(CostandUsageReportServiceResponse)
-    Q_DISABLE_COPY(CostandUsageReportServiceResponse)
+    Q_DECLARE_PRIVATE(CostandUsageReportResponse)
+    Q_DISABLE_COPY(CostandUsageReportResponse)
 
 };
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws
 
 #endif

@@ -17,32 +17,32 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_DATABASEMIGRATIONSERVICERESPONSE_P_H
-#define QTAWS_DATABASEMIGRATIONSERVICERESPONSE_P_H
+#ifndef QTAWS_DATABASEMIGRATIONRESPONSE_P_H
+#define QTAWS_DATABASEMIGRATIONRESPONSE_P_H
 
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
-class DatabaseMigrationServiceResponse;
+class DatabaseMigrationResponse;
 
-class DatabaseMigrationServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DatabaseMigrationResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit DatabaseMigrationServiceResponsePrivate(DatabaseMigrationServiceResponse * const q);
+    explicit DatabaseMigrationResponsePrivate(DatabaseMigrationResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(DatabaseMigrationServiceResponse)
-    Q_DISABLE_COPY(DatabaseMigrationServiceResponsePrivate)
+    Q_DECLARE_PUBLIC(DatabaseMigrationResponse)
+    Q_DISABLE_COPY(DatabaseMigrationResponsePrivate)
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

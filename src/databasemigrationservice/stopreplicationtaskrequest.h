@@ -20,14 +20,14 @@
 #ifndef QTAWS_STOPREPLICATIONTASKREQUEST_H
 #define QTAWS_STOPREPLICATIONTASKREQUEST_H
 
-#include "databasemigrationservicerequest.h"
+#include "databasemigrationrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class StopReplicationTaskRequestPrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT StopReplicationTaskRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATION_EXPORT StopReplicationTaskRequest : public DatabaseMigrationRequest {
 
 public:
     StopReplicationTaskRequest(const StopReplicationTaskRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

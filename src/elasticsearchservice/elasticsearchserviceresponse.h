@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_ELASTICSEARCHSERVICERESPONSE_H
-#define QTAWS_ELASTICSEARCHSERVICERESPONSE_H
+#ifndef QTAWS_ELASTICSEARCHRESPONSE_H
+#define QTAWS_ELASTICSEARCHRESPONSE_H
 
 #include "core/awsabstractresponse.h"
 
-#include "qtawselasticsearchserviceglobal.h"
+#include "qtawselasticsearchglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
-class ElasticsearchServiceResponsePrivate;
+class ElasticsearchResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT ElasticsearchServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSELASTICSEARCH_EXPORT ElasticsearchResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    ElasticsearchServiceResponse(QObject * const parent = 0);
+    ElasticsearchResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    ElasticsearchServiceResponse(ElasticsearchServiceResponsePrivate * const d, QObject * const parent);
+    ElasticsearchResponse(ElasticsearchResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(ElasticsearchServiceResponse)
-    Q_DISABLE_COPY(ElasticsearchServiceResponse)
+    Q_DECLARE_PRIVATE(ElasticsearchResponse)
+    Q_DISABLE_COPY(ElasticsearchResponse)
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

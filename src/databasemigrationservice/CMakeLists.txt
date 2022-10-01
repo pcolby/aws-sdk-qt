@@ -1,13 +1,13 @@
-add_compile_definitions(QTAWSDATABASEMIGRATIONSERVICE_LIBRARY)
+add_compile_definitions(QTAWSDATABASEMIGRATION_LIBRARY)
 
-add_library(QtAwsDatabaseMigrationService
-  qtawsdatabasemigrationserviceglobal.h
-  databasemigrationserviceclient.h
-  databasemigrationserviceclient_p.h
-  databasemigrationservicerequest.h
-  databasemigrationservicerequest_p.h
-  databasemigrationserviceresponse.h
-  databasemigrationserviceresponse_p.h
+add_library(QtAwsDatabaseMigration
+  qtawsdatabasemigrationglobal.h
+  databasemigrationclient.h
+  databasemigrationclient_p.h
+  databasemigrationrequest.h
+  databasemigrationrequest_p.h
+  databasemigrationresponse.h
+  databasemigrationresponse_p.h
   addtagstoresourcerequest.h
   addtagstoresourcerequest_p.h
   addtagstoresourceresponse.h
@@ -268,9 +268,9 @@ add_library(QtAwsDatabaseMigrationService
   updatesubscriptionstoeventbridgerequest_p.h
   updatesubscriptionstoeventbridgeresponse.h
   updatesubscriptionstoeventbridgeresponse_p.h
-  databasemigrationserviceclient.cpp
-  databasemigrationservicerequest.cpp
-  databasemigrationserviceresponse.cpp
+  databasemigrationclient.cpp
+  databasemigrationrequest.cpp
+  databasemigrationresponse.cpp
   addtagstoresourcerequest.cpp
   addtagstoresourceresponse.cpp
   applypendingmaintenanceactionrequest.cpp
@@ -402,7 +402,7 @@ add_library(QtAwsDatabaseMigrationService
   updatesubscriptionstoeventbridgerequest.cpp
   updatesubscriptionstoeventbridgeresponse.cpp)
 
-target_link_libraries(QtAwsDatabaseMigrationService
+target_link_libraries(QtAwsDatabaseMigration
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

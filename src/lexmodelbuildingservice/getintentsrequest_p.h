@@ -20,18 +20,18 @@
 #ifndef QTAWS_GETINTENTSREQUEST_P_H
 #define QTAWS_GETINTENTSREQUEST_P_H
 
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 #include "getintentsrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class GetIntentsRequest;
 
-class GetIntentsRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class GetIntentsRequestPrivate : public LexModelBuildingRequestPrivate {
 
 public:
-    GetIntentsRequestPrivate(const LexModelBuildingServiceRequest::Action action,
+    GetIntentsRequestPrivate(const LexModelBuildingRequest::Action action,
                                    GetIntentsRequest * const q);
     GetIntentsRequestPrivate(const GetIntentsRequestPrivate &other,
                                    GetIntentsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

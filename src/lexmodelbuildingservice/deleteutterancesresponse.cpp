@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteUtterancesResponse
- * \brief The DeleteUtterancesResponse class provides an interace for LexModelBuildingService DeleteUtterances responses.
+ * \class QtAws::LexModelBuilding::DeleteUtterancesResponse
+ * \brief The DeleteUtterancesResponse class provides an interace for LexModelBuilding DeleteUtterances responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::deleteUtterances
+ * \sa LexModelBuildingClient::deleteUtterances
  */
 
 /*!
@@ -48,7 +48,7 @@ DeleteUtterancesResponse::DeleteUtterancesResponse(
         const DeleteUtterancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new DeleteUtterancesResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new DeleteUtterancesResponsePrivate(this), parent)
 {
     setRequest(new DeleteUtterancesRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const DeleteUtterancesRequest * DeleteUtterancesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService DeleteUtterances \a response.
+ * Parses a successful LexModelBuilding DeleteUtterances \a response.
  */
 void DeleteUtterancesResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void DeleteUtterancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteUtterancesResponsePrivate
+ * \class QtAws::LexModelBuilding::DeleteUtterancesResponsePrivate
  * \brief The DeleteUtterancesResponsePrivate class provides private implementation for DeleteUtterancesResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a DeleteUtterancesResponsePrivate object with public implementation \a q.
  */
 DeleteUtterancesResponsePrivate::DeleteUtterancesResponsePrivate(
-    DeleteUtterancesResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    DeleteUtterancesResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService DeleteUtterances response element from \a xml.
+ * Parses a LexModelBuilding DeleteUtterances response element from \a xml.
  */
 void DeleteUtterancesResponsePrivate::parseDeleteUtterancesResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void DeleteUtterancesResponsePrivate::parseDeleteUtterancesResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

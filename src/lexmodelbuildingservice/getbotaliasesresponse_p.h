@@ -20,14 +20,14 @@
 #ifndef QTAWS_GETBOTALIASESRESPONSE_P_H
 #define QTAWS_GETBOTALIASESRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse_p.h"
+#include "lexmodelbuildingresponse_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class GetBotAliasesResponse;
 
-class GetBotAliasesResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+class GetBotAliasesResponsePrivate : public LexModelBuildingResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

@@ -20,30 +20,30 @@
 #include "putslottyperequest.h"
 #include "putslottyperequest_p.h"
 #include "putslottyperesponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::PutSlotTypeRequest
- * \brief The PutSlotTypeRequest class provides an interface for LexModelBuildingService PutSlotType requests.
+ * \class QtAws::LexModelBuilding::PutSlotTypeRequest
+ * \brief The PutSlotTypeRequest class provides an interface for LexModelBuilding PutSlotType requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::putSlotType
+ * \sa LexModelBuildingClient::putSlotType
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutSlotTypeRequest::PutSlotTypeRequest(const PutSlotTypeRequest &other)
-    : LexModelBuildingServiceRequest(new PutSlotTypeRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new PutSlotTypeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ PutSlotTypeRequest::PutSlotTypeRequest(const PutSlotTypeRequest &other)
  * Constructs a PutSlotTypeRequest object.
  */
 PutSlotTypeRequest::PutSlotTypeRequest()
-    : LexModelBuildingServiceRequest(new PutSlotTypeRequestPrivate(LexModelBuildingServiceRequest::PutSlotTypeAction, this))
+    : LexModelBuildingRequest(new PutSlotTypeRequestPrivate(LexModelBuildingRequest::PutSlotTypeAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * PutSlotTypeRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::PutSlotTypeRequestPrivate
+ * \class QtAws::LexModelBuilding::PutSlotTypeRequestPrivate
  * \brief The PutSlotTypeRequestPrivate class provides private implementation for PutSlotTypeRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a PutSlotTypeRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a PutSlotTypeRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 PutSlotTypeRequestPrivate::PutSlotTypeRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, PutSlotTypeRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, PutSlotTypeRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ PutSlotTypeRequestPrivate::PutSlotTypeRequestPrivate(
  */
 PutSlotTypeRequestPrivate::PutSlotTypeRequestPrivate(
     const PutSlotTypeRequestPrivate &other, PutSlotTypeRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

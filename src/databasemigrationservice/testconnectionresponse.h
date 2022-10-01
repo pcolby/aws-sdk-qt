@@ -20,15 +20,15 @@
 #ifndef QTAWS_TESTCONNECTIONRESPONSE_H
 #define QTAWS_TESTCONNECTIONRESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "testconnectionrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class TestConnectionResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT TestConnectionResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT TestConnectionResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

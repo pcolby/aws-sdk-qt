@@ -20,15 +20,15 @@
 #ifndef QTAWS_DELETEPACKAGERESPONSE_H
 #define QTAWS_DELETEPACKAGERESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "deletepackagerequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class DeletePackageResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT DeletePackageResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT DeletePackageResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

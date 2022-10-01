@@ -20,18 +20,18 @@
 #ifndef QTAWS_REFRESHSCHEMASREQUEST_P_H
 #define QTAWS_REFRESHSCHEMASREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "refreshschemasrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class RefreshSchemasRequest;
 
-class RefreshSchemasRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class RefreshSchemasRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    RefreshSchemasRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    RefreshSchemasRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    RefreshSchemasRequest * const q);
     RefreshSchemasRequestPrivate(const RefreshSchemasRequestPrivate &other,
                                    RefreshSchemasRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

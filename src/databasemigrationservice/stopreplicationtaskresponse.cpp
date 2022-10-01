@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::StopReplicationTaskResponse
- * \brief The StopReplicationTaskResponse class provides an interace for DatabaseMigrationService StopReplicationTask responses.
+ * \class QtAws::DatabaseMigration::StopReplicationTaskResponse
+ * \brief The StopReplicationTaskResponse class provides an interace for DatabaseMigration StopReplicationTask responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::stopReplicationTask
+ * \sa DatabaseMigrationClient::stopReplicationTask
  */
 
 /*!
@@ -55,7 +55,7 @@ StopReplicationTaskResponse::StopReplicationTaskResponse(
         const StopReplicationTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new StopReplicationTaskResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new StopReplicationTaskResponsePrivate(this), parent)
 {
     setRequest(new StopReplicationTaskRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const StopReplicationTaskRequest * StopReplicationTaskResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService StopReplicationTask \a response.
+ * Parses a successful DatabaseMigration StopReplicationTask \a response.
  */
 void StopReplicationTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void StopReplicationTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::StopReplicationTaskResponsePrivate
+ * \class QtAws::DatabaseMigration::StopReplicationTaskResponsePrivate
  * \brief The StopReplicationTaskResponsePrivate class provides private implementation for StopReplicationTaskResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a StopReplicationTaskResponsePrivate object with public implementation \a q.
  */
 StopReplicationTaskResponsePrivate::StopReplicationTaskResponsePrivate(
-    StopReplicationTaskResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    StopReplicationTaskResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService StopReplicationTask response element from \a xml.
+ * Parses a DatabaseMigration StopReplicationTask response element from \a xml.
  */
 void StopReplicationTaskResponsePrivate::parseStopReplicationTaskResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void StopReplicationTaskResponsePrivate::parseStopReplicationTaskResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

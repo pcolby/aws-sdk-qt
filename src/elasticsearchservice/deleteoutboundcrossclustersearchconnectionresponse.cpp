@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DeleteOutboundCrossClusterSearchConnectionResponse
- * \brief The DeleteOutboundCrossClusterSearchConnectionResponse class provides an interace for ElasticsearchService DeleteOutboundCrossClusterSearchConnection responses.
+ * \class QtAws::Elasticsearch::DeleteOutboundCrossClusterSearchConnectionResponse
+ * \brief The DeleteOutboundCrossClusterSearchConnectionResponse class provides an interace for Elasticsearch DeleteOutboundCrossClusterSearchConnection responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::deleteOutboundCrossClusterSearchConnection
+ * \sa ElasticsearchClient::deleteOutboundCrossClusterSearchConnection
  */
 
 /*!
@@ -61,7 +61,7 @@ DeleteOutboundCrossClusterSearchConnectionResponse::DeleteOutboundCrossClusterSe
         const DeleteOutboundCrossClusterSearchConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DeleteOutboundCrossClusterSearchConnectionResponsePrivate(this), parent)
+    : ElasticsearchResponse(new DeleteOutboundCrossClusterSearchConnectionResponsePrivate(this), parent)
 {
     setRequest(new DeleteOutboundCrossClusterSearchConnectionRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DeleteOutboundCrossClusterSearchConnectionRequest * DeleteOutboundCrossClu
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService DeleteOutboundCrossClusterSearchConnection \a response.
+ * Parses a successful Elasticsearch DeleteOutboundCrossClusterSearchConnection \a response.
  */
 void DeleteOutboundCrossClusterSearchConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DeleteOutboundCrossClusterSearchConnectionResponse::parseSuccess(QIODevice 
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DeleteOutboundCrossClusterSearchConnectionResponsePrivate
+ * \class QtAws::Elasticsearch::DeleteOutboundCrossClusterSearchConnectionResponsePrivate
  * \brief The DeleteOutboundCrossClusterSearchConnectionResponsePrivate class provides private implementation for DeleteOutboundCrossClusterSearchConnectionResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a DeleteOutboundCrossClusterSearchConnectionResponsePrivate object with public implementation \a q.
  */
 DeleteOutboundCrossClusterSearchConnectionResponsePrivate::DeleteOutboundCrossClusterSearchConnectionResponsePrivate(
-    DeleteOutboundCrossClusterSearchConnectionResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    DeleteOutboundCrossClusterSearchConnectionResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService DeleteOutboundCrossClusterSearchConnection response element from \a xml.
+ * Parses a Elasticsearch DeleteOutboundCrossClusterSearchConnection response element from \a xml.
  */
 void DeleteOutboundCrossClusterSearchConnectionResponsePrivate::parseDeleteOutboundCrossClusterSearchConnectionResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DeleteOutboundCrossClusterSearchConnectionResponsePrivate::parseDeleteOutbo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

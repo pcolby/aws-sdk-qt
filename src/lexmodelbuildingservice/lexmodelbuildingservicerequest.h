@@ -17,12 +17,12 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_LEXMODELBUILDINGSERVICEREQUEST_H
-#define QTAWS_LEXMODELBUILDINGSERVICEREQUEST_H
+#ifndef QTAWS_LEXMODELBUILDINGREQUEST_H
+#define QTAWS_LEXMODELBUILDINGREQUEST_H
 
 #include "core/awsabstractrequest.h"
 
-#include "qtawslexmodelbuildingserviceglobal.h"
+#include "qtawslexmodelbuildingglobal.h"
 
 #include <QFlags>
 #include <QObject>
@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
-class LexModelBuildingServiceRequestPrivate;
+class LexModelBuildingRequestPrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT LexModelBuildingServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSLEXMODELBUILDING_EXPORT LexModelBuildingRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by LexModelBuildingService.
+    /// Actions supported by LexModelBuilding.
     enum Action {
         CreateBotVersionAction,
         CreateIntentVersionAction,
@@ -84,9 +84,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    LexModelBuildingServiceRequest(const Action action);
-    LexModelBuildingServiceRequest(const LexModelBuildingServiceRequest &other);
-    LexModelBuildingServiceRequest &operator=(const LexModelBuildingServiceRequest &other);
+    LexModelBuildingRequest(const Action action);
+    LexModelBuildingRequest(const LexModelBuildingRequest &other);
+    LexModelBuildingRequest &operator=(const LexModelBuildingRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -95,12 +95,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const LexModelBuildingServiceRequest &other) const;
+    virtual bool operator==(const LexModelBuildingRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit LexModelBuildingServiceRequest(LexModelBuildingServiceRequestPrivate * const d);
+    explicit LexModelBuildingRequest(LexModelBuildingRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -113,11 +113,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(LexModelBuildingServiceRequest)
+    Q_DECLARE_PRIVATE(LexModelBuildingRequest)
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

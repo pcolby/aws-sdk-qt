@@ -20,15 +20,15 @@
 #ifndef QTAWS_STARTEXPORTTASKRESPONSE_H
 #define QTAWS_STARTEXPORTTASKRESPONSE_H
 
-#include "applicationdiscoveryserviceresponse.h"
+#include "applicationdiscoveryresponse.h"
 #include "startexporttaskrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class StartExportTaskResponsePrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT StartExportTaskResponse : public ApplicationDiscoveryServiceResponse {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT StartExportTaskResponse : public ApplicationDiscoveryResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

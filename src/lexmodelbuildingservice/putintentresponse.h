@@ -20,15 +20,15 @@
 #ifndef QTAWS_PUTINTENTRESPONSE_H
 #define QTAWS_PUTINTENTRESPONSE_H
 
-#include "lexmodelbuildingserviceresponse.h"
+#include "lexmodelbuildingresponse.h"
 #include "putintentrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class PutIntentResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT PutIntentResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDING_EXPORT PutIntentResponse : public LexModelBuildingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

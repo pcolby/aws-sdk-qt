@@ -20,16 +20,16 @@
 #include "describereportdefinitionsrequest.h"
 #include "describereportdefinitionsrequest_p.h"
 #include "describereportdefinitionsresponse.h"
-#include "costandusagereportservicerequest_p.h"
+#include "costandusagereportrequest_p.h"
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 /*!
- * \class QtAws::CostandUsageReportService::DescribeReportDefinitionsRequest
- * \brief The DescribeReportDefinitionsRequest class provides an interface for CostandUsageReportService DescribeReportDefinitions requests.
+ * \class QtAws::CostandUsageReport::DescribeReportDefinitionsRequest
+ * \brief The DescribeReportDefinitionsRequest class provides an interface for CostandUsageReport DescribeReportDefinitions requests.
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  *
  *  The AWS Cost and Usage Report API enables you to programmatically create, query, and delete AWS Cost and Usage report
  * 
@@ -49,14 +49,14 @@ namespace CostandUsageReportService {
  * 
  *  endpoint> <ul> <li>
  *
- * \sa CostandUsageReportServiceClient::describeReportDefinitions
+ * \sa CostandUsageReportClient::describeReportDefinitions
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeReportDefinitionsRequest::DescribeReportDefinitionsRequest(const DescribeReportDefinitionsRequest &other)
-    : CostandUsageReportServiceRequest(new DescribeReportDefinitionsRequestPrivate(*other.d_func(), this))
+    : CostandUsageReportRequest(new DescribeReportDefinitionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DescribeReportDefinitionsRequest::DescribeReportDefinitionsRequest(const Describ
  * Constructs a DescribeReportDefinitionsRequest object.
  */
 DescribeReportDefinitionsRequest::DescribeReportDefinitionsRequest()
-    : CostandUsageReportServiceRequest(new DescribeReportDefinitionsRequestPrivate(CostandUsageReportServiceRequest::DescribeReportDefinitionsAction, this))
+    : CostandUsageReportRequest(new DescribeReportDefinitionsRequestPrivate(CostandUsageReportRequest::DescribeReportDefinitionsAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DescribeReportDefinitionsRequest::response(QN
 }
 
 /*!
- * \class QtAws::CostandUsageReportService::DescribeReportDefinitionsRequestPrivate
+ * \class QtAws::CostandUsageReport::DescribeReportDefinitionsRequestPrivate
  * \brief The DescribeReportDefinitionsRequestPrivate class provides private implementation for DescribeReportDefinitionsRequest.
  * \internal
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  */
 
 /*!
- * Constructs a DescribeReportDefinitionsRequestPrivate object for CostandUsageReportService \a action,
+ * Constructs a DescribeReportDefinitionsRequestPrivate object for CostandUsageReport \a action,
  * with public implementation \a q.
  */
 DescribeReportDefinitionsRequestPrivate::DescribeReportDefinitionsRequestPrivate(
-    const CostandUsageReportServiceRequest::Action action, DescribeReportDefinitionsRequest * const q)
-    : CostandUsageReportServiceRequestPrivate(action, q)
+    const CostandUsageReportRequest::Action action, DescribeReportDefinitionsRequest * const q)
+    : CostandUsageReportRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DescribeReportDefinitionsRequestPrivate::DescribeReportDefinitionsRequestPrivate
  */
 DescribeReportDefinitionsRequestPrivate::DescribeReportDefinitionsRequestPrivate(
     const DescribeReportDefinitionsRequestPrivate &other, DescribeReportDefinitionsRequest * const q)
-    : CostandUsageReportServiceRequestPrivate(other, q)
+    : CostandUsageReportRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws

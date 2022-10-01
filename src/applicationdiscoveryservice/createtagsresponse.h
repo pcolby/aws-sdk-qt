@@ -20,15 +20,15 @@
 #ifndef QTAWS_CREATETAGSRESPONSE_H
 #define QTAWS_CREATETAGSRESPONSE_H
 
-#include "applicationdiscoveryserviceresponse.h"
+#include "applicationdiscoveryresponse.h"
 #include "createtagsrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class CreateTagsResponsePrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT CreateTagsResponse : public ApplicationDiscoveryServiceResponse {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT CreateTagsResponse : public ApplicationDiscoveryResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

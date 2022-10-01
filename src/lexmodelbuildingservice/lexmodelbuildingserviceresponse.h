@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_LEXMODELBUILDINGSERVICERESPONSE_H
-#define QTAWS_LEXMODELBUILDINGSERVICERESPONSE_H
+#ifndef QTAWS_LEXMODELBUILDINGRESPONSE_H
+#define QTAWS_LEXMODELBUILDINGRESPONSE_H
 
 #include "core/awsabstractresponse.h"
 
-#include "qtawslexmodelbuildingserviceglobal.h"
+#include "qtawslexmodelbuildingglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
-class LexModelBuildingServiceResponsePrivate;
+class LexModelBuildingResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT LexModelBuildingServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSLEXMODELBUILDING_EXPORT LexModelBuildingResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    LexModelBuildingServiceResponse(QObject * const parent = 0);
+    LexModelBuildingResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    LexModelBuildingServiceResponse(LexModelBuildingServiceResponsePrivate * const d, QObject * const parent);
+    LexModelBuildingResponse(LexModelBuildingResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(LexModelBuildingServiceResponse)
-    Q_DISABLE_COPY(LexModelBuildingServiceResponse)
+    Q_DECLARE_PRIVATE(LexModelBuildingResponse)
+    Q_DISABLE_COPY(LexModelBuildingResponse)
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

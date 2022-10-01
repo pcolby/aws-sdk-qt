@@ -20,14 +20,14 @@
 #ifndef QTAWS_UPGRADEELASTICSEARCHDOMAINREQUEST_H
 #define QTAWS_UPGRADEELASTICSEARCHDOMAINREQUEST_H
 
-#include "elasticsearchservicerequest.h"
+#include "elasticsearchrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class UpgradeElasticsearchDomainRequestPrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT UpgradeElasticsearchDomainRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCH_EXPORT UpgradeElasticsearchDomainRequest : public ElasticsearchRequest {
 
 public:
     UpgradeElasticsearchDomainRequest(const UpgradeElasticsearchDomainRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::ImportCertificateResponse
- * \brief The ImportCertificateResponse class provides an interace for DatabaseMigrationService ImportCertificate responses.
+ * \class QtAws::DatabaseMigration::ImportCertificateResponse
+ * \brief The ImportCertificateResponse class provides an interace for DatabaseMigration ImportCertificate responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::importCertificate
+ * \sa DatabaseMigrationClient::importCertificate
  */
 
 /*!
@@ -55,7 +55,7 @@ ImportCertificateResponse::ImportCertificateResponse(
         const ImportCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new ImportCertificateResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new ImportCertificateResponsePrivate(this), parent)
 {
     setRequest(new ImportCertificateRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const ImportCertificateRequest * ImportCertificateResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService ImportCertificate \a response.
+ * Parses a successful DatabaseMigration ImportCertificate \a response.
  */
 void ImportCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void ImportCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::ImportCertificateResponsePrivate
+ * \class QtAws::DatabaseMigration::ImportCertificateResponsePrivate
  * \brief The ImportCertificateResponsePrivate class provides private implementation for ImportCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a ImportCertificateResponsePrivate object with public implementation \a q.
  */
 ImportCertificateResponsePrivate::ImportCertificateResponsePrivate(
-    ImportCertificateResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    ImportCertificateResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService ImportCertificate response element from \a xml.
+ * Parses a DatabaseMigration ImportCertificate response element from \a xml.
  */
 void ImportCertificateResponsePrivate::parseImportCertificateResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void ImportCertificateResponsePrivate::parseImportCertificateResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

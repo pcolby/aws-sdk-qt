@@ -20,16 +20,16 @@
 #include "describereplicationtaskassessmentresultsrequest.h"
 #include "describereplicationtaskassessmentresultsrequest_p.h"
 #include "describereplicationtaskassessmentresultsresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeReplicationTaskAssessmentResultsRequest
- * \brief The DescribeReplicationTaskAssessmentResultsRequest class provides an interface for DatabaseMigrationService DescribeReplicationTaskAssessmentResults requests.
+ * \class QtAws::DatabaseMigration::DescribeReplicationTaskAssessmentResultsRequest
+ * \brief The DescribeReplicationTaskAssessmentResultsRequest class provides an interface for DatabaseMigration DescribeReplicationTaskAssessmentResults requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeReplicationTaskAssessmentResults
+ * \sa DatabaseMigrationClient::describeReplicationTaskAssessmentResults
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeReplicationTaskAssessmentResultsRequest::DescribeReplicationTaskAssessmentResultsRequest(const DescribeReplicationTaskAssessmentResultsRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribeReplicationTaskAssessmentResultsRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribeReplicationTaskAssessmentResultsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeReplicationTaskAssessmentResultsRequest::DescribeReplicationTaskAssessme
  * Constructs a DescribeReplicationTaskAssessmentResultsRequest object.
  */
 DescribeReplicationTaskAssessmentResultsRequest::DescribeReplicationTaskAssessmentResultsRequest()
-    : DatabaseMigrationServiceRequest(new DescribeReplicationTaskAssessmentResultsRequestPrivate(DatabaseMigrationServiceRequest::DescribeReplicationTaskAssessmentResultsAction, this))
+    : DatabaseMigrationRequest(new DescribeReplicationTaskAssessmentResultsRequestPrivate(DatabaseMigrationRequest::DescribeReplicationTaskAssessmentResultsAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationTaskAssessmentResultsReque
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeReplicationTaskAssessmentResultsRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribeReplicationTaskAssessmentResultsRequestPrivate
  * \brief The DescribeReplicationTaskAssessmentResultsRequestPrivate class provides private implementation for DescribeReplicationTaskAssessmentResultsRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribeReplicationTaskAssessmentResultsRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribeReplicationTaskAssessmentResultsRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribeReplicationTaskAssessmentResultsRequestPrivate::DescribeReplicationTaskAssessmentResultsRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribeReplicationTaskAssessmentResultsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribeReplicationTaskAssessmentResultsRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribeReplicationTaskAssessmentResultsRequestPrivate::DescribeReplicationTaskA
  */
 DescribeReplicationTaskAssessmentResultsRequestPrivate::DescribeReplicationTaskAssessmentResultsRequestPrivate(
     const DescribeReplicationTaskAssessmentResultsRequestPrivate &other, DescribeReplicationTaskAssessmentResultsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

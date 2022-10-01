@@ -20,30 +20,30 @@
 #include "getbotaliasesrequest.h"
 #include "getbotaliasesrequest_p.h"
 #include "getbotaliasesresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBotAliasesRequest
- * \brief The GetBotAliasesRequest class provides an interface for LexModelBuildingService GetBotAliases requests.
+ * \class QtAws::LexModelBuilding::GetBotAliasesRequest
+ * \brief The GetBotAliasesRequest class provides an interface for LexModelBuilding GetBotAliases requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getBotAliases
+ * \sa LexModelBuildingClient::getBotAliases
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetBotAliasesRequest::GetBotAliasesRequest(const GetBotAliasesRequest &other)
-    : LexModelBuildingServiceRequest(new GetBotAliasesRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new GetBotAliasesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetBotAliasesRequest::GetBotAliasesRequest(const GetBotAliasesRequest &other)
  * Constructs a GetBotAliasesRequest object.
  */
 GetBotAliasesRequest::GetBotAliasesRequest()
-    : LexModelBuildingServiceRequest(new GetBotAliasesRequestPrivate(LexModelBuildingServiceRequest::GetBotAliasesAction, this))
+    : LexModelBuildingRequest(new GetBotAliasesRequestPrivate(LexModelBuildingRequest::GetBotAliasesAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * GetBotAliasesRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBotAliasesRequestPrivate
+ * \class QtAws::LexModelBuilding::GetBotAliasesRequestPrivate
  * \brief The GetBotAliasesRequestPrivate class provides private implementation for GetBotAliasesRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a GetBotAliasesRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a GetBotAliasesRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 GetBotAliasesRequestPrivate::GetBotAliasesRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, GetBotAliasesRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, GetBotAliasesRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ GetBotAliasesRequestPrivate::GetBotAliasesRequestPrivate(
  */
 GetBotAliasesRequestPrivate::GetBotAliasesRequestPrivate(
     const GetBotAliasesRequestPrivate &other, GetBotAliasesRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

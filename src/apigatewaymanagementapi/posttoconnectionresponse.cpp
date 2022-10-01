@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::PostToConnectionResponse
- * \brief The PostToConnectionResponse class provides an interace for ApiGatewayManagementApi PostToConnection responses.
+ * \class QtAws::ApiGatewayManagement::PostToConnectionResponse
+ * \brief The PostToConnectionResponse class provides an interace for ApiGatewayManagement PostToConnection responses.
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  *
  *  The Amazon API Gateway Management API allows you to directly manage runtime aspects of your deployed APIs. To use it,
  *  you must explicitly set the SDK's endpoint to point to the endpoint of your deployed API. The endpoint will be of the
  *  form https://{api-id}.execute-api.{region}.amazonaws.com/{stage}, or will be the endpoint corresponding to your API's
  *  custom domain and base path, if
  *
- * \sa ApiGatewayManagementApiClient::postToConnection
+ * \sa ApiGatewayManagementClient::postToConnection
  */
 
 /*!
@@ -48,7 +48,7 @@ PostToConnectionResponse::PostToConnectionResponse(
         const PostToConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApiGatewayManagementApiResponse(new PostToConnectionResponsePrivate(this), parent)
+    : ApiGatewayManagementResponse(new PostToConnectionResponsePrivate(this), parent)
 {
     setRequest(new PostToConnectionRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const PostToConnectionRequest * PostToConnectionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApiGatewayManagementApi PostToConnection \a response.
+ * Parses a successful ApiGatewayManagement PostToConnection \a response.
  */
 void PostToConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void PostToConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::PostToConnectionResponsePrivate
+ * \class QtAws::ApiGatewayManagement::PostToConnectionResponsePrivate
  * \brief The PostToConnectionResponsePrivate class provides private implementation for PostToConnectionResponse.
  * \internal
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  */
 
 /*!
  * Constructs a PostToConnectionResponsePrivate object with public implementation \a q.
  */
 PostToConnectionResponsePrivate::PostToConnectionResponsePrivate(
-    PostToConnectionResponse * const q) : ApiGatewayManagementApiResponsePrivate(q)
+    PostToConnectionResponse * const q) : ApiGatewayManagementResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApiGatewayManagementApi PostToConnection response element from \a xml.
+ * Parses a ApiGatewayManagement PostToConnection response element from \a xml.
  */
 void PostToConnectionResponsePrivate::parsePostToConnectionResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void PostToConnectionResponsePrivate::parsePostToConnectionResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws

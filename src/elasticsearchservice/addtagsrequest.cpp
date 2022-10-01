@@ -20,16 +20,16 @@
 #include "addtagsrequest.h"
 #include "addtagsrequest_p.h"
 #include "addtagsresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::AddTagsRequest
- * \brief The AddTagsRequest class provides an interface for ElasticsearchService AddTags requests.
+ * \class QtAws::Elasticsearch::AddTagsRequest
+ * \brief The AddTagsRequest class provides an interface for Elasticsearch AddTags requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::addTags
+ * \sa ElasticsearchClient::addTags
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 AddTagsRequest::AddTagsRequest(const AddTagsRequest &other)
-    : ElasticsearchServiceRequest(new AddTagsRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new AddTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ AddTagsRequest::AddTagsRequest(const AddTagsRequest &other)
  * Constructs a AddTagsRequest object.
  */
 AddTagsRequest::AddTagsRequest()
-    : ElasticsearchServiceRequest(new AddTagsRequestPrivate(ElasticsearchServiceRequest::AddTagsAction, this))
+    : ElasticsearchRequest(new AddTagsRequestPrivate(ElasticsearchRequest::AddTagsAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
 }
 
 /*!
- * \class QtAws::ElasticsearchService::AddTagsRequestPrivate
+ * \class QtAws::Elasticsearch::AddTagsRequestPrivate
  * \brief The AddTagsRequestPrivate class provides private implementation for AddTagsRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a AddTagsRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a AddTagsRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, AddTagsRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, AddTagsRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ AddTagsRequestPrivate::AddTagsRequestPrivate(
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
     const AddTagsRequestPrivate &other, AddTagsRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

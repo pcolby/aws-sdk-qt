@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::ListDomainsForPackageResponse
- * \brief The ListDomainsForPackageResponse class provides an interace for ElasticsearchService ListDomainsForPackage responses.
+ * \class QtAws::Elasticsearch::ListDomainsForPackageResponse
+ * \brief The ListDomainsForPackageResponse class provides an interace for Elasticsearch ListDomainsForPackage responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::listDomainsForPackage
+ * \sa ElasticsearchClient::listDomainsForPackage
  */
 
 /*!
@@ -61,7 +61,7 @@ ListDomainsForPackageResponse::ListDomainsForPackageResponse(
         const ListDomainsForPackageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new ListDomainsForPackageResponsePrivate(this), parent)
+    : ElasticsearchResponse(new ListDomainsForPackageResponsePrivate(this), parent)
 {
     setRequest(new ListDomainsForPackageRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const ListDomainsForPackageRequest * ListDomainsForPackageResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService ListDomainsForPackage \a response.
+ * Parses a successful Elasticsearch ListDomainsForPackage \a response.
  */
 void ListDomainsForPackageResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void ListDomainsForPackageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::ListDomainsForPackageResponsePrivate
+ * \class QtAws::Elasticsearch::ListDomainsForPackageResponsePrivate
  * \brief The ListDomainsForPackageResponsePrivate class provides private implementation for ListDomainsForPackageResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a ListDomainsForPackageResponsePrivate object with public implementation \a q.
  */
 ListDomainsForPackageResponsePrivate::ListDomainsForPackageResponsePrivate(
-    ListDomainsForPackageResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    ListDomainsForPackageResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService ListDomainsForPackage response element from \a xml.
+ * Parses a Elasticsearch ListDomainsForPackage response element from \a xml.
  */
 void ListDomainsForPackageResponsePrivate::parseListDomainsForPackageResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void ListDomainsForPackageResponsePrivate::parseListDomainsForPackageResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

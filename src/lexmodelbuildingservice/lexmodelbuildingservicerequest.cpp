@@ -17,74 +17,74 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "lexmodelbuildingservicerequest.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::LexModelBuildingServiceRequest
- * \brief The LexModelBuildingServiceRequest class provides an interface for LexModelBuildingService requests.
+ * \class QtAws::LexModelBuilding::LexModelBuildingRequest
+ * \brief The LexModelBuildingRequest class provides an interface for LexModelBuilding requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * \enum LexModelBuildingServiceRequest::Action
+ * \enum LexModelBuildingRequest::Action
  *
- * This enum describes the actions that can be performed as LexModelBuildingService
+ * This enum describes the actions that can be performed as LexModelBuilding
  * requests.
  *
- * \value CreateBotVersionAction LexModelBuildingService CreateBotVersion action.
- * \value CreateIntentVersionAction LexModelBuildingService CreateIntentVersion action.
- * \value CreateSlotTypeVersionAction LexModelBuildingService CreateSlotTypeVersion action.
- * \value DeleteBotAction LexModelBuildingService DeleteBot action.
- * \value DeleteBotAliasAction LexModelBuildingService DeleteBotAlias action.
- * \value DeleteBotChannelAssociationAction LexModelBuildingService DeleteBotChannelAssociation action.
- * \value DeleteBotVersionAction LexModelBuildingService DeleteBotVersion action.
- * \value DeleteIntentAction LexModelBuildingService DeleteIntent action.
- * \value DeleteIntentVersionAction LexModelBuildingService DeleteIntentVersion action.
- * \value DeleteSlotTypeAction LexModelBuildingService DeleteSlotType action.
- * \value DeleteSlotTypeVersionAction LexModelBuildingService DeleteSlotTypeVersion action.
- * \value DeleteUtterancesAction LexModelBuildingService DeleteUtterances action.
- * \value GetBotAction LexModelBuildingService GetBot action.
- * \value GetBotAliasAction LexModelBuildingService GetBotAlias action.
- * \value GetBotAliasesAction LexModelBuildingService GetBotAliases action.
- * \value GetBotChannelAssociationAction LexModelBuildingService GetBotChannelAssociation action.
- * \value GetBotChannelAssociationsAction LexModelBuildingService GetBotChannelAssociations action.
- * \value GetBotVersionsAction LexModelBuildingService GetBotVersions action.
- * \value GetBotsAction LexModelBuildingService GetBots action.
- * \value GetBuiltinIntentAction LexModelBuildingService GetBuiltinIntent action.
- * \value GetBuiltinIntentsAction LexModelBuildingService GetBuiltinIntents action.
- * \value GetBuiltinSlotTypesAction LexModelBuildingService GetBuiltinSlotTypes action.
- * \value GetExportAction LexModelBuildingService GetExport action.
- * \value GetImportAction LexModelBuildingService GetImport action.
- * \value GetIntentAction LexModelBuildingService GetIntent action.
- * \value GetIntentVersionsAction LexModelBuildingService GetIntentVersions action.
- * \value GetIntentsAction LexModelBuildingService GetIntents action.
- * \value GetMigrationAction LexModelBuildingService GetMigration action.
- * \value GetMigrationsAction LexModelBuildingService GetMigrations action.
- * \value GetSlotTypeAction LexModelBuildingService GetSlotType action.
- * \value GetSlotTypeVersionsAction LexModelBuildingService GetSlotTypeVersions action.
- * \value GetSlotTypesAction LexModelBuildingService GetSlotTypes action.
- * \value GetUtterancesViewAction LexModelBuildingService GetUtterancesView action.
- * \value ListTagsForResourceAction LexModelBuildingService ListTagsForResource action.
- * \value PutBotAction LexModelBuildingService PutBot action.
- * \value PutBotAliasAction LexModelBuildingService PutBotAlias action.
- * \value PutIntentAction LexModelBuildingService PutIntent action.
- * \value PutSlotTypeAction LexModelBuildingService PutSlotType action.
- * \value StartImportAction LexModelBuildingService StartImport action.
- * \value StartMigrationAction LexModelBuildingService StartMigration action.
- * \value TagResourceAction LexModelBuildingService TagResource action.
- * \value UntagResourceAction LexModelBuildingService UntagResource action.
+ * \value CreateBotVersionAction LexModelBuilding CreateBotVersion action.
+ * \value CreateIntentVersionAction LexModelBuilding CreateIntentVersion action.
+ * \value CreateSlotTypeVersionAction LexModelBuilding CreateSlotTypeVersion action.
+ * \value DeleteBotAction LexModelBuilding DeleteBot action.
+ * \value DeleteBotAliasAction LexModelBuilding DeleteBotAlias action.
+ * \value DeleteBotChannelAssociationAction LexModelBuilding DeleteBotChannelAssociation action.
+ * \value DeleteBotVersionAction LexModelBuilding DeleteBotVersion action.
+ * \value DeleteIntentAction LexModelBuilding DeleteIntent action.
+ * \value DeleteIntentVersionAction LexModelBuilding DeleteIntentVersion action.
+ * \value DeleteSlotTypeAction LexModelBuilding DeleteSlotType action.
+ * \value DeleteSlotTypeVersionAction LexModelBuilding DeleteSlotTypeVersion action.
+ * \value DeleteUtterancesAction LexModelBuilding DeleteUtterances action.
+ * \value GetBotAction LexModelBuilding GetBot action.
+ * \value GetBotAliasAction LexModelBuilding GetBotAlias action.
+ * \value GetBotAliasesAction LexModelBuilding GetBotAliases action.
+ * \value GetBotChannelAssociationAction LexModelBuilding GetBotChannelAssociation action.
+ * \value GetBotChannelAssociationsAction LexModelBuilding GetBotChannelAssociations action.
+ * \value GetBotVersionsAction LexModelBuilding GetBotVersions action.
+ * \value GetBotsAction LexModelBuilding GetBots action.
+ * \value GetBuiltinIntentAction LexModelBuilding GetBuiltinIntent action.
+ * \value GetBuiltinIntentsAction LexModelBuilding GetBuiltinIntents action.
+ * \value GetBuiltinSlotTypesAction LexModelBuilding GetBuiltinSlotTypes action.
+ * \value GetExportAction LexModelBuilding GetExport action.
+ * \value GetImportAction LexModelBuilding GetImport action.
+ * \value GetIntentAction LexModelBuilding GetIntent action.
+ * \value GetIntentVersionsAction LexModelBuilding GetIntentVersions action.
+ * \value GetIntentsAction LexModelBuilding GetIntents action.
+ * \value GetMigrationAction LexModelBuilding GetMigration action.
+ * \value GetMigrationsAction LexModelBuilding GetMigrations action.
+ * \value GetSlotTypeAction LexModelBuilding GetSlotType action.
+ * \value GetSlotTypeVersionsAction LexModelBuilding GetSlotTypeVersions action.
+ * \value GetSlotTypesAction LexModelBuilding GetSlotTypes action.
+ * \value GetUtterancesViewAction LexModelBuilding GetUtterancesView action.
+ * \value ListTagsForResourceAction LexModelBuilding ListTagsForResource action.
+ * \value PutBotAction LexModelBuilding PutBot action.
+ * \value PutBotAliasAction LexModelBuilding PutBotAlias action.
+ * \value PutIntentAction LexModelBuilding PutIntent action.
+ * \value PutSlotTypeAction LexModelBuilding PutSlotType action.
+ * \value StartImportAction LexModelBuilding StartImport action.
+ * \value StartMigrationAction LexModelBuilding StartMigration action.
+ * \value TagResourceAction LexModelBuilding TagResource action.
+ * \value UntagResourceAction LexModelBuilding UntagResource action.
  */
 
 /*!
- * Constructs a LexModelBuildingServiceRequest object for LexModelBuildingService \a action.
+ * Constructs a LexModelBuildingRequest object for LexModelBuilding \a action.
  */
-LexModelBuildingServiceRequest::LexModelBuildingServiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new LexModelBuildingServiceRequestPrivate(action, this))
+LexModelBuildingRequest::LexModelBuildingRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new LexModelBuildingRequestPrivate(action, this))
 {
 
 }
@@ -92,18 +92,18 @@ LexModelBuildingServiceRequest::LexModelBuildingServiceRequest(const Action acti
 /*!
  * Constructs a copy of \a other.
  */
-LexModelBuildingServiceRequest::LexModelBuildingServiceRequest(const LexModelBuildingServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new LexModelBuildingServiceRequestPrivate(*other.d_func(), this))
+LexModelBuildingRequest::LexModelBuildingRequest(const LexModelBuildingRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new LexModelBuildingRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the LexModelBuildingServiceRequest object to be equal to \a other.
+ * Sets the LexModelBuildingRequest object to be equal to \a other.
  */
-LexModelBuildingServiceRequest& LexModelBuildingServiceRequest::operator=(const LexModelBuildingServiceRequest &other)
+LexModelBuildingRequest& LexModelBuildingRequest::operator=(const LexModelBuildingRequest &other)
 {
-    Q_D(LexModelBuildingServiceRequest);
+    Q_D(LexModelBuildingRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -111,57 +111,57 @@ LexModelBuildingServiceRequest& LexModelBuildingServiceRequest::operator=(const 
 }
 
 /*!
- * Constructs aa LexModelBuildingServiceRequest object with private implementation \a d.
+ * Constructs aa LexModelBuildingRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from LexModelBuildingServiceRequestPrivate.
+ * implementation that inherits from LexModelBuildingRequestPrivate.
  */
-LexModelBuildingServiceRequest::LexModelBuildingServiceRequest(LexModelBuildingServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+LexModelBuildingRequest::LexModelBuildingRequest(LexModelBuildingRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the LexModelBuildingService action to be performed by this request.
+ * Returns the LexModelBuilding action to be performed by this request.
  */
-LexModelBuildingServiceRequest::Action LexModelBuildingServiceRequest::action() const
+LexModelBuildingRequest::Action LexModelBuildingRequest::action() const
 {
-    Q_D(const LexModelBuildingServiceRequest);
+    Q_D(const LexModelBuildingRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the LexModelBuildingService action to be performed by this request.
+ * Returns the name of the LexModelBuilding action to be performed by this request.
  */
-QString LexModelBuildingServiceRequest::actionString() const
+QString LexModelBuildingRequest::actionString() const
 {
-    return LexModelBuildingServiceRequestPrivate::toString(action());
+    return LexModelBuildingRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the LexModelBuildingService API version implemented by this request.
+ * Returns the LexModelBuilding API version implemented by this request.
  */
-QString LexModelBuildingServiceRequest::apiVersion() const
+QString LexModelBuildingRequest::apiVersion() const
 {
-    Q_D(const LexModelBuildingServiceRequest);
+    Q_D(const LexModelBuildingRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the LexModelBuildingService action to be performed by this request to \a action.
+ * Sets the LexModelBuilding action to be performed by this request to \a action.
  */
-void LexModelBuildingServiceRequest::setAction(const Action action)
+void LexModelBuildingRequest::setAction(const Action action)
 {
-    Q_D(LexModelBuildingServiceRequest);
+    Q_D(LexModelBuildingRequest);
     d->action = action;
 }
 
 /*!
- * Sets the LexModelBuildingService API version to include in this request to \a version.
+ * Sets the LexModelBuilding API version to include in this request to \a version.
  */
-void LexModelBuildingServiceRequest::setApiVersion(const QString &version)
+void LexModelBuildingRequest::setApiVersion(const QString &version)
 {
-    Q_D(LexModelBuildingServiceRequest);
+    Q_D(LexModelBuildingRequest);
     d->apiVersion = version;
 }
 
@@ -173,7 +173,7 @@ void LexModelBuildingServiceRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool LexModelBuildingServiceRequest::operator==(const LexModelBuildingServiceRequest &other) const
+bool LexModelBuildingRequest::operator==(const LexModelBuildingRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -182,19 +182,19 @@ bool LexModelBuildingServiceRequest::operator==(const LexModelBuildingServiceReq
 }
 
 /*
- * Returns \c tue if \a queueName is a valid LexModelBuildingService queue name.
+ * Returns \c tue if \a queueName is a valid LexModelBuilding queue name.
  *
- * @par From LexModelBuildingService FAQs:
+ * @par From LexModelBuilding FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid LexModelBuildingService queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid LexModelBuilding queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool LexModelBuildingServiceRequest::isValidQueueName(const QString &queueName)
+/*bool LexModelBuildingRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -204,45 +204,45 @@ bool LexModelBuildingServiceRequest::operator==(const LexModelBuildingServiceReq
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int LexModelBuildingServiceRequest::clearParameter(const QString &name)
+int LexModelBuildingRequest::clearParameter(const QString &name)
 {
-    Q_D(LexModelBuildingServiceRequest);
+    Q_D(LexModelBuildingRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void LexModelBuildingServiceRequest::clearParameters()
+void LexModelBuildingRequest::clearParameters()
 {
-    Q_D(LexModelBuildingServiceRequest);
+    Q_D(LexModelBuildingRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant LexModelBuildingServiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant LexModelBuildingRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const LexModelBuildingServiceRequest);
+    Q_D(const LexModelBuildingRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &LexModelBuildingServiceRequest::parameters() const
+const QVariantMap &LexModelBuildingRequest::parameters() const
 {
-    Q_D(const LexModelBuildingServiceRequest);
+    Q_D(const LexModelBuildingRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void LexModelBuildingServiceRequest::setParameter(const QString &name, const QVariant &value)
+void LexModelBuildingRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(LexModelBuildingServiceRequest);
+    Q_D(LexModelBuildingRequest);
     d->parameters.insert(name, value);
 }
 
@@ -250,41 +250,41 @@ void LexModelBuildingServiceRequest::setParameter(const QString &name, const QVa
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void LexModelBuildingServiceRequest::setParameters(const QVariantMap &parameters)
+void LexModelBuildingRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(LexModelBuildingServiceRequest);
+    Q_D(LexModelBuildingRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the LexModelBuildingService request using the given
+ * Returns a network request for the LexModelBuilding request using the given
  * \a endpoint.
  *
- * This LexModelBuildingService implementation builds request URLs by combining the
+ * This LexModelBuilding implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest LexModelBuildingServiceRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest LexModelBuildingRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const LexModelBuildingServiceRequest);
+    //Q_D(const LexModelBuildingRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::LexModelBuildingServiceRequestPrivate
- * \brief The LexModelBuildingServiceRequestPrivate class provides private implementation for LexModelBuildingServiceRequest.
+ * \class QtAws::LexModelBuilding::LexModelBuildingRequestPrivate
+ * \brief The LexModelBuildingRequestPrivate class provides private implementation for LexModelBuildingRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a LexModelBuildingServiceRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a LexModelBuildingRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
-LexModelBuildingServiceRequestPrivate::LexModelBuildingServiceRequestPrivate(const LexModelBuildingServiceRequest::Action action, LexModelBuildingServiceRequest * const q)
+LexModelBuildingRequestPrivate::LexModelBuildingRequestPrivate(const LexModelBuildingRequest::Action action, LexModelBuildingRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-04-19"))
 {
 
@@ -296,10 +296,10 @@ LexModelBuildingServiceRequestPrivate::LexModelBuildingServiceRequestPrivate(con
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the LexModelBuildingServiceRequest class's copy constructor.
+ * This is required to support the LexModelBuildingRequest class's copy constructor.
  */
-LexModelBuildingServiceRequestPrivate::LexModelBuildingServiceRequestPrivate(const LexModelBuildingServiceRequestPrivate &other,
-                                     LexModelBuildingServiceRequest * const q)
+LexModelBuildingRequestPrivate::LexModelBuildingRequestPrivate(const LexModelBuildingRequestPrivate &other,
+                                     LexModelBuildingRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -310,14 +310,14 @@ LexModelBuildingServiceRequestPrivate::LexModelBuildingServiceRequestPrivate(con
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts LexModelBuildingServiceRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the LexModelBuildingService service's Action
+ * This function converts LexModelBuildingRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the LexModelBuilding service's Action
  * query parameters.
  */
-QString LexModelBuildingServiceRequestPrivate::toString(const LexModelBuildingServiceRequest::Action &action)
+QString LexModelBuildingRequestPrivate::toString(const LexModelBuildingRequest::Action &action)
 {
     #define ActionToString(action) \
-        case LexModelBuildingServiceRequest::action##Action: return QStringLiteral(#action)
+        case LexModelBuildingRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(CreateBotVersion);
         ActionToString(CreateIntentVersion);
@@ -368,5 +368,5 @@ QString LexModelBuildingServiceRequestPrivate::toString(const LexModelBuildingSe
     return QString();
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

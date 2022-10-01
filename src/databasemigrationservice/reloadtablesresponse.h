@@ -20,15 +20,15 @@
 #ifndef QTAWS_RELOADTABLESRESPONSE_H
 #define QTAWS_RELOADTABLESRESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "reloadtablesrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class ReloadTablesResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT ReloadTablesResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT ReloadTablesResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

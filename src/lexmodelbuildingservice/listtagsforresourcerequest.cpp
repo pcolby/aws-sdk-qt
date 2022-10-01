@@ -20,30 +20,30 @@
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourcerequest_p.h"
 #include "listtagsforresourceresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::ListTagsForResourceRequest
- * \brief The ListTagsForResourceRequest class provides an interface for LexModelBuildingService ListTagsForResource requests.
+ * \class QtAws::LexModelBuilding::ListTagsForResourceRequest
+ * \brief The ListTagsForResourceRequest class provides an interface for LexModelBuilding ListTagsForResource requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::listTagsForResource
+ * \sa LexModelBuildingClient::listTagsForResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
-    : LexModelBuildingServiceRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
  * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
-    : LexModelBuildingServiceRequest(new ListTagsForResourceRequestPrivate(LexModelBuildingServiceRequest::ListTagsForResourceAction, this))
+    : LexModelBuildingRequest(new ListTagsForResourceRequestPrivate(LexModelBuildingRequest::ListTagsForResourceAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::ListTagsForResourceRequestPrivate
+ * \class QtAws::LexModelBuilding::ListTagsForResourceRequestPrivate
  * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a ListTagsForResourceRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a ListTagsForResourceRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, ListTagsForResourceRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, ListTagsForResourceRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

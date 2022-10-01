@@ -20,16 +20,16 @@
 #include "describeagentsrequest.h"
 #include "describeagentsrequest_p.h"
 #include "describeagentsresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeAgentsRequest
- * \brief The DescribeAgentsRequest class provides an interface for ApplicationDiscoveryService DescribeAgents requests.
+ * \class QtAws::ApplicationDiscovery::DescribeAgentsRequest
+ * \brief The DescribeAgentsRequest class provides an interface for ApplicationDiscovery DescribeAgents requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::describeAgents
+ * \sa ApplicationDiscoveryClient::describeAgents
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeAgentsRequest::DescribeAgentsRequest(const DescribeAgentsRequest &other)
-    : ApplicationDiscoveryServiceRequest(new DescribeAgentsRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new DescribeAgentsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ DescribeAgentsRequest::DescribeAgentsRequest(const DescribeAgentsRequest &other)
  * Constructs a DescribeAgentsRequest object.
  */
 DescribeAgentsRequest::DescribeAgentsRequest()
-    : ApplicationDiscoveryServiceRequest(new DescribeAgentsRequestPrivate(ApplicationDiscoveryServiceRequest::DescribeAgentsAction, this))
+    : ApplicationDiscoveryRequest(new DescribeAgentsRequestPrivate(ApplicationDiscoveryRequest::DescribeAgentsAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * DescribeAgentsRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeAgentsRequestPrivate
+ * \class QtAws::ApplicationDiscovery::DescribeAgentsRequestPrivate
  * \brief The DescribeAgentsRequestPrivate class provides private implementation for DescribeAgentsRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a DescribeAgentsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a DescribeAgentsRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 DescribeAgentsRequestPrivate::DescribeAgentsRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, DescribeAgentsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, DescribeAgentsRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ DescribeAgentsRequestPrivate::DescribeAgentsRequestPrivate(
  */
 DescribeAgentsRequestPrivate::DescribeAgentsRequestPrivate(
     const DescribeAgentsRequestPrivate &other, DescribeAgentsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

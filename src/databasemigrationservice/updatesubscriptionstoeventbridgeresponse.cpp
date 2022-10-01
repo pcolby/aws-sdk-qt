@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::UpdateSubscriptionsToEventBridgeResponse
- * \brief The UpdateSubscriptionsToEventBridgeResponse class provides an interace for DatabaseMigrationService UpdateSubscriptionsToEventBridge responses.
+ * \class QtAws::DatabaseMigration::UpdateSubscriptionsToEventBridgeResponse
+ * \brief The UpdateSubscriptionsToEventBridgeResponse class provides an interace for DatabaseMigration UpdateSubscriptionsToEventBridge responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::updateSubscriptionsToEventBridge
+ * \sa DatabaseMigrationClient::updateSubscriptionsToEventBridge
  */
 
 /*!
@@ -55,7 +55,7 @@ UpdateSubscriptionsToEventBridgeResponse::UpdateSubscriptionsToEventBridgeRespon
         const UpdateSubscriptionsToEventBridgeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new UpdateSubscriptionsToEventBridgeResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new UpdateSubscriptionsToEventBridgeResponsePrivate(this), parent)
 {
     setRequest(new UpdateSubscriptionsToEventBridgeRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const UpdateSubscriptionsToEventBridgeRequest * UpdateSubscriptionsToEventBridge
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService UpdateSubscriptionsToEventBridge \a response.
+ * Parses a successful DatabaseMigration UpdateSubscriptionsToEventBridge \a response.
  */
 void UpdateSubscriptionsToEventBridgeResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void UpdateSubscriptionsToEventBridgeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::UpdateSubscriptionsToEventBridgeResponsePrivate
+ * \class QtAws::DatabaseMigration::UpdateSubscriptionsToEventBridgeResponsePrivate
  * \brief The UpdateSubscriptionsToEventBridgeResponsePrivate class provides private implementation for UpdateSubscriptionsToEventBridgeResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a UpdateSubscriptionsToEventBridgeResponsePrivate object with public implementation \a q.
  */
 UpdateSubscriptionsToEventBridgeResponsePrivate::UpdateSubscriptionsToEventBridgeResponsePrivate(
-    UpdateSubscriptionsToEventBridgeResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    UpdateSubscriptionsToEventBridgeResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService UpdateSubscriptionsToEventBridge response element from \a xml.
+ * Parses a DatabaseMigration UpdateSubscriptionsToEventBridge response element from \a xml.
  */
 void UpdateSubscriptionsToEventBridgeResponsePrivate::parseUpdateSubscriptionsToEventBridgeResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void UpdateSubscriptionsToEventBridgeResponsePrivate::parseUpdateSubscriptionsTo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

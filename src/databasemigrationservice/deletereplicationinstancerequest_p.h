@@ -20,18 +20,18 @@
 #ifndef QTAWS_DELETEREPLICATIONINSTANCEREQUEST_P_H
 #define QTAWS_DELETEREPLICATIONINSTANCEREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "deletereplicationinstancerequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DeleteReplicationInstanceRequest;
 
-class DeleteReplicationInstanceRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class DeleteReplicationInstanceRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    DeleteReplicationInstanceRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    DeleteReplicationInstanceRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    DeleteReplicationInstanceRequest * const q);
     DeleteReplicationInstanceRequestPrivate(const DeleteReplicationInstanceRequestPrivate &other,
                                    DeleteReplicationInstanceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

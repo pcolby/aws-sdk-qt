@@ -20,16 +20,16 @@
 #include "exportconfigurationsrequest.h"
 #include "exportconfigurationsrequest_p.h"
 #include "exportconfigurationsresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ExportConfigurationsRequest
- * \brief The ExportConfigurationsRequest class provides an interface for ApplicationDiscoveryService ExportConfigurations requests.
+ * \class QtAws::ApplicationDiscovery::ExportConfigurationsRequest
+ * \brief The ExportConfigurationsRequest class provides an interface for ApplicationDiscovery ExportConfigurations requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::exportConfigurations
+ * \sa ApplicationDiscoveryClient::exportConfigurations
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ExportConfigurationsRequest::ExportConfigurationsRequest(const ExportConfigurationsRequest &other)
-    : ApplicationDiscoveryServiceRequest(new ExportConfigurationsRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new ExportConfigurationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ ExportConfigurationsRequest::ExportConfigurationsRequest(const ExportConfigurati
  * Constructs a ExportConfigurationsRequest object.
  */
 ExportConfigurationsRequest::ExportConfigurationsRequest()
-    : ApplicationDiscoveryServiceRequest(new ExportConfigurationsRequestPrivate(ApplicationDiscoveryServiceRequest::ExportConfigurationsAction, this))
+    : ApplicationDiscoveryRequest(new ExportConfigurationsRequestPrivate(ApplicationDiscoveryRequest::ExportConfigurationsAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * ExportConfigurationsRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ExportConfigurationsRequestPrivate
+ * \class QtAws::ApplicationDiscovery::ExportConfigurationsRequestPrivate
  * \brief The ExportConfigurationsRequestPrivate class provides private implementation for ExportConfigurationsRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a ExportConfigurationsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a ExportConfigurationsRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 ExportConfigurationsRequestPrivate::ExportConfigurationsRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, ExportConfigurationsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, ExportConfigurationsRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ ExportConfigurationsRequestPrivate::ExportConfigurationsRequestPrivate(
  */
 ExportConfigurationsRequestPrivate::ExportConfigurationsRequestPrivate(
     const ExportConfigurationsRequestPrivate &other, ExportConfigurationsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

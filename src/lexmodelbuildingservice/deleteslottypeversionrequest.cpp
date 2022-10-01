@@ -20,30 +20,30 @@
 #include "deleteslottypeversionrequest.h"
 #include "deleteslottypeversionrequest_p.h"
 #include "deleteslottypeversionresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteSlotTypeVersionRequest
- * \brief The DeleteSlotTypeVersionRequest class provides an interface for LexModelBuildingService DeleteSlotTypeVersion requests.
+ * \class QtAws::LexModelBuilding::DeleteSlotTypeVersionRequest
+ * \brief The DeleteSlotTypeVersionRequest class provides an interface for LexModelBuilding DeleteSlotTypeVersion requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::deleteSlotTypeVersion
+ * \sa LexModelBuildingClient::deleteSlotTypeVersion
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteSlotTypeVersionRequest::DeleteSlotTypeVersionRequest(const DeleteSlotTypeVersionRequest &other)
-    : LexModelBuildingServiceRequest(new DeleteSlotTypeVersionRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new DeleteSlotTypeVersionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteSlotTypeVersionRequest::DeleteSlotTypeVersionRequest(const DeleteSlotTypeV
  * Constructs a DeleteSlotTypeVersionRequest object.
  */
 DeleteSlotTypeVersionRequest::DeleteSlotTypeVersionRequest()
-    : LexModelBuildingServiceRequest(new DeleteSlotTypeVersionRequestPrivate(LexModelBuildingServiceRequest::DeleteSlotTypeVersionAction, this))
+    : LexModelBuildingRequest(new DeleteSlotTypeVersionRequestPrivate(LexModelBuildingRequest::DeleteSlotTypeVersionAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * DeleteSlotTypeVersionRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteSlotTypeVersionRequestPrivate
+ * \class QtAws::LexModelBuilding::DeleteSlotTypeVersionRequestPrivate
  * \brief The DeleteSlotTypeVersionRequestPrivate class provides private implementation for DeleteSlotTypeVersionRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a DeleteSlotTypeVersionRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a DeleteSlotTypeVersionRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 DeleteSlotTypeVersionRequestPrivate::DeleteSlotTypeVersionRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, DeleteSlotTypeVersionRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, DeleteSlotTypeVersionRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ DeleteSlotTypeVersionRequestPrivate::DeleteSlotTypeVersionRequestPrivate(
  */
 DeleteSlotTypeVersionRequestPrivate::DeleteSlotTypeVersionRequestPrivate(
     const DeleteSlotTypeVersionRequestPrivate &other, DeleteSlotTypeVersionRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

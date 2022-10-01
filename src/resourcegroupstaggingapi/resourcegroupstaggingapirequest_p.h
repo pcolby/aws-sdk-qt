@@ -17,35 +17,35 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_RESOURCEGROUPSTAGGINGAPIREQUEST_P_H
-#define QTAWS_RESOURCEGROUPSTAGGINGAPIREQUEST_P_H
+#ifndef QTAWS_RESOURCEGROUPSTAGGINGREQUEST_P_H
+#define QTAWS_RESOURCEGROUPSTAGGINGREQUEST_P_H
 
 #include "core/awsabstractrequest_p.h"
-#include "resourcegroupstaggingapirequest.h"
+#include "resourcegroupstaggingrequest.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
-class ResourceGroupsTaggingApiRequest;
+class ResourceGroupsTaggingRequest;
 
-class ResourceGroupsTaggingApiRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ResourceGroupsTaggingRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    ResourceGroupsTaggingApiRequest::Action action; ///< ResourceGroupsTaggingApi action to be performed.
-    QString apiVersion;        ///< ResourceGroupsTaggingApi API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< ResourceGroupsTaggingApi request (query string) parameters. @todo?
+    ResourceGroupsTaggingRequest::Action action; ///< ResourceGroupsTagging action to be performed.
+    QString apiVersion;        ///< ResourceGroupsTagging API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ResourceGroupsTagging request (query string) parameters. @todo?
 
-    ResourceGroupsTaggingApiRequestPrivate(const ResourceGroupsTaggingApiRequest::Action action, ResourceGroupsTaggingApiRequest * const q);
-    ResourceGroupsTaggingApiRequestPrivate(const ResourceGroupsTaggingApiRequestPrivate &other, ResourceGroupsTaggingApiRequest * const q);
+    ResourceGroupsTaggingRequestPrivate(const ResourceGroupsTaggingRequest::Action action, ResourceGroupsTaggingRequest * const q);
+    ResourceGroupsTaggingRequestPrivate(const ResourceGroupsTaggingRequestPrivate &other, ResourceGroupsTaggingRequest * const q);
 
-    static QString toString(const ResourceGroupsTaggingApiRequest::Action &action);
+    static QString toString(const ResourceGroupsTaggingRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(ResourceGroupsTaggingApiRequest)
+    Q_DECLARE_PUBLIC(ResourceGroupsTaggingRequest)
 
 };
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws
 
 #endif

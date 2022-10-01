@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::CancelReplicationTaskAssessmentRunResponse
- * \brief The CancelReplicationTaskAssessmentRunResponse class provides an interace for DatabaseMigrationService CancelReplicationTaskAssessmentRun responses.
+ * \class QtAws::DatabaseMigration::CancelReplicationTaskAssessmentRunResponse
+ * \brief The CancelReplicationTaskAssessmentRunResponse class provides an interace for DatabaseMigration CancelReplicationTaskAssessmentRun responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::cancelReplicationTaskAssessmentRun
+ * \sa DatabaseMigrationClient::cancelReplicationTaskAssessmentRun
  */
 
 /*!
@@ -55,7 +55,7 @@ CancelReplicationTaskAssessmentRunResponse::CancelReplicationTaskAssessmentRunRe
         const CancelReplicationTaskAssessmentRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new CancelReplicationTaskAssessmentRunResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new CancelReplicationTaskAssessmentRunResponsePrivate(this), parent)
 {
     setRequest(new CancelReplicationTaskAssessmentRunRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const CancelReplicationTaskAssessmentRunRequest * CancelReplicationTaskAssessmen
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService CancelReplicationTaskAssessmentRun \a response.
+ * Parses a successful DatabaseMigration CancelReplicationTaskAssessmentRun \a response.
  */
 void CancelReplicationTaskAssessmentRunResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void CancelReplicationTaskAssessmentRunResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::CancelReplicationTaskAssessmentRunResponsePrivate
+ * \class QtAws::DatabaseMigration::CancelReplicationTaskAssessmentRunResponsePrivate
  * \brief The CancelReplicationTaskAssessmentRunResponsePrivate class provides private implementation for CancelReplicationTaskAssessmentRunResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a CancelReplicationTaskAssessmentRunResponsePrivate object with public implementation \a q.
  */
 CancelReplicationTaskAssessmentRunResponsePrivate::CancelReplicationTaskAssessmentRunResponsePrivate(
-    CancelReplicationTaskAssessmentRunResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    CancelReplicationTaskAssessmentRunResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService CancelReplicationTaskAssessmentRun response element from \a xml.
+ * Parses a DatabaseMigration CancelReplicationTaskAssessmentRun response element from \a xml.
  */
 void CancelReplicationTaskAssessmentRunResponsePrivate::parseCancelReplicationTaskAssessmentRunResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void CancelReplicationTaskAssessmentRunResponsePrivate::parseCancelReplicationTa
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

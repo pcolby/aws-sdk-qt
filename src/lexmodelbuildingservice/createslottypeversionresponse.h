@@ -20,15 +20,15 @@
 #ifndef QTAWS_CREATESLOTTYPEVERSIONRESPONSE_H
 #define QTAWS_CREATESLOTTYPEVERSIONRESPONSE_H
 
-#include "lexmodelbuildingserviceresponse.h"
+#include "lexmodelbuildingresponse.h"
 #include "createslottypeversionrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class CreateSlotTypeVersionResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT CreateSlotTypeVersionResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDING_EXPORT CreateSlotTypeVersionResponse : public LexModelBuildingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

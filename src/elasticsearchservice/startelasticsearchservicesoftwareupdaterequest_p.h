@@ -20,18 +20,18 @@
 #ifndef QTAWS_STARTELASTICSEARCHSERVICESOFTWAREUPDATEREQUEST_P_H
 #define QTAWS_STARTELASTICSEARCHSERVICESOFTWAREUPDATEREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "startelasticsearchservicesoftwareupdaterequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class StartElasticsearchServiceSoftwareUpdateRequest;
 
-class StartElasticsearchServiceSoftwareUpdateRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class StartElasticsearchServiceSoftwareUpdateRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    StartElasticsearchServiceSoftwareUpdateRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    StartElasticsearchServiceSoftwareUpdateRequestPrivate(const ElasticsearchRequest::Action action,
                                    StartElasticsearchServiceSoftwareUpdateRequest * const q);
     StartElasticsearchServiceSoftwareUpdateRequestPrivate(const StartElasticsearchServiceSoftwareUpdateRequestPrivate &other,
                                    StartElasticsearchServiceSoftwareUpdateRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

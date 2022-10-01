@@ -20,18 +20,18 @@
 #ifndef QTAWS_STOPREPLICATIONTASKREQUEST_P_H
 #define QTAWS_STOPREPLICATIONTASKREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "stopreplicationtaskrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class StopReplicationTaskRequest;
 
-class StopReplicationTaskRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class StopReplicationTaskRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    StopReplicationTaskRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    StopReplicationTaskRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    StopReplicationTaskRequest * const q);
     StopReplicationTaskRequestPrivate(const StopReplicationTaskRequestPrivate &other,
                                    StopReplicationTaskRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

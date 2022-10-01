@@ -20,15 +20,15 @@
 #ifndef QTAWS_APPLYPENDINGMAINTENANCEACTIONRESPONSE_H
 #define QTAWS_APPLYPENDINGMAINTENANCEACTIONRESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "applypendingmaintenanceactionrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class ApplyPendingMaintenanceActionResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT ApplyPendingMaintenanceActionResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT ApplyPendingMaintenanceActionResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

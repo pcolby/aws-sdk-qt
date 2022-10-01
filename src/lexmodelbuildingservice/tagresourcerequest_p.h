@@ -20,18 +20,18 @@
 #ifndef QTAWS_TAGRESOURCEREQUEST_P_H
 #define QTAWS_TAGRESOURCEREQUEST_P_H
 
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class TagResourceRequest;
 
-class TagResourceRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class TagResourceRequestPrivate : public LexModelBuildingRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const LexModelBuildingServiceRequest::Action action,
+    TagResourceRequestPrivate(const LexModelBuildingRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

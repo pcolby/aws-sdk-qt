@@ -20,14 +20,14 @@
 #ifndef QTAWS_LISTTAGSRESPONSE_P_H
 #define QTAWS_LISTTAGSRESPONSE_P_H
 
-#include "elasticsearchserviceresponse_p.h"
+#include "elasticsearchresponse_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class ListTagsResponse;
 
-class ListTagsResponsePrivate : public ElasticsearchServiceResponsePrivate {
+class ListTagsResponsePrivate : public ElasticsearchResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

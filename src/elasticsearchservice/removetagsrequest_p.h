@@ -20,18 +20,18 @@
 #ifndef QTAWS_REMOVETAGSREQUEST_P_H
 #define QTAWS_REMOVETAGSREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "removetagsrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class RemoveTagsRequest;
 
-class RemoveTagsRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class RemoveTagsRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    RemoveTagsRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    RemoveTagsRequestPrivate(const ElasticsearchRequest::Action action,
                                    RemoveTagsRequest * const q);
     RemoveTagsRequestPrivate(const RemoveTagsRequestPrivate &other,
                                    RemoveTagsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

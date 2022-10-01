@@ -20,30 +20,30 @@
 #include "getimportrequest.h"
 #include "getimportrequest_p.h"
 #include "getimportresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetImportRequest
- * \brief The GetImportRequest class provides an interface for LexModelBuildingService GetImport requests.
+ * \class QtAws::LexModelBuilding::GetImportRequest
+ * \brief The GetImportRequest class provides an interface for LexModelBuilding GetImport requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getImport
+ * \sa LexModelBuildingClient::getImport
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetImportRequest::GetImportRequest(const GetImportRequest &other)
-    : LexModelBuildingServiceRequest(new GetImportRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new GetImportRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetImportRequest::GetImportRequest(const GetImportRequest &other)
  * Constructs a GetImportRequest object.
  */
 GetImportRequest::GetImportRequest()
-    : LexModelBuildingServiceRequest(new GetImportRequestPrivate(LexModelBuildingServiceRequest::GetImportAction, this))
+    : LexModelBuildingRequest(new GetImportRequestPrivate(LexModelBuildingRequest::GetImportAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * GetImportRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetImportRequestPrivate
+ * \class QtAws::LexModelBuilding::GetImportRequestPrivate
  * \brief The GetImportRequestPrivate class provides private implementation for GetImportRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a GetImportRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a GetImportRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 GetImportRequestPrivate::GetImportRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, GetImportRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, GetImportRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ GetImportRequestPrivate::GetImportRequestPrivate(
  */
 GetImportRequestPrivate::GetImportRequestPrivate(
     const GetImportRequestPrivate &other, GetImportRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

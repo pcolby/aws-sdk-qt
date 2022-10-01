@@ -17,19 +17,19 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_RESOURCEGROUPSTAGGINGAPICLIENT_H
-#define QTAWS_RESOURCEGROUPSTAGGINGAPICLIENT_H
+#ifndef QTAWS_RESOURCEGROUPSTAGGINGCLIENT_H
+#define QTAWS_RESOURCEGROUPSTAGGINGCLIENT_H
 
 #include "core/awsabstractclient.h"
 
-#include "qtawsresourcegroupstaggingapiglobal.h"
+#include "qtawsresourcegroupstaggingglobal.h"
 
 class QNetworkReply;
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
-class ResourceGroupsTaggingApiClientPrivate;
+class ResourceGroupsTaggingClientPrivate;
 class DescribeReportCreationRequest;
 class DescribeReportCreationResponse;
 class GetComplianceSummaryRequest;
@@ -47,17 +47,17 @@ class TagResourcesResponse;
 class UntagResourcesRequest;
 class UntagResourcesResponse;
 
-class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT ResourceGroupsTaggingApiClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSRESOURCEGROUPSTAGGING_EXPORT ResourceGroupsTaggingClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    ResourceGroupsTaggingApiClient(
+    ResourceGroupsTaggingClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit ResourceGroupsTaggingApiClient(
+    explicit ResourceGroupsTaggingClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -73,12 +73,12 @@ public slots:
     UntagResourcesResponse * untagResources(const UntagResourcesRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(ResourceGroupsTaggingApiClient)
-    Q_DISABLE_COPY(ResourceGroupsTaggingApiClient)
+    Q_DECLARE_PRIVATE(ResourceGroupsTaggingClient)
+    Q_DISABLE_COPY(ResourceGroupsTaggingClient)
 
 };
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws
 
 #endif

@@ -20,15 +20,15 @@
 #ifndef QTAWS_PUTSLOTTYPERESPONSE_H
 #define QTAWS_PUTSLOTTYPERESPONSE_H
 
-#include "lexmodelbuildingserviceresponse.h"
+#include "lexmodelbuildingresponse.h"
 #include "putslottyperequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class PutSlotTypeResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT PutSlotTypeResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDING_EXPORT PutSlotTypeResponse : public LexModelBuildingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

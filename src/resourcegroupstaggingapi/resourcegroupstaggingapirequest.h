@@ -17,12 +17,12 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_RESOURCEGROUPSTAGGINGAPIREQUEST_H
-#define QTAWS_RESOURCEGROUPSTAGGINGAPIREQUEST_H
+#ifndef QTAWS_RESOURCEGROUPSTAGGINGREQUEST_H
+#define QTAWS_RESOURCEGROUPSTAGGINGREQUEST_H
 
 #include "core/awsabstractrequest.h"
 
-#include "qtawsresourcegroupstaggingapiglobal.h"
+#include "qtawsresourcegroupstaggingglobal.h"
 
 #include <QFlags>
 #include <QObject>
@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
-class ResourceGroupsTaggingApiRequestPrivate;
+class ResourceGroupsTaggingRequestPrivate;
 
-class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT ResourceGroupsTaggingApiRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSRESOURCEGROUPSTAGGING_EXPORT ResourceGroupsTaggingRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by ResourceGroupsTaggingApi.
+    /// Actions supported by ResourceGroupsTagging.
     enum Action {
         DescribeReportCreationAction,
         GetComplianceSummaryAction,
@@ -50,9 +50,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    ResourceGroupsTaggingApiRequest(const Action action);
-    ResourceGroupsTaggingApiRequest(const ResourceGroupsTaggingApiRequest &other);
-    ResourceGroupsTaggingApiRequest &operator=(const ResourceGroupsTaggingApiRequest &other);
+    ResourceGroupsTaggingRequest(const Action action);
+    ResourceGroupsTaggingRequest(const ResourceGroupsTaggingRequest &other);
+    ResourceGroupsTaggingRequest &operator=(const ResourceGroupsTaggingRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -61,12 +61,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const ResourceGroupsTaggingApiRequest &other) const;
+    virtual bool operator==(const ResourceGroupsTaggingRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit ResourceGroupsTaggingApiRequest(ResourceGroupsTaggingApiRequestPrivate * const d);
+    explicit ResourceGroupsTaggingRequest(ResourceGroupsTaggingRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -79,11 +79,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(ResourceGroupsTaggingApiRequest)
+    Q_DECLARE_PRIVATE(ResourceGroupsTaggingRequest)
 
 };
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws
 
 #endif

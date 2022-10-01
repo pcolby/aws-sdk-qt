@@ -20,16 +20,16 @@
 #include "describedomainchangeprogressrequest.h"
 #include "describedomainchangeprogressrequest_p.h"
 #include "describedomainchangeprogressresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeDomainChangeProgressRequest
- * \brief The DescribeDomainChangeProgressRequest class provides an interface for ElasticsearchService DescribeDomainChangeProgress requests.
+ * \class QtAws::Elasticsearch::DescribeDomainChangeProgressRequest
+ * \brief The DescribeDomainChangeProgressRequest class provides an interface for Elasticsearch DescribeDomainChangeProgress requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describeDomainChangeProgress
+ * \sa ElasticsearchClient::describeDomainChangeProgress
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeDomainChangeProgressRequest::DescribeDomainChangeProgressRequest(const DescribeDomainChangeProgressRequest &other)
-    : ElasticsearchServiceRequest(new DescribeDomainChangeProgressRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new DescribeDomainChangeProgressRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DescribeDomainChangeProgressRequest::DescribeDomainChangeProgressRequest(const D
  * Constructs a DescribeDomainChangeProgressRequest object.
  */
 DescribeDomainChangeProgressRequest::DescribeDomainChangeProgressRequest()
-    : ElasticsearchServiceRequest(new DescribeDomainChangeProgressRequestPrivate(ElasticsearchServiceRequest::DescribeDomainChangeProgressAction, this))
+    : ElasticsearchRequest(new DescribeDomainChangeProgressRequestPrivate(ElasticsearchRequest::DescribeDomainChangeProgressAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainChangeProgressRequest::response
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeDomainChangeProgressRequestPrivate
+ * \class QtAws::Elasticsearch::DescribeDomainChangeProgressRequestPrivate
  * \brief The DescribeDomainChangeProgressRequestPrivate class provides private implementation for DescribeDomainChangeProgressRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a DescribeDomainChangeProgressRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a DescribeDomainChangeProgressRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 DescribeDomainChangeProgressRequestPrivate::DescribeDomainChangeProgressRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, DescribeDomainChangeProgressRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, DescribeDomainChangeProgressRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DescribeDomainChangeProgressRequestPrivate::DescribeDomainChangeProgressRequestP
  */
 DescribeDomainChangeProgressRequestPrivate::DescribeDomainChangeProgressRequestPrivate(
     const DescribeDomainChangeProgressRequestPrivate &other, DescribeDomainChangeProgressRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

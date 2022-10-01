@@ -20,16 +20,16 @@
 #include "createeventsubscriptionrequest.h"
 #include "createeventsubscriptionrequest_p.h"
 #include "createeventsubscriptionresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateEventSubscriptionRequest
- * \brief The CreateEventSubscriptionRequest class provides an interface for DatabaseMigrationService CreateEventSubscription requests.
+ * \class QtAws::DatabaseMigration::CreateEventSubscriptionRequest
+ * \brief The CreateEventSubscriptionRequest class provides an interface for DatabaseMigration CreateEventSubscription requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::createEventSubscription
+ * \sa DatabaseMigrationClient::createEventSubscription
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateEventSubscriptionRequest::CreateEventSubscriptionRequest(const CreateEventSubscriptionRequest &other)
-    : DatabaseMigrationServiceRequest(new CreateEventSubscriptionRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new CreateEventSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ CreateEventSubscriptionRequest::CreateEventSubscriptionRequest(const CreateEvent
  * Constructs a CreateEventSubscriptionRequest object.
  */
 CreateEventSubscriptionRequest::CreateEventSubscriptionRequest()
-    : DatabaseMigrationServiceRequest(new CreateEventSubscriptionRequestPrivate(DatabaseMigrationServiceRequest::CreateEventSubscriptionAction, this))
+    : DatabaseMigrationRequest(new CreateEventSubscriptionRequestPrivate(DatabaseMigrationRequest::CreateEventSubscriptionAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * CreateEventSubscriptionRequest::response(QNet
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateEventSubscriptionRequestPrivate
+ * \class QtAws::DatabaseMigration::CreateEventSubscriptionRequestPrivate
  * \brief The CreateEventSubscriptionRequestPrivate class provides private implementation for CreateEventSubscriptionRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a CreateEventSubscriptionRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a CreateEventSubscriptionRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, CreateEventSubscriptionRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, CreateEventSubscriptionRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
  */
 CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
     const CreateEventSubscriptionRequestPrivate &other, CreateEventSubscriptionRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

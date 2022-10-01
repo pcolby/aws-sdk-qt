@@ -20,18 +20,18 @@
 #ifndef QTAWS_GETSLOTTYPEREQUEST_P_H
 #define QTAWS_GETSLOTTYPEREQUEST_P_H
 
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 #include "getslottyperequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class GetSlotTypeRequest;
 
-class GetSlotTypeRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class GetSlotTypeRequestPrivate : public LexModelBuildingRequestPrivate {
 
 public:
-    GetSlotTypeRequestPrivate(const LexModelBuildingServiceRequest::Action action,
+    GetSlotTypeRequestPrivate(const LexModelBuildingRequest::Action action,
                                    GetSlotTypeRequest * const q);
     GetSlotTypeRequestPrivate(const GetSlotTypeRequestPrivate &other,
                                    GetSlotTypeRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

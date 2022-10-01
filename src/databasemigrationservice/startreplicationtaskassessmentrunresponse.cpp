@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::StartReplicationTaskAssessmentRunResponse
- * \brief The StartReplicationTaskAssessmentRunResponse class provides an interace for DatabaseMigrationService StartReplicationTaskAssessmentRun responses.
+ * \class QtAws::DatabaseMigration::StartReplicationTaskAssessmentRunResponse
+ * \brief The StartReplicationTaskAssessmentRunResponse class provides an interace for DatabaseMigration StartReplicationTaskAssessmentRun responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::startReplicationTaskAssessmentRun
+ * \sa DatabaseMigrationClient::startReplicationTaskAssessmentRun
  */
 
 /*!
@@ -55,7 +55,7 @@ StartReplicationTaskAssessmentRunResponse::StartReplicationTaskAssessmentRunResp
         const StartReplicationTaskAssessmentRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new StartReplicationTaskAssessmentRunResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new StartReplicationTaskAssessmentRunResponsePrivate(this), parent)
 {
     setRequest(new StartReplicationTaskAssessmentRunRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const StartReplicationTaskAssessmentRunRequest * StartReplicationTaskAssessmentR
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService StartReplicationTaskAssessmentRun \a response.
+ * Parses a successful DatabaseMigration StartReplicationTaskAssessmentRun \a response.
  */
 void StartReplicationTaskAssessmentRunResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void StartReplicationTaskAssessmentRunResponse::parseSuccess(QIODevice &response
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::StartReplicationTaskAssessmentRunResponsePrivate
+ * \class QtAws::DatabaseMigration::StartReplicationTaskAssessmentRunResponsePrivate
  * \brief The StartReplicationTaskAssessmentRunResponsePrivate class provides private implementation for StartReplicationTaskAssessmentRunResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a StartReplicationTaskAssessmentRunResponsePrivate object with public implementation \a q.
  */
 StartReplicationTaskAssessmentRunResponsePrivate::StartReplicationTaskAssessmentRunResponsePrivate(
-    StartReplicationTaskAssessmentRunResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    StartReplicationTaskAssessmentRunResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService StartReplicationTaskAssessmentRun response element from \a xml.
+ * Parses a DatabaseMigration StartReplicationTaskAssessmentRun response element from \a xml.
  */
 void StartReplicationTaskAssessmentRunResponsePrivate::parseStartReplicationTaskAssessmentRunResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void StartReplicationTaskAssessmentRunResponsePrivate::parseStartReplicationTask
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

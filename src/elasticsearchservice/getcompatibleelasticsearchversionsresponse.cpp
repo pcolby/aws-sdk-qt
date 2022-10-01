@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::GetCompatibleElasticsearchVersionsResponse
- * \brief The GetCompatibleElasticsearchVersionsResponse class provides an interace for ElasticsearchService GetCompatibleElasticsearchVersions responses.
+ * \class QtAws::Elasticsearch::GetCompatibleElasticsearchVersionsResponse
+ * \brief The GetCompatibleElasticsearchVersionsResponse class provides an interace for Elasticsearch GetCompatibleElasticsearchVersions responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::getCompatibleElasticsearchVersions
+ * \sa ElasticsearchClient::getCompatibleElasticsearchVersions
  */
 
 /*!
@@ -61,7 +61,7 @@ GetCompatibleElasticsearchVersionsResponse::GetCompatibleElasticsearchVersionsRe
         const GetCompatibleElasticsearchVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new GetCompatibleElasticsearchVersionsResponsePrivate(this), parent)
+    : ElasticsearchResponse(new GetCompatibleElasticsearchVersionsResponsePrivate(this), parent)
 {
     setRequest(new GetCompatibleElasticsearchVersionsRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const GetCompatibleElasticsearchVersionsRequest * GetCompatibleElasticsearchVers
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService GetCompatibleElasticsearchVersions \a response.
+ * Parses a successful Elasticsearch GetCompatibleElasticsearchVersions \a response.
  */
 void GetCompatibleElasticsearchVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void GetCompatibleElasticsearchVersionsResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
- * \class QtAws::ElasticsearchService::GetCompatibleElasticsearchVersionsResponsePrivate
+ * \class QtAws::Elasticsearch::GetCompatibleElasticsearchVersionsResponsePrivate
  * \brief The GetCompatibleElasticsearchVersionsResponsePrivate class provides private implementation for GetCompatibleElasticsearchVersionsResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a GetCompatibleElasticsearchVersionsResponsePrivate object with public implementation \a q.
  */
 GetCompatibleElasticsearchVersionsResponsePrivate::GetCompatibleElasticsearchVersionsResponsePrivate(
-    GetCompatibleElasticsearchVersionsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    GetCompatibleElasticsearchVersionsResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService GetCompatibleElasticsearchVersions response element from \a xml.
+ * Parses a Elasticsearch GetCompatibleElasticsearchVersions response element from \a xml.
  */
 void GetCompatibleElasticsearchVersionsResponsePrivate::parseGetCompatibleElasticsearchVersionsResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void GetCompatibleElasticsearchVersionsResponsePrivate::parseGetCompatibleElasti
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

@@ -20,18 +20,18 @@
 #ifndef QTAWS_STARTREPORTCREATIONREQUEST_P_H
 #define QTAWS_STARTREPORTCREATIONREQUEST_P_H
 
-#include "resourcegroupstaggingapirequest_p.h"
+#include "resourcegroupstaggingrequest_p.h"
 #include "startreportcreationrequest.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 class StartReportCreationRequest;
 
-class StartReportCreationRequestPrivate : public ResourceGroupsTaggingApiRequestPrivate {
+class StartReportCreationRequestPrivate : public ResourceGroupsTaggingRequestPrivate {
 
 public:
-    StartReportCreationRequestPrivate(const ResourceGroupsTaggingApiRequest::Action action,
+    StartReportCreationRequestPrivate(const ResourceGroupsTaggingRequest::Action action,
                                    StartReportCreationRequest * const q);
     StartReportCreationRequestPrivate(const StartReportCreationRequestPrivate &other,
                                    StartReportCreationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws
 
 #endif

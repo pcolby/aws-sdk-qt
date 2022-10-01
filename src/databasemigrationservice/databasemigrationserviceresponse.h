@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_DATABASEMIGRATIONSERVICERESPONSE_H
-#define QTAWS_DATABASEMIGRATIONSERVICERESPONSE_H
+#ifndef QTAWS_DATABASEMIGRATIONRESPONSE_H
+#define QTAWS_DATABASEMIGRATIONRESPONSE_H
 
 #include "core/awsabstractresponse.h"
 
-#include "qtawsdatabasemigrationserviceglobal.h"
+#include "qtawsdatabasemigrationglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
-class DatabaseMigrationServiceResponsePrivate;
+class DatabaseMigrationResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DatabaseMigrationServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDATABASEMIGRATION_EXPORT DatabaseMigrationResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    DatabaseMigrationServiceResponse(QObject * const parent = 0);
+    DatabaseMigrationResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    DatabaseMigrationServiceResponse(DatabaseMigrationServiceResponsePrivate * const d, QObject * const parent);
+    DatabaseMigrationResponse(DatabaseMigrationResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(DatabaseMigrationServiceResponse)
-    Q_DISABLE_COPY(DatabaseMigrationServiceResponse)
+    Q_DECLARE_PRIVATE(DatabaseMigrationResponse)
+    Q_DISABLE_COPY(DatabaseMigrationResponse)
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

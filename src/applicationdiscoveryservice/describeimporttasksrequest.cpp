@@ -20,16 +20,16 @@
 #include "describeimporttasksrequest.h"
 #include "describeimporttasksrequest_p.h"
 #include "describeimporttasksresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeImportTasksRequest
- * \brief The DescribeImportTasksRequest class provides an interface for ApplicationDiscoveryService DescribeImportTasks requests.
+ * \class QtAws::ApplicationDiscovery::DescribeImportTasksRequest
+ * \brief The DescribeImportTasksRequest class provides an interface for ApplicationDiscovery DescribeImportTasks requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::describeImportTasks
+ * \sa ApplicationDiscoveryClient::describeImportTasks
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeImportTasksRequest::DescribeImportTasksRequest(const DescribeImportTasksRequest &other)
-    : ApplicationDiscoveryServiceRequest(new DescribeImportTasksRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new DescribeImportTasksRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ DescribeImportTasksRequest::DescribeImportTasksRequest(const DescribeImportTasks
  * Constructs a DescribeImportTasksRequest object.
  */
 DescribeImportTasksRequest::DescribeImportTasksRequest()
-    : ApplicationDiscoveryServiceRequest(new DescribeImportTasksRequestPrivate(ApplicationDiscoveryServiceRequest::DescribeImportTasksAction, this))
+    : ApplicationDiscoveryRequest(new DescribeImportTasksRequestPrivate(ApplicationDiscoveryRequest::DescribeImportTasksAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * DescribeImportTasksRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeImportTasksRequestPrivate
+ * \class QtAws::ApplicationDiscovery::DescribeImportTasksRequestPrivate
  * \brief The DescribeImportTasksRequestPrivate class provides private implementation for DescribeImportTasksRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a DescribeImportTasksRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a DescribeImportTasksRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 DescribeImportTasksRequestPrivate::DescribeImportTasksRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, DescribeImportTasksRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, DescribeImportTasksRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ DescribeImportTasksRequestPrivate::DescribeImportTasksRequestPrivate(
  */
 DescribeImportTasksRequestPrivate::DescribeImportTasksRequestPrivate(
     const DescribeImportTasksRequestPrivate &other, DescribeImportTasksRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

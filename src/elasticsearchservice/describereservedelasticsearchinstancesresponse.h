@@ -20,15 +20,15 @@
 #ifndef QTAWS_DESCRIBERESERVEDELASTICSEARCHINSTANCESRESPONSE_H
 #define QTAWS_DESCRIBERESERVEDELASTICSEARCHINSTANCESRESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "describereservedelasticsearchinstancesrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class DescribeReservedElasticsearchInstancesResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT DescribeReservedElasticsearchInstancesResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT DescribeReservedElasticsearchInstancesResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

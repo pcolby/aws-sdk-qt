@@ -20,14 +20,14 @@
 #ifndef QTAWS_DESCRIBESCHEMASREQUEST_H
 #define QTAWS_DESCRIBESCHEMASREQUEST_H
 
-#include "databasemigrationservicerequest.h"
+#include "databasemigrationrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DescribeSchemasRequestPrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribeSchemasRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATION_EXPORT DescribeSchemasRequest : public DatabaseMigrationRequest {
 
 public:
     DescribeSchemasRequest(const DescribeSchemasRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

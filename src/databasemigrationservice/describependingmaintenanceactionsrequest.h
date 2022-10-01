@@ -20,14 +20,14 @@
 #ifndef QTAWS_DESCRIBEPENDINGMAINTENANCEACTIONSREQUEST_H
 #define QTAWS_DESCRIBEPENDINGMAINTENANCEACTIONSREQUEST_H
 
-#include "databasemigrationservicerequest.h"
+#include "databasemigrationrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DescribePendingMaintenanceActionsRequestPrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribePendingMaintenanceActionsRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATION_EXPORT DescribePendingMaintenanceActionsRequest : public DatabaseMigrationRequest {
 
 public:
     DescribePendingMaintenanceActionsRequest(const DescribePendingMaintenanceActionsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

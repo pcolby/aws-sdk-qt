@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetSlotTypeVersionsResponse
- * \brief The GetSlotTypeVersionsResponse class provides an interace for LexModelBuildingService GetSlotTypeVersions responses.
+ * \class QtAws::LexModelBuilding::GetSlotTypeVersionsResponse
+ * \brief The GetSlotTypeVersionsResponse class provides an interace for LexModelBuilding GetSlotTypeVersions responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getSlotTypeVersions
+ * \sa LexModelBuildingClient::getSlotTypeVersions
  */
 
 /*!
@@ -48,7 +48,7 @@ GetSlotTypeVersionsResponse::GetSlotTypeVersionsResponse(
         const GetSlotTypeVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetSlotTypeVersionsResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new GetSlotTypeVersionsResponsePrivate(this), parent)
 {
     setRequest(new GetSlotTypeVersionsRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const GetSlotTypeVersionsRequest * GetSlotTypeVersionsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService GetSlotTypeVersions \a response.
+ * Parses a successful LexModelBuilding GetSlotTypeVersions \a response.
  */
 void GetSlotTypeVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void GetSlotTypeVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetSlotTypeVersionsResponsePrivate
+ * \class QtAws::LexModelBuilding::GetSlotTypeVersionsResponsePrivate
  * \brief The GetSlotTypeVersionsResponsePrivate class provides private implementation for GetSlotTypeVersionsResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a GetSlotTypeVersionsResponsePrivate object with public implementation \a q.
  */
 GetSlotTypeVersionsResponsePrivate::GetSlotTypeVersionsResponsePrivate(
-    GetSlotTypeVersionsResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    GetSlotTypeVersionsResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService GetSlotTypeVersions response element from \a xml.
+ * Parses a LexModelBuilding GetSlotTypeVersions response element from \a xml.
  */
 void GetSlotTypeVersionsResponsePrivate::parseGetSlotTypeVersionsResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void GetSlotTypeVersionsResponsePrivate::parseGetSlotTypeVersionsResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

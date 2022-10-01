@@ -20,14 +20,14 @@
 #ifndef QTAWS_DESCRIBEAGENTSRESPONSE_P_H
 #define QTAWS_DESCRIBEAGENTSRESPONSE_P_H
 
-#include "applicationdiscoveryserviceresponse_p.h"
+#include "applicationdiscoveryresponse_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class DescribeAgentsResponse;
 
-class DescribeAgentsResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+class DescribeAgentsResponsePrivate : public ApplicationDiscoveryResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

@@ -20,16 +20,16 @@
 #include "deletereplicationtaskrequest.h"
 #include "deletereplicationtaskrequest_p.h"
 #include "deletereplicationtaskresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteReplicationTaskRequest
- * \brief The DeleteReplicationTaskRequest class provides an interface for DatabaseMigrationService DeleteReplicationTask requests.
+ * \class QtAws::DatabaseMigration::DeleteReplicationTaskRequest
+ * \brief The DeleteReplicationTaskRequest class provides an interface for DatabaseMigration DeleteReplicationTask requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteReplicationTask
+ * \sa DatabaseMigrationClient::deleteReplicationTask
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteReplicationTaskRequest::DeleteReplicationTaskRequest(const DeleteReplicationTaskRequest &other)
-    : DatabaseMigrationServiceRequest(new DeleteReplicationTaskRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DeleteReplicationTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteReplicationTaskRequest::DeleteReplicationTaskRequest(const DeleteReplicati
  * Constructs a DeleteReplicationTaskRequest object.
  */
 DeleteReplicationTaskRequest::DeleteReplicationTaskRequest()
-    : DatabaseMigrationServiceRequest(new DeleteReplicationTaskRequestPrivate(DatabaseMigrationServiceRequest::DeleteReplicationTaskAction, this))
+    : DatabaseMigrationRequest(new DeleteReplicationTaskRequestPrivate(DatabaseMigrationRequest::DeleteReplicationTaskAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationTaskRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteReplicationTaskRequestPrivate
+ * \class QtAws::DatabaseMigration::DeleteReplicationTaskRequestPrivate
  * \brief The DeleteReplicationTaskRequestPrivate class provides private implementation for DeleteReplicationTaskRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DeleteReplicationTaskRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DeleteReplicationTaskRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DeleteReplicationTaskRequestPrivate::DeleteReplicationTaskRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DeleteReplicationTaskRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DeleteReplicationTaskRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DeleteReplicationTaskRequestPrivate::DeleteReplicationTaskRequestPrivate(
  */
 DeleteReplicationTaskRequestPrivate::DeleteReplicationTaskRequestPrivate(
     const DeleteReplicationTaskRequestPrivate &other, DeleteReplicationTaskRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

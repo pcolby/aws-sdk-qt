@@ -17,37 +17,37 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "lexruntimeservicerequest.h"
-#include "lexruntimeservicerequest_p.h"
+#include "lexruntimerequest.h"
+#include "lexruntimerequest_p.h"
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 /*!
- * \class QtAws::LexRuntimeService::LexRuntimeServiceRequest
- * \brief The LexRuntimeServiceRequest class provides an interface for LexRuntimeService requests.
+ * \class QtAws::LexRuntime::LexRuntimeRequest
+ * \brief The LexRuntimeRequest class provides an interface for LexRuntime requests.
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  */
 
 /*!
- * \enum LexRuntimeServiceRequest::Action
+ * \enum LexRuntimeRequest::Action
  *
- * This enum describes the actions that can be performed as LexRuntimeService
+ * This enum describes the actions that can be performed as LexRuntime
  * requests.
  *
- * \value DeleteSessionAction LexRuntimeService DeleteSession action.
- * \value GetSessionAction LexRuntimeService GetSession action.
- * \value PostContentAction LexRuntimeService PostContent action.
- * \value PostTextAction LexRuntimeService PostText action.
- * \value PutSessionAction LexRuntimeService PutSession action.
+ * \value DeleteSessionAction LexRuntime DeleteSession action.
+ * \value GetSessionAction LexRuntime GetSession action.
+ * \value PostContentAction LexRuntime PostContent action.
+ * \value PostTextAction LexRuntime PostText action.
+ * \value PutSessionAction LexRuntime PutSession action.
  */
 
 /*!
- * Constructs a LexRuntimeServiceRequest object for LexRuntimeService \a action.
+ * Constructs a LexRuntimeRequest object for LexRuntime \a action.
  */
-LexRuntimeServiceRequest::LexRuntimeServiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new LexRuntimeServiceRequestPrivate(action, this))
+LexRuntimeRequest::LexRuntimeRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new LexRuntimeRequestPrivate(action, this))
 {
 
 }
@@ -55,18 +55,18 @@ LexRuntimeServiceRequest::LexRuntimeServiceRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-LexRuntimeServiceRequest::LexRuntimeServiceRequest(const LexRuntimeServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new LexRuntimeServiceRequestPrivate(*other.d_func(), this))
+LexRuntimeRequest::LexRuntimeRequest(const LexRuntimeRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new LexRuntimeRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the LexRuntimeServiceRequest object to be equal to \a other.
+ * Sets the LexRuntimeRequest object to be equal to \a other.
  */
-LexRuntimeServiceRequest& LexRuntimeServiceRequest::operator=(const LexRuntimeServiceRequest &other)
+LexRuntimeRequest& LexRuntimeRequest::operator=(const LexRuntimeRequest &other)
 {
-    Q_D(LexRuntimeServiceRequest);
+    Q_D(LexRuntimeRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -74,57 +74,57 @@ LexRuntimeServiceRequest& LexRuntimeServiceRequest::operator=(const LexRuntimeSe
 }
 
 /*!
- * Constructs aa LexRuntimeServiceRequest object with private implementation \a d.
+ * Constructs aa LexRuntimeRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from LexRuntimeServiceRequestPrivate.
+ * implementation that inherits from LexRuntimeRequestPrivate.
  */
-LexRuntimeServiceRequest::LexRuntimeServiceRequest(LexRuntimeServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+LexRuntimeRequest::LexRuntimeRequest(LexRuntimeRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the LexRuntimeService action to be performed by this request.
+ * Returns the LexRuntime action to be performed by this request.
  */
-LexRuntimeServiceRequest::Action LexRuntimeServiceRequest::action() const
+LexRuntimeRequest::Action LexRuntimeRequest::action() const
 {
-    Q_D(const LexRuntimeServiceRequest);
+    Q_D(const LexRuntimeRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the LexRuntimeService action to be performed by this request.
+ * Returns the name of the LexRuntime action to be performed by this request.
  */
-QString LexRuntimeServiceRequest::actionString() const
+QString LexRuntimeRequest::actionString() const
 {
-    return LexRuntimeServiceRequestPrivate::toString(action());
+    return LexRuntimeRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the LexRuntimeService API version implemented by this request.
+ * Returns the LexRuntime API version implemented by this request.
  */
-QString LexRuntimeServiceRequest::apiVersion() const
+QString LexRuntimeRequest::apiVersion() const
 {
-    Q_D(const LexRuntimeServiceRequest);
+    Q_D(const LexRuntimeRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the LexRuntimeService action to be performed by this request to \a action.
+ * Sets the LexRuntime action to be performed by this request to \a action.
  */
-void LexRuntimeServiceRequest::setAction(const Action action)
+void LexRuntimeRequest::setAction(const Action action)
 {
-    Q_D(LexRuntimeServiceRequest);
+    Q_D(LexRuntimeRequest);
     d->action = action;
 }
 
 /*!
- * Sets the LexRuntimeService API version to include in this request to \a version.
+ * Sets the LexRuntime API version to include in this request to \a version.
  */
-void LexRuntimeServiceRequest::setApiVersion(const QString &version)
+void LexRuntimeRequest::setApiVersion(const QString &version)
 {
-    Q_D(LexRuntimeServiceRequest);
+    Q_D(LexRuntimeRequest);
     d->apiVersion = version;
 }
 
@@ -136,7 +136,7 @@ void LexRuntimeServiceRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool LexRuntimeServiceRequest::operator==(const LexRuntimeServiceRequest &other) const
+bool LexRuntimeRequest::operator==(const LexRuntimeRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -145,19 +145,19 @@ bool LexRuntimeServiceRequest::operator==(const LexRuntimeServiceRequest &other)
 }
 
 /*
- * Returns \c tue if \a queueName is a valid LexRuntimeService queue name.
+ * Returns \c tue if \a queueName is a valid LexRuntime queue name.
  *
- * @par From LexRuntimeService FAQs:
+ * @par From LexRuntime FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid LexRuntimeService queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid LexRuntime queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool LexRuntimeServiceRequest::isValidQueueName(const QString &queueName)
+/*bool LexRuntimeRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -167,45 +167,45 @@ bool LexRuntimeServiceRequest::operator==(const LexRuntimeServiceRequest &other)
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int LexRuntimeServiceRequest::clearParameter(const QString &name)
+int LexRuntimeRequest::clearParameter(const QString &name)
 {
-    Q_D(LexRuntimeServiceRequest);
+    Q_D(LexRuntimeRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void LexRuntimeServiceRequest::clearParameters()
+void LexRuntimeRequest::clearParameters()
 {
-    Q_D(LexRuntimeServiceRequest);
+    Q_D(LexRuntimeRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant LexRuntimeServiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant LexRuntimeRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const LexRuntimeServiceRequest);
+    Q_D(const LexRuntimeRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &LexRuntimeServiceRequest::parameters() const
+const QVariantMap &LexRuntimeRequest::parameters() const
 {
-    Q_D(const LexRuntimeServiceRequest);
+    Q_D(const LexRuntimeRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void LexRuntimeServiceRequest::setParameter(const QString &name, const QVariant &value)
+void LexRuntimeRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(LexRuntimeServiceRequest);
+    Q_D(LexRuntimeRequest);
     d->parameters.insert(name, value);
 }
 
@@ -213,41 +213,41 @@ void LexRuntimeServiceRequest::setParameter(const QString &name, const QVariant 
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void LexRuntimeServiceRequest::setParameters(const QVariantMap &parameters)
+void LexRuntimeRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(LexRuntimeServiceRequest);
+    Q_D(LexRuntimeRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the LexRuntimeService request using the given
+ * Returns a network request for the LexRuntime request using the given
  * \a endpoint.
  *
- * This LexRuntimeService implementation builds request URLs by combining the
+ * This LexRuntime implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest LexRuntimeServiceRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest LexRuntimeRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const LexRuntimeServiceRequest);
+    //Q_D(const LexRuntimeRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::LexRuntimeService::LexRuntimeServiceRequestPrivate
- * \brief The LexRuntimeServiceRequestPrivate class provides private implementation for LexRuntimeServiceRequest.
+ * \class QtAws::LexRuntime::LexRuntimeRequestPrivate
+ * \brief The LexRuntimeRequestPrivate class provides private implementation for LexRuntimeRequest.
  * \internal
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  */
 
 /*!
- * Constructs a LexRuntimeServiceRequestPrivate object for LexRuntimeService \a action,
+ * Constructs a LexRuntimeRequestPrivate object for LexRuntime \a action,
  * with public implementation \a q.
  */
-LexRuntimeServiceRequestPrivate::LexRuntimeServiceRequestPrivate(const LexRuntimeServiceRequest::Action action, LexRuntimeServiceRequest * const q)
+LexRuntimeRequestPrivate::LexRuntimeRequestPrivate(const LexRuntimeRequest::Action action, LexRuntimeRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-11-28"))
 {
 
@@ -259,10 +259,10 @@ LexRuntimeServiceRequestPrivate::LexRuntimeServiceRequestPrivate(const LexRuntim
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the LexRuntimeServiceRequest class's copy constructor.
+ * This is required to support the LexRuntimeRequest class's copy constructor.
  */
-LexRuntimeServiceRequestPrivate::LexRuntimeServiceRequestPrivate(const LexRuntimeServiceRequestPrivate &other,
-                                     LexRuntimeServiceRequest * const q)
+LexRuntimeRequestPrivate::LexRuntimeRequestPrivate(const LexRuntimeRequestPrivate &other,
+                                     LexRuntimeRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -273,14 +273,14 @@ LexRuntimeServiceRequestPrivate::LexRuntimeServiceRequestPrivate(const LexRuntim
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts LexRuntimeServiceRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the LexRuntimeService service's Action
+ * This function converts LexRuntimeRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the LexRuntime service's Action
  * query parameters.
  */
-QString LexRuntimeServiceRequestPrivate::toString(const LexRuntimeServiceRequest::Action &action)
+QString LexRuntimeRequestPrivate::toString(const LexRuntimeRequest::Action &action)
 {
     #define ActionToString(action) \
-        case LexRuntimeServiceRequest::action##Action: return QStringLiteral(#action)
+        case LexRuntimeRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(DeleteSession);
         ActionToString(GetSession);
@@ -294,5 +294,5 @@ QString LexRuntimeServiceRequestPrivate::toString(const LexRuntimeServiceRequest
     return QString();
 }
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws

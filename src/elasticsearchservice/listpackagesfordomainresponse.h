@@ -20,15 +20,15 @@
 #ifndef QTAWS_LISTPACKAGESFORDOMAINRESPONSE_H
 #define QTAWS_LISTPACKAGESFORDOMAINRESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "listpackagesfordomainrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class ListPackagesForDomainResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT ListPackagesForDomainResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT ListPackagesForDomainResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

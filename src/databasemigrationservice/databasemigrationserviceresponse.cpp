@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "databasemigrationserviceresponse.h"
-#include "databasemigrationserviceresponse_p.h"
+#include "databasemigrationresponse.h"
+#include "databasemigrationresponse_p.h"
 
 #include <QDebug>
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceResponse
- * \brief The DatabaseMigrationServiceResponse class provides an interface for DatabaseMigrationService responses.
+ * \class QtAws::DatabaseMigration::DatabaseMigrationResponse
+ * \brief The DatabaseMigrationResponse class provides an interface for DatabaseMigration responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DatabaseMigrationServiceResponse object with parent \a parent.
+ * Constructs a DatabaseMigrationResponse object with parent \a parent.
  */
-DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new DatabaseMigrationServiceResponsePrivate(this), parent)
+DatabaseMigrationResponse::DatabaseMigrationResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new DatabaseMigrationResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a DatabaseMigrationServiceResponse object with private implementation \a d,
+ * Constructs a DatabaseMigrationResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from DatabaseMigrationServiceResponsePrivate.
+ * implementation that inherits from DatabaseMigrationResponsePrivate.
  */
-DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(DatabaseMigrationServiceResponsePrivate * const d, QObject * const parent)
+DatabaseMigrationResponse::DatabaseMigrationResponse(DatabaseMigrationResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(DatabaseMigra
 /*!
  * \reimp
  */
-void DatabaseMigrationServiceResponse::parseFailure(QIODevice &response)
+void DatabaseMigrationResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(DatabaseMigrationServiceResponse);
+    //Q_D(DatabaseMigrationResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void DatabaseMigrationServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceResponsePrivate
- * \brief The DatabaseMigrationServiceResponsePrivate class provides private implementation for DatabaseMigrationServiceResponse.
+ * \class QtAws::DatabaseMigration::DatabaseMigrationResponsePrivate
+ * \brief The DatabaseMigrationResponsePrivate class provides private implementation for DatabaseMigrationResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DatabaseMigrationServiceResponsePrivate object with public implementation \a q.
+ * Constructs a DatabaseMigrationResponsePrivate object with public implementation \a q.
  */
-DatabaseMigrationServiceResponsePrivate::DatabaseMigrationServiceResponsePrivate(
-    DatabaseMigrationServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+DatabaseMigrationResponsePrivate::DatabaseMigrationResponsePrivate(
+    DatabaseMigrationResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

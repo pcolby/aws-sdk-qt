@@ -20,14 +20,14 @@
 #ifndef QTAWS_GETUPGRADEHISTORYREQUEST_H
 #define QTAWS_GETUPGRADEHISTORYREQUEST_H
 
-#include "elasticsearchservicerequest.h"
+#include "elasticsearchrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class GetUpgradeHistoryRequestPrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT GetUpgradeHistoryRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCH_EXPORT GetUpgradeHistoryRequest : public ElasticsearchRequest {
 
 public:
     GetUpgradeHistoryRequest(const GetUpgradeHistoryRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

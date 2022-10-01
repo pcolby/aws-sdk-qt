@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBotAliasResponse
- * \brief The GetBotAliasResponse class provides an interace for LexModelBuildingService GetBotAlias responses.
+ * \class QtAws::LexModelBuilding::GetBotAliasResponse
+ * \brief The GetBotAliasResponse class provides an interace for LexModelBuilding GetBotAlias responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getBotAlias
+ * \sa LexModelBuildingClient::getBotAlias
  */
 
 /*!
@@ -48,7 +48,7 @@ GetBotAliasResponse::GetBotAliasResponse(
         const GetBotAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetBotAliasResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new GetBotAliasResponsePrivate(this), parent)
 {
     setRequest(new GetBotAliasRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const GetBotAliasRequest * GetBotAliasResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService GetBotAlias \a response.
+ * Parses a successful LexModelBuilding GetBotAlias \a response.
  */
 void GetBotAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void GetBotAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBotAliasResponsePrivate
+ * \class QtAws::LexModelBuilding::GetBotAliasResponsePrivate
  * \brief The GetBotAliasResponsePrivate class provides private implementation for GetBotAliasResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a GetBotAliasResponsePrivate object with public implementation \a q.
  */
 GetBotAliasResponsePrivate::GetBotAliasResponsePrivate(
-    GetBotAliasResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    GetBotAliasResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService GetBotAlias response element from \a xml.
+ * Parses a LexModelBuilding GetBotAlias response element from \a xml.
  */
 void GetBotAliasResponsePrivate::parseGetBotAliasResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void GetBotAliasResponsePrivate::parseGetBotAliasResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

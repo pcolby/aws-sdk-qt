@@ -20,15 +20,15 @@
 #ifndef QTAWS_GETPACKAGEVERSIONHISTORYRESPONSE_H
 #define QTAWS_GETPACKAGEVERSIONHISTORYRESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "getpackageversionhistoryrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class GetPackageVersionHistoryResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT GetPackageVersionHistoryResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT GetPackageVersionHistoryResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

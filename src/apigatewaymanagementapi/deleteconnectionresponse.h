@@ -20,15 +20,15 @@
 #ifndef QTAWS_DELETECONNECTIONRESPONSE_H
 #define QTAWS_DELETECONNECTIONRESPONSE_H
 
-#include "apigatewaymanagementapiresponse.h"
+#include "apigatewaymanagementresponse.h"
 #include "deleteconnectionrequest.h"
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
 class DeleteConnectionResponsePrivate;
 
-class QTAWSAPIGATEWAYMANAGEMENTAPI_EXPORT DeleteConnectionResponse : public ApiGatewayManagementApiResponse {
+class QTAWSAPIGATEWAYMANAGEMENT_EXPORT DeleteConnectionResponse : public ApiGatewayManagementResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws
 
 #endif

@@ -20,15 +20,15 @@
 #ifndef QTAWS_CREATEREPLICATIONSUBNETGROUPRESPONSE_H
 #define QTAWS_CREATEREPLICATIONSUBNETGROUPRESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "createreplicationsubnetgrouprequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class CreateReplicationSubnetGroupResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT CreateReplicationSubnetGroupResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT CreateReplicationSubnetGroupResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

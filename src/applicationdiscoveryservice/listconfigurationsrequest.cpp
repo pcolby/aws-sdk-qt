@@ -20,16 +20,16 @@
 #include "listconfigurationsrequest.h"
 #include "listconfigurationsrequest_p.h"
 #include "listconfigurationsresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ListConfigurationsRequest
- * \brief The ListConfigurationsRequest class provides an interface for ApplicationDiscoveryService ListConfigurations requests.
+ * \class QtAws::ApplicationDiscovery::ListConfigurationsRequest
+ * \brief The ListConfigurationsRequest class provides an interface for ApplicationDiscovery ListConfigurations requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::listConfigurations
+ * \sa ApplicationDiscoveryClient::listConfigurations
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListConfigurationsRequest::ListConfigurationsRequest(const ListConfigurationsRequest &other)
-    : ApplicationDiscoveryServiceRequest(new ListConfigurationsRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new ListConfigurationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ ListConfigurationsRequest::ListConfigurationsRequest(const ListConfigurationsReq
  * Constructs a ListConfigurationsRequest object.
  */
 ListConfigurationsRequest::ListConfigurationsRequest()
-    : ApplicationDiscoveryServiceRequest(new ListConfigurationsRequestPrivate(ApplicationDiscoveryServiceRequest::ListConfigurationsAction, this))
+    : ApplicationDiscoveryRequest(new ListConfigurationsRequestPrivate(ApplicationDiscoveryRequest::ListConfigurationsAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ListConfigurationsRequestPrivate
+ * \class QtAws::ApplicationDiscovery::ListConfigurationsRequestPrivate
  * \brief The ListConfigurationsRequestPrivate class provides private implementation for ListConfigurationsRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a ListConfigurationsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a ListConfigurationsRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, ListConfigurationsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, ListConfigurationsRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
     const ListConfigurationsRequestPrivate &other, ListConfigurationsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

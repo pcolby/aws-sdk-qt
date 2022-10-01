@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::RunFleetAdvisorLsaAnalysisResponse
- * \brief The RunFleetAdvisorLsaAnalysisResponse class provides an interace for DatabaseMigrationService RunFleetAdvisorLsaAnalysis responses.
+ * \class QtAws::DatabaseMigration::RunFleetAdvisorLsaAnalysisResponse
+ * \brief The RunFleetAdvisorLsaAnalysisResponse class provides an interace for DatabaseMigration RunFleetAdvisorLsaAnalysis responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::runFleetAdvisorLsaAnalysis
+ * \sa DatabaseMigrationClient::runFleetAdvisorLsaAnalysis
  */
 
 /*!
@@ -55,7 +55,7 @@ RunFleetAdvisorLsaAnalysisResponse::RunFleetAdvisorLsaAnalysisResponse(
         const RunFleetAdvisorLsaAnalysisRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new RunFleetAdvisorLsaAnalysisResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new RunFleetAdvisorLsaAnalysisResponsePrivate(this), parent)
 {
     setRequest(new RunFleetAdvisorLsaAnalysisRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const RunFleetAdvisorLsaAnalysisRequest * RunFleetAdvisorLsaAnalysisResponse::re
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService RunFleetAdvisorLsaAnalysis \a response.
+ * Parses a successful DatabaseMigration RunFleetAdvisorLsaAnalysis \a response.
  */
 void RunFleetAdvisorLsaAnalysisResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void RunFleetAdvisorLsaAnalysisResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::RunFleetAdvisorLsaAnalysisResponsePrivate
+ * \class QtAws::DatabaseMigration::RunFleetAdvisorLsaAnalysisResponsePrivate
  * \brief The RunFleetAdvisorLsaAnalysisResponsePrivate class provides private implementation for RunFleetAdvisorLsaAnalysisResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a RunFleetAdvisorLsaAnalysisResponsePrivate object with public implementation \a q.
  */
 RunFleetAdvisorLsaAnalysisResponsePrivate::RunFleetAdvisorLsaAnalysisResponsePrivate(
-    RunFleetAdvisorLsaAnalysisResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    RunFleetAdvisorLsaAnalysisResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService RunFleetAdvisorLsaAnalysis response element from \a xml.
+ * Parses a DatabaseMigration RunFleetAdvisorLsaAnalysis response element from \a xml.
  */
 void RunFleetAdvisorLsaAnalysisResponsePrivate::parseRunFleetAdvisorLsaAnalysisResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void RunFleetAdvisorLsaAnalysisResponsePrivate::parseRunFleetAdvisorLsaAnalysisR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -20,16 +20,16 @@
 #include "deleteelasticsearchservicerolerequest.h"
 #include "deleteelasticsearchservicerolerequest_p.h"
 #include "deleteelasticsearchserviceroleresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DeleteElasticsearchServiceRoleRequest
- * \brief The DeleteElasticsearchServiceRoleRequest class provides an interface for ElasticsearchService DeleteElasticsearchServiceRole requests.
+ * \class QtAws::Elasticsearch::DeleteElasticsearchServiceRoleRequest
+ * \brief The DeleteElasticsearchServiceRoleRequest class provides an interface for Elasticsearch DeleteElasticsearchServiceRole requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::deleteElasticsearchServiceRole
+ * \sa ElasticsearchClient::deleteElasticsearchServiceRole
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteElasticsearchServiceRoleRequest::DeleteElasticsearchServiceRoleRequest(const DeleteElasticsearchServiceRoleRequest &other)
-    : ElasticsearchServiceRequest(new DeleteElasticsearchServiceRoleRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new DeleteElasticsearchServiceRoleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DeleteElasticsearchServiceRoleRequest::DeleteElasticsearchServiceRoleRequest(con
  * Constructs a DeleteElasticsearchServiceRoleRequest object.
  */
 DeleteElasticsearchServiceRoleRequest::DeleteElasticsearchServiceRoleRequest()
-    : ElasticsearchServiceRequest(new DeleteElasticsearchServiceRoleRequestPrivate(ElasticsearchServiceRequest::DeleteElasticsearchServiceRoleAction, this))
+    : ElasticsearchRequest(new DeleteElasticsearchServiceRoleRequestPrivate(ElasticsearchRequest::DeleteElasticsearchServiceRoleAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DeleteElasticsearchServiceRoleRequest::respon
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DeleteElasticsearchServiceRoleRequestPrivate
+ * \class QtAws::Elasticsearch::DeleteElasticsearchServiceRoleRequestPrivate
  * \brief The DeleteElasticsearchServiceRoleRequestPrivate class provides private implementation for DeleteElasticsearchServiceRoleRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a DeleteElasticsearchServiceRoleRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a DeleteElasticsearchServiceRoleRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 DeleteElasticsearchServiceRoleRequestPrivate::DeleteElasticsearchServiceRoleRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, DeleteElasticsearchServiceRoleRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, DeleteElasticsearchServiceRoleRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DeleteElasticsearchServiceRoleRequestPrivate::DeleteElasticsearchServiceRoleRequ
  */
 DeleteElasticsearchServiceRoleRequestPrivate::DeleteElasticsearchServiceRoleRequestPrivate(
     const DeleteElasticsearchServiceRoleRequestPrivate &other, DeleteElasticsearchServiceRoleRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

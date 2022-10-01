@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeExportTasksResponse
- * \brief The DescribeExportTasksResponse class provides an interace for ApplicationDiscoveryService DescribeExportTasks responses.
+ * \class QtAws::ApplicationDiscovery::DescribeExportTasksResponse
+ * \brief The DescribeExportTasksResponse class provides an interace for ApplicationDiscovery DescribeExportTasks responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::describeExportTasks
+ * \sa ApplicationDiscoveryClient::describeExportTasks
  */
 
 /*!
@@ -152,7 +152,7 @@ DescribeExportTasksResponse::DescribeExportTasksResponse(
         const DescribeExportTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new DescribeExportTasksResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new DescribeExportTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeExportTasksRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const DescribeExportTasksRequest * DescribeExportTasksResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService DescribeExportTasks \a response.
+ * Parses a successful ApplicationDiscovery DescribeExportTasks \a response.
  */
 void DescribeExportTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void DescribeExportTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeExportTasksResponsePrivate
+ * \class QtAws::ApplicationDiscovery::DescribeExportTasksResponsePrivate
  * \brief The DescribeExportTasksResponsePrivate class provides private implementation for DescribeExportTasksResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a DescribeExportTasksResponsePrivate object with public implementation \a q.
  */
 DescribeExportTasksResponsePrivate::DescribeExportTasksResponsePrivate(
-    DescribeExportTasksResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    DescribeExportTasksResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService DescribeExportTasks response element from \a xml.
+ * Parses a ApplicationDiscovery DescribeExportTasks response element from \a xml.
  */
 void DescribeExportTasksResponsePrivate::parseDescribeExportTasksResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void DescribeExportTasksResponsePrivate::parseDescribeExportTasksResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

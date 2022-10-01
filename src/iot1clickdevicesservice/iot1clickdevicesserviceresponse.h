@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_IOT1CLICKDEVICESSERVICERESPONSE_H
-#define QTAWS_IOT1CLICKDEVICESSERVICERESPONSE_H
+#ifndef QTAWS_IOT1CLICKDEVICESRESPONSE_H
+#define QTAWS_IOT1CLICKDEVICESRESPONSE_H
 
 #include "core/awsabstractresponse.h"
 
-#include "qtawsiot1clickdevicesserviceglobal.h"
+#include "qtawsiot1clickdevicesglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
-class IoT1ClickDevicesServiceResponsePrivate;
+class IoT1ClickDevicesResponsePrivate;
 
-class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT IoT1ClickDevicesServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIOT1CLICKDEVICES_EXPORT IoT1ClickDevicesResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    IoT1ClickDevicesServiceResponse(QObject * const parent = 0);
+    IoT1ClickDevicesResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    IoT1ClickDevicesServiceResponse(IoT1ClickDevicesServiceResponsePrivate * const d, QObject * const parent);
+    IoT1ClickDevicesResponse(IoT1ClickDevicesResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(IoT1ClickDevicesServiceResponse)
-    Q_DISABLE_COPY(IoT1ClickDevicesServiceResponse)
+    Q_DECLARE_PRIVATE(IoT1ClickDevicesResponse)
+    Q_DISABLE_COPY(IoT1ClickDevicesResponse)
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

@@ -20,30 +20,30 @@
 #include "getbotversionsrequest.h"
 #include "getbotversionsrequest_p.h"
 #include "getbotversionsresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBotVersionsRequest
- * \brief The GetBotVersionsRequest class provides an interface for LexModelBuildingService GetBotVersions requests.
+ * \class QtAws::LexModelBuilding::GetBotVersionsRequest
+ * \brief The GetBotVersionsRequest class provides an interface for LexModelBuilding GetBotVersions requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getBotVersions
+ * \sa LexModelBuildingClient::getBotVersions
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetBotVersionsRequest::GetBotVersionsRequest(const GetBotVersionsRequest &other)
-    : LexModelBuildingServiceRequest(new GetBotVersionsRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new GetBotVersionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetBotVersionsRequest::GetBotVersionsRequest(const GetBotVersionsRequest &other)
  * Constructs a GetBotVersionsRequest object.
  */
 GetBotVersionsRequest::GetBotVersionsRequest()
-    : LexModelBuildingServiceRequest(new GetBotVersionsRequestPrivate(LexModelBuildingServiceRequest::GetBotVersionsAction, this))
+    : LexModelBuildingRequest(new GetBotVersionsRequestPrivate(LexModelBuildingRequest::GetBotVersionsAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * GetBotVersionsRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBotVersionsRequestPrivate
+ * \class QtAws::LexModelBuilding::GetBotVersionsRequestPrivate
  * \brief The GetBotVersionsRequestPrivate class provides private implementation for GetBotVersionsRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a GetBotVersionsRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a GetBotVersionsRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 GetBotVersionsRequestPrivate::GetBotVersionsRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, GetBotVersionsRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, GetBotVersionsRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ GetBotVersionsRequestPrivate::GetBotVersionsRequestPrivate(
  */
 GetBotVersionsRequestPrivate::GetBotVersionsRequestPrivate(
     const GetBotVersionsRequestPrivate &other, GetBotVersionsRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

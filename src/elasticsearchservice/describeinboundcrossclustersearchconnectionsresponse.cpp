@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeInboundCrossClusterSearchConnectionsResponse
- * \brief The DescribeInboundCrossClusterSearchConnectionsResponse class provides an interace for ElasticsearchService DescribeInboundCrossClusterSearchConnections responses.
+ * \class QtAws::Elasticsearch::DescribeInboundCrossClusterSearchConnectionsResponse
+ * \brief The DescribeInboundCrossClusterSearchConnectionsResponse class provides an interace for Elasticsearch DescribeInboundCrossClusterSearchConnections responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describeInboundCrossClusterSearchConnections
+ * \sa ElasticsearchClient::describeInboundCrossClusterSearchConnections
  */
 
 /*!
@@ -61,7 +61,7 @@ DescribeInboundCrossClusterSearchConnectionsResponse::DescribeInboundCrossCluste
         const DescribeInboundCrossClusterSearchConnectionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DescribeInboundCrossClusterSearchConnectionsResponsePrivate(this), parent)
+    : ElasticsearchResponse(new DescribeInboundCrossClusterSearchConnectionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeInboundCrossClusterSearchConnectionsRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DescribeInboundCrossClusterSearchConnectionsRequest * DescribeInboundCross
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService DescribeInboundCrossClusterSearchConnections \a response.
+ * Parses a successful Elasticsearch DescribeInboundCrossClusterSearchConnections \a response.
  */
 void DescribeInboundCrossClusterSearchConnectionsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DescribeInboundCrossClusterSearchConnectionsResponse::parseSuccess(QIODevic
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeInboundCrossClusterSearchConnectionsResponsePrivate
+ * \class QtAws::Elasticsearch::DescribeInboundCrossClusterSearchConnectionsResponsePrivate
  * \brief The DescribeInboundCrossClusterSearchConnectionsResponsePrivate class provides private implementation for DescribeInboundCrossClusterSearchConnectionsResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a DescribeInboundCrossClusterSearchConnectionsResponsePrivate object with public implementation \a q.
  */
 DescribeInboundCrossClusterSearchConnectionsResponsePrivate::DescribeInboundCrossClusterSearchConnectionsResponsePrivate(
-    DescribeInboundCrossClusterSearchConnectionsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    DescribeInboundCrossClusterSearchConnectionsResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService DescribeInboundCrossClusterSearchConnections response element from \a xml.
+ * Parses a Elasticsearch DescribeInboundCrossClusterSearchConnections response element from \a xml.
  */
 void DescribeInboundCrossClusterSearchConnectionsResponsePrivate::parseDescribeInboundCrossClusterSearchConnectionsResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DescribeInboundCrossClusterSearchConnectionsResponsePrivate::parseDescribeI
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

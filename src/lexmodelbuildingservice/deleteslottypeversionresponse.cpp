@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteSlotTypeVersionResponse
- * \brief The DeleteSlotTypeVersionResponse class provides an interace for LexModelBuildingService DeleteSlotTypeVersion responses.
+ * \class QtAws::LexModelBuilding::DeleteSlotTypeVersionResponse
+ * \brief The DeleteSlotTypeVersionResponse class provides an interace for LexModelBuilding DeleteSlotTypeVersion responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::deleteSlotTypeVersion
+ * \sa LexModelBuildingClient::deleteSlotTypeVersion
  */
 
 /*!
@@ -48,7 +48,7 @@ DeleteSlotTypeVersionResponse::DeleteSlotTypeVersionResponse(
         const DeleteSlotTypeVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new DeleteSlotTypeVersionResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new DeleteSlotTypeVersionResponsePrivate(this), parent)
 {
     setRequest(new DeleteSlotTypeVersionRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const DeleteSlotTypeVersionRequest * DeleteSlotTypeVersionResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService DeleteSlotTypeVersion \a response.
+ * Parses a successful LexModelBuilding DeleteSlotTypeVersion \a response.
  */
 void DeleteSlotTypeVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void DeleteSlotTypeVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteSlotTypeVersionResponsePrivate
+ * \class QtAws::LexModelBuilding::DeleteSlotTypeVersionResponsePrivate
  * \brief The DeleteSlotTypeVersionResponsePrivate class provides private implementation for DeleteSlotTypeVersionResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a DeleteSlotTypeVersionResponsePrivate object with public implementation \a q.
  */
 DeleteSlotTypeVersionResponsePrivate::DeleteSlotTypeVersionResponsePrivate(
-    DeleteSlotTypeVersionResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    DeleteSlotTypeVersionResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService DeleteSlotTypeVersion response element from \a xml.
+ * Parses a LexModelBuilding DeleteSlotTypeVersion response element from \a xml.
  */
 void DeleteSlotTypeVersionResponsePrivate::parseDeleteSlotTypeVersionResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void DeleteSlotTypeVersionResponsePrivate::parseDeleteSlotTypeVersionResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

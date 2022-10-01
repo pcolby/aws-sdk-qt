@@ -20,18 +20,18 @@
 #ifndef QTAWS_CANCELELASTICSEARCHSERVICESOFTWAREUPDATEREQUEST_P_H
 #define QTAWS_CANCELELASTICSEARCHSERVICESOFTWAREUPDATEREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "cancelelasticsearchservicesoftwareupdaterequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class CancelElasticsearchServiceSoftwareUpdateRequest;
 
-class CancelElasticsearchServiceSoftwareUpdateRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class CancelElasticsearchServiceSoftwareUpdateRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    CancelElasticsearchServiceSoftwareUpdateRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    CancelElasticsearchServiceSoftwareUpdateRequestPrivate(const ElasticsearchRequest::Action action,
                                    CancelElasticsearchServiceSoftwareUpdateRequest * const q);
     CancelElasticsearchServiceSoftwareUpdateRequestPrivate(const CancelElasticsearchServiceSoftwareUpdateRequestPrivate &other,
                                    CancelElasticsearchServiceSoftwareUpdateRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeElasticsearchDomainConfigResponse
- * \brief The DescribeElasticsearchDomainConfigResponse class provides an interace for ElasticsearchService DescribeElasticsearchDomainConfig responses.
+ * \class QtAws::Elasticsearch::DescribeElasticsearchDomainConfigResponse
+ * \brief The DescribeElasticsearchDomainConfigResponse class provides an interace for Elasticsearch DescribeElasticsearchDomainConfig responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describeElasticsearchDomainConfig
+ * \sa ElasticsearchClient::describeElasticsearchDomainConfig
  */
 
 /*!
@@ -61,7 +61,7 @@ DescribeElasticsearchDomainConfigResponse::DescribeElasticsearchDomainConfigResp
         const DescribeElasticsearchDomainConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DescribeElasticsearchDomainConfigResponsePrivate(this), parent)
+    : ElasticsearchResponse(new DescribeElasticsearchDomainConfigResponsePrivate(this), parent)
 {
     setRequest(new DescribeElasticsearchDomainConfigRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DescribeElasticsearchDomainConfigRequest * DescribeElasticsearchDomainConf
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService DescribeElasticsearchDomainConfig \a response.
+ * Parses a successful Elasticsearch DescribeElasticsearchDomainConfig \a response.
  */
 void DescribeElasticsearchDomainConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DescribeElasticsearchDomainConfigResponse::parseSuccess(QIODevice &response
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeElasticsearchDomainConfigResponsePrivate
+ * \class QtAws::Elasticsearch::DescribeElasticsearchDomainConfigResponsePrivate
  * \brief The DescribeElasticsearchDomainConfigResponsePrivate class provides private implementation for DescribeElasticsearchDomainConfigResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a DescribeElasticsearchDomainConfigResponsePrivate object with public implementation \a q.
  */
 DescribeElasticsearchDomainConfigResponsePrivate::DescribeElasticsearchDomainConfigResponsePrivate(
-    DescribeElasticsearchDomainConfigResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    DescribeElasticsearchDomainConfigResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService DescribeElasticsearchDomainConfig response element from \a xml.
+ * Parses a Elasticsearch DescribeElasticsearchDomainConfig response element from \a xml.
  */
 void DescribeElasticsearchDomainConfigResponsePrivate::parseDescribeElasticsearchDomainConfigResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DescribeElasticsearchDomainConfigResponsePrivate::parseDescribeElasticsearc
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

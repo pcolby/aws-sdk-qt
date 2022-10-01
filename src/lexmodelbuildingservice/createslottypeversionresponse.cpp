@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::CreateSlotTypeVersionResponse
- * \brief The CreateSlotTypeVersionResponse class provides an interace for LexModelBuildingService CreateSlotTypeVersion responses.
+ * \class QtAws::LexModelBuilding::CreateSlotTypeVersionResponse
+ * \brief The CreateSlotTypeVersionResponse class provides an interace for LexModelBuilding CreateSlotTypeVersion responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::createSlotTypeVersion
+ * \sa LexModelBuildingClient::createSlotTypeVersion
  */
 
 /*!
@@ -48,7 +48,7 @@ CreateSlotTypeVersionResponse::CreateSlotTypeVersionResponse(
         const CreateSlotTypeVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new CreateSlotTypeVersionResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new CreateSlotTypeVersionResponsePrivate(this), parent)
 {
     setRequest(new CreateSlotTypeVersionRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const CreateSlotTypeVersionRequest * CreateSlotTypeVersionResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService CreateSlotTypeVersion \a response.
+ * Parses a successful LexModelBuilding CreateSlotTypeVersion \a response.
  */
 void CreateSlotTypeVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void CreateSlotTypeVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::CreateSlotTypeVersionResponsePrivate
+ * \class QtAws::LexModelBuilding::CreateSlotTypeVersionResponsePrivate
  * \brief The CreateSlotTypeVersionResponsePrivate class provides private implementation for CreateSlotTypeVersionResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a CreateSlotTypeVersionResponsePrivate object with public implementation \a q.
  */
 CreateSlotTypeVersionResponsePrivate::CreateSlotTypeVersionResponsePrivate(
-    CreateSlotTypeVersionResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    CreateSlotTypeVersionResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService CreateSlotTypeVersion response element from \a xml.
+ * Parses a LexModelBuilding CreateSlotTypeVersion response element from \a xml.
  */
 void CreateSlotTypeVersionResponsePrivate::parseCreateSlotTypeVersionResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void CreateSlotTypeVersionResponsePrivate::parseCreateSlotTypeVersionResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

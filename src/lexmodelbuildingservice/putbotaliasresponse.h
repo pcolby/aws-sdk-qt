@@ -20,15 +20,15 @@
 #ifndef QTAWS_PUTBOTALIASRESPONSE_H
 #define QTAWS_PUTBOTALIASRESPONSE_H
 
-#include "lexmodelbuildingserviceresponse.h"
+#include "lexmodelbuildingresponse.h"
 #include "putbotaliasrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class PutBotAliasResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT PutBotAliasResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDING_EXPORT PutBotAliasResponse : public LexModelBuildingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

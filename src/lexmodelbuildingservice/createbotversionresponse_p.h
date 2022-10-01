@@ -20,14 +20,14 @@
 #ifndef QTAWS_CREATEBOTVERSIONRESPONSE_P_H
 #define QTAWS_CREATEBOTVERSIONRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse_p.h"
+#include "lexmodelbuildingresponse_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class CreateBotVersionResponse;
 
-class CreateBotVersionResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+class CreateBotVersionResponsePrivate : public LexModelBuildingResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

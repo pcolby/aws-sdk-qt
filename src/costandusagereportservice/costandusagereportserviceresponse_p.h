@@ -17,32 +17,32 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_COSTANDUSAGEREPORTSERVICERESPONSE_P_H
-#define QTAWS_COSTANDUSAGEREPORTSERVICERESPONSE_P_H
+#ifndef QTAWS_COSTANDUSAGEREPORTRESPONSE_P_H
+#define QTAWS_COSTANDUSAGEREPORTRESPONSE_P_H
 
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
-class CostandUsageReportServiceResponse;
+class CostandUsageReportResponse;
 
-class CostandUsageReportServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CostandUsageReportResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit CostandUsageReportServiceResponsePrivate(CostandUsageReportServiceResponse * const q);
+    explicit CostandUsageReportResponsePrivate(CostandUsageReportResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(CostandUsageReportServiceResponse)
-    Q_DISABLE_COPY(CostandUsageReportServiceResponsePrivate)
+    Q_DECLARE_PUBLIC(CostandUsageReportResponse)
+    Q_DISABLE_COPY(CostandUsageReportResponsePrivate)
 
 };
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws
 
 #endif

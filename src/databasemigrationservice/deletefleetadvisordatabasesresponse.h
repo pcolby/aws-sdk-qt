@@ -20,15 +20,15 @@
 #ifndef QTAWS_DELETEFLEETADVISORDATABASESRESPONSE_H
 #define QTAWS_DELETEFLEETADVISORDATABASESRESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "deletefleetadvisordatabasesrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DeleteFleetAdvisorDatabasesResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DeleteFleetAdvisorDatabasesResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT DeleteFleetAdvisorDatabasesResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

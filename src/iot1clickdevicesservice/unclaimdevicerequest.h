@@ -20,14 +20,14 @@
 #ifndef QTAWS_UNCLAIMDEVICEREQUEST_H
 #define QTAWS_UNCLAIMDEVICEREQUEST_H
 
-#include "iot1clickdevicesservicerequest.h"
+#include "iot1clickdevicesrequest.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 class UnclaimDeviceRequestPrivate;
 
-class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT UnclaimDeviceRequest : public IoT1ClickDevicesServiceRequest {
+class QTAWSIOT1CLICKDEVICES_EXPORT UnclaimDeviceRequest : public IoT1ClickDevicesRequest {
 
 public:
     UnclaimDeviceRequest(const UnclaimDeviceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

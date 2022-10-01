@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetImportResponse
- * \brief The GetImportResponse class provides an interace for LexModelBuildingService GetImport responses.
+ * \class QtAws::LexModelBuilding::GetImportResponse
+ * \brief The GetImportResponse class provides an interace for LexModelBuilding GetImport responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getImport
+ * \sa LexModelBuildingClient::getImport
  */
 
 /*!
@@ -48,7 +48,7 @@ GetImportResponse::GetImportResponse(
         const GetImportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetImportResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new GetImportResponsePrivate(this), parent)
 {
     setRequest(new GetImportRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const GetImportRequest * GetImportResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService GetImport \a response.
+ * Parses a successful LexModelBuilding GetImport \a response.
  */
 void GetImportResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void GetImportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetImportResponsePrivate
+ * \class QtAws::LexModelBuilding::GetImportResponsePrivate
  * \brief The GetImportResponsePrivate class provides private implementation for GetImportResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a GetImportResponsePrivate object with public implementation \a q.
  */
 GetImportResponsePrivate::GetImportResponsePrivate(
-    GetImportResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    GetImportResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService GetImport response element from \a xml.
+ * Parses a LexModelBuilding GetImport response element from \a xml.
  */
 void GetImportResponsePrivate::parseGetImportResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void GetImportResponsePrivate::parseGetImportResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

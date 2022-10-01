@@ -20,16 +20,16 @@
 #include "listdomainnamesrequest.h"
 #include "listdomainnamesrequest_p.h"
 #include "listdomainnamesresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::ListDomainNamesRequest
- * \brief The ListDomainNamesRequest class provides an interface for ElasticsearchService ListDomainNames requests.
+ * \class QtAws::Elasticsearch::ListDomainNamesRequest
+ * \brief The ListDomainNamesRequest class provides an interface for Elasticsearch ListDomainNames requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::listDomainNames
+ * \sa ElasticsearchClient::listDomainNames
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListDomainNamesRequest::ListDomainNamesRequest(const ListDomainNamesRequest &other)
-    : ElasticsearchServiceRequest(new ListDomainNamesRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new ListDomainNamesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ ListDomainNamesRequest::ListDomainNamesRequest(const ListDomainNamesRequest &oth
  * Constructs a ListDomainNamesRequest object.
  */
 ListDomainNamesRequest::ListDomainNamesRequest()
-    : ElasticsearchServiceRequest(new ListDomainNamesRequestPrivate(ElasticsearchServiceRequest::ListDomainNamesAction, this))
+    : ElasticsearchRequest(new ListDomainNamesRequestPrivate(ElasticsearchRequest::ListDomainNamesAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * ListDomainNamesRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::ElasticsearchService::ListDomainNamesRequestPrivate
+ * \class QtAws::Elasticsearch::ListDomainNamesRequestPrivate
  * \brief The ListDomainNamesRequestPrivate class provides private implementation for ListDomainNamesRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a ListDomainNamesRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a ListDomainNamesRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 ListDomainNamesRequestPrivate::ListDomainNamesRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, ListDomainNamesRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, ListDomainNamesRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ ListDomainNamesRequestPrivate::ListDomainNamesRequestPrivate(
  */
 ListDomainNamesRequestPrivate::ListDomainNamesRequestPrivate(
     const ListDomainNamesRequestPrivate &other, ListDomainNamesRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

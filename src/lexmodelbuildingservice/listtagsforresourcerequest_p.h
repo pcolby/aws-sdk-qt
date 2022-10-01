@@ -20,18 +20,18 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class ListTagsForResourceRequest;
 
-class ListTagsForResourceRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class ListTagsForResourceRequestPrivate : public LexModelBuildingRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const LexModelBuildingServiceRequest::Action action,
+    ListTagsForResourceRequestPrivate(const LexModelBuildingRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

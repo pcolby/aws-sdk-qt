@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeAccountAttributesResponse
- * \brief The DescribeAccountAttributesResponse class provides an interace for DatabaseMigrationService DescribeAccountAttributes responses.
+ * \class QtAws::DatabaseMigration::DescribeAccountAttributesResponse
+ * \brief The DescribeAccountAttributesResponse class provides an interace for DatabaseMigration DescribeAccountAttributes responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeAccountAttributes
+ * \sa DatabaseMigrationClient::describeAccountAttributes
  */
 
 /*!
@@ -55,7 +55,7 @@ DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
         const DescribeAccountAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeAccountAttributesResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DescribeAccountAttributesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAccountAttributesRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::requ
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DescribeAccountAttributes \a response.
+ * Parses a successful DatabaseMigration DescribeAccountAttributes \a response.
  */
 void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeAccountAttributesResponsePrivate
+ * \class QtAws::DatabaseMigration::DescribeAccountAttributesResponsePrivate
  * \brief The DescribeAccountAttributesResponsePrivate class provides private implementation for DescribeAccountAttributesResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DescribeAccountAttributesResponsePrivate object with public implementation \a q.
  */
 DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePrivate(
-    DescribeAccountAttributesResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DescribeAccountAttributesResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DescribeAccountAttributes response element from \a xml.
+ * Parses a DatabaseMigration DescribeAccountAttributes response element from \a xml.
  */
 void DescribeAccountAttributesResponsePrivate::parseDescribeAccountAttributesResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribeAccountAttributesResponsePrivate::parseDescribeAccountAttributesRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

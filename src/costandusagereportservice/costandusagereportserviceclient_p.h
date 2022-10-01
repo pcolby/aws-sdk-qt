@@ -17,30 +17,30 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_COSTANDUSAGEREPORTSERVICECLIENT_P_H
-#define QTAWS_COSTANDUSAGEREPORTSERVICECLIENT_P_H
+#ifndef QTAWS_COSTANDUSAGEREPORTCLIENT_P_H
+#define QTAWS_COSTANDUSAGEREPORTCLIENT_P_H
 
 #include "core/awsabstractclient_p.h"
 
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
-class CostandUsageReportServiceClient;
+class CostandUsageReportClient;
 
-class CostandUsageReportServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CostandUsageReportClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit CostandUsageReportServiceClientPrivate(CostandUsageReportServiceClient * const q);
+    explicit CostandUsageReportClientPrivate(CostandUsageReportClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(CostandUsageReportServiceClient)
-    Q_DISABLE_COPY(CostandUsageReportServiceClientPrivate)
+    Q_DECLARE_PUBLIC(CostandUsageReportClient)
+    Q_DISABLE_COPY(CostandUsageReportClientPrivate)
 
 };
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws
 
 #endif

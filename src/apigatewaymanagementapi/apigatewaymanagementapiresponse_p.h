@@ -17,32 +17,32 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_APIGATEWAYMANAGEMENTAPIRESPONSE_P_H
-#define QTAWS_APIGATEWAYMANAGEMENTAPIRESPONSE_P_H
+#ifndef QTAWS_APIGATEWAYMANAGEMENTRESPONSE_P_H
+#define QTAWS_APIGATEWAYMANAGEMENTRESPONSE_P_H
 
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
-class ApiGatewayManagementApiResponse;
+class ApiGatewayManagementResponse;
 
-class ApiGatewayManagementApiResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ApiGatewayManagementResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit ApiGatewayManagementApiResponsePrivate(ApiGatewayManagementApiResponse * const q);
+    explicit ApiGatewayManagementResponsePrivate(ApiGatewayManagementResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(ApiGatewayManagementApiResponse)
-    Q_DISABLE_COPY(ApiGatewayManagementApiResponsePrivate)
+    Q_DECLARE_PUBLIC(ApiGatewayManagementResponse)
+    Q_DISABLE_COPY(ApiGatewayManagementResponsePrivate)
 
 };
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws
 
 #endif

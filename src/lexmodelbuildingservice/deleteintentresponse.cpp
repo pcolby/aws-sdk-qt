@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteIntentResponse
- * \brief The DeleteIntentResponse class provides an interace for LexModelBuildingService DeleteIntent responses.
+ * \class QtAws::LexModelBuilding::DeleteIntentResponse
+ * \brief The DeleteIntentResponse class provides an interace for LexModelBuilding DeleteIntent responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::deleteIntent
+ * \sa LexModelBuildingClient::deleteIntent
  */
 
 /*!
@@ -48,7 +48,7 @@ DeleteIntentResponse::DeleteIntentResponse(
         const DeleteIntentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new DeleteIntentResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new DeleteIntentResponsePrivate(this), parent)
 {
     setRequest(new DeleteIntentRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const DeleteIntentRequest * DeleteIntentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService DeleteIntent \a response.
+ * Parses a successful LexModelBuilding DeleteIntent \a response.
  */
 void DeleteIntentResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void DeleteIntentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteIntentResponsePrivate
+ * \class QtAws::LexModelBuilding::DeleteIntentResponsePrivate
  * \brief The DeleteIntentResponsePrivate class provides private implementation for DeleteIntentResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a DeleteIntentResponsePrivate object with public implementation \a q.
  */
 DeleteIntentResponsePrivate::DeleteIntentResponsePrivate(
-    DeleteIntentResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    DeleteIntentResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService DeleteIntent response element from \a xml.
+ * Parses a LexModelBuilding DeleteIntent response element from \a xml.
  */
 void DeleteIntentResponsePrivate::parseDeleteIntentResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void DeleteIntentResponsePrivate::parseDeleteIntentResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

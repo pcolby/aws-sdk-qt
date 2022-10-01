@@ -20,14 +20,14 @@
 #ifndef QTAWS_DESCRIBEREPORTDEFINITIONSREQUEST_H
 #define QTAWS_DESCRIBEREPORTDEFINITIONSREQUEST_H
 
-#include "costandusagereportservicerequest.h"
+#include "costandusagereportrequest.h"
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 class DescribeReportDefinitionsRequestPrivate;
 
-class QTAWSCOSTANDUSAGEREPORTSERVICE_EXPORT DescribeReportDefinitionsRequest : public CostandUsageReportServiceRequest {
+class QTAWSCOSTANDUSAGEREPORT_EXPORT DescribeReportDefinitionsRequest : public CostandUsageReportRequest {
 
 public:
     DescribeReportDefinitionsRequest(const DescribeReportDefinitionsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws
 
 #endif

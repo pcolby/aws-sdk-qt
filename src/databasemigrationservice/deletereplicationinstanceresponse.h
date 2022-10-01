@@ -20,15 +20,15 @@
 #ifndef QTAWS_DELETEREPLICATIONINSTANCERESPONSE_H
 #define QTAWS_DELETEREPLICATIONINSTANCERESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "deletereplicationinstancerequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DeleteReplicationInstanceResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DeleteReplicationInstanceResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT DeleteReplicationInstanceResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

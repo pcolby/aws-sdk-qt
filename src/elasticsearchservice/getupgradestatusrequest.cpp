@@ -20,16 +20,16 @@
 #include "getupgradestatusrequest.h"
 #include "getupgradestatusrequest_p.h"
 #include "getupgradestatusresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::GetUpgradeStatusRequest
- * \brief The GetUpgradeStatusRequest class provides an interface for ElasticsearchService GetUpgradeStatus requests.
+ * \class QtAws::Elasticsearch::GetUpgradeStatusRequest
+ * \brief The GetUpgradeStatusRequest class provides an interface for Elasticsearch GetUpgradeStatus requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::getUpgradeStatus
+ * \sa ElasticsearchClient::getUpgradeStatus
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetUpgradeStatusRequest::GetUpgradeStatusRequest(const GetUpgradeStatusRequest &other)
-    : ElasticsearchServiceRequest(new GetUpgradeStatusRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new GetUpgradeStatusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ GetUpgradeStatusRequest::GetUpgradeStatusRequest(const GetUpgradeStatusRequest &
  * Constructs a GetUpgradeStatusRequest object.
  */
 GetUpgradeStatusRequest::GetUpgradeStatusRequest()
-    : ElasticsearchServiceRequest(new GetUpgradeStatusRequestPrivate(ElasticsearchServiceRequest::GetUpgradeStatusAction, this))
+    : ElasticsearchRequest(new GetUpgradeStatusRequestPrivate(ElasticsearchRequest::GetUpgradeStatusAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * GetUpgradeStatusRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::ElasticsearchService::GetUpgradeStatusRequestPrivate
+ * \class QtAws::Elasticsearch::GetUpgradeStatusRequestPrivate
  * \brief The GetUpgradeStatusRequestPrivate class provides private implementation for GetUpgradeStatusRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a GetUpgradeStatusRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a GetUpgradeStatusRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 GetUpgradeStatusRequestPrivate::GetUpgradeStatusRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, GetUpgradeStatusRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, GetUpgradeStatusRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ GetUpgradeStatusRequestPrivate::GetUpgradeStatusRequestPrivate(
  */
 GetUpgradeStatusRequestPrivate::GetUpgradeStatusRequestPrivate(
     const GetUpgradeStatusRequestPrivate &other, GetUpgradeStatusRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

@@ -20,16 +20,16 @@
 #include "createpackagerequest.h"
 #include "createpackagerequest_p.h"
 #include "createpackageresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::CreatePackageRequest
- * \brief The CreatePackageRequest class provides an interface for ElasticsearchService CreatePackage requests.
+ * \class QtAws::Elasticsearch::CreatePackageRequest
+ * \brief The CreatePackageRequest class provides an interface for Elasticsearch CreatePackage requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::createPackage
+ * \sa ElasticsearchClient::createPackage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreatePackageRequest::CreatePackageRequest(const CreatePackageRequest &other)
-    : ElasticsearchServiceRequest(new CreatePackageRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new CreatePackageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ CreatePackageRequest::CreatePackageRequest(const CreatePackageRequest &other)
  * Constructs a CreatePackageRequest object.
  */
 CreatePackageRequest::CreatePackageRequest()
-    : ElasticsearchServiceRequest(new CreatePackageRequestPrivate(ElasticsearchServiceRequest::CreatePackageAction, this))
+    : ElasticsearchRequest(new CreatePackageRequestPrivate(ElasticsearchRequest::CreatePackageAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * CreatePackageRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::ElasticsearchService::CreatePackageRequestPrivate
+ * \class QtAws::Elasticsearch::CreatePackageRequestPrivate
  * \brief The CreatePackageRequestPrivate class provides private implementation for CreatePackageRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a CreatePackageRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a CreatePackageRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 CreatePackageRequestPrivate::CreatePackageRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, CreatePackageRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, CreatePackageRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ CreatePackageRequestPrivate::CreatePackageRequestPrivate(
  */
 CreatePackageRequestPrivate::CreatePackageRequestPrivate(
     const CreatePackageRequestPrivate &other, CreatePackageRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

@@ -20,14 +20,14 @@
 #ifndef QTAWS_DELETEOUTBOUNDCROSSCLUSTERSEARCHCONNECTIONRESPONSE_P_H
 #define QTAWS_DELETEOUTBOUNDCROSSCLUSTERSEARCHCONNECTIONRESPONSE_P_H
 
-#include "elasticsearchserviceresponse_p.h"
+#include "elasticsearchresponse_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class DeleteOutboundCrossClusterSearchConnectionResponse;
 
-class DeleteOutboundCrossClusterSearchConnectionResponsePrivate : public ElasticsearchServiceResponsePrivate {
+class DeleteOutboundCrossClusterSearchConnectionResponsePrivate : public ElasticsearchResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

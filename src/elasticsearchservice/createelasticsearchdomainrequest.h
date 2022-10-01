@@ -20,14 +20,14 @@
 #ifndef QTAWS_CREATEELASTICSEARCHDOMAINREQUEST_H
 #define QTAWS_CREATEELASTICSEARCHDOMAINREQUEST_H
 
-#include "elasticsearchservicerequest.h"
+#include "elasticsearchrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class CreateElasticsearchDomainRequestPrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT CreateElasticsearchDomainRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCH_EXPORT CreateElasticsearchDomainRequest : public ElasticsearchRequest {
 
 public:
     CreateElasticsearchDomainRequest(const CreateElasticsearchDomainRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::AssociatePackageResponse
- * \brief The AssociatePackageResponse class provides an interace for ElasticsearchService AssociatePackage responses.
+ * \class QtAws::Elasticsearch::AssociatePackageResponse
+ * \brief The AssociatePackageResponse class provides an interace for Elasticsearch AssociatePackage responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::associatePackage
+ * \sa ElasticsearchClient::associatePackage
  */
 
 /*!
@@ -61,7 +61,7 @@ AssociatePackageResponse::AssociatePackageResponse(
         const AssociatePackageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new AssociatePackageResponsePrivate(this), parent)
+    : ElasticsearchResponse(new AssociatePackageResponsePrivate(this), parent)
 {
     setRequest(new AssociatePackageRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const AssociatePackageRequest * AssociatePackageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService AssociatePackage \a response.
+ * Parses a successful Elasticsearch AssociatePackage \a response.
  */
 void AssociatePackageResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void AssociatePackageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::AssociatePackageResponsePrivate
+ * \class QtAws::Elasticsearch::AssociatePackageResponsePrivate
  * \brief The AssociatePackageResponsePrivate class provides private implementation for AssociatePackageResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a AssociatePackageResponsePrivate object with public implementation \a q.
  */
 AssociatePackageResponsePrivate::AssociatePackageResponsePrivate(
-    AssociatePackageResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    AssociatePackageResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService AssociatePackage response element from \a xml.
+ * Parses a Elasticsearch AssociatePackage response element from \a xml.
  */
 void AssociatePackageResponsePrivate::parseAssociatePackageResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void AssociatePackageResponsePrivate::parseAssociatePackageResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

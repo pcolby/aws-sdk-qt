@@ -20,14 +20,14 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_P_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_P_H
 
-#include "databasemigrationserviceresponse_p.h"
+#include "databasemigrationresponse_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DescribeAccountAttributesResponse;
 
-class DescribeAccountAttributesResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+class DescribeAccountAttributesResponsePrivate : public DatabaseMigrationResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

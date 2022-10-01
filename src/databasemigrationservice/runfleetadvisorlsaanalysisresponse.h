@@ -20,15 +20,15 @@
 #ifndef QTAWS_RUNFLEETADVISORLSAANALYSISRESPONSE_H
 #define QTAWS_RUNFLEETADVISORLSAANALYSISRESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "runfleetadvisorlsaanalysisrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class RunFleetAdvisorLsaAnalysisResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT RunFleetAdvisorLsaAnalysisResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT RunFleetAdvisorLsaAnalysisResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

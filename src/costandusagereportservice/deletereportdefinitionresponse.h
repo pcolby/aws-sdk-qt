@@ -20,15 +20,15 @@
 #ifndef QTAWS_DELETEREPORTDEFINITIONRESPONSE_H
 #define QTAWS_DELETEREPORTDEFINITIONRESPONSE_H
 
-#include "costandusagereportserviceresponse.h"
+#include "costandusagereportresponse.h"
 #include "deletereportdefinitionrequest.h"
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 class DeleteReportDefinitionResponsePrivate;
 
-class QTAWSCOSTANDUSAGEREPORTSERVICE_EXPORT DeleteReportDefinitionResponse : public CostandUsageReportServiceResponse {
+class QTAWSCOSTANDUSAGEREPORT_EXPORT DeleteReportDefinitionResponse : public CostandUsageReportResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws
 
 #endif

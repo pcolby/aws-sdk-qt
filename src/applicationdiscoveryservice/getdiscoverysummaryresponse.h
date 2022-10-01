@@ -20,15 +20,15 @@
 #ifndef QTAWS_GETDISCOVERYSUMMARYRESPONSE_H
 #define QTAWS_GETDISCOVERYSUMMARYRESPONSE_H
 
-#include "applicationdiscoveryserviceresponse.h"
+#include "applicationdiscoveryresponse.h"
 #include "getdiscoverysummaryrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class GetDiscoverySummaryResponsePrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT GetDiscoverySummaryResponse : public ApplicationDiscoveryServiceResponse {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT GetDiscoverySummaryResponse : public ApplicationDiscoveryResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

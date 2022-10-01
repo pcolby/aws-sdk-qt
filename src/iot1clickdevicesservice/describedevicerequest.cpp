@@ -20,28 +20,28 @@
 #include "describedevicerequest.h"
 #include "describedevicerequest_p.h"
 #include "describedeviceresponse.h"
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::DescribeDeviceRequest
- * \brief The DescribeDeviceRequest class provides an interface for IoT1ClickDevicesService DescribeDevice requests.
+ * \class QtAws::IoT1ClickDevices::DescribeDeviceRequest
+ * \brief The DescribeDeviceRequest class provides an interface for IoT1ClickDevices DescribeDevice requests.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::describeDevice
+ * \sa IoT1ClickDevicesClient::describeDevice
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeDeviceRequest::DescribeDeviceRequest(const DescribeDeviceRequest &other)
-    : IoT1ClickDevicesServiceRequest(new DescribeDeviceRequestPrivate(*other.d_func(), this))
+    : IoT1ClickDevicesRequest(new DescribeDeviceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ DescribeDeviceRequest::DescribeDeviceRequest(const DescribeDeviceRequest &other)
  * Constructs a DescribeDeviceRequest object.
  */
 DescribeDeviceRequest::DescribeDeviceRequest()
-    : IoT1ClickDevicesServiceRequest(new DescribeDeviceRequestPrivate(IoT1ClickDevicesServiceRequest::DescribeDeviceAction, this))
+    : IoT1ClickDevicesRequest(new DescribeDeviceRequestPrivate(IoT1ClickDevicesRequest::DescribeDeviceAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * DescribeDeviceRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::DescribeDeviceRequestPrivate
+ * \class QtAws::IoT1ClickDevices::DescribeDeviceRequestPrivate
  * \brief The DescribeDeviceRequestPrivate class provides private implementation for DescribeDeviceRequest.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a DescribeDeviceRequestPrivate object for IoT1ClickDevicesService \a action,
+ * Constructs a DescribeDeviceRequestPrivate object for IoT1ClickDevices \a action,
  * with public implementation \a q.
  */
 DescribeDeviceRequestPrivate::DescribeDeviceRequestPrivate(
-    const IoT1ClickDevicesServiceRequest::Action action, DescribeDeviceRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(action, q)
+    const IoT1ClickDevicesRequest::Action action, DescribeDeviceRequest * const q)
+    : IoT1ClickDevicesRequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ DescribeDeviceRequestPrivate::DescribeDeviceRequestPrivate(
  */
 DescribeDeviceRequestPrivate::DescribeDeviceRequestPrivate(
     const DescribeDeviceRequestPrivate &other, DescribeDeviceRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(other, q)
+    : IoT1ClickDevicesRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

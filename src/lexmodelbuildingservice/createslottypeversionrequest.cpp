@@ -20,30 +20,30 @@
 #include "createslottypeversionrequest.h"
 #include "createslottypeversionrequest_p.h"
 #include "createslottypeversionresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::CreateSlotTypeVersionRequest
- * \brief The CreateSlotTypeVersionRequest class provides an interface for LexModelBuildingService CreateSlotTypeVersion requests.
+ * \class QtAws::LexModelBuilding::CreateSlotTypeVersionRequest
+ * \brief The CreateSlotTypeVersionRequest class provides an interface for LexModelBuilding CreateSlotTypeVersion requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::createSlotTypeVersion
+ * \sa LexModelBuildingClient::createSlotTypeVersion
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateSlotTypeVersionRequest::CreateSlotTypeVersionRequest(const CreateSlotTypeVersionRequest &other)
-    : LexModelBuildingServiceRequest(new CreateSlotTypeVersionRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new CreateSlotTypeVersionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateSlotTypeVersionRequest::CreateSlotTypeVersionRequest(const CreateSlotTypeV
  * Constructs a CreateSlotTypeVersionRequest object.
  */
 CreateSlotTypeVersionRequest::CreateSlotTypeVersionRequest()
-    : LexModelBuildingServiceRequest(new CreateSlotTypeVersionRequestPrivate(LexModelBuildingServiceRequest::CreateSlotTypeVersionAction, this))
+    : LexModelBuildingRequest(new CreateSlotTypeVersionRequestPrivate(LexModelBuildingRequest::CreateSlotTypeVersionAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * CreateSlotTypeVersionRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::CreateSlotTypeVersionRequestPrivate
+ * \class QtAws::LexModelBuilding::CreateSlotTypeVersionRequestPrivate
  * \brief The CreateSlotTypeVersionRequestPrivate class provides private implementation for CreateSlotTypeVersionRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a CreateSlotTypeVersionRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a CreateSlotTypeVersionRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 CreateSlotTypeVersionRequestPrivate::CreateSlotTypeVersionRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, CreateSlotTypeVersionRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, CreateSlotTypeVersionRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ CreateSlotTypeVersionRequestPrivate::CreateSlotTypeVersionRequestPrivate(
  */
 CreateSlotTypeVersionRequestPrivate::CreateSlotTypeVersionRequestPrivate(
     const CreateSlotTypeVersionRequestPrivate &other, CreateSlotTypeVersionRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

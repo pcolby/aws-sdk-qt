@@ -20,15 +20,15 @@
 #ifndef QTAWS_DESCRIBEENDPOINTSETTINGSRESPONSE_H
 #define QTAWS_DESCRIBEENDPOINTSETTINGSRESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "describeendpointsettingsrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DescribeEndpointSettingsResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribeEndpointSettingsResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT DescribeEndpointSettingsResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

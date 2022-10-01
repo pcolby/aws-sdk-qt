@@ -20,30 +20,30 @@
 #include "deleteconnectionrequest.h"
 #include "deleteconnectionrequest_p.h"
 #include "deleteconnectionresponse.h"
-#include "apigatewaymanagementapirequest_p.h"
+#include "apigatewaymanagementrequest_p.h"
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::DeleteConnectionRequest
- * \brief The DeleteConnectionRequest class provides an interface for ApiGatewayManagementApi DeleteConnection requests.
+ * \class QtAws::ApiGatewayManagement::DeleteConnectionRequest
+ * \brief The DeleteConnectionRequest class provides an interface for ApiGatewayManagement DeleteConnection requests.
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  *
  *  The Amazon API Gateway Management API allows you to directly manage runtime aspects of your deployed APIs. To use it,
  *  you must explicitly set the SDK's endpoint to point to the endpoint of your deployed API. The endpoint will be of the
  *  form https://{api-id}.execute-api.{region}.amazonaws.com/{stage}, or will be the endpoint corresponding to your API's
  *  custom domain and base path, if
  *
- * \sa ApiGatewayManagementApiClient::deleteConnection
+ * \sa ApiGatewayManagementClient::deleteConnection
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteConnectionRequest::DeleteConnectionRequest(const DeleteConnectionRequest &other)
-    : ApiGatewayManagementApiRequest(new DeleteConnectionRequestPrivate(*other.d_func(), this))
+    : ApiGatewayManagementRequest(new DeleteConnectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteConnectionRequest::DeleteConnectionRequest(const DeleteConnectionRequest &
  * Constructs a DeleteConnectionRequest object.
  */
 DeleteConnectionRequest::DeleteConnectionRequest()
-    : ApiGatewayManagementApiRequest(new DeleteConnectionRequestPrivate(ApiGatewayManagementApiRequest::DeleteConnectionAction, this))
+    : ApiGatewayManagementRequest(new DeleteConnectionRequestPrivate(ApiGatewayManagementRequest::DeleteConnectionAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * DeleteConnectionRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::DeleteConnectionRequestPrivate
+ * \class QtAws::ApiGatewayManagement::DeleteConnectionRequestPrivate
  * \brief The DeleteConnectionRequestPrivate class provides private implementation for DeleteConnectionRequest.
  * \internal
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  */
 
 /*!
- * Constructs a DeleteConnectionRequestPrivate object for ApiGatewayManagementApi \a action,
+ * Constructs a DeleteConnectionRequestPrivate object for ApiGatewayManagement \a action,
  * with public implementation \a q.
  */
 DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
-    const ApiGatewayManagementApiRequest::Action action, DeleteConnectionRequest * const q)
-    : ApiGatewayManagementApiRequestPrivate(action, q)
+    const ApiGatewayManagementRequest::Action action, DeleteConnectionRequest * const q)
+    : ApiGatewayManagementRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
  */
 DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
     const DeleteConnectionRequestPrivate &other, DeleteConnectionRequest * const q)
-    : ApiGatewayManagementApiRequestPrivate(other, q)
+    : ApiGatewayManagementRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws

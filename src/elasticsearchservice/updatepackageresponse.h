@@ -20,15 +20,15 @@
 #ifndef QTAWS_UPDATEPACKAGERESPONSE_H
 #define QTAWS_UPDATEPACKAGERESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "updatepackagerequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class UpdatePackageResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT UpdatePackageResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT UpdatePackageResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

@@ -20,14 +20,14 @@
 #ifndef QTAWS_DELETEELASTICSEARCHSERVICEROLEREQUEST_H
 #define QTAWS_DELETEELASTICSEARCHSERVICEROLEREQUEST_H
 
-#include "elasticsearchservicerequest.h"
+#include "elasticsearchrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class DeleteElasticsearchServiceRoleRequestPrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT DeleteElasticsearchServiceRoleRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCH_EXPORT DeleteElasticsearchServiceRoleRequest : public ElasticsearchRequest {
 
 public:
     DeleteElasticsearchServiceRoleRequest(const DeleteElasticsearchServiceRoleRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

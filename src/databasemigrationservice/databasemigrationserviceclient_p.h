@@ -17,30 +17,30 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_DATABASEMIGRATIONSERVICECLIENT_P_H
-#define QTAWS_DATABASEMIGRATIONSERVICECLIENT_P_H
+#ifndef QTAWS_DATABASEMIGRATIONCLIENT_P_H
+#define QTAWS_DATABASEMIGRATIONCLIENT_P_H
 
 #include "core/awsabstractclient_p.h"
 
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
-class DatabaseMigrationServiceClient;
+class DatabaseMigrationClient;
 
-class DatabaseMigrationServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DatabaseMigrationClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit DatabaseMigrationServiceClientPrivate(DatabaseMigrationServiceClient * const q);
+    explicit DatabaseMigrationClientPrivate(DatabaseMigrationClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(DatabaseMigrationServiceClient)
-    Q_DISABLE_COPY(DatabaseMigrationServiceClientPrivate)
+    Q_DECLARE_PUBLIC(DatabaseMigrationClient)
+    Q_DISABLE_COPY(DatabaseMigrationClientPrivate)
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

@@ -20,15 +20,15 @@
 #ifndef QTAWS_GETMIGRATIONSRESPONSE_H
 #define QTAWS_GETMIGRATIONSRESPONSE_H
 
-#include "lexmodelbuildingserviceresponse.h"
+#include "lexmodelbuildingresponse.h"
 #include "getmigrationsrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class GetMigrationsResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT GetMigrationsResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDING_EXPORT GetMigrationsResponse : public LexModelBuildingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

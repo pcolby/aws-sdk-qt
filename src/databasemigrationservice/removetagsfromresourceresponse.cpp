@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::RemoveTagsFromResourceResponse
- * \brief The RemoveTagsFromResourceResponse class provides an interace for DatabaseMigrationService RemoveTagsFromResource responses.
+ * \class QtAws::DatabaseMigration::RemoveTagsFromResourceResponse
+ * \brief The RemoveTagsFromResourceResponse class provides an interace for DatabaseMigration RemoveTagsFromResource responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::removeTagsFromResource
+ * \sa DatabaseMigrationClient::removeTagsFromResource
  */
 
 /*!
@@ -55,7 +55,7 @@ RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
         const RemoveTagsFromResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new RemoveTagsFromResourceResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new RemoveTagsFromResourceResponsePrivate(this), parent)
 {
     setRequest(new RemoveTagsFromResourceRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService RemoveTagsFromResource \a response.
+ * Parses a successful DatabaseMigration RemoveTagsFromResource \a response.
  */
 void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::RemoveTagsFromResourceResponsePrivate
+ * \class QtAws::DatabaseMigration::RemoveTagsFromResourceResponsePrivate
  * \brief The RemoveTagsFromResourceResponsePrivate class provides private implementation for RemoveTagsFromResourceResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a RemoveTagsFromResourceResponsePrivate object with public implementation \a q.
  */
 RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
-    RemoveTagsFromResourceResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    RemoveTagsFromResourceResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService RemoveTagsFromResource response element from \a xml.
+ * Parses a DatabaseMigration RemoveTagsFromResource response element from \a xml.
  */
 void RemoveTagsFromResourceResponsePrivate::parseRemoveTagsFromResourceResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void RemoveTagsFromResourceResponsePrivate::parseRemoveTagsFromResourceResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

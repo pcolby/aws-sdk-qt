@@ -20,15 +20,15 @@
 #ifndef QTAWS_DESCRIBEDOMAINCHANGEPROGRESSRESPONSE_H
 #define QTAWS_DESCRIBEDOMAINCHANGEPROGRESSRESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "describedomainchangeprogressrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class DescribeDomainChangeProgressResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT DescribeDomainChangeProgressResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT DescribeDomainChangeProgressResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

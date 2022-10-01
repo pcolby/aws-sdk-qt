@@ -17,35 +17,35 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_LEXRUNTIMESERVICEREQUEST_P_H
-#define QTAWS_LEXRUNTIMESERVICEREQUEST_P_H
+#ifndef QTAWS_LEXRUNTIMEREQUEST_P_H
+#define QTAWS_LEXRUNTIMEREQUEST_P_H
 
 #include "core/awsabstractrequest_p.h"
-#include "lexruntimeservicerequest.h"
+#include "lexruntimerequest.h"
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
-class LexRuntimeServiceRequest;
+class LexRuntimeRequest;
 
-class LexRuntimeServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LexRuntimeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    LexRuntimeServiceRequest::Action action; ///< LexRuntimeService action to be performed.
-    QString apiVersion;        ///< LexRuntimeService API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< LexRuntimeService request (query string) parameters. @todo?
+    LexRuntimeRequest::Action action; ///< LexRuntime action to be performed.
+    QString apiVersion;        ///< LexRuntime API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< LexRuntime request (query string) parameters. @todo?
 
-    LexRuntimeServiceRequestPrivate(const LexRuntimeServiceRequest::Action action, LexRuntimeServiceRequest * const q);
-    LexRuntimeServiceRequestPrivate(const LexRuntimeServiceRequestPrivate &other, LexRuntimeServiceRequest * const q);
+    LexRuntimeRequestPrivate(const LexRuntimeRequest::Action action, LexRuntimeRequest * const q);
+    LexRuntimeRequestPrivate(const LexRuntimeRequestPrivate &other, LexRuntimeRequest * const q);
 
-    static QString toString(const LexRuntimeServiceRequest::Action &action);
+    static QString toString(const LexRuntimeRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(LexRuntimeServiceRequest)
+    Q_DECLARE_PUBLIC(LexRuntimeRequest)
 
 };
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws
 
 #endif

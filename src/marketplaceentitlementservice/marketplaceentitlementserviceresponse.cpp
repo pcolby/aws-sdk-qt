@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "marketplaceentitlementserviceresponse.h"
-#include "marketplaceentitlementserviceresponse_p.h"
+#include "marketplaceentitlementresponse.h"
+#include "marketplaceentitlementresponse_p.h"
 
 #include <QDebug>
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
 /*!
- * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceResponse
- * \brief The MarketplaceEntitlementServiceResponse class provides an interface for MarketplaceEntitlementService responses.
+ * \class QtAws::MarketplaceEntitlement::MarketplaceEntitlementResponse
+ * \brief The MarketplaceEntitlementResponse class provides an interface for MarketplaceEntitlement responses.
  *
- * \inmodule QtAwsMarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlement
  */
 
 /*!
- * Constructs a MarketplaceEntitlementServiceResponse object with parent \a parent.
+ * Constructs a MarketplaceEntitlementResponse object with parent \a parent.
  */
-MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MarketplaceEntitlementServiceResponsePrivate(this), parent)
+MarketplaceEntitlementResponse::MarketplaceEntitlementResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new MarketplaceEntitlementResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a MarketplaceEntitlementServiceResponse object with private implementation \a d,
+ * Constructs a MarketplaceEntitlementResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from MarketplaceEntitlementServiceResponsePrivate.
+ * implementation that inherits from MarketplaceEntitlementResponsePrivate.
  */
-MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(MarketplaceEntitlementServiceResponsePrivate * const d, QObject * const parent)
+MarketplaceEntitlementResponse::MarketplaceEntitlementResponse(MarketplaceEntitlementResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(Mar
 /*!
  * \reimp
  */
-void MarketplaceEntitlementServiceResponse::parseFailure(QIODevice &response)
+void MarketplaceEntitlementResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(MarketplaceEntitlementServiceResponse);
+    //Q_D(MarketplaceEntitlementResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void MarketplaceEntitlementServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceResponsePrivate
- * \brief The MarketplaceEntitlementServiceResponsePrivate class provides private implementation for MarketplaceEntitlementServiceResponse.
+ * \class QtAws::MarketplaceEntitlement::MarketplaceEntitlementResponsePrivate
+ * \brief The MarketplaceEntitlementResponsePrivate class provides private implementation for MarketplaceEntitlementResponse.
  * \internal
  *
- * \inmodule QtAwsMarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlement
  */
 
 /*!
- * Constructs a MarketplaceEntitlementServiceResponsePrivate object with public implementation \a q.
+ * Constructs a MarketplaceEntitlementResponsePrivate object with public implementation \a q.
  */
-MarketplaceEntitlementServiceResponsePrivate::MarketplaceEntitlementServiceResponsePrivate(
-    MarketplaceEntitlementServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+MarketplaceEntitlementResponsePrivate::MarketplaceEntitlementResponsePrivate(
+    MarketplaceEntitlementResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StartExportTaskResponse
- * \brief The StartExportTaskResponse class provides an interace for ApplicationDiscoveryService StartExportTask responses.
+ * \class QtAws::ApplicationDiscovery::StartExportTaskResponse
+ * \brief The StartExportTaskResponse class provides an interace for ApplicationDiscovery StartExportTask responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::startExportTask
+ * \sa ApplicationDiscoveryClient::startExportTask
  */
 
 /*!
@@ -152,7 +152,7 @@ StartExportTaskResponse::StartExportTaskResponse(
         const StartExportTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new StartExportTaskResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new StartExportTaskResponsePrivate(this), parent)
 {
     setRequest(new StartExportTaskRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const StartExportTaskRequest * StartExportTaskResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService StartExportTask \a response.
+ * Parses a successful ApplicationDiscovery StartExportTask \a response.
  */
 void StartExportTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void StartExportTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StartExportTaskResponsePrivate
+ * \class QtAws::ApplicationDiscovery::StartExportTaskResponsePrivate
  * \brief The StartExportTaskResponsePrivate class provides private implementation for StartExportTaskResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a StartExportTaskResponsePrivate object with public implementation \a q.
  */
 StartExportTaskResponsePrivate::StartExportTaskResponsePrivate(
-    StartExportTaskResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    StartExportTaskResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService StartExportTask response element from \a xml.
+ * Parses a ApplicationDiscovery StartExportTask response element from \a xml.
  */
 void StartExportTaskResponsePrivate::parseStartExportTaskResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void StartExportTaskResponsePrivate::parseStartExportTaskResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

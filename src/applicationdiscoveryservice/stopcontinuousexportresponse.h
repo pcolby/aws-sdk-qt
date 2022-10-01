@@ -20,15 +20,15 @@
 #ifndef QTAWS_STOPCONTINUOUSEXPORTRESPONSE_H
 #define QTAWS_STOPCONTINUOUSEXPORTRESPONSE_H
 
-#include "applicationdiscoveryserviceresponse.h"
+#include "applicationdiscoveryresponse.h"
 #include "stopcontinuousexportrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class StopContinuousExportResponsePrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT StopContinuousExportResponse : public ApplicationDiscoveryServiceResponse {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT StopContinuousExportResponse : public ApplicationDiscoveryResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

@@ -17,32 +17,32 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_APPLICATIONDISCOVERYSERVICERESPONSE_P_H
-#define QTAWS_APPLICATIONDISCOVERYSERVICERESPONSE_P_H
+#ifndef QTAWS_APPLICATIONDISCOVERYRESPONSE_P_H
+#define QTAWS_APPLICATIONDISCOVERYRESPONSE_P_H
 
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
-class ApplicationDiscoveryServiceResponse;
+class ApplicationDiscoveryResponse;
 
-class ApplicationDiscoveryServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ApplicationDiscoveryResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit ApplicationDiscoveryServiceResponsePrivate(ApplicationDiscoveryServiceResponse * const q);
+    explicit ApplicationDiscoveryResponsePrivate(ApplicationDiscoveryResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(ApplicationDiscoveryServiceResponse)
-    Q_DISABLE_COPY(ApplicationDiscoveryServiceResponsePrivate)
+    Q_DECLARE_PUBLIC(ApplicationDiscoveryResponse)
+    Q_DISABLE_COPY(ApplicationDiscoveryResponsePrivate)
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

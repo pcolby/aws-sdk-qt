@@ -17,32 +17,32 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_LEXMODELBUILDINGSERVICERESPONSE_P_H
-#define QTAWS_LEXMODELBUILDINGSERVICERESPONSE_P_H
+#ifndef QTAWS_LEXMODELBUILDINGRESPONSE_P_H
+#define QTAWS_LEXMODELBUILDINGRESPONSE_P_H
 
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
-class LexModelBuildingServiceResponse;
+class LexModelBuildingResponse;
 
-class LexModelBuildingServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class LexModelBuildingResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit LexModelBuildingServiceResponsePrivate(LexModelBuildingServiceResponse * const q);
+    explicit LexModelBuildingResponsePrivate(LexModelBuildingResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(LexModelBuildingServiceResponse)
-    Q_DISABLE_COPY(LexModelBuildingServiceResponsePrivate)
+    Q_DECLARE_PUBLIC(LexModelBuildingResponse)
+    Q_DISABLE_COPY(LexModelBuildingResponsePrivate)
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

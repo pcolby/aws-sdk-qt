@@ -20,30 +20,30 @@
 #include "createbotversionrequest.h"
 #include "createbotversionrequest_p.h"
 #include "createbotversionresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::CreateBotVersionRequest
- * \brief The CreateBotVersionRequest class provides an interface for LexModelBuildingService CreateBotVersion requests.
+ * \class QtAws::LexModelBuilding::CreateBotVersionRequest
+ * \brief The CreateBotVersionRequest class provides an interface for LexModelBuilding CreateBotVersion requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::createBotVersion
+ * \sa LexModelBuildingClient::createBotVersion
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateBotVersionRequest::CreateBotVersionRequest(const CreateBotVersionRequest &other)
-    : LexModelBuildingServiceRequest(new CreateBotVersionRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new CreateBotVersionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateBotVersionRequest::CreateBotVersionRequest(const CreateBotVersionRequest &
  * Constructs a CreateBotVersionRequest object.
  */
 CreateBotVersionRequest::CreateBotVersionRequest()
-    : LexModelBuildingServiceRequest(new CreateBotVersionRequestPrivate(LexModelBuildingServiceRequest::CreateBotVersionAction, this))
+    : LexModelBuildingRequest(new CreateBotVersionRequestPrivate(LexModelBuildingRequest::CreateBotVersionAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * CreateBotVersionRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::CreateBotVersionRequestPrivate
+ * \class QtAws::LexModelBuilding::CreateBotVersionRequestPrivate
  * \brief The CreateBotVersionRequestPrivate class provides private implementation for CreateBotVersionRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a CreateBotVersionRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a CreateBotVersionRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 CreateBotVersionRequestPrivate::CreateBotVersionRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, CreateBotVersionRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, CreateBotVersionRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ CreateBotVersionRequestPrivate::CreateBotVersionRequestPrivate(
  */
 CreateBotVersionRequestPrivate::CreateBotVersionRequestPrivate(
     const CreateBotVersionRequestPrivate &other, CreateBotVersionRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

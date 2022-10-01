@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteConnectionResponse
- * \brief The DeleteConnectionResponse class provides an interace for DatabaseMigrationService DeleteConnection responses.
+ * \class QtAws::DatabaseMigration::DeleteConnectionResponse
+ * \brief The DeleteConnectionResponse class provides an interace for DatabaseMigration DeleteConnection responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteConnection
+ * \sa DatabaseMigrationClient::deleteConnection
  */
 
 /*!
@@ -55,7 +55,7 @@ DeleteConnectionResponse::DeleteConnectionResponse(
         const DeleteConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DeleteConnectionResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DeleteConnectionResponsePrivate(this), parent)
 {
     setRequest(new DeleteConnectionRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DeleteConnectionRequest * DeleteConnectionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DeleteConnection \a response.
+ * Parses a successful DatabaseMigration DeleteConnection \a response.
  */
 void DeleteConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DeleteConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteConnectionResponsePrivate
+ * \class QtAws::DatabaseMigration::DeleteConnectionResponsePrivate
  * \brief The DeleteConnectionResponsePrivate class provides private implementation for DeleteConnectionResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DeleteConnectionResponsePrivate object with public implementation \a q.
  */
 DeleteConnectionResponsePrivate::DeleteConnectionResponsePrivate(
-    DeleteConnectionResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DeleteConnectionResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DeleteConnection response element from \a xml.
+ * Parses a DatabaseMigration DeleteConnection response element from \a xml.
  */
 void DeleteConnectionResponsePrivate::parseDeleteConnectionResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DeleteConnectionResponsePrivate::parseDeleteConnectionResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

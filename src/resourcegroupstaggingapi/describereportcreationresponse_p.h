@@ -20,14 +20,14 @@
 #ifndef QTAWS_DESCRIBEREPORTCREATIONRESPONSE_P_H
 #define QTAWS_DESCRIBEREPORTCREATIONRESPONSE_P_H
 
-#include "resourcegroupstaggingapiresponse_p.h"
+#include "resourcegroupstaggingresponse_p.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 class DescribeReportCreationResponse;
 
-class DescribeReportCreationResponsePrivate : public ResourceGroupsTaggingApiResponsePrivate {
+class DescribeReportCreationResponsePrivate : public ResourceGroupsTaggingResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws
 
 #endif

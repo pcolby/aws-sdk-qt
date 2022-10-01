@@ -17,12 +17,12 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_COSTANDUSAGEREPORTSERVICEREQUEST_H
-#define QTAWS_COSTANDUSAGEREPORTSERVICEREQUEST_H
+#ifndef QTAWS_COSTANDUSAGEREPORTREQUEST_H
+#define QTAWS_COSTANDUSAGEREPORTREQUEST_H
 
 #include "core/awsabstractrequest.h"
 
-#include "qtawscostandusagereportserviceglobal.h"
+#include "qtawscostandusagereportglobal.h"
 
 #include <QFlags>
 #include <QObject>
@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
-class CostandUsageReportServiceRequestPrivate;
+class CostandUsageReportRequestPrivate;
 
-class QTAWSCOSTANDUSAGEREPORTSERVICE_EXPORT CostandUsageReportServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCOSTANDUSAGEREPORT_EXPORT CostandUsageReportRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by CostandUsageReportService.
+    /// Actions supported by CostandUsageReport.
     enum Action {
         DeleteReportDefinitionAction,
         DescribeReportDefinitionsAction,
@@ -46,9 +46,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    CostandUsageReportServiceRequest(const Action action);
-    CostandUsageReportServiceRequest(const CostandUsageReportServiceRequest &other);
-    CostandUsageReportServiceRequest &operator=(const CostandUsageReportServiceRequest &other);
+    CostandUsageReportRequest(const Action action);
+    CostandUsageReportRequest(const CostandUsageReportRequest &other);
+    CostandUsageReportRequest &operator=(const CostandUsageReportRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -57,12 +57,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const CostandUsageReportServiceRequest &other) const;
+    virtual bool operator==(const CostandUsageReportRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit CostandUsageReportServiceRequest(CostandUsageReportServiceRequestPrivate * const d);
+    explicit CostandUsageReportRequest(CostandUsageReportRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -75,11 +75,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(CostandUsageReportServiceRequest)
+    Q_DECLARE_PRIVATE(CostandUsageReportRequest)
 
 };
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws
 
 #endif

@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::ListTagsForResourceResponse
- * \brief The ListTagsForResourceResponse class provides an interace for IoT1ClickDevicesService ListTagsForResource responses.
+ * \class QtAws::IoT1ClickDevices::ListTagsForResourceResponse
+ * \brief The ListTagsForResourceResponse class provides an interace for IoT1ClickDevices ListTagsForResource responses.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::listTagsForResource
+ * \sa IoT1ClickDevicesClient::listTagsForResource
  */
 
 /*!
@@ -46,7 +46,7 @@ ListTagsForResourceResponse::ListTagsForResourceResponse(
         const ListTagsForResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoT1ClickDevicesServiceResponse(new ListTagsForResourceResponsePrivate(this), parent)
+    : IoT1ClickDevicesResponse(new ListTagsForResourceResponsePrivate(this), parent)
 {
     setRequest(new ListTagsForResourceRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IoT1ClickDevicesService ListTagsForResource \a response.
+ * Parses a successful IoT1ClickDevices ListTagsForResource \a response.
  */
 void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::ListTagsForResourceResponsePrivate
+ * \class QtAws::IoT1ClickDevices::ListTagsForResourceResponsePrivate
  * \brief The ListTagsForResourceResponsePrivate class provides private implementation for ListTagsForResourceResponse.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
  * Constructs a ListTagsForResourceResponsePrivate object with public implementation \a q.
  */
 ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
-    ListTagsForResourceResponse * const q) : IoT1ClickDevicesServiceResponsePrivate(q)
+    ListTagsForResourceResponse * const q) : IoT1ClickDevicesResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a IoT1ClickDevicesService ListTagsForResource response element from \a xml.
+ * Parses a IoT1ClickDevices ListTagsForResource response element from \a xml.
  */
 void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

@@ -1,13 +1,13 @@
-add_compile_definitions(QTAWSLEXRUNTIMESERVICE_LIBRARY)
+add_compile_definitions(QTAWSLEXRUNTIME_LIBRARY)
 
-add_library(QtAwsLexRuntimeService
-  qtawslexruntimeserviceglobal.h
-  lexruntimeserviceclient.h
-  lexruntimeserviceclient_p.h
-  lexruntimeservicerequest.h
-  lexruntimeservicerequest_p.h
-  lexruntimeserviceresponse.h
-  lexruntimeserviceresponse_p.h
+add_library(QtAwsLexRuntime
+  qtawslexruntimeglobal.h
+  lexruntimeclient.h
+  lexruntimeclient_p.h
+  lexruntimerequest.h
+  lexruntimerequest_p.h
+  lexruntimeresponse.h
+  lexruntimeresponse_p.h
   deletesessionrequest.h
   deletesessionrequest_p.h
   deletesessionresponse.h
@@ -28,9 +28,9 @@ add_library(QtAwsLexRuntimeService
   putsessionrequest_p.h
   putsessionresponse.h
   putsessionresponse_p.h
-  lexruntimeserviceclient.cpp
-  lexruntimeservicerequest.cpp
-  lexruntimeserviceresponse.cpp
+  lexruntimeclient.cpp
+  lexruntimerequest.cpp
+  lexruntimeresponse.cpp
   deletesessionrequest.cpp
   deletesessionresponse.cpp
   getsessionrequest.cpp
@@ -42,7 +42,7 @@ add_library(QtAwsLexRuntimeService
   putsessionrequest.cpp
   putsessionresponse.cpp)
 
-target_link_libraries(QtAwsLexRuntimeService
+target_link_libraries(QtAwsLexRuntime
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

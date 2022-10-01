@@ -17,32 +17,32 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_LEXRUNTIMESERVICERESPONSE_P_H
-#define QTAWS_LEXRUNTIMESERVICERESPONSE_P_H
+#ifndef QTAWS_LEXRUNTIMERESPONSE_P_H
+#define QTAWS_LEXRUNTIMERESPONSE_P_H
 
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
-class LexRuntimeServiceResponse;
+class LexRuntimeResponse;
 
-class LexRuntimeServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class LexRuntimeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit LexRuntimeServiceResponsePrivate(LexRuntimeServiceResponse * const q);
+    explicit LexRuntimeResponsePrivate(LexRuntimeResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(LexRuntimeServiceResponse)
-    Q_DISABLE_COPY(LexRuntimeServiceResponsePrivate)
+    Q_DECLARE_PUBLIC(LexRuntimeResponse)
+    Q_DISABLE_COPY(LexRuntimeResponsePrivate)
 
 };
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws
 
 #endif

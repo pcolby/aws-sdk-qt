@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "resourcegroupstaggingapirequest.h"
-#include "resourcegroupstaggingapirequest_p.h"
+#include "resourcegroupstaggingrequest.h"
+#include "resourcegroupstaggingrequest_p.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::ResourceGroupsTaggingApiRequest
- * \brief The ResourceGroupsTaggingApiRequest class provides an interface for ResourceGroupsTaggingApi requests.
+ * \class QtAws::ResourceGroupsTagging::ResourceGroupsTaggingRequest
+ * \brief The ResourceGroupsTaggingRequest class provides an interface for ResourceGroupsTagging requests.
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  */
 
 /*!
- * \enum ResourceGroupsTaggingApiRequest::Action
+ * \enum ResourceGroupsTaggingRequest::Action
  *
- * This enum describes the actions that can be performed as ResourceGroupsTaggingApi
+ * This enum describes the actions that can be performed as ResourceGroupsTagging
  * requests.
  *
- * \value DescribeReportCreationAction ResourceGroupsTaggingApi DescribeReportCreation action.
- * \value GetComplianceSummaryAction ResourceGroupsTaggingApi GetComplianceSummary action.
- * \value GetResourcesAction ResourceGroupsTaggingApi GetResources action.
- * \value GetTagKeysAction ResourceGroupsTaggingApi GetTagKeys action.
- * \value GetTagValuesAction ResourceGroupsTaggingApi GetTagValues action.
- * \value StartReportCreationAction ResourceGroupsTaggingApi StartReportCreation action.
- * \value TagResourcesAction ResourceGroupsTaggingApi TagResources action.
- * \value UntagResourcesAction ResourceGroupsTaggingApi UntagResources action.
+ * \value DescribeReportCreationAction ResourceGroupsTagging DescribeReportCreation action.
+ * \value GetComplianceSummaryAction ResourceGroupsTagging GetComplianceSummary action.
+ * \value GetResourcesAction ResourceGroupsTagging GetResources action.
+ * \value GetTagKeysAction ResourceGroupsTagging GetTagKeys action.
+ * \value GetTagValuesAction ResourceGroupsTagging GetTagValues action.
+ * \value StartReportCreationAction ResourceGroupsTagging StartReportCreation action.
+ * \value TagResourcesAction ResourceGroupsTagging TagResources action.
+ * \value UntagResourcesAction ResourceGroupsTagging UntagResources action.
  */
 
 /*!
- * Constructs a ResourceGroupsTaggingApiRequest object for ResourceGroupsTaggingApi \a action.
+ * Constructs a ResourceGroupsTaggingRequest object for ResourceGroupsTagging \a action.
  */
-ResourceGroupsTaggingApiRequest::ResourceGroupsTaggingApiRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ResourceGroupsTaggingApiRequestPrivate(action, this))
+ResourceGroupsTaggingRequest::ResourceGroupsTaggingRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new ResourceGroupsTaggingRequestPrivate(action, this))
 {
 
 }
@@ -58,18 +58,18 @@ ResourceGroupsTaggingApiRequest::ResourceGroupsTaggingApiRequest(const Action ac
 /*!
  * Constructs a copy of \a other.
  */
-ResourceGroupsTaggingApiRequest::ResourceGroupsTaggingApiRequest(const ResourceGroupsTaggingApiRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ResourceGroupsTaggingApiRequestPrivate(*other.d_func(), this))
+ResourceGroupsTaggingRequest::ResourceGroupsTaggingRequest(const ResourceGroupsTaggingRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new ResourceGroupsTaggingRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the ResourceGroupsTaggingApiRequest object to be equal to \a other.
+ * Sets the ResourceGroupsTaggingRequest object to be equal to \a other.
  */
-ResourceGroupsTaggingApiRequest& ResourceGroupsTaggingApiRequest::operator=(const ResourceGroupsTaggingApiRequest &other)
+ResourceGroupsTaggingRequest& ResourceGroupsTaggingRequest::operator=(const ResourceGroupsTaggingRequest &other)
 {
-    Q_D(ResourceGroupsTaggingApiRequest);
+    Q_D(ResourceGroupsTaggingRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -77,57 +77,57 @@ ResourceGroupsTaggingApiRequest& ResourceGroupsTaggingApiRequest::operator=(cons
 }
 
 /*!
- * Constructs aa ResourceGroupsTaggingApiRequest object with private implementation \a d.
+ * Constructs aa ResourceGroupsTaggingRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from ResourceGroupsTaggingApiRequestPrivate.
+ * implementation that inherits from ResourceGroupsTaggingRequestPrivate.
  */
-ResourceGroupsTaggingApiRequest::ResourceGroupsTaggingApiRequest(ResourceGroupsTaggingApiRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+ResourceGroupsTaggingRequest::ResourceGroupsTaggingRequest(ResourceGroupsTaggingRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the ResourceGroupsTaggingApi action to be performed by this request.
+ * Returns the ResourceGroupsTagging action to be performed by this request.
  */
-ResourceGroupsTaggingApiRequest::Action ResourceGroupsTaggingApiRequest::action() const
+ResourceGroupsTaggingRequest::Action ResourceGroupsTaggingRequest::action() const
 {
-    Q_D(const ResourceGroupsTaggingApiRequest);
+    Q_D(const ResourceGroupsTaggingRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the ResourceGroupsTaggingApi action to be performed by this request.
+ * Returns the name of the ResourceGroupsTagging action to be performed by this request.
  */
-QString ResourceGroupsTaggingApiRequest::actionString() const
+QString ResourceGroupsTaggingRequest::actionString() const
 {
-    return ResourceGroupsTaggingApiRequestPrivate::toString(action());
+    return ResourceGroupsTaggingRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the ResourceGroupsTaggingApi API version implemented by this request.
+ * Returns the ResourceGroupsTagging API version implemented by this request.
  */
-QString ResourceGroupsTaggingApiRequest::apiVersion() const
+QString ResourceGroupsTaggingRequest::apiVersion() const
 {
-    Q_D(const ResourceGroupsTaggingApiRequest);
+    Q_D(const ResourceGroupsTaggingRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the ResourceGroupsTaggingApi action to be performed by this request to \a action.
+ * Sets the ResourceGroupsTagging action to be performed by this request to \a action.
  */
-void ResourceGroupsTaggingApiRequest::setAction(const Action action)
+void ResourceGroupsTaggingRequest::setAction(const Action action)
 {
-    Q_D(ResourceGroupsTaggingApiRequest);
+    Q_D(ResourceGroupsTaggingRequest);
     d->action = action;
 }
 
 /*!
- * Sets the ResourceGroupsTaggingApi API version to include in this request to \a version.
+ * Sets the ResourceGroupsTagging API version to include in this request to \a version.
  */
-void ResourceGroupsTaggingApiRequest::setApiVersion(const QString &version)
+void ResourceGroupsTaggingRequest::setApiVersion(const QString &version)
 {
-    Q_D(ResourceGroupsTaggingApiRequest);
+    Q_D(ResourceGroupsTaggingRequest);
     d->apiVersion = version;
 }
 
@@ -139,7 +139,7 @@ void ResourceGroupsTaggingApiRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool ResourceGroupsTaggingApiRequest::operator==(const ResourceGroupsTaggingApiRequest &other) const
+bool ResourceGroupsTaggingRequest::operator==(const ResourceGroupsTaggingRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -148,19 +148,19 @@ bool ResourceGroupsTaggingApiRequest::operator==(const ResourceGroupsTaggingApiR
 }
 
 /*
- * Returns \c tue if \a queueName is a valid ResourceGroupsTaggingApi queue name.
+ * Returns \c tue if \a queueName is a valid ResourceGroupsTagging queue name.
  *
- * @par From ResourceGroupsTaggingApi FAQs:
+ * @par From ResourceGroupsTagging FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid ResourceGroupsTaggingApi queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid ResourceGroupsTagging queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool ResourceGroupsTaggingApiRequest::isValidQueueName(const QString &queueName)
+/*bool ResourceGroupsTaggingRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -170,45 +170,45 @@ bool ResourceGroupsTaggingApiRequest::operator==(const ResourceGroupsTaggingApiR
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int ResourceGroupsTaggingApiRequest::clearParameter(const QString &name)
+int ResourceGroupsTaggingRequest::clearParameter(const QString &name)
 {
-    Q_D(ResourceGroupsTaggingApiRequest);
+    Q_D(ResourceGroupsTaggingRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void ResourceGroupsTaggingApiRequest::clearParameters()
+void ResourceGroupsTaggingRequest::clearParameters()
 {
-    Q_D(ResourceGroupsTaggingApiRequest);
+    Q_D(ResourceGroupsTaggingRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant ResourceGroupsTaggingApiRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant ResourceGroupsTaggingRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const ResourceGroupsTaggingApiRequest);
+    Q_D(const ResourceGroupsTaggingRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &ResourceGroupsTaggingApiRequest::parameters() const
+const QVariantMap &ResourceGroupsTaggingRequest::parameters() const
 {
-    Q_D(const ResourceGroupsTaggingApiRequest);
+    Q_D(const ResourceGroupsTaggingRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void ResourceGroupsTaggingApiRequest::setParameter(const QString &name, const QVariant &value)
+void ResourceGroupsTaggingRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(ResourceGroupsTaggingApiRequest);
+    Q_D(ResourceGroupsTaggingRequest);
     d->parameters.insert(name, value);
 }
 
@@ -216,41 +216,41 @@ void ResourceGroupsTaggingApiRequest::setParameter(const QString &name, const QV
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void ResourceGroupsTaggingApiRequest::setParameters(const QVariantMap &parameters)
+void ResourceGroupsTaggingRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(ResourceGroupsTaggingApiRequest);
+    Q_D(ResourceGroupsTaggingRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the ResourceGroupsTaggingApi request using the given
+ * Returns a network request for the ResourceGroupsTagging request using the given
  * \a endpoint.
  *
- * This ResourceGroupsTaggingApi implementation builds request URLs by combining the
+ * This ResourceGroupsTagging implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest ResourceGroupsTaggingApiRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest ResourceGroupsTaggingRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const ResourceGroupsTaggingApiRequest);
+    //Q_D(const ResourceGroupsTaggingRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::ResourceGroupsTaggingApiRequestPrivate
- * \brief The ResourceGroupsTaggingApiRequestPrivate class provides private implementation for ResourceGroupsTaggingApiRequest.
+ * \class QtAws::ResourceGroupsTagging::ResourceGroupsTaggingRequestPrivate
+ * \brief The ResourceGroupsTaggingRequestPrivate class provides private implementation for ResourceGroupsTaggingRequest.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  */
 
 /*!
- * Constructs a ResourceGroupsTaggingApiRequestPrivate object for ResourceGroupsTaggingApi \a action,
+ * Constructs a ResourceGroupsTaggingRequestPrivate object for ResourceGroupsTagging \a action,
  * with public implementation \a q.
  */
-ResourceGroupsTaggingApiRequestPrivate::ResourceGroupsTaggingApiRequestPrivate(const ResourceGroupsTaggingApiRequest::Action action, ResourceGroupsTaggingApiRequest * const q)
+ResourceGroupsTaggingRequestPrivate::ResourceGroupsTaggingRequestPrivate(const ResourceGroupsTaggingRequest::Action action, ResourceGroupsTaggingRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-01-26"))
 {
 
@@ -262,10 +262,10 @@ ResourceGroupsTaggingApiRequestPrivate::ResourceGroupsTaggingApiRequestPrivate(c
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the ResourceGroupsTaggingApiRequest class's copy constructor.
+ * This is required to support the ResourceGroupsTaggingRequest class's copy constructor.
  */
-ResourceGroupsTaggingApiRequestPrivate::ResourceGroupsTaggingApiRequestPrivate(const ResourceGroupsTaggingApiRequestPrivate &other,
-                                     ResourceGroupsTaggingApiRequest * const q)
+ResourceGroupsTaggingRequestPrivate::ResourceGroupsTaggingRequestPrivate(const ResourceGroupsTaggingRequestPrivate &other,
+                                     ResourceGroupsTaggingRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -276,14 +276,14 @@ ResourceGroupsTaggingApiRequestPrivate::ResourceGroupsTaggingApiRequestPrivate(c
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts ResourceGroupsTaggingApiRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the ResourceGroupsTaggingApi service's Action
+ * This function converts ResourceGroupsTaggingRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the ResourceGroupsTagging service's Action
  * query parameters.
  */
-QString ResourceGroupsTaggingApiRequestPrivate::toString(const ResourceGroupsTaggingApiRequest::Action &action)
+QString ResourceGroupsTaggingRequestPrivate::toString(const ResourceGroupsTaggingRequest::Action &action)
 {
     #define ActionToString(action) \
-        case ResourceGroupsTaggingApiRequest::action##Action: return QStringLiteral(#action)
+        case ResourceGroupsTaggingRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(DescribeReportCreation);
         ActionToString(GetComplianceSummary);
@@ -300,5 +300,5 @@ QString ResourceGroupsTaggingApiRequestPrivate::toString(const ResourceGroupsTag
     return QString();
 }
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws

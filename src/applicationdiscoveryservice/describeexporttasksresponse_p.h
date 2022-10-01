@@ -20,14 +20,14 @@
 #ifndef QTAWS_DESCRIBEEXPORTTASKSRESPONSE_P_H
 #define QTAWS_DESCRIBEEXPORTTASKSRESPONSE_P_H
 
-#include "applicationdiscoveryserviceresponse_p.h"
+#include "applicationdiscoveryresponse_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class DescribeExportTasksResponse;
 
-class DescribeExportTasksResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+class DescribeExportTasksResponsePrivate : public ApplicationDiscoveryResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

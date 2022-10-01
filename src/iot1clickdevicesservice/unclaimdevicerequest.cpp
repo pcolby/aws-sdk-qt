@@ -20,28 +20,28 @@
 #include "unclaimdevicerequest.h"
 #include "unclaimdevicerequest_p.h"
 #include "unclaimdeviceresponse.h"
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::UnclaimDeviceRequest
- * \brief The UnclaimDeviceRequest class provides an interface for IoT1ClickDevicesService UnclaimDevice requests.
+ * \class QtAws::IoT1ClickDevices::UnclaimDeviceRequest
+ * \brief The UnclaimDeviceRequest class provides an interface for IoT1ClickDevices UnclaimDevice requests.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::unclaimDevice
+ * \sa IoT1ClickDevicesClient::unclaimDevice
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UnclaimDeviceRequest::UnclaimDeviceRequest(const UnclaimDeviceRequest &other)
-    : IoT1ClickDevicesServiceRequest(new UnclaimDeviceRequestPrivate(*other.d_func(), this))
+    : IoT1ClickDevicesRequest(new UnclaimDeviceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ UnclaimDeviceRequest::UnclaimDeviceRequest(const UnclaimDeviceRequest &other)
  * Constructs a UnclaimDeviceRequest object.
  */
 UnclaimDeviceRequest::UnclaimDeviceRequest()
-    : IoT1ClickDevicesServiceRequest(new UnclaimDeviceRequestPrivate(IoT1ClickDevicesServiceRequest::UnclaimDeviceAction, this))
+    : IoT1ClickDevicesRequest(new UnclaimDeviceRequestPrivate(IoT1ClickDevicesRequest::UnclaimDeviceAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * UnclaimDeviceRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::UnclaimDeviceRequestPrivate
+ * \class QtAws::IoT1ClickDevices::UnclaimDeviceRequestPrivate
  * \brief The UnclaimDeviceRequestPrivate class provides private implementation for UnclaimDeviceRequest.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a UnclaimDeviceRequestPrivate object for IoT1ClickDevicesService \a action,
+ * Constructs a UnclaimDeviceRequestPrivate object for IoT1ClickDevices \a action,
  * with public implementation \a q.
  */
 UnclaimDeviceRequestPrivate::UnclaimDeviceRequestPrivate(
-    const IoT1ClickDevicesServiceRequest::Action action, UnclaimDeviceRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(action, q)
+    const IoT1ClickDevicesRequest::Action action, UnclaimDeviceRequest * const q)
+    : IoT1ClickDevicesRequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ UnclaimDeviceRequestPrivate::UnclaimDeviceRequestPrivate(
  */
 UnclaimDeviceRequestPrivate::UnclaimDeviceRequestPrivate(
     const UnclaimDeviceRequestPrivate &other, UnclaimDeviceRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(other, q)
+    : IoT1ClickDevicesRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

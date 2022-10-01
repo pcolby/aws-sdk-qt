@@ -20,15 +20,15 @@
 #ifndef QTAWS_ACCEPTINBOUNDCROSSCLUSTERSEARCHCONNECTIONRESPONSE_H
 #define QTAWS_ACCEPTINBOUNDCROSSCLUSTERSEARCHCONNECTIONRESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "acceptinboundcrossclustersearchconnectionrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class AcceptInboundCrossClusterSearchConnectionResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT AcceptInboundCrossClusterSearchConnectionResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT AcceptInboundCrossClusterSearchConnectionResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

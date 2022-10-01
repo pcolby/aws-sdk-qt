@@ -20,16 +20,16 @@
 #include "acceptinboundcrossclustersearchconnectionrequest.h"
 #include "acceptinboundcrossclustersearchconnectionrequest_p.h"
 #include "acceptinboundcrossclustersearchconnectionresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::AcceptInboundCrossClusterSearchConnectionRequest
- * \brief The AcceptInboundCrossClusterSearchConnectionRequest class provides an interface for ElasticsearchService AcceptInboundCrossClusterSearchConnection requests.
+ * \class QtAws::Elasticsearch::AcceptInboundCrossClusterSearchConnectionRequest
+ * \brief The AcceptInboundCrossClusterSearchConnectionRequest class provides an interface for Elasticsearch AcceptInboundCrossClusterSearchConnection requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::acceptInboundCrossClusterSearchConnection
+ * \sa ElasticsearchClient::acceptInboundCrossClusterSearchConnection
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 AcceptInboundCrossClusterSearchConnectionRequest::AcceptInboundCrossClusterSearchConnectionRequest(const AcceptInboundCrossClusterSearchConnectionRequest &other)
-    : ElasticsearchServiceRequest(new AcceptInboundCrossClusterSearchConnectionRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new AcceptInboundCrossClusterSearchConnectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ AcceptInboundCrossClusterSearchConnectionRequest::AcceptInboundCrossClusterSearc
  * Constructs a AcceptInboundCrossClusterSearchConnectionRequest object.
  */
 AcceptInboundCrossClusterSearchConnectionRequest::AcceptInboundCrossClusterSearchConnectionRequest()
-    : ElasticsearchServiceRequest(new AcceptInboundCrossClusterSearchConnectionRequestPrivate(ElasticsearchServiceRequest::AcceptInboundCrossClusterSearchConnectionAction, this))
+    : ElasticsearchRequest(new AcceptInboundCrossClusterSearchConnectionRequestPrivate(ElasticsearchRequest::AcceptInboundCrossClusterSearchConnectionAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * AcceptInboundCrossClusterSearchConnectionRequ
 }
 
 /*!
- * \class QtAws::ElasticsearchService::AcceptInboundCrossClusterSearchConnectionRequestPrivate
+ * \class QtAws::Elasticsearch::AcceptInboundCrossClusterSearchConnectionRequestPrivate
  * \brief The AcceptInboundCrossClusterSearchConnectionRequestPrivate class provides private implementation for AcceptInboundCrossClusterSearchConnectionRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a AcceptInboundCrossClusterSearchConnectionRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a AcceptInboundCrossClusterSearchConnectionRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 AcceptInboundCrossClusterSearchConnectionRequestPrivate::AcceptInboundCrossClusterSearchConnectionRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, AcceptInboundCrossClusterSearchConnectionRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, AcceptInboundCrossClusterSearchConnectionRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ AcceptInboundCrossClusterSearchConnectionRequestPrivate::AcceptInboundCrossClust
  */
 AcceptInboundCrossClusterSearchConnectionRequestPrivate::AcceptInboundCrossClusterSearchConnectionRequestPrivate(
     const AcceptInboundCrossClusterSearchConnectionRequestPrivate &other, AcceptInboundCrossClusterSearchConnectionRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

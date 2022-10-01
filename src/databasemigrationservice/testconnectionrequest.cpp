@@ -20,16 +20,16 @@
 #include "testconnectionrequest.h"
 #include "testconnectionrequest_p.h"
 #include "testconnectionresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::TestConnectionRequest
- * \brief The TestConnectionRequest class provides an interface for DatabaseMigrationService TestConnection requests.
+ * \class QtAws::DatabaseMigration::TestConnectionRequest
+ * \brief The TestConnectionRequest class provides an interface for DatabaseMigration TestConnection requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::testConnection
+ * \sa DatabaseMigrationClient::testConnection
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TestConnectionRequest::TestConnectionRequest(const TestConnectionRequest &other)
-    : DatabaseMigrationServiceRequest(new TestConnectionRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new TestConnectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ TestConnectionRequest::TestConnectionRequest(const TestConnectionRequest &other)
  * Constructs a TestConnectionRequest object.
  */
 TestConnectionRequest::TestConnectionRequest()
-    : DatabaseMigrationServiceRequest(new TestConnectionRequestPrivate(DatabaseMigrationServiceRequest::TestConnectionAction, this))
+    : DatabaseMigrationRequest(new TestConnectionRequestPrivate(DatabaseMigrationRequest::TestConnectionAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * TestConnectionRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::TestConnectionRequestPrivate
+ * \class QtAws::DatabaseMigration::TestConnectionRequestPrivate
  * \brief The TestConnectionRequestPrivate class provides private implementation for TestConnectionRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a TestConnectionRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a TestConnectionRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 TestConnectionRequestPrivate::TestConnectionRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, TestConnectionRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, TestConnectionRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ TestConnectionRequestPrivate::TestConnectionRequestPrivate(
  */
 TestConnectionRequestPrivate::TestConnectionRequestPrivate(
     const TestConnectionRequestPrivate &other, TestConnectionRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::ClaimDevicesByClaimCodeResponse
- * \brief The ClaimDevicesByClaimCodeResponse class provides an interace for IoT1ClickDevicesService ClaimDevicesByClaimCode responses.
+ * \class QtAws::IoT1ClickDevices::ClaimDevicesByClaimCodeResponse
+ * \brief The ClaimDevicesByClaimCodeResponse class provides an interace for IoT1ClickDevices ClaimDevicesByClaimCode responses.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::claimDevicesByClaimCode
+ * \sa IoT1ClickDevicesClient::claimDevicesByClaimCode
  */
 
 /*!
@@ -46,7 +46,7 @@ ClaimDevicesByClaimCodeResponse::ClaimDevicesByClaimCodeResponse(
         const ClaimDevicesByClaimCodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoT1ClickDevicesServiceResponse(new ClaimDevicesByClaimCodeResponsePrivate(this), parent)
+    : IoT1ClickDevicesResponse(new ClaimDevicesByClaimCodeResponsePrivate(this), parent)
 {
     setRequest(new ClaimDevicesByClaimCodeRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const ClaimDevicesByClaimCodeRequest * ClaimDevicesByClaimCodeResponse::request(
 
 /*!
  * \reimp
- * Parses a successful IoT1ClickDevicesService ClaimDevicesByClaimCode \a response.
+ * Parses a successful IoT1ClickDevices ClaimDevicesByClaimCode \a response.
  */
 void ClaimDevicesByClaimCodeResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void ClaimDevicesByClaimCodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::ClaimDevicesByClaimCodeResponsePrivate
+ * \class QtAws::IoT1ClickDevices::ClaimDevicesByClaimCodeResponsePrivate
  * \brief The ClaimDevicesByClaimCodeResponsePrivate class provides private implementation for ClaimDevicesByClaimCodeResponse.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
  * Constructs a ClaimDevicesByClaimCodeResponsePrivate object with public implementation \a q.
  */
 ClaimDevicesByClaimCodeResponsePrivate::ClaimDevicesByClaimCodeResponsePrivate(
-    ClaimDevicesByClaimCodeResponse * const q) : IoT1ClickDevicesServiceResponsePrivate(q)
+    ClaimDevicesByClaimCodeResponse * const q) : IoT1ClickDevicesResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a IoT1ClickDevicesService ClaimDevicesByClaimCode response element from \a xml.
+ * Parses a IoT1ClickDevices ClaimDevicesByClaimCode response element from \a xml.
  */
 void ClaimDevicesByClaimCodeResponsePrivate::parseClaimDevicesByClaimCodeResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void ClaimDevicesByClaimCodeResponsePrivate::parseClaimDevicesByClaimCodeRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

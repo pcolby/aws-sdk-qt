@@ -20,16 +20,16 @@
 #include "modifyeventsubscriptionrequest.h"
 #include "modifyeventsubscriptionrequest_p.h"
 #include "modifyeventsubscriptionresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::ModifyEventSubscriptionRequest
- * \brief The ModifyEventSubscriptionRequest class provides an interface for DatabaseMigrationService ModifyEventSubscription requests.
+ * \class QtAws::DatabaseMigration::ModifyEventSubscriptionRequest
+ * \brief The ModifyEventSubscriptionRequest class provides an interface for DatabaseMigration ModifyEventSubscription requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::modifyEventSubscription
+ * \sa DatabaseMigrationClient::modifyEventSubscription
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest(const ModifyEventSubscriptionRequest &other)
-    : DatabaseMigrationServiceRequest(new ModifyEventSubscriptionRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new ModifyEventSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest(const ModifyEvent
  * Constructs a ModifyEventSubscriptionRequest object.
  */
 ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest()
-    : DatabaseMigrationServiceRequest(new ModifyEventSubscriptionRequestPrivate(DatabaseMigrationServiceRequest::ModifyEventSubscriptionAction, this))
+    : DatabaseMigrationRequest(new ModifyEventSubscriptionRequestPrivate(DatabaseMigrationRequest::ModifyEventSubscriptionAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * ModifyEventSubscriptionRequest::response(QNet
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::ModifyEventSubscriptionRequestPrivate
+ * \class QtAws::DatabaseMigration::ModifyEventSubscriptionRequestPrivate
  * \brief The ModifyEventSubscriptionRequestPrivate class provides private implementation for ModifyEventSubscriptionRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a ModifyEventSubscriptionRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a ModifyEventSubscriptionRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, ModifyEventSubscriptionRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, ModifyEventSubscriptionRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
  */
 ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
     const ModifyEventSubscriptionRequestPrivate &other, ModifyEventSubscriptionRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeEndpointTypesResponse
- * \brief The DescribeEndpointTypesResponse class provides an interace for DatabaseMigrationService DescribeEndpointTypes responses.
+ * \class QtAws::DatabaseMigration::DescribeEndpointTypesResponse
+ * \brief The DescribeEndpointTypesResponse class provides an interace for DatabaseMigration DescribeEndpointTypes responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeEndpointTypes
+ * \sa DatabaseMigrationClient::describeEndpointTypes
  */
 
 /*!
@@ -55,7 +55,7 @@ DescribeEndpointTypesResponse::DescribeEndpointTypesResponse(
         const DescribeEndpointTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeEndpointTypesResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DescribeEndpointTypesResponsePrivate(this), parent)
 {
     setRequest(new DescribeEndpointTypesRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DescribeEndpointTypesRequest * DescribeEndpointTypesResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DescribeEndpointTypes \a response.
+ * Parses a successful DatabaseMigration DescribeEndpointTypes \a response.
  */
 void DescribeEndpointTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DescribeEndpointTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeEndpointTypesResponsePrivate
+ * \class QtAws::DatabaseMigration::DescribeEndpointTypesResponsePrivate
  * \brief The DescribeEndpointTypesResponsePrivate class provides private implementation for DescribeEndpointTypesResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DescribeEndpointTypesResponsePrivate object with public implementation \a q.
  */
 DescribeEndpointTypesResponsePrivate::DescribeEndpointTypesResponsePrivate(
-    DescribeEndpointTypesResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DescribeEndpointTypesResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DescribeEndpointTypes response element from \a xml.
+ * Parses a DatabaseMigration DescribeEndpointTypes response element from \a xml.
  */
 void DescribeEndpointTypesResponsePrivate::parseDescribeEndpointTypesResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribeEndpointTypesResponsePrivate::parseDescribeEndpointTypesResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

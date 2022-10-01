@@ -20,15 +20,15 @@
 #ifndef QTAWS_CREATEAPPLICATIONRESPONSE_H
 #define QTAWS_CREATEAPPLICATIONRESPONSE_H
 
-#include "applicationdiscoveryserviceresponse.h"
+#include "applicationdiscoveryresponse.h"
 #include "createapplicationrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class CreateApplicationResponsePrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT CreateApplicationResponse : public ApplicationDiscoveryServiceResponse {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT CreateApplicationResponse : public ApplicationDiscoveryResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

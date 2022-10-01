@@ -20,18 +20,18 @@
 #ifndef QTAWS_UPDATEDEVICESTATEREQUEST_P_H
 #define QTAWS_UPDATEDEVICESTATEREQUEST_P_H
 
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 #include "updatedevicestaterequest.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 class UpdateDeviceStateRequest;
 
-class UpdateDeviceStateRequestPrivate : public IoT1ClickDevicesServiceRequestPrivate {
+class UpdateDeviceStateRequestPrivate : public IoT1ClickDevicesRequestPrivate {
 
 public:
-    UpdateDeviceStateRequestPrivate(const IoT1ClickDevicesServiceRequest::Action action,
+    UpdateDeviceStateRequestPrivate(const IoT1ClickDevicesRequest::Action action,
                                    UpdateDeviceStateRequest * const q);
     UpdateDeviceStateRequestPrivate(const UpdateDeviceStateRequestPrivate &other,
                                    UpdateDeviceStateRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeFleetAdvisorCollectorsResponse
- * \brief The DescribeFleetAdvisorCollectorsResponse class provides an interace for DatabaseMigrationService DescribeFleetAdvisorCollectors responses.
+ * \class QtAws::DatabaseMigration::DescribeFleetAdvisorCollectorsResponse
+ * \brief The DescribeFleetAdvisorCollectorsResponse class provides an interace for DatabaseMigration DescribeFleetAdvisorCollectors responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeFleetAdvisorCollectors
+ * \sa DatabaseMigrationClient::describeFleetAdvisorCollectors
  */
 
 /*!
@@ -55,7 +55,7 @@ DescribeFleetAdvisorCollectorsResponse::DescribeFleetAdvisorCollectorsResponse(
         const DescribeFleetAdvisorCollectorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeFleetAdvisorCollectorsResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DescribeFleetAdvisorCollectorsResponsePrivate(this), parent)
 {
     setRequest(new DescribeFleetAdvisorCollectorsRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DescribeFleetAdvisorCollectorsRequest * DescribeFleetAdvisorCollectorsResp
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DescribeFleetAdvisorCollectors \a response.
+ * Parses a successful DatabaseMigration DescribeFleetAdvisorCollectors \a response.
  */
 void DescribeFleetAdvisorCollectorsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DescribeFleetAdvisorCollectorsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeFleetAdvisorCollectorsResponsePrivate
+ * \class QtAws::DatabaseMigration::DescribeFleetAdvisorCollectorsResponsePrivate
  * \brief The DescribeFleetAdvisorCollectorsResponsePrivate class provides private implementation for DescribeFleetAdvisorCollectorsResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DescribeFleetAdvisorCollectorsResponsePrivate object with public implementation \a q.
  */
 DescribeFleetAdvisorCollectorsResponsePrivate::DescribeFleetAdvisorCollectorsResponsePrivate(
-    DescribeFleetAdvisorCollectorsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DescribeFleetAdvisorCollectorsResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DescribeFleetAdvisorCollectors response element from \a xml.
+ * Parses a DatabaseMigration DescribeFleetAdvisorCollectors response element from \a xml.
  */
 void DescribeFleetAdvisorCollectorsResponsePrivate::parseDescribeFleetAdvisorCollectorsResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribeFleetAdvisorCollectorsResponsePrivate::parseDescribeFleetAdvisorCol
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

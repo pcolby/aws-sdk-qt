@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::RebootReplicationInstanceResponse
- * \brief The RebootReplicationInstanceResponse class provides an interace for DatabaseMigrationService RebootReplicationInstance responses.
+ * \class QtAws::DatabaseMigration::RebootReplicationInstanceResponse
+ * \brief The RebootReplicationInstanceResponse class provides an interace for DatabaseMigration RebootReplicationInstance responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::rebootReplicationInstance
+ * \sa DatabaseMigrationClient::rebootReplicationInstance
  */
 
 /*!
@@ -55,7 +55,7 @@ RebootReplicationInstanceResponse::RebootReplicationInstanceResponse(
         const RebootReplicationInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new RebootReplicationInstanceResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new RebootReplicationInstanceResponsePrivate(this), parent)
 {
     setRequest(new RebootReplicationInstanceRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const RebootReplicationInstanceRequest * RebootReplicationInstanceResponse::requ
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService RebootReplicationInstance \a response.
+ * Parses a successful DatabaseMigration RebootReplicationInstance \a response.
  */
 void RebootReplicationInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void RebootReplicationInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::RebootReplicationInstanceResponsePrivate
+ * \class QtAws::DatabaseMigration::RebootReplicationInstanceResponsePrivate
  * \brief The RebootReplicationInstanceResponsePrivate class provides private implementation for RebootReplicationInstanceResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a RebootReplicationInstanceResponsePrivate object with public implementation \a q.
  */
 RebootReplicationInstanceResponsePrivate::RebootReplicationInstanceResponsePrivate(
-    RebootReplicationInstanceResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    RebootReplicationInstanceResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService RebootReplicationInstance response element from \a xml.
+ * Parses a DatabaseMigration RebootReplicationInstance response element from \a xml.
  */
 void RebootReplicationInstanceResponsePrivate::parseRebootReplicationInstanceResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void RebootReplicationInstanceResponsePrivate::parseRebootReplicationInstanceRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

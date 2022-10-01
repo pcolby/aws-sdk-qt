@@ -17,12 +17,12 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_LEXRUNTIMESERVICEREQUEST_H
-#define QTAWS_LEXRUNTIMESERVICEREQUEST_H
+#ifndef QTAWS_LEXRUNTIMEREQUEST_H
+#define QTAWS_LEXRUNTIMEREQUEST_H
 
 #include "core/awsabstractrequest.h"
 
-#include "qtawslexruntimeserviceglobal.h"
+#include "qtawslexruntimeglobal.h"
 
 #include <QFlags>
 #include <QObject>
@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
-class LexRuntimeServiceRequestPrivate;
+class LexRuntimeRequestPrivate;
 
-class QTAWSLEXRUNTIMESERVICE_EXPORT LexRuntimeServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSLEXRUNTIME_EXPORT LexRuntimeRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by LexRuntimeService.
+    /// Actions supported by LexRuntime.
     enum Action {
         DeleteSessionAction,
         GetSessionAction,
@@ -47,9 +47,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    LexRuntimeServiceRequest(const Action action);
-    LexRuntimeServiceRequest(const LexRuntimeServiceRequest &other);
-    LexRuntimeServiceRequest &operator=(const LexRuntimeServiceRequest &other);
+    LexRuntimeRequest(const Action action);
+    LexRuntimeRequest(const LexRuntimeRequest &other);
+    LexRuntimeRequest &operator=(const LexRuntimeRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -58,12 +58,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const LexRuntimeServiceRequest &other) const;
+    virtual bool operator==(const LexRuntimeRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit LexRuntimeServiceRequest(LexRuntimeServiceRequestPrivate * const d);
+    explicit LexRuntimeRequest(LexRuntimeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -76,11 +76,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(LexRuntimeServiceRequest)
+    Q_DECLARE_PRIVATE(LexRuntimeRequest)
 
 };
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws
 
 #endif

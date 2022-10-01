@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateReplicationTaskResponse
- * \brief The CreateReplicationTaskResponse class provides an interace for DatabaseMigrationService CreateReplicationTask responses.
+ * \class QtAws::DatabaseMigration::CreateReplicationTaskResponse
+ * \brief The CreateReplicationTaskResponse class provides an interace for DatabaseMigration CreateReplicationTask responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::createReplicationTask
+ * \sa DatabaseMigrationClient::createReplicationTask
  */
 
 /*!
@@ -55,7 +55,7 @@ CreateReplicationTaskResponse::CreateReplicationTaskResponse(
         const CreateReplicationTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new CreateReplicationTaskResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new CreateReplicationTaskResponsePrivate(this), parent)
 {
     setRequest(new CreateReplicationTaskRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const CreateReplicationTaskRequest * CreateReplicationTaskResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService CreateReplicationTask \a response.
+ * Parses a successful DatabaseMigration CreateReplicationTask \a response.
  */
 void CreateReplicationTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void CreateReplicationTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateReplicationTaskResponsePrivate
+ * \class QtAws::DatabaseMigration::CreateReplicationTaskResponsePrivate
  * \brief The CreateReplicationTaskResponsePrivate class provides private implementation for CreateReplicationTaskResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a CreateReplicationTaskResponsePrivate object with public implementation \a q.
  */
 CreateReplicationTaskResponsePrivate::CreateReplicationTaskResponsePrivate(
-    CreateReplicationTaskResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    CreateReplicationTaskResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService CreateReplicationTask response element from \a xml.
+ * Parses a DatabaseMigration CreateReplicationTask response element from \a xml.
  */
 void CreateReplicationTaskResponsePrivate::parseCreateReplicationTaskResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void CreateReplicationTaskResponsePrivate::parseCreateReplicationTaskResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

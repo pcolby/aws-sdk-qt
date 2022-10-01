@@ -20,14 +20,14 @@
 #ifndef QTAWS_DELETEOUTBOUNDCROSSCLUSTERSEARCHCONNECTIONREQUEST_H
 #define QTAWS_DELETEOUTBOUNDCROSSCLUSTERSEARCHCONNECTIONREQUEST_H
 
-#include "elasticsearchservicerequest.h"
+#include "elasticsearchrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class DeleteOutboundCrossClusterSearchConnectionRequestPrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT DeleteOutboundCrossClusterSearchConnectionRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCH_EXPORT DeleteOutboundCrossClusterSearchConnectionRequest : public ElasticsearchRequest {
 
 public:
     DeleteOutboundCrossClusterSearchConnectionRequest(const DeleteOutboundCrossClusterSearchConnectionRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

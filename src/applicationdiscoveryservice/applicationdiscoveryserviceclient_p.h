@@ -17,30 +17,30 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_APPLICATIONDISCOVERYSERVICECLIENT_P_H
-#define QTAWS_APPLICATIONDISCOVERYSERVICECLIENT_P_H
+#ifndef QTAWS_APPLICATIONDISCOVERYCLIENT_P_H
+#define QTAWS_APPLICATIONDISCOVERYCLIENT_P_H
 
 #include "core/awsabstractclient_p.h"
 
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
-class ApplicationDiscoveryServiceClient;
+class ApplicationDiscoveryClient;
 
-class ApplicationDiscoveryServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ApplicationDiscoveryClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit ApplicationDiscoveryServiceClientPrivate(ApplicationDiscoveryServiceClient * const q);
+    explicit ApplicationDiscoveryClientPrivate(ApplicationDiscoveryClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(ApplicationDiscoveryServiceClient)
-    Q_DISABLE_COPY(ApplicationDiscoveryServiceClientPrivate)
+    Q_DECLARE_PUBLIC(ApplicationDiscoveryClient)
+    Q_DISABLE_COPY(ApplicationDiscoveryClientPrivate)
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateReplicationInstanceResponse
- * \brief The CreateReplicationInstanceResponse class provides an interace for DatabaseMigrationService CreateReplicationInstance responses.
+ * \class QtAws::DatabaseMigration::CreateReplicationInstanceResponse
+ * \brief The CreateReplicationInstanceResponse class provides an interace for DatabaseMigration CreateReplicationInstance responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::createReplicationInstance
+ * \sa DatabaseMigrationClient::createReplicationInstance
  */
 
 /*!
@@ -55,7 +55,7 @@ CreateReplicationInstanceResponse::CreateReplicationInstanceResponse(
         const CreateReplicationInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new CreateReplicationInstanceResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new CreateReplicationInstanceResponsePrivate(this), parent)
 {
     setRequest(new CreateReplicationInstanceRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const CreateReplicationInstanceRequest * CreateReplicationInstanceResponse::requ
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService CreateReplicationInstance \a response.
+ * Parses a successful DatabaseMigration CreateReplicationInstance \a response.
  */
 void CreateReplicationInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void CreateReplicationInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateReplicationInstanceResponsePrivate
+ * \class QtAws::DatabaseMigration::CreateReplicationInstanceResponsePrivate
  * \brief The CreateReplicationInstanceResponsePrivate class provides private implementation for CreateReplicationInstanceResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a CreateReplicationInstanceResponsePrivate object with public implementation \a q.
  */
 CreateReplicationInstanceResponsePrivate::CreateReplicationInstanceResponsePrivate(
-    CreateReplicationInstanceResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    CreateReplicationInstanceResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService CreateReplicationInstance response element from \a xml.
+ * Parses a DatabaseMigration CreateReplicationInstance response element from \a xml.
  */
 void CreateReplicationInstanceResponsePrivate::parseCreateReplicationInstanceResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void CreateReplicationInstanceResponsePrivate::parseCreateReplicationInstanceRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -20,16 +20,16 @@
 #include "createreplicationinstancerequest.h"
 #include "createreplicationinstancerequest_p.h"
 #include "createreplicationinstanceresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateReplicationInstanceRequest
- * \brief The CreateReplicationInstanceRequest class provides an interface for DatabaseMigrationService CreateReplicationInstance requests.
+ * \class QtAws::DatabaseMigration::CreateReplicationInstanceRequest
+ * \brief The CreateReplicationInstanceRequest class provides an interface for DatabaseMigration CreateReplicationInstance requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::createReplicationInstance
+ * \sa DatabaseMigrationClient::createReplicationInstance
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateReplicationInstanceRequest::CreateReplicationInstanceRequest(const CreateReplicationInstanceRequest &other)
-    : DatabaseMigrationServiceRequest(new CreateReplicationInstanceRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new CreateReplicationInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ CreateReplicationInstanceRequest::CreateReplicationInstanceRequest(const CreateR
  * Constructs a CreateReplicationInstanceRequest object.
  */
 CreateReplicationInstanceRequest::CreateReplicationInstanceRequest()
-    : DatabaseMigrationServiceRequest(new CreateReplicationInstanceRequestPrivate(DatabaseMigrationServiceRequest::CreateReplicationInstanceAction, this))
+    : DatabaseMigrationRequest(new CreateReplicationInstanceRequestPrivate(DatabaseMigrationRequest::CreateReplicationInstanceAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * CreateReplicationInstanceRequest::response(QN
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateReplicationInstanceRequestPrivate
+ * \class QtAws::DatabaseMigration::CreateReplicationInstanceRequestPrivate
  * \brief The CreateReplicationInstanceRequestPrivate class provides private implementation for CreateReplicationInstanceRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a CreateReplicationInstanceRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a CreateReplicationInstanceRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 CreateReplicationInstanceRequestPrivate::CreateReplicationInstanceRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, CreateReplicationInstanceRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, CreateReplicationInstanceRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ CreateReplicationInstanceRequestPrivate::CreateReplicationInstanceRequestPrivate
  */
 CreateReplicationInstanceRequestPrivate::CreateReplicationInstanceRequestPrivate(
     const CreateReplicationInstanceRequestPrivate &other, CreateReplicationInstanceRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

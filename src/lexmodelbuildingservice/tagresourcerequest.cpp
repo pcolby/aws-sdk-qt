@@ -20,30 +20,30 @@
 #include "tagresourcerequest.h"
 #include "tagresourcerequest_p.h"
 #include "tagresourceresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for LexModelBuildingService TagResource requests.
+ * \class QtAws::LexModelBuilding::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for LexModelBuilding TagResource requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::tagResource
+ * \sa LexModelBuildingClient::tagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
-    : LexModelBuildingServiceRequest(new TagResourceRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new TagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
  * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
-    : LexModelBuildingServiceRequest(new TagResourceRequestPrivate(LexModelBuildingServiceRequest::TagResourceAction, this))
+    : LexModelBuildingRequest(new TagResourceRequestPrivate(LexModelBuildingRequest::TagResourceAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::TagResourceRequestPrivate
+ * \class QtAws::LexModelBuilding::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a TagResourceRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a TagResourceRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, TagResourceRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, TagResourceRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

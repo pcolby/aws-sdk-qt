@@ -20,16 +20,16 @@
 #include "dissociatepackagerequest.h"
 #include "dissociatepackagerequest_p.h"
 #include "dissociatepackageresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DissociatePackageRequest
- * \brief The DissociatePackageRequest class provides an interface for ElasticsearchService DissociatePackage requests.
+ * \class QtAws::Elasticsearch::DissociatePackageRequest
+ * \brief The DissociatePackageRequest class provides an interface for Elasticsearch DissociatePackage requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::dissociatePackage
+ * \sa ElasticsearchClient::dissociatePackage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DissociatePackageRequest::DissociatePackageRequest(const DissociatePackageRequest &other)
-    : ElasticsearchServiceRequest(new DissociatePackageRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new DissociatePackageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DissociatePackageRequest::DissociatePackageRequest(const DissociatePackageReques
  * Constructs a DissociatePackageRequest object.
  */
 DissociatePackageRequest::DissociatePackageRequest()
-    : ElasticsearchServiceRequest(new DissociatePackageRequestPrivate(ElasticsearchServiceRequest::DissociatePackageAction, this))
+    : ElasticsearchRequest(new DissociatePackageRequestPrivate(ElasticsearchRequest::DissociatePackageAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DissociatePackageRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DissociatePackageRequestPrivate
+ * \class QtAws::Elasticsearch::DissociatePackageRequestPrivate
  * \brief The DissociatePackageRequestPrivate class provides private implementation for DissociatePackageRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a DissociatePackageRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a DissociatePackageRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 DissociatePackageRequestPrivate::DissociatePackageRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, DissociatePackageRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, DissociatePackageRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DissociatePackageRequestPrivate::DissociatePackageRequestPrivate(
  */
 DissociatePackageRequestPrivate::DissociatePackageRequestPrivate(
     const DissociatePackageRequestPrivate &other, DissociatePackageRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

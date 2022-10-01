@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::FinalizeDeviceClaimResponse
- * \brief The FinalizeDeviceClaimResponse class provides an interace for IoT1ClickDevicesService FinalizeDeviceClaim responses.
+ * \class QtAws::IoT1ClickDevices::FinalizeDeviceClaimResponse
+ * \brief The FinalizeDeviceClaimResponse class provides an interace for IoT1ClickDevices FinalizeDeviceClaim responses.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::finalizeDeviceClaim
+ * \sa IoT1ClickDevicesClient::finalizeDeviceClaim
  */
 
 /*!
@@ -46,7 +46,7 @@ FinalizeDeviceClaimResponse::FinalizeDeviceClaimResponse(
         const FinalizeDeviceClaimRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoT1ClickDevicesServiceResponse(new FinalizeDeviceClaimResponsePrivate(this), parent)
+    : IoT1ClickDevicesResponse(new FinalizeDeviceClaimResponsePrivate(this), parent)
 {
     setRequest(new FinalizeDeviceClaimRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const FinalizeDeviceClaimRequest * FinalizeDeviceClaimResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IoT1ClickDevicesService FinalizeDeviceClaim \a response.
+ * Parses a successful IoT1ClickDevices FinalizeDeviceClaim \a response.
  */
 void FinalizeDeviceClaimResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void FinalizeDeviceClaimResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::FinalizeDeviceClaimResponsePrivate
+ * \class QtAws::IoT1ClickDevices::FinalizeDeviceClaimResponsePrivate
  * \brief The FinalizeDeviceClaimResponsePrivate class provides private implementation for FinalizeDeviceClaimResponse.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
  * Constructs a FinalizeDeviceClaimResponsePrivate object with public implementation \a q.
  */
 FinalizeDeviceClaimResponsePrivate::FinalizeDeviceClaimResponsePrivate(
-    FinalizeDeviceClaimResponse * const q) : IoT1ClickDevicesServiceResponsePrivate(q)
+    FinalizeDeviceClaimResponse * const q) : IoT1ClickDevicesResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a IoT1ClickDevicesService FinalizeDeviceClaim response element from \a xml.
+ * Parses a IoT1ClickDevices FinalizeDeviceClaim response element from \a xml.
  */
 void FinalizeDeviceClaimResponsePrivate::parseFinalizeDeviceClaimResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void FinalizeDeviceClaimResponsePrivate::parseFinalizeDeviceClaimResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

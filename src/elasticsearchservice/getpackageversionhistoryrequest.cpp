@@ -20,16 +20,16 @@
 #include "getpackageversionhistoryrequest.h"
 #include "getpackageversionhistoryrequest_p.h"
 #include "getpackageversionhistoryresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::GetPackageVersionHistoryRequest
- * \brief The GetPackageVersionHistoryRequest class provides an interface for ElasticsearchService GetPackageVersionHistory requests.
+ * \class QtAws::Elasticsearch::GetPackageVersionHistoryRequest
+ * \brief The GetPackageVersionHistoryRequest class provides an interface for Elasticsearch GetPackageVersionHistory requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::getPackageVersionHistory
+ * \sa ElasticsearchClient::getPackageVersionHistory
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetPackageVersionHistoryRequest::GetPackageVersionHistoryRequest(const GetPackageVersionHistoryRequest &other)
-    : ElasticsearchServiceRequest(new GetPackageVersionHistoryRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new GetPackageVersionHistoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ GetPackageVersionHistoryRequest::GetPackageVersionHistoryRequest(const GetPackag
  * Constructs a GetPackageVersionHistoryRequest object.
  */
 GetPackageVersionHistoryRequest::GetPackageVersionHistoryRequest()
-    : ElasticsearchServiceRequest(new GetPackageVersionHistoryRequestPrivate(ElasticsearchServiceRequest::GetPackageVersionHistoryAction, this))
+    : ElasticsearchRequest(new GetPackageVersionHistoryRequestPrivate(ElasticsearchRequest::GetPackageVersionHistoryAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * GetPackageVersionHistoryRequest::response(QNe
 }
 
 /*!
- * \class QtAws::ElasticsearchService::GetPackageVersionHistoryRequestPrivate
+ * \class QtAws::Elasticsearch::GetPackageVersionHistoryRequestPrivate
  * \brief The GetPackageVersionHistoryRequestPrivate class provides private implementation for GetPackageVersionHistoryRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a GetPackageVersionHistoryRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a GetPackageVersionHistoryRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 GetPackageVersionHistoryRequestPrivate::GetPackageVersionHistoryRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, GetPackageVersionHistoryRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, GetPackageVersionHistoryRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ GetPackageVersionHistoryRequestPrivate::GetPackageVersionHistoryRequestPrivate(
  */
 GetPackageVersionHistoryRequestPrivate::GetPackageVersionHistoryRequestPrivate(
     const GetPackageVersionHistoryRequestPrivate &other, GetPackageVersionHistoryRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

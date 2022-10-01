@@ -20,16 +20,16 @@
 #include "describedomainautotunesrequest.h"
 #include "describedomainautotunesrequest_p.h"
 #include "describedomainautotunesresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeDomainAutoTunesRequest
- * \brief The DescribeDomainAutoTunesRequest class provides an interface for ElasticsearchService DescribeDomainAutoTunes requests.
+ * \class QtAws::Elasticsearch::DescribeDomainAutoTunesRequest
+ * \brief The DescribeDomainAutoTunesRequest class provides an interface for Elasticsearch DescribeDomainAutoTunes requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describeDomainAutoTunes
+ * \sa ElasticsearchClient::describeDomainAutoTunes
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeDomainAutoTunesRequest::DescribeDomainAutoTunesRequest(const DescribeDomainAutoTunesRequest &other)
-    : ElasticsearchServiceRequest(new DescribeDomainAutoTunesRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new DescribeDomainAutoTunesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DescribeDomainAutoTunesRequest::DescribeDomainAutoTunesRequest(const DescribeDom
  * Constructs a DescribeDomainAutoTunesRequest object.
  */
 DescribeDomainAutoTunesRequest::DescribeDomainAutoTunesRequest()
-    : ElasticsearchServiceRequest(new DescribeDomainAutoTunesRequestPrivate(ElasticsearchServiceRequest::DescribeDomainAutoTunesAction, this))
+    : ElasticsearchRequest(new DescribeDomainAutoTunesRequestPrivate(ElasticsearchRequest::DescribeDomainAutoTunesAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainAutoTunesRequest::response(QNet
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeDomainAutoTunesRequestPrivate
+ * \class QtAws::Elasticsearch::DescribeDomainAutoTunesRequestPrivate
  * \brief The DescribeDomainAutoTunesRequestPrivate class provides private implementation for DescribeDomainAutoTunesRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a DescribeDomainAutoTunesRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a DescribeDomainAutoTunesRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 DescribeDomainAutoTunesRequestPrivate::DescribeDomainAutoTunesRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, DescribeDomainAutoTunesRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, DescribeDomainAutoTunesRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DescribeDomainAutoTunesRequestPrivate::DescribeDomainAutoTunesRequestPrivate(
  */
 DescribeDomainAutoTunesRequestPrivate::DescribeDomainAutoTunesRequestPrivate(
     const DescribeDomainAutoTunesRequestPrivate &other, DescribeDomainAutoTunesRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

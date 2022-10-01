@@ -25,16 +25,16 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::UntagResourcesResponse
- * \brief The UntagResourcesResponse class provides an interace for ResourceGroupsTaggingApi UntagResources responses.
+ * \class QtAws::ResourceGroupsTagging::UntagResourcesResponse
+ * \brief The UntagResourcesResponse class provides an interace for ResourceGroupsTagging UntagResources responses.
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  *
  *
- * \sa ResourceGroupsTaggingApiClient::untagResources
+ * \sa ResourceGroupsTaggingClient::untagResources
  */
 
 /*!
@@ -44,7 +44,7 @@ UntagResourcesResponse::UntagResourcesResponse(
         const UntagResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResourceGroupsTaggingApiResponse(new UntagResourcesResponsePrivate(this), parent)
+    : ResourceGroupsTaggingResponse(new UntagResourcesResponsePrivate(this), parent)
 {
     setRequest(new UntagResourcesRequest(request));
     setReply(reply);
@@ -61,7 +61,7 @@ const UntagResourcesRequest * UntagResourcesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ResourceGroupsTaggingApi UntagResources \a response.
+ * Parses a successful ResourceGroupsTagging UntagResources \a response.
  */
 void UntagResourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +71,24 @@ void UntagResourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::UntagResourcesResponsePrivate
+ * \class QtAws::ResourceGroupsTagging::UntagResourcesResponsePrivate
  * \brief The UntagResourcesResponsePrivate class provides private implementation for UntagResourcesResponse.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  */
 
 /*!
  * Constructs a UntagResourcesResponsePrivate object with public implementation \a q.
  */
 UntagResourcesResponsePrivate::UntagResourcesResponsePrivate(
-    UntagResourcesResponse * const q) : ResourceGroupsTaggingApiResponsePrivate(q)
+    UntagResourcesResponse * const q) : ResourceGroupsTaggingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ResourceGroupsTaggingApi UntagResources response element from \a xml.
+ * Parses a ResourceGroupsTagging UntagResources response element from \a xml.
  */
 void UntagResourcesResponsePrivate::parseUntagResourcesResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +96,5 @@ void UntagResourcesResponsePrivate::parseUntagResourcesResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws

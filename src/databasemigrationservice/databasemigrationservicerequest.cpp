@@ -17,97 +17,97 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "databasemigrationservicerequest.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceRequest
- * \brief The DatabaseMigrationServiceRequest class provides an interface for DatabaseMigrationService requests.
+ * \class QtAws::DatabaseMigration::DatabaseMigrationRequest
+ * \brief The DatabaseMigrationRequest class provides an interface for DatabaseMigration requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * \enum DatabaseMigrationServiceRequest::Action
+ * \enum DatabaseMigrationRequest::Action
  *
- * This enum describes the actions that can be performed as DatabaseMigrationService
+ * This enum describes the actions that can be performed as DatabaseMigration
  * requests.
  *
- * \value AddTagsToResourceAction DatabaseMigrationService AddTagsToResource action.
- * \value ApplyPendingMaintenanceActionAction DatabaseMigrationService ApplyPendingMaintenanceAction action.
- * \value CancelReplicationTaskAssessmentRunAction DatabaseMigrationService CancelReplicationTaskAssessmentRun action.
- * \value CreateEndpointAction DatabaseMigrationService CreateEndpoint action.
- * \value CreateEventSubscriptionAction DatabaseMigrationService CreateEventSubscription action.
- * \value CreateFleetAdvisorCollectorAction DatabaseMigrationService CreateFleetAdvisorCollector action.
- * \value CreateReplicationInstanceAction DatabaseMigrationService CreateReplicationInstance action.
- * \value CreateReplicationSubnetGroupAction DatabaseMigrationService CreateReplicationSubnetGroup action.
- * \value CreateReplicationTaskAction DatabaseMigrationService CreateReplicationTask action.
- * \value DeleteCertificateAction DatabaseMigrationService DeleteCertificate action.
- * \value DeleteConnectionAction DatabaseMigrationService DeleteConnection action.
- * \value DeleteEndpointAction DatabaseMigrationService DeleteEndpoint action.
- * \value DeleteEventSubscriptionAction DatabaseMigrationService DeleteEventSubscription action.
- * \value DeleteFleetAdvisorCollectorAction DatabaseMigrationService DeleteFleetAdvisorCollector action.
- * \value DeleteFleetAdvisorDatabasesAction DatabaseMigrationService DeleteFleetAdvisorDatabases action.
- * \value DeleteReplicationInstanceAction DatabaseMigrationService DeleteReplicationInstance action.
- * \value DeleteReplicationSubnetGroupAction DatabaseMigrationService DeleteReplicationSubnetGroup action.
- * \value DeleteReplicationTaskAction DatabaseMigrationService DeleteReplicationTask action.
- * \value DeleteReplicationTaskAssessmentRunAction DatabaseMigrationService DeleteReplicationTaskAssessmentRun action.
- * \value DescribeAccountAttributesAction DatabaseMigrationService DescribeAccountAttributes action.
- * \value DescribeApplicableIndividualAssessmentsAction DatabaseMigrationService DescribeApplicableIndividualAssessments action.
- * \value DescribeCertificatesAction DatabaseMigrationService DescribeCertificates action.
- * \value DescribeConnectionsAction DatabaseMigrationService DescribeConnections action.
- * \value DescribeEndpointSettingsAction DatabaseMigrationService DescribeEndpointSettings action.
- * \value DescribeEndpointTypesAction DatabaseMigrationService DescribeEndpointTypes action.
- * \value DescribeEndpointsAction DatabaseMigrationService DescribeEndpoints action.
- * \value DescribeEventCategoriesAction DatabaseMigrationService DescribeEventCategories action.
- * \value DescribeEventSubscriptionsAction DatabaseMigrationService DescribeEventSubscriptions action.
- * \value DescribeEventsAction DatabaseMigrationService DescribeEvents action.
- * \value DescribeFleetAdvisorCollectorsAction DatabaseMigrationService DescribeFleetAdvisorCollectors action.
- * \value DescribeFleetAdvisorDatabasesAction DatabaseMigrationService DescribeFleetAdvisorDatabases action.
- * \value DescribeFleetAdvisorLsaAnalysisAction DatabaseMigrationService DescribeFleetAdvisorLsaAnalysis action.
- * \value DescribeFleetAdvisorSchemaObjectSummaryAction DatabaseMigrationService DescribeFleetAdvisorSchemaObjectSummary action.
- * \value DescribeFleetAdvisorSchemasAction DatabaseMigrationService DescribeFleetAdvisorSchemas action.
- * \value DescribeOrderableReplicationInstancesAction DatabaseMigrationService DescribeOrderableReplicationInstances action.
- * \value DescribePendingMaintenanceActionsAction DatabaseMigrationService DescribePendingMaintenanceActions action.
- * \value DescribeRefreshSchemasStatusAction DatabaseMigrationService DescribeRefreshSchemasStatus action.
- * \value DescribeReplicationInstanceTaskLogsAction DatabaseMigrationService DescribeReplicationInstanceTaskLogs action.
- * \value DescribeReplicationInstancesAction DatabaseMigrationService DescribeReplicationInstances action.
- * \value DescribeReplicationSubnetGroupsAction DatabaseMigrationService DescribeReplicationSubnetGroups action.
- * \value DescribeReplicationTaskAssessmentResultsAction DatabaseMigrationService DescribeReplicationTaskAssessmentResults action.
- * \value DescribeReplicationTaskAssessmentRunsAction DatabaseMigrationService DescribeReplicationTaskAssessmentRuns action.
- * \value DescribeReplicationTaskIndividualAssessmentsAction DatabaseMigrationService DescribeReplicationTaskIndividualAssessments action.
- * \value DescribeReplicationTasksAction DatabaseMigrationService DescribeReplicationTasks action.
- * \value DescribeSchemasAction DatabaseMigrationService DescribeSchemas action.
- * \value DescribeTableStatisticsAction DatabaseMigrationService DescribeTableStatistics action.
- * \value ImportCertificateAction DatabaseMigrationService ImportCertificate action.
- * \value ListTagsForResourceAction DatabaseMigrationService ListTagsForResource action.
- * \value ModifyEndpointAction DatabaseMigrationService ModifyEndpoint action.
- * \value ModifyEventSubscriptionAction DatabaseMigrationService ModifyEventSubscription action.
- * \value ModifyReplicationInstanceAction DatabaseMigrationService ModifyReplicationInstance action.
- * \value ModifyReplicationSubnetGroupAction DatabaseMigrationService ModifyReplicationSubnetGroup action.
- * \value ModifyReplicationTaskAction DatabaseMigrationService ModifyReplicationTask action.
- * \value MoveReplicationTaskAction DatabaseMigrationService MoveReplicationTask action.
- * \value RebootReplicationInstanceAction DatabaseMigrationService RebootReplicationInstance action.
- * \value RefreshSchemasAction DatabaseMigrationService RefreshSchemas action.
- * \value ReloadTablesAction DatabaseMigrationService ReloadTables action.
- * \value RemoveTagsFromResourceAction DatabaseMigrationService RemoveTagsFromResource action.
- * \value RunFleetAdvisorLsaAnalysisAction DatabaseMigrationService RunFleetAdvisorLsaAnalysis action.
- * \value StartReplicationTaskAction DatabaseMigrationService StartReplicationTask action.
- * \value StartReplicationTaskAssessmentAction DatabaseMigrationService StartReplicationTaskAssessment action.
- * \value StartReplicationTaskAssessmentRunAction DatabaseMigrationService StartReplicationTaskAssessmentRun action.
- * \value StopReplicationTaskAction DatabaseMigrationService StopReplicationTask action.
- * \value TestConnectionAction DatabaseMigrationService TestConnection action.
- * \value UpdateSubscriptionsToEventBridgeAction DatabaseMigrationService UpdateSubscriptionsToEventBridge action.
+ * \value AddTagsToResourceAction DatabaseMigration AddTagsToResource action.
+ * \value ApplyPendingMaintenanceActionAction DatabaseMigration ApplyPendingMaintenanceAction action.
+ * \value CancelReplicationTaskAssessmentRunAction DatabaseMigration CancelReplicationTaskAssessmentRun action.
+ * \value CreateEndpointAction DatabaseMigration CreateEndpoint action.
+ * \value CreateEventSubscriptionAction DatabaseMigration CreateEventSubscription action.
+ * \value CreateFleetAdvisorCollectorAction DatabaseMigration CreateFleetAdvisorCollector action.
+ * \value CreateReplicationInstanceAction DatabaseMigration CreateReplicationInstance action.
+ * \value CreateReplicationSubnetGroupAction DatabaseMigration CreateReplicationSubnetGroup action.
+ * \value CreateReplicationTaskAction DatabaseMigration CreateReplicationTask action.
+ * \value DeleteCertificateAction DatabaseMigration DeleteCertificate action.
+ * \value DeleteConnectionAction DatabaseMigration DeleteConnection action.
+ * \value DeleteEndpointAction DatabaseMigration DeleteEndpoint action.
+ * \value DeleteEventSubscriptionAction DatabaseMigration DeleteEventSubscription action.
+ * \value DeleteFleetAdvisorCollectorAction DatabaseMigration DeleteFleetAdvisorCollector action.
+ * \value DeleteFleetAdvisorDatabasesAction DatabaseMigration DeleteFleetAdvisorDatabases action.
+ * \value DeleteReplicationInstanceAction DatabaseMigration DeleteReplicationInstance action.
+ * \value DeleteReplicationSubnetGroupAction DatabaseMigration DeleteReplicationSubnetGroup action.
+ * \value DeleteReplicationTaskAction DatabaseMigration DeleteReplicationTask action.
+ * \value DeleteReplicationTaskAssessmentRunAction DatabaseMigration DeleteReplicationTaskAssessmentRun action.
+ * \value DescribeAccountAttributesAction DatabaseMigration DescribeAccountAttributes action.
+ * \value DescribeApplicableIndividualAssessmentsAction DatabaseMigration DescribeApplicableIndividualAssessments action.
+ * \value DescribeCertificatesAction DatabaseMigration DescribeCertificates action.
+ * \value DescribeConnectionsAction DatabaseMigration DescribeConnections action.
+ * \value DescribeEndpointSettingsAction DatabaseMigration DescribeEndpointSettings action.
+ * \value DescribeEndpointTypesAction DatabaseMigration DescribeEndpointTypes action.
+ * \value DescribeEndpointsAction DatabaseMigration DescribeEndpoints action.
+ * \value DescribeEventCategoriesAction DatabaseMigration DescribeEventCategories action.
+ * \value DescribeEventSubscriptionsAction DatabaseMigration DescribeEventSubscriptions action.
+ * \value DescribeEventsAction DatabaseMigration DescribeEvents action.
+ * \value DescribeFleetAdvisorCollectorsAction DatabaseMigration DescribeFleetAdvisorCollectors action.
+ * \value DescribeFleetAdvisorDatabasesAction DatabaseMigration DescribeFleetAdvisorDatabases action.
+ * \value DescribeFleetAdvisorLsaAnalysisAction DatabaseMigration DescribeFleetAdvisorLsaAnalysis action.
+ * \value DescribeFleetAdvisorSchemaObjectSummaryAction DatabaseMigration DescribeFleetAdvisorSchemaObjectSummary action.
+ * \value DescribeFleetAdvisorSchemasAction DatabaseMigration DescribeFleetAdvisorSchemas action.
+ * \value DescribeOrderableReplicationInstancesAction DatabaseMigration DescribeOrderableReplicationInstances action.
+ * \value DescribePendingMaintenanceActionsAction DatabaseMigration DescribePendingMaintenanceActions action.
+ * \value DescribeRefreshSchemasStatusAction DatabaseMigration DescribeRefreshSchemasStatus action.
+ * \value DescribeReplicationInstanceTaskLogsAction DatabaseMigration DescribeReplicationInstanceTaskLogs action.
+ * \value DescribeReplicationInstancesAction DatabaseMigration DescribeReplicationInstances action.
+ * \value DescribeReplicationSubnetGroupsAction DatabaseMigration DescribeReplicationSubnetGroups action.
+ * \value DescribeReplicationTaskAssessmentResultsAction DatabaseMigration DescribeReplicationTaskAssessmentResults action.
+ * \value DescribeReplicationTaskAssessmentRunsAction DatabaseMigration DescribeReplicationTaskAssessmentRuns action.
+ * \value DescribeReplicationTaskIndividualAssessmentsAction DatabaseMigration DescribeReplicationTaskIndividualAssessments action.
+ * \value DescribeReplicationTasksAction DatabaseMigration DescribeReplicationTasks action.
+ * \value DescribeSchemasAction DatabaseMigration DescribeSchemas action.
+ * \value DescribeTableStatisticsAction DatabaseMigration DescribeTableStatistics action.
+ * \value ImportCertificateAction DatabaseMigration ImportCertificate action.
+ * \value ListTagsForResourceAction DatabaseMigration ListTagsForResource action.
+ * \value ModifyEndpointAction DatabaseMigration ModifyEndpoint action.
+ * \value ModifyEventSubscriptionAction DatabaseMigration ModifyEventSubscription action.
+ * \value ModifyReplicationInstanceAction DatabaseMigration ModifyReplicationInstance action.
+ * \value ModifyReplicationSubnetGroupAction DatabaseMigration ModifyReplicationSubnetGroup action.
+ * \value ModifyReplicationTaskAction DatabaseMigration ModifyReplicationTask action.
+ * \value MoveReplicationTaskAction DatabaseMigration MoveReplicationTask action.
+ * \value RebootReplicationInstanceAction DatabaseMigration RebootReplicationInstance action.
+ * \value RefreshSchemasAction DatabaseMigration RefreshSchemas action.
+ * \value ReloadTablesAction DatabaseMigration ReloadTables action.
+ * \value RemoveTagsFromResourceAction DatabaseMigration RemoveTagsFromResource action.
+ * \value RunFleetAdvisorLsaAnalysisAction DatabaseMigration RunFleetAdvisorLsaAnalysis action.
+ * \value StartReplicationTaskAction DatabaseMigration StartReplicationTask action.
+ * \value StartReplicationTaskAssessmentAction DatabaseMigration StartReplicationTaskAssessment action.
+ * \value StartReplicationTaskAssessmentRunAction DatabaseMigration StartReplicationTaskAssessmentRun action.
+ * \value StopReplicationTaskAction DatabaseMigration StopReplicationTask action.
+ * \value TestConnectionAction DatabaseMigration TestConnection action.
+ * \value UpdateSubscriptionsToEventBridgeAction DatabaseMigration UpdateSubscriptionsToEventBridge action.
  */
 
 /*!
- * Constructs a DatabaseMigrationServiceRequest object for DatabaseMigrationService \a action.
+ * Constructs a DatabaseMigrationRequest object for DatabaseMigration \a action.
  */
-DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new DatabaseMigrationServiceRequestPrivate(action, this))
+DatabaseMigrationRequest::DatabaseMigrationRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new DatabaseMigrationRequestPrivate(action, this))
 {
 
 }
@@ -115,18 +115,18 @@ DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(const Action ac
 /*!
  * Constructs a copy of \a other.
  */
-DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(const DatabaseMigrationServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new DatabaseMigrationServiceRequestPrivate(*other.d_func(), this))
+DatabaseMigrationRequest::DatabaseMigrationRequest(const DatabaseMigrationRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new DatabaseMigrationRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the DatabaseMigrationServiceRequest object to be equal to \a other.
+ * Sets the DatabaseMigrationRequest object to be equal to \a other.
  */
-DatabaseMigrationServiceRequest& DatabaseMigrationServiceRequest::operator=(const DatabaseMigrationServiceRequest &other)
+DatabaseMigrationRequest& DatabaseMigrationRequest::operator=(const DatabaseMigrationRequest &other)
 {
-    Q_D(DatabaseMigrationServiceRequest);
+    Q_D(DatabaseMigrationRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -134,57 +134,57 @@ DatabaseMigrationServiceRequest& DatabaseMigrationServiceRequest::operator=(cons
 }
 
 /*!
- * Constructs aa DatabaseMigrationServiceRequest object with private implementation \a d.
+ * Constructs aa DatabaseMigrationRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from DatabaseMigrationServiceRequestPrivate.
+ * implementation that inherits from DatabaseMigrationRequestPrivate.
  */
-DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(DatabaseMigrationServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+DatabaseMigrationRequest::DatabaseMigrationRequest(DatabaseMigrationRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the DatabaseMigrationService action to be performed by this request.
+ * Returns the DatabaseMigration action to be performed by this request.
  */
-DatabaseMigrationServiceRequest::Action DatabaseMigrationServiceRequest::action() const
+DatabaseMigrationRequest::Action DatabaseMigrationRequest::action() const
 {
-    Q_D(const DatabaseMigrationServiceRequest);
+    Q_D(const DatabaseMigrationRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the DatabaseMigrationService action to be performed by this request.
+ * Returns the name of the DatabaseMigration action to be performed by this request.
  */
-QString DatabaseMigrationServiceRequest::actionString() const
+QString DatabaseMigrationRequest::actionString() const
 {
-    return DatabaseMigrationServiceRequestPrivate::toString(action());
+    return DatabaseMigrationRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the DatabaseMigrationService API version implemented by this request.
+ * Returns the DatabaseMigration API version implemented by this request.
  */
-QString DatabaseMigrationServiceRequest::apiVersion() const
+QString DatabaseMigrationRequest::apiVersion() const
 {
-    Q_D(const DatabaseMigrationServiceRequest);
+    Q_D(const DatabaseMigrationRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the DatabaseMigrationService action to be performed by this request to \a action.
+ * Sets the DatabaseMigration action to be performed by this request to \a action.
  */
-void DatabaseMigrationServiceRequest::setAction(const Action action)
+void DatabaseMigrationRequest::setAction(const Action action)
 {
-    Q_D(DatabaseMigrationServiceRequest);
+    Q_D(DatabaseMigrationRequest);
     d->action = action;
 }
 
 /*!
- * Sets the DatabaseMigrationService API version to include in this request to \a version.
+ * Sets the DatabaseMigration API version to include in this request to \a version.
  */
-void DatabaseMigrationServiceRequest::setApiVersion(const QString &version)
+void DatabaseMigrationRequest::setApiVersion(const QString &version)
 {
-    Q_D(DatabaseMigrationServiceRequest);
+    Q_D(DatabaseMigrationRequest);
     d->apiVersion = version;
 }
 
@@ -196,7 +196,7 @@ void DatabaseMigrationServiceRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool DatabaseMigrationServiceRequest::operator==(const DatabaseMigrationServiceRequest &other) const
+bool DatabaseMigrationRequest::operator==(const DatabaseMigrationRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -205,19 +205,19 @@ bool DatabaseMigrationServiceRequest::operator==(const DatabaseMigrationServiceR
 }
 
 /*
- * Returns \c tue if \a queueName is a valid DatabaseMigrationService queue name.
+ * Returns \c tue if \a queueName is a valid DatabaseMigration queue name.
  *
- * @par From DatabaseMigrationService FAQs:
+ * @par From DatabaseMigration FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid DatabaseMigrationService queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid DatabaseMigration queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool DatabaseMigrationServiceRequest::isValidQueueName(const QString &queueName)
+/*bool DatabaseMigrationRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -227,45 +227,45 @@ bool DatabaseMigrationServiceRequest::operator==(const DatabaseMigrationServiceR
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int DatabaseMigrationServiceRequest::clearParameter(const QString &name)
+int DatabaseMigrationRequest::clearParameter(const QString &name)
 {
-    Q_D(DatabaseMigrationServiceRequest);
+    Q_D(DatabaseMigrationRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void DatabaseMigrationServiceRequest::clearParameters()
+void DatabaseMigrationRequest::clearParameters()
 {
-    Q_D(DatabaseMigrationServiceRequest);
+    Q_D(DatabaseMigrationRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant DatabaseMigrationServiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant DatabaseMigrationRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const DatabaseMigrationServiceRequest);
+    Q_D(const DatabaseMigrationRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &DatabaseMigrationServiceRequest::parameters() const
+const QVariantMap &DatabaseMigrationRequest::parameters() const
 {
-    Q_D(const DatabaseMigrationServiceRequest);
+    Q_D(const DatabaseMigrationRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void DatabaseMigrationServiceRequest::setParameter(const QString &name, const QVariant &value)
+void DatabaseMigrationRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(DatabaseMigrationServiceRequest);
+    Q_D(DatabaseMigrationRequest);
     d->parameters.insert(name, value);
 }
 
@@ -273,41 +273,41 @@ void DatabaseMigrationServiceRequest::setParameter(const QString &name, const QV
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void DatabaseMigrationServiceRequest::setParameters(const QVariantMap &parameters)
+void DatabaseMigrationRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(DatabaseMigrationServiceRequest);
+    Q_D(DatabaseMigrationRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the DatabaseMigrationService request using the given
+ * Returns a network request for the DatabaseMigration request using the given
  * \a endpoint.
  *
- * This DatabaseMigrationService implementation builds request URLs by combining the
+ * This DatabaseMigration implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest DatabaseMigrationServiceRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest DatabaseMigrationRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const DatabaseMigrationServiceRequest);
+    //Q_D(const DatabaseMigrationRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceRequestPrivate
- * \brief The DatabaseMigrationServiceRequestPrivate class provides private implementation for DatabaseMigrationServiceRequest.
+ * \class QtAws::DatabaseMigration::DatabaseMigrationRequestPrivate
+ * \brief The DatabaseMigrationRequestPrivate class provides private implementation for DatabaseMigrationRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DatabaseMigrationServiceRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DatabaseMigrationRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
-DatabaseMigrationServiceRequestPrivate::DatabaseMigrationServiceRequestPrivate(const DatabaseMigrationServiceRequest::Action action, DatabaseMigrationServiceRequest * const q)
+DatabaseMigrationRequestPrivate::DatabaseMigrationRequestPrivate(const DatabaseMigrationRequest::Action action, DatabaseMigrationRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-01-01"))
 {
 
@@ -319,10 +319,10 @@ DatabaseMigrationServiceRequestPrivate::DatabaseMigrationServiceRequestPrivate(c
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the DatabaseMigrationServiceRequest class's copy constructor.
+ * This is required to support the DatabaseMigrationRequest class's copy constructor.
  */
-DatabaseMigrationServiceRequestPrivate::DatabaseMigrationServiceRequestPrivate(const DatabaseMigrationServiceRequestPrivate &other,
-                                     DatabaseMigrationServiceRequest * const q)
+DatabaseMigrationRequestPrivate::DatabaseMigrationRequestPrivate(const DatabaseMigrationRequestPrivate &other,
+                                     DatabaseMigrationRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -333,14 +333,14 @@ DatabaseMigrationServiceRequestPrivate::DatabaseMigrationServiceRequestPrivate(c
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts DatabaseMigrationServiceRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the DatabaseMigrationService service's Action
+ * This function converts DatabaseMigrationRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the DatabaseMigration service's Action
  * query parameters.
  */
-QString DatabaseMigrationServiceRequestPrivate::toString(const DatabaseMigrationServiceRequest::Action &action)
+QString DatabaseMigrationRequestPrivate::toString(const DatabaseMigrationRequest::Action &action)
 {
     #define ActionToString(action) \
-        case DatabaseMigrationServiceRequest::action##Action: return QStringLiteral(#action)
+        case DatabaseMigrationRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AddTagsToResource);
         ActionToString(ApplyPendingMaintenanceAction);
@@ -414,5 +414,5 @@ QString DatabaseMigrationServiceRequestPrivate::toString(const DatabaseMigration
     return QString();
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

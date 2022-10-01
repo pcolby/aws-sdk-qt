@@ -20,16 +20,16 @@
 #include "runfleetadvisorlsaanalysisrequest.h"
 #include "runfleetadvisorlsaanalysisrequest_p.h"
 #include "runfleetadvisorlsaanalysisresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::RunFleetAdvisorLsaAnalysisRequest
- * \brief The RunFleetAdvisorLsaAnalysisRequest class provides an interface for DatabaseMigrationService RunFleetAdvisorLsaAnalysis requests.
+ * \class QtAws::DatabaseMigration::RunFleetAdvisorLsaAnalysisRequest
+ * \brief The RunFleetAdvisorLsaAnalysisRequest class provides an interface for DatabaseMigration RunFleetAdvisorLsaAnalysis requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::runFleetAdvisorLsaAnalysis
+ * \sa DatabaseMigrationClient::runFleetAdvisorLsaAnalysis
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RunFleetAdvisorLsaAnalysisRequest::RunFleetAdvisorLsaAnalysisRequest(const RunFleetAdvisorLsaAnalysisRequest &other)
-    : DatabaseMigrationServiceRequest(new RunFleetAdvisorLsaAnalysisRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new RunFleetAdvisorLsaAnalysisRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ RunFleetAdvisorLsaAnalysisRequest::RunFleetAdvisorLsaAnalysisRequest(const RunFl
  * Constructs a RunFleetAdvisorLsaAnalysisRequest object.
  */
 RunFleetAdvisorLsaAnalysisRequest::RunFleetAdvisorLsaAnalysisRequest()
-    : DatabaseMigrationServiceRequest(new RunFleetAdvisorLsaAnalysisRequestPrivate(DatabaseMigrationServiceRequest::RunFleetAdvisorLsaAnalysisAction, this))
+    : DatabaseMigrationRequest(new RunFleetAdvisorLsaAnalysisRequestPrivate(DatabaseMigrationRequest::RunFleetAdvisorLsaAnalysisAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * RunFleetAdvisorLsaAnalysisRequest::response(Q
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::RunFleetAdvisorLsaAnalysisRequestPrivate
+ * \class QtAws::DatabaseMigration::RunFleetAdvisorLsaAnalysisRequestPrivate
  * \brief The RunFleetAdvisorLsaAnalysisRequestPrivate class provides private implementation for RunFleetAdvisorLsaAnalysisRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a RunFleetAdvisorLsaAnalysisRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a RunFleetAdvisorLsaAnalysisRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 RunFleetAdvisorLsaAnalysisRequestPrivate::RunFleetAdvisorLsaAnalysisRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, RunFleetAdvisorLsaAnalysisRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, RunFleetAdvisorLsaAnalysisRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ RunFleetAdvisorLsaAnalysisRequestPrivate::RunFleetAdvisorLsaAnalysisRequestPriva
  */
 RunFleetAdvisorLsaAnalysisRequestPrivate::RunFleetAdvisorLsaAnalysisRequestPrivate(
     const RunFleetAdvisorLsaAnalysisRequestPrivate &other, RunFleetAdvisorLsaAnalysisRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

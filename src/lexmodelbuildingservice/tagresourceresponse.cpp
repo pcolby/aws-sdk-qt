@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::TagResourceResponse
- * \brief The TagResourceResponse class provides an interace for LexModelBuildingService TagResource responses.
+ * \class QtAws::LexModelBuilding::TagResourceResponse
+ * \brief The TagResourceResponse class provides an interace for LexModelBuilding TagResource responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::tagResource
+ * \sa LexModelBuildingClient::tagResource
  */
 
 /*!
@@ -48,7 +48,7 @@ TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new TagResourceResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new TagResourceResponsePrivate(this), parent)
 {
     setRequest(new TagResourceRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const TagResourceRequest * TagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService TagResource \a response.
+ * Parses a successful LexModelBuilding TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::TagResourceResponsePrivate
+ * \class QtAws::LexModelBuilding::TagResourceResponsePrivate
  * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
-    TagResourceResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    TagResourceResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService TagResource response element from \a xml.
+ * Parses a LexModelBuilding TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

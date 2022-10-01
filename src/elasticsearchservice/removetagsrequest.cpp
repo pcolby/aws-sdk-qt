@@ -20,16 +20,16 @@
 #include "removetagsrequest.h"
 #include "removetagsrequest_p.h"
 #include "removetagsresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::RemoveTagsRequest
- * \brief The RemoveTagsRequest class provides an interface for ElasticsearchService RemoveTags requests.
+ * \class QtAws::Elasticsearch::RemoveTagsRequest
+ * \brief The RemoveTagsRequest class provides an interface for Elasticsearch RemoveTags requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::removeTags
+ * \sa ElasticsearchClient::removeTags
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RemoveTagsRequest::RemoveTagsRequest(const RemoveTagsRequest &other)
-    : ElasticsearchServiceRequest(new RemoveTagsRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new RemoveTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ RemoveTagsRequest::RemoveTagsRequest(const RemoveTagsRequest &other)
  * Constructs a RemoveTagsRequest object.
  */
 RemoveTagsRequest::RemoveTagsRequest()
-    : ElasticsearchServiceRequest(new RemoveTagsRequestPrivate(ElasticsearchServiceRequest::RemoveTagsAction, this))
+    : ElasticsearchRequest(new RemoveTagsRequestPrivate(ElasticsearchRequest::RemoveTagsAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::ElasticsearchService::RemoveTagsRequestPrivate
+ * \class QtAws::Elasticsearch::RemoveTagsRequestPrivate
  * \brief The RemoveTagsRequestPrivate class provides private implementation for RemoveTagsRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a RemoveTagsRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a RemoveTagsRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, RemoveTagsRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, RemoveTagsRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const RemoveTagsRequestPrivate &other, RemoveTagsRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

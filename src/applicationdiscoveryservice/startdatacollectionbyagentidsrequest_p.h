@@ -20,18 +20,18 @@
 #ifndef QTAWS_STARTDATACOLLECTIONBYAGENTIDSREQUEST_P_H
 #define QTAWS_STARTDATACOLLECTIONBYAGENTIDSREQUEST_P_H
 
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 #include "startdatacollectionbyagentidsrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class StartDataCollectionByAgentIdsRequest;
 
-class StartDataCollectionByAgentIdsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
+class StartDataCollectionByAgentIdsRequestPrivate : public ApplicationDiscoveryRequestPrivate {
 
 public:
-    StartDataCollectionByAgentIdsRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
+    StartDataCollectionByAgentIdsRequestPrivate(const ApplicationDiscoveryRequest::Action action,
                                    StartDataCollectionByAgentIdsRequest * const q);
     StartDataCollectionByAgentIdsRequestPrivate(const StartDataCollectionByAgentIdsRequestPrivate &other,
                                    StartDataCollectionByAgentIdsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

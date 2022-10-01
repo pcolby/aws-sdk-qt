@@ -17,8 +17,8 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "resourcegroupstaggingapiclient.h"
-#include "resourcegroupstaggingapiclient_p.h"
+#include "resourcegroupstaggingclient.h"
+#include "resourcegroupstaggingclient_p.h"
 
 #include "core/awssignaturev4.h"
 #include "describereportcreationrequest.h"
@@ -42,42 +42,42 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::ResourceGroupsTaggingApi
+ * \namespace QtAws::ResourceGroupsTagging
  * \brief Contains classess for accessing AWS Resource Groups Tagging API.
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::ResourceGroupsTaggingApiClient
- * \brief The ResourceGroupsTaggingApiClient class provides access to the AWS Resource Groups Tagging API service.
+ * \class QtAws::ResourceGroupsTagging::ResourceGroupsTaggingClient
+ * \brief The ResourceGroupsTaggingClient class provides access to the AWS Resource Groups Tagging API service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  *
  */
 
 /*!
- * \brief Constructs a ResourceGroupsTaggingApiClient object.
+ * \brief Constructs a ResourceGroupsTaggingClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-ResourceGroupsTaggingApiClient::ResourceGroupsTaggingApiClient(
+ResourceGroupsTaggingClient::ResourceGroupsTaggingClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ResourceGroupsTaggingApiClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ResourceGroupsTaggingClientPrivate(this), parent)
 {
-    Q_D(ResourceGroupsTaggingApiClient);
+    Q_D(ResourceGroupsTaggingClient);
     d->apiVersion = QStringLiteral("2017-01-26");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("tagging");
@@ -88,7 +88,7 @@ ResourceGroupsTaggingApiClient::ResourceGroupsTaggingApiClient(
 }
 
 /*!
- * \overload ResourceGroupsTaggingApiClient()
+ * \overload ResourceGroupsTaggingClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -98,14 +98,14 @@ ResourceGroupsTaggingApiClient::ResourceGroupsTaggingApiClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-ResourceGroupsTaggingApiClient::ResourceGroupsTaggingApiClient(
+ResourceGroupsTaggingClient::ResourceGroupsTaggingClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ResourceGroupsTaggingApiClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ResourceGroupsTaggingClientPrivate(this), parent)
 {
-    Q_D(ResourceGroupsTaggingApiClient);
+    Q_D(ResourceGroupsTaggingClient);
     d->apiVersion = QStringLiteral("2017-01-26");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -116,7 +116,7 @@ ResourceGroupsTaggingApiClient::ResourceGroupsTaggingApiClient(
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingClient service, and returns a pointer to an
  * DescribeReportCreationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -127,13 +127,13 @@ ResourceGroupsTaggingApiClient::ResourceGroupsTaggingApiClient(
  *
  * You can call this operation only from the organization's management account and from the us-east-1
  */
-DescribeReportCreationResponse * ResourceGroupsTaggingApiClient::describeReportCreation(const DescribeReportCreationRequest &request)
+DescribeReportCreationResponse * ResourceGroupsTaggingClient::describeReportCreation(const DescribeReportCreationRequest &request)
 {
     return qobject_cast<DescribeReportCreationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingClient service, and returns a pointer to an
  * GetComplianceSummaryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -158,13 +158,13 @@ DescribeReportCreationResponse * ResourceGroupsTaggingApiClient::describeReportC
  * recieve a <code>null</code> value. A null value for <code>PaginationToken</code> indicates that there are no more
  * results waiting to be
  */
-GetComplianceSummaryResponse * ResourceGroupsTaggingApiClient::getComplianceSummary(const GetComplianceSummaryRequest &request)
+GetComplianceSummaryResponse * ResourceGroupsTaggingClient::getComplianceSummary(const GetComplianceSummaryRequest &request)
 {
     return qobject_cast<GetComplianceSummaryResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingClient service, and returns a pointer to an
  * GetResourcesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -195,13 +195,13 @@ GetComplianceSummaryResponse * ResourceGroupsTaggingApiClient::getComplianceSumm
  * recieve a <code>null</code> value. A null value for <code>PaginationToken</code> indicates that there are no more
  * results waiting to be
  */
-GetResourcesResponse * ResourceGroupsTaggingApiClient::getResources(const GetResourcesRequest &request)
+GetResourcesResponse * ResourceGroupsTaggingClient::getResources(const GetResourcesRequest &request)
 {
     return qobject_cast<GetResourcesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingClient service, and returns a pointer to an
  * GetTagKeysResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -216,13 +216,13 @@ GetResourcesResponse * ResourceGroupsTaggingApiClient::getResources(const GetRes
  * recieve a <code>null</code> value. A null value for <code>PaginationToken</code> indicates that there are no more
  * results waiting to be
  */
-GetTagKeysResponse * ResourceGroupsTaggingApiClient::getTagKeys(const GetTagKeysRequest &request)
+GetTagKeysResponse * ResourceGroupsTaggingClient::getTagKeys(const GetTagKeysRequest &request)
 {
     return qobject_cast<GetTagKeysResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingClient service, and returns a pointer to an
  * GetTagValuesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -237,13 +237,13 @@ GetTagKeysResponse * ResourceGroupsTaggingApiClient::getTagKeys(const GetTagKeys
  * recieve a <code>null</code> value. A null value for <code>PaginationToken</code> indicates that there are no more
  * results waiting to be
  */
-GetTagValuesResponse * ResourceGroupsTaggingApiClient::getTagValues(const GetTagValuesRequest &request)
+GetTagValuesResponse * ResourceGroupsTaggingClient::getTagValues(const GetTagValuesRequest &request)
 {
     return qobject_cast<GetTagValuesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingClient service, and returns a pointer to an
  * StartReportCreationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -263,13 +263,13 @@ GetTagValuesResponse * ResourceGroupsTaggingApiClient::getTagValues(const GetTag
  *
  * You can call this operation only from the organization's management account and from the us-east-1
  */
-StartReportCreationResponse * ResourceGroupsTaggingApiClient::startReportCreation(const StartReportCreationRequest &request)
+StartReportCreationResponse * ResourceGroupsTaggingClient::startReportCreation(const StartReportCreationRequest &request)
 {
     return qobject_cast<StartReportCreationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingClient service, and returns a pointer to an
  * TagResourcesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -321,13 +321,13 @@ StartReportCreationResponse * ResourceGroupsTaggingApiClient::startReportCreatio
  *
  * <code>ec2:CreateTags</code>
  */
-TagResourcesResponse * ResourceGroupsTaggingApiClient::tagResources(const TagResourcesRequest &request)
+TagResourcesResponse * ResourceGroupsTaggingClient::tagResources(const TagResourcesRequest &request)
 {
     return qobject_cast<TagResourcesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingClient service, and returns a pointer to an
  * UntagResourcesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -364,28 +364,28 @@ TagResourcesResponse * ResourceGroupsTaggingApiClient::tagResources(const TagRes
  *
  * <code>ec2:DeleteTags</code>
  */
-UntagResourcesResponse * ResourceGroupsTaggingApiClient::untagResources(const UntagResourcesRequest &request)
+UntagResourcesResponse * ResourceGroupsTaggingClient::untagResources(const UntagResourcesRequest &request)
 {
     return qobject_cast<UntagResourcesResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::ResourceGroupsTaggingApiClientPrivate
- * \brief The ResourceGroupsTaggingApiClientPrivate class provides private implementation for ResourceGroupsTaggingApiClient.
+ * \class QtAws::ResourceGroupsTagging::ResourceGroupsTaggingClientPrivate
+ * \brief The ResourceGroupsTaggingClientPrivate class provides private implementation for ResourceGroupsTaggingClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  */
 
 /*!
- * Constructs a ResourceGroupsTaggingApiClientPrivate object with public implementation \a q.
+ * Constructs a ResourceGroupsTaggingClientPrivate object with public implementation \a q.
  */
-ResourceGroupsTaggingApiClientPrivate::ResourceGroupsTaggingApiClientPrivate(ResourceGroupsTaggingApiClient * const q)
+ResourceGroupsTaggingClientPrivate::ResourceGroupsTaggingClientPrivate(ResourceGroupsTaggingClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws

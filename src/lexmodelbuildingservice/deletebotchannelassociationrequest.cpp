@@ -20,30 +20,30 @@
 #include "deletebotchannelassociationrequest.h"
 #include "deletebotchannelassociationrequest_p.h"
 #include "deletebotchannelassociationresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteBotChannelAssociationRequest
- * \brief The DeleteBotChannelAssociationRequest class provides an interface for LexModelBuildingService DeleteBotChannelAssociation requests.
+ * \class QtAws::LexModelBuilding::DeleteBotChannelAssociationRequest
+ * \brief The DeleteBotChannelAssociationRequest class provides an interface for LexModelBuilding DeleteBotChannelAssociation requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::deleteBotChannelAssociation
+ * \sa LexModelBuildingClient::deleteBotChannelAssociation
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteBotChannelAssociationRequest::DeleteBotChannelAssociationRequest(const DeleteBotChannelAssociationRequest &other)
-    : LexModelBuildingServiceRequest(new DeleteBotChannelAssociationRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new DeleteBotChannelAssociationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteBotChannelAssociationRequest::DeleteBotChannelAssociationRequest(const Del
  * Constructs a DeleteBotChannelAssociationRequest object.
  */
 DeleteBotChannelAssociationRequest::DeleteBotChannelAssociationRequest()
-    : LexModelBuildingServiceRequest(new DeleteBotChannelAssociationRequestPrivate(LexModelBuildingServiceRequest::DeleteBotChannelAssociationAction, this))
+    : LexModelBuildingRequest(new DeleteBotChannelAssociationRequestPrivate(LexModelBuildingRequest::DeleteBotChannelAssociationAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * DeleteBotChannelAssociationRequest::response(
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteBotChannelAssociationRequestPrivate
+ * \class QtAws::LexModelBuilding::DeleteBotChannelAssociationRequestPrivate
  * \brief The DeleteBotChannelAssociationRequestPrivate class provides private implementation for DeleteBotChannelAssociationRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a DeleteBotChannelAssociationRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a DeleteBotChannelAssociationRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 DeleteBotChannelAssociationRequestPrivate::DeleteBotChannelAssociationRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, DeleteBotChannelAssociationRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, DeleteBotChannelAssociationRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ DeleteBotChannelAssociationRequestPrivate::DeleteBotChannelAssociationRequestPri
  */
 DeleteBotChannelAssociationRequestPrivate::DeleteBotChannelAssociationRequestPrivate(
     const DeleteBotChannelAssociationRequestPrivate &other, DeleteBotChannelAssociationRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

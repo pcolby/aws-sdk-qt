@@ -20,16 +20,16 @@
 #include "refreshschemasrequest.h"
 #include "refreshschemasrequest_p.h"
 #include "refreshschemasresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::RefreshSchemasRequest
- * \brief The RefreshSchemasRequest class provides an interface for DatabaseMigrationService RefreshSchemas requests.
+ * \class QtAws::DatabaseMigration::RefreshSchemasRequest
+ * \brief The RefreshSchemasRequest class provides an interface for DatabaseMigration RefreshSchemas requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::refreshSchemas
+ * \sa DatabaseMigrationClient::refreshSchemas
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RefreshSchemasRequest::RefreshSchemasRequest(const RefreshSchemasRequest &other)
-    : DatabaseMigrationServiceRequest(new RefreshSchemasRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new RefreshSchemasRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ RefreshSchemasRequest::RefreshSchemasRequest(const RefreshSchemasRequest &other)
  * Constructs a RefreshSchemasRequest object.
  */
 RefreshSchemasRequest::RefreshSchemasRequest()
-    : DatabaseMigrationServiceRequest(new RefreshSchemasRequestPrivate(DatabaseMigrationServiceRequest::RefreshSchemasAction, this))
+    : DatabaseMigrationRequest(new RefreshSchemasRequestPrivate(DatabaseMigrationRequest::RefreshSchemasAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * RefreshSchemasRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::RefreshSchemasRequestPrivate
+ * \class QtAws::DatabaseMigration::RefreshSchemasRequestPrivate
  * \brief The RefreshSchemasRequestPrivate class provides private implementation for RefreshSchemasRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a RefreshSchemasRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a RefreshSchemasRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 RefreshSchemasRequestPrivate::RefreshSchemasRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, RefreshSchemasRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, RefreshSchemasRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ RefreshSchemasRequestPrivate::RefreshSchemasRequestPrivate(
  */
 RefreshSchemasRequestPrivate::RefreshSchemasRequestPrivate(
     const RefreshSchemasRequestPrivate &other, RefreshSchemasRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

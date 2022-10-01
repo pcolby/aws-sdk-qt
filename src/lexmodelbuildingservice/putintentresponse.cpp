@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::PutIntentResponse
- * \brief The PutIntentResponse class provides an interace for LexModelBuildingService PutIntent responses.
+ * \class QtAws::LexModelBuilding::PutIntentResponse
+ * \brief The PutIntentResponse class provides an interace for LexModelBuilding PutIntent responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::putIntent
+ * \sa LexModelBuildingClient::putIntent
  */
 
 /*!
@@ -48,7 +48,7 @@ PutIntentResponse::PutIntentResponse(
         const PutIntentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new PutIntentResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new PutIntentResponsePrivate(this), parent)
 {
     setRequest(new PutIntentRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const PutIntentRequest * PutIntentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService PutIntent \a response.
+ * Parses a successful LexModelBuilding PutIntent \a response.
  */
 void PutIntentResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void PutIntentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::PutIntentResponsePrivate
+ * \class QtAws::LexModelBuilding::PutIntentResponsePrivate
  * \brief The PutIntentResponsePrivate class provides private implementation for PutIntentResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a PutIntentResponsePrivate object with public implementation \a q.
  */
 PutIntentResponsePrivate::PutIntentResponsePrivate(
-    PutIntentResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    PutIntentResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService PutIntent response element from \a xml.
+ * Parses a LexModelBuilding PutIntent response element from \a xml.
  */
 void PutIntentResponsePrivate::parsePutIntentResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void PutIntentResponsePrivate::parsePutIntentResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

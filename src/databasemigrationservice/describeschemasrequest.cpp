@@ -20,16 +20,16 @@
 #include "describeschemasrequest.h"
 #include "describeschemasrequest_p.h"
 #include "describeschemasresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeSchemasRequest
- * \brief The DescribeSchemasRequest class provides an interface for DatabaseMigrationService DescribeSchemas requests.
+ * \class QtAws::DatabaseMigration::DescribeSchemasRequest
+ * \brief The DescribeSchemasRequest class provides an interface for DatabaseMigration DescribeSchemas requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeSchemas
+ * \sa DatabaseMigrationClient::describeSchemas
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeSchemasRequest::DescribeSchemasRequest(const DescribeSchemasRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribeSchemasRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribeSchemasRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeSchemasRequest::DescribeSchemasRequest(const DescribeSchemasRequest &oth
  * Constructs a DescribeSchemasRequest object.
  */
 DescribeSchemasRequest::DescribeSchemasRequest()
-    : DatabaseMigrationServiceRequest(new DescribeSchemasRequestPrivate(DatabaseMigrationServiceRequest::DescribeSchemasAction, this))
+    : DatabaseMigrationRequest(new DescribeSchemasRequestPrivate(DatabaseMigrationRequest::DescribeSchemasAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribeSchemasRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeSchemasRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribeSchemasRequestPrivate
  * \brief The DescribeSchemasRequestPrivate class provides private implementation for DescribeSchemasRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribeSchemasRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribeSchemasRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribeSchemasRequestPrivate::DescribeSchemasRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribeSchemasRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribeSchemasRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribeSchemasRequestPrivate::DescribeSchemasRequestPrivate(
  */
 DescribeSchemasRequestPrivate::DescribeSchemasRequestPrivate(
     const DescribeSchemasRequestPrivate &other, DescribeSchemasRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

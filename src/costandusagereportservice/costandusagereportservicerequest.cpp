@@ -17,36 +17,36 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "costandusagereportservicerequest.h"
-#include "costandusagereportservicerequest_p.h"
+#include "costandusagereportrequest.h"
+#include "costandusagereportrequest_p.h"
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 /*!
- * \class QtAws::CostandUsageReportService::CostandUsageReportServiceRequest
- * \brief The CostandUsageReportServiceRequest class provides an interface for CostandUsageReportService requests.
+ * \class QtAws::CostandUsageReport::CostandUsageReportRequest
+ * \brief The CostandUsageReportRequest class provides an interface for CostandUsageReport requests.
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  */
 
 /*!
- * \enum CostandUsageReportServiceRequest::Action
+ * \enum CostandUsageReportRequest::Action
  *
- * This enum describes the actions that can be performed as CostandUsageReportService
+ * This enum describes the actions that can be performed as CostandUsageReport
  * requests.
  *
- * \value DeleteReportDefinitionAction CostandUsageReportService DeleteReportDefinition action.
- * \value DescribeReportDefinitionsAction CostandUsageReportService DescribeReportDefinitions action.
- * \value ModifyReportDefinitionAction CostandUsageReportService ModifyReportDefinition action.
- * \value PutReportDefinitionAction CostandUsageReportService PutReportDefinition action.
+ * \value DeleteReportDefinitionAction CostandUsageReport DeleteReportDefinition action.
+ * \value DescribeReportDefinitionsAction CostandUsageReport DescribeReportDefinitions action.
+ * \value ModifyReportDefinitionAction CostandUsageReport ModifyReportDefinition action.
+ * \value PutReportDefinitionAction CostandUsageReport PutReportDefinition action.
  */
 
 /*!
- * Constructs a CostandUsageReportServiceRequest object for CostandUsageReportService \a action.
+ * Constructs a CostandUsageReportRequest object for CostandUsageReport \a action.
  */
-CostandUsageReportServiceRequest::CostandUsageReportServiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new CostandUsageReportServiceRequestPrivate(action, this))
+CostandUsageReportRequest::CostandUsageReportRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new CostandUsageReportRequestPrivate(action, this))
 {
 
 }
@@ -54,18 +54,18 @@ CostandUsageReportServiceRequest::CostandUsageReportServiceRequest(const Action 
 /*!
  * Constructs a copy of \a other.
  */
-CostandUsageReportServiceRequest::CostandUsageReportServiceRequest(const CostandUsageReportServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new CostandUsageReportServiceRequestPrivate(*other.d_func(), this))
+CostandUsageReportRequest::CostandUsageReportRequest(const CostandUsageReportRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new CostandUsageReportRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the CostandUsageReportServiceRequest object to be equal to \a other.
+ * Sets the CostandUsageReportRequest object to be equal to \a other.
  */
-CostandUsageReportServiceRequest& CostandUsageReportServiceRequest::operator=(const CostandUsageReportServiceRequest &other)
+CostandUsageReportRequest& CostandUsageReportRequest::operator=(const CostandUsageReportRequest &other)
 {
-    Q_D(CostandUsageReportServiceRequest);
+    Q_D(CostandUsageReportRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -73,57 +73,57 @@ CostandUsageReportServiceRequest& CostandUsageReportServiceRequest::operator=(co
 }
 
 /*!
- * Constructs aa CostandUsageReportServiceRequest object with private implementation \a d.
+ * Constructs aa CostandUsageReportRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from CostandUsageReportServiceRequestPrivate.
+ * implementation that inherits from CostandUsageReportRequestPrivate.
  */
-CostandUsageReportServiceRequest::CostandUsageReportServiceRequest(CostandUsageReportServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+CostandUsageReportRequest::CostandUsageReportRequest(CostandUsageReportRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the CostandUsageReportService action to be performed by this request.
+ * Returns the CostandUsageReport action to be performed by this request.
  */
-CostandUsageReportServiceRequest::Action CostandUsageReportServiceRequest::action() const
+CostandUsageReportRequest::Action CostandUsageReportRequest::action() const
 {
-    Q_D(const CostandUsageReportServiceRequest);
+    Q_D(const CostandUsageReportRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the CostandUsageReportService action to be performed by this request.
+ * Returns the name of the CostandUsageReport action to be performed by this request.
  */
-QString CostandUsageReportServiceRequest::actionString() const
+QString CostandUsageReportRequest::actionString() const
 {
-    return CostandUsageReportServiceRequestPrivate::toString(action());
+    return CostandUsageReportRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the CostandUsageReportService API version implemented by this request.
+ * Returns the CostandUsageReport API version implemented by this request.
  */
-QString CostandUsageReportServiceRequest::apiVersion() const
+QString CostandUsageReportRequest::apiVersion() const
 {
-    Q_D(const CostandUsageReportServiceRequest);
+    Q_D(const CostandUsageReportRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the CostandUsageReportService action to be performed by this request to \a action.
+ * Sets the CostandUsageReport action to be performed by this request to \a action.
  */
-void CostandUsageReportServiceRequest::setAction(const Action action)
+void CostandUsageReportRequest::setAction(const Action action)
 {
-    Q_D(CostandUsageReportServiceRequest);
+    Q_D(CostandUsageReportRequest);
     d->action = action;
 }
 
 /*!
- * Sets the CostandUsageReportService API version to include in this request to \a version.
+ * Sets the CostandUsageReport API version to include in this request to \a version.
  */
-void CostandUsageReportServiceRequest::setApiVersion(const QString &version)
+void CostandUsageReportRequest::setApiVersion(const QString &version)
 {
-    Q_D(CostandUsageReportServiceRequest);
+    Q_D(CostandUsageReportRequest);
     d->apiVersion = version;
 }
 
@@ -135,7 +135,7 @@ void CostandUsageReportServiceRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool CostandUsageReportServiceRequest::operator==(const CostandUsageReportServiceRequest &other) const
+bool CostandUsageReportRequest::operator==(const CostandUsageReportRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -144,19 +144,19 @@ bool CostandUsageReportServiceRequest::operator==(const CostandUsageReportServic
 }
 
 /*
- * Returns \c tue if \a queueName is a valid CostandUsageReportService queue name.
+ * Returns \c tue if \a queueName is a valid CostandUsageReport queue name.
  *
- * @par From CostandUsageReportService FAQs:
+ * @par From CostandUsageReport FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid CostandUsageReportService queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid CostandUsageReport queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool CostandUsageReportServiceRequest::isValidQueueName(const QString &queueName)
+/*bool CostandUsageReportRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -166,45 +166,45 @@ bool CostandUsageReportServiceRequest::operator==(const CostandUsageReportServic
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int CostandUsageReportServiceRequest::clearParameter(const QString &name)
+int CostandUsageReportRequest::clearParameter(const QString &name)
 {
-    Q_D(CostandUsageReportServiceRequest);
+    Q_D(CostandUsageReportRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void CostandUsageReportServiceRequest::clearParameters()
+void CostandUsageReportRequest::clearParameters()
 {
-    Q_D(CostandUsageReportServiceRequest);
+    Q_D(CostandUsageReportRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant CostandUsageReportServiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant CostandUsageReportRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const CostandUsageReportServiceRequest);
+    Q_D(const CostandUsageReportRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &CostandUsageReportServiceRequest::parameters() const
+const QVariantMap &CostandUsageReportRequest::parameters() const
 {
-    Q_D(const CostandUsageReportServiceRequest);
+    Q_D(const CostandUsageReportRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void CostandUsageReportServiceRequest::setParameter(const QString &name, const QVariant &value)
+void CostandUsageReportRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(CostandUsageReportServiceRequest);
+    Q_D(CostandUsageReportRequest);
     d->parameters.insert(name, value);
 }
 
@@ -212,41 +212,41 @@ void CostandUsageReportServiceRequest::setParameter(const QString &name, const Q
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void CostandUsageReportServiceRequest::setParameters(const QVariantMap &parameters)
+void CostandUsageReportRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(CostandUsageReportServiceRequest);
+    Q_D(CostandUsageReportRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the CostandUsageReportService request using the given
+ * Returns a network request for the CostandUsageReport request using the given
  * \a endpoint.
  *
- * This CostandUsageReportService implementation builds request URLs by combining the
+ * This CostandUsageReport implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest CostandUsageReportServiceRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest CostandUsageReportRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const CostandUsageReportServiceRequest);
+    //Q_D(const CostandUsageReportRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::CostandUsageReportService::CostandUsageReportServiceRequestPrivate
- * \brief The CostandUsageReportServiceRequestPrivate class provides private implementation for CostandUsageReportServiceRequest.
+ * \class QtAws::CostandUsageReport::CostandUsageReportRequestPrivate
+ * \brief The CostandUsageReportRequestPrivate class provides private implementation for CostandUsageReportRequest.
  * \internal
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  */
 
 /*!
- * Constructs a CostandUsageReportServiceRequestPrivate object for CostandUsageReportService \a action,
+ * Constructs a CostandUsageReportRequestPrivate object for CostandUsageReport \a action,
  * with public implementation \a q.
  */
-CostandUsageReportServiceRequestPrivate::CostandUsageReportServiceRequestPrivate(const CostandUsageReportServiceRequest::Action action, CostandUsageReportServiceRequest * const q)
+CostandUsageReportRequestPrivate::CostandUsageReportRequestPrivate(const CostandUsageReportRequest::Action action, CostandUsageReportRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-01-06"))
 {
 
@@ -258,10 +258,10 @@ CostandUsageReportServiceRequestPrivate::CostandUsageReportServiceRequestPrivate
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the CostandUsageReportServiceRequest class's copy constructor.
+ * This is required to support the CostandUsageReportRequest class's copy constructor.
  */
-CostandUsageReportServiceRequestPrivate::CostandUsageReportServiceRequestPrivate(const CostandUsageReportServiceRequestPrivate &other,
-                                     CostandUsageReportServiceRequest * const q)
+CostandUsageReportRequestPrivate::CostandUsageReportRequestPrivate(const CostandUsageReportRequestPrivate &other,
+                                     CostandUsageReportRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -272,14 +272,14 @@ CostandUsageReportServiceRequestPrivate::CostandUsageReportServiceRequestPrivate
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts CostandUsageReportServiceRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the CostandUsageReportService service's Action
+ * This function converts CostandUsageReportRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the CostandUsageReport service's Action
  * query parameters.
  */
-QString CostandUsageReportServiceRequestPrivate::toString(const CostandUsageReportServiceRequest::Action &action)
+QString CostandUsageReportRequestPrivate::toString(const CostandUsageReportRequest::Action &action)
 {
     #define ActionToString(action) \
-        case CostandUsageReportServiceRequest::action##Action: return QStringLiteral(#action)
+        case CostandUsageReportRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(DeleteReportDefinition);
         ActionToString(DescribeReportDefinitions);
@@ -292,5 +292,5 @@ QString CostandUsageReportServiceRequestPrivate::toString(const CostandUsageRepo
     return QString();
 }
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws

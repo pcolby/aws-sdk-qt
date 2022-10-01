@@ -20,16 +20,16 @@
 #include "stopdatacollectionbyagentidsrequest.h"
 #include "stopdatacollectionbyagentidsrequest_p.h"
 #include "stopdatacollectionbyagentidsresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StopDataCollectionByAgentIdsRequest
- * \brief The StopDataCollectionByAgentIdsRequest class provides an interface for ApplicationDiscoveryService StopDataCollectionByAgentIds requests.
+ * \class QtAws::ApplicationDiscovery::StopDataCollectionByAgentIdsRequest
+ * \brief The StopDataCollectionByAgentIdsRequest class provides an interface for ApplicationDiscovery StopDataCollectionByAgentIds requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::stopDataCollectionByAgentIds
+ * \sa ApplicationDiscoveryClient::stopDataCollectionByAgentIds
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StopDataCollectionByAgentIdsRequest::StopDataCollectionByAgentIdsRequest(const StopDataCollectionByAgentIdsRequest &other)
-    : ApplicationDiscoveryServiceRequest(new StopDataCollectionByAgentIdsRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new StopDataCollectionByAgentIdsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ StopDataCollectionByAgentIdsRequest::StopDataCollectionByAgentIdsRequest(const S
  * Constructs a StopDataCollectionByAgentIdsRequest object.
  */
 StopDataCollectionByAgentIdsRequest::StopDataCollectionByAgentIdsRequest()
-    : ApplicationDiscoveryServiceRequest(new StopDataCollectionByAgentIdsRequestPrivate(ApplicationDiscoveryServiceRequest::StopDataCollectionByAgentIdsAction, this))
+    : ApplicationDiscoveryRequest(new StopDataCollectionByAgentIdsRequestPrivate(ApplicationDiscoveryRequest::StopDataCollectionByAgentIdsAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * StopDataCollectionByAgentIdsRequest::response
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StopDataCollectionByAgentIdsRequestPrivate
+ * \class QtAws::ApplicationDiscovery::StopDataCollectionByAgentIdsRequestPrivate
  * \brief The StopDataCollectionByAgentIdsRequestPrivate class provides private implementation for StopDataCollectionByAgentIdsRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a StopDataCollectionByAgentIdsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a StopDataCollectionByAgentIdsRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 StopDataCollectionByAgentIdsRequestPrivate::StopDataCollectionByAgentIdsRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, StopDataCollectionByAgentIdsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, StopDataCollectionByAgentIdsRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ StopDataCollectionByAgentIdsRequestPrivate::StopDataCollectionByAgentIdsRequestP
  */
 StopDataCollectionByAgentIdsRequestPrivate::StopDataCollectionByAgentIdsRequestPrivate(
     const StopDataCollectionByAgentIdsRequestPrivate &other, StopDataCollectionByAgentIdsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

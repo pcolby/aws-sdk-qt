@@ -20,16 +20,16 @@
 #include "describecertificatesrequest.h"
 #include "describecertificatesrequest_p.h"
 #include "describecertificatesresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeCertificatesRequest
- * \brief The DescribeCertificatesRequest class provides an interface for DatabaseMigrationService DescribeCertificates requests.
+ * \class QtAws::DatabaseMigration::DescribeCertificatesRequest
+ * \brief The DescribeCertificatesRequest class provides an interface for DatabaseMigration DescribeCertificates requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeCertificates
+ * \sa DatabaseMigrationClient::describeCertificates
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeCertificatesRequest::DescribeCertificatesRequest(const DescribeCertificatesRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribeCertificatesRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribeCertificatesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeCertificatesRequest::DescribeCertificatesRequest(const DescribeCertifica
  * Constructs a DescribeCertificatesRequest object.
  */
 DescribeCertificatesRequest::DescribeCertificatesRequest()
-    : DatabaseMigrationServiceRequest(new DescribeCertificatesRequestPrivate(DatabaseMigrationServiceRequest::DescribeCertificatesAction, this))
+    : DatabaseMigrationRequest(new DescribeCertificatesRequestPrivate(DatabaseMigrationRequest::DescribeCertificatesAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificatesRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeCertificatesRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribeCertificatesRequestPrivate
  * \brief The DescribeCertificatesRequestPrivate class provides private implementation for DescribeCertificatesRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribeCertificatesRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribeCertificatesRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribeCertificatesRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribeCertificatesRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
     const DescribeCertificatesRequestPrivate &other, DescribeCertificatesRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

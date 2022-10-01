@@ -20,16 +20,16 @@
 #include "describereservedelasticsearchinstancesrequest.h"
 #include "describereservedelasticsearchinstancesrequest_p.h"
 #include "describereservedelasticsearchinstancesresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeReservedElasticsearchInstancesRequest
- * \brief The DescribeReservedElasticsearchInstancesRequest class provides an interface for ElasticsearchService DescribeReservedElasticsearchInstances requests.
+ * \class QtAws::Elasticsearch::DescribeReservedElasticsearchInstancesRequest
+ * \brief The DescribeReservedElasticsearchInstancesRequest class provides an interface for Elasticsearch DescribeReservedElasticsearchInstances requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describeReservedElasticsearchInstances
+ * \sa ElasticsearchClient::describeReservedElasticsearchInstances
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeReservedElasticsearchInstancesRequest::DescribeReservedElasticsearchInstancesRequest(const DescribeReservedElasticsearchInstancesRequest &other)
-    : ElasticsearchServiceRequest(new DescribeReservedElasticsearchInstancesRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new DescribeReservedElasticsearchInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DescribeReservedElasticsearchInstancesRequest::DescribeReservedElasticsearchInst
  * Constructs a DescribeReservedElasticsearchInstancesRequest object.
  */
 DescribeReservedElasticsearchInstancesRequest::DescribeReservedElasticsearchInstancesRequest()
-    : ElasticsearchServiceRequest(new DescribeReservedElasticsearchInstancesRequestPrivate(ElasticsearchServiceRequest::DescribeReservedElasticsearchInstancesAction, this))
+    : ElasticsearchRequest(new DescribeReservedElasticsearchInstancesRequestPrivate(ElasticsearchRequest::DescribeReservedElasticsearchInstancesAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedElasticsearchInstancesRequest
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeReservedElasticsearchInstancesRequestPrivate
+ * \class QtAws::Elasticsearch::DescribeReservedElasticsearchInstancesRequestPrivate
  * \brief The DescribeReservedElasticsearchInstancesRequestPrivate class provides private implementation for DescribeReservedElasticsearchInstancesRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a DescribeReservedElasticsearchInstancesRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a DescribeReservedElasticsearchInstancesRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 DescribeReservedElasticsearchInstancesRequestPrivate::DescribeReservedElasticsearchInstancesRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, DescribeReservedElasticsearchInstancesRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, DescribeReservedElasticsearchInstancesRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DescribeReservedElasticsearchInstancesRequestPrivate::DescribeReservedElasticsea
  */
 DescribeReservedElasticsearchInstancesRequestPrivate::DescribeReservedElasticsearchInstancesRequestPrivate(
     const DescribeReservedElasticsearchInstancesRequestPrivate &other, DescribeReservedElasticsearchInstancesRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

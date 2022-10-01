@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::ListTagsForResourceResponse
- * \brief The ListTagsForResourceResponse class provides an interace for LexModelBuildingService ListTagsForResource responses.
+ * \class QtAws::LexModelBuilding::ListTagsForResourceResponse
+ * \brief The ListTagsForResourceResponse class provides an interace for LexModelBuilding ListTagsForResource responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::listTagsForResource
+ * \sa LexModelBuildingClient::listTagsForResource
  */
 
 /*!
@@ -48,7 +48,7 @@ ListTagsForResourceResponse::ListTagsForResourceResponse(
         const ListTagsForResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new ListTagsForResourceResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new ListTagsForResourceResponsePrivate(this), parent)
 {
     setRequest(new ListTagsForResourceRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService ListTagsForResource \a response.
+ * Parses a successful LexModelBuilding ListTagsForResource \a response.
  */
 void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::ListTagsForResourceResponsePrivate
+ * \class QtAws::LexModelBuilding::ListTagsForResourceResponsePrivate
  * \brief The ListTagsForResourceResponsePrivate class provides private implementation for ListTagsForResourceResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a ListTagsForResourceResponsePrivate object with public implementation \a q.
  */
 ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
-    ListTagsForResourceResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    ListTagsForResourceResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService ListTagsForResource response element from \a xml.
+ * Parses a LexModelBuilding ListTagsForResource response element from \a xml.
  */
 void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

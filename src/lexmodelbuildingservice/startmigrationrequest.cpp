@@ -20,30 +20,30 @@
 #include "startmigrationrequest.h"
 #include "startmigrationrequest_p.h"
 #include "startmigrationresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::StartMigrationRequest
- * \brief The StartMigrationRequest class provides an interface for LexModelBuildingService StartMigration requests.
+ * \class QtAws::LexModelBuilding::StartMigrationRequest
+ * \brief The StartMigrationRequest class provides an interface for LexModelBuilding StartMigration requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::startMigration
+ * \sa LexModelBuildingClient::startMigration
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartMigrationRequest::StartMigrationRequest(const StartMigrationRequest &other)
-    : LexModelBuildingServiceRequest(new StartMigrationRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new StartMigrationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ StartMigrationRequest::StartMigrationRequest(const StartMigrationRequest &other)
  * Constructs a StartMigrationRequest object.
  */
 StartMigrationRequest::StartMigrationRequest()
-    : LexModelBuildingServiceRequest(new StartMigrationRequestPrivate(LexModelBuildingServiceRequest::StartMigrationAction, this))
+    : LexModelBuildingRequest(new StartMigrationRequestPrivate(LexModelBuildingRequest::StartMigrationAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * StartMigrationRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::StartMigrationRequestPrivate
+ * \class QtAws::LexModelBuilding::StartMigrationRequestPrivate
  * \brief The StartMigrationRequestPrivate class provides private implementation for StartMigrationRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a StartMigrationRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a StartMigrationRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 StartMigrationRequestPrivate::StartMigrationRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, StartMigrationRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, StartMigrationRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ StartMigrationRequestPrivate::StartMigrationRequestPrivate(
  */
 StartMigrationRequestPrivate::StartMigrationRequestPrivate(
     const StartMigrationRequestPrivate &other, StartMigrationRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DeleteElasticsearchServiceRoleResponse
- * \brief The DeleteElasticsearchServiceRoleResponse class provides an interace for ElasticsearchService DeleteElasticsearchServiceRole responses.
+ * \class QtAws::Elasticsearch::DeleteElasticsearchServiceRoleResponse
+ * \brief The DeleteElasticsearchServiceRoleResponse class provides an interace for Elasticsearch DeleteElasticsearchServiceRole responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::deleteElasticsearchServiceRole
+ * \sa ElasticsearchClient::deleteElasticsearchServiceRole
  */
 
 /*!
@@ -61,7 +61,7 @@ DeleteElasticsearchServiceRoleResponse::DeleteElasticsearchServiceRoleResponse(
         const DeleteElasticsearchServiceRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DeleteElasticsearchServiceRoleResponsePrivate(this), parent)
+    : ElasticsearchResponse(new DeleteElasticsearchServiceRoleResponsePrivate(this), parent)
 {
     setRequest(new DeleteElasticsearchServiceRoleRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DeleteElasticsearchServiceRoleRequest * DeleteElasticsearchServiceRoleResp
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService DeleteElasticsearchServiceRole \a response.
+ * Parses a successful Elasticsearch DeleteElasticsearchServiceRole \a response.
  */
 void DeleteElasticsearchServiceRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DeleteElasticsearchServiceRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DeleteElasticsearchServiceRoleResponsePrivate
+ * \class QtAws::Elasticsearch::DeleteElasticsearchServiceRoleResponsePrivate
  * \brief The DeleteElasticsearchServiceRoleResponsePrivate class provides private implementation for DeleteElasticsearchServiceRoleResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a DeleteElasticsearchServiceRoleResponsePrivate object with public implementation \a q.
  */
 DeleteElasticsearchServiceRoleResponsePrivate::DeleteElasticsearchServiceRoleResponsePrivate(
-    DeleteElasticsearchServiceRoleResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    DeleteElasticsearchServiceRoleResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService DeleteElasticsearchServiceRole response element from \a xml.
+ * Parses a Elasticsearch DeleteElasticsearchServiceRole response element from \a xml.
  */
 void DeleteElasticsearchServiceRoleResponsePrivate::parseDeleteElasticsearchServiceRoleResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DeleteElasticsearchServiceRoleResponsePrivate::parseDeleteElasticsearchServ
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

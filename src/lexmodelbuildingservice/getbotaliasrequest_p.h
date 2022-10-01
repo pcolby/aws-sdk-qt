@@ -20,18 +20,18 @@
 #ifndef QTAWS_GETBOTALIASREQUEST_P_H
 #define QTAWS_GETBOTALIASREQUEST_P_H
 
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 #include "getbotaliasrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class GetBotAliasRequest;
 
-class GetBotAliasRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class GetBotAliasRequestPrivate : public LexModelBuildingRequestPrivate {
 
 public:
-    GetBotAliasRequestPrivate(const LexModelBuildingServiceRequest::Action action,
+    GetBotAliasRequestPrivate(const LexModelBuildingRequest::Action action,
                                    GetBotAliasRequest * const q);
     GetBotAliasRequestPrivate(const GetBotAliasRequestPrivate &other,
                                    GetBotAliasRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

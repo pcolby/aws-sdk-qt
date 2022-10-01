@@ -17,35 +17,35 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_ELASTICSEARCHSERVICEREQUEST_P_H
-#define QTAWS_ELASTICSEARCHSERVICEREQUEST_P_H
+#ifndef QTAWS_ELASTICSEARCHREQUEST_P_H
+#define QTAWS_ELASTICSEARCHREQUEST_P_H
 
 #include "core/awsabstractrequest_p.h"
-#include "elasticsearchservicerequest.h"
+#include "elasticsearchrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
-class ElasticsearchServiceRequest;
+class ElasticsearchRequest;
 
-class ElasticsearchServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ElasticsearchRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    ElasticsearchServiceRequest::Action action; ///< ElasticsearchService action to be performed.
-    QString apiVersion;        ///< ElasticsearchService API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< ElasticsearchService request (query string) parameters. @todo?
+    ElasticsearchRequest::Action action; ///< Elasticsearch action to be performed.
+    QString apiVersion;        ///< Elasticsearch API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Elasticsearch request (query string) parameters. @todo?
 
-    ElasticsearchServiceRequestPrivate(const ElasticsearchServiceRequest::Action action, ElasticsearchServiceRequest * const q);
-    ElasticsearchServiceRequestPrivate(const ElasticsearchServiceRequestPrivate &other, ElasticsearchServiceRequest * const q);
+    ElasticsearchRequestPrivate(const ElasticsearchRequest::Action action, ElasticsearchRequest * const q);
+    ElasticsearchRequestPrivate(const ElasticsearchRequestPrivate &other, ElasticsearchRequest * const q);
 
-    static QString toString(const ElasticsearchServiceRequest::Action &action);
+    static QString toString(const ElasticsearchRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(ElasticsearchServiceRequest)
+    Q_DECLARE_PUBLIC(ElasticsearchRequest)
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

@@ -20,14 +20,14 @@
 #ifndef QTAWS_DESCRIBEEXPORTCONFIGURATIONSREQUEST_H
 #define QTAWS_DESCRIBEEXPORTCONFIGURATIONSREQUEST_H
 
-#include "applicationdiscoveryservicerequest.h"
+#include "applicationdiscoveryrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class DescribeExportConfigurationsRequestPrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT DescribeExportConfigurationsRequest : public ApplicationDiscoveryServiceRequest {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT DescribeExportConfigurationsRequest : public ApplicationDiscoveryRequest {
 
 public:
     DescribeExportConfigurationsRequest(const DescribeExportConfigurationsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

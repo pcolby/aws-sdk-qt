@@ -20,30 +20,30 @@
 #include "createintentversionrequest.h"
 #include "createintentversionrequest_p.h"
 #include "createintentversionresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::CreateIntentVersionRequest
- * \brief The CreateIntentVersionRequest class provides an interface for LexModelBuildingService CreateIntentVersion requests.
+ * \class QtAws::LexModelBuilding::CreateIntentVersionRequest
+ * \brief The CreateIntentVersionRequest class provides an interface for LexModelBuilding CreateIntentVersion requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::createIntentVersion
+ * \sa LexModelBuildingClient::createIntentVersion
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateIntentVersionRequest::CreateIntentVersionRequest(const CreateIntentVersionRequest &other)
-    : LexModelBuildingServiceRequest(new CreateIntentVersionRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new CreateIntentVersionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateIntentVersionRequest::CreateIntentVersionRequest(const CreateIntentVersion
  * Constructs a CreateIntentVersionRequest object.
  */
 CreateIntentVersionRequest::CreateIntentVersionRequest()
-    : LexModelBuildingServiceRequest(new CreateIntentVersionRequestPrivate(LexModelBuildingServiceRequest::CreateIntentVersionAction, this))
+    : LexModelBuildingRequest(new CreateIntentVersionRequestPrivate(LexModelBuildingRequest::CreateIntentVersionAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * CreateIntentVersionRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::CreateIntentVersionRequestPrivate
+ * \class QtAws::LexModelBuilding::CreateIntentVersionRequestPrivate
  * \brief The CreateIntentVersionRequestPrivate class provides private implementation for CreateIntentVersionRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a CreateIntentVersionRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a CreateIntentVersionRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 CreateIntentVersionRequestPrivate::CreateIntentVersionRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, CreateIntentVersionRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, CreateIntentVersionRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ CreateIntentVersionRequestPrivate::CreateIntentVersionRequestPrivate(
  */
 CreateIntentVersionRequestPrivate::CreateIntentVersionRequestPrivate(
     const CreateIntentVersionRequestPrivate &other, CreateIntentVersionRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::GetUpgradeHistoryResponse
- * \brief The GetUpgradeHistoryResponse class provides an interace for ElasticsearchService GetUpgradeHistory responses.
+ * \class QtAws::Elasticsearch::GetUpgradeHistoryResponse
+ * \brief The GetUpgradeHistoryResponse class provides an interace for Elasticsearch GetUpgradeHistory responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::getUpgradeHistory
+ * \sa ElasticsearchClient::getUpgradeHistory
  */
 
 /*!
@@ -61,7 +61,7 @@ GetUpgradeHistoryResponse::GetUpgradeHistoryResponse(
         const GetUpgradeHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new GetUpgradeHistoryResponsePrivate(this), parent)
+    : ElasticsearchResponse(new GetUpgradeHistoryResponsePrivate(this), parent)
 {
     setRequest(new GetUpgradeHistoryRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const GetUpgradeHistoryRequest * GetUpgradeHistoryResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService GetUpgradeHistory \a response.
+ * Parses a successful Elasticsearch GetUpgradeHistory \a response.
  */
 void GetUpgradeHistoryResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void GetUpgradeHistoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::GetUpgradeHistoryResponsePrivate
+ * \class QtAws::Elasticsearch::GetUpgradeHistoryResponsePrivate
  * \brief The GetUpgradeHistoryResponsePrivate class provides private implementation for GetUpgradeHistoryResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a GetUpgradeHistoryResponsePrivate object with public implementation \a q.
  */
 GetUpgradeHistoryResponsePrivate::GetUpgradeHistoryResponsePrivate(
-    GetUpgradeHistoryResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    GetUpgradeHistoryResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService GetUpgradeHistory response element from \a xml.
+ * Parses a Elasticsearch GetUpgradeHistory response element from \a xml.
  */
 void GetUpgradeHistoryResponsePrivate::parseGetUpgradeHistoryResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void GetUpgradeHistoryResponsePrivate::parseGetUpgradeHistoryResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

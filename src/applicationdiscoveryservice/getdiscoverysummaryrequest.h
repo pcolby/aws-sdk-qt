@@ -20,14 +20,14 @@
 #ifndef QTAWS_GETDISCOVERYSUMMARYREQUEST_H
 #define QTAWS_GETDISCOVERYSUMMARYREQUEST_H
 
-#include "applicationdiscoveryservicerequest.h"
+#include "applicationdiscoveryrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class GetDiscoverySummaryRequestPrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT GetDiscoverySummaryRequest : public ApplicationDiscoveryServiceRequest {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT GetDiscoverySummaryRequest : public ApplicationDiscoveryRequest {
 
 public:
     GetDiscoverySummaryRequest(const GetDiscoverySummaryRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

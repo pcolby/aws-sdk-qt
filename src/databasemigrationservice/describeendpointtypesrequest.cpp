@@ -20,16 +20,16 @@
 #include "describeendpointtypesrequest.h"
 #include "describeendpointtypesrequest_p.h"
 #include "describeendpointtypesresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeEndpointTypesRequest
- * \brief The DescribeEndpointTypesRequest class provides an interface for DatabaseMigrationService DescribeEndpointTypes requests.
+ * \class QtAws::DatabaseMigration::DescribeEndpointTypesRequest
+ * \brief The DescribeEndpointTypesRequest class provides an interface for DatabaseMigration DescribeEndpointTypes requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeEndpointTypes
+ * \sa DatabaseMigrationClient::describeEndpointTypes
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeEndpointTypesRequest::DescribeEndpointTypesRequest(const DescribeEndpointTypesRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribeEndpointTypesRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribeEndpointTypesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeEndpointTypesRequest::DescribeEndpointTypesRequest(const DescribeEndpoin
  * Constructs a DescribeEndpointTypesRequest object.
  */
 DescribeEndpointTypesRequest::DescribeEndpointTypesRequest()
-    : DatabaseMigrationServiceRequest(new DescribeEndpointTypesRequestPrivate(DatabaseMigrationServiceRequest::DescribeEndpointTypesAction, this))
+    : DatabaseMigrationRequest(new DescribeEndpointTypesRequestPrivate(DatabaseMigrationRequest::DescribeEndpointTypesAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointTypesRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeEndpointTypesRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribeEndpointTypesRequestPrivate
  * \brief The DescribeEndpointTypesRequestPrivate class provides private implementation for DescribeEndpointTypesRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribeEndpointTypesRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribeEndpointTypesRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribeEndpointTypesRequestPrivate::DescribeEndpointTypesRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribeEndpointTypesRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribeEndpointTypesRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribeEndpointTypesRequestPrivate::DescribeEndpointTypesRequestPrivate(
  */
 DescribeEndpointTypesRequestPrivate::DescribeEndpointTypesRequestPrivate(
     const DescribeEndpointTypesRequestPrivate &other, DescribeEndpointTypesRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

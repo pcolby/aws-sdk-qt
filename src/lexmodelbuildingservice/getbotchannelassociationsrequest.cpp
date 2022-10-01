@@ -20,30 +20,30 @@
 #include "getbotchannelassociationsrequest.h"
 #include "getbotchannelassociationsrequest_p.h"
 #include "getbotchannelassociationsresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBotChannelAssociationsRequest
- * \brief The GetBotChannelAssociationsRequest class provides an interface for LexModelBuildingService GetBotChannelAssociations requests.
+ * \class QtAws::LexModelBuilding::GetBotChannelAssociationsRequest
+ * \brief The GetBotChannelAssociationsRequest class provides an interface for LexModelBuilding GetBotChannelAssociations requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getBotChannelAssociations
+ * \sa LexModelBuildingClient::getBotChannelAssociations
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetBotChannelAssociationsRequest::GetBotChannelAssociationsRequest(const GetBotChannelAssociationsRequest &other)
-    : LexModelBuildingServiceRequest(new GetBotChannelAssociationsRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new GetBotChannelAssociationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetBotChannelAssociationsRequest::GetBotChannelAssociationsRequest(const GetBotC
  * Constructs a GetBotChannelAssociationsRequest object.
  */
 GetBotChannelAssociationsRequest::GetBotChannelAssociationsRequest()
-    : LexModelBuildingServiceRequest(new GetBotChannelAssociationsRequestPrivate(LexModelBuildingServiceRequest::GetBotChannelAssociationsAction, this))
+    : LexModelBuildingRequest(new GetBotChannelAssociationsRequestPrivate(LexModelBuildingRequest::GetBotChannelAssociationsAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * GetBotChannelAssociationsRequest::response(QN
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBotChannelAssociationsRequestPrivate
+ * \class QtAws::LexModelBuilding::GetBotChannelAssociationsRequestPrivate
  * \brief The GetBotChannelAssociationsRequestPrivate class provides private implementation for GetBotChannelAssociationsRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a GetBotChannelAssociationsRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a GetBotChannelAssociationsRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 GetBotChannelAssociationsRequestPrivate::GetBotChannelAssociationsRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, GetBotChannelAssociationsRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, GetBotChannelAssociationsRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ GetBotChannelAssociationsRequestPrivate::GetBotChannelAssociationsRequestPrivate
  */
 GetBotChannelAssociationsRequestPrivate::GetBotChannelAssociationsRequestPrivate(
     const GetBotChannelAssociationsRequestPrivate &other, GetBotChannelAssociationsRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::PurchaseReservedElasticsearchInstanceOfferingResponse
- * \brief The PurchaseReservedElasticsearchInstanceOfferingResponse class provides an interace for ElasticsearchService PurchaseReservedElasticsearchInstanceOffering responses.
+ * \class QtAws::Elasticsearch::PurchaseReservedElasticsearchInstanceOfferingResponse
+ * \brief The PurchaseReservedElasticsearchInstanceOfferingResponse class provides an interace for Elasticsearch PurchaseReservedElasticsearchInstanceOffering responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::purchaseReservedElasticsearchInstanceOffering
+ * \sa ElasticsearchClient::purchaseReservedElasticsearchInstanceOffering
  */
 
 /*!
@@ -61,7 +61,7 @@ PurchaseReservedElasticsearchInstanceOfferingResponse::PurchaseReservedElasticse
         const PurchaseReservedElasticsearchInstanceOfferingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new PurchaseReservedElasticsearchInstanceOfferingResponsePrivate(this), parent)
+    : ElasticsearchResponse(new PurchaseReservedElasticsearchInstanceOfferingResponsePrivate(this), parent)
 {
     setRequest(new PurchaseReservedElasticsearchInstanceOfferingRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const PurchaseReservedElasticsearchInstanceOfferingRequest * PurchaseReservedEla
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService PurchaseReservedElasticsearchInstanceOffering \a response.
+ * Parses a successful Elasticsearch PurchaseReservedElasticsearchInstanceOffering \a response.
  */
 void PurchaseReservedElasticsearchInstanceOfferingResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void PurchaseReservedElasticsearchInstanceOfferingResponse::parseSuccess(QIODevi
 }
 
 /*!
- * \class QtAws::ElasticsearchService::PurchaseReservedElasticsearchInstanceOfferingResponsePrivate
+ * \class QtAws::Elasticsearch::PurchaseReservedElasticsearchInstanceOfferingResponsePrivate
  * \brief The PurchaseReservedElasticsearchInstanceOfferingResponsePrivate class provides private implementation for PurchaseReservedElasticsearchInstanceOfferingResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a PurchaseReservedElasticsearchInstanceOfferingResponsePrivate object with public implementation \a q.
  */
 PurchaseReservedElasticsearchInstanceOfferingResponsePrivate::PurchaseReservedElasticsearchInstanceOfferingResponsePrivate(
-    PurchaseReservedElasticsearchInstanceOfferingResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    PurchaseReservedElasticsearchInstanceOfferingResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService PurchaseReservedElasticsearchInstanceOffering response element from \a xml.
+ * Parses a Elasticsearch PurchaseReservedElasticsearchInstanceOffering response element from \a xml.
  */
 void PurchaseReservedElasticsearchInstanceOfferingResponsePrivate::parsePurchaseReservedElasticsearchInstanceOfferingResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void PurchaseReservedElasticsearchInstanceOfferingResponsePrivate::parsePurchase
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

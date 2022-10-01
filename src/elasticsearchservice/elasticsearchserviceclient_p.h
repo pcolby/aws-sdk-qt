@@ -17,30 +17,30 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_ELASTICSEARCHSERVICECLIENT_P_H
-#define QTAWS_ELASTICSEARCHSERVICECLIENT_P_H
+#ifndef QTAWS_ELASTICSEARCHCLIENT_P_H
+#define QTAWS_ELASTICSEARCHCLIENT_P_H
 
 #include "core/awsabstractclient_p.h"
 
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
-class ElasticsearchServiceClient;
+class ElasticsearchClient;
 
-class ElasticsearchServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ElasticsearchClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit ElasticsearchServiceClientPrivate(ElasticsearchServiceClient * const q);
+    explicit ElasticsearchClientPrivate(ElasticsearchClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(ElasticsearchServiceClient)
-    Q_DISABLE_COPY(ElasticsearchServiceClientPrivate)
+    Q_DECLARE_PUBLIC(ElasticsearchClient)
+    Q_DISABLE_COPY(ElasticsearchClientPrivate)
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

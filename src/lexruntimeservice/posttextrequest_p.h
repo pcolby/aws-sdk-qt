@@ -20,18 +20,18 @@
 #ifndef QTAWS_POSTTEXTREQUEST_P_H
 #define QTAWS_POSTTEXTREQUEST_P_H
 
-#include "lexruntimeservicerequest_p.h"
+#include "lexruntimerequest_p.h"
 #include "posttextrequest.h"
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 class PostTextRequest;
 
-class PostTextRequestPrivate : public LexRuntimeServiceRequestPrivate {
+class PostTextRequestPrivate : public LexRuntimeRequestPrivate {
 
 public:
-    PostTextRequestPrivate(const LexRuntimeServiceRequest::Action action,
+    PostTextRequestPrivate(const LexRuntimeRequest::Action action,
                                    PostTextRequest * const q);
     PostTextRequestPrivate(const PostTextRequestPrivate &other,
                                    PostTextRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws
 
 #endif

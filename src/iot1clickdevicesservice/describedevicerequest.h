@@ -20,14 +20,14 @@
 #ifndef QTAWS_DESCRIBEDEVICEREQUEST_H
 #define QTAWS_DESCRIBEDEVICEREQUEST_H
 
-#include "iot1clickdevicesservicerequest.h"
+#include "iot1clickdevicesrequest.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 class DescribeDeviceRequestPrivate;
 
-class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT DescribeDeviceRequest : public IoT1ClickDevicesServiceRequest {
+class QTAWSIOT1CLICKDEVICES_EXPORT DescribeDeviceRequest : public IoT1ClickDevicesRequest {
 
 public:
     DescribeDeviceRequest(const DescribeDeviceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

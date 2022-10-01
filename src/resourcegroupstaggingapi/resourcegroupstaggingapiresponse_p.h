@@ -17,32 +17,32 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_RESOURCEGROUPSTAGGINGAPIRESPONSE_P_H
-#define QTAWS_RESOURCEGROUPSTAGGINGAPIRESPONSE_P_H
+#ifndef QTAWS_RESOURCEGROUPSTAGGINGRESPONSE_P_H
+#define QTAWS_RESOURCEGROUPSTAGGINGRESPONSE_P_H
 
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
-class ResourceGroupsTaggingApiResponse;
+class ResourceGroupsTaggingResponse;
 
-class ResourceGroupsTaggingApiResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ResourceGroupsTaggingResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit ResourceGroupsTaggingApiResponsePrivate(ResourceGroupsTaggingApiResponse * const q);
+    explicit ResourceGroupsTaggingResponsePrivate(ResourceGroupsTaggingResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(ResourceGroupsTaggingApiResponse)
-    Q_DISABLE_COPY(ResourceGroupsTaggingApiResponsePrivate)
+    Q_DECLARE_PUBLIC(ResourceGroupsTaggingResponse)
+    Q_DISABLE_COPY(ResourceGroupsTaggingResponsePrivate)
 
 };
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws
 
 #endif

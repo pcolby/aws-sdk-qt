@@ -17,32 +17,32 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_ELASTICSEARCHSERVICERESPONSE_P_H
-#define QTAWS_ELASTICSEARCHSERVICERESPONSE_P_H
+#ifndef QTAWS_ELASTICSEARCHRESPONSE_P_H
+#define QTAWS_ELASTICSEARCHRESPONSE_P_H
 
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
-class ElasticsearchServiceResponse;
+class ElasticsearchResponse;
 
-class ElasticsearchServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ElasticsearchResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit ElasticsearchServiceResponsePrivate(ElasticsearchServiceResponse * const q);
+    explicit ElasticsearchResponsePrivate(ElasticsearchResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(ElasticsearchServiceResponse)
-    Q_DISABLE_COPY(ElasticsearchServiceResponsePrivate)
+    Q_DECLARE_PUBLIC(ElasticsearchResponse)
+    Q_DISABLE_COPY(ElasticsearchResponsePrivate)
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

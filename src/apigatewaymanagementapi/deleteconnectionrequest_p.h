@@ -20,18 +20,18 @@
 #ifndef QTAWS_DELETECONNECTIONREQUEST_P_H
 #define QTAWS_DELETECONNECTIONREQUEST_P_H
 
-#include "apigatewaymanagementapirequest_p.h"
+#include "apigatewaymanagementrequest_p.h"
 #include "deleteconnectionrequest.h"
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
 class DeleteConnectionRequest;
 
-class DeleteConnectionRequestPrivate : public ApiGatewayManagementApiRequestPrivate {
+class DeleteConnectionRequestPrivate : public ApiGatewayManagementRequestPrivate {
 
 public:
-    DeleteConnectionRequestPrivate(const ApiGatewayManagementApiRequest::Action action,
+    DeleteConnectionRequestPrivate(const ApiGatewayManagementRequest::Action action,
                                    DeleteConnectionRequest * const q);
     DeleteConnectionRequestPrivate(const DeleteConnectionRequestPrivate &other,
                                    DeleteConnectionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws
 
 #endif

@@ -20,15 +20,15 @@
 #ifndef QTAWS_DELETEBOTVERSIONRESPONSE_H
 #define QTAWS_DELETEBOTVERSIONRESPONSE_H
 
-#include "lexmodelbuildingserviceresponse.h"
+#include "lexmodelbuildingresponse.h"
 #include "deletebotversionrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class DeleteBotVersionResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT DeleteBotVersionResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDING_EXPORT DeleteBotVersionResponse : public LexModelBuildingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

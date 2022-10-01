@@ -20,16 +20,16 @@
 #include "deletereplicationinstancerequest.h"
 #include "deletereplicationinstancerequest_p.h"
 #include "deletereplicationinstanceresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteReplicationInstanceRequest
- * \brief The DeleteReplicationInstanceRequest class provides an interface for DatabaseMigrationService DeleteReplicationInstance requests.
+ * \class QtAws::DatabaseMigration::DeleteReplicationInstanceRequest
+ * \brief The DeleteReplicationInstanceRequest class provides an interface for DatabaseMigration DeleteReplicationInstance requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteReplicationInstance
+ * \sa DatabaseMigrationClient::deleteReplicationInstance
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteReplicationInstanceRequest::DeleteReplicationInstanceRequest(const DeleteReplicationInstanceRequest &other)
-    : DatabaseMigrationServiceRequest(new DeleteReplicationInstanceRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DeleteReplicationInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteReplicationInstanceRequest::DeleteReplicationInstanceRequest(const DeleteR
  * Constructs a DeleteReplicationInstanceRequest object.
  */
 DeleteReplicationInstanceRequest::DeleteReplicationInstanceRequest()
-    : DatabaseMigrationServiceRequest(new DeleteReplicationInstanceRequestPrivate(DatabaseMigrationServiceRequest::DeleteReplicationInstanceAction, this))
+    : DatabaseMigrationRequest(new DeleteReplicationInstanceRequestPrivate(DatabaseMigrationRequest::DeleteReplicationInstanceAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationInstanceRequest::response(QN
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteReplicationInstanceRequestPrivate
+ * \class QtAws::DatabaseMigration::DeleteReplicationInstanceRequestPrivate
  * \brief The DeleteReplicationInstanceRequestPrivate class provides private implementation for DeleteReplicationInstanceRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DeleteReplicationInstanceRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DeleteReplicationInstanceRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DeleteReplicationInstanceRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DeleteReplicationInstanceRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate
  */
 DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate(
     const DeleteReplicationInstanceRequestPrivate &other, DeleteReplicationInstanceRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

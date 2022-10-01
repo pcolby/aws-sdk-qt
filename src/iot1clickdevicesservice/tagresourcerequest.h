@@ -20,14 +20,14 @@
 #ifndef QTAWS_TAGRESOURCEREQUEST_H
 #define QTAWS_TAGRESOURCEREQUEST_H
 
-#include "iot1clickdevicesservicerequest.h"
+#include "iot1clickdevicesrequest.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 class TagResourceRequestPrivate;
 
-class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT TagResourceRequest : public IoT1ClickDevicesServiceRequest {
+class QTAWSIOT1CLICKDEVICES_EXPORT TagResourceRequest : public IoT1ClickDevicesRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

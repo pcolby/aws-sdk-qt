@@ -20,15 +20,15 @@
 #ifndef QTAWS_ADDTAGSRESPONSE_H
 #define QTAWS_ADDTAGSRESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "addtagsrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class AddTagsResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT AddTagsResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT AddTagsResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

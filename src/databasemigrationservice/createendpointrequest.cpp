@@ -20,16 +20,16 @@
 #include "createendpointrequest.h"
 #include "createendpointrequest_p.h"
 #include "createendpointresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateEndpointRequest
- * \brief The CreateEndpointRequest class provides an interface for DatabaseMigrationService CreateEndpoint requests.
+ * \class QtAws::DatabaseMigration::CreateEndpointRequest
+ * \brief The CreateEndpointRequest class provides an interface for DatabaseMigration CreateEndpoint requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::createEndpoint
+ * \sa DatabaseMigrationClient::createEndpoint
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateEndpointRequest::CreateEndpointRequest(const CreateEndpointRequest &other)
-    : DatabaseMigrationServiceRequest(new CreateEndpointRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new CreateEndpointRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ CreateEndpointRequest::CreateEndpointRequest(const CreateEndpointRequest &other)
  * Constructs a CreateEndpointRequest object.
  */
 CreateEndpointRequest::CreateEndpointRequest()
-    : DatabaseMigrationServiceRequest(new CreateEndpointRequestPrivate(DatabaseMigrationServiceRequest::CreateEndpointAction, this))
+    : DatabaseMigrationRequest(new CreateEndpointRequestPrivate(DatabaseMigrationRequest::CreateEndpointAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * CreateEndpointRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateEndpointRequestPrivate
+ * \class QtAws::DatabaseMigration::CreateEndpointRequestPrivate
  * \brief The CreateEndpointRequestPrivate class provides private implementation for CreateEndpointRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a CreateEndpointRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a CreateEndpointRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, CreateEndpointRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, CreateEndpointRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
  */
 CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
     const CreateEndpointRequestPrivate &other, CreateEndpointRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -20,14 +20,14 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_H
 
-#include "lexmodelbuildingservicerequest.h"
+#include "lexmodelbuildingrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT ListTagsForResourceRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDING_EXPORT ListTagsForResourceRequest : public LexModelBuildingRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

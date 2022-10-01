@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DisassociateConfigurationItemsFromApplicationResponse
- * \brief The DisassociateConfigurationItemsFromApplicationResponse class provides an interace for ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication responses.
+ * \class QtAws::ApplicationDiscovery::DisassociateConfigurationItemsFromApplicationResponse
+ * \brief The DisassociateConfigurationItemsFromApplicationResponse class provides an interace for ApplicationDiscovery DisassociateConfigurationItemsFromApplication responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::disassociateConfigurationItemsFromApplication
+ * \sa ApplicationDiscoveryClient::disassociateConfigurationItemsFromApplication
  */
 
 /*!
@@ -152,7 +152,7 @@ DisassociateConfigurationItemsFromApplicationResponse::DisassociateConfiguration
         const DisassociateConfigurationItemsFromApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new DisassociateConfigurationItemsFromApplicationResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new DisassociateConfigurationItemsFromApplicationResponsePrivate(this), parent)
 {
     setRequest(new DisassociateConfigurationItemsFromApplicationRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const DisassociateConfigurationItemsFromApplicationRequest * DisassociateConfigu
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication \a response.
+ * Parses a successful ApplicationDiscovery DisassociateConfigurationItemsFromApplication \a response.
  */
 void DisassociateConfigurationItemsFromApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void DisassociateConfigurationItemsFromApplicationResponse::parseSuccess(QIODevi
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DisassociateConfigurationItemsFromApplicationResponsePrivate
+ * \class QtAws::ApplicationDiscovery::DisassociateConfigurationItemsFromApplicationResponsePrivate
  * \brief The DisassociateConfigurationItemsFromApplicationResponsePrivate class provides private implementation for DisassociateConfigurationItemsFromApplicationResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a DisassociateConfigurationItemsFromApplicationResponsePrivate object with public implementation \a q.
  */
 DisassociateConfigurationItemsFromApplicationResponsePrivate::DisassociateConfigurationItemsFromApplicationResponsePrivate(
-    DisassociateConfigurationItemsFromApplicationResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    DisassociateConfigurationItemsFromApplicationResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication response element from \a xml.
+ * Parses a ApplicationDiscovery DisassociateConfigurationItemsFromApplication response element from \a xml.
  */
 void DisassociateConfigurationItemsFromApplicationResponsePrivate::parseDisassociateConfigurationItemsFromApplicationResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void DisassociateConfigurationItemsFromApplicationResponsePrivate::parseDisassoc
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

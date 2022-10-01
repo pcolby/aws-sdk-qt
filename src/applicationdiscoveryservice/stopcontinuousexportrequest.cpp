@@ -20,16 +20,16 @@
 #include "stopcontinuousexportrequest.h"
 #include "stopcontinuousexportrequest_p.h"
 #include "stopcontinuousexportresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StopContinuousExportRequest
- * \brief The StopContinuousExportRequest class provides an interface for ApplicationDiscoveryService StopContinuousExport requests.
+ * \class QtAws::ApplicationDiscovery::StopContinuousExportRequest
+ * \brief The StopContinuousExportRequest class provides an interface for ApplicationDiscovery StopContinuousExport requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::stopContinuousExport
+ * \sa ApplicationDiscoveryClient::stopContinuousExport
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StopContinuousExportRequest::StopContinuousExportRequest(const StopContinuousExportRequest &other)
-    : ApplicationDiscoveryServiceRequest(new StopContinuousExportRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new StopContinuousExportRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ StopContinuousExportRequest::StopContinuousExportRequest(const StopContinuousExp
  * Constructs a StopContinuousExportRequest object.
  */
 StopContinuousExportRequest::StopContinuousExportRequest()
-    : ApplicationDiscoveryServiceRequest(new StopContinuousExportRequestPrivate(ApplicationDiscoveryServiceRequest::StopContinuousExportAction, this))
+    : ApplicationDiscoveryRequest(new StopContinuousExportRequestPrivate(ApplicationDiscoveryRequest::StopContinuousExportAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * StopContinuousExportRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StopContinuousExportRequestPrivate
+ * \class QtAws::ApplicationDiscovery::StopContinuousExportRequestPrivate
  * \brief The StopContinuousExportRequestPrivate class provides private implementation for StopContinuousExportRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a StopContinuousExportRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a StopContinuousExportRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 StopContinuousExportRequestPrivate::StopContinuousExportRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, StopContinuousExportRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, StopContinuousExportRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ StopContinuousExportRequestPrivate::StopContinuousExportRequestPrivate(
  */
 StopContinuousExportRequestPrivate::StopContinuousExportRequestPrivate(
     const StopContinuousExportRequestPrivate &other, StopContinuousExportRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

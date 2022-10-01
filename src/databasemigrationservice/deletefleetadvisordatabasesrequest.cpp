@@ -20,16 +20,16 @@
 #include "deletefleetadvisordatabasesrequest.h"
 #include "deletefleetadvisordatabasesrequest_p.h"
 #include "deletefleetadvisordatabasesresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteFleetAdvisorDatabasesRequest
- * \brief The DeleteFleetAdvisorDatabasesRequest class provides an interface for DatabaseMigrationService DeleteFleetAdvisorDatabases requests.
+ * \class QtAws::DatabaseMigration::DeleteFleetAdvisorDatabasesRequest
+ * \brief The DeleteFleetAdvisorDatabasesRequest class provides an interface for DatabaseMigration DeleteFleetAdvisorDatabases requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteFleetAdvisorDatabases
+ * \sa DatabaseMigrationClient::deleteFleetAdvisorDatabases
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteFleetAdvisorDatabasesRequest::DeleteFleetAdvisorDatabasesRequest(const DeleteFleetAdvisorDatabasesRequest &other)
-    : DatabaseMigrationServiceRequest(new DeleteFleetAdvisorDatabasesRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DeleteFleetAdvisorDatabasesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteFleetAdvisorDatabasesRequest::DeleteFleetAdvisorDatabasesRequest(const Del
  * Constructs a DeleteFleetAdvisorDatabasesRequest object.
  */
 DeleteFleetAdvisorDatabasesRequest::DeleteFleetAdvisorDatabasesRequest()
-    : DatabaseMigrationServiceRequest(new DeleteFleetAdvisorDatabasesRequestPrivate(DatabaseMigrationServiceRequest::DeleteFleetAdvisorDatabasesAction, this))
+    : DatabaseMigrationRequest(new DeleteFleetAdvisorDatabasesRequestPrivate(DatabaseMigrationRequest::DeleteFleetAdvisorDatabasesAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DeleteFleetAdvisorDatabasesRequest::response(
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteFleetAdvisorDatabasesRequestPrivate
+ * \class QtAws::DatabaseMigration::DeleteFleetAdvisorDatabasesRequestPrivate
  * \brief The DeleteFleetAdvisorDatabasesRequestPrivate class provides private implementation for DeleteFleetAdvisorDatabasesRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DeleteFleetAdvisorDatabasesRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DeleteFleetAdvisorDatabasesRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DeleteFleetAdvisorDatabasesRequestPrivate::DeleteFleetAdvisorDatabasesRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DeleteFleetAdvisorDatabasesRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DeleteFleetAdvisorDatabasesRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DeleteFleetAdvisorDatabasesRequestPrivate::DeleteFleetAdvisorDatabasesRequestPri
  */
 DeleteFleetAdvisorDatabasesRequestPrivate::DeleteFleetAdvisorDatabasesRequestPrivate(
     const DeleteFleetAdvisorDatabasesRequestPrivate &other, DeleteFleetAdvisorDatabasesRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

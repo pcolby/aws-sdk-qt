@@ -20,30 +20,30 @@
 #include "getintentsrequest.h"
 #include "getintentsrequest_p.h"
 #include "getintentsresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetIntentsRequest
- * \brief The GetIntentsRequest class provides an interface for LexModelBuildingService GetIntents requests.
+ * \class QtAws::LexModelBuilding::GetIntentsRequest
+ * \brief The GetIntentsRequest class provides an interface for LexModelBuilding GetIntents requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getIntents
+ * \sa LexModelBuildingClient::getIntents
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetIntentsRequest::GetIntentsRequest(const GetIntentsRequest &other)
-    : LexModelBuildingServiceRequest(new GetIntentsRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new GetIntentsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetIntentsRequest::GetIntentsRequest(const GetIntentsRequest &other)
  * Constructs a GetIntentsRequest object.
  */
 GetIntentsRequest::GetIntentsRequest()
-    : LexModelBuildingServiceRequest(new GetIntentsRequestPrivate(LexModelBuildingServiceRequest::GetIntentsAction, this))
+    : LexModelBuildingRequest(new GetIntentsRequestPrivate(LexModelBuildingRequest::GetIntentsAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * GetIntentsRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetIntentsRequestPrivate
+ * \class QtAws::LexModelBuilding::GetIntentsRequestPrivate
  * \brief The GetIntentsRequestPrivate class provides private implementation for GetIntentsRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a GetIntentsRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a GetIntentsRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 GetIntentsRequestPrivate::GetIntentsRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, GetIntentsRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, GetIntentsRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ GetIntentsRequestPrivate::GetIntentsRequestPrivate(
  */
 GetIntentsRequestPrivate::GetIntentsRequestPrivate(
     const GetIntentsRequestPrivate &other, GetIntentsRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

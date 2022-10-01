@@ -20,15 +20,15 @@
 #ifndef QTAWS_UNTAGRESOURCERESPONSE_H
 #define QTAWS_UNTAGRESOURCERESPONSE_H
 
-#include "lexmodelbuildingserviceresponse.h"
+#include "lexmodelbuildingresponse.h"
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class UntagResourceResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT UntagResourceResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDING_EXPORT UntagResourceResponse : public LexModelBuildingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

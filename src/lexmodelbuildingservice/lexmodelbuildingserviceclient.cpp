@@ -17,8 +17,8 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "lexmodelbuildingserviceclient.h"
-#include "lexmodelbuildingserviceclient_p.h"
+#include "lexmodelbuildingclient.h"
+#include "lexmodelbuildingclient_p.h"
 
 #include "core/awssignaturev4.h"
 #include "createbotversionrequest.h"
@@ -110,23 +110,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::LexModelBuildingService
+ * \namespace QtAws::LexModelBuilding
  * \brief Contains classess for accessing Amazon Lex Model Building Service.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::LexModelBuildingServiceClient
- * \brief The LexModelBuildingServiceClient class provides access to the Amazon Lex Model Building Service service.
+ * \class QtAws::LexModelBuilding::LexModelBuildingClient
+ * \brief The LexModelBuildingClient class provides access to the Amazon Lex Model Building Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -135,21 +135,21 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * \brief Constructs a LexModelBuildingServiceClient object.
+ * \brief Constructs a LexModelBuildingClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-LexModelBuildingServiceClient::LexModelBuildingServiceClient(
+LexModelBuildingClient::LexModelBuildingClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new LexModelBuildingServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new LexModelBuildingClientPrivate(this), parent)
 {
-    Q_D(LexModelBuildingServiceClient);
+    Q_D(LexModelBuildingClient);
     d->apiVersion = QStringLiteral("2017-04-19");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("models.lex");
@@ -160,7 +160,7 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
 }
 
 /*!
- * \overload LexModelBuildingServiceClient()
+ * \overload LexModelBuildingClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -170,14 +170,14 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-LexModelBuildingServiceClient::LexModelBuildingServiceClient(
+LexModelBuildingClient::LexModelBuildingClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new LexModelBuildingServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new LexModelBuildingClientPrivate(this), parent)
 {
-    Q_D(LexModelBuildingServiceClient);
+    Q_D(LexModelBuildingClient);
     d->apiVersion = QStringLiteral("2017-04-19");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -188,7 +188,7 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * CreateBotVersionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -211,13 +211,13 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
  *
  * This operation requires permission for the <code>lex:CreateBotVersion</code> action.
  */
-CreateBotVersionResponse * LexModelBuildingServiceClient::createBotVersion(const CreateBotVersionRequest &request)
+CreateBotVersionResponse * LexModelBuildingClient::createBotVersion(const CreateBotVersionRequest &request)
 {
     return qobject_cast<CreateBotVersionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * CreateIntentVersionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -240,13 +240,13 @@ CreateBotVersionResponse * LexModelBuildingServiceClient::createBotVersion(const
  *
  * This operation requires permissions to perform the <code>lex:CreateIntentVersion</code> action.
  */
-CreateIntentVersionResponse * LexModelBuildingServiceClient::createIntentVersion(const CreateIntentVersionRequest &request)
+CreateIntentVersionResponse * LexModelBuildingClient::createIntentVersion(const CreateIntentVersionRequest &request)
 {
     return qobject_cast<CreateIntentVersionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * CreateSlotTypeVersionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -269,13 +269,13 @@ CreateIntentVersionResponse * LexModelBuildingServiceClient::createIntentVersion
  *
  * This operation requires permissions for the <code>lex:CreateSlotTypeVersion</code>
  */
-CreateSlotTypeVersionResponse * LexModelBuildingServiceClient::createSlotTypeVersion(const CreateSlotTypeVersionRequest &request)
+CreateSlotTypeVersionResponse * LexModelBuildingClient::createSlotTypeVersion(const CreateSlotTypeVersionRequest &request)
 {
     return qobject_cast<CreateSlotTypeVersionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * DeleteBotResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -300,13 +300,13 @@ CreateSlotTypeVersionResponse * LexModelBuildingServiceClient::createSlotTypeVer
  *
  * This operation requires permissions for the <code>lex:DeleteBot</code>
  */
-DeleteBotResponse * LexModelBuildingServiceClient::deleteBot(const DeleteBotRequest &request)
+DeleteBotResponse * LexModelBuildingClient::deleteBot(const DeleteBotRequest &request)
 {
     return qobject_cast<DeleteBotResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * DeleteBotAliasResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -321,13 +321,13 @@ DeleteBotResponse * LexModelBuildingServiceClient::deleteBot(const DeleteBotRequ
  * deleting the channel association. If you get the same exception again, delete the referring association until the
  * <code>DeleteBotAlias</code> operation is
  */
-DeleteBotAliasResponse * LexModelBuildingServiceClient::deleteBotAlias(const DeleteBotAliasRequest &request)
+DeleteBotAliasResponse * LexModelBuildingClient::deleteBotAlias(const DeleteBotAliasRequest &request)
 {
     return qobject_cast<DeleteBotAliasResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * DeleteBotChannelAssociationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -338,13 +338,13 @@ DeleteBotAliasResponse * LexModelBuildingServiceClient::deleteBotAlias(const Del
  *
  * This operation requires permission for the <code>lex:DeleteBotChannelAssociation</code>
  */
-DeleteBotChannelAssociationResponse * LexModelBuildingServiceClient::deleteBotChannelAssociation(const DeleteBotChannelAssociationRequest &request)
+DeleteBotChannelAssociationResponse * LexModelBuildingClient::deleteBotChannelAssociation(const DeleteBotChannelAssociationRequest &request)
 {
     return qobject_cast<DeleteBotChannelAssociationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * DeleteBotVersionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -355,13 +355,13 @@ DeleteBotChannelAssociationResponse * LexModelBuildingServiceClient::deleteBotCh
  *
  * This operation requires permissions for the <code>lex:DeleteBotVersion</code>
  */
-DeleteBotVersionResponse * LexModelBuildingServiceClient::deleteBotVersion(const DeleteBotVersionRequest &request)
+DeleteBotVersionResponse * LexModelBuildingClient::deleteBotVersion(const DeleteBotVersionRequest &request)
 {
     return qobject_cast<DeleteBotVersionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * DeleteIntentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -385,13 +385,13 @@ DeleteBotVersionResponse * LexModelBuildingServiceClient::deleteBotVersion(const
  *
  * This operation requires permission for the <code>lex:DeleteIntent</code> action.
  */
-DeleteIntentResponse * LexModelBuildingServiceClient::deleteIntent(const DeleteIntentRequest &request)
+DeleteIntentResponse * LexModelBuildingClient::deleteIntent(const DeleteIntentRequest &request)
 {
     return qobject_cast<DeleteIntentResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * DeleteIntentVersionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -402,13 +402,13 @@ DeleteIntentResponse * LexModelBuildingServiceClient::deleteIntent(const DeleteI
  *
  * This operation requires permissions for the <code>lex:DeleteIntentVersion</code>
  */
-DeleteIntentVersionResponse * LexModelBuildingServiceClient::deleteIntentVersion(const DeleteIntentVersionRequest &request)
+DeleteIntentVersionResponse * LexModelBuildingClient::deleteIntentVersion(const DeleteIntentVersionRequest &request)
 {
     return qobject_cast<DeleteIntentVersionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * DeleteSlotTypeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -432,13 +432,13 @@ DeleteIntentVersionResponse * LexModelBuildingServiceClient::deleteIntentVersion
  *
  * This operation requires permission for the <code>lex:DeleteSlotType</code>
  */
-DeleteSlotTypeResponse * LexModelBuildingServiceClient::deleteSlotType(const DeleteSlotTypeRequest &request)
+DeleteSlotTypeResponse * LexModelBuildingClient::deleteSlotType(const DeleteSlotTypeRequest &request)
 {
     return qobject_cast<DeleteSlotTypeResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * DeleteSlotTypeVersionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -450,13 +450,13 @@ DeleteSlotTypeResponse * LexModelBuildingServiceClient::deleteSlotType(const Del
  *
  * This operation requires permissions for the <code>lex:DeleteSlotTypeVersion</code>
  */
-DeleteSlotTypeVersionResponse * LexModelBuildingServiceClient::deleteSlotTypeVersion(const DeleteSlotTypeVersionRequest &request)
+DeleteSlotTypeVersionResponse * LexModelBuildingClient::deleteSlotTypeVersion(const DeleteSlotTypeVersionRequest &request)
 {
     return qobject_cast<DeleteSlotTypeVersionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * DeleteUtterancesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -480,13 +480,13 @@ DeleteSlotTypeVersionResponse * LexModelBuildingServiceClient::deleteSlotTypeVer
  *
  * This operation requires permissions for the <code>lex:DeleteUtterances</code>
  */
-DeleteUtterancesResponse * LexModelBuildingServiceClient::deleteUtterances(const DeleteUtterancesRequest &request)
+DeleteUtterancesResponse * LexModelBuildingClient::deleteUtterances(const DeleteUtterancesRequest &request)
 {
     return qobject_cast<DeleteUtterancesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetBotResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -497,13 +497,13 @@ DeleteUtterancesResponse * LexModelBuildingServiceClient::deleteUtterances(const
  *
  * This operation requires permissions for the <code>lex:GetBot</code> action.
  */
-GetBotResponse * LexModelBuildingServiceClient::getBot(const GetBotRequest &request)
+GetBotResponse * LexModelBuildingClient::getBot(const GetBotRequest &request)
 {
     return qobject_cast<GetBotResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetBotAliasResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -514,13 +514,13 @@ GetBotResponse * LexModelBuildingServiceClient::getBot(const GetBotRequest &requ
  *
  * This operation requires permissions for the <code>lex:GetBotAlias</code>
  */
-GetBotAliasResponse * LexModelBuildingServiceClient::getBotAlias(const GetBotAliasRequest &request)
+GetBotAliasResponse * LexModelBuildingClient::getBotAlias(const GetBotAliasRequest &request)
 {
     return qobject_cast<GetBotAliasResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetBotAliasesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -531,13 +531,13 @@ GetBotAliasResponse * LexModelBuildingServiceClient::getBotAlias(const GetBotAli
  *
  * This operation requires permissions for the <code>lex:GetBotAliases</code>
  */
-GetBotAliasesResponse * LexModelBuildingServiceClient::getBotAliases(const GetBotAliasesRequest &request)
+GetBotAliasesResponse * LexModelBuildingClient::getBotAliases(const GetBotAliasesRequest &request)
 {
     return qobject_cast<GetBotAliasesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetBotChannelAssociationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -548,13 +548,13 @@ GetBotAliasesResponse * LexModelBuildingServiceClient::getBotAliases(const GetBo
  *
  * This operation requires permissions for the <code>lex:GetBotChannelAssociation</code>
  */
-GetBotChannelAssociationResponse * LexModelBuildingServiceClient::getBotChannelAssociation(const GetBotChannelAssociationRequest &request)
+GetBotChannelAssociationResponse * LexModelBuildingClient::getBotChannelAssociation(const GetBotChannelAssociationRequest &request)
 {
     return qobject_cast<GetBotChannelAssociationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetBotChannelAssociationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -566,13 +566,13 @@ GetBotChannelAssociationResponse * LexModelBuildingServiceClient::getBotChannelA
  * The <code>GetBotChannelAssociations</code> operation requires permissions for the
  * <code>lex:GetBotChannelAssociations</code>
  */
-GetBotChannelAssociationsResponse * LexModelBuildingServiceClient::getBotChannelAssociations(const GetBotChannelAssociationsRequest &request)
+GetBotChannelAssociationsResponse * LexModelBuildingClient::getBotChannelAssociations(const GetBotChannelAssociationsRequest &request)
 {
     return qobject_cast<GetBotChannelAssociationsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetBotVersionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -594,13 +594,13 @@ GetBotChannelAssociationsResponse * LexModelBuildingServiceClient::getBotChannel
  *
  * This operation requires permissions for the <code>lex:GetBotVersions</code>
  */
-GetBotVersionsResponse * LexModelBuildingServiceClient::getBotVersions(const GetBotVersionsRequest &request)
+GetBotVersionsResponse * LexModelBuildingClient::getBotVersions(const GetBotVersionsRequest &request)
 {
     return qobject_cast<GetBotVersionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetBotsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -621,13 +621,13 @@ GetBotVersionsResponse * LexModelBuildingServiceClient::getBotVersions(const Get
  *
  * This operation requires permission for the <code>lex:GetBots</code>
  */
-GetBotsResponse * LexModelBuildingServiceClient::getBots(const GetBotsRequest &request)
+GetBotsResponse * LexModelBuildingClient::getBots(const GetBotsRequest &request)
 {
     return qobject_cast<GetBotsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetBuiltinIntentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -638,13 +638,13 @@ GetBotsResponse * LexModelBuildingServiceClient::getBots(const GetBotsRequest &r
  *
  * This operation requires permission for the <code>lex:GetBuiltinIntent</code>
  */
-GetBuiltinIntentResponse * LexModelBuildingServiceClient::getBuiltinIntent(const GetBuiltinIntentRequest &request)
+GetBuiltinIntentResponse * LexModelBuildingClient::getBuiltinIntent(const GetBuiltinIntentRequest &request)
 {
     return qobject_cast<GetBuiltinIntentResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetBuiltinIntentsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -655,13 +655,13 @@ GetBuiltinIntentResponse * LexModelBuildingServiceClient::getBuiltinIntent(const
  *
  * This operation requires permission for the <code>lex:GetBuiltinIntents</code>
  */
-GetBuiltinIntentsResponse * LexModelBuildingServiceClient::getBuiltinIntents(const GetBuiltinIntentsRequest &request)
+GetBuiltinIntentsResponse * LexModelBuildingClient::getBuiltinIntents(const GetBuiltinIntentsRequest &request)
 {
     return qobject_cast<GetBuiltinIntentsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetBuiltinSlotTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -678,39 +678,39 @@ GetBuiltinIntentsResponse * LexModelBuildingServiceClient::getBuiltinIntents(con
  *
  * This operation requires permission for the <code>lex:GetBuiltInSlotTypes</code>
  */
-GetBuiltinSlotTypesResponse * LexModelBuildingServiceClient::getBuiltinSlotTypes(const GetBuiltinSlotTypesRequest &request)
+GetBuiltinSlotTypesResponse * LexModelBuildingClient::getBuiltinSlotTypes(const GetBuiltinSlotTypesRequest &request)
 {
     return qobject_cast<GetBuiltinSlotTypesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetExportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Exports the contents of a Amazon Lex resource in a specified format.
  */
-GetExportResponse * LexModelBuildingServiceClient::getExport(const GetExportRequest &request)
+GetExportResponse * LexModelBuildingClient::getExport(const GetExportRequest &request)
 {
     return qobject_cast<GetExportResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetImportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about an import job started with the <code>StartImport</code>
  */
-GetImportResponse * LexModelBuildingServiceClient::getImport(const GetImportRequest &request)
+GetImportResponse * LexModelBuildingClient::getImport(const GetImportRequest &request)
 {
     return qobject_cast<GetImportResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetIntentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -721,13 +721,13 @@ GetImportResponse * LexModelBuildingServiceClient::getImport(const GetImportRequ
  *
  * This operation requires permissions to perform the <code>lex:GetIntent</code> action.
  */
-GetIntentResponse * LexModelBuildingServiceClient::getIntent(const GetIntentRequest &request)
+GetIntentResponse * LexModelBuildingClient::getIntent(const GetIntentRequest &request)
 {
     return qobject_cast<GetIntentResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetIntentVersionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -749,13 +749,13 @@ GetIntentResponse * LexModelBuildingServiceClient::getIntent(const GetIntentRequ
  *
  * This operation requires permissions for the <code>lex:GetIntentVersions</code>
  */
-GetIntentVersionsResponse * LexModelBuildingServiceClient::getIntentVersions(const GetIntentVersionsRequest &request)
+GetIntentVersionsResponse * LexModelBuildingClient::getIntentVersions(const GetIntentVersionsRequest &request)
 {
     return qobject_cast<GetIntentVersionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetIntentsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -776,13 +776,13 @@ GetIntentVersionsResponse * LexModelBuildingServiceClient::getIntentVersions(con
  *
  * The operation requires permission for the <code>lex:GetIntents</code> action.
  */
-GetIntentsResponse * LexModelBuildingServiceClient::getIntents(const GetIntentsRequest &request)
+GetIntentsResponse * LexModelBuildingClient::getIntents(const GetIntentsRequest &request)
 {
     return qobject_cast<GetIntentsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetMigrationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -790,26 +790,26 @@ GetIntentsResponse * LexModelBuildingServiceClient::getIntents(const GetIntentsR
  * Provides details about an ongoing or complete migration from an Amazon Lex V1 bot to an Amazon Lex V2 bot. Use this
  * operation to view the migration alerts and warnings related to the
  */
-GetMigrationResponse * LexModelBuildingServiceClient::getMigration(const GetMigrationRequest &request)
+GetMigrationResponse * LexModelBuildingClient::getMigration(const GetMigrationRequest &request)
 {
     return qobject_cast<GetMigrationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetMigrationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets a list of migrations between Amazon Lex V1 and Amazon Lex
  */
-GetMigrationsResponse * LexModelBuildingServiceClient::getMigrations(const GetMigrationsRequest &request)
+GetMigrationsResponse * LexModelBuildingClient::getMigrations(const GetMigrationsRequest &request)
 {
     return qobject_cast<GetMigrationsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetSlotTypeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -821,13 +821,13 @@ GetMigrationsResponse * LexModelBuildingServiceClient::getMigrations(const GetMi
  *
  * This operation requires permissions for the <code>lex:GetSlotType</code>
  */
-GetSlotTypeResponse * LexModelBuildingServiceClient::getSlotType(const GetSlotTypeRequest &request)
+GetSlotTypeResponse * LexModelBuildingClient::getSlotType(const GetSlotTypeRequest &request)
 {
     return qobject_cast<GetSlotTypeResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetSlotTypeVersionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -849,13 +849,13 @@ GetSlotTypeResponse * LexModelBuildingServiceClient::getSlotType(const GetSlotTy
  *
  * This operation requires permissions for the <code>lex:GetSlotTypeVersions</code>
  */
-GetSlotTypeVersionsResponse * LexModelBuildingServiceClient::getSlotTypeVersions(const GetSlotTypeVersionsRequest &request)
+GetSlotTypeVersionsResponse * LexModelBuildingClient::getSlotTypeVersions(const GetSlotTypeVersionsRequest &request)
 {
     return qobject_cast<GetSlotTypeVersionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetSlotTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -876,13 +876,13 @@ GetSlotTypeVersionsResponse * LexModelBuildingServiceClient::getSlotTypeVersions
  *
  * The operation requires permission for the <code>lex:GetSlotTypes</code> action.
  */
-GetSlotTypesResponse * LexModelBuildingServiceClient::getSlotTypes(const GetSlotTypesRequest &request)
+GetSlotTypesResponse * LexModelBuildingClient::getSlotTypes(const GetSlotTypesRequest &request)
 {
     return qobject_cast<GetSlotTypesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * GetUtterancesViewResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -917,13 +917,13 @@ GetSlotTypesResponse * LexModelBuildingServiceClient::getSlotTypes(const GetSlot
  *
  * This operation requires permissions for the <code>lex:GetUtterancesView</code>
  */
-GetUtterancesViewResponse * LexModelBuildingServiceClient::getUtterancesView(const GetUtterancesViewRequest &request)
+GetUtterancesViewResponse * LexModelBuildingClient::getUtterancesView(const GetUtterancesViewRequest &request)
 {
     return qobject_cast<GetUtterancesViewResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -931,13 +931,13 @@ GetUtterancesViewResponse * LexModelBuildingServiceClient::getUtterancesView(con
  * Gets a list of tags associated with the specified resource. Only bots, bot aliases, and bot channels can have tags
  * associated with
  */
-ListTagsForResourceResponse * LexModelBuildingServiceClient::listTagsForResource(const ListTagsForResourceRequest &request)
+ListTagsForResourceResponse * LexModelBuildingClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * PutBotResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -959,13 +959,13 @@ ListTagsForResourceResponse * LexModelBuildingServiceClient::listTagsForResource
  *
  * This operation requires permissions for the <code>lex:PutBot</code> action. For more information, see
  */
-PutBotResponse * LexModelBuildingServiceClient::putBot(const PutBotRequest &request)
+PutBotResponse * LexModelBuildingClient::putBot(const PutBotRequest &request)
 {
     return qobject_cast<PutBotResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * PutBotAliasResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -977,13 +977,13 @@ PutBotResponse * LexModelBuildingServiceClient::putBot(const PutBotRequest &requ
  *
  * This operation requires permissions for the <code>lex:PutBotAlias</code> action.
  */
-PutBotAliasResponse * LexModelBuildingServiceClient::putBotAlias(const PutBotAliasRequest &request)
+PutBotAliasResponse * LexModelBuildingClient::putBotAlias(const PutBotAliasRequest &request)
 {
     return qobject_cast<PutBotAliasResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * PutIntentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1052,13 +1052,13 @@ PutBotAliasResponse * LexModelBuildingServiceClient::putBotAlias(const PutBotAli
  *
  * This operation requires permissions for the <code>lex:PutIntent</code>
  */
-PutIntentResponse * LexModelBuildingServiceClient::putIntent(const PutIntentRequest &request)
+PutIntentResponse * LexModelBuildingClient::putIntent(const PutIntentRequest &request)
 {
     return qobject_cast<PutIntentResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * PutSlotTypeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1082,26 +1082,26 @@ PutIntentResponse * LexModelBuildingServiceClient::putIntent(const PutIntentRequ
  *
  * This operation requires permissions for the <code>lex:PutSlotType</code>
  */
-PutSlotTypeResponse * LexModelBuildingServiceClient::putSlotType(const PutSlotTypeRequest &request)
+PutSlotTypeResponse * LexModelBuildingClient::putSlotType(const PutSlotTypeRequest &request)
 {
     return qobject_cast<PutSlotTypeResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * StartImportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Starts a job to import a resource to Amazon
  */
-StartImportResponse * LexModelBuildingServiceClient::startImport(const StartImportRequest &request)
+StartImportResponse * LexModelBuildingClient::startImport(const StartImportRequest &request)
 {
     return qobject_cast<StartImportResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * StartMigrationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1114,13 +1114,13 @@ StartImportResponse * LexModelBuildingServiceClient::startImport(const StartImpo
  * For more information, see <a href="https://docs.aws.amazon.com/lex/latest/dg/migrate.html">Migrating a bot</a> in the
  * <i>Amazon Lex developer
  */
-StartMigrationResponse * LexModelBuildingServiceClient::startMigration(const StartMigrationRequest &request)
+StartMigrationResponse * LexModelBuildingClient::startMigration(const StartMigrationRequest &request)
 {
     return qobject_cast<StartMigrationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1128,41 +1128,41 @@ StartMigrationResponse * LexModelBuildingServiceClient::startMigration(const Sta
  * Adds the specified tags to the specified resource. If a tag key already exists, the existing value is replaced with the
  * new
  */
-TagResourceResponse * LexModelBuildingServiceClient::tagResource(const TagResourceRequest &request)
+TagResourceResponse * LexModelBuildingClient::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexModelBuildingClient service, and returns a pointer to an
  * UntagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes tags from a bot, bot alias or bot
  */
-UntagResourceResponse * LexModelBuildingServiceClient::untagResource(const UntagResourceRequest &request)
+UntagResourceResponse * LexModelBuildingClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::LexModelBuildingServiceClientPrivate
- * \brief The LexModelBuildingServiceClientPrivate class provides private implementation for LexModelBuildingServiceClient.
+ * \class QtAws::LexModelBuilding::LexModelBuildingClientPrivate
+ * \brief The LexModelBuildingClientPrivate class provides private implementation for LexModelBuildingClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a LexModelBuildingServiceClientPrivate object with public implementation \a q.
+ * Constructs a LexModelBuildingClientPrivate object with public implementation \a q.
  */
-LexModelBuildingServiceClientPrivate::LexModelBuildingServiceClientPrivate(LexModelBuildingServiceClient * const q)
+LexModelBuildingClientPrivate::LexModelBuildingClientPrivate(LexModelBuildingClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

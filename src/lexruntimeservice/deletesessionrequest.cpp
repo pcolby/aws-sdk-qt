@@ -20,16 +20,16 @@
 #include "deletesessionrequest.h"
 #include "deletesessionrequest_p.h"
 #include "deletesessionresponse.h"
-#include "lexruntimeservicerequest_p.h"
+#include "lexruntimerequest_p.h"
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 /*!
- * \class QtAws::LexRuntimeService::DeleteSessionRequest
- * \brief The DeleteSessionRequest class provides an interface for LexRuntimeService DeleteSession requests.
+ * \class QtAws::LexRuntime::DeleteSessionRequest
+ * \brief The DeleteSessionRequest class provides an interface for LexRuntime DeleteSession requests.
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  *
  *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
  *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
@@ -39,14 +39,14 @@ namespace LexRuntimeService {
  *  then performs fulfillment activity (that you configured when you created the bot). You use the build-time API to create
  *  and manage your Amazon Lex bot. For a list of build-time operations, see the build-time API, .
  *
- * \sa LexRuntimeServiceClient::deleteSession
+ * \sa LexRuntimeClient::deleteSession
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteSessionRequest::DeleteSessionRequest(const DeleteSessionRequest &other)
-    : LexRuntimeServiceRequest(new DeleteSessionRequestPrivate(*other.d_func(), this))
+    : LexRuntimeRequest(new DeleteSessionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -55,7 +55,7 @@ DeleteSessionRequest::DeleteSessionRequest(const DeleteSessionRequest &other)
  * Constructs a DeleteSessionRequest object.
  */
 DeleteSessionRequest::DeleteSessionRequest()
-    : LexRuntimeServiceRequest(new DeleteSessionRequestPrivate(LexRuntimeServiceRequest::DeleteSessionAction, this))
+    : LexRuntimeRequest(new DeleteSessionRequestPrivate(LexRuntimeRequest::DeleteSessionAction, this))
 {
 
 }
@@ -80,20 +80,20 @@ QtAws::Core::AwsAbstractResponse * DeleteSessionRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::LexRuntimeService::DeleteSessionRequestPrivate
+ * \class QtAws::LexRuntime::DeleteSessionRequestPrivate
  * \brief The DeleteSessionRequestPrivate class provides private implementation for DeleteSessionRequest.
  * \internal
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  */
 
 /*!
- * Constructs a DeleteSessionRequestPrivate object for LexRuntimeService \a action,
+ * Constructs a DeleteSessionRequestPrivate object for LexRuntime \a action,
  * with public implementation \a q.
  */
 DeleteSessionRequestPrivate::DeleteSessionRequestPrivate(
-    const LexRuntimeServiceRequest::Action action, DeleteSessionRequest * const q)
-    : LexRuntimeServiceRequestPrivate(action, q)
+    const LexRuntimeRequest::Action action, DeleteSessionRequest * const q)
+    : LexRuntimeRequestPrivate(action, q)
 {
 
 }
@@ -106,10 +106,10 @@ DeleteSessionRequestPrivate::DeleteSessionRequestPrivate(
  */
 DeleteSessionRequestPrivate::DeleteSessionRequestPrivate(
     const DeleteSessionRequestPrivate &other, DeleteSessionRequest * const q)
-    : LexRuntimeServiceRequestPrivate(other, q)
+    : LexRuntimeRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws

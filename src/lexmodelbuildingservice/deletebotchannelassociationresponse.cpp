@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteBotChannelAssociationResponse
- * \brief The DeleteBotChannelAssociationResponse class provides an interace for LexModelBuildingService DeleteBotChannelAssociation responses.
+ * \class QtAws::LexModelBuilding::DeleteBotChannelAssociationResponse
+ * \brief The DeleteBotChannelAssociationResponse class provides an interace for LexModelBuilding DeleteBotChannelAssociation responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::deleteBotChannelAssociation
+ * \sa LexModelBuildingClient::deleteBotChannelAssociation
  */
 
 /*!
@@ -48,7 +48,7 @@ DeleteBotChannelAssociationResponse::DeleteBotChannelAssociationResponse(
         const DeleteBotChannelAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new DeleteBotChannelAssociationResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new DeleteBotChannelAssociationResponsePrivate(this), parent)
 {
     setRequest(new DeleteBotChannelAssociationRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const DeleteBotChannelAssociationRequest * DeleteBotChannelAssociationResponse::
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService DeleteBotChannelAssociation \a response.
+ * Parses a successful LexModelBuilding DeleteBotChannelAssociation \a response.
  */
 void DeleteBotChannelAssociationResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void DeleteBotChannelAssociationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteBotChannelAssociationResponsePrivate
+ * \class QtAws::LexModelBuilding::DeleteBotChannelAssociationResponsePrivate
  * \brief The DeleteBotChannelAssociationResponsePrivate class provides private implementation for DeleteBotChannelAssociationResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a DeleteBotChannelAssociationResponsePrivate object with public implementation \a q.
  */
 DeleteBotChannelAssociationResponsePrivate::DeleteBotChannelAssociationResponsePrivate(
-    DeleteBotChannelAssociationResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    DeleteBotChannelAssociationResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService DeleteBotChannelAssociation response element from \a xml.
+ * Parses a LexModelBuilding DeleteBotChannelAssociation response element from \a xml.
  */
 void DeleteBotChannelAssociationResponsePrivate::parseDeleteBotChannelAssociationResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void DeleteBotChannelAssociationResponsePrivate::parseDeleteBotChannelAssociatio
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

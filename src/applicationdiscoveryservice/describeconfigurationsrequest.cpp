@@ -20,16 +20,16 @@
 #include "describeconfigurationsrequest.h"
 #include "describeconfigurationsrequest_p.h"
 #include "describeconfigurationsresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeConfigurationsRequest
- * \brief The DescribeConfigurationsRequest class provides an interface for ApplicationDiscoveryService DescribeConfigurations requests.
+ * \class QtAws::ApplicationDiscovery::DescribeConfigurationsRequest
+ * \brief The DescribeConfigurationsRequest class provides an interface for ApplicationDiscovery DescribeConfigurations requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::describeConfigurations
+ * \sa ApplicationDiscoveryClient::describeConfigurations
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeConfigurationsRequest::DescribeConfigurationsRequest(const DescribeConfigurationsRequest &other)
-    : ApplicationDiscoveryServiceRequest(new DescribeConfigurationsRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new DescribeConfigurationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ DescribeConfigurationsRequest::DescribeConfigurationsRequest(const DescribeConfi
  * Constructs a DescribeConfigurationsRequest object.
  */
 DescribeConfigurationsRequest::DescribeConfigurationsRequest()
-    : ApplicationDiscoveryServiceRequest(new DescribeConfigurationsRequestPrivate(ApplicationDiscoveryServiceRequest::DescribeConfigurationsAction, this))
+    : ApplicationDiscoveryRequest(new DescribeConfigurationsRequestPrivate(ApplicationDiscoveryRequest::DescribeConfigurationsAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationsRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeConfigurationsRequestPrivate
+ * \class QtAws::ApplicationDiscovery::DescribeConfigurationsRequestPrivate
  * \brief The DescribeConfigurationsRequestPrivate class provides private implementation for DescribeConfigurationsRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a DescribeConfigurationsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a DescribeConfigurationsRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 DescribeConfigurationsRequestPrivate::DescribeConfigurationsRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, DescribeConfigurationsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, DescribeConfigurationsRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ DescribeConfigurationsRequestPrivate::DescribeConfigurationsRequestPrivate(
  */
 DescribeConfigurationsRequestPrivate::DescribeConfigurationsRequestPrivate(
     const DescribeConfigurationsRequestPrivate &other, DescribeConfigurationsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

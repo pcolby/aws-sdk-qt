@@ -20,16 +20,16 @@
 #include "startelasticsearchservicesoftwareupdaterequest.h"
 #include "startelasticsearchservicesoftwareupdaterequest_p.h"
 #include "startelasticsearchservicesoftwareupdateresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::StartElasticsearchServiceSoftwareUpdateRequest
- * \brief The StartElasticsearchServiceSoftwareUpdateRequest class provides an interface for ElasticsearchService StartElasticsearchServiceSoftwareUpdate requests.
+ * \class QtAws::Elasticsearch::StartElasticsearchServiceSoftwareUpdateRequest
+ * \brief The StartElasticsearchServiceSoftwareUpdateRequest class provides an interface for Elasticsearch StartElasticsearchServiceSoftwareUpdate requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::startElasticsearchServiceSoftwareUpdate
+ * \sa ElasticsearchClient::startElasticsearchServiceSoftwareUpdate
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartElasticsearchServiceSoftwareUpdateRequest::StartElasticsearchServiceSoftwareUpdateRequest(const StartElasticsearchServiceSoftwareUpdateRequest &other)
-    : ElasticsearchServiceRequest(new StartElasticsearchServiceSoftwareUpdateRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new StartElasticsearchServiceSoftwareUpdateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ StartElasticsearchServiceSoftwareUpdateRequest::StartElasticsearchServiceSoftwar
  * Constructs a StartElasticsearchServiceSoftwareUpdateRequest object.
  */
 StartElasticsearchServiceSoftwareUpdateRequest::StartElasticsearchServiceSoftwareUpdateRequest()
-    : ElasticsearchServiceRequest(new StartElasticsearchServiceSoftwareUpdateRequestPrivate(ElasticsearchServiceRequest::StartElasticsearchServiceSoftwareUpdateAction, this))
+    : ElasticsearchRequest(new StartElasticsearchServiceSoftwareUpdateRequestPrivate(ElasticsearchRequest::StartElasticsearchServiceSoftwareUpdateAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * StartElasticsearchServiceSoftwareUpdateReques
 }
 
 /*!
- * \class QtAws::ElasticsearchService::StartElasticsearchServiceSoftwareUpdateRequestPrivate
+ * \class QtAws::Elasticsearch::StartElasticsearchServiceSoftwareUpdateRequestPrivate
  * \brief The StartElasticsearchServiceSoftwareUpdateRequestPrivate class provides private implementation for StartElasticsearchServiceSoftwareUpdateRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a StartElasticsearchServiceSoftwareUpdateRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a StartElasticsearchServiceSoftwareUpdateRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 StartElasticsearchServiceSoftwareUpdateRequestPrivate::StartElasticsearchServiceSoftwareUpdateRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, StartElasticsearchServiceSoftwareUpdateRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, StartElasticsearchServiceSoftwareUpdateRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ StartElasticsearchServiceSoftwareUpdateRequestPrivate::StartElasticsearchService
  */
 StartElasticsearchServiceSoftwareUpdateRequestPrivate::StartElasticsearchServiceSoftwareUpdateRequestPrivate(
     const StartElasticsearchServiceSoftwareUpdateRequestPrivate &other, StartElasticsearchServiceSoftwareUpdateRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

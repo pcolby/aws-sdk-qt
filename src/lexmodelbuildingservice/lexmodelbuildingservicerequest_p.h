@@ -17,35 +17,35 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_LEXMODELBUILDINGSERVICEREQUEST_P_H
-#define QTAWS_LEXMODELBUILDINGSERVICEREQUEST_P_H
+#ifndef QTAWS_LEXMODELBUILDINGREQUEST_P_H
+#define QTAWS_LEXMODELBUILDINGREQUEST_P_H
 
 #include "core/awsabstractrequest_p.h"
-#include "lexmodelbuildingservicerequest.h"
+#include "lexmodelbuildingrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
-class LexModelBuildingServiceRequest;
+class LexModelBuildingRequest;
 
-class LexModelBuildingServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LexModelBuildingRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    LexModelBuildingServiceRequest::Action action; ///< LexModelBuildingService action to be performed.
-    QString apiVersion;        ///< LexModelBuildingService API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< LexModelBuildingService request (query string) parameters. @todo?
+    LexModelBuildingRequest::Action action; ///< LexModelBuilding action to be performed.
+    QString apiVersion;        ///< LexModelBuilding API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< LexModelBuilding request (query string) parameters. @todo?
 
-    LexModelBuildingServiceRequestPrivate(const LexModelBuildingServiceRequest::Action action, LexModelBuildingServiceRequest * const q);
-    LexModelBuildingServiceRequestPrivate(const LexModelBuildingServiceRequestPrivate &other, LexModelBuildingServiceRequest * const q);
+    LexModelBuildingRequestPrivate(const LexModelBuildingRequest::Action action, LexModelBuildingRequest * const q);
+    LexModelBuildingRequestPrivate(const LexModelBuildingRequestPrivate &other, LexModelBuildingRequest * const q);
 
-    static QString toString(const LexModelBuildingServiceRequest::Action &action);
+    static QString toString(const LexModelBuildingRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(LexModelBuildingServiceRequest)
+    Q_DECLARE_PUBLIC(LexModelBuildingRequest)
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

@@ -17,19 +17,19 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_LEXMODELBUILDINGSERVICECLIENT_H
-#define QTAWS_LEXMODELBUILDINGSERVICECLIENT_H
+#ifndef QTAWS_LEXMODELBUILDINGCLIENT_H
+#define QTAWS_LEXMODELBUILDINGCLIENT_H
 
 #include "core/awsabstractclient.h"
 
-#include "qtawslexmodelbuildingserviceglobal.h"
+#include "qtawslexmodelbuildingglobal.h"
 
 class QNetworkReply;
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
-class LexModelBuildingServiceClientPrivate;
+class LexModelBuildingClientPrivate;
 class CreateBotVersionRequest;
 class CreateBotVersionResponse;
 class CreateIntentVersionRequest;
@@ -115,17 +115,17 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT LexModelBuildingServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSLEXMODELBUILDING_EXPORT LexModelBuildingClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    LexModelBuildingServiceClient(
+    LexModelBuildingClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit LexModelBuildingServiceClient(
+    explicit LexModelBuildingClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -175,12 +175,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(LexModelBuildingServiceClient)
-    Q_DISABLE_COPY(LexModelBuildingServiceClient)
+    Q_DECLARE_PRIVATE(LexModelBuildingClient)
+    Q_DISABLE_COPY(LexModelBuildingClient)
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

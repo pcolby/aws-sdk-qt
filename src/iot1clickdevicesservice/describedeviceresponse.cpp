@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::DescribeDeviceResponse
- * \brief The DescribeDeviceResponse class provides an interace for IoT1ClickDevicesService DescribeDevice responses.
+ * \class QtAws::IoT1ClickDevices::DescribeDeviceResponse
+ * \brief The DescribeDeviceResponse class provides an interace for IoT1ClickDevices DescribeDevice responses.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::describeDevice
+ * \sa IoT1ClickDevicesClient::describeDevice
  */
 
 /*!
@@ -46,7 +46,7 @@ DescribeDeviceResponse::DescribeDeviceResponse(
         const DescribeDeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoT1ClickDevicesServiceResponse(new DescribeDeviceResponsePrivate(this), parent)
+    : IoT1ClickDevicesResponse(new DescribeDeviceResponsePrivate(this), parent)
 {
     setRequest(new DescribeDeviceRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const DescribeDeviceRequest * DescribeDeviceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IoT1ClickDevicesService DescribeDevice \a response.
+ * Parses a successful IoT1ClickDevices DescribeDevice \a response.
  */
 void DescribeDeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void DescribeDeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::DescribeDeviceResponsePrivate
+ * \class QtAws::IoT1ClickDevices::DescribeDeviceResponsePrivate
  * \brief The DescribeDeviceResponsePrivate class provides private implementation for DescribeDeviceResponse.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
  * Constructs a DescribeDeviceResponsePrivate object with public implementation \a q.
  */
 DescribeDeviceResponsePrivate::DescribeDeviceResponsePrivate(
-    DescribeDeviceResponse * const q) : IoT1ClickDevicesServiceResponsePrivate(q)
+    DescribeDeviceResponse * const q) : IoT1ClickDevicesResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a IoT1ClickDevicesService DescribeDevice response element from \a xml.
+ * Parses a IoT1ClickDevices DescribeDevice response element from \a xml.
  */
 void DescribeDeviceResponsePrivate::parseDescribeDeviceResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void DescribeDeviceResponsePrivate::parseDescribeDeviceResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

@@ -20,15 +20,15 @@
 #ifndef QTAWS_GETUTTERANCESVIEWRESPONSE_H
 #define QTAWS_GETUTTERANCESVIEWRESPONSE_H
 
-#include "lexmodelbuildingserviceresponse.h"
+#include "lexmodelbuildingresponse.h"
 #include "getutterancesviewrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class GetUtterancesViewResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT GetUtterancesViewResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDING_EXPORT GetUtterancesViewResponse : public LexModelBuildingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

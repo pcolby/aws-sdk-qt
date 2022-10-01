@@ -20,14 +20,14 @@
 #ifndef QTAWS_DELETEFLEETADVISORDATABASESREQUEST_H
 #define QTAWS_DELETEFLEETADVISORDATABASESREQUEST_H
 
-#include "databasemigrationservicerequest.h"
+#include "databasemigrationrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DeleteFleetAdvisorDatabasesRequestPrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DeleteFleetAdvisorDatabasesRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATION_EXPORT DeleteFleetAdvisorDatabasesRequest : public DatabaseMigrationRequest {
 
 public:
     DeleteFleetAdvisorDatabasesRequest(const DeleteFleetAdvisorDatabasesRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

@@ -20,18 +20,18 @@
 #ifndef QTAWS_DESCRIBEREPLICATIONTASKASSESSMENTRUNSREQUEST_P_H
 #define QTAWS_DESCRIBEREPLICATIONTASKASSESSMENTRUNSREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "describereplicationtaskassessmentrunsrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DescribeReplicationTaskAssessmentRunsRequest;
 
-class DescribeReplicationTaskAssessmentRunsRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class DescribeReplicationTaskAssessmentRunsRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    DescribeReplicationTaskAssessmentRunsRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    DescribeReplicationTaskAssessmentRunsRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    DescribeReplicationTaskAssessmentRunsRequest * const q);
     DescribeReplicationTaskAssessmentRunsRequestPrivate(const DescribeReplicationTaskAssessmentRunsRequestPrivate &other,
                                    DescribeReplicationTaskAssessmentRunsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

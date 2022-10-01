@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeContinuousExportsResponse
- * \brief The DescribeContinuousExportsResponse class provides an interace for ApplicationDiscoveryService DescribeContinuousExports responses.
+ * \class QtAws::ApplicationDiscovery::DescribeContinuousExportsResponse
+ * \brief The DescribeContinuousExportsResponse class provides an interace for ApplicationDiscovery DescribeContinuousExports responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::describeContinuousExports
+ * \sa ApplicationDiscoveryClient::describeContinuousExports
  */
 
 /*!
@@ -152,7 +152,7 @@ DescribeContinuousExportsResponse::DescribeContinuousExportsResponse(
         const DescribeContinuousExportsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new DescribeContinuousExportsResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new DescribeContinuousExportsResponsePrivate(this), parent)
 {
     setRequest(new DescribeContinuousExportsRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const DescribeContinuousExportsRequest * DescribeContinuousExportsResponse::requ
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService DescribeContinuousExports \a response.
+ * Parses a successful ApplicationDiscovery DescribeContinuousExports \a response.
  */
 void DescribeContinuousExportsResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void DescribeContinuousExportsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeContinuousExportsResponsePrivate
+ * \class QtAws::ApplicationDiscovery::DescribeContinuousExportsResponsePrivate
  * \brief The DescribeContinuousExportsResponsePrivate class provides private implementation for DescribeContinuousExportsResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a DescribeContinuousExportsResponsePrivate object with public implementation \a q.
  */
 DescribeContinuousExportsResponsePrivate::DescribeContinuousExportsResponsePrivate(
-    DescribeContinuousExportsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    DescribeContinuousExportsResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService DescribeContinuousExports response element from \a xml.
+ * Parses a ApplicationDiscovery DescribeContinuousExports response element from \a xml.
  */
 void DescribeContinuousExportsResponsePrivate::parseDescribeContinuousExportsResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void DescribeContinuousExportsResponsePrivate::parseDescribeContinuousExportsRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

@@ -20,15 +20,15 @@
 #ifndef QTAWS_PUTSESSIONRESPONSE_H
 #define QTAWS_PUTSESSIONRESPONSE_H
 
-#include "lexruntimeserviceresponse.h"
+#include "lexruntimeresponse.h"
 #include "putsessionrequest.h"
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 class PutSessionResponsePrivate;
 
-class QTAWSLEXRUNTIMESERVICE_EXPORT PutSessionResponse : public LexRuntimeServiceResponse {
+class QTAWSLEXRUNTIME_EXPORT PutSessionResponse : public LexRuntimeResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws
 
 #endif

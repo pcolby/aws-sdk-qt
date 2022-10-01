@@ -17,19 +17,19 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_APPLICATIONDISCOVERYSERVICECLIENT_H
-#define QTAWS_APPLICATIONDISCOVERYSERVICECLIENT_H
+#ifndef QTAWS_APPLICATIONDISCOVERYCLIENT_H
+#define QTAWS_APPLICATIONDISCOVERYCLIENT_H
 
 #include "core/awsabstractclient.h"
 
-#include "qtawsapplicationdiscoveryserviceglobal.h"
+#include "qtawsapplicationdiscoveryglobal.h"
 
 class QNetworkReply;
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
-class ApplicationDiscoveryServiceClientPrivate;
+class ApplicationDiscoveryClientPrivate;
 class AssociateConfigurationItemsToApplicationRequest;
 class AssociateConfigurationItemsToApplicationResponse;
 class BatchDeleteImportDataRequest;
@@ -81,17 +81,17 @@ class StopDataCollectionByAgentIdsResponse;
 class UpdateApplicationRequest;
 class UpdateApplicationResponse;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT ApplicationDiscoveryServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT ApplicationDiscoveryClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    ApplicationDiscoveryServiceClient(
+    ApplicationDiscoveryClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit ApplicationDiscoveryServiceClient(
+    explicit ApplicationDiscoveryClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -124,12 +124,12 @@ public slots:
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(ApplicationDiscoveryServiceClient)
-    Q_DISABLE_COPY(ApplicationDiscoveryServiceClient)
+    Q_DECLARE_PRIVATE(ApplicationDiscoveryClient)
+    Q_DISABLE_COPY(ApplicationDiscoveryClient)
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

@@ -20,30 +20,30 @@
 #include "posttoconnectionrequest.h"
 #include "posttoconnectionrequest_p.h"
 #include "posttoconnectionresponse.h"
-#include "apigatewaymanagementapirequest_p.h"
+#include "apigatewaymanagementrequest_p.h"
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::PostToConnectionRequest
- * \brief The PostToConnectionRequest class provides an interface for ApiGatewayManagementApi PostToConnection requests.
+ * \class QtAws::ApiGatewayManagement::PostToConnectionRequest
+ * \brief The PostToConnectionRequest class provides an interface for ApiGatewayManagement PostToConnection requests.
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  *
  *  The Amazon API Gateway Management API allows you to directly manage runtime aspects of your deployed APIs. To use it,
  *  you must explicitly set the SDK's endpoint to point to the endpoint of your deployed API. The endpoint will be of the
  *  form https://{api-id}.execute-api.{region}.amazonaws.com/{stage}, or will be the endpoint corresponding to your API's
  *  custom domain and base path, if
  *
- * \sa ApiGatewayManagementApiClient::postToConnection
+ * \sa ApiGatewayManagementClient::postToConnection
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PostToConnectionRequest::PostToConnectionRequest(const PostToConnectionRequest &other)
-    : ApiGatewayManagementApiRequest(new PostToConnectionRequestPrivate(*other.d_func(), this))
+    : ApiGatewayManagementRequest(new PostToConnectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ PostToConnectionRequest::PostToConnectionRequest(const PostToConnectionRequest &
  * Constructs a PostToConnectionRequest object.
  */
 PostToConnectionRequest::PostToConnectionRequest()
-    : ApiGatewayManagementApiRequest(new PostToConnectionRequestPrivate(ApiGatewayManagementApiRequest::PostToConnectionAction, this))
+    : ApiGatewayManagementRequest(new PostToConnectionRequestPrivate(ApiGatewayManagementRequest::PostToConnectionAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * PostToConnectionRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::PostToConnectionRequestPrivate
+ * \class QtAws::ApiGatewayManagement::PostToConnectionRequestPrivate
  * \brief The PostToConnectionRequestPrivate class provides private implementation for PostToConnectionRequest.
  * \internal
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  */
 
 /*!
- * Constructs a PostToConnectionRequestPrivate object for ApiGatewayManagementApi \a action,
+ * Constructs a PostToConnectionRequestPrivate object for ApiGatewayManagement \a action,
  * with public implementation \a q.
  */
 PostToConnectionRequestPrivate::PostToConnectionRequestPrivate(
-    const ApiGatewayManagementApiRequest::Action action, PostToConnectionRequest * const q)
-    : ApiGatewayManagementApiRequestPrivate(action, q)
+    const ApiGatewayManagementRequest::Action action, PostToConnectionRequest * const q)
+    : ApiGatewayManagementRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ PostToConnectionRequestPrivate::PostToConnectionRequestPrivate(
  */
 PostToConnectionRequestPrivate::PostToConnectionRequestPrivate(
     const PostToConnectionRequestPrivate &other, PostToConnectionRequest * const q)
-    : ApiGatewayManagementApiRequestPrivate(other, q)
+    : ApiGatewayManagementRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws

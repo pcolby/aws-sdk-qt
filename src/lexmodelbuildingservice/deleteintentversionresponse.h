@@ -20,15 +20,15 @@
 #ifndef QTAWS_DELETEINTENTVERSIONRESPONSE_H
 #define QTAWS_DELETEINTENTVERSIONRESPONSE_H
 
-#include "lexmodelbuildingserviceresponse.h"
+#include "lexmodelbuildingresponse.h"
 #include "deleteintentversionrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class DeleteIntentVersionResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT DeleteIntentVersionResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDING_EXPORT DeleteIntentVersionResponse : public LexModelBuildingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

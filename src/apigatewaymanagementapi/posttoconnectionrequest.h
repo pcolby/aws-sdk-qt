@@ -20,14 +20,14 @@
 #ifndef QTAWS_POSTTOCONNECTIONREQUEST_H
 #define QTAWS_POSTTOCONNECTIONREQUEST_H
 
-#include "apigatewaymanagementapirequest.h"
+#include "apigatewaymanagementrequest.h"
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
 class PostToConnectionRequestPrivate;
 
-class QTAWSAPIGATEWAYMANAGEMENTAPI_EXPORT PostToConnectionRequest : public ApiGatewayManagementApiRequest {
+class QTAWSAPIGATEWAYMANAGEMENT_EXPORT PostToConnectionRequest : public ApiGatewayManagementRequest {
 
 public:
     PostToConnectionRequest(const PostToConnectionRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws
 
 #endif

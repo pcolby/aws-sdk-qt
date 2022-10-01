@@ -20,16 +20,16 @@
 #include "deleteoutboundcrossclustersearchconnectionrequest.h"
 #include "deleteoutboundcrossclustersearchconnectionrequest_p.h"
 #include "deleteoutboundcrossclustersearchconnectionresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DeleteOutboundCrossClusterSearchConnectionRequest
- * \brief The DeleteOutboundCrossClusterSearchConnectionRequest class provides an interface for ElasticsearchService DeleteOutboundCrossClusterSearchConnection requests.
+ * \class QtAws::Elasticsearch::DeleteOutboundCrossClusterSearchConnectionRequest
+ * \brief The DeleteOutboundCrossClusterSearchConnectionRequest class provides an interface for Elasticsearch DeleteOutboundCrossClusterSearchConnection requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::deleteOutboundCrossClusterSearchConnection
+ * \sa ElasticsearchClient::deleteOutboundCrossClusterSearchConnection
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteOutboundCrossClusterSearchConnectionRequest::DeleteOutboundCrossClusterSearchConnectionRequest(const DeleteOutboundCrossClusterSearchConnectionRequest &other)
-    : ElasticsearchServiceRequest(new DeleteOutboundCrossClusterSearchConnectionRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new DeleteOutboundCrossClusterSearchConnectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DeleteOutboundCrossClusterSearchConnectionRequest::DeleteOutboundCrossClusterSea
  * Constructs a DeleteOutboundCrossClusterSearchConnectionRequest object.
  */
 DeleteOutboundCrossClusterSearchConnectionRequest::DeleteOutboundCrossClusterSearchConnectionRequest()
-    : ElasticsearchServiceRequest(new DeleteOutboundCrossClusterSearchConnectionRequestPrivate(ElasticsearchServiceRequest::DeleteOutboundCrossClusterSearchConnectionAction, this))
+    : ElasticsearchRequest(new DeleteOutboundCrossClusterSearchConnectionRequestPrivate(ElasticsearchRequest::DeleteOutboundCrossClusterSearchConnectionAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DeleteOutboundCrossClusterSearchConnectionReq
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DeleteOutboundCrossClusterSearchConnectionRequestPrivate
+ * \class QtAws::Elasticsearch::DeleteOutboundCrossClusterSearchConnectionRequestPrivate
  * \brief The DeleteOutboundCrossClusterSearchConnectionRequestPrivate class provides private implementation for DeleteOutboundCrossClusterSearchConnectionRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a DeleteOutboundCrossClusterSearchConnectionRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a DeleteOutboundCrossClusterSearchConnectionRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 DeleteOutboundCrossClusterSearchConnectionRequestPrivate::DeleteOutboundCrossClusterSearchConnectionRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, DeleteOutboundCrossClusterSearchConnectionRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, DeleteOutboundCrossClusterSearchConnectionRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DeleteOutboundCrossClusterSearchConnectionRequestPrivate::DeleteOutboundCrossClu
  */
 DeleteOutboundCrossClusterSearchConnectionRequestPrivate::DeleteOutboundCrossClusterSearchConnectionRequestPrivate(
     const DeleteOutboundCrossClusterSearchConnectionRequestPrivate &other, DeleteOutboundCrossClusterSearchConnectionRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

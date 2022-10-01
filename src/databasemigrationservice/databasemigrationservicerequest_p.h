@@ -17,35 +17,35 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_DATABASEMIGRATIONSERVICEREQUEST_P_H
-#define QTAWS_DATABASEMIGRATIONSERVICEREQUEST_P_H
+#ifndef QTAWS_DATABASEMIGRATIONREQUEST_P_H
+#define QTAWS_DATABASEMIGRATIONREQUEST_P_H
 
 #include "core/awsabstractrequest_p.h"
-#include "databasemigrationservicerequest.h"
+#include "databasemigrationrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
-class DatabaseMigrationServiceRequest;
+class DatabaseMigrationRequest;
 
-class DatabaseMigrationServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DatabaseMigrationRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    DatabaseMigrationServiceRequest::Action action; ///< DatabaseMigrationService action to be performed.
-    QString apiVersion;        ///< DatabaseMigrationService API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< DatabaseMigrationService request (query string) parameters. @todo?
+    DatabaseMigrationRequest::Action action; ///< DatabaseMigration action to be performed.
+    QString apiVersion;        ///< DatabaseMigration API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< DatabaseMigration request (query string) parameters. @todo?
 
-    DatabaseMigrationServiceRequestPrivate(const DatabaseMigrationServiceRequest::Action action, DatabaseMigrationServiceRequest * const q);
-    DatabaseMigrationServiceRequestPrivate(const DatabaseMigrationServiceRequestPrivate &other, DatabaseMigrationServiceRequest * const q);
+    DatabaseMigrationRequestPrivate(const DatabaseMigrationRequest::Action action, DatabaseMigrationRequest * const q);
+    DatabaseMigrationRequestPrivate(const DatabaseMigrationRequestPrivate &other, DatabaseMigrationRequest * const q);
 
-    static QString toString(const DatabaseMigrationServiceRequest::Action &action);
+    static QString toString(const DatabaseMigrationRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(DatabaseMigrationServiceRequest)
+    Q_DECLARE_PUBLIC(DatabaseMigrationRequest)
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

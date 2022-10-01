@@ -20,14 +20,14 @@
 #ifndef QTAWS_UPDATEPACKAGEREQUEST_H
 #define QTAWS_UPDATEPACKAGEREQUEST_H
 
-#include "elasticsearchservicerequest.h"
+#include "elasticsearchrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class UpdatePackageRequestPrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT UpdatePackageRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCH_EXPORT UpdatePackageRequest : public ElasticsearchRequest {
 
 public:
     UpdatePackageRequest(const UpdatePackageRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StartDataCollectionByAgentIdsResponse
- * \brief The StartDataCollectionByAgentIdsResponse class provides an interace for ApplicationDiscoveryService StartDataCollectionByAgentIds responses.
+ * \class QtAws::ApplicationDiscovery::StartDataCollectionByAgentIdsResponse
+ * \brief The StartDataCollectionByAgentIdsResponse class provides an interace for ApplicationDiscovery StartDataCollectionByAgentIds responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::startDataCollectionByAgentIds
+ * \sa ApplicationDiscoveryClient::startDataCollectionByAgentIds
  */
 
 /*!
@@ -152,7 +152,7 @@ StartDataCollectionByAgentIdsResponse::StartDataCollectionByAgentIdsResponse(
         const StartDataCollectionByAgentIdsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new StartDataCollectionByAgentIdsResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new StartDataCollectionByAgentIdsResponsePrivate(this), parent)
 {
     setRequest(new StartDataCollectionByAgentIdsRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const StartDataCollectionByAgentIdsRequest * StartDataCollectionByAgentIdsRespon
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService StartDataCollectionByAgentIds \a response.
+ * Parses a successful ApplicationDiscovery StartDataCollectionByAgentIds \a response.
  */
 void StartDataCollectionByAgentIdsResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void StartDataCollectionByAgentIdsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StartDataCollectionByAgentIdsResponsePrivate
+ * \class QtAws::ApplicationDiscovery::StartDataCollectionByAgentIdsResponsePrivate
  * \brief The StartDataCollectionByAgentIdsResponsePrivate class provides private implementation for StartDataCollectionByAgentIdsResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a StartDataCollectionByAgentIdsResponsePrivate object with public implementation \a q.
  */
 StartDataCollectionByAgentIdsResponsePrivate::StartDataCollectionByAgentIdsResponsePrivate(
-    StartDataCollectionByAgentIdsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    StartDataCollectionByAgentIdsResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService StartDataCollectionByAgentIds response element from \a xml.
+ * Parses a ApplicationDiscovery StartDataCollectionByAgentIds response element from \a xml.
  */
 void StartDataCollectionByAgentIdsResponsePrivate::parseStartDataCollectionByAgentIdsResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void StartDataCollectionByAgentIdsResponsePrivate::parseStartDataCollectionByAge
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

@@ -20,16 +20,16 @@
 #include "reloadtablesrequest.h"
 #include "reloadtablesrequest_p.h"
 #include "reloadtablesresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::ReloadTablesRequest
- * \brief The ReloadTablesRequest class provides an interface for DatabaseMigrationService ReloadTables requests.
+ * \class QtAws::DatabaseMigration::ReloadTablesRequest
+ * \brief The ReloadTablesRequest class provides an interface for DatabaseMigration ReloadTables requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::reloadTables
+ * \sa DatabaseMigrationClient::reloadTables
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ReloadTablesRequest::ReloadTablesRequest(const ReloadTablesRequest &other)
-    : DatabaseMigrationServiceRequest(new ReloadTablesRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new ReloadTablesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ ReloadTablesRequest::ReloadTablesRequest(const ReloadTablesRequest &other)
  * Constructs a ReloadTablesRequest object.
  */
 ReloadTablesRequest::ReloadTablesRequest()
-    : DatabaseMigrationServiceRequest(new ReloadTablesRequestPrivate(DatabaseMigrationServiceRequest::ReloadTablesAction, this))
+    : DatabaseMigrationRequest(new ReloadTablesRequestPrivate(DatabaseMigrationRequest::ReloadTablesAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * ReloadTablesRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::ReloadTablesRequestPrivate
+ * \class QtAws::DatabaseMigration::ReloadTablesRequestPrivate
  * \brief The ReloadTablesRequestPrivate class provides private implementation for ReloadTablesRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a ReloadTablesRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a ReloadTablesRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 ReloadTablesRequestPrivate::ReloadTablesRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, ReloadTablesRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, ReloadTablesRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ ReloadTablesRequestPrivate::ReloadTablesRequestPrivate(
  */
 ReloadTablesRequestPrivate::ReloadTablesRequestPrivate(
     const ReloadTablesRequestPrivate &other, ReloadTablesRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

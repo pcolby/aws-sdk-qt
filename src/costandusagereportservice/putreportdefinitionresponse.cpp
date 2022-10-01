@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 /*!
- * \class QtAws::CostandUsageReportService::PutReportDefinitionResponse
- * \brief The PutReportDefinitionResponse class provides an interace for CostandUsageReportService PutReportDefinition responses.
+ * \class QtAws::CostandUsageReport::PutReportDefinitionResponse
+ * \brief The PutReportDefinitionResponse class provides an interace for CostandUsageReport PutReportDefinition responses.
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  *
  *  The AWS Cost and Usage Report API enables you to programmatically create, query, and delete AWS Cost and Usage report
  * 
@@ -51,7 +51,7 @@ namespace CostandUsageReportService {
  * 
  *  endpoint> <ul> <li>
  *
- * \sa CostandUsageReportServiceClient::putReportDefinition
+ * \sa CostandUsageReportClient::putReportDefinition
  */
 
 /*!
@@ -61,7 +61,7 @@ PutReportDefinitionResponse::PutReportDefinitionResponse(
         const PutReportDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CostandUsageReportServiceResponse(new PutReportDefinitionResponsePrivate(this), parent)
+    : CostandUsageReportResponse(new PutReportDefinitionResponsePrivate(this), parent)
 {
     setRequest(new PutReportDefinitionRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const PutReportDefinitionRequest * PutReportDefinitionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CostandUsageReportService PutReportDefinition \a response.
+ * Parses a successful CostandUsageReport PutReportDefinition \a response.
  */
 void PutReportDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void PutReportDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CostandUsageReportService::PutReportDefinitionResponsePrivate
+ * \class QtAws::CostandUsageReport::PutReportDefinitionResponsePrivate
  * \brief The PutReportDefinitionResponsePrivate class provides private implementation for PutReportDefinitionResponse.
  * \internal
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  */
 
 /*!
  * Constructs a PutReportDefinitionResponsePrivate object with public implementation \a q.
  */
 PutReportDefinitionResponsePrivate::PutReportDefinitionResponsePrivate(
-    PutReportDefinitionResponse * const q) : CostandUsageReportServiceResponsePrivate(q)
+    PutReportDefinitionResponse * const q) : CostandUsageReportResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CostandUsageReportService PutReportDefinition response element from \a xml.
+ * Parses a CostandUsageReport PutReportDefinition response element from \a xml.
  */
 void PutReportDefinitionResponsePrivate::parsePutReportDefinitionResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void PutReportDefinitionResponsePrivate::parsePutReportDefinitionResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws

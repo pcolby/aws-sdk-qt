@@ -20,15 +20,15 @@
 #ifndef QTAWS_GETINTENTSRESPONSE_H
 #define QTAWS_GETINTENTSRESPONSE_H
 
-#include "lexmodelbuildingserviceresponse.h"
+#include "lexmodelbuildingresponse.h"
 #include "getintentsrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class GetIntentsResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT GetIntentsResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDING_EXPORT GetIntentsResponse : public LexModelBuildingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

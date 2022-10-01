@@ -20,18 +20,18 @@
 #ifndef QTAWS_DESCRIBECONTINUOUSEXPORTSREQUEST_P_H
 #define QTAWS_DESCRIBECONTINUOUSEXPORTSREQUEST_P_H
 
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 #include "describecontinuousexportsrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class DescribeContinuousExportsRequest;
 
-class DescribeContinuousExportsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
+class DescribeContinuousExportsRequestPrivate : public ApplicationDiscoveryRequestPrivate {
 
 public:
-    DescribeContinuousExportsRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
+    DescribeContinuousExportsRequestPrivate(const ApplicationDiscoveryRequest::Action action,
                                    DescribeContinuousExportsRequest * const q);
     DescribeContinuousExportsRequestPrivate(const DescribeContinuousExportsRequestPrivate &other,
                                    DescribeContinuousExportsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

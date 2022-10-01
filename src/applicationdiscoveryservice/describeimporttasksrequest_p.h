@@ -20,18 +20,18 @@
 #ifndef QTAWS_DESCRIBEIMPORTTASKSREQUEST_P_H
 #define QTAWS_DESCRIBEIMPORTTASKSREQUEST_P_H
 
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 #include "describeimporttasksrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class DescribeImportTasksRequest;
 
-class DescribeImportTasksRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
+class DescribeImportTasksRequestPrivate : public ApplicationDiscoveryRequestPrivate {
 
 public:
-    DescribeImportTasksRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
+    DescribeImportTasksRequestPrivate(const ApplicationDiscoveryRequest::Action action,
                                    DescribeImportTasksRequest * const q);
     DescribeImportTasksRequestPrivate(const DescribeImportTasksRequestPrivate &other,
                                    DescribeImportTasksRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

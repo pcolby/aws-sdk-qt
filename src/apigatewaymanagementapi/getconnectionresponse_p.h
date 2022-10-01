@@ -20,14 +20,14 @@
 #ifndef QTAWS_GETCONNECTIONRESPONSE_P_H
 #define QTAWS_GETCONNECTIONRESPONSE_P_H
 
-#include "apigatewaymanagementapiresponse_p.h"
+#include "apigatewaymanagementresponse_p.h"
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
 class GetConnectionResponse;
 
-class GetConnectionResponsePrivate : public ApiGatewayManagementApiResponsePrivate {
+class GetConnectionResponsePrivate : public ApiGatewayManagementResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws
 
 #endif

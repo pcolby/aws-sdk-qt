@@ -20,14 +20,14 @@
 #ifndef QTAWS_BATCHDELETEIMPORTDATAREQUEST_H
 #define QTAWS_BATCHDELETEIMPORTDATAREQUEST_H
 
-#include "applicationdiscoveryservicerequest.h"
+#include "applicationdiscoveryrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class BatchDeleteImportDataRequestPrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT BatchDeleteImportDataRequest : public ApplicationDiscoveryServiceRequest {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT BatchDeleteImportDataRequest : public ApplicationDiscoveryRequest {
 
 public:
     BatchDeleteImportDataRequest(const BatchDeleteImportDataRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

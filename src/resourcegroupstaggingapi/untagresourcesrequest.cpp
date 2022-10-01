@@ -20,26 +20,26 @@
 #include "untagresourcesrequest.h"
 #include "untagresourcesrequest_p.h"
 #include "untagresourcesresponse.h"
-#include "resourcegroupstaggingapirequest_p.h"
+#include "resourcegroupstaggingrequest_p.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::UntagResourcesRequest
- * \brief The UntagResourcesRequest class provides an interface for ResourceGroupsTaggingApi UntagResources requests.
+ * \class QtAws::ResourceGroupsTagging::UntagResourcesRequest
+ * \brief The UntagResourcesRequest class provides an interface for ResourceGroupsTagging UntagResources requests.
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  *
  *
- * \sa ResourceGroupsTaggingApiClient::untagResources
+ * \sa ResourceGroupsTaggingClient::untagResources
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UntagResourcesRequest::UntagResourcesRequest(const UntagResourcesRequest &other)
-    : ResourceGroupsTaggingApiRequest(new UntagResourcesRequestPrivate(*other.d_func(), this))
+    : ResourceGroupsTaggingRequest(new UntagResourcesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ UntagResourcesRequest::UntagResourcesRequest(const UntagResourcesRequest &other)
  * Constructs a UntagResourcesRequest object.
  */
 UntagResourcesRequest::UntagResourcesRequest()
-    : ResourceGroupsTaggingApiRequest(new UntagResourcesRequestPrivate(ResourceGroupsTaggingApiRequest::UntagResourcesAction, this))
+    : ResourceGroupsTaggingRequest(new UntagResourcesRequestPrivate(ResourceGroupsTaggingRequest::UntagResourcesAction, this))
 {
 
 }
@@ -73,20 +73,20 @@ QtAws::Core::AwsAbstractResponse * UntagResourcesRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::UntagResourcesRequestPrivate
+ * \class QtAws::ResourceGroupsTagging::UntagResourcesRequestPrivate
  * \brief The UntagResourcesRequestPrivate class provides private implementation for UntagResourcesRequest.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  */
 
 /*!
- * Constructs a UntagResourcesRequestPrivate object for ResourceGroupsTaggingApi \a action,
+ * Constructs a UntagResourcesRequestPrivate object for ResourceGroupsTagging \a action,
  * with public implementation \a q.
  */
 UntagResourcesRequestPrivate::UntagResourcesRequestPrivate(
-    const ResourceGroupsTaggingApiRequest::Action action, UntagResourcesRequest * const q)
-    : ResourceGroupsTaggingApiRequestPrivate(action, q)
+    const ResourceGroupsTaggingRequest::Action action, UntagResourcesRequest * const q)
+    : ResourceGroupsTaggingRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +99,10 @@ UntagResourcesRequestPrivate::UntagResourcesRequestPrivate(
  */
 UntagResourcesRequestPrivate::UntagResourcesRequestPrivate(
     const UntagResourcesRequestPrivate &other, UntagResourcesRequest * const q)
-    : ResourceGroupsTaggingApiRequestPrivate(other, q)
+    : ResourceGroupsTaggingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws

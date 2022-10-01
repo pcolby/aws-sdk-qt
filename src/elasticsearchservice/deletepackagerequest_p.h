@@ -20,18 +20,18 @@
 #ifndef QTAWS_DELETEPACKAGEREQUEST_P_H
 #define QTAWS_DELETEPACKAGEREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "deletepackagerequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class DeletePackageRequest;
 
-class DeletePackageRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class DeletePackageRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    DeletePackageRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    DeletePackageRequestPrivate(const ElasticsearchRequest::Action action,
                                    DeletePackageRequest * const q);
     DeletePackageRequestPrivate(const DeletePackageRequestPrivate &other,
                                    DeletePackageRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

@@ -17,32 +17,32 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_MARKETPLACEENTITLEMENTSERVICERESPONSE_P_H
-#define QTAWS_MARKETPLACEENTITLEMENTSERVICERESPONSE_P_H
+#ifndef QTAWS_MARKETPLACEENTITLEMENTRESPONSE_P_H
+#define QTAWS_MARKETPLACEENTITLEMENTRESPONSE_P_H
 
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
-class MarketplaceEntitlementServiceResponse;
+class MarketplaceEntitlementResponse;
 
-class MarketplaceEntitlementServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MarketplaceEntitlementResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit MarketplaceEntitlementServiceResponsePrivate(MarketplaceEntitlementServiceResponse * const q);
+    explicit MarketplaceEntitlementResponsePrivate(MarketplaceEntitlementResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(MarketplaceEntitlementServiceResponse)
-    Q_DISABLE_COPY(MarketplaceEntitlementServiceResponsePrivate)
+    Q_DECLARE_PUBLIC(MarketplaceEntitlementResponse)
+    Q_DISABLE_COPY(MarketplaceEntitlementResponsePrivate)
 
 };
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws
 
 #endif

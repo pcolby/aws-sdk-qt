@@ -20,16 +20,16 @@
 #include "listpackagesfordomainrequest.h"
 #include "listpackagesfordomainrequest_p.h"
 #include "listpackagesfordomainresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::ListPackagesForDomainRequest
- * \brief The ListPackagesForDomainRequest class provides an interface for ElasticsearchService ListPackagesForDomain requests.
+ * \class QtAws::Elasticsearch::ListPackagesForDomainRequest
+ * \brief The ListPackagesForDomainRequest class provides an interface for Elasticsearch ListPackagesForDomain requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::listPackagesForDomain
+ * \sa ElasticsearchClient::listPackagesForDomain
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListPackagesForDomainRequest::ListPackagesForDomainRequest(const ListPackagesForDomainRequest &other)
-    : ElasticsearchServiceRequest(new ListPackagesForDomainRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new ListPackagesForDomainRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ ListPackagesForDomainRequest::ListPackagesForDomainRequest(const ListPackagesFor
  * Constructs a ListPackagesForDomainRequest object.
  */
 ListPackagesForDomainRequest::ListPackagesForDomainRequest()
-    : ElasticsearchServiceRequest(new ListPackagesForDomainRequestPrivate(ElasticsearchServiceRequest::ListPackagesForDomainAction, this))
+    : ElasticsearchRequest(new ListPackagesForDomainRequestPrivate(ElasticsearchRequest::ListPackagesForDomainAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * ListPackagesForDomainRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::ElasticsearchService::ListPackagesForDomainRequestPrivate
+ * \class QtAws::Elasticsearch::ListPackagesForDomainRequestPrivate
  * \brief The ListPackagesForDomainRequestPrivate class provides private implementation for ListPackagesForDomainRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a ListPackagesForDomainRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a ListPackagesForDomainRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 ListPackagesForDomainRequestPrivate::ListPackagesForDomainRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, ListPackagesForDomainRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, ListPackagesForDomainRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ ListPackagesForDomainRequestPrivate::ListPackagesForDomainRequestPrivate(
  */
 ListPackagesForDomainRequestPrivate::ListPackagesForDomainRequestPrivate(
     const ListPackagesForDomainRequestPrivate &other, ListPackagesForDomainRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

@@ -20,18 +20,18 @@
 #ifndef QTAWS_DESCRIBEPACKAGESREQUEST_P_H
 #define QTAWS_DESCRIBEPACKAGESREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "describepackagesrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class DescribePackagesRequest;
 
-class DescribePackagesRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class DescribePackagesRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    DescribePackagesRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    DescribePackagesRequestPrivate(const ElasticsearchRequest::Action action,
                                    DescribePackagesRequest * const q);
     DescribePackagesRequestPrivate(const DescribePackagesRequestPrivate &other,
                                    DescribePackagesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

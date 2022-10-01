@@ -20,16 +20,16 @@
 #include "deleteconnectionrequest.h"
 #include "deleteconnectionrequest_p.h"
 #include "deleteconnectionresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteConnectionRequest
- * \brief The DeleteConnectionRequest class provides an interface for DatabaseMigrationService DeleteConnection requests.
+ * \class QtAws::DatabaseMigration::DeleteConnectionRequest
+ * \brief The DeleteConnectionRequest class provides an interface for DatabaseMigration DeleteConnection requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteConnection
+ * \sa DatabaseMigrationClient::deleteConnection
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteConnectionRequest::DeleteConnectionRequest(const DeleteConnectionRequest &other)
-    : DatabaseMigrationServiceRequest(new DeleteConnectionRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DeleteConnectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteConnectionRequest::DeleteConnectionRequest(const DeleteConnectionRequest &
  * Constructs a DeleteConnectionRequest object.
  */
 DeleteConnectionRequest::DeleteConnectionRequest()
-    : DatabaseMigrationServiceRequest(new DeleteConnectionRequestPrivate(DatabaseMigrationServiceRequest::DeleteConnectionAction, this))
+    : DatabaseMigrationRequest(new DeleteConnectionRequestPrivate(DatabaseMigrationRequest::DeleteConnectionAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DeleteConnectionRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteConnectionRequestPrivate
+ * \class QtAws::DatabaseMigration::DeleteConnectionRequestPrivate
  * \brief The DeleteConnectionRequestPrivate class provides private implementation for DeleteConnectionRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DeleteConnectionRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DeleteConnectionRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DeleteConnectionRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DeleteConnectionRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
  */
 DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
     const DeleteConnectionRequestPrivate &other, DeleteConnectionRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

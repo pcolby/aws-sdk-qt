@@ -20,28 +20,28 @@
 #include "listdeviceeventsrequest.h"
 #include "listdeviceeventsrequest_p.h"
 #include "listdeviceeventsresponse.h"
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::ListDeviceEventsRequest
- * \brief The ListDeviceEventsRequest class provides an interface for IoT1ClickDevicesService ListDeviceEvents requests.
+ * \class QtAws::IoT1ClickDevices::ListDeviceEventsRequest
+ * \brief The ListDeviceEventsRequest class provides an interface for IoT1ClickDevices ListDeviceEvents requests.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::listDeviceEvents
+ * \sa IoT1ClickDevicesClient::listDeviceEvents
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListDeviceEventsRequest::ListDeviceEventsRequest(const ListDeviceEventsRequest &other)
-    : IoT1ClickDevicesServiceRequest(new ListDeviceEventsRequestPrivate(*other.d_func(), this))
+    : IoT1ClickDevicesRequest(new ListDeviceEventsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ ListDeviceEventsRequest::ListDeviceEventsRequest(const ListDeviceEventsRequest &
  * Constructs a ListDeviceEventsRequest object.
  */
 ListDeviceEventsRequest::ListDeviceEventsRequest()
-    : IoT1ClickDevicesServiceRequest(new ListDeviceEventsRequestPrivate(IoT1ClickDevicesServiceRequest::ListDeviceEventsAction, this))
+    : IoT1ClickDevicesRequest(new ListDeviceEventsRequestPrivate(IoT1ClickDevicesRequest::ListDeviceEventsAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * ListDeviceEventsRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::ListDeviceEventsRequestPrivate
+ * \class QtAws::IoT1ClickDevices::ListDeviceEventsRequestPrivate
  * \brief The ListDeviceEventsRequestPrivate class provides private implementation for ListDeviceEventsRequest.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a ListDeviceEventsRequestPrivate object for IoT1ClickDevicesService \a action,
+ * Constructs a ListDeviceEventsRequestPrivate object for IoT1ClickDevices \a action,
  * with public implementation \a q.
  */
 ListDeviceEventsRequestPrivate::ListDeviceEventsRequestPrivate(
-    const IoT1ClickDevicesServiceRequest::Action action, ListDeviceEventsRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(action, q)
+    const IoT1ClickDevicesRequest::Action action, ListDeviceEventsRequest * const q)
+    : IoT1ClickDevicesRequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ ListDeviceEventsRequestPrivate::ListDeviceEventsRequestPrivate(
  */
 ListDeviceEventsRequestPrivate::ListDeviceEventsRequestPrivate(
     const ListDeviceEventsRequestPrivate &other, ListDeviceEventsRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(other, q)
+    : IoT1ClickDevicesRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

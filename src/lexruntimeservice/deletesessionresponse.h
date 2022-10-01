@@ -20,15 +20,15 @@
 #ifndef QTAWS_DELETESESSIONRESPONSE_H
 #define QTAWS_DELETESESSIONRESPONSE_H
 
-#include "lexruntimeserviceresponse.h"
+#include "lexruntimeresponse.h"
 #include "deletesessionrequest.h"
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 class DeleteSessionResponsePrivate;
 
-class QTAWSLEXRUNTIMESERVICE_EXPORT DeleteSessionResponse : public LexRuntimeServiceResponse {
+class QTAWSLEXRUNTIME_EXPORT DeleteSessionResponse : public LexRuntimeResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws
 
 #endif

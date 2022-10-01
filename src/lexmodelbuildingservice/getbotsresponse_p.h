@@ -20,14 +20,14 @@
 #ifndef QTAWS_GETBOTSRESPONSE_P_H
 #define QTAWS_GETBOTSRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse_p.h"
+#include "lexmodelbuildingresponse_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class GetBotsResponse;
 
-class GetBotsResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+class GetBotsResponsePrivate : public LexModelBuildingResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

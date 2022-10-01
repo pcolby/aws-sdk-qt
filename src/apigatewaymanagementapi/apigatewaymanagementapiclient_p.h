@@ -17,30 +17,30 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_APIGATEWAYMANAGEMENTAPICLIENT_P_H
-#define QTAWS_APIGATEWAYMANAGEMENTAPICLIENT_P_H
+#ifndef QTAWS_APIGATEWAYMANAGEMENTCLIENT_P_H
+#define QTAWS_APIGATEWAYMANAGEMENTCLIENT_P_H
 
 #include "core/awsabstractclient_p.h"
 
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
-class ApiGatewayManagementApiClient;
+class ApiGatewayManagementClient;
 
-class ApiGatewayManagementApiClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ApiGatewayManagementClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit ApiGatewayManagementApiClientPrivate(ApiGatewayManagementApiClient * const q);
+    explicit ApiGatewayManagementClientPrivate(ApiGatewayManagementClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(ApiGatewayManagementApiClient)
-    Q_DISABLE_COPY(ApiGatewayManagementApiClientPrivate)
+    Q_DECLARE_PUBLIC(ApiGatewayManagementClient)
+    Q_DISABLE_COPY(ApiGatewayManagementClientPrivate)
 
 };
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws
 
 #endif

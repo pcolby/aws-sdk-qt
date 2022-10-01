@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::GetDiscoverySummaryResponse
- * \brief The GetDiscoverySummaryResponse class provides an interace for ApplicationDiscoveryService GetDiscoverySummary responses.
+ * \class QtAws::ApplicationDiscovery::GetDiscoverySummaryResponse
+ * \brief The GetDiscoverySummaryResponse class provides an interace for ApplicationDiscovery GetDiscoverySummary responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::getDiscoverySummary
+ * \sa ApplicationDiscoveryClient::getDiscoverySummary
  */
 
 /*!
@@ -152,7 +152,7 @@ GetDiscoverySummaryResponse::GetDiscoverySummaryResponse(
         const GetDiscoverySummaryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new GetDiscoverySummaryResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new GetDiscoverySummaryResponsePrivate(this), parent)
 {
     setRequest(new GetDiscoverySummaryRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const GetDiscoverySummaryRequest * GetDiscoverySummaryResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService GetDiscoverySummary \a response.
+ * Parses a successful ApplicationDiscovery GetDiscoverySummary \a response.
  */
 void GetDiscoverySummaryResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void GetDiscoverySummaryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::GetDiscoverySummaryResponsePrivate
+ * \class QtAws::ApplicationDiscovery::GetDiscoverySummaryResponsePrivate
  * \brief The GetDiscoverySummaryResponsePrivate class provides private implementation for GetDiscoverySummaryResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a GetDiscoverySummaryResponsePrivate object with public implementation \a q.
  */
 GetDiscoverySummaryResponsePrivate::GetDiscoverySummaryResponsePrivate(
-    GetDiscoverySummaryResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    GetDiscoverySummaryResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService GetDiscoverySummary response element from \a xml.
+ * Parses a ApplicationDiscovery GetDiscoverySummary response element from \a xml.
  */
 void GetDiscoverySummaryResponsePrivate::parseGetDiscoverySummaryResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void GetDiscoverySummaryResponsePrivate::parseGetDiscoverySummaryResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

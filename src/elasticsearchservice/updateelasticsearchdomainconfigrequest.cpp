@@ -20,16 +20,16 @@
 #include "updateelasticsearchdomainconfigrequest.h"
 #include "updateelasticsearchdomainconfigrequest_p.h"
 #include "updateelasticsearchdomainconfigresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::UpdateElasticsearchDomainConfigRequest
- * \brief The UpdateElasticsearchDomainConfigRequest class provides an interface for ElasticsearchService UpdateElasticsearchDomainConfig requests.
+ * \class QtAws::Elasticsearch::UpdateElasticsearchDomainConfigRequest
+ * \brief The UpdateElasticsearchDomainConfigRequest class provides an interface for Elasticsearch UpdateElasticsearchDomainConfig requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::updateElasticsearchDomainConfig
+ * \sa ElasticsearchClient::updateElasticsearchDomainConfig
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateElasticsearchDomainConfigRequest::UpdateElasticsearchDomainConfigRequest(const UpdateElasticsearchDomainConfigRequest &other)
-    : ElasticsearchServiceRequest(new UpdateElasticsearchDomainConfigRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new UpdateElasticsearchDomainConfigRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ UpdateElasticsearchDomainConfigRequest::UpdateElasticsearchDomainConfigRequest(c
  * Constructs a UpdateElasticsearchDomainConfigRequest object.
  */
 UpdateElasticsearchDomainConfigRequest::UpdateElasticsearchDomainConfigRequest()
-    : ElasticsearchServiceRequest(new UpdateElasticsearchDomainConfigRequestPrivate(ElasticsearchServiceRequest::UpdateElasticsearchDomainConfigAction, this))
+    : ElasticsearchRequest(new UpdateElasticsearchDomainConfigRequestPrivate(ElasticsearchRequest::UpdateElasticsearchDomainConfigAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * UpdateElasticsearchDomainConfigRequest::respo
 }
 
 /*!
- * \class QtAws::ElasticsearchService::UpdateElasticsearchDomainConfigRequestPrivate
+ * \class QtAws::Elasticsearch::UpdateElasticsearchDomainConfigRequestPrivate
  * \brief The UpdateElasticsearchDomainConfigRequestPrivate class provides private implementation for UpdateElasticsearchDomainConfigRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a UpdateElasticsearchDomainConfigRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a UpdateElasticsearchDomainConfigRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 UpdateElasticsearchDomainConfigRequestPrivate::UpdateElasticsearchDomainConfigRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, UpdateElasticsearchDomainConfigRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, UpdateElasticsearchDomainConfigRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ UpdateElasticsearchDomainConfigRequestPrivate::UpdateElasticsearchDomainConfigRe
  */
 UpdateElasticsearchDomainConfigRequestPrivate::UpdateElasticsearchDomainConfigRequestPrivate(
     const UpdateElasticsearchDomainConfigRequestPrivate &other, UpdateElasticsearchDomainConfigRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::ListElasticsearchVersionsResponse
- * \brief The ListElasticsearchVersionsResponse class provides an interace for ElasticsearchService ListElasticsearchVersions responses.
+ * \class QtAws::Elasticsearch::ListElasticsearchVersionsResponse
+ * \brief The ListElasticsearchVersionsResponse class provides an interace for Elasticsearch ListElasticsearchVersions responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::listElasticsearchVersions
+ * \sa ElasticsearchClient::listElasticsearchVersions
  */
 
 /*!
@@ -61,7 +61,7 @@ ListElasticsearchVersionsResponse::ListElasticsearchVersionsResponse(
         const ListElasticsearchVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new ListElasticsearchVersionsResponsePrivate(this), parent)
+    : ElasticsearchResponse(new ListElasticsearchVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListElasticsearchVersionsRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const ListElasticsearchVersionsRequest * ListElasticsearchVersionsResponse::requ
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService ListElasticsearchVersions \a response.
+ * Parses a successful Elasticsearch ListElasticsearchVersions \a response.
  */
 void ListElasticsearchVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void ListElasticsearchVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::ListElasticsearchVersionsResponsePrivate
+ * \class QtAws::Elasticsearch::ListElasticsearchVersionsResponsePrivate
  * \brief The ListElasticsearchVersionsResponsePrivate class provides private implementation for ListElasticsearchVersionsResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a ListElasticsearchVersionsResponsePrivate object with public implementation \a q.
  */
 ListElasticsearchVersionsResponsePrivate::ListElasticsearchVersionsResponsePrivate(
-    ListElasticsearchVersionsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    ListElasticsearchVersionsResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService ListElasticsearchVersions response element from \a xml.
+ * Parses a Elasticsearch ListElasticsearchVersions response element from \a xml.
  */
 void ListElasticsearchVersionsResponsePrivate::parseListElasticsearchVersionsResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void ListElasticsearchVersionsResponsePrivate::parseListElasticsearchVersionsRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

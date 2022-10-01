@@ -20,30 +20,30 @@
 #include "getbuiltinslottypesrequest.h"
 #include "getbuiltinslottypesrequest_p.h"
 #include "getbuiltinslottypesresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBuiltinSlotTypesRequest
- * \brief The GetBuiltinSlotTypesRequest class provides an interface for LexModelBuildingService GetBuiltinSlotTypes requests.
+ * \class QtAws::LexModelBuilding::GetBuiltinSlotTypesRequest
+ * \brief The GetBuiltinSlotTypesRequest class provides an interface for LexModelBuilding GetBuiltinSlotTypes requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getBuiltinSlotTypes
+ * \sa LexModelBuildingClient::getBuiltinSlotTypes
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetBuiltinSlotTypesRequest::GetBuiltinSlotTypesRequest(const GetBuiltinSlotTypesRequest &other)
-    : LexModelBuildingServiceRequest(new GetBuiltinSlotTypesRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new GetBuiltinSlotTypesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetBuiltinSlotTypesRequest::GetBuiltinSlotTypesRequest(const GetBuiltinSlotTypes
  * Constructs a GetBuiltinSlotTypesRequest object.
  */
 GetBuiltinSlotTypesRequest::GetBuiltinSlotTypesRequest()
-    : LexModelBuildingServiceRequest(new GetBuiltinSlotTypesRequestPrivate(LexModelBuildingServiceRequest::GetBuiltinSlotTypesAction, this))
+    : LexModelBuildingRequest(new GetBuiltinSlotTypesRequestPrivate(LexModelBuildingRequest::GetBuiltinSlotTypesAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * GetBuiltinSlotTypesRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBuiltinSlotTypesRequestPrivate
+ * \class QtAws::LexModelBuilding::GetBuiltinSlotTypesRequestPrivate
  * \brief The GetBuiltinSlotTypesRequestPrivate class provides private implementation for GetBuiltinSlotTypesRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a GetBuiltinSlotTypesRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a GetBuiltinSlotTypesRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 GetBuiltinSlotTypesRequestPrivate::GetBuiltinSlotTypesRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, GetBuiltinSlotTypesRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, GetBuiltinSlotTypesRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ GetBuiltinSlotTypesRequestPrivate::GetBuiltinSlotTypesRequestPrivate(
  */
 GetBuiltinSlotTypesRequestPrivate::GetBuiltinSlotTypesRequestPrivate(
     const GetBuiltinSlotTypesRequestPrivate &other, GetBuiltinSlotTypesRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

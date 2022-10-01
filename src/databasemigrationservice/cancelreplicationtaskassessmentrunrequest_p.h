@@ -20,18 +20,18 @@
 #ifndef QTAWS_CANCELREPLICATIONTASKASSESSMENTRUNREQUEST_P_H
 #define QTAWS_CANCELREPLICATIONTASKASSESSMENTRUNREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "cancelreplicationtaskassessmentrunrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class CancelReplicationTaskAssessmentRunRequest;
 
-class CancelReplicationTaskAssessmentRunRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class CancelReplicationTaskAssessmentRunRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    CancelReplicationTaskAssessmentRunRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    CancelReplicationTaskAssessmentRunRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    CancelReplicationTaskAssessmentRunRequest * const q);
     CancelReplicationTaskAssessmentRunRequestPrivate(const CancelReplicationTaskAssessmentRunRequestPrivate &other,
                                    CancelReplicationTaskAssessmentRunRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

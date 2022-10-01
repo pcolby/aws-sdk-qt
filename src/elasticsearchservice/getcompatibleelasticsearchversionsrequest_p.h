@@ -20,18 +20,18 @@
 #ifndef QTAWS_GETCOMPATIBLEELASTICSEARCHVERSIONSREQUEST_P_H
 #define QTAWS_GETCOMPATIBLEELASTICSEARCHVERSIONSREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "getcompatibleelasticsearchversionsrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class GetCompatibleElasticsearchVersionsRequest;
 
-class GetCompatibleElasticsearchVersionsRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class GetCompatibleElasticsearchVersionsRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    GetCompatibleElasticsearchVersionsRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    GetCompatibleElasticsearchVersionsRequestPrivate(const ElasticsearchRequest::Action action,
                                    GetCompatibleElasticsearchVersionsRequest * const q);
     GetCompatibleElasticsearchVersionsRequestPrivate(const GetCompatibleElasticsearchVersionsRequestPrivate &other,
                                    GetCompatibleElasticsearchVersionsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeCertificatesResponse
- * \brief The DescribeCertificatesResponse class provides an interace for DatabaseMigrationService DescribeCertificates responses.
+ * \class QtAws::DatabaseMigration::DescribeCertificatesResponse
+ * \brief The DescribeCertificatesResponse class provides an interace for DatabaseMigration DescribeCertificates responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeCertificates
+ * \sa DatabaseMigrationClient::describeCertificates
  */
 
 /*!
@@ -55,7 +55,7 @@ DescribeCertificatesResponse::DescribeCertificatesResponse(
         const DescribeCertificatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeCertificatesResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DescribeCertificatesResponsePrivate(this), parent)
 {
     setRequest(new DescribeCertificatesRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DescribeCertificatesRequest * DescribeCertificatesResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DescribeCertificates \a response.
+ * Parses a successful DatabaseMigration DescribeCertificates \a response.
  */
 void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeCertificatesResponsePrivate
+ * \class QtAws::DatabaseMigration::DescribeCertificatesResponsePrivate
  * \brief The DescribeCertificatesResponsePrivate class provides private implementation for DescribeCertificatesResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DescribeCertificatesResponsePrivate object with public implementation \a q.
  */
 DescribeCertificatesResponsePrivate::DescribeCertificatesResponsePrivate(
-    DescribeCertificatesResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DescribeCertificatesResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DescribeCertificates response element from \a xml.
+ * Parses a DatabaseMigration DescribeCertificates response element from \a xml.
  */
 void DescribeCertificatesResponsePrivate::parseDescribeCertificatesResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribeCertificatesResponsePrivate::parseDescribeCertificatesResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

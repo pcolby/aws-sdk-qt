@@ -20,15 +20,15 @@
 #ifndef QTAWS_DESCRIBEORDERABLEREPLICATIONINSTANCESRESPONSE_H
 #define QTAWS_DESCRIBEORDERABLEREPLICATIONINSTANCESRESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "describeorderablereplicationinstancesrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DescribeOrderableReplicationInstancesResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribeOrderableReplicationInstancesResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT DescribeOrderableReplicationInstancesResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

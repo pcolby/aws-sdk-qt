@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "elasticsearchserviceresponse.h"
-#include "elasticsearchserviceresponse_p.h"
+#include "elasticsearchresponse.h"
+#include "elasticsearchresponse_p.h"
 
 #include <QDebug>
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::ElasticsearchServiceResponse
- * \brief The ElasticsearchServiceResponse class provides an interface for ElasticsearchService responses.
+ * \class QtAws::Elasticsearch::ElasticsearchResponse
+ * \brief The ElasticsearchResponse class provides an interface for Elasticsearch responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a ElasticsearchServiceResponse object with parent \a parent.
+ * Constructs a ElasticsearchResponse object with parent \a parent.
  */
-ElasticsearchServiceResponse::ElasticsearchServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ElasticsearchServiceResponsePrivate(this), parent)
+ElasticsearchResponse::ElasticsearchResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new ElasticsearchResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a ElasticsearchServiceResponse object with private implementation \a d,
+ * Constructs a ElasticsearchResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from ElasticsearchServiceResponsePrivate.
+ * implementation that inherits from ElasticsearchResponsePrivate.
  */
-ElasticsearchServiceResponse::ElasticsearchServiceResponse(ElasticsearchServiceResponsePrivate * const d, QObject * const parent)
+ElasticsearchResponse::ElasticsearchResponse(ElasticsearchResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ ElasticsearchServiceResponse::ElasticsearchServiceResponse(ElasticsearchServiceR
 /*!
  * \reimp
  */
-void ElasticsearchServiceResponse::parseFailure(QIODevice &response)
+void ElasticsearchResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(ElasticsearchServiceResponse);
+    //Q_D(ElasticsearchResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void ElasticsearchServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::ElasticsearchServiceResponsePrivate
- * \brief The ElasticsearchServiceResponsePrivate class provides private implementation for ElasticsearchServiceResponse.
+ * \class QtAws::Elasticsearch::ElasticsearchResponsePrivate
+ * \brief The ElasticsearchResponsePrivate class provides private implementation for ElasticsearchResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a ElasticsearchServiceResponsePrivate object with public implementation \a q.
+ * Constructs a ElasticsearchResponsePrivate object with public implementation \a q.
  */
-ElasticsearchServiceResponsePrivate::ElasticsearchServiceResponsePrivate(
-    ElasticsearchServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+ElasticsearchResponsePrivate::ElasticsearchResponsePrivate(
+    ElasticsearchResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

@@ -20,18 +20,18 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_P_H
 #define QTAWS_UNTAGRESOURCEREQUEST_P_H
 
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class UntagResourceRequest;
 
-class UntagResourceRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class UntagResourceRequestPrivate : public LexModelBuildingRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const LexModelBuildingServiceRequest::Action action,
+    UntagResourceRequestPrivate(const LexModelBuildingRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

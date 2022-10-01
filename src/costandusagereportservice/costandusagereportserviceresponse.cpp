@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "costandusagereportserviceresponse.h"
-#include "costandusagereportserviceresponse_p.h"
+#include "costandusagereportresponse.h"
+#include "costandusagereportresponse_p.h"
 
 #include <QDebug>
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 /*!
- * \class QtAws::CostandUsageReportService::CostandUsageReportServiceResponse
- * \brief The CostandUsageReportServiceResponse class provides an interface for CostandUsageReportService responses.
+ * \class QtAws::CostandUsageReport::CostandUsageReportResponse
+ * \brief The CostandUsageReportResponse class provides an interface for CostandUsageReport responses.
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  */
 
 /*!
- * Constructs a CostandUsageReportServiceResponse object with parent \a parent.
+ * Constructs a CostandUsageReportResponse object with parent \a parent.
  */
-CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CostandUsageReportServiceResponsePrivate(this), parent)
+CostandUsageReportResponse::CostandUsageReportResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new CostandUsageReportResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a CostandUsageReportServiceResponse object with private implementation \a d,
+ * Constructs a CostandUsageReportResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from CostandUsageReportServiceResponsePrivate.
+ * implementation that inherits from CostandUsageReportResponsePrivate.
  */
-CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(CostandUsageReportServiceResponsePrivate * const d, QObject * const parent)
+CostandUsageReportResponse::CostandUsageReportResponse(CostandUsageReportResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(CostandUsag
 /*!
  * \reimp
  */
-void CostandUsageReportServiceResponse::parseFailure(QIODevice &response)
+void CostandUsageReportResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(CostandUsageReportServiceResponse);
+    //Q_D(CostandUsageReportResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void CostandUsageReportServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CostandUsageReportService::CostandUsageReportServiceResponsePrivate
- * \brief The CostandUsageReportServiceResponsePrivate class provides private implementation for CostandUsageReportServiceResponse.
+ * \class QtAws::CostandUsageReport::CostandUsageReportResponsePrivate
+ * \brief The CostandUsageReportResponsePrivate class provides private implementation for CostandUsageReportResponse.
  * \internal
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  */
 
 /*!
- * Constructs a CostandUsageReportServiceResponsePrivate object with public implementation \a q.
+ * Constructs a CostandUsageReportResponsePrivate object with public implementation \a q.
  */
-CostandUsageReportServiceResponsePrivate::CostandUsageReportServiceResponsePrivate(
-    CostandUsageReportServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+CostandUsageReportResponsePrivate::CostandUsageReportResponsePrivate(
+    CostandUsageReportResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws

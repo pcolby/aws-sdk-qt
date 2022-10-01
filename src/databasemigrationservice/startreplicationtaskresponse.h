@@ -20,15 +20,15 @@
 #ifndef QTAWS_STARTREPLICATIONTASKRESPONSE_H
 #define QTAWS_STARTREPLICATIONTASKRESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "startreplicationtaskrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class StartReplicationTaskResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT StartReplicationTaskResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT StartReplicationTaskResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

@@ -17,30 +17,30 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_RESOURCEGROUPSTAGGINGAPICLIENT_P_H
-#define QTAWS_RESOURCEGROUPSTAGGINGAPICLIENT_P_H
+#ifndef QTAWS_RESOURCEGROUPSTAGGINGCLIENT_P_H
+#define QTAWS_RESOURCEGROUPSTAGGINGCLIENT_P_H
 
 #include "core/awsabstractclient_p.h"
 
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
-class ResourceGroupsTaggingApiClient;
+class ResourceGroupsTaggingClient;
 
-class ResourceGroupsTaggingApiClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ResourceGroupsTaggingClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit ResourceGroupsTaggingApiClientPrivate(ResourceGroupsTaggingApiClient * const q);
+    explicit ResourceGroupsTaggingClientPrivate(ResourceGroupsTaggingClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(ResourceGroupsTaggingApiClient)
-    Q_DISABLE_COPY(ResourceGroupsTaggingApiClientPrivate)
+    Q_DECLARE_PUBLIC(ResourceGroupsTaggingClient)
+    Q_DISABLE_COPY(ResourceGroupsTaggingClientPrivate)
 
 };
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws
 
 #endif

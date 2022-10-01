@@ -20,14 +20,14 @@
 #ifndef QTAWS_DELETEREPLICATIONTASKASSESSMENTRUNREQUEST_H
 #define QTAWS_DELETEREPLICATIONTASKASSESSMENTRUNREQUEST_H
 
-#include "databasemigrationservicerequest.h"
+#include "databasemigrationrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DeleteReplicationTaskAssessmentRunRequestPrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DeleteReplicationTaskAssessmentRunRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATION_EXPORT DeleteReplicationTaskAssessmentRunRequest : public DatabaseMigrationRequest {
 
 public:
     DeleteReplicationTaskAssessmentRunRequest(const DeleteReplicationTaskAssessmentRunRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

@@ -20,30 +20,30 @@
 #include "getbotsrequest.h"
 #include "getbotsrequest_p.h"
 #include "getbotsresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBotsRequest
- * \brief The GetBotsRequest class provides an interface for LexModelBuildingService GetBots requests.
+ * \class QtAws::LexModelBuilding::GetBotsRequest
+ * \brief The GetBotsRequest class provides an interface for LexModelBuilding GetBots requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getBots
+ * \sa LexModelBuildingClient::getBots
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetBotsRequest::GetBotsRequest(const GetBotsRequest &other)
-    : LexModelBuildingServiceRequest(new GetBotsRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new GetBotsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetBotsRequest::GetBotsRequest(const GetBotsRequest &other)
  * Constructs a GetBotsRequest object.
  */
 GetBotsRequest::GetBotsRequest()
-    : LexModelBuildingServiceRequest(new GetBotsRequestPrivate(LexModelBuildingServiceRequest::GetBotsAction, this))
+    : LexModelBuildingRequest(new GetBotsRequestPrivate(LexModelBuildingRequest::GetBotsAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * GetBotsRequest::response(QNetworkReply * cons
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBotsRequestPrivate
+ * \class QtAws::LexModelBuilding::GetBotsRequestPrivate
  * \brief The GetBotsRequestPrivate class provides private implementation for GetBotsRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a GetBotsRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a GetBotsRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 GetBotsRequestPrivate::GetBotsRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, GetBotsRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, GetBotsRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ GetBotsRequestPrivate::GetBotsRequestPrivate(
  */
 GetBotsRequestPrivate::GetBotsRequestPrivate(
     const GetBotsRequestPrivate &other, GetBotsRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetIntentsResponse
- * \brief The GetIntentsResponse class provides an interace for LexModelBuildingService GetIntents responses.
+ * \class QtAws::LexModelBuilding::GetIntentsResponse
+ * \brief The GetIntentsResponse class provides an interace for LexModelBuilding GetIntents responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getIntents
+ * \sa LexModelBuildingClient::getIntents
  */
 
 /*!
@@ -48,7 +48,7 @@ GetIntentsResponse::GetIntentsResponse(
         const GetIntentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetIntentsResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new GetIntentsResponsePrivate(this), parent)
 {
     setRequest(new GetIntentsRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const GetIntentsRequest * GetIntentsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService GetIntents \a response.
+ * Parses a successful LexModelBuilding GetIntents \a response.
  */
 void GetIntentsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void GetIntentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetIntentsResponsePrivate
+ * \class QtAws::LexModelBuilding::GetIntentsResponsePrivate
  * \brief The GetIntentsResponsePrivate class provides private implementation for GetIntentsResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a GetIntentsResponsePrivate object with public implementation \a q.
  */
 GetIntentsResponsePrivate::GetIntentsResponsePrivate(
-    GetIntentsResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    GetIntentsResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService GetIntents response element from \a xml.
+ * Parses a LexModelBuilding GetIntents response element from \a xml.
  */
 void GetIntentsResponsePrivate::parseGetIntentsResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void GetIntentsResponsePrivate::parseGetIntentsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

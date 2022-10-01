@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::StartMigrationResponse
- * \brief The StartMigrationResponse class provides an interace for LexModelBuildingService StartMigration responses.
+ * \class QtAws::LexModelBuilding::StartMigrationResponse
+ * \brief The StartMigrationResponse class provides an interace for LexModelBuilding StartMigration responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::startMigration
+ * \sa LexModelBuildingClient::startMigration
  */
 
 /*!
@@ -48,7 +48,7 @@ StartMigrationResponse::StartMigrationResponse(
         const StartMigrationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new StartMigrationResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new StartMigrationResponsePrivate(this), parent)
 {
     setRequest(new StartMigrationRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const StartMigrationRequest * StartMigrationResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService StartMigration \a response.
+ * Parses a successful LexModelBuilding StartMigration \a response.
  */
 void StartMigrationResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void StartMigrationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::StartMigrationResponsePrivate
+ * \class QtAws::LexModelBuilding::StartMigrationResponsePrivate
  * \brief The StartMigrationResponsePrivate class provides private implementation for StartMigrationResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a StartMigrationResponsePrivate object with public implementation \a q.
  */
 StartMigrationResponsePrivate::StartMigrationResponsePrivate(
-    StartMigrationResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    StartMigrationResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService StartMigration response element from \a xml.
+ * Parses a LexModelBuilding StartMigration response element from \a xml.
  */
 void StartMigrationResponsePrivate::parseStartMigrationResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void StartMigrationResponsePrivate::parseStartMigrationResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

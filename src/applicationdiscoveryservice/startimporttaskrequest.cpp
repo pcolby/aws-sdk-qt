@@ -20,16 +20,16 @@
 #include "startimporttaskrequest.h"
 #include "startimporttaskrequest_p.h"
 #include "startimporttaskresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StartImportTaskRequest
- * \brief The StartImportTaskRequest class provides an interface for ApplicationDiscoveryService StartImportTask requests.
+ * \class QtAws::ApplicationDiscovery::StartImportTaskRequest
+ * \brief The StartImportTaskRequest class provides an interface for ApplicationDiscovery StartImportTask requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::startImportTask
+ * \sa ApplicationDiscoveryClient::startImportTask
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartImportTaskRequest::StartImportTaskRequest(const StartImportTaskRequest &other)
-    : ApplicationDiscoveryServiceRequest(new StartImportTaskRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new StartImportTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ StartImportTaskRequest::StartImportTaskRequest(const StartImportTaskRequest &oth
  * Constructs a StartImportTaskRequest object.
  */
 StartImportTaskRequest::StartImportTaskRequest()
-    : ApplicationDiscoveryServiceRequest(new StartImportTaskRequestPrivate(ApplicationDiscoveryServiceRequest::StartImportTaskAction, this))
+    : ApplicationDiscoveryRequest(new StartImportTaskRequestPrivate(ApplicationDiscoveryRequest::StartImportTaskAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * StartImportTaskRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StartImportTaskRequestPrivate
+ * \class QtAws::ApplicationDiscovery::StartImportTaskRequestPrivate
  * \brief The StartImportTaskRequestPrivate class provides private implementation for StartImportTaskRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a StartImportTaskRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a StartImportTaskRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 StartImportTaskRequestPrivate::StartImportTaskRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, StartImportTaskRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, StartImportTaskRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ StartImportTaskRequestPrivate::StartImportTaskRequestPrivate(
  */
 StartImportTaskRequestPrivate::StartImportTaskRequestPrivate(
     const StartImportTaskRequestPrivate &other, StartImportTaskRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

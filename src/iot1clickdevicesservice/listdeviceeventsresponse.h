@@ -20,15 +20,15 @@
 #ifndef QTAWS_LISTDEVICEEVENTSRESPONSE_H
 #define QTAWS_LISTDEVICEEVENTSRESPONSE_H
 
-#include "iot1clickdevicesserviceresponse.h"
+#include "iot1clickdevicesresponse.h"
 #include "listdeviceeventsrequest.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 class ListDeviceEventsResponsePrivate;
 
-class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT ListDeviceEventsResponse : public IoT1ClickDevicesServiceResponse {
+class QTAWSIOT1CLICKDEVICES_EXPORT ListDeviceEventsResponse : public IoT1ClickDevicesResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

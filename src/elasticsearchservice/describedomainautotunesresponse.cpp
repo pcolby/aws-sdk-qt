@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeDomainAutoTunesResponse
- * \brief The DescribeDomainAutoTunesResponse class provides an interace for ElasticsearchService DescribeDomainAutoTunes responses.
+ * \class QtAws::Elasticsearch::DescribeDomainAutoTunesResponse
+ * \brief The DescribeDomainAutoTunesResponse class provides an interace for Elasticsearch DescribeDomainAutoTunes responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describeDomainAutoTunes
+ * \sa ElasticsearchClient::describeDomainAutoTunes
  */
 
 /*!
@@ -61,7 +61,7 @@ DescribeDomainAutoTunesResponse::DescribeDomainAutoTunesResponse(
         const DescribeDomainAutoTunesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DescribeDomainAutoTunesResponsePrivate(this), parent)
+    : ElasticsearchResponse(new DescribeDomainAutoTunesResponsePrivate(this), parent)
 {
     setRequest(new DescribeDomainAutoTunesRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DescribeDomainAutoTunesRequest * DescribeDomainAutoTunesResponse::request(
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService DescribeDomainAutoTunes \a response.
+ * Parses a successful Elasticsearch DescribeDomainAutoTunes \a response.
  */
 void DescribeDomainAutoTunesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DescribeDomainAutoTunesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeDomainAutoTunesResponsePrivate
+ * \class QtAws::Elasticsearch::DescribeDomainAutoTunesResponsePrivate
  * \brief The DescribeDomainAutoTunesResponsePrivate class provides private implementation for DescribeDomainAutoTunesResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a DescribeDomainAutoTunesResponsePrivate object with public implementation \a q.
  */
 DescribeDomainAutoTunesResponsePrivate::DescribeDomainAutoTunesResponsePrivate(
-    DescribeDomainAutoTunesResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    DescribeDomainAutoTunesResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService DescribeDomainAutoTunes response element from \a xml.
+ * Parses a Elasticsearch DescribeDomainAutoTunes response element from \a xml.
  */
 void DescribeDomainAutoTunesResponsePrivate::parseDescribeDomainAutoTunesResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DescribeDomainAutoTunesResponsePrivate::parseDescribeDomainAutoTunesRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

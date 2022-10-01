@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteEventSubscriptionResponse
- * \brief The DeleteEventSubscriptionResponse class provides an interace for DatabaseMigrationService DeleteEventSubscription responses.
+ * \class QtAws::DatabaseMigration::DeleteEventSubscriptionResponse
+ * \brief The DeleteEventSubscriptionResponse class provides an interace for DatabaseMigration DeleteEventSubscription responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteEventSubscription
+ * \sa DatabaseMigrationClient::deleteEventSubscription
  */
 
 /*!
@@ -55,7 +55,7 @@ DeleteEventSubscriptionResponse::DeleteEventSubscriptionResponse(
         const DeleteEventSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DeleteEventSubscriptionResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DeleteEventSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new DeleteEventSubscriptionRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DeleteEventSubscriptionRequest * DeleteEventSubscriptionResponse::request(
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DeleteEventSubscription \a response.
+ * Parses a successful DatabaseMigration DeleteEventSubscription \a response.
  */
 void DeleteEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DeleteEventSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteEventSubscriptionResponsePrivate
+ * \class QtAws::DatabaseMigration::DeleteEventSubscriptionResponsePrivate
  * \brief The DeleteEventSubscriptionResponsePrivate class provides private implementation for DeleteEventSubscriptionResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DeleteEventSubscriptionResponsePrivate object with public implementation \a q.
  */
 DeleteEventSubscriptionResponsePrivate::DeleteEventSubscriptionResponsePrivate(
-    DeleteEventSubscriptionResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DeleteEventSubscriptionResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DeleteEventSubscription response element from \a xml.
+ * Parses a DatabaseMigration DeleteEventSubscription response element from \a xml.
  */
 void DeleteEventSubscriptionResponsePrivate::parseDeleteEventSubscriptionResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DeleteEventSubscriptionResponsePrivate::parseDeleteEventSubscriptionRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

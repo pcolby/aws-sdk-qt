@@ -20,14 +20,14 @@
 #ifndef QTAWS_CREATEPACKAGEREQUEST_H
 #define QTAWS_CREATEPACKAGEREQUEST_H
 
-#include "elasticsearchservicerequest.h"
+#include "elasticsearchrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class CreatePackageRequestPrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT CreatePackageRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCH_EXPORT CreatePackageRequest : public ElasticsearchRequest {
 
 public:
     CreatePackageRequest(const CreatePackageRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

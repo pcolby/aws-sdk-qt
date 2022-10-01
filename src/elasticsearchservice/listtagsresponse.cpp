@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::ListTagsResponse
- * \brief The ListTagsResponse class provides an interace for ElasticsearchService ListTags responses.
+ * \class QtAws::Elasticsearch::ListTagsResponse
+ * \brief The ListTagsResponse class provides an interace for Elasticsearch ListTags responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::listTags
+ * \sa ElasticsearchClient::listTags
  */
 
 /*!
@@ -61,7 +61,7 @@ ListTagsResponse::ListTagsResponse(
         const ListTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new ListTagsResponsePrivate(this), parent)
+    : ElasticsearchResponse(new ListTagsResponsePrivate(this), parent)
 {
     setRequest(new ListTagsRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const ListTagsRequest * ListTagsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService ListTags \a response.
+ * Parses a successful Elasticsearch ListTags \a response.
  */
 void ListTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::ListTagsResponsePrivate
+ * \class QtAws::Elasticsearch::ListTagsResponsePrivate
  * \brief The ListTagsResponsePrivate class provides private implementation for ListTagsResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a ListTagsResponsePrivate object with public implementation \a q.
  */
 ListTagsResponsePrivate::ListTagsResponsePrivate(
-    ListTagsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    ListTagsResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService ListTags response element from \a xml.
+ * Parses a Elasticsearch ListTags response element from \a xml.
  */
 void ListTagsResponsePrivate::parseListTagsResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void ListTagsResponsePrivate::parseListTagsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

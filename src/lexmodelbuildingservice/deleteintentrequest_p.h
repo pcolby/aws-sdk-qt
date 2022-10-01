@@ -20,18 +20,18 @@
 #ifndef QTAWS_DELETEINTENTREQUEST_P_H
 #define QTAWS_DELETEINTENTREQUEST_P_H
 
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 #include "deleteintentrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class DeleteIntentRequest;
 
-class DeleteIntentRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class DeleteIntentRequestPrivate : public LexModelBuildingRequestPrivate {
 
 public:
-    DeleteIntentRequestPrivate(const LexModelBuildingServiceRequest::Action action,
+    DeleteIntentRequestPrivate(const LexModelBuildingRequest::Action action,
                                    DeleteIntentRequest * const q);
     DeleteIntentRequestPrivate(const DeleteIntentRequestPrivate &other,
                                    DeleteIntentRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

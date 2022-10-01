@@ -17,8 +17,8 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "elasticsearchserviceclient.h"
-#include "elasticsearchserviceclient_p.h"
+#include "elasticsearchclient.h"
+#include "elasticsearchclient_p.h"
 
 #include "core/awssignaturev4.h"
 #include "acceptinboundcrossclustersearchconnectionrequest.h"
@@ -108,23 +108,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::ElasticsearchService
+ * \namespace QtAws::Elasticsearch
  * \brief Contains classess for accessing Amazon Elasticsearch Service.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::ElasticsearchServiceClient
- * \brief The ElasticsearchServiceClient class provides access to the Amazon Elasticsearch Service service.
+ * \class QtAws::Elasticsearch::ElasticsearchClient
+ * \brief The ElasticsearchClient class provides access to the Amazon Elasticsearch Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -146,21 +146,21 @@ namespace ElasticsearchService {
  */
 
 /*!
- * \brief Constructs a ElasticsearchServiceClient object.
+ * \brief Constructs a ElasticsearchClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-ElasticsearchServiceClient::ElasticsearchServiceClient(
+ElasticsearchClient::ElasticsearchClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ElasticsearchServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElasticsearchClientPrivate(this), parent)
 {
-    Q_D(ElasticsearchServiceClient);
+    Q_D(ElasticsearchClient);
     d->apiVersion = QStringLiteral("2015-01-01");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("es");
@@ -171,7 +171,7 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
 }
 
 /*!
- * \overload ElasticsearchServiceClient()
+ * \overload ElasticsearchClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -181,14 +181,14 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-ElasticsearchServiceClient::ElasticsearchServiceClient(
+ElasticsearchClient::ElasticsearchClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ElasticsearchServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ElasticsearchClientPrivate(this), parent)
 {
-    Q_D(ElasticsearchServiceClient);
+    Q_D(ElasticsearchClient);
     d->apiVersion = QStringLiteral("2015-01-01");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -199,20 +199,20 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * AcceptInboundCrossClusterSearchConnectionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Allows the destination domain owner to accept an inbound cross-cluster search connection
  */
-AcceptInboundCrossClusterSearchConnectionResponse * ElasticsearchServiceClient::acceptInboundCrossClusterSearchConnection(const AcceptInboundCrossClusterSearchConnectionRequest &request)
+AcceptInboundCrossClusterSearchConnectionResponse * ElasticsearchClient::acceptInboundCrossClusterSearchConnection(const AcceptInboundCrossClusterSearchConnectionRequest &request)
 {
     return qobject_cast<AcceptInboundCrossClusterSearchConnectionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * AddTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -222,26 +222,26 @@ AcceptInboundCrossClusterSearchConnectionResponse * ElasticsearchServiceClient::
  * href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-managedomains.html#es-managedomains-awsresorcetagging"
  * target="_blank"> Tagging Amazon Elasticsearch Service Domains for more
  */
-AddTagsResponse * ElasticsearchServiceClient::addTags(const AddTagsRequest &request)
+AddTagsResponse * ElasticsearchClient::addTags(const AddTagsRequest &request)
 {
     return qobject_cast<AddTagsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * AssociatePackageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Associates a package with an Amazon ES
  */
-AssociatePackageResponse * ElasticsearchServiceClient::associatePackage(const AssociatePackageRequest &request)
+AssociatePackageResponse * ElasticsearchClient::associatePackage(const AssociatePackageRequest &request)
 {
     return qobject_cast<AssociatePackageResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * CancelElasticsearchServiceSoftwareUpdateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -249,13 +249,13 @@ AssociatePackageResponse * ElasticsearchServiceClient::associatePackage(const As
  * Cancels a scheduled service software update for an Amazon ES domain. You can only perform this operation before the
  * <code>AutomatedUpdateDate</code> and when the <code>UpdateStatus</code> is in the <code>PENDING_UPDATE</code>
  */
-CancelElasticsearchServiceSoftwareUpdateResponse * ElasticsearchServiceClient::cancelElasticsearchServiceSoftwareUpdate(const CancelElasticsearchServiceSoftwareUpdateRequest &request)
+CancelElasticsearchServiceSoftwareUpdateResponse * ElasticsearchClient::cancelElasticsearchServiceSoftwareUpdate(const CancelElasticsearchServiceSoftwareUpdateRequest &request)
 {
     return qobject_cast<CancelElasticsearchServiceSoftwareUpdateResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * CreateElasticsearchDomainResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -264,52 +264,52 @@ CancelElasticsearchServiceSoftwareUpdateResponse * ElasticsearchServiceClient::c
  * href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains"
  * target="_blank">Creating Elasticsearch Domains</a> in the <i>Amazon Elasticsearch Service Developer
  */
-CreateElasticsearchDomainResponse * ElasticsearchServiceClient::createElasticsearchDomain(const CreateElasticsearchDomainRequest &request)
+CreateElasticsearchDomainResponse * ElasticsearchClient::createElasticsearchDomain(const CreateElasticsearchDomainRequest &request)
 {
     return qobject_cast<CreateElasticsearchDomainResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * CreateOutboundCrossClusterSearchConnectionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new cross-cluster search connection from a source domain to a destination
  */
-CreateOutboundCrossClusterSearchConnectionResponse * ElasticsearchServiceClient::createOutboundCrossClusterSearchConnection(const CreateOutboundCrossClusterSearchConnectionRequest &request)
+CreateOutboundCrossClusterSearchConnectionResponse * ElasticsearchClient::createOutboundCrossClusterSearchConnection(const CreateOutboundCrossClusterSearchConnectionRequest &request)
 {
     return qobject_cast<CreateOutboundCrossClusterSearchConnectionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * CreatePackageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Create a package for use with Amazon ES
  */
-CreatePackageResponse * ElasticsearchServiceClient::createPackage(const CreatePackageRequest &request)
+CreatePackageResponse * ElasticsearchClient::createPackage(const CreatePackageRequest &request)
 {
     return qobject_cast<CreatePackageResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DeleteElasticsearchDomainResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Permanently deletes the specified Elasticsearch domain and all of its data. Once a domain is deleted, it cannot be
  */
-DeleteElasticsearchDomainResponse * ElasticsearchServiceClient::deleteElasticsearchDomain(const DeleteElasticsearchDomainRequest &request)
+DeleteElasticsearchDomainResponse * ElasticsearchClient::deleteElasticsearchDomain(const DeleteElasticsearchDomainRequest &request)
 {
     return qobject_cast<DeleteElasticsearchDomainResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DeleteElasticsearchServiceRoleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -319,52 +319,52 @@ DeleteElasticsearchDomainResponse * ElasticsearchServiceClient::deleteElasticsea
  * See <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-enabling-slr"
  * target="_blank">Deleting Elasticsearch Service Role</a> in <i>VPC Endpoints for Amazon Elasticsearch Service
  */
-DeleteElasticsearchServiceRoleResponse * ElasticsearchServiceClient::deleteElasticsearchServiceRole(const DeleteElasticsearchServiceRoleRequest &request)
+DeleteElasticsearchServiceRoleResponse * ElasticsearchClient::deleteElasticsearchServiceRole(const DeleteElasticsearchServiceRoleRequest &request)
 {
     return qobject_cast<DeleteElasticsearchServiceRoleResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DeleteInboundCrossClusterSearchConnectionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Allows the destination domain owner to delete an existing inbound cross-cluster search
  */
-DeleteInboundCrossClusterSearchConnectionResponse * ElasticsearchServiceClient::deleteInboundCrossClusterSearchConnection(const DeleteInboundCrossClusterSearchConnectionRequest &request)
+DeleteInboundCrossClusterSearchConnectionResponse * ElasticsearchClient::deleteInboundCrossClusterSearchConnection(const DeleteInboundCrossClusterSearchConnectionRequest &request)
 {
     return qobject_cast<DeleteInboundCrossClusterSearchConnectionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DeleteOutboundCrossClusterSearchConnectionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Allows the source domain owner to delete an existing outbound cross-cluster search
  */
-DeleteOutboundCrossClusterSearchConnectionResponse * ElasticsearchServiceClient::deleteOutboundCrossClusterSearchConnection(const DeleteOutboundCrossClusterSearchConnectionRequest &request)
+DeleteOutboundCrossClusterSearchConnectionResponse * ElasticsearchClient::deleteOutboundCrossClusterSearchConnection(const DeleteOutboundCrossClusterSearchConnectionRequest &request)
 {
     return qobject_cast<DeleteOutboundCrossClusterSearchConnectionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DeletePackageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Delete the
  */
-DeletePackageResponse * ElasticsearchServiceClient::deletePackage(const DeletePackageRequest &request)
+DeletePackageResponse * ElasticsearchClient::deletePackage(const DeletePackageRequest &request)
 {
     return qobject_cast<DeletePackageResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DescribeDomainAutoTunesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -372,13 +372,13 @@ DeletePackageResponse * ElasticsearchServiceClient::deletePackage(const DeletePa
  * Provides scheduled Auto-Tune action details for the Elasticsearch domain, such as Auto-Tune action type, description,
  * severity, and scheduled
  */
-DescribeDomainAutoTunesResponse * ElasticsearchServiceClient::describeDomainAutoTunes(const DescribeDomainAutoTunesRequest &request)
+DescribeDomainAutoTunesResponse * ElasticsearchClient::describeDomainAutoTunes(const DescribeDomainAutoTunesRequest &request)
 {
     return qobject_cast<DescribeDomainAutoTunesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DescribeDomainChangeProgressResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -386,13 +386,13 @@ DescribeDomainAutoTunesResponse * ElasticsearchServiceClient::describeDomainAuto
  * Returns information about the current blue/green deployment happening on a domain, including a change ID, status, and
  * progress
  */
-DescribeDomainChangeProgressResponse * ElasticsearchServiceClient::describeDomainChangeProgress(const DescribeDomainChangeProgressRequest &request)
+DescribeDomainChangeProgressResponse * ElasticsearchClient::describeDomainChangeProgress(const DescribeDomainChangeProgressRequest &request)
 {
     return qobject_cast<DescribeDomainChangeProgressResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DescribeElasticsearchDomainResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -400,13 +400,13 @@ DescribeDomainChangeProgressResponse * ElasticsearchServiceClient::describeDomai
  * Returns domain configuration information about the specified Elasticsearch domain, including the domain ID, domain
  * endpoint, and domain
  */
-DescribeElasticsearchDomainResponse * ElasticsearchServiceClient::describeElasticsearchDomain(const DescribeElasticsearchDomainRequest &request)
+DescribeElasticsearchDomainResponse * ElasticsearchClient::describeElasticsearchDomain(const DescribeElasticsearchDomainRequest &request)
 {
     return qobject_cast<DescribeElasticsearchDomainResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DescribeElasticsearchDomainConfigResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -414,13 +414,13 @@ DescribeElasticsearchDomainResponse * ElasticsearchServiceClient::describeElasti
  * Provides cluster configuration information about the specified Elasticsearch domain, such as the state, creation date,
  * update version, and update date for cluster
  */
-DescribeElasticsearchDomainConfigResponse * ElasticsearchServiceClient::describeElasticsearchDomainConfig(const DescribeElasticsearchDomainConfigRequest &request)
+DescribeElasticsearchDomainConfigResponse * ElasticsearchClient::describeElasticsearchDomainConfig(const DescribeElasticsearchDomainConfigRequest &request)
 {
     return qobject_cast<DescribeElasticsearchDomainConfigResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DescribeElasticsearchDomainsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -428,13 +428,13 @@ DescribeElasticsearchDomainConfigResponse * ElasticsearchServiceClient::describe
  * Returns domain configuration information about the specified Elasticsearch domains, including the domain ID, domain
  * endpoint, and domain
  */
-DescribeElasticsearchDomainsResponse * ElasticsearchServiceClient::describeElasticsearchDomains(const DescribeElasticsearchDomainsRequest &request)
+DescribeElasticsearchDomainsResponse * ElasticsearchClient::describeElasticsearchDomains(const DescribeElasticsearchDomainsRequest &request)
 {
     return qobject_cast<DescribeElasticsearchDomainsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DescribeElasticsearchInstanceTypeLimitsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -442,91 +442,91 @@ DescribeElasticsearchDomainsResponse * ElasticsearchServiceClient::describeElast
  * Describe Elasticsearch Limits for a given InstanceType and ElasticsearchVersion. When modifying existing Domain, specify
  * the <code> <a>DomainName</a> </code> to know what Limits are supported for modifying.
  */
-DescribeElasticsearchInstanceTypeLimitsResponse * ElasticsearchServiceClient::describeElasticsearchInstanceTypeLimits(const DescribeElasticsearchInstanceTypeLimitsRequest &request)
+DescribeElasticsearchInstanceTypeLimitsResponse * ElasticsearchClient::describeElasticsearchInstanceTypeLimits(const DescribeElasticsearchInstanceTypeLimitsRequest &request)
 {
     return qobject_cast<DescribeElasticsearchInstanceTypeLimitsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DescribeInboundCrossClusterSearchConnectionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists all the inbound cross-cluster search connections for a destination
  */
-DescribeInboundCrossClusterSearchConnectionsResponse * ElasticsearchServiceClient::describeInboundCrossClusterSearchConnections(const DescribeInboundCrossClusterSearchConnectionsRequest &request)
+DescribeInboundCrossClusterSearchConnectionsResponse * ElasticsearchClient::describeInboundCrossClusterSearchConnections(const DescribeInboundCrossClusterSearchConnectionsRequest &request)
 {
     return qobject_cast<DescribeInboundCrossClusterSearchConnectionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DescribeOutboundCrossClusterSearchConnectionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists all the outbound cross-cluster search connections for a source
  */
-DescribeOutboundCrossClusterSearchConnectionsResponse * ElasticsearchServiceClient::describeOutboundCrossClusterSearchConnections(const DescribeOutboundCrossClusterSearchConnectionsRequest &request)
+DescribeOutboundCrossClusterSearchConnectionsResponse * ElasticsearchClient::describeOutboundCrossClusterSearchConnections(const DescribeOutboundCrossClusterSearchConnectionsRequest &request)
 {
     return qobject_cast<DescribeOutboundCrossClusterSearchConnectionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DescribePackagesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes all packages available to Amazon ES. Includes options for filtering, limiting the number of results, and
  */
-DescribePackagesResponse * ElasticsearchServiceClient::describePackages(const DescribePackagesRequest &request)
+DescribePackagesResponse * ElasticsearchClient::describePackages(const DescribePackagesRequest &request)
 {
     return qobject_cast<DescribePackagesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DescribeReservedElasticsearchInstanceOfferingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists available reserved Elasticsearch instance
  */
-DescribeReservedElasticsearchInstanceOfferingsResponse * ElasticsearchServiceClient::describeReservedElasticsearchInstanceOfferings(const DescribeReservedElasticsearchInstanceOfferingsRequest &request)
+DescribeReservedElasticsearchInstanceOfferingsResponse * ElasticsearchClient::describeReservedElasticsearchInstanceOfferings(const DescribeReservedElasticsearchInstanceOfferingsRequest &request)
 {
     return qobject_cast<DescribeReservedElasticsearchInstanceOfferingsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DescribeReservedElasticsearchInstancesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about reserved Elasticsearch instances for this
  */
-DescribeReservedElasticsearchInstancesResponse * ElasticsearchServiceClient::describeReservedElasticsearchInstances(const DescribeReservedElasticsearchInstancesRequest &request)
+DescribeReservedElasticsearchInstancesResponse * ElasticsearchClient::describeReservedElasticsearchInstances(const DescribeReservedElasticsearchInstancesRequest &request)
 {
     return qobject_cast<DescribeReservedElasticsearchInstancesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * DissociatePackageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Dissociates a package from the Amazon ES
  */
-DissociatePackageResponse * ElasticsearchServiceClient::dissociatePackage(const DissociatePackageRequest &request)
+DissociatePackageResponse * ElasticsearchClient::dissociatePackage(const DissociatePackageRequest &request)
 {
     return qobject_cast<DissociatePackageResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * GetCompatibleElasticsearchVersionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -534,182 +534,182 @@ DissociatePackageResponse * ElasticsearchServiceClient::dissociatePackage(const 
  * Returns a list of upgrade compatible Elastisearch versions. You can optionally pass a <code> <a>DomainName</a> </code>
  * to get all upgrade compatible Elasticsearch versions for that specific domain.
  */
-GetCompatibleElasticsearchVersionsResponse * ElasticsearchServiceClient::getCompatibleElasticsearchVersions(const GetCompatibleElasticsearchVersionsRequest &request)
+GetCompatibleElasticsearchVersionsResponse * ElasticsearchClient::getCompatibleElasticsearchVersions(const GetCompatibleElasticsearchVersionsRequest &request)
 {
     return qobject_cast<GetCompatibleElasticsearchVersionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * GetPackageVersionHistoryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of versions of the package, along with their creation time and commit
  */
-GetPackageVersionHistoryResponse * ElasticsearchServiceClient::getPackageVersionHistory(const GetPackageVersionHistoryRequest &request)
+GetPackageVersionHistoryResponse * ElasticsearchClient::getPackageVersionHistory(const GetPackageVersionHistoryRequest &request)
 {
     return qobject_cast<GetPackageVersionHistoryResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * GetUpgradeHistoryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the complete history of the last 10 upgrades that were performed on the
  */
-GetUpgradeHistoryResponse * ElasticsearchServiceClient::getUpgradeHistory(const GetUpgradeHistoryRequest &request)
+GetUpgradeHistoryResponse * ElasticsearchClient::getUpgradeHistory(const GetUpgradeHistoryRequest &request)
 {
     return qobject_cast<GetUpgradeHistoryResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * GetUpgradeStatusResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the latest status of the last upgrade or upgrade eligibility check that was performed on the
  */
-GetUpgradeStatusResponse * ElasticsearchServiceClient::getUpgradeStatus(const GetUpgradeStatusRequest &request)
+GetUpgradeStatusResponse * ElasticsearchClient::getUpgradeStatus(const GetUpgradeStatusRequest &request)
 {
     return qobject_cast<GetUpgradeStatusResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * ListDomainNamesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the name of all Elasticsearch domains owned by the current user's account.
  */
-ListDomainNamesResponse * ElasticsearchServiceClient::listDomainNames(const ListDomainNamesRequest &request)
+ListDomainNamesResponse * ElasticsearchClient::listDomainNames(const ListDomainNamesRequest &request)
 {
     return qobject_cast<ListDomainNamesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * ListDomainsForPackageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists all Amazon ES domains associated with the
  */
-ListDomainsForPackageResponse * ElasticsearchServiceClient::listDomainsForPackage(const ListDomainsForPackageRequest &request)
+ListDomainsForPackageResponse * ElasticsearchClient::listDomainsForPackage(const ListDomainsForPackageRequest &request)
 {
     return qobject_cast<ListDomainsForPackageResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * ListElasticsearchInstanceTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * List all Elasticsearch instance types that are supported for given
  */
-ListElasticsearchInstanceTypesResponse * ElasticsearchServiceClient::listElasticsearchInstanceTypes(const ListElasticsearchInstanceTypesRequest &request)
+ListElasticsearchInstanceTypesResponse * ElasticsearchClient::listElasticsearchInstanceTypes(const ListElasticsearchInstanceTypesRequest &request)
 {
     return qobject_cast<ListElasticsearchInstanceTypesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * ListElasticsearchVersionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * List all supported Elasticsearch
  */
-ListElasticsearchVersionsResponse * ElasticsearchServiceClient::listElasticsearchVersions(const ListElasticsearchVersionsRequest &request)
+ListElasticsearchVersionsResponse * ElasticsearchClient::listElasticsearchVersions(const ListElasticsearchVersionsRequest &request)
 {
     return qobject_cast<ListElasticsearchVersionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * ListPackagesForDomainResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists all packages associated with the Amazon ES
  */
-ListPackagesForDomainResponse * ElasticsearchServiceClient::listPackagesForDomain(const ListPackagesForDomainRequest &request)
+ListPackagesForDomainResponse * ElasticsearchClient::listPackagesForDomain(const ListPackagesForDomainRequest &request)
 {
     return qobject_cast<ListPackagesForDomainResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * ListTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns all tags for the given Elasticsearch
  */
-ListTagsResponse * ElasticsearchServiceClient::listTags(const ListTagsRequest &request)
+ListTagsResponse * ElasticsearchClient::listTags(const ListTagsRequest &request)
 {
     return qobject_cast<ListTagsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * PurchaseReservedElasticsearchInstanceOfferingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Allows you to purchase reserved Elasticsearch
  */
-PurchaseReservedElasticsearchInstanceOfferingResponse * ElasticsearchServiceClient::purchaseReservedElasticsearchInstanceOffering(const PurchaseReservedElasticsearchInstanceOfferingRequest &request)
+PurchaseReservedElasticsearchInstanceOfferingResponse * ElasticsearchClient::purchaseReservedElasticsearchInstanceOffering(const PurchaseReservedElasticsearchInstanceOfferingRequest &request)
 {
     return qobject_cast<PurchaseReservedElasticsearchInstanceOfferingResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * RejectInboundCrossClusterSearchConnectionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Allows the destination domain owner to reject an inbound cross-cluster search connection
  */
-RejectInboundCrossClusterSearchConnectionResponse * ElasticsearchServiceClient::rejectInboundCrossClusterSearchConnection(const RejectInboundCrossClusterSearchConnectionRequest &request)
+RejectInboundCrossClusterSearchConnectionResponse * ElasticsearchClient::rejectInboundCrossClusterSearchConnection(const RejectInboundCrossClusterSearchConnectionRequest &request)
 {
     return qobject_cast<RejectInboundCrossClusterSearchConnectionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * RemoveTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes the specified set of tags from the specified Elasticsearch
  */
-RemoveTagsResponse * ElasticsearchServiceClient::removeTags(const RemoveTagsRequest &request)
+RemoveTagsResponse * ElasticsearchClient::removeTags(const RemoveTagsRequest &request)
 {
     return qobject_cast<RemoveTagsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * StartElasticsearchServiceSoftwareUpdateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Schedules a service software update for an Amazon ES
  */
-StartElasticsearchServiceSoftwareUpdateResponse * ElasticsearchServiceClient::startElasticsearchServiceSoftwareUpdate(const StartElasticsearchServiceSoftwareUpdateRequest &request)
+StartElasticsearchServiceSoftwareUpdateResponse * ElasticsearchClient::startElasticsearchServiceSoftwareUpdate(const StartElasticsearchServiceSoftwareUpdateRequest &request)
 {
     return qobject_cast<StartElasticsearchServiceSoftwareUpdateResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * UpdateElasticsearchDomainConfigResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -717,54 +717,54 @@ StartElasticsearchServiceSoftwareUpdateResponse * ElasticsearchServiceClient::st
  * Modifies the cluster configuration of the specified Elasticsearch domain, setting as setting the instance type and the
  * number of instances.
  */
-UpdateElasticsearchDomainConfigResponse * ElasticsearchServiceClient::updateElasticsearchDomainConfig(const UpdateElasticsearchDomainConfigRequest &request)
+UpdateElasticsearchDomainConfigResponse * ElasticsearchClient::updateElasticsearchDomainConfig(const UpdateElasticsearchDomainConfigRequest &request)
 {
     return qobject_cast<UpdateElasticsearchDomainConfigResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * UpdatePackageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a package for use with Amazon ES
  */
-UpdatePackageResponse * ElasticsearchServiceClient::updatePackage(const UpdatePackageRequest &request)
+UpdatePackageResponse * ElasticsearchClient::updatePackage(const UpdatePackageRequest &request)
 {
     return qobject_cast<UpdatePackageResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * Sends \a request to the ElasticsearchClient service, and returns a pointer to an
  * UpgradeElasticsearchDomainResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Allows you to either upgrade your domain or perform an Upgrade eligibility check to a compatible Elasticsearch
  */
-UpgradeElasticsearchDomainResponse * ElasticsearchServiceClient::upgradeElasticsearchDomain(const UpgradeElasticsearchDomainRequest &request)
+UpgradeElasticsearchDomainResponse * ElasticsearchClient::upgradeElasticsearchDomain(const UpgradeElasticsearchDomainRequest &request)
 {
     return qobject_cast<UpgradeElasticsearchDomainResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::ElasticsearchService::ElasticsearchServiceClientPrivate
- * \brief The ElasticsearchServiceClientPrivate class provides private implementation for ElasticsearchServiceClient.
+ * \class QtAws::Elasticsearch::ElasticsearchClientPrivate
+ * \brief The ElasticsearchClientPrivate class provides private implementation for ElasticsearchClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a ElasticsearchServiceClientPrivate object with public implementation \a q.
+ * Constructs a ElasticsearchClientPrivate object with public implementation \a q.
  */
-ElasticsearchServiceClientPrivate::ElasticsearchServiceClientPrivate(ElasticsearchServiceClient * const q)
+ElasticsearchClientPrivate::ElasticsearchClientPrivate(ElasticsearchClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

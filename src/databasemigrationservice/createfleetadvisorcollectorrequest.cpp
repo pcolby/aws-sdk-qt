@@ -20,16 +20,16 @@
 #include "createfleetadvisorcollectorrequest.h"
 #include "createfleetadvisorcollectorrequest_p.h"
 #include "createfleetadvisorcollectorresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateFleetAdvisorCollectorRequest
- * \brief The CreateFleetAdvisorCollectorRequest class provides an interface for DatabaseMigrationService CreateFleetAdvisorCollector requests.
+ * \class QtAws::DatabaseMigration::CreateFleetAdvisorCollectorRequest
+ * \brief The CreateFleetAdvisorCollectorRequest class provides an interface for DatabaseMigration CreateFleetAdvisorCollector requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::createFleetAdvisorCollector
+ * \sa DatabaseMigrationClient::createFleetAdvisorCollector
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateFleetAdvisorCollectorRequest::CreateFleetAdvisorCollectorRequest(const CreateFleetAdvisorCollectorRequest &other)
-    : DatabaseMigrationServiceRequest(new CreateFleetAdvisorCollectorRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new CreateFleetAdvisorCollectorRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ CreateFleetAdvisorCollectorRequest::CreateFleetAdvisorCollectorRequest(const Cre
  * Constructs a CreateFleetAdvisorCollectorRequest object.
  */
 CreateFleetAdvisorCollectorRequest::CreateFleetAdvisorCollectorRequest()
-    : DatabaseMigrationServiceRequest(new CreateFleetAdvisorCollectorRequestPrivate(DatabaseMigrationServiceRequest::CreateFleetAdvisorCollectorAction, this))
+    : DatabaseMigrationRequest(new CreateFleetAdvisorCollectorRequestPrivate(DatabaseMigrationRequest::CreateFleetAdvisorCollectorAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * CreateFleetAdvisorCollectorRequest::response(
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateFleetAdvisorCollectorRequestPrivate
+ * \class QtAws::DatabaseMigration::CreateFleetAdvisorCollectorRequestPrivate
  * \brief The CreateFleetAdvisorCollectorRequestPrivate class provides private implementation for CreateFleetAdvisorCollectorRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a CreateFleetAdvisorCollectorRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a CreateFleetAdvisorCollectorRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 CreateFleetAdvisorCollectorRequestPrivate::CreateFleetAdvisorCollectorRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, CreateFleetAdvisorCollectorRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, CreateFleetAdvisorCollectorRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ CreateFleetAdvisorCollectorRequestPrivate::CreateFleetAdvisorCollectorRequestPri
  */
 CreateFleetAdvisorCollectorRequestPrivate::CreateFleetAdvisorCollectorRequestPrivate(
     const CreateFleetAdvisorCollectorRequestPrivate &other, CreateFleetAdvisorCollectorRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

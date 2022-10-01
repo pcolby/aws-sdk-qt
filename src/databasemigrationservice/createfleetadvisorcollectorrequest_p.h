@@ -20,18 +20,18 @@
 #ifndef QTAWS_CREATEFLEETADVISORCOLLECTORREQUEST_P_H
 #define QTAWS_CREATEFLEETADVISORCOLLECTORREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "createfleetadvisorcollectorrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class CreateFleetAdvisorCollectorRequest;
 
-class CreateFleetAdvisorCollectorRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class CreateFleetAdvisorCollectorRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    CreateFleetAdvisorCollectorRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    CreateFleetAdvisorCollectorRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    CreateFleetAdvisorCollectorRequest * const q);
     CreateFleetAdvisorCollectorRequestPrivate(const CreateFleetAdvisorCollectorRequestPrivate &other,
                                    CreateFleetAdvisorCollectorRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

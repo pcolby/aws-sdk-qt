@@ -20,18 +20,18 @@
 #ifndef QTAWS_DESCRIBEORDERABLEREPLICATIONINSTANCESREQUEST_P_H
 #define QTAWS_DESCRIBEORDERABLEREPLICATIONINSTANCESREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "describeorderablereplicationinstancesrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DescribeOrderableReplicationInstancesRequest;
 
-class DescribeOrderableReplicationInstancesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class DescribeOrderableReplicationInstancesRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    DescribeOrderableReplicationInstancesRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    DescribeOrderableReplicationInstancesRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    DescribeOrderableReplicationInstancesRequest * const q);
     DescribeOrderableReplicationInstancesRequestPrivate(const DescribeOrderableReplicationInstancesRequestPrivate &other,
                                    DescribeOrderableReplicationInstancesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

@@ -17,35 +17,35 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "apigatewaymanagementapirequest.h"
-#include "apigatewaymanagementapirequest_p.h"
+#include "apigatewaymanagementrequest.h"
+#include "apigatewaymanagementrequest_p.h"
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::ApiGatewayManagementApiRequest
- * \brief The ApiGatewayManagementApiRequest class provides an interface for ApiGatewayManagementApi requests.
+ * \class QtAws::ApiGatewayManagement::ApiGatewayManagementRequest
+ * \brief The ApiGatewayManagementRequest class provides an interface for ApiGatewayManagement requests.
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  */
 
 /*!
- * \enum ApiGatewayManagementApiRequest::Action
+ * \enum ApiGatewayManagementRequest::Action
  *
- * This enum describes the actions that can be performed as ApiGatewayManagementApi
+ * This enum describes the actions that can be performed as ApiGatewayManagement
  * requests.
  *
- * \value DeleteConnectionAction ApiGatewayManagementApi DeleteConnection action.
- * \value GetConnectionAction ApiGatewayManagementApi GetConnection action.
- * \value PostToConnectionAction ApiGatewayManagementApi PostToConnection action.
+ * \value DeleteConnectionAction ApiGatewayManagement DeleteConnection action.
+ * \value GetConnectionAction ApiGatewayManagement GetConnection action.
+ * \value PostToConnectionAction ApiGatewayManagement PostToConnection action.
  */
 
 /*!
- * Constructs a ApiGatewayManagementApiRequest object for ApiGatewayManagementApi \a action.
+ * Constructs a ApiGatewayManagementRequest object for ApiGatewayManagement \a action.
  */
-ApiGatewayManagementApiRequest::ApiGatewayManagementApiRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ApiGatewayManagementApiRequestPrivate(action, this))
+ApiGatewayManagementRequest::ApiGatewayManagementRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new ApiGatewayManagementRequestPrivate(action, this))
 {
 
 }
@@ -53,18 +53,18 @@ ApiGatewayManagementApiRequest::ApiGatewayManagementApiRequest(const Action acti
 /*!
  * Constructs a copy of \a other.
  */
-ApiGatewayManagementApiRequest::ApiGatewayManagementApiRequest(const ApiGatewayManagementApiRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ApiGatewayManagementApiRequestPrivate(*other.d_func(), this))
+ApiGatewayManagementRequest::ApiGatewayManagementRequest(const ApiGatewayManagementRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new ApiGatewayManagementRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the ApiGatewayManagementApiRequest object to be equal to \a other.
+ * Sets the ApiGatewayManagementRequest object to be equal to \a other.
  */
-ApiGatewayManagementApiRequest& ApiGatewayManagementApiRequest::operator=(const ApiGatewayManagementApiRequest &other)
+ApiGatewayManagementRequest& ApiGatewayManagementRequest::operator=(const ApiGatewayManagementRequest &other)
 {
-    Q_D(ApiGatewayManagementApiRequest);
+    Q_D(ApiGatewayManagementRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -72,57 +72,57 @@ ApiGatewayManagementApiRequest& ApiGatewayManagementApiRequest::operator=(const 
 }
 
 /*!
- * Constructs aa ApiGatewayManagementApiRequest object with private implementation \a d.
+ * Constructs aa ApiGatewayManagementRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from ApiGatewayManagementApiRequestPrivate.
+ * implementation that inherits from ApiGatewayManagementRequestPrivate.
  */
-ApiGatewayManagementApiRequest::ApiGatewayManagementApiRequest(ApiGatewayManagementApiRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+ApiGatewayManagementRequest::ApiGatewayManagementRequest(ApiGatewayManagementRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the ApiGatewayManagementApi action to be performed by this request.
+ * Returns the ApiGatewayManagement action to be performed by this request.
  */
-ApiGatewayManagementApiRequest::Action ApiGatewayManagementApiRequest::action() const
+ApiGatewayManagementRequest::Action ApiGatewayManagementRequest::action() const
 {
-    Q_D(const ApiGatewayManagementApiRequest);
+    Q_D(const ApiGatewayManagementRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the ApiGatewayManagementApi action to be performed by this request.
+ * Returns the name of the ApiGatewayManagement action to be performed by this request.
  */
-QString ApiGatewayManagementApiRequest::actionString() const
+QString ApiGatewayManagementRequest::actionString() const
 {
-    return ApiGatewayManagementApiRequestPrivate::toString(action());
+    return ApiGatewayManagementRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the ApiGatewayManagementApi API version implemented by this request.
+ * Returns the ApiGatewayManagement API version implemented by this request.
  */
-QString ApiGatewayManagementApiRequest::apiVersion() const
+QString ApiGatewayManagementRequest::apiVersion() const
 {
-    Q_D(const ApiGatewayManagementApiRequest);
+    Q_D(const ApiGatewayManagementRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the ApiGatewayManagementApi action to be performed by this request to \a action.
+ * Sets the ApiGatewayManagement action to be performed by this request to \a action.
  */
-void ApiGatewayManagementApiRequest::setAction(const Action action)
+void ApiGatewayManagementRequest::setAction(const Action action)
 {
-    Q_D(ApiGatewayManagementApiRequest);
+    Q_D(ApiGatewayManagementRequest);
     d->action = action;
 }
 
 /*!
- * Sets the ApiGatewayManagementApi API version to include in this request to \a version.
+ * Sets the ApiGatewayManagement API version to include in this request to \a version.
  */
-void ApiGatewayManagementApiRequest::setApiVersion(const QString &version)
+void ApiGatewayManagementRequest::setApiVersion(const QString &version)
 {
-    Q_D(ApiGatewayManagementApiRequest);
+    Q_D(ApiGatewayManagementRequest);
     d->apiVersion = version;
 }
 
@@ -134,7 +134,7 @@ void ApiGatewayManagementApiRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool ApiGatewayManagementApiRequest::operator==(const ApiGatewayManagementApiRequest &other) const
+bool ApiGatewayManagementRequest::operator==(const ApiGatewayManagementRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -143,19 +143,19 @@ bool ApiGatewayManagementApiRequest::operator==(const ApiGatewayManagementApiReq
 }
 
 /*
- * Returns \c tue if \a queueName is a valid ApiGatewayManagementApi queue name.
+ * Returns \c tue if \a queueName is a valid ApiGatewayManagement queue name.
  *
- * @par From ApiGatewayManagementApi FAQs:
+ * @par From ApiGatewayManagement FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid ApiGatewayManagementApi queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid ApiGatewayManagement queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool ApiGatewayManagementApiRequest::isValidQueueName(const QString &queueName)
+/*bool ApiGatewayManagementRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -165,45 +165,45 @@ bool ApiGatewayManagementApiRequest::operator==(const ApiGatewayManagementApiReq
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int ApiGatewayManagementApiRequest::clearParameter(const QString &name)
+int ApiGatewayManagementRequest::clearParameter(const QString &name)
 {
-    Q_D(ApiGatewayManagementApiRequest);
+    Q_D(ApiGatewayManagementRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void ApiGatewayManagementApiRequest::clearParameters()
+void ApiGatewayManagementRequest::clearParameters()
 {
-    Q_D(ApiGatewayManagementApiRequest);
+    Q_D(ApiGatewayManagementRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant ApiGatewayManagementApiRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant ApiGatewayManagementRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const ApiGatewayManagementApiRequest);
+    Q_D(const ApiGatewayManagementRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &ApiGatewayManagementApiRequest::parameters() const
+const QVariantMap &ApiGatewayManagementRequest::parameters() const
 {
-    Q_D(const ApiGatewayManagementApiRequest);
+    Q_D(const ApiGatewayManagementRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void ApiGatewayManagementApiRequest::setParameter(const QString &name, const QVariant &value)
+void ApiGatewayManagementRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(ApiGatewayManagementApiRequest);
+    Q_D(ApiGatewayManagementRequest);
     d->parameters.insert(name, value);
 }
 
@@ -211,41 +211,41 @@ void ApiGatewayManagementApiRequest::setParameter(const QString &name, const QVa
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void ApiGatewayManagementApiRequest::setParameters(const QVariantMap &parameters)
+void ApiGatewayManagementRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(ApiGatewayManagementApiRequest);
+    Q_D(ApiGatewayManagementRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the ApiGatewayManagementApi request using the given
+ * Returns a network request for the ApiGatewayManagement request using the given
  * \a endpoint.
  *
- * This ApiGatewayManagementApi implementation builds request URLs by combining the
+ * This ApiGatewayManagement implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest ApiGatewayManagementApiRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest ApiGatewayManagementRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const ApiGatewayManagementApiRequest);
+    //Q_D(const ApiGatewayManagementRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::ApiGatewayManagementApiRequestPrivate
- * \brief The ApiGatewayManagementApiRequestPrivate class provides private implementation for ApiGatewayManagementApiRequest.
+ * \class QtAws::ApiGatewayManagement::ApiGatewayManagementRequestPrivate
+ * \brief The ApiGatewayManagementRequestPrivate class provides private implementation for ApiGatewayManagementRequest.
  * \internal
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  */
 
 /*!
- * Constructs a ApiGatewayManagementApiRequestPrivate object for ApiGatewayManagementApi \a action,
+ * Constructs a ApiGatewayManagementRequestPrivate object for ApiGatewayManagement \a action,
  * with public implementation \a q.
  */
-ApiGatewayManagementApiRequestPrivate::ApiGatewayManagementApiRequestPrivate(const ApiGatewayManagementApiRequest::Action action, ApiGatewayManagementApiRequest * const q)
+ApiGatewayManagementRequestPrivate::ApiGatewayManagementRequestPrivate(const ApiGatewayManagementRequest::Action action, ApiGatewayManagementRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-11-29"))
 {
 
@@ -257,10 +257,10 @@ ApiGatewayManagementApiRequestPrivate::ApiGatewayManagementApiRequestPrivate(con
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the ApiGatewayManagementApiRequest class's copy constructor.
+ * This is required to support the ApiGatewayManagementRequest class's copy constructor.
  */
-ApiGatewayManagementApiRequestPrivate::ApiGatewayManagementApiRequestPrivate(const ApiGatewayManagementApiRequestPrivate &other,
-                                     ApiGatewayManagementApiRequest * const q)
+ApiGatewayManagementRequestPrivate::ApiGatewayManagementRequestPrivate(const ApiGatewayManagementRequestPrivate &other,
+                                     ApiGatewayManagementRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -271,14 +271,14 @@ ApiGatewayManagementApiRequestPrivate::ApiGatewayManagementApiRequestPrivate(con
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts ApiGatewayManagementApiRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the ApiGatewayManagementApi service's Action
+ * This function converts ApiGatewayManagementRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the ApiGatewayManagement service's Action
  * query parameters.
  */
-QString ApiGatewayManagementApiRequestPrivate::toString(const ApiGatewayManagementApiRequest::Action &action)
+QString ApiGatewayManagementRequestPrivate::toString(const ApiGatewayManagementRequest::Action &action)
 {
     #define ActionToString(action) \
-        case ApiGatewayManagementApiRequest::action##Action: return QStringLiteral(#action)
+        case ApiGatewayManagementRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(DeleteConnection);
         ActionToString(GetConnection);
@@ -290,5 +290,5 @@ QString ApiGatewayManagementApiRequestPrivate::toString(const ApiGatewayManageme
     return QString();
 }
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws

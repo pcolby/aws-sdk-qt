@@ -17,19 +17,19 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_APIGATEWAYMANAGEMENTAPICLIENT_H
-#define QTAWS_APIGATEWAYMANAGEMENTAPICLIENT_H
+#ifndef QTAWS_APIGATEWAYMANAGEMENTCLIENT_H
+#define QTAWS_APIGATEWAYMANAGEMENTCLIENT_H
 
 #include "core/awsabstractclient.h"
 
-#include "qtawsapigatewaymanagementapiglobal.h"
+#include "qtawsapigatewaymanagementglobal.h"
 
 class QNetworkReply;
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
-class ApiGatewayManagementApiClientPrivate;
+class ApiGatewayManagementClientPrivate;
 class DeleteConnectionRequest;
 class DeleteConnectionResponse;
 class GetConnectionRequest;
@@ -37,17 +37,17 @@ class GetConnectionResponse;
 class PostToConnectionRequest;
 class PostToConnectionResponse;
 
-class QTAWSAPIGATEWAYMANAGEMENTAPI_EXPORT ApiGatewayManagementApiClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPIGATEWAYMANAGEMENT_EXPORT ApiGatewayManagementClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    ApiGatewayManagementApiClient(
+    ApiGatewayManagementClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit ApiGatewayManagementApiClient(
+    explicit ApiGatewayManagementClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -58,12 +58,12 @@ public slots:
     PostToConnectionResponse * postToConnection(const PostToConnectionRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(ApiGatewayManagementApiClient)
-    Q_DISABLE_COPY(ApiGatewayManagementApiClient)
+    Q_DECLARE_PRIVATE(ApiGatewayManagementClient)
+    Q_DISABLE_COPY(ApiGatewayManagementClient)
 
 };
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws
 
 #endif

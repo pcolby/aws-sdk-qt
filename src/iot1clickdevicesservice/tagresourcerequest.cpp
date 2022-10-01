@@ -20,28 +20,28 @@
 #include "tagresourcerequest.h"
 #include "tagresourcerequest_p.h"
 #include "tagresourceresponse.h"
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for IoT1ClickDevicesService TagResource requests.
+ * \class QtAws::IoT1ClickDevices::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for IoT1ClickDevices TagResource requests.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::tagResource
+ * \sa IoT1ClickDevicesClient::tagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
-    : IoT1ClickDevicesServiceRequest(new TagResourceRequestPrivate(*other.d_func(), this))
+    : IoT1ClickDevicesRequest(new TagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
  * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
-    : IoT1ClickDevicesServiceRequest(new TagResourceRequestPrivate(IoT1ClickDevicesServiceRequest::TagResourceAction, this))
+    : IoT1ClickDevicesRequest(new TagResourceRequestPrivate(IoT1ClickDevicesRequest::TagResourceAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::TagResourceRequestPrivate
+ * \class QtAws::IoT1ClickDevices::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a TagResourceRequestPrivate object for IoT1ClickDevicesService \a action,
+ * Constructs a TagResourceRequestPrivate object for IoT1ClickDevices \a action,
  * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
-    const IoT1ClickDevicesServiceRequest::Action action, TagResourceRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(action, q)
+    const IoT1ClickDevicesRequest::Action action, TagResourceRequest * const q)
+    : IoT1ClickDevicesRequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(other, q)
+    : IoT1ClickDevicesRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

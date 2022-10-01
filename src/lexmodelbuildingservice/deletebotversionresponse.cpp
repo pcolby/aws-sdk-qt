@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteBotVersionResponse
- * \brief The DeleteBotVersionResponse class provides an interace for LexModelBuildingService DeleteBotVersion responses.
+ * \class QtAws::LexModelBuilding::DeleteBotVersionResponse
+ * \brief The DeleteBotVersionResponse class provides an interace for LexModelBuilding DeleteBotVersion responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::deleteBotVersion
+ * \sa LexModelBuildingClient::deleteBotVersion
  */
 
 /*!
@@ -48,7 +48,7 @@ DeleteBotVersionResponse::DeleteBotVersionResponse(
         const DeleteBotVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new DeleteBotVersionResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new DeleteBotVersionResponsePrivate(this), parent)
 {
     setRequest(new DeleteBotVersionRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const DeleteBotVersionRequest * DeleteBotVersionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService DeleteBotVersion \a response.
+ * Parses a successful LexModelBuilding DeleteBotVersion \a response.
  */
 void DeleteBotVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void DeleteBotVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteBotVersionResponsePrivate
+ * \class QtAws::LexModelBuilding::DeleteBotVersionResponsePrivate
  * \brief The DeleteBotVersionResponsePrivate class provides private implementation for DeleteBotVersionResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a DeleteBotVersionResponsePrivate object with public implementation \a q.
  */
 DeleteBotVersionResponsePrivate::DeleteBotVersionResponsePrivate(
-    DeleteBotVersionResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    DeleteBotVersionResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService DeleteBotVersion response element from \a xml.
+ * Parses a LexModelBuilding DeleteBotVersion response element from \a xml.
  */
 void DeleteBotVersionResponsePrivate::parseDeleteBotVersionResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void DeleteBotVersionResponsePrivate::parseDeleteBotVersionResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

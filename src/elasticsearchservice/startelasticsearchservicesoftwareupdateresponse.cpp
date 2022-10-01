@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::StartElasticsearchServiceSoftwareUpdateResponse
- * \brief The StartElasticsearchServiceSoftwareUpdateResponse class provides an interace for ElasticsearchService StartElasticsearchServiceSoftwareUpdate responses.
+ * \class QtAws::Elasticsearch::StartElasticsearchServiceSoftwareUpdateResponse
+ * \brief The StartElasticsearchServiceSoftwareUpdateResponse class provides an interace for Elasticsearch StartElasticsearchServiceSoftwareUpdate responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::startElasticsearchServiceSoftwareUpdate
+ * \sa ElasticsearchClient::startElasticsearchServiceSoftwareUpdate
  */
 
 /*!
@@ -61,7 +61,7 @@ StartElasticsearchServiceSoftwareUpdateResponse::StartElasticsearchServiceSoftwa
         const StartElasticsearchServiceSoftwareUpdateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new StartElasticsearchServiceSoftwareUpdateResponsePrivate(this), parent)
+    : ElasticsearchResponse(new StartElasticsearchServiceSoftwareUpdateResponsePrivate(this), parent)
 {
     setRequest(new StartElasticsearchServiceSoftwareUpdateRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const StartElasticsearchServiceSoftwareUpdateRequest * StartElasticsearchService
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService StartElasticsearchServiceSoftwareUpdate \a response.
+ * Parses a successful Elasticsearch StartElasticsearchServiceSoftwareUpdate \a response.
  */
 void StartElasticsearchServiceSoftwareUpdateResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void StartElasticsearchServiceSoftwareUpdateResponse::parseSuccess(QIODevice &re
 }
 
 /*!
- * \class QtAws::ElasticsearchService::StartElasticsearchServiceSoftwareUpdateResponsePrivate
+ * \class QtAws::Elasticsearch::StartElasticsearchServiceSoftwareUpdateResponsePrivate
  * \brief The StartElasticsearchServiceSoftwareUpdateResponsePrivate class provides private implementation for StartElasticsearchServiceSoftwareUpdateResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a StartElasticsearchServiceSoftwareUpdateResponsePrivate object with public implementation \a q.
  */
 StartElasticsearchServiceSoftwareUpdateResponsePrivate::StartElasticsearchServiceSoftwareUpdateResponsePrivate(
-    StartElasticsearchServiceSoftwareUpdateResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    StartElasticsearchServiceSoftwareUpdateResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService StartElasticsearchServiceSoftwareUpdate response element from \a xml.
+ * Parses a Elasticsearch StartElasticsearchServiceSoftwareUpdate response element from \a xml.
  */
 void StartElasticsearchServiceSoftwareUpdateResponsePrivate::parseStartElasticsearchServiceSoftwareUpdateResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void StartElasticsearchServiceSoftwareUpdateResponsePrivate::parseStartElasticse
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

@@ -20,16 +20,16 @@
 #include "getcompatibleelasticsearchversionsrequest.h"
 #include "getcompatibleelasticsearchversionsrequest_p.h"
 #include "getcompatibleelasticsearchversionsresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::GetCompatibleElasticsearchVersionsRequest
- * \brief The GetCompatibleElasticsearchVersionsRequest class provides an interface for ElasticsearchService GetCompatibleElasticsearchVersions requests.
+ * \class QtAws::Elasticsearch::GetCompatibleElasticsearchVersionsRequest
+ * \brief The GetCompatibleElasticsearchVersionsRequest class provides an interface for Elasticsearch GetCompatibleElasticsearchVersions requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::getCompatibleElasticsearchVersions
+ * \sa ElasticsearchClient::getCompatibleElasticsearchVersions
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetCompatibleElasticsearchVersionsRequest::GetCompatibleElasticsearchVersionsRequest(const GetCompatibleElasticsearchVersionsRequest &other)
-    : ElasticsearchServiceRequest(new GetCompatibleElasticsearchVersionsRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new GetCompatibleElasticsearchVersionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ GetCompatibleElasticsearchVersionsRequest::GetCompatibleElasticsearchVersionsReq
  * Constructs a GetCompatibleElasticsearchVersionsRequest object.
  */
 GetCompatibleElasticsearchVersionsRequest::GetCompatibleElasticsearchVersionsRequest()
-    : ElasticsearchServiceRequest(new GetCompatibleElasticsearchVersionsRequestPrivate(ElasticsearchServiceRequest::GetCompatibleElasticsearchVersionsAction, this))
+    : ElasticsearchRequest(new GetCompatibleElasticsearchVersionsRequestPrivate(ElasticsearchRequest::GetCompatibleElasticsearchVersionsAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * GetCompatibleElasticsearchVersionsRequest::re
 }
 
 /*!
- * \class QtAws::ElasticsearchService::GetCompatibleElasticsearchVersionsRequestPrivate
+ * \class QtAws::Elasticsearch::GetCompatibleElasticsearchVersionsRequestPrivate
  * \brief The GetCompatibleElasticsearchVersionsRequestPrivate class provides private implementation for GetCompatibleElasticsearchVersionsRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a GetCompatibleElasticsearchVersionsRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a GetCompatibleElasticsearchVersionsRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 GetCompatibleElasticsearchVersionsRequestPrivate::GetCompatibleElasticsearchVersionsRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, GetCompatibleElasticsearchVersionsRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, GetCompatibleElasticsearchVersionsRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ GetCompatibleElasticsearchVersionsRequestPrivate::GetCompatibleElasticsearchVers
  */
 GetCompatibleElasticsearchVersionsRequestPrivate::GetCompatibleElasticsearchVersionsRequestPrivate(
     const GetCompatibleElasticsearchVersionsRequestPrivate &other, GetCompatibleElasticsearchVersionsRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

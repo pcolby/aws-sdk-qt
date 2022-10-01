@@ -1,13 +1,13 @@
-add_compile_definitions(QTAWSRESOURCEGROUPSTAGGINGAPI_LIBRARY)
+add_compile_definitions(QTAWSRESOURCEGROUPSTAGGING_LIBRARY)
 
-add_library(QtAwsResourceGroupsTaggingApi
-  qtawsresourcegroupstaggingapiglobal.h
-  resourcegroupstaggingapiclient.h
-  resourcegroupstaggingapiclient_p.h
-  resourcegroupstaggingapirequest.h
-  resourcegroupstaggingapirequest_p.h
-  resourcegroupstaggingapiresponse.h
-  resourcegroupstaggingapiresponse_p.h
+add_library(QtAwsResourceGroupsTagging
+  qtawsresourcegroupstaggingglobal.h
+  resourcegroupstaggingclient.h
+  resourcegroupstaggingclient_p.h
+  resourcegroupstaggingrequest.h
+  resourcegroupstaggingrequest_p.h
+  resourcegroupstaggingresponse.h
+  resourcegroupstaggingresponse_p.h
   describereportcreationrequest.h
   describereportcreationrequest_p.h
   describereportcreationresponse.h
@@ -40,9 +40,9 @@ add_library(QtAwsResourceGroupsTaggingApi
   untagresourcesrequest_p.h
   untagresourcesresponse.h
   untagresourcesresponse_p.h
-  resourcegroupstaggingapiclient.cpp
-  resourcegroupstaggingapirequest.cpp
-  resourcegroupstaggingapiresponse.cpp
+  resourcegroupstaggingclient.cpp
+  resourcegroupstaggingrequest.cpp
+  resourcegroupstaggingresponse.cpp
   describereportcreationrequest.cpp
   describereportcreationresponse.cpp
   getcompliancesummaryrequest.cpp
@@ -60,7 +60,7 @@ add_library(QtAwsResourceGroupsTaggingApi
   untagresourcesrequest.cpp
   untagresourcesresponse.cpp)
 
-target_link_libraries(QtAwsResourceGroupsTaggingApi
+target_link_libraries(QtAwsResourceGroupsTagging
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

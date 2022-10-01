@@ -20,16 +20,16 @@
 #include "describeoutboundcrossclustersearchconnectionsrequest.h"
 #include "describeoutboundcrossclustersearchconnectionsrequest_p.h"
 #include "describeoutboundcrossclustersearchconnectionsresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeOutboundCrossClusterSearchConnectionsRequest
- * \brief The DescribeOutboundCrossClusterSearchConnectionsRequest class provides an interface for ElasticsearchService DescribeOutboundCrossClusterSearchConnections requests.
+ * \class QtAws::Elasticsearch::DescribeOutboundCrossClusterSearchConnectionsRequest
+ * \brief The DescribeOutboundCrossClusterSearchConnectionsRequest class provides an interface for Elasticsearch DescribeOutboundCrossClusterSearchConnections requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describeOutboundCrossClusterSearchConnections
+ * \sa ElasticsearchClient::describeOutboundCrossClusterSearchConnections
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeOutboundCrossClusterSearchConnectionsRequest::DescribeOutboundCrossClusterSearchConnectionsRequest(const DescribeOutboundCrossClusterSearchConnectionsRequest &other)
-    : ElasticsearchServiceRequest(new DescribeOutboundCrossClusterSearchConnectionsRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new DescribeOutboundCrossClusterSearchConnectionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DescribeOutboundCrossClusterSearchConnectionsRequest::DescribeOutboundCrossClust
  * Constructs a DescribeOutboundCrossClusterSearchConnectionsRequest object.
  */
 DescribeOutboundCrossClusterSearchConnectionsRequest::DescribeOutboundCrossClusterSearchConnectionsRequest()
-    : ElasticsearchServiceRequest(new DescribeOutboundCrossClusterSearchConnectionsRequestPrivate(ElasticsearchServiceRequest::DescribeOutboundCrossClusterSearchConnectionsAction, this))
+    : ElasticsearchRequest(new DescribeOutboundCrossClusterSearchConnectionsRequestPrivate(ElasticsearchRequest::DescribeOutboundCrossClusterSearchConnectionsAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DescribeOutboundCrossClusterSearchConnections
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeOutboundCrossClusterSearchConnectionsRequestPrivate
+ * \class QtAws::Elasticsearch::DescribeOutboundCrossClusterSearchConnectionsRequestPrivate
  * \brief The DescribeOutboundCrossClusterSearchConnectionsRequestPrivate class provides private implementation for DescribeOutboundCrossClusterSearchConnectionsRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a DescribeOutboundCrossClusterSearchConnectionsRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a DescribeOutboundCrossClusterSearchConnectionsRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 DescribeOutboundCrossClusterSearchConnectionsRequestPrivate::DescribeOutboundCrossClusterSearchConnectionsRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, DescribeOutboundCrossClusterSearchConnectionsRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, DescribeOutboundCrossClusterSearchConnectionsRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DescribeOutboundCrossClusterSearchConnectionsRequestPrivate::DescribeOutboundCro
  */
 DescribeOutboundCrossClusterSearchConnectionsRequestPrivate::DescribeOutboundCrossClusterSearchConnectionsRequestPrivate(
     const DescribeOutboundCrossClusterSearchConnectionsRequestPrivate &other, DescribeOutboundCrossClusterSearchConnectionsRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

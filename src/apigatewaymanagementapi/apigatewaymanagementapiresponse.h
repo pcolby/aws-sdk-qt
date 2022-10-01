@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_APIGATEWAYMANAGEMENTAPIRESPONSE_H
-#define QTAWS_APIGATEWAYMANAGEMENTAPIRESPONSE_H
+#ifndef QTAWS_APIGATEWAYMANAGEMENTRESPONSE_H
+#define QTAWS_APIGATEWAYMANAGEMENTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
 
-#include "qtawsapigatewaymanagementapiglobal.h"
+#include "qtawsapigatewaymanagementglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
-class ApiGatewayManagementApiResponsePrivate;
+class ApiGatewayManagementResponsePrivate;
 
-class QTAWSAPIGATEWAYMANAGEMENTAPI_EXPORT ApiGatewayManagementApiResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPIGATEWAYMANAGEMENT_EXPORT ApiGatewayManagementResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    ApiGatewayManagementApiResponse(QObject * const parent = 0);
+    ApiGatewayManagementResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    ApiGatewayManagementApiResponse(ApiGatewayManagementApiResponsePrivate * const d, QObject * const parent);
+    ApiGatewayManagementResponse(ApiGatewayManagementResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(ApiGatewayManagementApiResponse)
-    Q_DISABLE_COPY(ApiGatewayManagementApiResponse)
+    Q_DECLARE_PRIVATE(ApiGatewayManagementResponse)
+    Q_DISABLE_COPY(ApiGatewayManagementResponse)
 
 };
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws
 
 #endif

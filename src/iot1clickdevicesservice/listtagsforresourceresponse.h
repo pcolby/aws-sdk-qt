@@ -20,15 +20,15 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCERESPONSE_H
 #define QTAWS_LISTTAGSFORRESOURCERESPONSE_H
 
-#include "iot1clickdevicesserviceresponse.h"
+#include "iot1clickdevicesresponse.h"
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT ListTagsForResourceResponse : public IoT1ClickDevicesServiceResponse {
+class QTAWSIOT1CLICKDEVICES_EXPORT ListTagsForResourceResponse : public IoT1ClickDevicesResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

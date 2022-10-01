@@ -20,16 +20,16 @@
 #include "describecontinuousexportsrequest.h"
 #include "describecontinuousexportsrequest_p.h"
 #include "describecontinuousexportsresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeContinuousExportsRequest
- * \brief The DescribeContinuousExportsRequest class provides an interface for ApplicationDiscoveryService DescribeContinuousExports requests.
+ * \class QtAws::ApplicationDiscovery::DescribeContinuousExportsRequest
+ * \brief The DescribeContinuousExportsRequest class provides an interface for ApplicationDiscovery DescribeContinuousExports requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::describeContinuousExports
+ * \sa ApplicationDiscoveryClient::describeContinuousExports
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeContinuousExportsRequest::DescribeContinuousExportsRequest(const DescribeContinuousExportsRequest &other)
-    : ApplicationDiscoveryServiceRequest(new DescribeContinuousExportsRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new DescribeContinuousExportsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ DescribeContinuousExportsRequest::DescribeContinuousExportsRequest(const Describ
  * Constructs a DescribeContinuousExportsRequest object.
  */
 DescribeContinuousExportsRequest::DescribeContinuousExportsRequest()
-    : ApplicationDiscoveryServiceRequest(new DescribeContinuousExportsRequestPrivate(ApplicationDiscoveryServiceRequest::DescribeContinuousExportsAction, this))
+    : ApplicationDiscoveryRequest(new DescribeContinuousExportsRequestPrivate(ApplicationDiscoveryRequest::DescribeContinuousExportsAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * DescribeContinuousExportsRequest::response(QN
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeContinuousExportsRequestPrivate
+ * \class QtAws::ApplicationDiscovery::DescribeContinuousExportsRequestPrivate
  * \brief The DescribeContinuousExportsRequestPrivate class provides private implementation for DescribeContinuousExportsRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a DescribeContinuousExportsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a DescribeContinuousExportsRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 DescribeContinuousExportsRequestPrivate::DescribeContinuousExportsRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, DescribeContinuousExportsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, DescribeContinuousExportsRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ DescribeContinuousExportsRequestPrivate::DescribeContinuousExportsRequestPrivate
  */
 DescribeContinuousExportsRequestPrivate::DescribeContinuousExportsRequestPrivate(
     const DescribeContinuousExportsRequestPrivate &other, DescribeContinuousExportsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

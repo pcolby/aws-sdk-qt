@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateEndpointResponse
- * \brief The CreateEndpointResponse class provides an interace for DatabaseMigrationService CreateEndpoint responses.
+ * \class QtAws::DatabaseMigration::CreateEndpointResponse
+ * \brief The CreateEndpointResponse class provides an interace for DatabaseMigration CreateEndpoint responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::createEndpoint
+ * \sa DatabaseMigrationClient::createEndpoint
  */
 
 /*!
@@ -55,7 +55,7 @@ CreateEndpointResponse::CreateEndpointResponse(
         const CreateEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new CreateEndpointResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new CreateEndpointResponsePrivate(this), parent)
 {
     setRequest(new CreateEndpointRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const CreateEndpointRequest * CreateEndpointResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService CreateEndpoint \a response.
+ * Parses a successful DatabaseMigration CreateEndpoint \a response.
  */
 void CreateEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void CreateEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::CreateEndpointResponsePrivate
+ * \class QtAws::DatabaseMigration::CreateEndpointResponsePrivate
  * \brief The CreateEndpointResponsePrivate class provides private implementation for CreateEndpointResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a CreateEndpointResponsePrivate object with public implementation \a q.
  */
 CreateEndpointResponsePrivate::CreateEndpointResponsePrivate(
-    CreateEndpointResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    CreateEndpointResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService CreateEndpoint response element from \a xml.
+ * Parses a DatabaseMigration CreateEndpoint response element from \a xml.
  */
 void CreateEndpointResponsePrivate::parseCreateEndpointResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void CreateEndpointResponsePrivate::parseCreateEndpointResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DeletePackageResponse
- * \brief The DeletePackageResponse class provides an interace for ElasticsearchService DeletePackage responses.
+ * \class QtAws::Elasticsearch::DeletePackageResponse
+ * \brief The DeletePackageResponse class provides an interace for Elasticsearch DeletePackage responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::deletePackage
+ * \sa ElasticsearchClient::deletePackage
  */
 
 /*!
@@ -61,7 +61,7 @@ DeletePackageResponse::DeletePackageResponse(
         const DeletePackageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DeletePackageResponsePrivate(this), parent)
+    : ElasticsearchResponse(new DeletePackageResponsePrivate(this), parent)
 {
     setRequest(new DeletePackageRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DeletePackageRequest * DeletePackageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService DeletePackage \a response.
+ * Parses a successful Elasticsearch DeletePackage \a response.
  */
 void DeletePackageResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DeletePackageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DeletePackageResponsePrivate
+ * \class QtAws::Elasticsearch::DeletePackageResponsePrivate
  * \brief The DeletePackageResponsePrivate class provides private implementation for DeletePackageResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a DeletePackageResponsePrivate object with public implementation \a q.
  */
 DeletePackageResponsePrivate::DeletePackageResponsePrivate(
-    DeletePackageResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    DeletePackageResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService DeletePackage response element from \a xml.
+ * Parses a Elasticsearch DeletePackage response element from \a xml.
  */
 void DeletePackageResponsePrivate::parseDeletePackageResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DeletePackageResponsePrivate::parseDeletePackageResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

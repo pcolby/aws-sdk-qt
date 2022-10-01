@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_LEXRUNTIMESERVICERESPONSE_H
-#define QTAWS_LEXRUNTIMESERVICERESPONSE_H
+#ifndef QTAWS_LEXRUNTIMERESPONSE_H
+#define QTAWS_LEXRUNTIMERESPONSE_H
 
 #include "core/awsabstractresponse.h"
 
-#include "qtawslexruntimeserviceglobal.h"
+#include "qtawslexruntimeglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
-class LexRuntimeServiceResponsePrivate;
+class LexRuntimeResponsePrivate;
 
-class QTAWSLEXRUNTIMESERVICE_EXPORT LexRuntimeServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSLEXRUNTIME_EXPORT LexRuntimeResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    LexRuntimeServiceResponse(QObject * const parent = 0);
+    LexRuntimeResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    LexRuntimeServiceResponse(LexRuntimeServiceResponsePrivate * const d, QObject * const parent);
+    LexRuntimeResponse(LexRuntimeResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(LexRuntimeServiceResponse)
-    Q_DISABLE_COPY(LexRuntimeServiceResponse)
+    Q_DECLARE_PRIVATE(LexRuntimeResponse)
+    Q_DISABLE_COPY(LexRuntimeResponse)
 
 };
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws
 
 #endif

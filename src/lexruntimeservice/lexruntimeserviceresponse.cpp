@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "lexruntimeserviceresponse.h"
-#include "lexruntimeserviceresponse_p.h"
+#include "lexruntimeresponse.h"
+#include "lexruntimeresponse_p.h"
 
 #include <QDebug>
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 /*!
- * \class QtAws::LexRuntimeService::LexRuntimeServiceResponse
- * \brief The LexRuntimeServiceResponse class provides an interface for LexRuntimeService responses.
+ * \class QtAws::LexRuntime::LexRuntimeResponse
+ * \brief The LexRuntimeResponse class provides an interface for LexRuntime responses.
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  */
 
 /*!
- * Constructs a LexRuntimeServiceResponse object with parent \a parent.
+ * Constructs a LexRuntimeResponse object with parent \a parent.
  */
-LexRuntimeServiceResponse::LexRuntimeServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new LexRuntimeServiceResponsePrivate(this), parent)
+LexRuntimeResponse::LexRuntimeResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new LexRuntimeResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a LexRuntimeServiceResponse object with private implementation \a d,
+ * Constructs a LexRuntimeResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from LexRuntimeServiceResponsePrivate.
+ * implementation that inherits from LexRuntimeResponsePrivate.
  */
-LexRuntimeServiceResponse::LexRuntimeServiceResponse(LexRuntimeServiceResponsePrivate * const d, QObject * const parent)
+LexRuntimeResponse::LexRuntimeResponse(LexRuntimeResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ LexRuntimeServiceResponse::LexRuntimeServiceResponse(LexRuntimeServiceResponsePr
 /*!
  * \reimp
  */
-void LexRuntimeServiceResponse::parseFailure(QIODevice &response)
+void LexRuntimeResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(LexRuntimeServiceResponse);
+    //Q_D(LexRuntimeResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void LexRuntimeServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexRuntimeService::LexRuntimeServiceResponsePrivate
- * \brief The LexRuntimeServiceResponsePrivate class provides private implementation for LexRuntimeServiceResponse.
+ * \class QtAws::LexRuntime::LexRuntimeResponsePrivate
+ * \brief The LexRuntimeResponsePrivate class provides private implementation for LexRuntimeResponse.
  * \internal
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  */
 
 /*!
- * Constructs a LexRuntimeServiceResponsePrivate object with public implementation \a q.
+ * Constructs a LexRuntimeResponsePrivate object with public implementation \a q.
  */
-LexRuntimeServiceResponsePrivate::LexRuntimeServiceResponsePrivate(
-    LexRuntimeServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+LexRuntimeResponsePrivate::LexRuntimeResponsePrivate(
+    LexRuntimeResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws

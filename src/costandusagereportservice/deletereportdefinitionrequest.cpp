@@ -20,16 +20,16 @@
 #include "deletereportdefinitionrequest.h"
 #include "deletereportdefinitionrequest_p.h"
 #include "deletereportdefinitionresponse.h"
-#include "costandusagereportservicerequest_p.h"
+#include "costandusagereportrequest_p.h"
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 /*!
- * \class QtAws::CostandUsageReportService::DeleteReportDefinitionRequest
- * \brief The DeleteReportDefinitionRequest class provides an interface for CostandUsageReportService DeleteReportDefinition requests.
+ * \class QtAws::CostandUsageReport::DeleteReportDefinitionRequest
+ * \brief The DeleteReportDefinitionRequest class provides an interface for CostandUsageReport DeleteReportDefinition requests.
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  *
  *  The AWS Cost and Usage Report API enables you to programmatically create, query, and delete AWS Cost and Usage report
  * 
@@ -49,14 +49,14 @@ namespace CostandUsageReportService {
  * 
  *  endpoint> <ul> <li>
  *
- * \sa CostandUsageReportServiceClient::deleteReportDefinition
+ * \sa CostandUsageReportClient::deleteReportDefinition
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteReportDefinitionRequest::DeleteReportDefinitionRequest(const DeleteReportDefinitionRequest &other)
-    : CostandUsageReportServiceRequest(new DeleteReportDefinitionRequestPrivate(*other.d_func(), this))
+    : CostandUsageReportRequest(new DeleteReportDefinitionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DeleteReportDefinitionRequest::DeleteReportDefinitionRequest(const DeleteReportD
  * Constructs a DeleteReportDefinitionRequest object.
  */
 DeleteReportDefinitionRequest::DeleteReportDefinitionRequest()
-    : CostandUsageReportServiceRequest(new DeleteReportDefinitionRequestPrivate(CostandUsageReportServiceRequest::DeleteReportDefinitionAction, this))
+    : CostandUsageReportRequest(new DeleteReportDefinitionRequestPrivate(CostandUsageReportRequest::DeleteReportDefinitionAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DeleteReportDefinitionRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::CostandUsageReportService::DeleteReportDefinitionRequestPrivate
+ * \class QtAws::CostandUsageReport::DeleteReportDefinitionRequestPrivate
  * \brief The DeleteReportDefinitionRequestPrivate class provides private implementation for DeleteReportDefinitionRequest.
  * \internal
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  */
 
 /*!
- * Constructs a DeleteReportDefinitionRequestPrivate object for CostandUsageReportService \a action,
+ * Constructs a DeleteReportDefinitionRequestPrivate object for CostandUsageReport \a action,
  * with public implementation \a q.
  */
 DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
-    const CostandUsageReportServiceRequest::Action action, DeleteReportDefinitionRequest * const q)
-    : CostandUsageReportServiceRequestPrivate(action, q)
+    const CostandUsageReportRequest::Action action, DeleteReportDefinitionRequest * const q)
+    : CostandUsageReportRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
  */
 DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
     const DeleteReportDefinitionRequestPrivate &other, DeleteReportDefinitionRequest * const q)
-    : CostandUsageReportServiceRequestPrivate(other, q)
+    : CostandUsageReportRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws

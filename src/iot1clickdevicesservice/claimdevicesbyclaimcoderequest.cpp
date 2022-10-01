@@ -20,28 +20,28 @@
 #include "claimdevicesbyclaimcoderequest.h"
 #include "claimdevicesbyclaimcoderequest_p.h"
 #include "claimdevicesbyclaimcoderesponse.h"
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::ClaimDevicesByClaimCodeRequest
- * \brief The ClaimDevicesByClaimCodeRequest class provides an interface for IoT1ClickDevicesService ClaimDevicesByClaimCode requests.
+ * \class QtAws::IoT1ClickDevices::ClaimDevicesByClaimCodeRequest
+ * \brief The ClaimDevicesByClaimCodeRequest class provides an interface for IoT1ClickDevices ClaimDevicesByClaimCode requests.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::claimDevicesByClaimCode
+ * \sa IoT1ClickDevicesClient::claimDevicesByClaimCode
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ClaimDevicesByClaimCodeRequest::ClaimDevicesByClaimCodeRequest(const ClaimDevicesByClaimCodeRequest &other)
-    : IoT1ClickDevicesServiceRequest(new ClaimDevicesByClaimCodeRequestPrivate(*other.d_func(), this))
+    : IoT1ClickDevicesRequest(new ClaimDevicesByClaimCodeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ ClaimDevicesByClaimCodeRequest::ClaimDevicesByClaimCodeRequest(const ClaimDevice
  * Constructs a ClaimDevicesByClaimCodeRequest object.
  */
 ClaimDevicesByClaimCodeRequest::ClaimDevicesByClaimCodeRequest()
-    : IoT1ClickDevicesServiceRequest(new ClaimDevicesByClaimCodeRequestPrivate(IoT1ClickDevicesServiceRequest::ClaimDevicesByClaimCodeAction, this))
+    : IoT1ClickDevicesRequest(new ClaimDevicesByClaimCodeRequestPrivate(IoT1ClickDevicesRequest::ClaimDevicesByClaimCodeAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * ClaimDevicesByClaimCodeRequest::response(QNet
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::ClaimDevicesByClaimCodeRequestPrivate
+ * \class QtAws::IoT1ClickDevices::ClaimDevicesByClaimCodeRequestPrivate
  * \brief The ClaimDevicesByClaimCodeRequestPrivate class provides private implementation for ClaimDevicesByClaimCodeRequest.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a ClaimDevicesByClaimCodeRequestPrivate object for IoT1ClickDevicesService \a action,
+ * Constructs a ClaimDevicesByClaimCodeRequestPrivate object for IoT1ClickDevices \a action,
  * with public implementation \a q.
  */
 ClaimDevicesByClaimCodeRequestPrivate::ClaimDevicesByClaimCodeRequestPrivate(
-    const IoT1ClickDevicesServiceRequest::Action action, ClaimDevicesByClaimCodeRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(action, q)
+    const IoT1ClickDevicesRequest::Action action, ClaimDevicesByClaimCodeRequest * const q)
+    : IoT1ClickDevicesRequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ ClaimDevicesByClaimCodeRequestPrivate::ClaimDevicesByClaimCodeRequestPrivate(
  */
 ClaimDevicesByClaimCodeRequestPrivate::ClaimDevicesByClaimCodeRequestPrivate(
     const ClaimDevicesByClaimCodeRequestPrivate &other, ClaimDevicesByClaimCodeRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(other, q)
+    : IoT1ClickDevicesRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

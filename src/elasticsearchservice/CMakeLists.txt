@@ -1,13 +1,13 @@
-add_compile_definitions(QTAWSELASTICSEARCHSERVICE_LIBRARY)
+add_compile_definitions(QTAWSELASTICSEARCH_LIBRARY)
 
-add_library(QtAwsElasticsearchService
-  qtawselasticsearchserviceglobal.h
-  elasticsearchserviceclient.h
-  elasticsearchserviceclient_p.h
-  elasticsearchservicerequest.h
-  elasticsearchservicerequest_p.h
-  elasticsearchserviceresponse.h
-  elasticsearchserviceresponse_p.h
+add_library(QtAwsElasticsearch
+  qtawselasticsearchglobal.h
+  elasticsearchclient.h
+  elasticsearchclient_p.h
+  elasticsearchrequest.h
+  elasticsearchrequest_p.h
+  elasticsearchresponse.h
+  elasticsearchresponse_p.h
   acceptinboundcrossclustersearchconnectionrequest.h
   acceptinboundcrossclustersearchconnectionrequest_p.h
   acceptinboundcrossclustersearchconnectionresponse.h
@@ -172,9 +172,9 @@ add_library(QtAwsElasticsearchService
   upgradeelasticsearchdomainrequest_p.h
   upgradeelasticsearchdomainresponse.h
   upgradeelasticsearchdomainresponse_p.h
-  elasticsearchserviceclient.cpp
-  elasticsearchservicerequest.cpp
-  elasticsearchserviceresponse.cpp
+  elasticsearchclient.cpp
+  elasticsearchrequest.cpp
+  elasticsearchresponse.cpp
   acceptinboundcrossclustersearchconnectionrequest.cpp
   acceptinboundcrossclustersearchconnectionresponse.cpp
   addtagsrequest.cpp
@@ -258,7 +258,7 @@ add_library(QtAwsElasticsearchService
   upgradeelasticsearchdomainrequest.cpp
   upgradeelasticsearchdomainresponse.cpp)
 
-target_link_libraries(QtAwsElasticsearchService
+target_link_libraries(QtAwsElasticsearch
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StopContinuousExportResponse
- * \brief The StopContinuousExportResponse class provides an interace for ApplicationDiscoveryService StopContinuousExport responses.
+ * \class QtAws::ApplicationDiscovery::StopContinuousExportResponse
+ * \brief The StopContinuousExportResponse class provides an interace for ApplicationDiscovery StopContinuousExport responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::stopContinuousExport
+ * \sa ApplicationDiscoveryClient::stopContinuousExport
  */
 
 /*!
@@ -152,7 +152,7 @@ StopContinuousExportResponse::StopContinuousExportResponse(
         const StopContinuousExportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new StopContinuousExportResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new StopContinuousExportResponsePrivate(this), parent)
 {
     setRequest(new StopContinuousExportRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const StopContinuousExportRequest * StopContinuousExportResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService StopContinuousExport \a response.
+ * Parses a successful ApplicationDiscovery StopContinuousExport \a response.
  */
 void StopContinuousExportResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void StopContinuousExportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StopContinuousExportResponsePrivate
+ * \class QtAws::ApplicationDiscovery::StopContinuousExportResponsePrivate
  * \brief The StopContinuousExportResponsePrivate class provides private implementation for StopContinuousExportResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a StopContinuousExportResponsePrivate object with public implementation \a q.
  */
 StopContinuousExportResponsePrivate::StopContinuousExportResponsePrivate(
-    StopContinuousExportResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    StopContinuousExportResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService StopContinuousExport response element from \a xml.
+ * Parses a ApplicationDiscovery StopContinuousExport response element from \a xml.
  */
 void StopContinuousExportResponsePrivate::parseStopContinuousExportResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void StopContinuousExportResponsePrivate::parseStopContinuousExportResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

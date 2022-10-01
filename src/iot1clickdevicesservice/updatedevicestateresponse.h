@@ -20,15 +20,15 @@
 #ifndef QTAWS_UPDATEDEVICESTATERESPONSE_H
 #define QTAWS_UPDATEDEVICESTATERESPONSE_H
 
-#include "iot1clickdevicesserviceresponse.h"
+#include "iot1clickdevicesresponse.h"
 #include "updatedevicestaterequest.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 class UpdateDeviceStateResponsePrivate;
 
-class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT UpdateDeviceStateResponse : public IoT1ClickDevicesServiceResponse {
+class QTAWSIOT1CLICKDEVICES_EXPORT UpdateDeviceStateResponse : public IoT1ClickDevicesResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

@@ -17,8 +17,8 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "costandusagereportserviceclient.h"
-#include "costandusagereportserviceclient_p.h"
+#include "costandusagereportclient.h"
+#include "costandusagereportclient_p.h"
 
 #include "core/awssignaturev4.h"
 #include "deletereportdefinitionrequest.h"
@@ -34,23 +34,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::CostandUsageReportService
+ * \namespace QtAws::CostandUsageReport
  * \brief Contains classess for accessing AWS Cost and Usage Report Service.
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 /*!
- * \class QtAws::CostandUsageReportService::CostandUsageReportServiceClient
- * \brief The CostandUsageReportServiceClient class provides access to the AWS Cost and Usage Report Service service.
+ * \class QtAws::CostandUsageReport::CostandUsageReportClient
+ * \brief The CostandUsageReportClient class provides access to the AWS Cost and Usage Report Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  *
  *  The AWS Cost and Usage Report API enables you to programmatically create, query, and delete AWS Cost and Usage report
  * 
@@ -72,21 +72,21 @@ namespace CostandUsageReportService {
  */
 
 /*!
- * \brief Constructs a CostandUsageReportServiceClient object.
+ * \brief Constructs a CostandUsageReportClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-CostandUsageReportServiceClient::CostandUsageReportServiceClient(
+CostandUsageReportClient::CostandUsageReportClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CostandUsageReportServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CostandUsageReportClientPrivate(this), parent)
 {
-    Q_D(CostandUsageReportServiceClient);
+    Q_D(CostandUsageReportClient);
     d->apiVersion = QStringLiteral("2017-01-06");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("cur");
@@ -97,7 +97,7 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
 }
 
 /*!
- * \overload CostandUsageReportServiceClient()
+ * \overload CostandUsageReportClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -107,14 +107,14 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-CostandUsageReportServiceClient::CostandUsageReportServiceClient(
+CostandUsageReportClient::CostandUsageReportClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CostandUsageReportServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CostandUsageReportClientPrivate(this), parent)
 {
-    Q_D(CostandUsageReportServiceClient);
+    Q_D(CostandUsageReportClient);
     d->apiVersion = QStringLiteral("2017-01-06");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -125,74 +125,74 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
 }
 
 /*!
- * Sends \a request to the CostandUsageReportServiceClient service, and returns a pointer to an
+ * Sends \a request to the CostandUsageReportClient service, and returns a pointer to an
  * DeleteReportDefinitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified
  */
-DeleteReportDefinitionResponse * CostandUsageReportServiceClient::deleteReportDefinition(const DeleteReportDefinitionRequest &request)
+DeleteReportDefinitionResponse * CostandUsageReportClient::deleteReportDefinition(const DeleteReportDefinitionRequest &request)
 {
     return qobject_cast<DeleteReportDefinitionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CostandUsageReportServiceClient service, and returns a pointer to an
+ * Sends \a request to the CostandUsageReportClient service, and returns a pointer to an
  * DescribeReportDefinitionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the AWS Cost and Usage reports available to this
  */
-DescribeReportDefinitionsResponse * CostandUsageReportServiceClient::describeReportDefinitions(const DescribeReportDefinitionsRequest &request)
+DescribeReportDefinitionsResponse * CostandUsageReportClient::describeReportDefinitions(const DescribeReportDefinitionsRequest &request)
 {
     return qobject_cast<DescribeReportDefinitionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CostandUsageReportServiceClient service, and returns a pointer to an
+ * Sends \a request to the CostandUsageReportClient service, and returns a pointer to an
  * ModifyReportDefinitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Allows you to programatically update your report
  */
-ModifyReportDefinitionResponse * CostandUsageReportServiceClient::modifyReportDefinition(const ModifyReportDefinitionRequest &request)
+ModifyReportDefinitionResponse * CostandUsageReportClient::modifyReportDefinition(const ModifyReportDefinitionRequest &request)
 {
     return qobject_cast<ModifyReportDefinitionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CostandUsageReportServiceClient service, and returns a pointer to an
+ * Sends \a request to the CostandUsageReportClient service, and returns a pointer to an
  * PutReportDefinitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new report using the description that you
  */
-PutReportDefinitionResponse * CostandUsageReportServiceClient::putReportDefinition(const PutReportDefinitionRequest &request)
+PutReportDefinitionResponse * CostandUsageReportClient::putReportDefinition(const PutReportDefinitionRequest &request)
 {
     return qobject_cast<PutReportDefinitionResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::CostandUsageReportService::CostandUsageReportServiceClientPrivate
- * \brief The CostandUsageReportServiceClientPrivate class provides private implementation for CostandUsageReportServiceClient.
+ * \class QtAws::CostandUsageReport::CostandUsageReportClientPrivate
+ * \brief The CostandUsageReportClientPrivate class provides private implementation for CostandUsageReportClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  */
 
 /*!
- * Constructs a CostandUsageReportServiceClientPrivate object with public implementation \a q.
+ * Constructs a CostandUsageReportClientPrivate object with public implementation \a q.
  */
-CostandUsageReportServiceClientPrivate::CostandUsageReportServiceClientPrivate(CostandUsageReportServiceClient * const q)
+CostandUsageReportClientPrivate::CostandUsageReportClientPrivate(CostandUsageReportClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws

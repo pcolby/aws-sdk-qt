@@ -20,15 +20,15 @@
 #ifndef QTAWS_DELETECONNECTIONRESPONSE_H
 #define QTAWS_DELETECONNECTIONRESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "deleteconnectionrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DeleteConnectionResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DeleteConnectionResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT DeleteConnectionResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

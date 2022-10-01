@@ -20,16 +20,16 @@
 #include "deletereplicationsubnetgrouprequest.h"
 #include "deletereplicationsubnetgrouprequest_p.h"
 #include "deletereplicationsubnetgroupresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteReplicationSubnetGroupRequest
- * \brief The DeleteReplicationSubnetGroupRequest class provides an interface for DatabaseMigrationService DeleteReplicationSubnetGroup requests.
+ * \class QtAws::DatabaseMigration::DeleteReplicationSubnetGroupRequest
+ * \brief The DeleteReplicationSubnetGroupRequest class provides an interface for DatabaseMigration DeleteReplicationSubnetGroup requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteReplicationSubnetGroup
+ * \sa DatabaseMigrationClient::deleteReplicationSubnetGroup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteReplicationSubnetGroupRequest::DeleteReplicationSubnetGroupRequest(const DeleteReplicationSubnetGroupRequest &other)
-    : DatabaseMigrationServiceRequest(new DeleteReplicationSubnetGroupRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DeleteReplicationSubnetGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteReplicationSubnetGroupRequest::DeleteReplicationSubnetGroupRequest(const D
  * Constructs a DeleteReplicationSubnetGroupRequest object.
  */
 DeleteReplicationSubnetGroupRequest::DeleteReplicationSubnetGroupRequest()
-    : DatabaseMigrationServiceRequest(new DeleteReplicationSubnetGroupRequestPrivate(DatabaseMigrationServiceRequest::DeleteReplicationSubnetGroupAction, this))
+    : DatabaseMigrationRequest(new DeleteReplicationSubnetGroupRequestPrivate(DatabaseMigrationRequest::DeleteReplicationSubnetGroupAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationSubnetGroupRequest::response
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteReplicationSubnetGroupRequestPrivate
+ * \class QtAws::DatabaseMigration::DeleteReplicationSubnetGroupRequestPrivate
  * \brief The DeleteReplicationSubnetGroupRequestPrivate class provides private implementation for DeleteReplicationSubnetGroupRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DeleteReplicationSubnetGroupRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DeleteReplicationSubnetGroupRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DeleteReplicationSubnetGroupRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DeleteReplicationSubnetGroupRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestP
  */
 DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestPrivate(
     const DeleteReplicationSubnetGroupRequestPrivate &other, DeleteReplicationSubnetGroupRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

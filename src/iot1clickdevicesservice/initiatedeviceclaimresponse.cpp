@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::InitiateDeviceClaimResponse
- * \brief The InitiateDeviceClaimResponse class provides an interace for IoT1ClickDevicesService InitiateDeviceClaim responses.
+ * \class QtAws::IoT1ClickDevices::InitiateDeviceClaimResponse
+ * \brief The InitiateDeviceClaimResponse class provides an interace for IoT1ClickDevices InitiateDeviceClaim responses.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::initiateDeviceClaim
+ * \sa IoT1ClickDevicesClient::initiateDeviceClaim
  */
 
 /*!
@@ -46,7 +46,7 @@ InitiateDeviceClaimResponse::InitiateDeviceClaimResponse(
         const InitiateDeviceClaimRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoT1ClickDevicesServiceResponse(new InitiateDeviceClaimResponsePrivate(this), parent)
+    : IoT1ClickDevicesResponse(new InitiateDeviceClaimResponsePrivate(this), parent)
 {
     setRequest(new InitiateDeviceClaimRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const InitiateDeviceClaimRequest * InitiateDeviceClaimResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IoT1ClickDevicesService InitiateDeviceClaim \a response.
+ * Parses a successful IoT1ClickDevices InitiateDeviceClaim \a response.
  */
 void InitiateDeviceClaimResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void InitiateDeviceClaimResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::InitiateDeviceClaimResponsePrivate
+ * \class QtAws::IoT1ClickDevices::InitiateDeviceClaimResponsePrivate
  * \brief The InitiateDeviceClaimResponsePrivate class provides private implementation for InitiateDeviceClaimResponse.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
  * Constructs a InitiateDeviceClaimResponsePrivate object with public implementation \a q.
  */
 InitiateDeviceClaimResponsePrivate::InitiateDeviceClaimResponsePrivate(
-    InitiateDeviceClaimResponse * const q) : IoT1ClickDevicesServiceResponsePrivate(q)
+    InitiateDeviceClaimResponse * const q) : IoT1ClickDevicesResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a IoT1ClickDevicesService InitiateDeviceClaim response element from \a xml.
+ * Parses a IoT1ClickDevices InitiateDeviceClaim response element from \a xml.
  */
 void InitiateDeviceClaimResponsePrivate::parseInitiateDeviceClaimResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void InitiateDeviceClaimResponsePrivate::parseInitiateDeviceClaimResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

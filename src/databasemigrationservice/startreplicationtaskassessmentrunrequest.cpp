@@ -20,16 +20,16 @@
 #include "startreplicationtaskassessmentrunrequest.h"
 #include "startreplicationtaskassessmentrunrequest_p.h"
 #include "startreplicationtaskassessmentrunresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::StartReplicationTaskAssessmentRunRequest
- * \brief The StartReplicationTaskAssessmentRunRequest class provides an interface for DatabaseMigrationService StartReplicationTaskAssessmentRun requests.
+ * \class QtAws::DatabaseMigration::StartReplicationTaskAssessmentRunRequest
+ * \brief The StartReplicationTaskAssessmentRunRequest class provides an interface for DatabaseMigration StartReplicationTaskAssessmentRun requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::startReplicationTaskAssessmentRun
+ * \sa DatabaseMigrationClient::startReplicationTaskAssessmentRun
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartReplicationTaskAssessmentRunRequest::StartReplicationTaskAssessmentRunRequest(const StartReplicationTaskAssessmentRunRequest &other)
-    : DatabaseMigrationServiceRequest(new StartReplicationTaskAssessmentRunRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new StartReplicationTaskAssessmentRunRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ StartReplicationTaskAssessmentRunRequest::StartReplicationTaskAssessmentRunReque
  * Constructs a StartReplicationTaskAssessmentRunRequest object.
  */
 StartReplicationTaskAssessmentRunRequest::StartReplicationTaskAssessmentRunRequest()
-    : DatabaseMigrationServiceRequest(new StartReplicationTaskAssessmentRunRequestPrivate(DatabaseMigrationServiceRequest::StartReplicationTaskAssessmentRunAction, this))
+    : DatabaseMigrationRequest(new StartReplicationTaskAssessmentRunRequestPrivate(DatabaseMigrationRequest::StartReplicationTaskAssessmentRunAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * StartReplicationTaskAssessmentRunRequest::res
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::StartReplicationTaskAssessmentRunRequestPrivate
+ * \class QtAws::DatabaseMigration::StartReplicationTaskAssessmentRunRequestPrivate
  * \brief The StartReplicationTaskAssessmentRunRequestPrivate class provides private implementation for StartReplicationTaskAssessmentRunRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a StartReplicationTaskAssessmentRunRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a StartReplicationTaskAssessmentRunRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 StartReplicationTaskAssessmentRunRequestPrivate::StartReplicationTaskAssessmentRunRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, StartReplicationTaskAssessmentRunRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, StartReplicationTaskAssessmentRunRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ StartReplicationTaskAssessmentRunRequestPrivate::StartReplicationTaskAssessmentR
  */
 StartReplicationTaskAssessmentRunRequestPrivate::StartReplicationTaskAssessmentRunRequestPrivate(
     const StartReplicationTaskAssessmentRunRequestPrivate &other, StartReplicationTaskAssessmentRunRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -20,30 +20,30 @@
 #include "deletebotrequest.h"
 #include "deletebotrequest_p.h"
 #include "deletebotresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteBotRequest
- * \brief The DeleteBotRequest class provides an interface for LexModelBuildingService DeleteBot requests.
+ * \class QtAws::LexModelBuilding::DeleteBotRequest
+ * \brief The DeleteBotRequest class provides an interface for LexModelBuilding DeleteBot requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::deleteBot
+ * \sa LexModelBuildingClient::deleteBot
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteBotRequest::DeleteBotRequest(const DeleteBotRequest &other)
-    : LexModelBuildingServiceRequest(new DeleteBotRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new DeleteBotRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteBotRequest::DeleteBotRequest(const DeleteBotRequest &other)
  * Constructs a DeleteBotRequest object.
  */
 DeleteBotRequest::DeleteBotRequest()
-    : LexModelBuildingServiceRequest(new DeleteBotRequestPrivate(LexModelBuildingServiceRequest::DeleteBotAction, this))
+    : LexModelBuildingRequest(new DeleteBotRequestPrivate(LexModelBuildingRequest::DeleteBotAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * DeleteBotRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteBotRequestPrivate
+ * \class QtAws::LexModelBuilding::DeleteBotRequestPrivate
  * \brief The DeleteBotRequestPrivate class provides private implementation for DeleteBotRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a DeleteBotRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a DeleteBotRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 DeleteBotRequestPrivate::DeleteBotRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, DeleteBotRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, DeleteBotRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ DeleteBotRequestPrivate::DeleteBotRequestPrivate(
  */
 DeleteBotRequestPrivate::DeleteBotRequestPrivate(
     const DeleteBotRequestPrivate &other, DeleteBotRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

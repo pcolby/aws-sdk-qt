@@ -20,18 +20,18 @@
 #ifndef QTAWS_PUTBOTREQUEST_P_H
 #define QTAWS_PUTBOTREQUEST_P_H
 
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 #include "putbotrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class PutBotRequest;
 
-class PutBotRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class PutBotRequestPrivate : public LexModelBuildingRequestPrivate {
 
 public:
-    PutBotRequestPrivate(const LexModelBuildingServiceRequest::Action action,
+    PutBotRequestPrivate(const LexModelBuildingRequest::Action action,
                                    PutBotRequest * const q);
     PutBotRequestPrivate(const PutBotRequestPrivate &other,
                                    PutBotRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

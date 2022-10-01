@@ -20,18 +20,18 @@
 #ifndef QTAWS_GETCONNECTIONREQUEST_P_H
 #define QTAWS_GETCONNECTIONREQUEST_P_H
 
-#include "apigatewaymanagementapirequest_p.h"
+#include "apigatewaymanagementrequest_p.h"
 #include "getconnectionrequest.h"
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
 class GetConnectionRequest;
 
-class GetConnectionRequestPrivate : public ApiGatewayManagementApiRequestPrivate {
+class GetConnectionRequestPrivate : public ApiGatewayManagementRequestPrivate {
 
 public:
-    GetConnectionRequestPrivate(const ApiGatewayManagementApiRequest::Action action,
+    GetConnectionRequestPrivate(const ApiGatewayManagementRequest::Action action,
                                    GetConnectionRequest * const q);
     GetConnectionRequestPrivate(const GetConnectionRequestPrivate &other,
                                    GetConnectionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 /*!
- * \class QtAws::LexRuntimeService::DeleteSessionResponse
- * \brief The DeleteSessionResponse class provides an interace for LexRuntimeService DeleteSession responses.
+ * \class QtAws::LexRuntime::DeleteSessionResponse
+ * \brief The DeleteSessionResponse class provides an interace for LexRuntime DeleteSession responses.
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  *
  *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
  *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
@@ -41,7 +41,7 @@ namespace LexRuntimeService {
  *  then performs fulfillment activity (that you configured when you created the bot). You use the build-time API to create
  *  and manage your Amazon Lex bot. For a list of build-time operations, see the build-time API, .
  *
- * \sa LexRuntimeServiceClient::deleteSession
+ * \sa LexRuntimeClient::deleteSession
  */
 
 /*!
@@ -51,7 +51,7 @@ DeleteSessionResponse::DeleteSessionResponse(
         const DeleteSessionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexRuntimeServiceResponse(new DeleteSessionResponsePrivate(this), parent)
+    : LexRuntimeResponse(new DeleteSessionResponsePrivate(this), parent)
 {
     setRequest(new DeleteSessionRequest(request));
     setReply(reply);
@@ -68,7 +68,7 @@ const DeleteSessionRequest * DeleteSessionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexRuntimeService DeleteSession \a response.
+ * Parses a successful LexRuntime DeleteSession \a response.
  */
 void DeleteSessionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,24 +78,24 @@ void DeleteSessionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexRuntimeService::DeleteSessionResponsePrivate
+ * \class QtAws::LexRuntime::DeleteSessionResponsePrivate
  * \brief The DeleteSessionResponsePrivate class provides private implementation for DeleteSessionResponse.
  * \internal
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  */
 
 /*!
  * Constructs a DeleteSessionResponsePrivate object with public implementation \a q.
  */
 DeleteSessionResponsePrivate::DeleteSessionResponsePrivate(
-    DeleteSessionResponse * const q) : LexRuntimeServiceResponsePrivate(q)
+    DeleteSessionResponse * const q) : LexRuntimeResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexRuntimeService DeleteSession response element from \a xml.
+ * Parses a LexRuntime DeleteSession response element from \a xml.
  */
 void DeleteSessionResponsePrivate::parseDeleteSessionResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void DeleteSessionResponsePrivate::parseDeleteSessionResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws

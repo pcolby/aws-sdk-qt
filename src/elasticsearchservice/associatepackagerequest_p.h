@@ -20,18 +20,18 @@
 #ifndef QTAWS_ASSOCIATEPACKAGEREQUEST_P_H
 #define QTAWS_ASSOCIATEPACKAGEREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "associatepackagerequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class AssociatePackageRequest;
 
-class AssociatePackageRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class AssociatePackageRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    AssociatePackageRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    AssociatePackageRequestPrivate(const ElasticsearchRequest::Action action,
                                    AssociatePackageRequest * const q);
     AssociatePackageRequestPrivate(const AssociatePackageRequestPrivate &other,
                                    AssociatePackageRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

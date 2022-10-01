@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteFleetAdvisorDatabasesResponse
- * \brief The DeleteFleetAdvisorDatabasesResponse class provides an interace for DatabaseMigrationService DeleteFleetAdvisorDatabases responses.
+ * \class QtAws::DatabaseMigration::DeleteFleetAdvisorDatabasesResponse
+ * \brief The DeleteFleetAdvisorDatabasesResponse class provides an interace for DatabaseMigration DeleteFleetAdvisorDatabases responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteFleetAdvisorDatabases
+ * \sa DatabaseMigrationClient::deleteFleetAdvisorDatabases
  */
 
 /*!
@@ -55,7 +55,7 @@ DeleteFleetAdvisorDatabasesResponse::DeleteFleetAdvisorDatabasesResponse(
         const DeleteFleetAdvisorDatabasesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DeleteFleetAdvisorDatabasesResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DeleteFleetAdvisorDatabasesResponsePrivate(this), parent)
 {
     setRequest(new DeleteFleetAdvisorDatabasesRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DeleteFleetAdvisorDatabasesRequest * DeleteFleetAdvisorDatabasesResponse::
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DeleteFleetAdvisorDatabases \a response.
+ * Parses a successful DatabaseMigration DeleteFleetAdvisorDatabases \a response.
  */
 void DeleteFleetAdvisorDatabasesResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DeleteFleetAdvisorDatabasesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteFleetAdvisorDatabasesResponsePrivate
+ * \class QtAws::DatabaseMigration::DeleteFleetAdvisorDatabasesResponsePrivate
  * \brief The DeleteFleetAdvisorDatabasesResponsePrivate class provides private implementation for DeleteFleetAdvisorDatabasesResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DeleteFleetAdvisorDatabasesResponsePrivate object with public implementation \a q.
  */
 DeleteFleetAdvisorDatabasesResponsePrivate::DeleteFleetAdvisorDatabasesResponsePrivate(
-    DeleteFleetAdvisorDatabasesResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DeleteFleetAdvisorDatabasesResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DeleteFleetAdvisorDatabases response element from \a xml.
+ * Parses a DatabaseMigration DeleteFleetAdvisorDatabases response element from \a xml.
  */
 void DeleteFleetAdvisorDatabasesResponsePrivate::parseDeleteFleetAdvisorDatabasesResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DeleteFleetAdvisorDatabasesResponsePrivate::parseDeleteFleetAdvisorDatabase
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

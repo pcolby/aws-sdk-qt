@@ -20,18 +20,18 @@
 #ifndef QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 #define QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 #include "updateapplicationrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class UpdateApplicationRequest;
 
-class UpdateApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
+class UpdateApplicationRequestPrivate : public ApplicationDiscoveryRequestPrivate {
 
 public:
-    UpdateApplicationRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
+    UpdateApplicationRequestPrivate(const ApplicationDiscoveryRequest::Action action,
                                    UpdateApplicationRequest * const q);
     UpdateApplicationRequestPrivate(const UpdateApplicationRequestPrivate &other,
                                    UpdateApplicationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

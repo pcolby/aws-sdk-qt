@@ -20,16 +20,16 @@
 #include "describeexportconfigurationsrequest.h"
 #include "describeexportconfigurationsrequest_p.h"
 #include "describeexportconfigurationsresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeExportConfigurationsRequest
- * \brief The DescribeExportConfigurationsRequest class provides an interface for ApplicationDiscoveryService DescribeExportConfigurations requests.
+ * \class QtAws::ApplicationDiscovery::DescribeExportConfigurationsRequest
+ * \brief The DescribeExportConfigurationsRequest class provides an interface for ApplicationDiscovery DescribeExportConfigurations requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::describeExportConfigurations
+ * \sa ApplicationDiscoveryClient::describeExportConfigurations
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeExportConfigurationsRequest::DescribeExportConfigurationsRequest(const DescribeExportConfigurationsRequest &other)
-    : ApplicationDiscoveryServiceRequest(new DescribeExportConfigurationsRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new DescribeExportConfigurationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ DescribeExportConfigurationsRequest::DescribeExportConfigurationsRequest(const D
  * Constructs a DescribeExportConfigurationsRequest object.
  */
 DescribeExportConfigurationsRequest::DescribeExportConfigurationsRequest()
-    : ApplicationDiscoveryServiceRequest(new DescribeExportConfigurationsRequestPrivate(ApplicationDiscoveryServiceRequest::DescribeExportConfigurationsAction, this))
+    : ApplicationDiscoveryRequest(new DescribeExportConfigurationsRequestPrivate(ApplicationDiscoveryRequest::DescribeExportConfigurationsAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * DescribeExportConfigurationsRequest::response
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeExportConfigurationsRequestPrivate
+ * \class QtAws::ApplicationDiscovery::DescribeExportConfigurationsRequestPrivate
  * \brief The DescribeExportConfigurationsRequestPrivate class provides private implementation for DescribeExportConfigurationsRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a DescribeExportConfigurationsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a DescribeExportConfigurationsRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 DescribeExportConfigurationsRequestPrivate::DescribeExportConfigurationsRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, DescribeExportConfigurationsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, DescribeExportConfigurationsRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ DescribeExportConfigurationsRequestPrivate::DescribeExportConfigurationsRequestP
  */
 DescribeExportConfigurationsRequestPrivate::DescribeExportConfigurationsRequestPrivate(
     const DescribeExportConfigurationsRequestPrivate &other, DescribeExportConfigurationsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

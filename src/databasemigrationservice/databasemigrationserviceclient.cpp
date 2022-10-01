@@ -17,8 +17,8 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "databasemigrationserviceclient.h"
-#include "databasemigrationserviceclient_p.h"
+#include "databasemigrationclient.h"
+#include "databasemigrationclient_p.h"
 
 #include "core/awssignaturev4.h"
 #include "addtagstoresourcerequest.h"
@@ -156,23 +156,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::DatabaseMigrationService
+ * \namespace QtAws::DatabaseMigration
  * \brief Contains classess for accessing AWS Database Migration Service.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceClient
- * \brief The DatabaseMigrationServiceClient class provides access to the AWS Database Migration Service service.
+ * \class QtAws::DatabaseMigration::DatabaseMigrationClient
+ * \brief The DatabaseMigrationClient class provides access to the AWS Database Migration Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -188,21 +188,21 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * \brief Constructs a DatabaseMigrationServiceClient object.
+ * \brief Constructs a DatabaseMigrationClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
+DatabaseMigrationClient::DatabaseMigrationClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DatabaseMigrationServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DatabaseMigrationClientPrivate(this), parent)
 {
-    Q_D(DatabaseMigrationServiceClient);
+    Q_D(DatabaseMigrationClient);
     d->apiVersion = QStringLiteral("2016-01-01");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("dms");
@@ -213,7 +213,7 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
 }
 
 /*!
- * \overload DatabaseMigrationServiceClient()
+ * \overload DatabaseMigrationClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -223,14 +223,14 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
+DatabaseMigrationClient::DatabaseMigrationClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DatabaseMigrationServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DatabaseMigrationClientPrivate(this), parent)
 {
-    Q_D(DatabaseMigrationServiceClient);
+    Q_D(DatabaseMigrationClient);
     d->apiVersion = QStringLiteral("2016-01-01");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -241,7 +241,7 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * AddTagsToResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -251,26 +251,26 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
  * Condition statement in an IAM policy for DMS. For more information, see <a
  * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type
  */
-AddTagsToResourceResponse * DatabaseMigrationServiceClient::addTagsToResource(const AddTagsToResourceRequest &request)
+AddTagsToResourceResponse * DatabaseMigrationClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
     return qobject_cast<AddTagsToResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * ApplyPendingMaintenanceActionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Applies a pending maintenance action to a resource (for example, to a replication
  */
-ApplyPendingMaintenanceActionResponse * DatabaseMigrationServiceClient::applyPendingMaintenanceAction(const ApplyPendingMaintenanceActionRequest &request)
+ApplyPendingMaintenanceActionResponse * DatabaseMigrationClient::applyPendingMaintenanceAction(const ApplyPendingMaintenanceActionRequest &request)
 {
     return qobject_cast<ApplyPendingMaintenanceActionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * CancelReplicationTaskAssessmentRunResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -282,13 +282,13 @@ ApplyPendingMaintenanceActionResponse * DatabaseMigrationServiceClient::applyPen
  * This operation prevents any individual assessments from running if they haven't started running. It also attempts to
  * cancel any individual assessments that are currently
  */
-CancelReplicationTaskAssessmentRunResponse * DatabaseMigrationServiceClient::cancelReplicationTaskAssessmentRun(const CancelReplicationTaskAssessmentRunRequest &request)
+CancelReplicationTaskAssessmentRunResponse * DatabaseMigrationClient::cancelReplicationTaskAssessmentRun(const CancelReplicationTaskAssessmentRunRequest &request)
 {
     return qobject_cast<CancelReplicationTaskAssessmentRunResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * CreateEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -302,13 +302,13 @@ CancelReplicationTaskAssessmentRunResponse * DatabaseMigrationServiceClient::can
  * endpoint replicates all the task tables to this single database. For MySQL endpoints, you specify the database only when
  * you specify the schema in the table-mapping rules of the DMS
  */
-CreateEndpointResponse * DatabaseMigrationServiceClient::createEndpoint(const CreateEndpointRequest &request)
+CreateEndpointResponse * DatabaseMigrationClient::createEndpoint(const CreateEndpointRequest &request)
 {
     return qobject_cast<CreateEndpointResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * CreateEventSubscriptionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -332,26 +332,26 @@ CreateEndpointResponse * DatabaseMigrationServiceClient::createEndpoint(const Cr
  * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working with Events and Notifications</a> in
  * the <i>Database Migration Service User Guide.</i>
  */
-CreateEventSubscriptionResponse * DatabaseMigrationServiceClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
+CreateEventSubscriptionResponse * DatabaseMigrationClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
 {
     return qobject_cast<CreateEventSubscriptionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * CreateFleetAdvisorCollectorResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a Fleet Advisor collector using the specified
  */
-CreateFleetAdvisorCollectorResponse * DatabaseMigrationServiceClient::createFleetAdvisorCollector(const CreateFleetAdvisorCollectorRequest &request)
+CreateFleetAdvisorCollectorResponse * DatabaseMigrationClient::createFleetAdvisorCollector(const CreateFleetAdvisorCollectorRequest &request)
 {
     return qobject_cast<CreateFleetAdvisorCollectorResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * CreateReplicationInstanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -367,13 +367,13 @@ CreateFleetAdvisorCollectorResponse * DatabaseMigrationServiceClient::createFlee
  * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.IAMPermissions">IAM Permissions
  * Needed to Use
  */
-CreateReplicationInstanceResponse * DatabaseMigrationServiceClient::createReplicationInstance(const CreateReplicationInstanceRequest &request)
+CreateReplicationInstanceResponse * DatabaseMigrationClient::createReplicationInstance(const CreateReplicationInstanceRequest &request)
 {
     return qobject_cast<CreateReplicationInstanceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * CreateReplicationSubnetGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -385,52 +385,52 @@ CreateReplicationInstanceResponse * DatabaseMigrationServiceClient::createReplic
  * The VPC needs to have at least one subnet in at least two availability zones in the Amazon Web Services Region,
  * otherwise the service will throw a <code>ReplicationSubnetGroupDoesNotCoverEnoughAZs</code>
  */
-CreateReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::createReplicationSubnetGroup(const CreateReplicationSubnetGroupRequest &request)
+CreateReplicationSubnetGroupResponse * DatabaseMigrationClient::createReplicationSubnetGroup(const CreateReplicationSubnetGroupRequest &request)
 {
     return qobject_cast<CreateReplicationSubnetGroupResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * CreateReplicationTaskResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a replication task using the specified
  */
-CreateReplicationTaskResponse * DatabaseMigrationServiceClient::createReplicationTask(const CreateReplicationTaskRequest &request)
+CreateReplicationTaskResponse * DatabaseMigrationClient::createReplicationTask(const CreateReplicationTaskRequest &request)
 {
     return qobject_cast<CreateReplicationTaskResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DeleteCertificateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified certificate.
  */
-DeleteCertificateResponse * DatabaseMigrationServiceClient::deleteCertificate(const DeleteCertificateRequest &request)
+DeleteCertificateResponse * DatabaseMigrationClient::deleteCertificate(const DeleteCertificateRequest &request)
 {
     return qobject_cast<DeleteCertificateResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DeleteConnectionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the connection between a replication instance and an
  */
-DeleteConnectionResponse * DatabaseMigrationServiceClient::deleteConnection(const DeleteConnectionRequest &request)
+DeleteConnectionResponse * DatabaseMigrationClient::deleteConnection(const DeleteConnectionRequest &request)
 {
     return qobject_cast<DeleteConnectionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DeleteEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -443,52 +443,52 @@ DeleteConnectionResponse * DatabaseMigrationServiceClient::deleteConnection(cons
  *
  * endpoint> </note>
  */
-DeleteEndpointResponse * DatabaseMigrationServiceClient::deleteEndpoint(const DeleteEndpointRequest &request)
+DeleteEndpointResponse * DatabaseMigrationClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
     return qobject_cast<DeleteEndpointResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DeleteEventSubscriptionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes an DMS event subscription.
  */
-DeleteEventSubscriptionResponse * DatabaseMigrationServiceClient::deleteEventSubscription(const DeleteEventSubscriptionRequest &request)
+DeleteEventSubscriptionResponse * DatabaseMigrationClient::deleteEventSubscription(const DeleteEventSubscriptionRequest &request)
 {
     return qobject_cast<DeleteEventSubscriptionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DeleteFleetAdvisorCollectorResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified Fleet Advisor
  */
-DeleteFleetAdvisorCollectorResponse * DatabaseMigrationServiceClient::deleteFleetAdvisorCollector(const DeleteFleetAdvisorCollectorRequest &request)
+DeleteFleetAdvisorCollectorResponse * DatabaseMigrationClient::deleteFleetAdvisorCollector(const DeleteFleetAdvisorCollectorRequest &request)
 {
     return qobject_cast<DeleteFleetAdvisorCollectorResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DeleteFleetAdvisorDatabasesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified Fleet Advisor collector
  */
-DeleteFleetAdvisorDatabasesResponse * DatabaseMigrationServiceClient::deleteFleetAdvisorDatabases(const DeleteFleetAdvisorDatabasesRequest &request)
+DeleteFleetAdvisorDatabasesResponse * DatabaseMigrationClient::deleteFleetAdvisorDatabases(const DeleteFleetAdvisorDatabasesRequest &request)
 {
     return qobject_cast<DeleteFleetAdvisorDatabasesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DeleteReplicationInstanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -501,39 +501,39 @@ DeleteFleetAdvisorDatabasesResponse * DatabaseMigrationServiceClient::deleteFlee
  *
  * it> </note>
  */
-DeleteReplicationInstanceResponse * DatabaseMigrationServiceClient::deleteReplicationInstance(const DeleteReplicationInstanceRequest &request)
+DeleteReplicationInstanceResponse * DatabaseMigrationClient::deleteReplicationInstance(const DeleteReplicationInstanceRequest &request)
 {
     return qobject_cast<DeleteReplicationInstanceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DeleteReplicationSubnetGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a subnet
  */
-DeleteReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::deleteReplicationSubnetGroup(const DeleteReplicationSubnetGroupRequest &request)
+DeleteReplicationSubnetGroupResponse * DatabaseMigrationClient::deleteReplicationSubnetGroup(const DeleteReplicationSubnetGroupRequest &request)
 {
     return qobject_cast<DeleteReplicationSubnetGroupResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DeleteReplicationTaskResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified replication
  */
-DeleteReplicationTaskResponse * DatabaseMigrationServiceClient::deleteReplicationTask(const DeleteReplicationTaskRequest &request)
+DeleteReplicationTaskResponse * DatabaseMigrationClient::deleteReplicationTask(const DeleteReplicationTaskRequest &request)
 {
     return qobject_cast<DeleteReplicationTaskResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DeleteReplicationTaskAssessmentRunResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -545,13 +545,13 @@ DeleteReplicationTaskResponse * DatabaseMigrationServiceClient::deleteReplicatio
  * This operation removes all metadata that DMS maintains about this assessment run. However, the operation leaves
  * untouched all information about this assessment run that is stored in your Amazon S3
  */
-DeleteReplicationTaskAssessmentRunResponse * DatabaseMigrationServiceClient::deleteReplicationTaskAssessmentRun(const DeleteReplicationTaskAssessmentRunRequest &request)
+DeleteReplicationTaskAssessmentRunResponse * DatabaseMigrationClient::deleteReplicationTaskAssessmentRun(const DeleteReplicationTaskAssessmentRunRequest &request)
 {
     return qobject_cast<DeleteReplicationTaskAssessmentRunResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeAccountAttributesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -566,13 +566,13 @@ DeleteReplicationTaskAssessmentRunResponse * DatabaseMigrationServiceClient::del
  *
  * This command does not take any
  */
-DescribeAccountAttributesResponse * DatabaseMigrationServiceClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
+DescribeAccountAttributesResponse * DatabaseMigrationClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
     return qobject_cast<DescribeAccountAttributesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeApplicableIndividualAssessmentsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -599,26 +599,26 @@ DescribeAccountAttributesResponse * DatabaseMigrationServiceClient::describeAcco
  * existing migration task. The specified task definition then determines the default list of individual assessments that
  * you can specify in an assessment run for the
  */
-DescribeApplicableIndividualAssessmentsResponse * DatabaseMigrationServiceClient::describeApplicableIndividualAssessments(const DescribeApplicableIndividualAssessmentsRequest &request)
+DescribeApplicableIndividualAssessmentsResponse * DatabaseMigrationClient::describeApplicableIndividualAssessments(const DescribeApplicableIndividualAssessmentsRequest &request)
 {
     return qobject_cast<DescribeApplicableIndividualAssessmentsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeCertificatesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Provides a description of the
  */
-DescribeCertificatesResponse * DatabaseMigrationServiceClient::describeCertificates(const DescribeCertificatesRequest &request)
+DescribeCertificatesResponse * DatabaseMigrationClient::describeCertificates(const DescribeCertificatesRequest &request)
 {
     return qobject_cast<DescribeCertificatesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeConnectionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -626,52 +626,52 @@ DescribeCertificatesResponse * DatabaseMigrationServiceClient::describeCertifica
  * Describes the status of the connections that have been made between the replication instance and an endpoint.
  * Connections are created when you test an
  */
-DescribeConnectionsResponse * DatabaseMigrationServiceClient::describeConnections(const DescribeConnectionsRequest &request)
+DescribeConnectionsResponse * DatabaseMigrationClient::describeConnections(const DescribeConnectionsRequest &request)
 {
     return qobject_cast<DescribeConnectionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeEndpointSettingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about the possible endpoint settings available when you create an endpoint for a specific database
  */
-DescribeEndpointSettingsResponse * DatabaseMigrationServiceClient::describeEndpointSettings(const DescribeEndpointSettingsRequest &request)
+DescribeEndpointSettingsResponse * DatabaseMigrationClient::describeEndpointSettings(const DescribeEndpointSettingsRequest &request)
 {
     return qobject_cast<DescribeEndpointSettingsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeEndpointTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about the type of endpoints
  */
-DescribeEndpointTypesResponse * DatabaseMigrationServiceClient::describeEndpointTypes(const DescribeEndpointTypesRequest &request)
+DescribeEndpointTypesResponse * DatabaseMigrationClient::describeEndpointTypes(const DescribeEndpointTypesRequest &request)
 {
     return qobject_cast<DescribeEndpointTypesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeEndpointsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about the endpoints for your account in the current
  */
-DescribeEndpointsResponse * DatabaseMigrationServiceClient::describeEndpoints(const DescribeEndpointsRequest &request)
+DescribeEndpointsResponse * DatabaseMigrationClient::describeEndpoints(const DescribeEndpointsRequest &request)
 {
     return qobject_cast<DescribeEndpointsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeEventCategoriesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -680,13 +680,13 @@ DescribeEndpointsResponse * DatabaseMigrationServiceClient::describeEndpoints(co
  * event categories and source types in <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
  * with Events and Notifications</a> in the <i>Database Migration Service User Guide.</i>
  */
-DescribeEventCategoriesResponse * DatabaseMigrationServiceClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
+DescribeEventCategoriesResponse * DatabaseMigrationClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
 {
     return qobject_cast<DescribeEventCategoriesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeEventSubscriptionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -699,13 +699,13 @@ DescribeEventCategoriesResponse * DatabaseMigrationServiceClient::describeEventC
  *
  * If you specify <code>SubscriptionName</code>, this action lists the description for that
  */
-DescribeEventSubscriptionsResponse * DatabaseMigrationServiceClient::describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request)
+DescribeEventSubscriptionsResponse * DatabaseMigrationClient::describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request)
 {
     return qobject_cast<DescribeEventSubscriptionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeEventsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -714,156 +714,156 @@ DescribeEventSubscriptionsResponse * DatabaseMigrationServiceClient::describeEve
  * information on DMS events, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working with
  * Events and Notifications</a> in the <i>Database Migration Service User Guide.</i>
  */
-DescribeEventsResponse * DatabaseMigrationServiceClient::describeEvents(const DescribeEventsRequest &request)
+DescribeEventsResponse * DatabaseMigrationClient::describeEvents(const DescribeEventsRequest &request)
 {
     return qobject_cast<DescribeEventsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeFleetAdvisorCollectorsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of the Fleet Advisor collectors in your
  */
-DescribeFleetAdvisorCollectorsResponse * DatabaseMigrationServiceClient::describeFleetAdvisorCollectors(const DescribeFleetAdvisorCollectorsRequest &request)
+DescribeFleetAdvisorCollectorsResponse * DatabaseMigrationClient::describeFleetAdvisorCollectors(const DescribeFleetAdvisorCollectorsRequest &request)
 {
     return qobject_cast<DescribeFleetAdvisorCollectorsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeFleetAdvisorDatabasesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of Fleet Advisor databases in your
  */
-DescribeFleetAdvisorDatabasesResponse * DatabaseMigrationServiceClient::describeFleetAdvisorDatabases(const DescribeFleetAdvisorDatabasesRequest &request)
+DescribeFleetAdvisorDatabasesResponse * DatabaseMigrationClient::describeFleetAdvisorDatabases(const DescribeFleetAdvisorDatabasesRequest &request)
 {
     return qobject_cast<DescribeFleetAdvisorDatabasesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeFleetAdvisorLsaAnalysisResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Provides descriptions of large-scale assessment (LSA) analyses produced by your Fleet Advisor collectors.
  */
-DescribeFleetAdvisorLsaAnalysisResponse * DatabaseMigrationServiceClient::describeFleetAdvisorLsaAnalysis(const DescribeFleetAdvisorLsaAnalysisRequest &request)
+DescribeFleetAdvisorLsaAnalysisResponse * DatabaseMigrationClient::describeFleetAdvisorLsaAnalysis(const DescribeFleetAdvisorLsaAnalysisRequest &request)
 {
     return qobject_cast<DescribeFleetAdvisorLsaAnalysisResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeFleetAdvisorSchemaObjectSummaryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Provides descriptions of the schemas discovered by your Fleet Advisor
  */
-DescribeFleetAdvisorSchemaObjectSummaryResponse * DatabaseMigrationServiceClient::describeFleetAdvisorSchemaObjectSummary(const DescribeFleetAdvisorSchemaObjectSummaryRequest &request)
+DescribeFleetAdvisorSchemaObjectSummaryResponse * DatabaseMigrationClient::describeFleetAdvisorSchemaObjectSummary(const DescribeFleetAdvisorSchemaObjectSummaryRequest &request)
 {
     return qobject_cast<DescribeFleetAdvisorSchemaObjectSummaryResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeFleetAdvisorSchemasResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of schemas detected by Fleet Advisor Collectors in your
  */
-DescribeFleetAdvisorSchemasResponse * DatabaseMigrationServiceClient::describeFleetAdvisorSchemas(const DescribeFleetAdvisorSchemasRequest &request)
+DescribeFleetAdvisorSchemasResponse * DatabaseMigrationClient::describeFleetAdvisorSchemas(const DescribeFleetAdvisorSchemasRequest &request)
 {
     return qobject_cast<DescribeFleetAdvisorSchemasResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeOrderableReplicationInstancesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about the replication instance types that can be created in the specified
  */
-DescribeOrderableReplicationInstancesResponse * DatabaseMigrationServiceClient::describeOrderableReplicationInstances(const DescribeOrderableReplicationInstancesRequest &request)
+DescribeOrderableReplicationInstancesResponse * DatabaseMigrationClient::describeOrderableReplicationInstances(const DescribeOrderableReplicationInstancesRequest &request)
 {
     return qobject_cast<DescribeOrderableReplicationInstancesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribePendingMaintenanceActionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * For internal use
  */
-DescribePendingMaintenanceActionsResponse * DatabaseMigrationServiceClient::describePendingMaintenanceActions(const DescribePendingMaintenanceActionsRequest &request)
+DescribePendingMaintenanceActionsResponse * DatabaseMigrationClient::describePendingMaintenanceActions(const DescribePendingMaintenanceActionsRequest &request)
 {
     return qobject_cast<DescribePendingMaintenanceActionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeRefreshSchemasStatusResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the status of the RefreshSchemas
  */
-DescribeRefreshSchemasStatusResponse * DatabaseMigrationServiceClient::describeRefreshSchemasStatus(const DescribeRefreshSchemasStatusRequest &request)
+DescribeRefreshSchemasStatusResponse * DatabaseMigrationClient::describeRefreshSchemasStatus(const DescribeRefreshSchemasStatusRequest &request)
 {
     return qobject_cast<DescribeRefreshSchemasStatusResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeReplicationInstanceTaskLogsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about the task logs for the specified
  */
-DescribeReplicationInstanceTaskLogsResponse * DatabaseMigrationServiceClient::describeReplicationInstanceTaskLogs(const DescribeReplicationInstanceTaskLogsRequest &request)
+DescribeReplicationInstanceTaskLogsResponse * DatabaseMigrationClient::describeReplicationInstanceTaskLogs(const DescribeReplicationInstanceTaskLogsRequest &request)
 {
     return qobject_cast<DescribeReplicationInstanceTaskLogsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeReplicationInstancesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about replication instances for your account in the current
  */
-DescribeReplicationInstancesResponse * DatabaseMigrationServiceClient::describeReplicationInstances(const DescribeReplicationInstancesRequest &request)
+DescribeReplicationInstancesResponse * DatabaseMigrationClient::describeReplicationInstances(const DescribeReplicationInstancesRequest &request)
 {
     return qobject_cast<DescribeReplicationInstancesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeReplicationSubnetGroupsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about the replication subnet
  */
-DescribeReplicationSubnetGroupsResponse * DatabaseMigrationServiceClient::describeReplicationSubnetGroups(const DescribeReplicationSubnetGroupsRequest &request)
+DescribeReplicationSubnetGroupsResponse * DatabaseMigrationClient::describeReplicationSubnetGroups(const DescribeReplicationSubnetGroupsRequest &request)
 {
     return qobject_cast<DescribeReplicationSubnetGroupsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeReplicationTaskAssessmentResultsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -877,13 +877,13 @@ DescribeReplicationSubnetGroupsResponse * DatabaseMigrationServiceClient::descri
  * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating a task assessment
  * report</a> in the <i>Database Migration Service User
  */
-DescribeReplicationTaskAssessmentResultsResponse * DatabaseMigrationServiceClient::describeReplicationTaskAssessmentResults(const DescribeReplicationTaskAssessmentResultsRequest &request)
+DescribeReplicationTaskAssessmentResultsResponse * DatabaseMigrationClient::describeReplicationTaskAssessmentResults(const DescribeReplicationTaskAssessmentResultsRequest &request)
 {
     return qobject_cast<DescribeReplicationTaskAssessmentResultsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeReplicationTaskAssessmentRunsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -900,13 +900,13 @@ DescribeReplicationTaskAssessmentResultsResponse * DatabaseMigrationServiceClien
  * This operation doesn't return information about individual assessments. For this information, see the
  * <code>DescribeReplicationTaskIndividualAssessments</code> operation.
  */
-DescribeReplicationTaskAssessmentRunsResponse * DatabaseMigrationServiceClient::describeReplicationTaskAssessmentRuns(const DescribeReplicationTaskAssessmentRunsRequest &request)
+DescribeReplicationTaskAssessmentRunsResponse * DatabaseMigrationClient::describeReplicationTaskAssessmentRuns(const DescribeReplicationTaskAssessmentRunsRequest &request)
 {
     return qobject_cast<DescribeReplicationTaskAssessmentRunsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeReplicationTaskIndividualAssessmentsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -917,26 +917,26 @@ DescribeReplicationTaskAssessmentRunsResponse * DatabaseMigrationServiceClient::
  *
  * These filter settings can specify a combination of premigration assessment runs, migration tasks, and assessment status
  */
-DescribeReplicationTaskIndividualAssessmentsResponse * DatabaseMigrationServiceClient::describeReplicationTaskIndividualAssessments(const DescribeReplicationTaskIndividualAssessmentsRequest &request)
+DescribeReplicationTaskIndividualAssessmentsResponse * DatabaseMigrationClient::describeReplicationTaskIndividualAssessments(const DescribeReplicationTaskIndividualAssessmentsRequest &request)
 {
     return qobject_cast<DescribeReplicationTaskIndividualAssessmentsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeReplicationTasksResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about replication tasks for your account in the current
  */
-DescribeReplicationTasksResponse * DatabaseMigrationServiceClient::describeReplicationTasks(const DescribeReplicationTasksRequest &request)
+DescribeReplicationTasksResponse * DatabaseMigrationClient::describeReplicationTasks(const DescribeReplicationTasksRequest &request)
 {
     return qobject_cast<DescribeReplicationTasksResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeSchemasResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -945,13 +945,13 @@ DescribeReplicationTasksResponse * DatabaseMigrationServiceClient::describeRepli
  *
  * endpoint>
  */
-DescribeSchemasResponse * DatabaseMigrationServiceClient::describeSchemas(const DescribeSchemasRequest &request)
+DescribeSchemasResponse * DatabaseMigrationClient::describeSchemas(const DescribeSchemasRequest &request)
 {
     return qobject_cast<DescribeSchemasResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * DescribeTableStatisticsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -963,26 +963,26 @@ DescribeSchemasResponse * DatabaseMigrationServiceClient::describeSchemas(const 
  * Note that the "last updated" column the DMS console only indicates the time that DMS last updated the table statistics
  * record for a table. It does not indicate the time of the last update to the
  */
-DescribeTableStatisticsResponse * DatabaseMigrationServiceClient::describeTableStatistics(const DescribeTableStatisticsRequest &request)
+DescribeTableStatisticsResponse * DatabaseMigrationClient::describeTableStatistics(const DescribeTableStatisticsRequest &request)
 {
     return qobject_cast<DescribeTableStatisticsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * ImportCertificateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Uploads the specified
  */
-ImportCertificateResponse * DatabaseMigrationServiceClient::importCertificate(const ImportCertificateRequest &request)
+ImportCertificateResponse * DatabaseMigrationClient::importCertificate(const ImportCertificateRequest &request)
 {
     return qobject_cast<ImportCertificateResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -991,13 +991,13 @@ ImportCertificateResponse * DatabaseMigrationServiceClient::importCertificate(co
  * migration task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
  * <code>Tag</code> </a> data type
  */
-ListTagsForResourceResponse * DatabaseMigrationServiceClient::listTagsForResource(const ListTagsForResourceRequest &request)
+ListTagsForResourceResponse * DatabaseMigrationClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * ModifyEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1011,26 +1011,26 @@ ListTagsForResourceResponse * DatabaseMigrationServiceClient::listTagsForResourc
  * endpoint replicates all the task tables to this single database. For MySQL endpoints, you specify the database only when
  * you specify the schema in the table-mapping rules of the DMS
  */
-ModifyEndpointResponse * DatabaseMigrationServiceClient::modifyEndpoint(const ModifyEndpointRequest &request)
+ModifyEndpointResponse * DatabaseMigrationClient::modifyEndpoint(const ModifyEndpointRequest &request)
 {
     return qobject_cast<ModifyEndpointResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * ModifyEventSubscriptionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies an existing DMS event notification subscription.
  */
-ModifyEventSubscriptionResponse * DatabaseMigrationServiceClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
+ModifyEventSubscriptionResponse * DatabaseMigrationClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
 {
     return qobject_cast<ModifyEventSubscriptionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * ModifyReplicationInstanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1044,26 +1044,26 @@ ModifyEventSubscriptionResponse * DatabaseMigrationServiceClient::modifyEventSub
  *
  * window>
  */
-ModifyReplicationInstanceResponse * DatabaseMigrationServiceClient::modifyReplicationInstance(const ModifyReplicationInstanceRequest &request)
+ModifyReplicationInstanceResponse * DatabaseMigrationClient::modifyReplicationInstance(const ModifyReplicationInstanceRequest &request)
 {
     return qobject_cast<ModifyReplicationInstanceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * ModifyReplicationSubnetGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies the settings for the specified replication subnet
  */
-ModifyReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::modifyReplicationSubnetGroup(const ModifyReplicationSubnetGroupRequest &request)
+ModifyReplicationSubnetGroupResponse * DatabaseMigrationClient::modifyReplicationSubnetGroup(const ModifyReplicationSubnetGroupRequest &request)
 {
     return qobject_cast<ModifyReplicationSubnetGroupResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * ModifyReplicationTaskResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1080,13 +1080,13 @@ ModifyReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::modifyRep
  * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working with Migration Tasks</a> in the
  * <i>Database Migration Service User
  */
-ModifyReplicationTaskResponse * DatabaseMigrationServiceClient::modifyReplicationTask(const ModifyReplicationTaskRequest &request)
+ModifyReplicationTaskResponse * DatabaseMigrationClient::modifyReplicationTask(const ModifyReplicationTaskRequest &request)
 {
     return qobject_cast<ModifyReplicationTaskResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * MoveReplicationTaskResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1095,13 +1095,13 @@ ModifyReplicationTaskResponse * DatabaseMigrationServiceClient::modifyReplicatio
  * specified parameters. The target replication instance must be created with the same or later DMS version as the current
  * replication
  */
-MoveReplicationTaskResponse * DatabaseMigrationServiceClient::moveReplicationTask(const MoveReplicationTaskRequest &request)
+MoveReplicationTaskResponse * DatabaseMigrationClient::moveReplicationTask(const MoveReplicationTaskRequest &request)
 {
     return qobject_cast<MoveReplicationTaskResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * RebootReplicationInstanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1109,13 +1109,13 @@ MoveReplicationTaskResponse * DatabaseMigrationServiceClient::moveReplicationTas
  * Reboots a replication instance. Rebooting results in a momentary outage, until the replication instance becomes
  * available
  */
-RebootReplicationInstanceResponse * DatabaseMigrationServiceClient::rebootReplicationInstance(const RebootReplicationInstanceRequest &request)
+RebootReplicationInstanceResponse * DatabaseMigrationClient::rebootReplicationInstance(const RebootReplicationInstanceRequest &request)
 {
     return qobject_cast<RebootReplicationInstanceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * RefreshSchemasResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1123,13 +1123,13 @@ RebootReplicationInstanceResponse * DatabaseMigrationServiceClient::rebootReplic
  * Populates the schema for the specified endpoint. This is an asynchronous operation and can take several minutes. You can
  * check the status of this operation by calling the DescribeRefreshSchemasStatus
  */
-RefreshSchemasResponse * DatabaseMigrationServiceClient::refreshSchemas(const RefreshSchemasRequest &request)
+RefreshSchemasResponse * DatabaseMigrationClient::refreshSchemas(const RefreshSchemasRequest &request)
 {
     return qobject_cast<RefreshSchemasResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * ReloadTablesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1141,13 +1141,13 @@ RefreshSchemasResponse * DatabaseMigrationServiceClient::refreshSchemas(const Re
  * You can only use this operation with a task in the <code>RUNNING</code> state, otherwise the service will throw an
  * <code>InvalidResourceStateFault</code>
  */
-ReloadTablesResponse * DatabaseMigrationServiceClient::reloadTables(const ReloadTablesRequest &request)
+ReloadTablesResponse * DatabaseMigrationClient::reloadTables(const ReloadTablesRequest &request)
 {
     return qobject_cast<ReloadTablesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * RemoveTagsFromResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1156,26 +1156,26 @@ ReloadTablesResponse * DatabaseMigrationServiceClient::reloadTables(const Reload
  * task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
  * <code>Tag</code> </a> data type
  */
-RemoveTagsFromResourceResponse * DatabaseMigrationServiceClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
+RemoveTagsFromResourceResponse * DatabaseMigrationClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
     return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * RunFleetAdvisorLsaAnalysisResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Runs large-scale assessment (LSA) analysis on every Fleet Advisor collector in your
  */
-RunFleetAdvisorLsaAnalysisResponse * DatabaseMigrationServiceClient::runFleetAdvisorLsaAnalysis(const RunFleetAdvisorLsaAnalysisRequest &request)
+RunFleetAdvisorLsaAnalysisResponse * DatabaseMigrationClient::runFleetAdvisorLsaAnalysis(const RunFleetAdvisorLsaAnalysisRequest &request)
 {
     return qobject_cast<RunFleetAdvisorLsaAnalysisResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * StartReplicationTaskResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1188,13 +1188,13 @@ RunFleetAdvisorLsaAnalysisResponse * DatabaseMigrationServiceClient::runFleetAdv
  * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working with Migration Tasks </a> in the
  * <i>Database Migration Service User Guide.</i>
  */
-StartReplicationTaskResponse * DatabaseMigrationServiceClient::startReplicationTask(const StartReplicationTaskRequest &request)
+StartReplicationTaskResponse * DatabaseMigrationClient::startReplicationTask(const StartReplicationTaskRequest &request)
 {
     return qobject_cast<StartReplicationTaskResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * StartReplicationTaskAssessmentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1223,13 +1223,13 @@ StartReplicationTaskResponse * DatabaseMigrationServiceClient::startReplicationT
  * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating a task assessment
  * report</a> in the <i>Database Migration Service User
  */
-StartReplicationTaskAssessmentResponse * DatabaseMigrationServiceClient::startReplicationTaskAssessment(const StartReplicationTaskAssessmentRequest &request)
+StartReplicationTaskAssessmentResponse * DatabaseMigrationClient::startReplicationTaskAssessment(const StartReplicationTaskAssessmentRequest &request)
 {
     return qobject_cast<StartReplicationTaskAssessmentResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * StartReplicationTaskAssessmentRunResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1243,39 +1243,39 @@ StartReplicationTaskAssessmentResponse * DatabaseMigrationServiceClient::startRe
  * can review the status of each individual assessment. You can also run the migration task manually after the assessment
  * run and its individual assessments
  */
-StartReplicationTaskAssessmentRunResponse * DatabaseMigrationServiceClient::startReplicationTaskAssessmentRun(const StartReplicationTaskAssessmentRunRequest &request)
+StartReplicationTaskAssessmentRunResponse * DatabaseMigrationClient::startReplicationTaskAssessmentRun(const StartReplicationTaskAssessmentRunRequest &request)
 {
     return qobject_cast<StartReplicationTaskAssessmentRunResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * StopReplicationTaskResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Stops the replication
  */
-StopReplicationTaskResponse * DatabaseMigrationServiceClient::stopReplicationTask(const StopReplicationTaskRequest &request)
+StopReplicationTaskResponse * DatabaseMigrationClient::stopReplicationTask(const StopReplicationTaskRequest &request)
 {
     return qobject_cast<StopReplicationTaskResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * TestConnectionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Tests the connection between the replication instance and the
  */
-TestConnectionResponse * DatabaseMigrationServiceClient::testConnection(const TestConnectionRequest &request)
+TestConnectionResponse * DatabaseMigrationClient::testConnection(const TestConnectionRequest &request)
 {
     return qobject_cast<TestConnectionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * Sends \a request to the DatabaseMigrationClient service, and returns a pointer to an
  * UpdateSubscriptionsToEventBridgeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1294,28 +1294,28 @@ TestConnectionResponse * DatabaseMigrationServiceClient::testConnection(const Te
  * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html#CHAP_Events-migrate-to-eventbridge">Migrating
  * event subscriptions to Amazon EventBridge</a> in the <i>Amazon Web Services Database Migration Service User
  */
-UpdateSubscriptionsToEventBridgeResponse * DatabaseMigrationServiceClient::updateSubscriptionsToEventBridge(const UpdateSubscriptionsToEventBridgeRequest &request)
+UpdateSubscriptionsToEventBridgeResponse * DatabaseMigrationClient::updateSubscriptionsToEventBridge(const UpdateSubscriptionsToEventBridgeRequest &request)
 {
     return qobject_cast<UpdateSubscriptionsToEventBridgeResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceClientPrivate
- * \brief The DatabaseMigrationServiceClientPrivate class provides private implementation for DatabaseMigrationServiceClient.
+ * \class QtAws::DatabaseMigration::DatabaseMigrationClientPrivate
+ * \brief The DatabaseMigrationClientPrivate class provides private implementation for DatabaseMigrationClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DatabaseMigrationServiceClientPrivate object with public implementation \a q.
+ * Constructs a DatabaseMigrationClientPrivate object with public implementation \a q.
  */
-DatabaseMigrationServiceClientPrivate::DatabaseMigrationServiceClientPrivate(DatabaseMigrationServiceClient * const q)
+DatabaseMigrationClientPrivate::DatabaseMigrationClientPrivate(DatabaseMigrationClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

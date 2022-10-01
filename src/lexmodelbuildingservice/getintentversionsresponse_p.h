@@ -20,14 +20,14 @@
 #ifndef QTAWS_GETINTENTVERSIONSRESPONSE_P_H
 #define QTAWS_GETINTENTVERSIONSRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse_p.h"
+#include "lexmodelbuildingresponse_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class GetIntentVersionsResponse;
 
-class GetIntentVersionsResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+class GetIntentVersionsResponsePrivate : public LexModelBuildingResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

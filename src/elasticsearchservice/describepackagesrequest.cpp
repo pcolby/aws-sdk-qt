@@ -20,16 +20,16 @@
 #include "describepackagesrequest.h"
 #include "describepackagesrequest_p.h"
 #include "describepackagesresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribePackagesRequest
- * \brief The DescribePackagesRequest class provides an interface for ElasticsearchService DescribePackages requests.
+ * \class QtAws::Elasticsearch::DescribePackagesRequest
+ * \brief The DescribePackagesRequest class provides an interface for Elasticsearch DescribePackages requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describePackages
+ * \sa ElasticsearchClient::describePackages
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribePackagesRequest::DescribePackagesRequest(const DescribePackagesRequest &other)
-    : ElasticsearchServiceRequest(new DescribePackagesRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new DescribePackagesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DescribePackagesRequest::DescribePackagesRequest(const DescribePackagesRequest &
  * Constructs a DescribePackagesRequest object.
  */
 DescribePackagesRequest::DescribePackagesRequest()
-    : ElasticsearchServiceRequest(new DescribePackagesRequestPrivate(ElasticsearchServiceRequest::DescribePackagesAction, this))
+    : ElasticsearchRequest(new DescribePackagesRequestPrivate(ElasticsearchRequest::DescribePackagesAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DescribePackagesRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribePackagesRequestPrivate
+ * \class QtAws::Elasticsearch::DescribePackagesRequestPrivate
  * \brief The DescribePackagesRequestPrivate class provides private implementation for DescribePackagesRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a DescribePackagesRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a DescribePackagesRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 DescribePackagesRequestPrivate::DescribePackagesRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, DescribePackagesRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, DescribePackagesRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DescribePackagesRequestPrivate::DescribePackagesRequestPrivate(
  */
 DescribePackagesRequestPrivate::DescribePackagesRequestPrivate(
     const DescribePackagesRequestPrivate &other, DescribePackagesRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

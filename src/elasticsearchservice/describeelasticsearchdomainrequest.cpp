@@ -20,16 +20,16 @@
 #include "describeelasticsearchdomainrequest.h"
 #include "describeelasticsearchdomainrequest_p.h"
 #include "describeelasticsearchdomainresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeElasticsearchDomainRequest
- * \brief The DescribeElasticsearchDomainRequest class provides an interface for ElasticsearchService DescribeElasticsearchDomain requests.
+ * \class QtAws::Elasticsearch::DescribeElasticsearchDomainRequest
+ * \brief The DescribeElasticsearchDomainRequest class provides an interface for Elasticsearch DescribeElasticsearchDomain requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describeElasticsearchDomain
+ * \sa ElasticsearchClient::describeElasticsearchDomain
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeElasticsearchDomainRequest::DescribeElasticsearchDomainRequest(const DescribeElasticsearchDomainRequest &other)
-    : ElasticsearchServiceRequest(new DescribeElasticsearchDomainRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new DescribeElasticsearchDomainRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DescribeElasticsearchDomainRequest::DescribeElasticsearchDomainRequest(const Des
  * Constructs a DescribeElasticsearchDomainRequest object.
  */
 DescribeElasticsearchDomainRequest::DescribeElasticsearchDomainRequest()
-    : ElasticsearchServiceRequest(new DescribeElasticsearchDomainRequestPrivate(ElasticsearchServiceRequest::DescribeElasticsearchDomainAction, this))
+    : ElasticsearchRequest(new DescribeElasticsearchDomainRequestPrivate(ElasticsearchRequest::DescribeElasticsearchDomainAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticsearchDomainRequest::response(
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeElasticsearchDomainRequestPrivate
+ * \class QtAws::Elasticsearch::DescribeElasticsearchDomainRequestPrivate
  * \brief The DescribeElasticsearchDomainRequestPrivate class provides private implementation for DescribeElasticsearchDomainRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a DescribeElasticsearchDomainRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a DescribeElasticsearchDomainRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 DescribeElasticsearchDomainRequestPrivate::DescribeElasticsearchDomainRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, DescribeElasticsearchDomainRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, DescribeElasticsearchDomainRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DescribeElasticsearchDomainRequestPrivate::DescribeElasticsearchDomainRequestPri
  */
 DescribeElasticsearchDomainRequestPrivate::DescribeElasticsearchDomainRequestPrivate(
     const DescribeElasticsearchDomainRequestPrivate &other, DescribeElasticsearchDomainRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

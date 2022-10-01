@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetIntentVersionsResponse
- * \brief The GetIntentVersionsResponse class provides an interace for LexModelBuildingService GetIntentVersions responses.
+ * \class QtAws::LexModelBuilding::GetIntentVersionsResponse
+ * \brief The GetIntentVersionsResponse class provides an interace for LexModelBuilding GetIntentVersions responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getIntentVersions
+ * \sa LexModelBuildingClient::getIntentVersions
  */
 
 /*!
@@ -48,7 +48,7 @@ GetIntentVersionsResponse::GetIntentVersionsResponse(
         const GetIntentVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetIntentVersionsResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new GetIntentVersionsResponsePrivate(this), parent)
 {
     setRequest(new GetIntentVersionsRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const GetIntentVersionsRequest * GetIntentVersionsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService GetIntentVersions \a response.
+ * Parses a successful LexModelBuilding GetIntentVersions \a response.
  */
 void GetIntentVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void GetIntentVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetIntentVersionsResponsePrivate
+ * \class QtAws::LexModelBuilding::GetIntentVersionsResponsePrivate
  * \brief The GetIntentVersionsResponsePrivate class provides private implementation for GetIntentVersionsResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a GetIntentVersionsResponsePrivate object with public implementation \a q.
  */
 GetIntentVersionsResponsePrivate::GetIntentVersionsResponsePrivate(
-    GetIntentVersionsResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    GetIntentVersionsResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService GetIntentVersions response element from \a xml.
+ * Parses a LexModelBuilding GetIntentVersions response element from \a xml.
  */
 void GetIntentVersionsResponsePrivate::parseGetIntentVersionsResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void GetIntentVersionsResponsePrivate::parseGetIntentVersionsResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

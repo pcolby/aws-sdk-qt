@@ -17,12 +17,12 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_APPLICATIONDISCOVERYSERVICEREQUEST_H
-#define QTAWS_APPLICATIONDISCOVERYSERVICEREQUEST_H
+#ifndef QTAWS_APPLICATIONDISCOVERYREQUEST_H
+#define QTAWS_APPLICATIONDISCOVERYREQUEST_H
 
 #include "core/awsabstractrequest.h"
 
-#include "qtawsapplicationdiscoveryserviceglobal.h"
+#include "qtawsapplicationdiscoveryglobal.h"
 
 #include <QFlags>
 #include <QObject>
@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
-class ApplicationDiscoveryServiceRequestPrivate;
+class ApplicationDiscoveryRequestPrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT ApplicationDiscoveryServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT ApplicationDiscoveryRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by ApplicationDiscoveryService.
+    /// Actions supported by ApplicationDiscovery.
     enum Action {
         AssociateConfigurationItemsToApplicationAction,
         BatchDeleteImportDataAction,
@@ -67,9 +67,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    ApplicationDiscoveryServiceRequest(const Action action);
-    ApplicationDiscoveryServiceRequest(const ApplicationDiscoveryServiceRequest &other);
-    ApplicationDiscoveryServiceRequest &operator=(const ApplicationDiscoveryServiceRequest &other);
+    ApplicationDiscoveryRequest(const Action action);
+    ApplicationDiscoveryRequest(const ApplicationDiscoveryRequest &other);
+    ApplicationDiscoveryRequest &operator=(const ApplicationDiscoveryRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -78,12 +78,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const ApplicationDiscoveryServiceRequest &other) const;
+    virtual bool operator==(const ApplicationDiscoveryRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit ApplicationDiscoveryServiceRequest(ApplicationDiscoveryServiceRequestPrivate * const d);
+    explicit ApplicationDiscoveryRequest(ApplicationDiscoveryRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -96,11 +96,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(ApplicationDiscoveryServiceRequest)
+    Q_DECLARE_PRIVATE(ApplicationDiscoveryRequest)
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

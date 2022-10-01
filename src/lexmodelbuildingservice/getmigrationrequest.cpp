@@ -20,30 +20,30 @@
 #include "getmigrationrequest.h"
 #include "getmigrationrequest_p.h"
 #include "getmigrationresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetMigrationRequest
- * \brief The GetMigrationRequest class provides an interface for LexModelBuildingService GetMigration requests.
+ * \class QtAws::LexModelBuilding::GetMigrationRequest
+ * \brief The GetMigrationRequest class provides an interface for LexModelBuilding GetMigration requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getMigration
+ * \sa LexModelBuildingClient::getMigration
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetMigrationRequest::GetMigrationRequest(const GetMigrationRequest &other)
-    : LexModelBuildingServiceRequest(new GetMigrationRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new GetMigrationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetMigrationRequest::GetMigrationRequest(const GetMigrationRequest &other)
  * Constructs a GetMigrationRequest object.
  */
 GetMigrationRequest::GetMigrationRequest()
-    : LexModelBuildingServiceRequest(new GetMigrationRequestPrivate(LexModelBuildingServiceRequest::GetMigrationAction, this))
+    : LexModelBuildingRequest(new GetMigrationRequestPrivate(LexModelBuildingRequest::GetMigrationAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * GetMigrationRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetMigrationRequestPrivate
+ * \class QtAws::LexModelBuilding::GetMigrationRequestPrivate
  * \brief The GetMigrationRequestPrivate class provides private implementation for GetMigrationRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a GetMigrationRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a GetMigrationRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 GetMigrationRequestPrivate::GetMigrationRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, GetMigrationRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, GetMigrationRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ GetMigrationRequestPrivate::GetMigrationRequestPrivate(
  */
 GetMigrationRequestPrivate::GetMigrationRequestPrivate(
     const GetMigrationRequestPrivate &other, GetMigrationRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

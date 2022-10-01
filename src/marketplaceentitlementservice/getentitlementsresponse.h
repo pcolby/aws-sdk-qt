@@ -20,15 +20,15 @@
 #ifndef QTAWS_GETENTITLEMENTSRESPONSE_H
 #define QTAWS_GETENTITLEMENTSRESPONSE_H
 
-#include "marketplaceentitlementserviceresponse.h"
+#include "marketplaceentitlementresponse.h"
 #include "getentitlementsrequest.h"
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
 class GetEntitlementsResponsePrivate;
 
-class QTAWSMARKETPLACEENTITLEMENTSERVICE_EXPORT GetEntitlementsResponse : public MarketplaceEntitlementServiceResponse {
+class QTAWSMARKETPLACEENTITLEMENT_EXPORT GetEntitlementsResponse : public MarketplaceEntitlementResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws
 
 #endif

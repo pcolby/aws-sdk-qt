@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeTagsResponse
- * \brief The DescribeTagsResponse class provides an interace for ApplicationDiscoveryService DescribeTags responses.
+ * \class QtAws::ApplicationDiscovery::DescribeTagsResponse
+ * \brief The DescribeTagsResponse class provides an interace for ApplicationDiscovery DescribeTags responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::describeTags
+ * \sa ApplicationDiscoveryClient::describeTags
  */
 
 /*!
@@ -152,7 +152,7 @@ DescribeTagsResponse::DescribeTagsResponse(
         const DescribeTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new DescribeTagsResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new DescribeTagsResponsePrivate(this), parent)
 {
     setRequest(new DescribeTagsRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const DescribeTagsRequest * DescribeTagsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService DescribeTags \a response.
+ * Parses a successful ApplicationDiscovery DescribeTags \a response.
  */
 void DescribeTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void DescribeTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeTagsResponsePrivate
+ * \class QtAws::ApplicationDiscovery::DescribeTagsResponsePrivate
  * \brief The DescribeTagsResponsePrivate class provides private implementation for DescribeTagsResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a DescribeTagsResponsePrivate object with public implementation \a q.
  */
 DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
-    DescribeTagsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    DescribeTagsResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService DescribeTags response element from \a xml.
+ * Parses a ApplicationDiscovery DescribeTags response element from \a xml.
  */
 void DescribeTagsResponsePrivate::parseDescribeTagsResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void DescribeTagsResponsePrivate::parseDescribeTagsResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

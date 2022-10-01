@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ListConfigurationsResponse
- * \brief The ListConfigurationsResponse class provides an interace for ApplicationDiscoveryService ListConfigurations responses.
+ * \class QtAws::ApplicationDiscovery::ListConfigurationsResponse
+ * \brief The ListConfigurationsResponse class provides an interace for ApplicationDiscovery ListConfigurations responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::listConfigurations
+ * \sa ApplicationDiscoveryClient::listConfigurations
  */
 
 /*!
@@ -152,7 +152,7 @@ ListConfigurationsResponse::ListConfigurationsResponse(
         const ListConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new ListConfigurationsResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new ListConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new ListConfigurationsRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const ListConfigurationsRequest * ListConfigurationsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService ListConfigurations \a response.
+ * Parses a successful ApplicationDiscovery ListConfigurations \a response.
  */
 void ListConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void ListConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ListConfigurationsResponsePrivate
+ * \class QtAws::ApplicationDiscovery::ListConfigurationsResponsePrivate
  * \brief The ListConfigurationsResponsePrivate class provides private implementation for ListConfigurationsResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a ListConfigurationsResponsePrivate object with public implementation \a q.
  */
 ListConfigurationsResponsePrivate::ListConfigurationsResponsePrivate(
-    ListConfigurationsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    ListConfigurationsResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService ListConfigurations response element from \a xml.
+ * Parses a ApplicationDiscovery ListConfigurations response element from \a xml.
  */
 void ListConfigurationsResponsePrivate::parseListConfigurationsResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void ListConfigurationsResponsePrivate::parseListConfigurationsResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

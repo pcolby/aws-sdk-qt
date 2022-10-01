@@ -20,14 +20,14 @@
 #ifndef QTAWS_GETENTITLEMENTSRESPONSE_P_H
 #define QTAWS_GETENTITLEMENTSRESPONSE_P_H
 
-#include "marketplaceentitlementserviceresponse_p.h"
+#include "marketplaceentitlementresponse_p.h"
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
 class GetEntitlementsResponse;
 
-class GetEntitlementsResponsePrivate : public MarketplaceEntitlementServiceResponsePrivate {
+class GetEntitlementsResponsePrivate : public MarketplaceEntitlementResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws
 
 #endif

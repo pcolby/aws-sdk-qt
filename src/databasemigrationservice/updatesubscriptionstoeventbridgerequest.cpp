@@ -20,16 +20,16 @@
 #include "updatesubscriptionstoeventbridgerequest.h"
 #include "updatesubscriptionstoeventbridgerequest_p.h"
 #include "updatesubscriptionstoeventbridgeresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::UpdateSubscriptionsToEventBridgeRequest
- * \brief The UpdateSubscriptionsToEventBridgeRequest class provides an interface for DatabaseMigrationService UpdateSubscriptionsToEventBridge requests.
+ * \class QtAws::DatabaseMigration::UpdateSubscriptionsToEventBridgeRequest
+ * \brief The UpdateSubscriptionsToEventBridgeRequest class provides an interface for DatabaseMigration UpdateSubscriptionsToEventBridge requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::updateSubscriptionsToEventBridge
+ * \sa DatabaseMigrationClient::updateSubscriptionsToEventBridge
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateSubscriptionsToEventBridgeRequest::UpdateSubscriptionsToEventBridgeRequest(const UpdateSubscriptionsToEventBridgeRequest &other)
-    : DatabaseMigrationServiceRequest(new UpdateSubscriptionsToEventBridgeRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new UpdateSubscriptionsToEventBridgeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ UpdateSubscriptionsToEventBridgeRequest::UpdateSubscriptionsToEventBridgeRequest
  * Constructs a UpdateSubscriptionsToEventBridgeRequest object.
  */
 UpdateSubscriptionsToEventBridgeRequest::UpdateSubscriptionsToEventBridgeRequest()
-    : DatabaseMigrationServiceRequest(new UpdateSubscriptionsToEventBridgeRequestPrivate(DatabaseMigrationServiceRequest::UpdateSubscriptionsToEventBridgeAction, this))
+    : DatabaseMigrationRequest(new UpdateSubscriptionsToEventBridgeRequestPrivate(DatabaseMigrationRequest::UpdateSubscriptionsToEventBridgeAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * UpdateSubscriptionsToEventBridgeRequest::resp
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::UpdateSubscriptionsToEventBridgeRequestPrivate
+ * \class QtAws::DatabaseMigration::UpdateSubscriptionsToEventBridgeRequestPrivate
  * \brief The UpdateSubscriptionsToEventBridgeRequestPrivate class provides private implementation for UpdateSubscriptionsToEventBridgeRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a UpdateSubscriptionsToEventBridgeRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a UpdateSubscriptionsToEventBridgeRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 UpdateSubscriptionsToEventBridgeRequestPrivate::UpdateSubscriptionsToEventBridgeRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, UpdateSubscriptionsToEventBridgeRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, UpdateSubscriptionsToEventBridgeRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ UpdateSubscriptionsToEventBridgeRequestPrivate::UpdateSubscriptionsToEventBridge
  */
 UpdateSubscriptionsToEventBridgeRequestPrivate::UpdateSubscriptionsToEventBridgeRequestPrivate(
     const UpdateSubscriptionsToEventBridgeRequestPrivate &other, UpdateSubscriptionsToEventBridgeRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

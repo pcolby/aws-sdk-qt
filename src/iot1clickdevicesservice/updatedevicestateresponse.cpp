@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::UpdateDeviceStateResponse
- * \brief The UpdateDeviceStateResponse class provides an interace for IoT1ClickDevicesService UpdateDeviceState responses.
+ * \class QtAws::IoT1ClickDevices::UpdateDeviceStateResponse
+ * \brief The UpdateDeviceStateResponse class provides an interace for IoT1ClickDevices UpdateDeviceState responses.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::updateDeviceState
+ * \sa IoT1ClickDevicesClient::updateDeviceState
  */
 
 /*!
@@ -46,7 +46,7 @@ UpdateDeviceStateResponse::UpdateDeviceStateResponse(
         const UpdateDeviceStateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoT1ClickDevicesServiceResponse(new UpdateDeviceStateResponsePrivate(this), parent)
+    : IoT1ClickDevicesResponse(new UpdateDeviceStateResponsePrivate(this), parent)
 {
     setRequest(new UpdateDeviceStateRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const UpdateDeviceStateRequest * UpdateDeviceStateResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IoT1ClickDevicesService UpdateDeviceState \a response.
+ * Parses a successful IoT1ClickDevices UpdateDeviceState \a response.
  */
 void UpdateDeviceStateResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void UpdateDeviceStateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::UpdateDeviceStateResponsePrivate
+ * \class QtAws::IoT1ClickDevices::UpdateDeviceStateResponsePrivate
  * \brief The UpdateDeviceStateResponsePrivate class provides private implementation for UpdateDeviceStateResponse.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
  * Constructs a UpdateDeviceStateResponsePrivate object with public implementation \a q.
  */
 UpdateDeviceStateResponsePrivate::UpdateDeviceStateResponsePrivate(
-    UpdateDeviceStateResponse * const q) : IoT1ClickDevicesServiceResponsePrivate(q)
+    UpdateDeviceStateResponse * const q) : IoT1ClickDevicesResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a IoT1ClickDevicesService UpdateDeviceState response element from \a xml.
+ * Parses a IoT1ClickDevices UpdateDeviceState response element from \a xml.
  */
 void UpdateDeviceStateResponsePrivate::parseUpdateDeviceStateResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void UpdateDeviceStateResponsePrivate::parseUpdateDeviceStateResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

@@ -20,16 +20,16 @@
 #include "batchdeleteimportdatarequest.h"
 #include "batchdeleteimportdatarequest_p.h"
 #include "batchdeleteimportdataresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::BatchDeleteImportDataRequest
- * \brief The BatchDeleteImportDataRequest class provides an interface for ApplicationDiscoveryService BatchDeleteImportData requests.
+ * \class QtAws::ApplicationDiscovery::BatchDeleteImportDataRequest
+ * \brief The BatchDeleteImportDataRequest class provides an interface for ApplicationDiscovery BatchDeleteImportData requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::batchDeleteImportData
+ * \sa ApplicationDiscoveryClient::batchDeleteImportData
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 BatchDeleteImportDataRequest::BatchDeleteImportDataRequest(const BatchDeleteImportDataRequest &other)
-    : ApplicationDiscoveryServiceRequest(new BatchDeleteImportDataRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new BatchDeleteImportDataRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ BatchDeleteImportDataRequest::BatchDeleteImportDataRequest(const BatchDeleteImpo
  * Constructs a BatchDeleteImportDataRequest object.
  */
 BatchDeleteImportDataRequest::BatchDeleteImportDataRequest()
-    : ApplicationDiscoveryServiceRequest(new BatchDeleteImportDataRequestPrivate(ApplicationDiscoveryServiceRequest::BatchDeleteImportDataAction, this))
+    : ApplicationDiscoveryRequest(new BatchDeleteImportDataRequestPrivate(ApplicationDiscoveryRequest::BatchDeleteImportDataAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteImportDataRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::BatchDeleteImportDataRequestPrivate
+ * \class QtAws::ApplicationDiscovery::BatchDeleteImportDataRequestPrivate
  * \brief The BatchDeleteImportDataRequestPrivate class provides private implementation for BatchDeleteImportDataRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a BatchDeleteImportDataRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a BatchDeleteImportDataRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 BatchDeleteImportDataRequestPrivate::BatchDeleteImportDataRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, BatchDeleteImportDataRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, BatchDeleteImportDataRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ BatchDeleteImportDataRequestPrivate::BatchDeleteImportDataRequestPrivate(
  */
 BatchDeleteImportDataRequestPrivate::BatchDeleteImportDataRequestPrivate(
     const BatchDeleteImportDataRequestPrivate &other, BatchDeleteImportDataRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

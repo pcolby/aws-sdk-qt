@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DeleteTagsResponse
- * \brief The DeleteTagsResponse class provides an interace for ApplicationDiscoveryService DeleteTags responses.
+ * \class QtAws::ApplicationDiscovery::DeleteTagsResponse
+ * \brief The DeleteTagsResponse class provides an interace for ApplicationDiscovery DeleteTags responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::deleteTags
+ * \sa ApplicationDiscoveryClient::deleteTags
  */
 
 /*!
@@ -152,7 +152,7 @@ DeleteTagsResponse::DeleteTagsResponse(
         const DeleteTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new DeleteTagsResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new DeleteTagsResponsePrivate(this), parent)
 {
     setRequest(new DeleteTagsRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const DeleteTagsRequest * DeleteTagsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService DeleteTags \a response.
+ * Parses a successful ApplicationDiscovery DeleteTags \a response.
  */
 void DeleteTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void DeleteTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DeleteTagsResponsePrivate
+ * \class QtAws::ApplicationDiscovery::DeleteTagsResponsePrivate
  * \brief The DeleteTagsResponsePrivate class provides private implementation for DeleteTagsResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a DeleteTagsResponsePrivate object with public implementation \a q.
  */
 DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
-    DeleteTagsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    DeleteTagsResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService DeleteTags response element from \a xml.
+ * Parses a ApplicationDiscovery DeleteTags response element from \a xml.
  */
 void DeleteTagsResponsePrivate::parseDeleteTagsResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void DeleteTagsResponsePrivate::parseDeleteTagsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

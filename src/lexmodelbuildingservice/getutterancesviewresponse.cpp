@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetUtterancesViewResponse
- * \brief The GetUtterancesViewResponse class provides an interace for LexModelBuildingService GetUtterancesView responses.
+ * \class QtAws::LexModelBuilding::GetUtterancesViewResponse
+ * \brief The GetUtterancesViewResponse class provides an interace for LexModelBuilding GetUtterancesView responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getUtterancesView
+ * \sa LexModelBuildingClient::getUtterancesView
  */
 
 /*!
@@ -48,7 +48,7 @@ GetUtterancesViewResponse::GetUtterancesViewResponse(
         const GetUtterancesViewRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetUtterancesViewResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new GetUtterancesViewResponsePrivate(this), parent)
 {
     setRequest(new GetUtterancesViewRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const GetUtterancesViewRequest * GetUtterancesViewResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService GetUtterancesView \a response.
+ * Parses a successful LexModelBuilding GetUtterancesView \a response.
  */
 void GetUtterancesViewResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void GetUtterancesViewResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetUtterancesViewResponsePrivate
+ * \class QtAws::LexModelBuilding::GetUtterancesViewResponsePrivate
  * \brief The GetUtterancesViewResponsePrivate class provides private implementation for GetUtterancesViewResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a GetUtterancesViewResponsePrivate object with public implementation \a q.
  */
 GetUtterancesViewResponsePrivate::GetUtterancesViewResponsePrivate(
-    GetUtterancesViewResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    GetUtterancesViewResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService GetUtterancesView response element from \a xml.
+ * Parses a LexModelBuilding GetUtterancesView response element from \a xml.
  */
 void GetUtterancesViewResponsePrivate::parseGetUtterancesViewResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void GetUtterancesViewResponsePrivate::parseGetUtterancesViewResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

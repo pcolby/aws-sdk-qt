@@ -20,16 +20,16 @@
 #include "describeeventsubscriptionsrequest.h"
 #include "describeeventsubscriptionsrequest_p.h"
 #include "describeeventsubscriptionsresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeEventSubscriptionsRequest
- * \brief The DescribeEventSubscriptionsRequest class provides an interface for DatabaseMigrationService DescribeEventSubscriptions requests.
+ * \class QtAws::DatabaseMigration::DescribeEventSubscriptionsRequest
+ * \brief The DescribeEventSubscriptionsRequest class provides an interface for DatabaseMigration DescribeEventSubscriptions requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeEventSubscriptions
+ * \sa DatabaseMigrationClient::describeEventSubscriptions
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest(const DescribeEventSubscriptionsRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribeEventSubscriptionsRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribeEventSubscriptionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest(const Descr
  * Constructs a DescribeEventSubscriptionsRequest object.
  */
 DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest()
-    : DatabaseMigrationServiceRequest(new DescribeEventSubscriptionsRequestPrivate(DatabaseMigrationServiceRequest::DescribeEventSubscriptionsAction, this))
+    : DatabaseMigrationRequest(new DescribeEventSubscriptionsRequestPrivate(DatabaseMigrationRequest::DescribeEventSubscriptionsAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribeEventSubscriptionsRequest::response(Q
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeEventSubscriptionsRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribeEventSubscriptionsRequestPrivate
  * \brief The DescribeEventSubscriptionsRequestPrivate class provides private implementation for DescribeEventSubscriptionsRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribeEventSubscriptionsRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribeEventSubscriptionsRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribeEventSubscriptionsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribeEventSubscriptionsRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPriva
  */
 DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPrivate(
     const DescribeEventSubscriptionsRequestPrivate &other, DescribeEventSubscriptionsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

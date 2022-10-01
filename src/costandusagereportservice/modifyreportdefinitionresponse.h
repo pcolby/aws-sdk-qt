@@ -20,15 +20,15 @@
 #ifndef QTAWS_MODIFYREPORTDEFINITIONRESPONSE_H
 #define QTAWS_MODIFYREPORTDEFINITIONRESPONSE_H
 
-#include "costandusagereportserviceresponse.h"
+#include "costandusagereportresponse.h"
 #include "modifyreportdefinitionrequest.h"
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 class ModifyReportDefinitionResponsePrivate;
 
-class QTAWSCOSTANDUSAGEREPORTSERVICE_EXPORT ModifyReportDefinitionResponse : public CostandUsageReportServiceResponse {
+class QTAWSCOSTANDUSAGEREPORT_EXPORT ModifyReportDefinitionResponse : public CostandUsageReportResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws
 
 #endif

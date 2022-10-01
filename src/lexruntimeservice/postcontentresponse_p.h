@@ -20,14 +20,14 @@
 #ifndef QTAWS_POSTCONTENTRESPONSE_P_H
 #define QTAWS_POSTCONTENTRESPONSE_P_H
 
-#include "lexruntimeserviceresponse_p.h"
+#include "lexruntimeresponse_p.h"
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 class PostContentResponse;
 
-class PostContentResponsePrivate : public LexRuntimeServiceResponsePrivate {
+class PostContentResponsePrivate : public LexRuntimeResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws
 
 #endif

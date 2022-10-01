@@ -20,16 +20,16 @@
 #include "describeconnectionsrequest.h"
 #include "describeconnectionsrequest_p.h"
 #include "describeconnectionsresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeConnectionsRequest
- * \brief The DescribeConnectionsRequest class provides an interface for DatabaseMigrationService DescribeConnections requests.
+ * \class QtAws::DatabaseMigration::DescribeConnectionsRequest
+ * \brief The DescribeConnectionsRequest class provides an interface for DatabaseMigration DescribeConnections requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeConnections
+ * \sa DatabaseMigrationClient::describeConnections
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeConnectionsRequest::DescribeConnectionsRequest(const DescribeConnectionsRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribeConnectionsRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribeConnectionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeConnectionsRequest::DescribeConnectionsRequest(const DescribeConnections
  * Constructs a DescribeConnectionsRequest object.
  */
 DescribeConnectionsRequest::DescribeConnectionsRequest()
-    : DatabaseMigrationServiceRequest(new DescribeConnectionsRequestPrivate(DatabaseMigrationServiceRequest::DescribeConnectionsAction, this))
+    : DatabaseMigrationRequest(new DescribeConnectionsRequestPrivate(DatabaseMigrationRequest::DescribeConnectionsAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribeConnectionsRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeConnectionsRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribeConnectionsRequestPrivate
  * \brief The DescribeConnectionsRequestPrivate class provides private implementation for DescribeConnectionsRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribeConnectionsRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribeConnectionsRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribeConnectionsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribeConnectionsRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
  */
 DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
     const DescribeConnectionsRequestPrivate &other, DescribeConnectionsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

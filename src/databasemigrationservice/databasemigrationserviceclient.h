@@ -17,19 +17,19 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_DATABASEMIGRATIONSERVICECLIENT_H
-#define QTAWS_DATABASEMIGRATIONSERVICECLIENT_H
+#ifndef QTAWS_DATABASEMIGRATIONCLIENT_H
+#define QTAWS_DATABASEMIGRATIONCLIENT_H
 
 #include "core/awsabstractclient.h"
 
-#include "qtawsdatabasemigrationserviceglobal.h"
+#include "qtawsdatabasemigrationglobal.h"
 
 class QNetworkReply;
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
-class DatabaseMigrationServiceClientPrivate;
+class DatabaseMigrationClientPrivate;
 class AddTagsToResourceRequest;
 class AddTagsToResourceResponse;
 class ApplyPendingMaintenanceActionRequest;
@@ -161,17 +161,17 @@ class TestConnectionResponse;
 class UpdateSubscriptionsToEventBridgeRequest;
 class UpdateSubscriptionsToEventBridgeResponse;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DatabaseMigrationServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDATABASEMIGRATION_EXPORT DatabaseMigrationClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    DatabaseMigrationServiceClient(
+    DatabaseMigrationClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit DatabaseMigrationServiceClient(
+    explicit DatabaseMigrationClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -244,12 +244,12 @@ public slots:
     UpdateSubscriptionsToEventBridgeResponse * updateSubscriptionsToEventBridge(const UpdateSubscriptionsToEventBridgeRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(DatabaseMigrationServiceClient)
-    Q_DISABLE_COPY(DatabaseMigrationServiceClient)
+    Q_DECLARE_PRIVATE(DatabaseMigrationClient)
+    Q_DISABLE_COPY(DatabaseMigrationClient)
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

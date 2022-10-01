@@ -17,33 +17,33 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_MARKETPLACEENTITLEMENTSERVICECLIENT_H
-#define QTAWS_MARKETPLACEENTITLEMENTSERVICECLIENT_H
+#ifndef QTAWS_MARKETPLACEENTITLEMENTCLIENT_H
+#define QTAWS_MARKETPLACEENTITLEMENTCLIENT_H
 
 #include "core/awsabstractclient.h"
 
-#include "qtawsmarketplaceentitlementserviceglobal.h"
+#include "qtawsmarketplaceentitlementglobal.h"
 
 class QNetworkReply;
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
-class MarketplaceEntitlementServiceClientPrivate;
+class MarketplaceEntitlementClientPrivate;
 class GetEntitlementsRequest;
 class GetEntitlementsResponse;
 
-class QTAWSMARKETPLACEENTITLEMENTSERVICE_EXPORT MarketplaceEntitlementServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMARKETPLACEENTITLEMENT_EXPORT MarketplaceEntitlementClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    MarketplaceEntitlementServiceClient(
+    MarketplaceEntitlementClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit MarketplaceEntitlementServiceClient(
+    explicit MarketplaceEntitlementClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -52,12 +52,12 @@ public slots:
     GetEntitlementsResponse * getEntitlements(const GetEntitlementsRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(MarketplaceEntitlementServiceClient)
-    Q_DISABLE_COPY(MarketplaceEntitlementServiceClient)
+    Q_DECLARE_PRIVATE(MarketplaceEntitlementClient)
+    Q_DISABLE_COPY(MarketplaceEntitlementClient)
 
 };
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws
 
 #endif

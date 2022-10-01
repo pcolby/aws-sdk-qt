@@ -20,14 +20,14 @@
 #ifndef QTAWS_GETSESSIONREQUEST_H
 #define QTAWS_GETSESSIONREQUEST_H
 
-#include "lexruntimeservicerequest.h"
+#include "lexruntimerequest.h"
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 class GetSessionRequestPrivate;
 
-class QTAWSLEXRUNTIMESERVICE_EXPORT GetSessionRequest : public LexRuntimeServiceRequest {
+class QTAWSLEXRUNTIME_EXPORT GetSessionRequest : public LexRuntimeRequest {
 
 public:
     GetSessionRequest(const GetSessionRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws
 
 #endif

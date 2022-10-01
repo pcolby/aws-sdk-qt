@@ -1,13 +1,13 @@
-add_compile_definitions(QTAWSAPPLICATIONDISCOVERYSERVICE_LIBRARY)
+add_compile_definitions(QTAWSAPPLICATIONDISCOVERY_LIBRARY)
 
-add_library(QtAwsApplicationDiscoveryService
-  qtawsapplicationdiscoveryserviceglobal.h
-  applicationdiscoveryserviceclient.h
-  applicationdiscoveryserviceclient_p.h
-  applicationdiscoveryservicerequest.h
-  applicationdiscoveryservicerequest_p.h
-  applicationdiscoveryserviceresponse.h
-  applicationdiscoveryserviceresponse_p.h
+add_library(QtAwsApplicationDiscovery
+  qtawsapplicationdiscoveryglobal.h
+  applicationdiscoveryclient.h
+  applicationdiscoveryclient_p.h
+  applicationdiscoveryrequest.h
+  applicationdiscoveryrequest_p.h
+  applicationdiscoveryresponse.h
+  applicationdiscoveryresponse_p.h
   associateconfigurationitemstoapplicationrequest.h
   associateconfigurationitemstoapplicationrequest_p.h
   associateconfigurationitemstoapplicationresponse.h
@@ -108,9 +108,9 @@ add_library(QtAwsApplicationDiscoveryService
   updateapplicationrequest_p.h
   updateapplicationresponse.h
   updateapplicationresponse_p.h
-  applicationdiscoveryserviceclient.cpp
-  applicationdiscoveryservicerequest.cpp
-  applicationdiscoveryserviceresponse.cpp
+  applicationdiscoveryclient.cpp
+  applicationdiscoveryrequest.cpp
+  applicationdiscoveryresponse.cpp
   associateconfigurationitemstoapplicationrequest.cpp
   associateconfigurationitemstoapplicationresponse.cpp
   batchdeleteimportdatarequest.cpp
@@ -162,7 +162,7 @@ add_library(QtAwsApplicationDiscoveryService
   updateapplicationrequest.cpp
   updateapplicationresponse.cpp)
 
-target_link_libraries(QtAwsApplicationDiscoveryService
+target_link_libraries(QtAwsApplicationDiscovery
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

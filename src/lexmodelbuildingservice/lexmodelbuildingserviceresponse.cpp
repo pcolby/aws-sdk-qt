@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "lexmodelbuildingserviceresponse_p.h"
+#include "lexmodelbuildingresponse.h"
+#include "lexmodelbuildingresponse_p.h"
 
 #include <QDebug>
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::LexModelBuildingServiceResponse
- * \brief The LexModelBuildingServiceResponse class provides an interface for LexModelBuildingService responses.
+ * \class QtAws::LexModelBuilding::LexModelBuildingResponse
+ * \brief The LexModelBuildingResponse class provides an interface for LexModelBuilding responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a LexModelBuildingServiceResponse object with parent \a parent.
+ * Constructs a LexModelBuildingResponse object with parent \a parent.
  */
-LexModelBuildingServiceResponse::LexModelBuildingServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new LexModelBuildingServiceResponsePrivate(this), parent)
+LexModelBuildingResponse::LexModelBuildingResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new LexModelBuildingResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a LexModelBuildingServiceResponse object with private implementation \a d,
+ * Constructs a LexModelBuildingResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from LexModelBuildingServiceResponsePrivate.
+ * implementation that inherits from LexModelBuildingResponsePrivate.
  */
-LexModelBuildingServiceResponse::LexModelBuildingServiceResponse(LexModelBuildingServiceResponsePrivate * const d, QObject * const parent)
+LexModelBuildingResponse::LexModelBuildingResponse(LexModelBuildingResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ LexModelBuildingServiceResponse::LexModelBuildingServiceResponse(LexModelBuildin
 /*!
  * \reimp
  */
-void LexModelBuildingServiceResponse::parseFailure(QIODevice &response)
+void LexModelBuildingResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(LexModelBuildingServiceResponse);
+    //Q_D(LexModelBuildingResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void LexModelBuildingServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::LexModelBuildingServiceResponsePrivate
- * \brief The LexModelBuildingServiceResponsePrivate class provides private implementation for LexModelBuildingServiceResponse.
+ * \class QtAws::LexModelBuilding::LexModelBuildingResponsePrivate
+ * \brief The LexModelBuildingResponsePrivate class provides private implementation for LexModelBuildingResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a LexModelBuildingServiceResponsePrivate object with public implementation \a q.
+ * Constructs a LexModelBuildingResponsePrivate object with public implementation \a q.
  */
-LexModelBuildingServiceResponsePrivate::LexModelBuildingServiceResponsePrivate(
-    LexModelBuildingServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+LexModelBuildingResponsePrivate::LexModelBuildingResponsePrivate(
+    LexModelBuildingResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

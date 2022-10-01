@@ -20,16 +20,16 @@
 #include "deletetagsrequest.h"
 #include "deletetagsrequest_p.h"
 #include "deletetagsresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DeleteTagsRequest
- * \brief The DeleteTagsRequest class provides an interface for ApplicationDiscoveryService DeleteTags requests.
+ * \class QtAws::ApplicationDiscovery::DeleteTagsRequest
+ * \brief The DeleteTagsRequest class provides an interface for ApplicationDiscovery DeleteTags requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::deleteTags
+ * \sa ApplicationDiscoveryClient::deleteTags
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteTagsRequest::DeleteTagsRequest(const DeleteTagsRequest &other)
-    : ApplicationDiscoveryServiceRequest(new DeleteTagsRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new DeleteTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ DeleteTagsRequest::DeleteTagsRequest(const DeleteTagsRequest &other)
  * Constructs a DeleteTagsRequest object.
  */
 DeleteTagsRequest::DeleteTagsRequest()
-    : ApplicationDiscoveryServiceRequest(new DeleteTagsRequestPrivate(ApplicationDiscoveryServiceRequest::DeleteTagsAction, this))
+    : ApplicationDiscoveryRequest(new DeleteTagsRequestPrivate(ApplicationDiscoveryRequest::DeleteTagsAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DeleteTagsRequestPrivate
+ * \class QtAws::ApplicationDiscovery::DeleteTagsRequestPrivate
  * \brief The DeleteTagsRequestPrivate class provides private implementation for DeleteTagsRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a DeleteTagsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a DeleteTagsRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, DeleteTagsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, DeleteTagsRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const DeleteTagsRequestPrivate &other, DeleteTagsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

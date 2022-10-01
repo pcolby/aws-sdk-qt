@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::PutBotAliasResponse
- * \brief The PutBotAliasResponse class provides an interace for LexModelBuildingService PutBotAlias responses.
+ * \class QtAws::LexModelBuilding::PutBotAliasResponse
+ * \brief The PutBotAliasResponse class provides an interace for LexModelBuilding PutBotAlias responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::putBotAlias
+ * \sa LexModelBuildingClient::putBotAlias
  */
 
 /*!
@@ -48,7 +48,7 @@ PutBotAliasResponse::PutBotAliasResponse(
         const PutBotAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new PutBotAliasResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new PutBotAliasResponsePrivate(this), parent)
 {
     setRequest(new PutBotAliasRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const PutBotAliasRequest * PutBotAliasResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService PutBotAlias \a response.
+ * Parses a successful LexModelBuilding PutBotAlias \a response.
  */
 void PutBotAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void PutBotAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::PutBotAliasResponsePrivate
+ * \class QtAws::LexModelBuilding::PutBotAliasResponsePrivate
  * \brief The PutBotAliasResponsePrivate class provides private implementation for PutBotAliasResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a PutBotAliasResponsePrivate object with public implementation \a q.
  */
 PutBotAliasResponsePrivate::PutBotAliasResponsePrivate(
-    PutBotAliasResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    PutBotAliasResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService PutBotAlias response element from \a xml.
+ * Parses a LexModelBuilding PutBotAlias response element from \a xml.
  */
 void PutBotAliasResponsePrivate::parsePutBotAliasResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void PutBotAliasResponsePrivate::parsePutBotAliasResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

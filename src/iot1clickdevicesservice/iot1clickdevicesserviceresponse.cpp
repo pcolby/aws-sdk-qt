@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "iot1clickdevicesserviceresponse.h"
-#include "iot1clickdevicesserviceresponse_p.h"
+#include "iot1clickdevicesresponse.h"
+#include "iot1clickdevicesresponse_p.h"
 
 #include <QDebug>
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::IoT1ClickDevicesServiceResponse
- * \brief The IoT1ClickDevicesServiceResponse class provides an interface for IoT1ClickDevicesService responses.
+ * \class QtAws::IoT1ClickDevices::IoT1ClickDevicesResponse
+ * \brief The IoT1ClickDevicesResponse class provides an interface for IoT1ClickDevices responses.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a IoT1ClickDevicesServiceResponse object with parent \a parent.
+ * Constructs a IoT1ClickDevicesResponse object with parent \a parent.
  */
-IoT1ClickDevicesServiceResponse::IoT1ClickDevicesServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new IoT1ClickDevicesServiceResponsePrivate(this), parent)
+IoT1ClickDevicesResponse::IoT1ClickDevicesResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new IoT1ClickDevicesResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a IoT1ClickDevicesServiceResponse object with private implementation \a d,
+ * Constructs a IoT1ClickDevicesResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from IoT1ClickDevicesServiceResponsePrivate.
+ * implementation that inherits from IoT1ClickDevicesResponsePrivate.
  */
-IoT1ClickDevicesServiceResponse::IoT1ClickDevicesServiceResponse(IoT1ClickDevicesServiceResponsePrivate * const d, QObject * const parent)
+IoT1ClickDevicesResponse::IoT1ClickDevicesResponse(IoT1ClickDevicesResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ IoT1ClickDevicesServiceResponse::IoT1ClickDevicesServiceResponse(IoT1ClickDevice
 /*!
  * \reimp
  */
-void IoT1ClickDevicesServiceResponse::parseFailure(QIODevice &response)
+void IoT1ClickDevicesResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(IoT1ClickDevicesServiceResponse);
+    //Q_D(IoT1ClickDevicesResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void IoT1ClickDevicesServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::IoT1ClickDevicesServiceResponsePrivate
- * \brief The IoT1ClickDevicesServiceResponsePrivate class provides private implementation for IoT1ClickDevicesServiceResponse.
+ * \class QtAws::IoT1ClickDevices::IoT1ClickDevicesResponsePrivate
+ * \brief The IoT1ClickDevicesResponsePrivate class provides private implementation for IoT1ClickDevicesResponse.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a IoT1ClickDevicesServiceResponsePrivate object with public implementation \a q.
+ * Constructs a IoT1ClickDevicesResponsePrivate object with public implementation \a q.
  */
-IoT1ClickDevicesServiceResponsePrivate::IoT1ClickDevicesServiceResponsePrivate(
-    IoT1ClickDevicesServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+IoT1ClickDevicesResponsePrivate::IoT1ClickDevicesResponsePrivate(
+    IoT1ClickDevicesResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

@@ -20,14 +20,14 @@
 #ifndef QTAWS_PUTREPORTDEFINITIONRESPONSE_P_H
 #define QTAWS_PUTREPORTDEFINITIONRESPONSE_P_H
 
-#include "costandusagereportserviceresponse_p.h"
+#include "costandusagereportresponse_p.h"
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 class PutReportDefinitionResponse;
 
-class PutReportDefinitionResponsePrivate : public CostandUsageReportServiceResponsePrivate {
+class PutReportDefinitionResponsePrivate : public CostandUsageReportResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws
 
 #endif

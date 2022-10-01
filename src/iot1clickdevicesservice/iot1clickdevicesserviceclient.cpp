@@ -17,8 +17,8 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "iot1clickdevicesserviceclient.h"
-#include "iot1clickdevicesserviceclient_p.h"
+#include "iot1clickdevicesclient.h"
+#include "iot1clickdevicesclient_p.h"
 
 #include "core/awssignaturev4.h"
 #include "claimdevicesbyclaimcoderequest.h"
@@ -52,44 +52,44 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::IoT1ClickDevicesService
+ * \namespace QtAws::IoT1ClickDevices
  * \brief Contains classess for accessing AWS IoT 1-Click Devices Service.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::IoT1ClickDevicesServiceClient
- * \brief The IoT1ClickDevicesServiceClient class provides access to the AWS IoT 1-Click Devices Service service.
+ * \class QtAws::IoT1ClickDevices::IoT1ClickDevicesClient
+ * \brief The IoT1ClickDevicesClient class provides access to the AWS IoT 1-Click Devices Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  */
 
 /*!
- * \brief Constructs a IoT1ClickDevicesServiceClient object.
+ * \brief Constructs a IoT1ClickDevicesClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-IoT1ClickDevicesServiceClient::IoT1ClickDevicesServiceClient(
+IoT1ClickDevicesClient::IoT1ClickDevicesClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoT1ClickDevicesServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new IoT1ClickDevicesClientPrivate(this), parent)
 {
-    Q_D(IoT1ClickDevicesServiceClient);
+    Q_D(IoT1ClickDevicesClient);
     d->apiVersion = QStringLiteral("2018-05-14");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("devices.iot1click");
@@ -100,7 +100,7 @@ IoT1ClickDevicesServiceClient::IoT1ClickDevicesServiceClient(
 }
 
 /*!
- * \overload IoT1ClickDevicesServiceClient()
+ * \overload IoT1ClickDevicesClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -110,14 +110,14 @@ IoT1ClickDevicesServiceClient::IoT1ClickDevicesServiceClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-IoT1ClickDevicesServiceClient::IoT1ClickDevicesServiceClient(
+IoT1ClickDevicesClient::IoT1ClickDevicesClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoT1ClickDevicesServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new IoT1ClickDevicesClientPrivate(this), parent)
 {
-    Q_D(IoT1ClickDevicesServiceClient);
+    Q_D(IoT1ClickDevicesClient);
     d->apiVersion = QStringLiteral("2018-05-14");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -128,33 +128,33 @@ IoT1ClickDevicesServiceClient::IoT1ClickDevicesServiceClient(
 }
 
 /*!
- * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * Sends \a request to the IoT1ClickDevicesClient service, and returns a pointer to an
  * ClaimDevicesByClaimCodeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds device(s) to your account (i.e., claim one or more devices) if and only if you received a claim code with the
  */
-ClaimDevicesByClaimCodeResponse * IoT1ClickDevicesServiceClient::claimDevicesByClaimCode(const ClaimDevicesByClaimCodeRequest &request)
+ClaimDevicesByClaimCodeResponse * IoT1ClickDevicesClient::claimDevicesByClaimCode(const ClaimDevicesByClaimCodeRequest &request)
 {
     return qobject_cast<ClaimDevicesByClaimCodeResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * Sends \a request to the IoT1ClickDevicesClient service, and returns a pointer to an
  * DescribeDeviceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Given a device ID, returns a DescribeDeviceResponse object describing the details of the
  */
-DescribeDeviceResponse * IoT1ClickDevicesServiceClient::describeDevice(const DescribeDeviceRequest &request)
+DescribeDeviceResponse * IoT1ClickDevicesClient::describeDevice(const DescribeDeviceRequest &request)
 {
     return qobject_cast<DescribeDeviceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * Sends \a request to the IoT1ClickDevicesClient service, and returns a pointer to an
  * FinalizeDeviceClaimResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -164,26 +164,26 @@ DescribeDeviceResponse * IoT1ClickDevicesServiceClient::describeDevice(const Des
  * Claiming a device consists of initiating a claim, then publishing a device event, and finalizing the claim. For a device
  * of type button, a device event can be published by simply clicking the
  */
-FinalizeDeviceClaimResponse * IoT1ClickDevicesServiceClient::finalizeDeviceClaim(const FinalizeDeviceClaimRequest &request)
+FinalizeDeviceClaimResponse * IoT1ClickDevicesClient::finalizeDeviceClaim(const FinalizeDeviceClaimRequest &request)
 {
     return qobject_cast<FinalizeDeviceClaimResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * Sends \a request to the IoT1ClickDevicesClient service, and returns a pointer to an
  * GetDeviceMethodsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Given a device ID, returns the invokable methods associated with the
  */
-GetDeviceMethodsResponse * IoT1ClickDevicesServiceClient::getDeviceMethods(const GetDeviceMethodsRequest &request)
+GetDeviceMethodsResponse * IoT1ClickDevicesClient::getDeviceMethods(const GetDeviceMethodsRequest &request)
 {
     return qobject_cast<GetDeviceMethodsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * Sends \a request to the IoT1ClickDevicesClient service, and returns a pointer to an
  * InitiateDeviceClaimResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -193,13 +193,13 @@ GetDeviceMethodsResponse * IoT1ClickDevicesServiceClient::getDeviceMethods(const
  * Claiming a device consists of initiating a claim, then publishing a device event, and finalizing the claim. For a device
  * of type button, a device event can be published by simply clicking the
  */
-InitiateDeviceClaimResponse * IoT1ClickDevicesServiceClient::initiateDeviceClaim(const InitiateDeviceClaimRequest &request)
+InitiateDeviceClaimResponse * IoT1ClickDevicesClient::initiateDeviceClaim(const InitiateDeviceClaimRequest &request)
 {
     return qobject_cast<InitiateDeviceClaimResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * Sends \a request to the IoT1ClickDevicesClient service, and returns a pointer to an
  * InvokeDeviceMethodResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -207,52 +207,52 @@ InitiateDeviceClaimResponse * IoT1ClickDevicesServiceClient::initiateDeviceClaim
  * Given a device ID, issues a request to invoke a named device method (with possible parameters). See the "Example POST"
  * code snippet
  */
-InvokeDeviceMethodResponse * IoT1ClickDevicesServiceClient::invokeDeviceMethod(const InvokeDeviceMethodRequest &request)
+InvokeDeviceMethodResponse * IoT1ClickDevicesClient::invokeDeviceMethod(const InvokeDeviceMethodRequest &request)
 {
     return qobject_cast<InvokeDeviceMethodResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * Sends \a request to the IoT1ClickDevicesClient service, and returns a pointer to an
  * ListDeviceEventsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Using a device ID, returns a DeviceEventsResponse object containing an array of events for the
  */
-ListDeviceEventsResponse * IoT1ClickDevicesServiceClient::listDeviceEvents(const ListDeviceEventsRequest &request)
+ListDeviceEventsResponse * IoT1ClickDevicesClient::listDeviceEvents(const ListDeviceEventsRequest &request)
 {
     return qobject_cast<ListDeviceEventsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * Sends \a request to the IoT1ClickDevicesClient service, and returns a pointer to an
  * ListDevicesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the 1-Click compatible devices associated with your AWS
  */
-ListDevicesResponse * IoT1ClickDevicesServiceClient::listDevices(const ListDevicesRequest &request)
+ListDevicesResponse * IoT1ClickDevicesClient::listDevices(const ListDevicesRequest &request)
 {
     return qobject_cast<ListDevicesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * Sends \a request to the IoT1ClickDevicesClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the tags associated with the specified resource
  */
-ListTagsForResourceResponse * IoT1ClickDevicesServiceClient::listTagsForResource(const ListTagsForResourceRequest &request)
+ListTagsForResourceResponse * IoT1ClickDevicesClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * Sends \a request to the IoT1ClickDevicesClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -261,67 +261,67 @@ ListTagsForResourceResponse * IoT1ClickDevicesServiceClient::listTagsForResource
  * href="https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-appendix.html#1click-limits">AWS IoT 1-Click
  * Service Limits</a> for the maximum number of tags allowed per
  */
-TagResourceResponse * IoT1ClickDevicesServiceClient::tagResource(const TagResourceRequest &request)
+TagResourceResponse * IoT1ClickDevicesClient::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * Sends \a request to the IoT1ClickDevicesClient service, and returns a pointer to an
  * UnclaimDeviceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Disassociates a device from your AWS account using its device
  */
-UnclaimDeviceResponse * IoT1ClickDevicesServiceClient::unclaimDevice(const UnclaimDeviceRequest &request)
+UnclaimDeviceResponse * IoT1ClickDevicesClient::unclaimDevice(const UnclaimDeviceRequest &request)
 {
     return qobject_cast<UnclaimDeviceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * Sends \a request to the IoT1ClickDevicesClient service, and returns a pointer to an
  * UntagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Using tag keys, deletes the tags (key/value pairs) associated with the specified resource
  */
-UntagResourceResponse * IoT1ClickDevicesServiceClient::untagResource(const UntagResourceRequest &request)
+UntagResourceResponse * IoT1ClickDevicesClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * Sends \a request to the IoT1ClickDevicesClient service, and returns a pointer to an
  * UpdateDeviceStateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Using a Boolean value (true or false), this operation enables or disables the device given a device
  */
-UpdateDeviceStateResponse * IoT1ClickDevicesServiceClient::updateDeviceState(const UpdateDeviceStateRequest &request)
+UpdateDeviceStateResponse * IoT1ClickDevicesClient::updateDeviceState(const UpdateDeviceStateRequest &request)
 {
     return qobject_cast<UpdateDeviceStateResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::IoT1ClickDevicesServiceClientPrivate
- * \brief The IoT1ClickDevicesServiceClientPrivate class provides private implementation for IoT1ClickDevicesServiceClient.
+ * \class QtAws::IoT1ClickDevices::IoT1ClickDevicesClientPrivate
+ * \brief The IoT1ClickDevicesClientPrivate class provides private implementation for IoT1ClickDevicesClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a IoT1ClickDevicesServiceClientPrivate object with public implementation \a q.
+ * Constructs a IoT1ClickDevicesClientPrivate object with public implementation \a q.
  */
-IoT1ClickDevicesServiceClientPrivate::IoT1ClickDevicesServiceClientPrivate(IoT1ClickDevicesServiceClient * const q)
+IoT1ClickDevicesClientPrivate::IoT1ClickDevicesClientPrivate(IoT1ClickDevicesClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

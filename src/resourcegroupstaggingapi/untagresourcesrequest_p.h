@@ -20,18 +20,18 @@
 #ifndef QTAWS_UNTAGRESOURCESREQUEST_P_H
 #define QTAWS_UNTAGRESOURCESREQUEST_P_H
 
-#include "resourcegroupstaggingapirequest_p.h"
+#include "resourcegroupstaggingrequest_p.h"
 #include "untagresourcesrequest.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 class UntagResourcesRequest;
 
-class UntagResourcesRequestPrivate : public ResourceGroupsTaggingApiRequestPrivate {
+class UntagResourcesRequestPrivate : public ResourceGroupsTaggingRequestPrivate {
 
 public:
-    UntagResourcesRequestPrivate(const ResourceGroupsTaggingApiRequest::Action action,
+    UntagResourcesRequestPrivate(const ResourceGroupsTaggingRequest::Action action,
                                    UntagResourcesRequest * const q);
     UntagResourcesRequestPrivate(const UntagResourcesRequestPrivate &other,
                                    UntagResourcesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws
 
 #endif

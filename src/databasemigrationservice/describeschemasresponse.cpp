@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeSchemasResponse
- * \brief The DescribeSchemasResponse class provides an interace for DatabaseMigrationService DescribeSchemas responses.
+ * \class QtAws::DatabaseMigration::DescribeSchemasResponse
+ * \brief The DescribeSchemasResponse class provides an interace for DatabaseMigration DescribeSchemas responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeSchemas
+ * \sa DatabaseMigrationClient::describeSchemas
  */
 
 /*!
@@ -55,7 +55,7 @@ DescribeSchemasResponse::DescribeSchemasResponse(
         const DescribeSchemasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeSchemasResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DescribeSchemasResponsePrivate(this), parent)
 {
     setRequest(new DescribeSchemasRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DescribeSchemasRequest * DescribeSchemasResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DescribeSchemas \a response.
+ * Parses a successful DatabaseMigration DescribeSchemas \a response.
  */
 void DescribeSchemasResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DescribeSchemasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeSchemasResponsePrivate
+ * \class QtAws::DatabaseMigration::DescribeSchemasResponsePrivate
  * \brief The DescribeSchemasResponsePrivate class provides private implementation for DescribeSchemasResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DescribeSchemasResponsePrivate object with public implementation \a q.
  */
 DescribeSchemasResponsePrivate::DescribeSchemasResponsePrivate(
-    DescribeSchemasResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DescribeSchemasResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DescribeSchemas response element from \a xml.
+ * Parses a DatabaseMigration DescribeSchemas response element from \a xml.
  */
 void DescribeSchemasResponsePrivate::parseDescribeSchemasResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribeSchemasResponsePrivate::parseDescribeSchemasResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -17,30 +17,30 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_LEXRUNTIMESERVICECLIENT_P_H
-#define QTAWS_LEXRUNTIMESERVICECLIENT_P_H
+#ifndef QTAWS_LEXRUNTIMECLIENT_P_H
+#define QTAWS_LEXRUNTIMECLIENT_P_H
 
 #include "core/awsabstractclient_p.h"
 
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
-class LexRuntimeServiceClient;
+class LexRuntimeClient;
 
-class LexRuntimeServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LexRuntimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit LexRuntimeServiceClientPrivate(LexRuntimeServiceClient * const q);
+    explicit LexRuntimeClientPrivate(LexRuntimeClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(LexRuntimeServiceClient)
-    Q_DISABLE_COPY(LexRuntimeServiceClientPrivate)
+    Q_DECLARE_PUBLIC(LexRuntimeClient)
+    Q_DISABLE_COPY(LexRuntimeClientPrivate)
 
 };
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws
 
 #endif

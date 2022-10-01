@@ -20,15 +20,15 @@
 #ifndef QTAWS_REBOOTREPLICATIONINSTANCERESPONSE_H
 #define QTAWS_REBOOTREPLICATIONINSTANCERESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "rebootreplicationinstancerequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class RebootReplicationInstanceResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT RebootReplicationInstanceResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT RebootReplicationInstanceResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

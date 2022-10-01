@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::UpdatePackageResponse
- * \brief The UpdatePackageResponse class provides an interace for ElasticsearchService UpdatePackage responses.
+ * \class QtAws::Elasticsearch::UpdatePackageResponse
+ * \brief The UpdatePackageResponse class provides an interace for Elasticsearch UpdatePackage responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::updatePackage
+ * \sa ElasticsearchClient::updatePackage
  */
 
 /*!
@@ -61,7 +61,7 @@ UpdatePackageResponse::UpdatePackageResponse(
         const UpdatePackageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new UpdatePackageResponsePrivate(this), parent)
+    : ElasticsearchResponse(new UpdatePackageResponsePrivate(this), parent)
 {
     setRequest(new UpdatePackageRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const UpdatePackageRequest * UpdatePackageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService UpdatePackage \a response.
+ * Parses a successful Elasticsearch UpdatePackage \a response.
  */
 void UpdatePackageResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void UpdatePackageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::UpdatePackageResponsePrivate
+ * \class QtAws::Elasticsearch::UpdatePackageResponsePrivate
  * \brief The UpdatePackageResponsePrivate class provides private implementation for UpdatePackageResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a UpdatePackageResponsePrivate object with public implementation \a q.
  */
 UpdatePackageResponsePrivate::UpdatePackageResponsePrivate(
-    UpdatePackageResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    UpdatePackageResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService UpdatePackage response element from \a xml.
+ * Parses a Elasticsearch UpdatePackage response element from \a xml.
  */
 void UpdatePackageResponsePrivate::parseUpdatePackageResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void UpdatePackageResponsePrivate::parseUpdatePackageResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

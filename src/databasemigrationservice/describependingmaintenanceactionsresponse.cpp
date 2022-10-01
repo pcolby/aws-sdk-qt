@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribePendingMaintenanceActionsResponse
- * \brief The DescribePendingMaintenanceActionsResponse class provides an interace for DatabaseMigrationService DescribePendingMaintenanceActions responses.
+ * \class QtAws::DatabaseMigration::DescribePendingMaintenanceActionsResponse
+ * \brief The DescribePendingMaintenanceActionsResponse class provides an interace for DatabaseMigration DescribePendingMaintenanceActions responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describePendingMaintenanceActions
+ * \sa DatabaseMigrationClient::describePendingMaintenanceActions
  */
 
 /*!
@@ -55,7 +55,7 @@ DescribePendingMaintenanceActionsResponse::DescribePendingMaintenanceActionsResp
         const DescribePendingMaintenanceActionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribePendingMaintenanceActionsResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DescribePendingMaintenanceActionsResponsePrivate(this), parent)
 {
     setRequest(new DescribePendingMaintenanceActionsRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DescribePendingMaintenanceActionsRequest * DescribePendingMaintenanceActio
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DescribePendingMaintenanceActions \a response.
+ * Parses a successful DatabaseMigration DescribePendingMaintenanceActions \a response.
  */
 void DescribePendingMaintenanceActionsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DescribePendingMaintenanceActionsResponse::parseSuccess(QIODevice &response
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribePendingMaintenanceActionsResponsePrivate
+ * \class QtAws::DatabaseMigration::DescribePendingMaintenanceActionsResponsePrivate
  * \brief The DescribePendingMaintenanceActionsResponsePrivate class provides private implementation for DescribePendingMaintenanceActionsResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DescribePendingMaintenanceActionsResponsePrivate object with public implementation \a q.
  */
 DescribePendingMaintenanceActionsResponsePrivate::DescribePendingMaintenanceActionsResponsePrivate(
-    DescribePendingMaintenanceActionsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DescribePendingMaintenanceActionsResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DescribePendingMaintenanceActions response element from \a xml.
+ * Parses a DatabaseMigration DescribePendingMaintenanceActions response element from \a xml.
  */
 void DescribePendingMaintenanceActionsResponsePrivate::parseDescribePendingMaintenanceActionsResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribePendingMaintenanceActionsResponsePrivate::parseDescribePendingMaint
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

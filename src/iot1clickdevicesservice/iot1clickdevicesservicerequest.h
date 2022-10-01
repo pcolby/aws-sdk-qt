@@ -17,12 +17,12 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_IOT1CLICKDEVICESSERVICEREQUEST_H
-#define QTAWS_IOT1CLICKDEVICESSERVICEREQUEST_H
+#ifndef QTAWS_IOT1CLICKDEVICESREQUEST_H
+#define QTAWS_IOT1CLICKDEVICESREQUEST_H
 
 #include "core/awsabstractrequest.h"
 
-#include "qtawsiot1clickdevicesserviceglobal.h"
+#include "qtawsiot1clickdevicesglobal.h"
 
 #include <QFlags>
 #include <QObject>
@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
-class IoT1ClickDevicesServiceRequestPrivate;
+class IoT1ClickDevicesRequestPrivate;
 
-class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT IoT1ClickDevicesServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOT1CLICKDEVICES_EXPORT IoT1ClickDevicesRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by IoT1ClickDevicesService.
+    /// Actions supported by IoT1ClickDevices.
     enum Action {
         ClaimDevicesByClaimCodeAction,
         DescribeDeviceAction,
@@ -55,9 +55,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    IoT1ClickDevicesServiceRequest(const Action action);
-    IoT1ClickDevicesServiceRequest(const IoT1ClickDevicesServiceRequest &other);
-    IoT1ClickDevicesServiceRequest &operator=(const IoT1ClickDevicesServiceRequest &other);
+    IoT1ClickDevicesRequest(const Action action);
+    IoT1ClickDevicesRequest(const IoT1ClickDevicesRequest &other);
+    IoT1ClickDevicesRequest &operator=(const IoT1ClickDevicesRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -66,12 +66,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const IoT1ClickDevicesServiceRequest &other) const;
+    virtual bool operator==(const IoT1ClickDevicesRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit IoT1ClickDevicesServiceRequest(IoT1ClickDevicesServiceRequestPrivate * const d);
+    explicit IoT1ClickDevicesRequest(IoT1ClickDevicesRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -84,11 +84,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(IoT1ClickDevicesServiceRequest)
+    Q_DECLARE_PRIVATE(IoT1ClickDevicesRequest)
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

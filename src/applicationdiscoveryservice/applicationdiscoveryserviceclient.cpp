@@ -17,8 +17,8 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "applicationdiscoveryserviceclient.h"
-#include "applicationdiscoveryserviceclient_p.h"
+#include "applicationdiscoveryclient.h"
+#include "applicationdiscoveryclient_p.h"
 
 #include "core/awssignaturev4.h"
 #include "associateconfigurationitemstoapplicationrequest.h"
@@ -76,23 +76,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::ApplicationDiscoveryService
+ * \namespace QtAws::ApplicationDiscovery
  * \brief Contains classess for accessing AWS Application Discovery Service.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceClient
- * \brief The ApplicationDiscoveryServiceClient class provides access to the AWS Application Discovery Service service.
+ * \class QtAws::ApplicationDiscovery::ApplicationDiscoveryClient
+ * \brief The ApplicationDiscoveryClient class provides access to the AWS Application Discovery Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -205,21 +205,21 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * \brief Constructs a ApplicationDiscoveryServiceClient object.
+ * \brief Constructs a ApplicationDiscoveryClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
+ApplicationDiscoveryClient::ApplicationDiscoveryClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ApplicationDiscoveryServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ApplicationDiscoveryClientPrivate(this), parent)
 {
-    Q_D(ApplicationDiscoveryServiceClient);
+    Q_D(ApplicationDiscoveryClient);
     d->apiVersion = QStringLiteral("2015-11-01");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("discovery");
@@ -230,7 +230,7 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
 }
 
 /*!
- * \overload ApplicationDiscoveryServiceClient()
+ * \overload ApplicationDiscoveryClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -240,14 +240,14 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
+ApplicationDiscoveryClient::ApplicationDiscoveryClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ApplicationDiscoveryServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ApplicationDiscoveryClientPrivate(this), parent)
 {
-    Q_D(ApplicationDiscoveryServiceClient);
+    Q_D(ApplicationDiscoveryClient);
     d->apiVersion = QStringLiteral("2015-11-01");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -258,20 +258,20 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * AssociateConfigurationItemsToApplicationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Associates one or more configuration items with an
  */
-AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceClient::associateConfigurationItemsToApplication(const AssociateConfigurationItemsToApplicationRequest &request)
+AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryClient::associateConfigurationItemsToApplication(const AssociateConfigurationItemsToApplicationRequest &request)
 {
     return qobject_cast<AssociateConfigurationItemsToApplicationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * BatchDeleteImportDataResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -286,26 +286,26 @@ AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceCl
  * updated. When you delete an import task that contains records that were used to match, the information in those matched
  * records that comes from the deleted records will also be
  */
-BatchDeleteImportDataResponse * ApplicationDiscoveryServiceClient::batchDeleteImportData(const BatchDeleteImportDataRequest &request)
+BatchDeleteImportDataResponse * ApplicationDiscoveryClient::batchDeleteImportData(const BatchDeleteImportDataRequest &request)
 {
     return qobject_cast<BatchDeleteImportDataResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * CreateApplicationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates an application with the given name and
  */
-CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication(const CreateApplicationRequest &request)
+CreateApplicationResponse * ApplicationDiscoveryClient::createApplication(const CreateApplicationRequest &request)
 {
     return qobject_cast<CreateApplicationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * CreateTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -317,26 +317,26 @@ CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication
  *
  * Do not store sensitive information (like personal data) in
  */
-CreateTagsResponse * ApplicationDiscoveryServiceClient::createTags(const CreateTagsRequest &request)
+CreateTagsResponse * ApplicationDiscoveryClient::createTags(const CreateTagsRequest &request)
 {
     return qobject_cast<CreateTagsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * DeleteApplicationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a list of applications and their associations with configuration
  */
-DeleteApplicationsResponse * ApplicationDiscoveryServiceClient::deleteApplications(const DeleteApplicationsRequest &request)
+DeleteApplicationsResponse * ApplicationDiscoveryClient::deleteApplications(const DeleteApplicationsRequest &request)
 {
     return qobject_cast<DeleteApplicationsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * DeleteTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -344,13 +344,13 @@ DeleteApplicationsResponse * ApplicationDiscoveryServiceClient::deleteApplicatio
  * Deletes the association between configuration items and one or more tags. This API accepts a list of multiple
  * configuration
  */
-DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteTagsRequest &request)
+DeleteTagsResponse * ApplicationDiscoveryClient::deleteTags(const DeleteTagsRequest &request)
 {
     return qobject_cast<DeleteTagsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * DescribeAgentsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -358,13 +358,13 @@ DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteT
  * Lists agents or connectors as specified by ID or other filters. All agents/connectors associated with your user account
  * can be listed if you call <code>DescribeAgents</code> as is without passing any
  */
-DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const DescribeAgentsRequest &request)
+DescribeAgentsResponse * ApplicationDiscoveryClient::describeAgents(const DescribeAgentsRequest &request)
 {
     return qobject_cast<DescribeAgentsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * DescribeConfigurationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -394,13 +394,13 @@ DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const
  * href="https://docs.aws.amazon.com/application-discovery/latest/userguide/discovery-api-queries.html#DescribeConfigurations">Using
  * the DescribeConfigurations Action</a> in the <i>Amazon Web Services Application Discovery Service User
  */
-DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConfigurations(const DescribeConfigurationsRequest &request)
+DescribeConfigurationsResponse * ApplicationDiscoveryClient::describeConfigurations(const DescribeConfigurationsRequest &request)
 {
     return qobject_cast<DescribeConfigurationsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * DescribeContinuousExportsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -408,13 +408,13 @@ DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConf
  * Lists exports as specified by ID. All continuous exports associated with your user account can be listed if you call
  * <code>DescribeContinuousExports</code> as is without passing any
  */
-DescribeContinuousExportsResponse * ApplicationDiscoveryServiceClient::describeContinuousExports(const DescribeContinuousExportsRequest &request)
+DescribeContinuousExportsResponse * ApplicationDiscoveryClient::describeContinuousExports(const DescribeContinuousExportsRequest &request)
 {
     return qobject_cast<DescribeContinuousExportsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * DescribeExportConfigurationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -422,26 +422,26 @@ DescribeContinuousExportsResponse * ApplicationDiscoveryServiceClient::describeC
  * <code>DescribeExportConfigurations</code> is deprecated. Use <a
  * href="https://docs.aws.amazon.com/application-discovery/latest/APIReference/API_DescribeExportTasks.html">DescribeExportTasks</a>,
  */
-DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::describeExportConfigurations(const DescribeExportConfigurationsRequest &request)
+DescribeExportConfigurationsResponse * ApplicationDiscoveryClient::describeExportConfigurations(const DescribeExportConfigurationsRequest &request)
 {
     return qobject_cast<DescribeExportConfigurationsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * DescribeExportTasksResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieve status of one or more export tasks. You can retrieve the status of up to 100 export
  */
-DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportTasks(const DescribeExportTasksRequest &request)
+DescribeExportTasksResponse * ApplicationDiscoveryClient::describeExportTasks(const DescribeExportTasksRequest &request)
 {
     return qobject_cast<DescribeExportTasksResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * DescribeImportTasksResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -449,13 +449,13 @@ DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportT
  * Returns an array of import tasks for your account, including status information, times, IDs, the Amazon S3 Object URL
  * for the import file, and
  */
-DescribeImportTasksResponse * ApplicationDiscoveryServiceClient::describeImportTasks(const DescribeImportTasksRequest &request)
+DescribeImportTasksResponse * ApplicationDiscoveryClient::describeImportTasks(const DescribeImportTasksRequest &request)
 {
     return qobject_cast<DescribeImportTasksResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * DescribeTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -478,26 +478,26 @@ DescribeImportTasksResponse * ApplicationDiscoveryServiceClient::describeImportT
  * Also, all configuration items associated with your user account that have tags can be listed if you call
  * <code>DescribeTags</code> as is without passing any
  */
-DescribeTagsResponse * ApplicationDiscoveryServiceClient::describeTags(const DescribeTagsRequest &request)
+DescribeTagsResponse * ApplicationDiscoveryClient::describeTags(const DescribeTagsRequest &request)
 {
     return qobject_cast<DescribeTagsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * DisassociateConfigurationItemsFromApplicationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Disassociates one or more configuration items from an
  */
-DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServiceClient::disassociateConfigurationItemsFromApplication(const DisassociateConfigurationItemsFromApplicationRequest &request)
+DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryClient::disassociateConfigurationItemsFromApplication(const DisassociateConfigurationItemsFromApplicationRequest &request)
 {
     return qobject_cast<DisassociateConfigurationItemsFromApplicationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * ExportConfigurationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -511,13 +511,13 @@ DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServ
  * returns an export ID that you can query using the <i>DescribeExportConfigurations</i> API. The system imposes a limit of
  * two configuration exports in six
  */
-ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigurations(const ExportConfigurationsRequest &request)
+ExportConfigurationsResponse * ApplicationDiscoveryClient::exportConfigurations(const ExportConfigurationsRequest &request)
 {
     return qobject_cast<ExportConfigurationsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * GetDiscoverySummaryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -528,13 +528,13 @@ ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigur
  *
  * This API operation takes no request parameters and is called as is at the command prompt as shown in the
  */
-GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySummary(const GetDiscoverySummaryRequest &request)
+GetDiscoverySummaryResponse * ApplicationDiscoveryClient::getDiscoverySummary(const GetDiscoverySummaryRequest &request)
 {
     return qobject_cast<GetDiscoverySummaryResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * ListConfigurationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -542,52 +542,52 @@ GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySum
  * Retrieves a list of configuration items as specified by the value passed to the required parameter
  * <code>configurationType</code>. Optional filtering may be applied to refine search
  */
-ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfigurations(const ListConfigurationsRequest &request)
+ListConfigurationsResponse * ApplicationDiscoveryClient::listConfigurations(const ListConfigurationsRequest &request)
 {
     return qobject_cast<ListConfigurationsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * ListServerNeighborsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves a list of servers that are one network hop away from a specified
  */
-ListServerNeighborsResponse * ApplicationDiscoveryServiceClient::listServerNeighbors(const ListServerNeighborsRequest &request)
+ListServerNeighborsResponse * ApplicationDiscoveryClient::listServerNeighbors(const ListServerNeighborsRequest &request)
 {
     return qobject_cast<ListServerNeighborsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * StartContinuousExportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Start the continuous flow of agent's discovered data into Amazon
  */
-StartContinuousExportResponse * ApplicationDiscoveryServiceClient::startContinuousExport(const StartContinuousExportRequest &request)
+StartContinuousExportResponse * ApplicationDiscoveryClient::startContinuousExport(const StartContinuousExportRequest &request)
 {
     return qobject_cast<StartContinuousExportResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * StartDataCollectionByAgentIdsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Instructs the specified agents or connectors to start collecting
  */
-StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::startDataCollectionByAgentIds(const StartDataCollectionByAgentIdsRequest &request)
+StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryClient::startDataCollectionByAgentIds(const StartDataCollectionByAgentIdsRequest &request)
 {
     return qobject_cast<StartDataCollectionByAgentIdsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * StartExportTaskResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -607,13 +607,13 @@ StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::start
  * Agentless Discovery Connector data and summary data from Amazon Web Services Discovery Agents. Export of summary data is
  * limited to two exports per day.
  */
-StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(const StartExportTaskRequest &request)
+StartExportTaskResponse * ApplicationDiscoveryClient::startExportTask(const StartExportTaskRequest &request)
 {
     return qobject_cast<StartExportTaskResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * StartImportTaskResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -658,67 +658,67 @@ StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(con
  * href="https://docs.aws.amazon.com/application-discovery/latest/userguide/ads_service_limits.html">Amazon Web Services
  * Application Discovery Service Limits</a> in the <i>Amazon Web Services Application Discovery Service User
  */
-StartImportTaskResponse * ApplicationDiscoveryServiceClient::startImportTask(const StartImportTaskRequest &request)
+StartImportTaskResponse * ApplicationDiscoveryClient::startImportTask(const StartImportTaskRequest &request)
 {
     return qobject_cast<StartImportTaskResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * StopContinuousExportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Stop the continuous flow of agent's discovered data into Amazon
  */
-StopContinuousExportResponse * ApplicationDiscoveryServiceClient::stopContinuousExport(const StopContinuousExportRequest &request)
+StopContinuousExportResponse * ApplicationDiscoveryClient::stopContinuousExport(const StopContinuousExportRequest &request)
 {
     return qobject_cast<StopContinuousExportResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * StopDataCollectionByAgentIdsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Instructs the specified agents or connectors to stop collecting
  */
-StopDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::stopDataCollectionByAgentIds(const StopDataCollectionByAgentIdsRequest &request)
+StopDataCollectionByAgentIdsResponse * ApplicationDiscoveryClient::stopDataCollectionByAgentIds(const StopDataCollectionByAgentIdsRequest &request)
 {
     return qobject_cast<StopDataCollectionByAgentIdsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * Sends \a request to the ApplicationDiscoveryClient service, and returns a pointer to an
  * UpdateApplicationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates metadata about an
  */
-UpdateApplicationResponse * ApplicationDiscoveryServiceClient::updateApplication(const UpdateApplicationRequest &request)
+UpdateApplicationResponse * ApplicationDiscoveryClient::updateApplication(const UpdateApplicationRequest &request)
 {
     return qobject_cast<UpdateApplicationResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceClientPrivate
- * \brief The ApplicationDiscoveryServiceClientPrivate class provides private implementation for ApplicationDiscoveryServiceClient.
+ * \class QtAws::ApplicationDiscovery::ApplicationDiscoveryClientPrivate
+ * \brief The ApplicationDiscoveryClientPrivate class provides private implementation for ApplicationDiscoveryClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a ApplicationDiscoveryServiceClientPrivate object with public implementation \a q.
+ * Constructs a ApplicationDiscoveryClientPrivate object with public implementation \a q.
  */
-ApplicationDiscoveryServiceClientPrivate::ApplicationDiscoveryServiceClientPrivate(ApplicationDiscoveryServiceClient * const q)
+ApplicationDiscoveryClientPrivate::ApplicationDiscoveryClientPrivate(ApplicationDiscoveryClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

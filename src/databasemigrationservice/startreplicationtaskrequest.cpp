@@ -20,16 +20,16 @@
 #include "startreplicationtaskrequest.h"
 #include "startreplicationtaskrequest_p.h"
 #include "startreplicationtaskresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::StartReplicationTaskRequest
- * \brief The StartReplicationTaskRequest class provides an interface for DatabaseMigrationService StartReplicationTask requests.
+ * \class QtAws::DatabaseMigration::StartReplicationTaskRequest
+ * \brief The StartReplicationTaskRequest class provides an interface for DatabaseMigration StartReplicationTask requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::startReplicationTask
+ * \sa DatabaseMigrationClient::startReplicationTask
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartReplicationTaskRequest::StartReplicationTaskRequest(const StartReplicationTaskRequest &other)
-    : DatabaseMigrationServiceRequest(new StartReplicationTaskRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new StartReplicationTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ StartReplicationTaskRequest::StartReplicationTaskRequest(const StartReplicationT
  * Constructs a StartReplicationTaskRequest object.
  */
 StartReplicationTaskRequest::StartReplicationTaskRequest()
-    : DatabaseMigrationServiceRequest(new StartReplicationTaskRequestPrivate(DatabaseMigrationServiceRequest::StartReplicationTaskAction, this))
+    : DatabaseMigrationRequest(new StartReplicationTaskRequestPrivate(DatabaseMigrationRequest::StartReplicationTaskAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * StartReplicationTaskRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::StartReplicationTaskRequestPrivate
+ * \class QtAws::DatabaseMigration::StartReplicationTaskRequestPrivate
  * \brief The StartReplicationTaskRequestPrivate class provides private implementation for StartReplicationTaskRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a StartReplicationTaskRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a StartReplicationTaskRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 StartReplicationTaskRequestPrivate::StartReplicationTaskRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, StartReplicationTaskRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, StartReplicationTaskRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ StartReplicationTaskRequestPrivate::StartReplicationTaskRequestPrivate(
  */
 StartReplicationTaskRequestPrivate::StartReplicationTaskRequestPrivate(
     const StartReplicationTaskRequestPrivate &other, StartReplicationTaskRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -17,35 +17,35 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_APIGATEWAYMANAGEMENTAPIREQUEST_P_H
-#define QTAWS_APIGATEWAYMANAGEMENTAPIREQUEST_P_H
+#ifndef QTAWS_APIGATEWAYMANAGEMENTREQUEST_P_H
+#define QTAWS_APIGATEWAYMANAGEMENTREQUEST_P_H
 
 #include "core/awsabstractrequest_p.h"
-#include "apigatewaymanagementapirequest.h"
+#include "apigatewaymanagementrequest.h"
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
-class ApiGatewayManagementApiRequest;
+class ApiGatewayManagementRequest;
 
-class ApiGatewayManagementApiRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ApiGatewayManagementRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    ApiGatewayManagementApiRequest::Action action; ///< ApiGatewayManagementApi action to be performed.
-    QString apiVersion;        ///< ApiGatewayManagementApi API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< ApiGatewayManagementApi request (query string) parameters. @todo?
+    ApiGatewayManagementRequest::Action action; ///< ApiGatewayManagement action to be performed.
+    QString apiVersion;        ///< ApiGatewayManagement API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ApiGatewayManagement request (query string) parameters. @todo?
 
-    ApiGatewayManagementApiRequestPrivate(const ApiGatewayManagementApiRequest::Action action, ApiGatewayManagementApiRequest * const q);
-    ApiGatewayManagementApiRequestPrivate(const ApiGatewayManagementApiRequestPrivate &other, ApiGatewayManagementApiRequest * const q);
+    ApiGatewayManagementRequestPrivate(const ApiGatewayManagementRequest::Action action, ApiGatewayManagementRequest * const q);
+    ApiGatewayManagementRequestPrivate(const ApiGatewayManagementRequestPrivate &other, ApiGatewayManagementRequest * const q);
 
-    static QString toString(const ApiGatewayManagementApiRequest::Action &action);
+    static QString toString(const ApiGatewayManagementRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(ApiGatewayManagementApiRequest)
+    Q_DECLARE_PUBLIC(ApiGatewayManagementRequest)
 
 };
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws
 
 #endif

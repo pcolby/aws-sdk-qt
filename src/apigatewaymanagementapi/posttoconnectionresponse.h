@@ -20,15 +20,15 @@
 #ifndef QTAWS_POSTTOCONNECTIONRESPONSE_H
 #define QTAWS_POSTTOCONNECTIONRESPONSE_H
 
-#include "apigatewaymanagementapiresponse.h"
+#include "apigatewaymanagementresponse.h"
 #include "posttoconnectionrequest.h"
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
 class PostToConnectionResponsePrivate;
 
-class QTAWSAPIGATEWAYMANAGEMENTAPI_EXPORT PostToConnectionResponse : public ApiGatewayManagementApiResponse {
+class QTAWSAPIGATEWAYMANAGEMENT_EXPORT PostToConnectionResponse : public ApiGatewayManagementResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws
 
 #endif

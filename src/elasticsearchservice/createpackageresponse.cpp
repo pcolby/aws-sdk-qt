@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::CreatePackageResponse
- * \brief The CreatePackageResponse class provides an interace for ElasticsearchService CreatePackage responses.
+ * \class QtAws::Elasticsearch::CreatePackageResponse
+ * \brief The CreatePackageResponse class provides an interace for Elasticsearch CreatePackage responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::createPackage
+ * \sa ElasticsearchClient::createPackage
  */
 
 /*!
@@ -61,7 +61,7 @@ CreatePackageResponse::CreatePackageResponse(
         const CreatePackageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new CreatePackageResponsePrivate(this), parent)
+    : ElasticsearchResponse(new CreatePackageResponsePrivate(this), parent)
 {
     setRequest(new CreatePackageRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const CreatePackageRequest * CreatePackageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService CreatePackage \a response.
+ * Parses a successful Elasticsearch CreatePackage \a response.
  */
 void CreatePackageResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void CreatePackageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::CreatePackageResponsePrivate
+ * \class QtAws::Elasticsearch::CreatePackageResponsePrivate
  * \brief The CreatePackageResponsePrivate class provides private implementation for CreatePackageResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a CreatePackageResponsePrivate object with public implementation \a q.
  */
 CreatePackageResponsePrivate::CreatePackageResponsePrivate(
-    CreatePackageResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    CreatePackageResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService CreatePackage response element from \a xml.
+ * Parses a Elasticsearch CreatePackage response element from \a xml.
  */
 void CreatePackageResponsePrivate::parseCreatePackageResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void CreatePackageResponsePrivate::parseCreatePackageResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

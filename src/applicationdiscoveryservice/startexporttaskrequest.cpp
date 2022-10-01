@@ -20,16 +20,16 @@
 #include "startexporttaskrequest.h"
 #include "startexporttaskrequest_p.h"
 #include "startexporttaskresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StartExportTaskRequest
- * \brief The StartExportTaskRequest class provides an interface for ApplicationDiscoveryService StartExportTask requests.
+ * \class QtAws::ApplicationDiscovery::StartExportTaskRequest
+ * \brief The StartExportTaskRequest class provides an interface for ApplicationDiscovery StartExportTask requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::startExportTask
+ * \sa ApplicationDiscoveryClient::startExportTask
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartExportTaskRequest::StartExportTaskRequest(const StartExportTaskRequest &other)
-    : ApplicationDiscoveryServiceRequest(new StartExportTaskRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new StartExportTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ StartExportTaskRequest::StartExportTaskRequest(const StartExportTaskRequest &oth
  * Constructs a StartExportTaskRequest object.
  */
 StartExportTaskRequest::StartExportTaskRequest()
-    : ApplicationDiscoveryServiceRequest(new StartExportTaskRequestPrivate(ApplicationDiscoveryServiceRequest::StartExportTaskAction, this))
+    : ApplicationDiscoveryRequest(new StartExportTaskRequestPrivate(ApplicationDiscoveryRequest::StartExportTaskAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * StartExportTaskRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::StartExportTaskRequestPrivate
+ * \class QtAws::ApplicationDiscovery::StartExportTaskRequestPrivate
  * \brief The StartExportTaskRequestPrivate class provides private implementation for StartExportTaskRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a StartExportTaskRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a StartExportTaskRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 StartExportTaskRequestPrivate::StartExportTaskRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, StartExportTaskRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, StartExportTaskRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ StartExportTaskRequestPrivate::StartExportTaskRequestPrivate(
  */
 StartExportTaskRequestPrivate::StartExportTaskRequestPrivate(
     const StartExportTaskRequestPrivate &other, StartExportTaskRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

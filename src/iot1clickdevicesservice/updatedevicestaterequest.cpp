@@ -20,28 +20,28 @@
 #include "updatedevicestaterequest.h"
 #include "updatedevicestaterequest_p.h"
 #include "updatedevicestateresponse.h"
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::UpdateDeviceStateRequest
- * \brief The UpdateDeviceStateRequest class provides an interface for IoT1ClickDevicesService UpdateDeviceState requests.
+ * \class QtAws::IoT1ClickDevices::UpdateDeviceStateRequest
+ * \brief The UpdateDeviceStateRequest class provides an interface for IoT1ClickDevices UpdateDeviceState requests.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::updateDeviceState
+ * \sa IoT1ClickDevicesClient::updateDeviceState
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateDeviceStateRequest::UpdateDeviceStateRequest(const UpdateDeviceStateRequest &other)
-    : IoT1ClickDevicesServiceRequest(new UpdateDeviceStateRequestPrivate(*other.d_func(), this))
+    : IoT1ClickDevicesRequest(new UpdateDeviceStateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ UpdateDeviceStateRequest::UpdateDeviceStateRequest(const UpdateDeviceStateReques
  * Constructs a UpdateDeviceStateRequest object.
  */
 UpdateDeviceStateRequest::UpdateDeviceStateRequest()
-    : IoT1ClickDevicesServiceRequest(new UpdateDeviceStateRequestPrivate(IoT1ClickDevicesServiceRequest::UpdateDeviceStateAction, this))
+    : IoT1ClickDevicesRequest(new UpdateDeviceStateRequestPrivate(IoT1ClickDevicesRequest::UpdateDeviceStateAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceStateRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::UpdateDeviceStateRequestPrivate
+ * \class QtAws::IoT1ClickDevices::UpdateDeviceStateRequestPrivate
  * \brief The UpdateDeviceStateRequestPrivate class provides private implementation for UpdateDeviceStateRequest.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a UpdateDeviceStateRequestPrivate object for IoT1ClickDevicesService \a action,
+ * Constructs a UpdateDeviceStateRequestPrivate object for IoT1ClickDevices \a action,
  * with public implementation \a q.
  */
 UpdateDeviceStateRequestPrivate::UpdateDeviceStateRequestPrivate(
-    const IoT1ClickDevicesServiceRequest::Action action, UpdateDeviceStateRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(action, q)
+    const IoT1ClickDevicesRequest::Action action, UpdateDeviceStateRequest * const q)
+    : IoT1ClickDevicesRequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ UpdateDeviceStateRequestPrivate::UpdateDeviceStateRequestPrivate(
  */
 UpdateDeviceStateRequestPrivate::UpdateDeviceStateRequestPrivate(
     const UpdateDeviceStateRequestPrivate &other, UpdateDeviceStateRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(other, q)
+    : IoT1ClickDevicesRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

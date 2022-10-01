@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::TagResourceResponse
- * \brief The TagResourceResponse class provides an interace for IoT1ClickDevicesService TagResource responses.
+ * \class QtAws::IoT1ClickDevices::TagResourceResponse
+ * \brief The TagResourceResponse class provides an interace for IoT1ClickDevices TagResource responses.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::tagResource
+ * \sa IoT1ClickDevicesClient::tagResource
  */
 
 /*!
@@ -46,7 +46,7 @@ TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoT1ClickDevicesServiceResponse(new TagResourceResponsePrivate(this), parent)
+    : IoT1ClickDevicesResponse(new TagResourceResponsePrivate(this), parent)
 {
     setRequest(new TagResourceRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const TagResourceRequest * TagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IoT1ClickDevicesService TagResource \a response.
+ * Parses a successful IoT1ClickDevices TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::TagResourceResponsePrivate
+ * \class QtAws::IoT1ClickDevices::TagResourceResponsePrivate
  * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
  * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
-    TagResourceResponse * const q) : IoT1ClickDevicesServiceResponsePrivate(q)
+    TagResourceResponse * const q) : IoT1ClickDevicesResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a IoT1ClickDevicesService TagResource response element from \a xml.
+ * Parses a IoT1ClickDevices TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

@@ -20,18 +20,18 @@
 #ifndef QTAWS_CREATEAPPLICATIONREQUEST_P_H
 #define QTAWS_CREATEAPPLICATIONREQUEST_P_H
 
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 #include "createapplicationrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class CreateApplicationRequest;
 
-class CreateApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
+class CreateApplicationRequestPrivate : public ApplicationDiscoveryRequestPrivate {
 
 public:
-    CreateApplicationRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
+    CreateApplicationRequestPrivate(const ApplicationDiscoveryRequest::Action action,
                                    CreateApplicationRequest * const q);
     CreateApplicationRequestPrivate(const CreateApplicationRequestPrivate &other,
                                    CreateApplicationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

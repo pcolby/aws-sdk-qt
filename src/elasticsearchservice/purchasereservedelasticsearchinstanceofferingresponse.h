@@ -20,15 +20,15 @@
 #ifndef QTAWS_PURCHASERESERVEDELASTICSEARCHINSTANCEOFFERINGRESPONSE_H
 #define QTAWS_PURCHASERESERVEDELASTICSEARCHINSTANCEOFFERINGRESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "purchasereservedelasticsearchinstanceofferingrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class PurchaseReservedElasticsearchInstanceOfferingResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT PurchaseReservedElasticsearchInstanceOfferingResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT PurchaseReservedElasticsearchInstanceOfferingResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

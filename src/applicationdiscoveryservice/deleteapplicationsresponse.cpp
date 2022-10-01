@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DeleteApplicationsResponse
- * \brief The DeleteApplicationsResponse class provides an interace for ApplicationDiscoveryService DeleteApplications responses.
+ * \class QtAws::ApplicationDiscovery::DeleteApplicationsResponse
+ * \brief The DeleteApplicationsResponse class provides an interace for ApplicationDiscovery DeleteApplications responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::deleteApplications
+ * \sa ApplicationDiscoveryClient::deleteApplications
  */
 
 /*!
@@ -152,7 +152,7 @@ DeleteApplicationsResponse::DeleteApplicationsResponse(
         const DeleteApplicationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new DeleteApplicationsResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new DeleteApplicationsResponsePrivate(this), parent)
 {
     setRequest(new DeleteApplicationsRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const DeleteApplicationsRequest * DeleteApplicationsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService DeleteApplications \a response.
+ * Parses a successful ApplicationDiscovery DeleteApplications \a response.
  */
 void DeleteApplicationsResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void DeleteApplicationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DeleteApplicationsResponsePrivate
+ * \class QtAws::ApplicationDiscovery::DeleteApplicationsResponsePrivate
  * \brief The DeleteApplicationsResponsePrivate class provides private implementation for DeleteApplicationsResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a DeleteApplicationsResponsePrivate object with public implementation \a q.
  */
 DeleteApplicationsResponsePrivate::DeleteApplicationsResponsePrivate(
-    DeleteApplicationsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    DeleteApplicationsResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService DeleteApplications response element from \a xml.
+ * Parses a ApplicationDiscovery DeleteApplications response element from \a xml.
  */
 void DeleteApplicationsResponsePrivate::parseDeleteApplicationsResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void DeleteApplicationsResponsePrivate::parseDeleteApplicationsResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

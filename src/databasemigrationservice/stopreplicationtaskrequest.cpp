@@ -20,16 +20,16 @@
 #include "stopreplicationtaskrequest.h"
 #include "stopreplicationtaskrequest_p.h"
 #include "stopreplicationtaskresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::StopReplicationTaskRequest
- * \brief The StopReplicationTaskRequest class provides an interface for DatabaseMigrationService StopReplicationTask requests.
+ * \class QtAws::DatabaseMigration::StopReplicationTaskRequest
+ * \brief The StopReplicationTaskRequest class provides an interface for DatabaseMigration StopReplicationTask requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::stopReplicationTask
+ * \sa DatabaseMigrationClient::stopReplicationTask
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StopReplicationTaskRequest::StopReplicationTaskRequest(const StopReplicationTaskRequest &other)
-    : DatabaseMigrationServiceRequest(new StopReplicationTaskRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new StopReplicationTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ StopReplicationTaskRequest::StopReplicationTaskRequest(const StopReplicationTask
  * Constructs a StopReplicationTaskRequest object.
  */
 StopReplicationTaskRequest::StopReplicationTaskRequest()
-    : DatabaseMigrationServiceRequest(new StopReplicationTaskRequestPrivate(DatabaseMigrationServiceRequest::StopReplicationTaskAction, this))
+    : DatabaseMigrationRequest(new StopReplicationTaskRequestPrivate(DatabaseMigrationRequest::StopReplicationTaskAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * StopReplicationTaskRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::StopReplicationTaskRequestPrivate
+ * \class QtAws::DatabaseMigration::StopReplicationTaskRequestPrivate
  * \brief The StopReplicationTaskRequestPrivate class provides private implementation for StopReplicationTaskRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a StopReplicationTaskRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a StopReplicationTaskRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 StopReplicationTaskRequestPrivate::StopReplicationTaskRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, StopReplicationTaskRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, StopReplicationTaskRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ StopReplicationTaskRequestPrivate::StopReplicationTaskRequestPrivate(
  */
 StopReplicationTaskRequestPrivate::StopReplicationTaskRequestPrivate(
     const StopReplicationTaskRequestPrivate &other, StopReplicationTaskRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

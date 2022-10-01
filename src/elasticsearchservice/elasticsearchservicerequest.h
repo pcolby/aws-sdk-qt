@@ -17,12 +17,12 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_ELASTICSEARCHSERVICEREQUEST_H
-#define QTAWS_ELASTICSEARCHSERVICEREQUEST_H
+#ifndef QTAWS_ELASTICSEARCHREQUEST_H
+#define QTAWS_ELASTICSEARCHREQUEST_H
 
 #include "core/awsabstractrequest.h"
 
-#include "qtawselasticsearchserviceglobal.h"
+#include "qtawselasticsearchglobal.h"
 
 #include <QFlags>
 #include <QObject>
@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
-class ElasticsearchServiceRequestPrivate;
+class ElasticsearchRequestPrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT ElasticsearchServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSELASTICSEARCH_EXPORT ElasticsearchRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by ElasticsearchService.
+    /// Actions supported by Elasticsearch.
     enum Action {
         AcceptInboundCrossClusterSearchConnectionAction,
         AddTagsAction,
@@ -83,9 +83,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    ElasticsearchServiceRequest(const Action action);
-    ElasticsearchServiceRequest(const ElasticsearchServiceRequest &other);
-    ElasticsearchServiceRequest &operator=(const ElasticsearchServiceRequest &other);
+    ElasticsearchRequest(const Action action);
+    ElasticsearchRequest(const ElasticsearchRequest &other);
+    ElasticsearchRequest &operator=(const ElasticsearchRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -94,12 +94,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const ElasticsearchServiceRequest &other) const;
+    virtual bool operator==(const ElasticsearchRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit ElasticsearchServiceRequest(ElasticsearchServiceRequestPrivate * const d);
+    explicit ElasticsearchRequest(ElasticsearchRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -112,11 +112,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(ElasticsearchServiceRequest)
+    Q_DECLARE_PRIVATE(ElasticsearchRequest)
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

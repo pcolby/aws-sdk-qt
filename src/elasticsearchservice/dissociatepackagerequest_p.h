@@ -20,18 +20,18 @@
 #ifndef QTAWS_DISSOCIATEPACKAGEREQUEST_P_H
 #define QTAWS_DISSOCIATEPACKAGEREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "dissociatepackagerequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class DissociatePackageRequest;
 
-class DissociatePackageRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class DissociatePackageRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    DissociatePackageRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    DissociatePackageRequestPrivate(const ElasticsearchRequest::Action action,
                                    DissociatePackageRequest * const q);
     DissociatePackageRequestPrivate(const DissociatePackageRequestPrivate &other,
                                    DissociatePackageRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

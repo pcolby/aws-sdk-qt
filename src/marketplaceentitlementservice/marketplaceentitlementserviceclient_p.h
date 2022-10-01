@@ -17,30 +17,30 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_MARKETPLACEENTITLEMENTSERVICECLIENT_P_H
-#define QTAWS_MARKETPLACEENTITLEMENTSERVICECLIENT_P_H
+#ifndef QTAWS_MARKETPLACEENTITLEMENTCLIENT_P_H
+#define QTAWS_MARKETPLACEENTITLEMENTCLIENT_P_H
 
 #include "core/awsabstractclient_p.h"
 
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
-class MarketplaceEntitlementServiceClient;
+class MarketplaceEntitlementClient;
 
-class MarketplaceEntitlementServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MarketplaceEntitlementClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit MarketplaceEntitlementServiceClientPrivate(MarketplaceEntitlementServiceClient * const q);
+    explicit MarketplaceEntitlementClientPrivate(MarketplaceEntitlementClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(MarketplaceEntitlementServiceClient)
-    Q_DISABLE_COPY(MarketplaceEntitlementServiceClientPrivate)
+    Q_DECLARE_PUBLIC(MarketplaceEntitlementClient)
+    Q_DISABLE_COPY(MarketplaceEntitlementClientPrivate)
 
 };
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws
 
 #endif

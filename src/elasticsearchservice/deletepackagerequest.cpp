@@ -20,16 +20,16 @@
 #include "deletepackagerequest.h"
 #include "deletepackagerequest_p.h"
 #include "deletepackageresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DeletePackageRequest
- * \brief The DeletePackageRequest class provides an interface for ElasticsearchService DeletePackage requests.
+ * \class QtAws::Elasticsearch::DeletePackageRequest
+ * \brief The DeletePackageRequest class provides an interface for Elasticsearch DeletePackage requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::deletePackage
+ * \sa ElasticsearchClient::deletePackage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeletePackageRequest::DeletePackageRequest(const DeletePackageRequest &other)
-    : ElasticsearchServiceRequest(new DeletePackageRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new DeletePackageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DeletePackageRequest::DeletePackageRequest(const DeletePackageRequest &other)
  * Constructs a DeletePackageRequest object.
  */
 DeletePackageRequest::DeletePackageRequest()
-    : ElasticsearchServiceRequest(new DeletePackageRequestPrivate(ElasticsearchServiceRequest::DeletePackageAction, this))
+    : ElasticsearchRequest(new DeletePackageRequestPrivate(ElasticsearchRequest::DeletePackageAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * DeletePackageRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DeletePackageRequestPrivate
+ * \class QtAws::Elasticsearch::DeletePackageRequestPrivate
  * \brief The DeletePackageRequestPrivate class provides private implementation for DeletePackageRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a DeletePackageRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a DeletePackageRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 DeletePackageRequestPrivate::DeletePackageRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, DeletePackageRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, DeletePackageRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ DeletePackageRequestPrivate::DeletePackageRequestPrivate(
  */
 DeletePackageRequestPrivate::DeletePackageRequestPrivate(
     const DeletePackageRequestPrivate &other, DeletePackageRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

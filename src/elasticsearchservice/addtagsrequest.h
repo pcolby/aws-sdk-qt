@@ -20,14 +20,14 @@
 #ifndef QTAWS_ADDTAGSREQUEST_H
 #define QTAWS_ADDTAGSREQUEST_H
 
-#include "elasticsearchservicerequest.h"
+#include "elasticsearchrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class AddTagsRequestPrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT AddTagsRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCH_EXPORT AddTagsRequest : public ElasticsearchRequest {
 
 public:
     AddTagsRequest(const AddTagsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

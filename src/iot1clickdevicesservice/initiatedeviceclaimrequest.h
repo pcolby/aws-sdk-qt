@@ -20,14 +20,14 @@
 #ifndef QTAWS_INITIATEDEVICECLAIMREQUEST_H
 #define QTAWS_INITIATEDEVICECLAIMREQUEST_H
 
-#include "iot1clickdevicesservicerequest.h"
+#include "iot1clickdevicesrequest.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 class InitiateDeviceClaimRequestPrivate;
 
-class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT InitiateDeviceClaimRequest : public IoT1ClickDevicesServiceRequest {
+class QTAWSIOT1CLICKDEVICES_EXPORT InitiateDeviceClaimRequest : public IoT1ClickDevicesRequest {
 
 public:
     InitiateDeviceClaimRequest(const InitiateDeviceClaimRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

@@ -20,28 +20,28 @@
 #include "finalizedeviceclaimrequest.h"
 #include "finalizedeviceclaimrequest_p.h"
 #include "finalizedeviceclaimresponse.h"
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::FinalizeDeviceClaimRequest
- * \brief The FinalizeDeviceClaimRequest class provides an interface for IoT1ClickDevicesService FinalizeDeviceClaim requests.
+ * \class QtAws::IoT1ClickDevices::FinalizeDeviceClaimRequest
+ * \brief The FinalizeDeviceClaimRequest class provides an interface for IoT1ClickDevices FinalizeDeviceClaim requests.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::finalizeDeviceClaim
+ * \sa IoT1ClickDevicesClient::finalizeDeviceClaim
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 FinalizeDeviceClaimRequest::FinalizeDeviceClaimRequest(const FinalizeDeviceClaimRequest &other)
-    : IoT1ClickDevicesServiceRequest(new FinalizeDeviceClaimRequestPrivate(*other.d_func(), this))
+    : IoT1ClickDevicesRequest(new FinalizeDeviceClaimRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ FinalizeDeviceClaimRequest::FinalizeDeviceClaimRequest(const FinalizeDeviceClaim
  * Constructs a FinalizeDeviceClaimRequest object.
  */
 FinalizeDeviceClaimRequest::FinalizeDeviceClaimRequest()
-    : IoT1ClickDevicesServiceRequest(new FinalizeDeviceClaimRequestPrivate(IoT1ClickDevicesServiceRequest::FinalizeDeviceClaimAction, this))
+    : IoT1ClickDevicesRequest(new FinalizeDeviceClaimRequestPrivate(IoT1ClickDevicesRequest::FinalizeDeviceClaimAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * FinalizeDeviceClaimRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::FinalizeDeviceClaimRequestPrivate
+ * \class QtAws::IoT1ClickDevices::FinalizeDeviceClaimRequestPrivate
  * \brief The FinalizeDeviceClaimRequestPrivate class provides private implementation for FinalizeDeviceClaimRequest.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a FinalizeDeviceClaimRequestPrivate object for IoT1ClickDevicesService \a action,
+ * Constructs a FinalizeDeviceClaimRequestPrivate object for IoT1ClickDevices \a action,
  * with public implementation \a q.
  */
 FinalizeDeviceClaimRequestPrivate::FinalizeDeviceClaimRequestPrivate(
-    const IoT1ClickDevicesServiceRequest::Action action, FinalizeDeviceClaimRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(action, q)
+    const IoT1ClickDevicesRequest::Action action, FinalizeDeviceClaimRequest * const q)
+    : IoT1ClickDevicesRequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ FinalizeDeviceClaimRequestPrivate::FinalizeDeviceClaimRequestPrivate(
  */
 FinalizeDeviceClaimRequestPrivate::FinalizeDeviceClaimRequestPrivate(
     const FinalizeDeviceClaimRequestPrivate &other, FinalizeDeviceClaimRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(other, q)
+    : IoT1ClickDevicesRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

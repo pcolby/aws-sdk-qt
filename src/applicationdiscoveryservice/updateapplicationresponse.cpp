@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::UpdateApplicationResponse
- * \brief The UpdateApplicationResponse class provides an interace for ApplicationDiscoveryService UpdateApplication responses.
+ * \class QtAws::ApplicationDiscovery::UpdateApplicationResponse
+ * \brief The UpdateApplicationResponse class provides an interace for ApplicationDiscovery UpdateApplication responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::updateApplication
+ * \sa ApplicationDiscoveryClient::updateApplication
  */
 
 /*!
@@ -152,7 +152,7 @@ UpdateApplicationResponse::UpdateApplicationResponse(
         const UpdateApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new UpdateApplicationResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new UpdateApplicationResponsePrivate(this), parent)
 {
     setRequest(new UpdateApplicationRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const UpdateApplicationRequest * UpdateApplicationResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService UpdateApplication \a response.
+ * Parses a successful ApplicationDiscovery UpdateApplication \a response.
  */
 void UpdateApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void UpdateApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::UpdateApplicationResponsePrivate
+ * \class QtAws::ApplicationDiscovery::UpdateApplicationResponsePrivate
  * \brief The UpdateApplicationResponsePrivate class provides private implementation for UpdateApplicationResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a UpdateApplicationResponsePrivate object with public implementation \a q.
  */
 UpdateApplicationResponsePrivate::UpdateApplicationResponsePrivate(
-    UpdateApplicationResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    UpdateApplicationResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService UpdateApplication response element from \a xml.
+ * Parses a ApplicationDiscovery UpdateApplication response element from \a xml.
  */
 void UpdateApplicationResponsePrivate::parseUpdateApplicationResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void UpdateApplicationResponsePrivate::parseUpdateApplicationResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

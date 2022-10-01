@@ -20,16 +20,16 @@
 #include "associateconfigurationitemstoapplicationrequest.h"
 #include "associateconfigurationitemstoapplicationrequest_p.h"
 #include "associateconfigurationitemstoapplicationresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::AssociateConfigurationItemsToApplicationRequest
- * \brief The AssociateConfigurationItemsToApplicationRequest class provides an interface for ApplicationDiscoveryService AssociateConfigurationItemsToApplication requests.
+ * \class QtAws::ApplicationDiscovery::AssociateConfigurationItemsToApplicationRequest
+ * \brief The AssociateConfigurationItemsToApplicationRequest class provides an interface for ApplicationDiscovery AssociateConfigurationItemsToApplication requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::associateConfigurationItemsToApplication
+ * \sa ApplicationDiscoveryClient::associateConfigurationItemsToApplication
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 AssociateConfigurationItemsToApplicationRequest::AssociateConfigurationItemsToApplicationRequest(const AssociateConfigurationItemsToApplicationRequest &other)
-    : ApplicationDiscoveryServiceRequest(new AssociateConfigurationItemsToApplicationRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new AssociateConfigurationItemsToApplicationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ AssociateConfigurationItemsToApplicationRequest::AssociateConfigurationItemsToAp
  * Constructs a AssociateConfigurationItemsToApplicationRequest object.
  */
 AssociateConfigurationItemsToApplicationRequest::AssociateConfigurationItemsToApplicationRequest()
-    : ApplicationDiscoveryServiceRequest(new AssociateConfigurationItemsToApplicationRequestPrivate(ApplicationDiscoveryServiceRequest::AssociateConfigurationItemsToApplicationAction, this))
+    : ApplicationDiscoveryRequest(new AssociateConfigurationItemsToApplicationRequestPrivate(ApplicationDiscoveryRequest::AssociateConfigurationItemsToApplicationAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * AssociateConfigurationItemsToApplicationReque
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::AssociateConfigurationItemsToApplicationRequestPrivate
+ * \class QtAws::ApplicationDiscovery::AssociateConfigurationItemsToApplicationRequestPrivate
  * \brief The AssociateConfigurationItemsToApplicationRequestPrivate class provides private implementation for AssociateConfigurationItemsToApplicationRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a AssociateConfigurationItemsToApplicationRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a AssociateConfigurationItemsToApplicationRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 AssociateConfigurationItemsToApplicationRequestPrivate::AssociateConfigurationItemsToApplicationRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, AssociateConfigurationItemsToApplicationRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, AssociateConfigurationItemsToApplicationRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ AssociateConfigurationItemsToApplicationRequestPrivate::AssociateConfigurationIt
  */
 AssociateConfigurationItemsToApplicationRequestPrivate::AssociateConfigurationItemsToApplicationRequestPrivate(
     const AssociateConfigurationItemsToApplicationRequestPrivate &other, AssociateConfigurationItemsToApplicationRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

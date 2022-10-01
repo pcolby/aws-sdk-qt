@@ -17,8 +17,8 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "marketplaceentitlementserviceclient.h"
-#include "marketplaceentitlementserviceclient_p.h"
+#include "marketplaceentitlementclient.h"
+#include "marketplaceentitlementclient_p.h"
 
 #include "core/awssignaturev4.h"
 #include "getentitlementsrequest.h"
@@ -28,23 +28,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::MarketplaceEntitlementService
+ * \namespace QtAws::MarketplaceEntitlement
  * \brief Contains classess for accessing AWS Marketplace Entitlement Service.
  *
- * \inmodule QtAwsMarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlement
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
 /*!
- * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceClient
- * \brief The MarketplaceEntitlementServiceClient class provides access to the AWS Marketplace Entitlement Service service.
+ * \class QtAws::MarketplaceEntitlement::MarketplaceEntitlementClient
+ * \brief The MarketplaceEntitlementClient class provides access to the AWS Marketplace Entitlement Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsMarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlement
  *
  *  <fullname>AWS Marketplace Entitlement Service</fullname>
  * 
@@ -66,21 +66,21 @@ namespace MarketplaceEntitlementService {
  */
 
 /*!
- * \brief Constructs a MarketplaceEntitlementServiceClient object.
+ * \brief Constructs a MarketplaceEntitlementClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
+MarketplaceEntitlementClient::MarketplaceEntitlementClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MarketplaceEntitlementServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MarketplaceEntitlementClientPrivate(this), parent)
 {
-    Q_D(MarketplaceEntitlementServiceClient);
+    Q_D(MarketplaceEntitlementClient);
     d->apiVersion = QStringLiteral("2017-01-11");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("entitlement.marketplace");
@@ -91,7 +91,7 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
 }
 
 /*!
- * \overload MarketplaceEntitlementServiceClient()
+ * \overload MarketplaceEntitlementClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -101,14 +101,14 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
+MarketplaceEntitlementClient::MarketplaceEntitlementClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MarketplaceEntitlementServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new MarketplaceEntitlementClientPrivate(this), parent)
 {
-    Q_D(MarketplaceEntitlementServiceClient);
+    Q_D(MarketplaceEntitlementClient);
     d->apiVersion = QStringLiteral("2017-01-11");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -119,7 +119,7 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
 }
 
 /*!
- * Sends \a request to the MarketplaceEntitlementServiceClient service, and returns a pointer to an
+ * Sends \a request to the MarketplaceEntitlementClient service, and returns a pointer to an
  * GetEntitlementsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -127,28 +127,28 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
  * GetEntitlements retrieves entitlement values for a given product. The results can be filtered based on customer
  * identifier or product
  */
-GetEntitlementsResponse * MarketplaceEntitlementServiceClient::getEntitlements(const GetEntitlementsRequest &request)
+GetEntitlementsResponse * MarketplaceEntitlementClient::getEntitlements(const GetEntitlementsRequest &request)
 {
     return qobject_cast<GetEntitlementsResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceClientPrivate
- * \brief The MarketplaceEntitlementServiceClientPrivate class provides private implementation for MarketplaceEntitlementServiceClient.
+ * \class QtAws::MarketplaceEntitlement::MarketplaceEntitlementClientPrivate
+ * \brief The MarketplaceEntitlementClientPrivate class provides private implementation for MarketplaceEntitlementClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsMarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlement
  */
 
 /*!
- * Constructs a MarketplaceEntitlementServiceClientPrivate object with public implementation \a q.
+ * Constructs a MarketplaceEntitlementClientPrivate object with public implementation \a q.
  */
-MarketplaceEntitlementServiceClientPrivate::MarketplaceEntitlementServiceClientPrivate(MarketplaceEntitlementServiceClient * const q)
+MarketplaceEntitlementClientPrivate::MarketplaceEntitlementClientPrivate(MarketplaceEntitlementClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws

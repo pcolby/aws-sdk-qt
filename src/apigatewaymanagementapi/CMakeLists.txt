@@ -1,13 +1,13 @@
-add_compile_definitions(QTAWSAPIGATEWAYMANAGEMENTAPI_LIBRARY)
+add_compile_definitions(QTAWSAPIGATEWAYMANAGEMENT_LIBRARY)
 
-add_library(QtAwsApiGatewayManagementApi
-  qtawsapigatewaymanagementapiglobal.h
-  apigatewaymanagementapiclient.h
-  apigatewaymanagementapiclient_p.h
-  apigatewaymanagementapirequest.h
-  apigatewaymanagementapirequest_p.h
-  apigatewaymanagementapiresponse.h
-  apigatewaymanagementapiresponse_p.h
+add_library(QtAwsApiGatewayManagement
+  qtawsapigatewaymanagementglobal.h
+  apigatewaymanagementclient.h
+  apigatewaymanagementclient_p.h
+  apigatewaymanagementrequest.h
+  apigatewaymanagementrequest_p.h
+  apigatewaymanagementresponse.h
+  apigatewaymanagementresponse_p.h
   deleteconnectionrequest.h
   deleteconnectionrequest_p.h
   deleteconnectionresponse.h
@@ -20,9 +20,9 @@ add_library(QtAwsApiGatewayManagementApi
   posttoconnectionrequest_p.h
   posttoconnectionresponse.h
   posttoconnectionresponse_p.h
-  apigatewaymanagementapiclient.cpp
-  apigatewaymanagementapirequest.cpp
-  apigatewaymanagementapiresponse.cpp
+  apigatewaymanagementclient.cpp
+  apigatewaymanagementrequest.cpp
+  apigatewaymanagementresponse.cpp
   deleteconnectionrequest.cpp
   deleteconnectionresponse.cpp
   getconnectionrequest.cpp
@@ -30,7 +30,7 @@ add_library(QtAwsApiGatewayManagementApi
   posttoconnectionrequest.cpp
   posttoconnectionresponse.cpp)
 
-target_link_libraries(QtAwsApiGatewayManagementApi
+target_link_libraries(QtAwsApiGatewayManagement
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

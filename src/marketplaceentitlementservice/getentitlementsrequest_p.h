@@ -20,18 +20,18 @@
 #ifndef QTAWS_GETENTITLEMENTSREQUEST_P_H
 #define QTAWS_GETENTITLEMENTSREQUEST_P_H
 
-#include "marketplaceentitlementservicerequest_p.h"
+#include "marketplaceentitlementrequest_p.h"
 #include "getentitlementsrequest.h"
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
 class GetEntitlementsRequest;
 
-class GetEntitlementsRequestPrivate : public MarketplaceEntitlementServiceRequestPrivate {
+class GetEntitlementsRequestPrivate : public MarketplaceEntitlementRequestPrivate {
 
 public:
-    GetEntitlementsRequestPrivate(const MarketplaceEntitlementServiceRequest::Action action,
+    GetEntitlementsRequestPrivate(const MarketplaceEntitlementRequest::Action action,
                                    GetEntitlementsRequest * const q);
     GetEntitlementsRequestPrivate(const GetEntitlementsRequestPrivate &other,
                                    GetEntitlementsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws
 
 #endif

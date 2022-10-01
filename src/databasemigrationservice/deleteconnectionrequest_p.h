@@ -20,18 +20,18 @@
 #ifndef QTAWS_DELETECONNECTIONREQUEST_P_H
 #define QTAWS_DELETECONNECTIONREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "deleteconnectionrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DeleteConnectionRequest;
 
-class DeleteConnectionRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class DeleteConnectionRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    DeleteConnectionRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    DeleteConnectionRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    DeleteConnectionRequest * const q);
     DeleteConnectionRequestPrivate(const DeleteConnectionRequestPrivate &other,
                                    DeleteConnectionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

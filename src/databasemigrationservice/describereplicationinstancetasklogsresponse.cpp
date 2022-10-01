@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeReplicationInstanceTaskLogsResponse
- * \brief The DescribeReplicationInstanceTaskLogsResponse class provides an interace for DatabaseMigrationService DescribeReplicationInstanceTaskLogs responses.
+ * \class QtAws::DatabaseMigration::DescribeReplicationInstanceTaskLogsResponse
+ * \brief The DescribeReplicationInstanceTaskLogsResponse class provides an interace for DatabaseMigration DescribeReplicationInstanceTaskLogs responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeReplicationInstanceTaskLogs
+ * \sa DatabaseMigrationClient::describeReplicationInstanceTaskLogs
  */
 
 /*!
@@ -55,7 +55,7 @@ DescribeReplicationInstanceTaskLogsResponse::DescribeReplicationInstanceTaskLogs
         const DescribeReplicationInstanceTaskLogsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeReplicationInstanceTaskLogsResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DescribeReplicationInstanceTaskLogsResponsePrivate(this), parent)
 {
     setRequest(new DescribeReplicationInstanceTaskLogsRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DescribeReplicationInstanceTaskLogsRequest * DescribeReplicationInstanceTa
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DescribeReplicationInstanceTaskLogs \a response.
+ * Parses a successful DatabaseMigration DescribeReplicationInstanceTaskLogs \a response.
  */
 void DescribeReplicationInstanceTaskLogsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DescribeReplicationInstanceTaskLogsResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeReplicationInstanceTaskLogsResponsePrivate
+ * \class QtAws::DatabaseMigration::DescribeReplicationInstanceTaskLogsResponsePrivate
  * \brief The DescribeReplicationInstanceTaskLogsResponsePrivate class provides private implementation for DescribeReplicationInstanceTaskLogsResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DescribeReplicationInstanceTaskLogsResponsePrivate object with public implementation \a q.
  */
 DescribeReplicationInstanceTaskLogsResponsePrivate::DescribeReplicationInstanceTaskLogsResponsePrivate(
-    DescribeReplicationInstanceTaskLogsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DescribeReplicationInstanceTaskLogsResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DescribeReplicationInstanceTaskLogs response element from \a xml.
+ * Parses a DatabaseMigration DescribeReplicationInstanceTaskLogs response element from \a xml.
  */
 void DescribeReplicationInstanceTaskLogsResponsePrivate::parseDescribeReplicationInstanceTaskLogsResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribeReplicationInstanceTaskLogsResponsePrivate::parseDescribeReplicatio
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -20,16 +20,16 @@
 #include "deleteeventsubscriptionrequest.h"
 #include "deleteeventsubscriptionrequest_p.h"
 #include "deleteeventsubscriptionresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteEventSubscriptionRequest
- * \brief The DeleteEventSubscriptionRequest class provides an interface for DatabaseMigrationService DeleteEventSubscription requests.
+ * \class QtAws::DatabaseMigration::DeleteEventSubscriptionRequest
+ * \brief The DeleteEventSubscriptionRequest class provides an interface for DatabaseMigration DeleteEventSubscription requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteEventSubscription
+ * \sa DatabaseMigrationClient::deleteEventSubscription
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest(const DeleteEventSubscriptionRequest &other)
-    : DatabaseMigrationServiceRequest(new DeleteEventSubscriptionRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DeleteEventSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest(const DeleteEvent
  * Constructs a DeleteEventSubscriptionRequest object.
  */
 DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest()
-    : DatabaseMigrationServiceRequest(new DeleteEventSubscriptionRequestPrivate(DatabaseMigrationServiceRequest::DeleteEventSubscriptionAction, this))
+    : DatabaseMigrationRequest(new DeleteEventSubscriptionRequestPrivate(DatabaseMigrationRequest::DeleteEventSubscriptionAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DeleteEventSubscriptionRequest::response(QNet
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteEventSubscriptionRequestPrivate
+ * \class QtAws::DatabaseMigration::DeleteEventSubscriptionRequestPrivate
  * \brief The DeleteEventSubscriptionRequestPrivate class provides private implementation for DeleteEventSubscriptionRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DeleteEventSubscriptionRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DeleteEventSubscriptionRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DeleteEventSubscriptionRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DeleteEventSubscriptionRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
     const DeleteEventSubscriptionRequestPrivate &other, DeleteEventSubscriptionRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 /*!
- * \class QtAws::LexRuntimeService::GetSessionResponse
- * \brief The GetSessionResponse class provides an interace for LexRuntimeService GetSession responses.
+ * \class QtAws::LexRuntime::GetSessionResponse
+ * \brief The GetSessionResponse class provides an interace for LexRuntime GetSession responses.
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  *
  *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
  *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
@@ -41,7 +41,7 @@ namespace LexRuntimeService {
  *  then performs fulfillment activity (that you configured when you created the bot). You use the build-time API to create
  *  and manage your Amazon Lex bot. For a list of build-time operations, see the build-time API, .
  *
- * \sa LexRuntimeServiceClient::getSession
+ * \sa LexRuntimeClient::getSession
  */
 
 /*!
@@ -51,7 +51,7 @@ GetSessionResponse::GetSessionResponse(
         const GetSessionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexRuntimeServiceResponse(new GetSessionResponsePrivate(this), parent)
+    : LexRuntimeResponse(new GetSessionResponsePrivate(this), parent)
 {
     setRequest(new GetSessionRequest(request));
     setReply(reply);
@@ -68,7 +68,7 @@ const GetSessionRequest * GetSessionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexRuntimeService GetSession \a response.
+ * Parses a successful LexRuntime GetSession \a response.
  */
 void GetSessionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,24 +78,24 @@ void GetSessionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexRuntimeService::GetSessionResponsePrivate
+ * \class QtAws::LexRuntime::GetSessionResponsePrivate
  * \brief The GetSessionResponsePrivate class provides private implementation for GetSessionResponse.
  * \internal
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  */
 
 /*!
  * Constructs a GetSessionResponsePrivate object with public implementation \a q.
  */
 GetSessionResponsePrivate::GetSessionResponsePrivate(
-    GetSessionResponse * const q) : LexRuntimeServiceResponsePrivate(q)
+    GetSessionResponse * const q) : LexRuntimeResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexRuntimeService GetSession response element from \a xml.
+ * Parses a LexRuntime GetSession response element from \a xml.
  */
 void GetSessionResponsePrivate::parseGetSessionResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void GetSessionResponsePrivate::parseGetSessionResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws

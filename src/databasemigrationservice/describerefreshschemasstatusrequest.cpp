@@ -20,16 +20,16 @@
 #include "describerefreshschemasstatusrequest.h"
 #include "describerefreshschemasstatusrequest_p.h"
 #include "describerefreshschemasstatusresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeRefreshSchemasStatusRequest
- * \brief The DescribeRefreshSchemasStatusRequest class provides an interface for DatabaseMigrationService DescribeRefreshSchemasStatus requests.
+ * \class QtAws::DatabaseMigration::DescribeRefreshSchemasStatusRequest
+ * \brief The DescribeRefreshSchemasStatusRequest class provides an interface for DatabaseMigration DescribeRefreshSchemasStatus requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeRefreshSchemasStatus
+ * \sa DatabaseMigrationClient::describeRefreshSchemasStatus
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeRefreshSchemasStatusRequest::DescribeRefreshSchemasStatusRequest(const DescribeRefreshSchemasStatusRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribeRefreshSchemasStatusRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribeRefreshSchemasStatusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeRefreshSchemasStatusRequest::DescribeRefreshSchemasStatusRequest(const D
  * Constructs a DescribeRefreshSchemasStatusRequest object.
  */
 DescribeRefreshSchemasStatusRequest::DescribeRefreshSchemasStatusRequest()
-    : DatabaseMigrationServiceRequest(new DescribeRefreshSchemasStatusRequestPrivate(DatabaseMigrationServiceRequest::DescribeRefreshSchemasStatusAction, this))
+    : DatabaseMigrationRequest(new DescribeRefreshSchemasStatusRequestPrivate(DatabaseMigrationRequest::DescribeRefreshSchemasStatusAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribeRefreshSchemasStatusRequest::response
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeRefreshSchemasStatusRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribeRefreshSchemasStatusRequestPrivate
  * \brief The DescribeRefreshSchemasStatusRequestPrivate class provides private implementation for DescribeRefreshSchemasStatusRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribeRefreshSchemasStatusRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribeRefreshSchemasStatusRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribeRefreshSchemasStatusRequestPrivate::DescribeRefreshSchemasStatusRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribeRefreshSchemasStatusRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribeRefreshSchemasStatusRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribeRefreshSchemasStatusRequestPrivate::DescribeRefreshSchemasStatusRequestP
  */
 DescribeRefreshSchemasStatusRequestPrivate::DescribeRefreshSchemasStatusRequestPrivate(
     const DescribeRefreshSchemasStatusRequestPrivate &other, DescribeRefreshSchemasStatusRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

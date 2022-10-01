@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::GetPackageVersionHistoryResponse
- * \brief The GetPackageVersionHistoryResponse class provides an interace for ElasticsearchService GetPackageVersionHistory responses.
+ * \class QtAws::Elasticsearch::GetPackageVersionHistoryResponse
+ * \brief The GetPackageVersionHistoryResponse class provides an interace for Elasticsearch GetPackageVersionHistory responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::getPackageVersionHistory
+ * \sa ElasticsearchClient::getPackageVersionHistory
  */
 
 /*!
@@ -61,7 +61,7 @@ GetPackageVersionHistoryResponse::GetPackageVersionHistoryResponse(
         const GetPackageVersionHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new GetPackageVersionHistoryResponsePrivate(this), parent)
+    : ElasticsearchResponse(new GetPackageVersionHistoryResponsePrivate(this), parent)
 {
     setRequest(new GetPackageVersionHistoryRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const GetPackageVersionHistoryRequest * GetPackageVersionHistoryResponse::reques
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService GetPackageVersionHistory \a response.
+ * Parses a successful Elasticsearch GetPackageVersionHistory \a response.
  */
 void GetPackageVersionHistoryResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void GetPackageVersionHistoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::GetPackageVersionHistoryResponsePrivate
+ * \class QtAws::Elasticsearch::GetPackageVersionHistoryResponsePrivate
  * \brief The GetPackageVersionHistoryResponsePrivate class provides private implementation for GetPackageVersionHistoryResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a GetPackageVersionHistoryResponsePrivate object with public implementation \a q.
  */
 GetPackageVersionHistoryResponsePrivate::GetPackageVersionHistoryResponsePrivate(
-    GetPackageVersionHistoryResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    GetPackageVersionHistoryResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService GetPackageVersionHistory response element from \a xml.
+ * Parses a Elasticsearch GetPackageVersionHistory response element from \a xml.
  */
 void GetPackageVersionHistoryResponsePrivate::parseGetPackageVersionHistoryResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void GetPackageVersionHistoryResponsePrivate::parseGetPackageVersionHistoryRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

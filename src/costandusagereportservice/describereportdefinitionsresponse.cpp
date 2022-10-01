@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 /*!
- * \class QtAws::CostandUsageReportService::DescribeReportDefinitionsResponse
- * \brief The DescribeReportDefinitionsResponse class provides an interace for CostandUsageReportService DescribeReportDefinitions responses.
+ * \class QtAws::CostandUsageReport::DescribeReportDefinitionsResponse
+ * \brief The DescribeReportDefinitionsResponse class provides an interace for CostandUsageReport DescribeReportDefinitions responses.
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  *
  *  The AWS Cost and Usage Report API enables you to programmatically create, query, and delete AWS Cost and Usage report
  * 
@@ -51,7 +51,7 @@ namespace CostandUsageReportService {
  * 
  *  endpoint> <ul> <li>
  *
- * \sa CostandUsageReportServiceClient::describeReportDefinitions
+ * \sa CostandUsageReportClient::describeReportDefinitions
  */
 
 /*!
@@ -61,7 +61,7 @@ DescribeReportDefinitionsResponse::DescribeReportDefinitionsResponse(
         const DescribeReportDefinitionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CostandUsageReportServiceResponse(new DescribeReportDefinitionsResponsePrivate(this), parent)
+    : CostandUsageReportResponse(new DescribeReportDefinitionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeReportDefinitionsRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DescribeReportDefinitionsRequest * DescribeReportDefinitionsResponse::requ
 
 /*!
  * \reimp
- * Parses a successful CostandUsageReportService DescribeReportDefinitions \a response.
+ * Parses a successful CostandUsageReport DescribeReportDefinitions \a response.
  */
 void DescribeReportDefinitionsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DescribeReportDefinitionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CostandUsageReportService::DescribeReportDefinitionsResponsePrivate
+ * \class QtAws::CostandUsageReport::DescribeReportDefinitionsResponsePrivate
  * \brief The DescribeReportDefinitionsResponsePrivate class provides private implementation for DescribeReportDefinitionsResponse.
  * \internal
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  */
 
 /*!
  * Constructs a DescribeReportDefinitionsResponsePrivate object with public implementation \a q.
  */
 DescribeReportDefinitionsResponsePrivate::DescribeReportDefinitionsResponsePrivate(
-    DescribeReportDefinitionsResponse * const q) : CostandUsageReportServiceResponsePrivate(q)
+    DescribeReportDefinitionsResponse * const q) : CostandUsageReportResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CostandUsageReportService DescribeReportDefinitions response element from \a xml.
+ * Parses a CostandUsageReport DescribeReportDefinitions response element from \a xml.
  */
 void DescribeReportDefinitionsResponsePrivate::parseDescribeReportDefinitionsResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DescribeReportDefinitionsResponsePrivate::parseDescribeReportDefinitionsRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws

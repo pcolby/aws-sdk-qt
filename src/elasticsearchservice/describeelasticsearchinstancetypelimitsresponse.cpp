@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeElasticsearchInstanceTypeLimitsResponse
- * \brief The DescribeElasticsearchInstanceTypeLimitsResponse class provides an interace for ElasticsearchService DescribeElasticsearchInstanceTypeLimits responses.
+ * \class QtAws::Elasticsearch::DescribeElasticsearchInstanceTypeLimitsResponse
+ * \brief The DescribeElasticsearchInstanceTypeLimitsResponse class provides an interace for Elasticsearch DescribeElasticsearchInstanceTypeLimits responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describeElasticsearchInstanceTypeLimits
+ * \sa ElasticsearchClient::describeElasticsearchInstanceTypeLimits
  */
 
 /*!
@@ -61,7 +61,7 @@ DescribeElasticsearchInstanceTypeLimitsResponse::DescribeElasticsearchInstanceTy
         const DescribeElasticsearchInstanceTypeLimitsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DescribeElasticsearchInstanceTypeLimitsResponsePrivate(this), parent)
+    : ElasticsearchResponse(new DescribeElasticsearchInstanceTypeLimitsResponsePrivate(this), parent)
 {
     setRequest(new DescribeElasticsearchInstanceTypeLimitsRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DescribeElasticsearchInstanceTypeLimitsRequest * DescribeElasticsearchInst
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService DescribeElasticsearchInstanceTypeLimits \a response.
+ * Parses a successful Elasticsearch DescribeElasticsearchInstanceTypeLimits \a response.
  */
 void DescribeElasticsearchInstanceTypeLimitsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DescribeElasticsearchInstanceTypeLimitsResponse::parseSuccess(QIODevice &re
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribeElasticsearchInstanceTypeLimitsResponsePrivate
+ * \class QtAws::Elasticsearch::DescribeElasticsearchInstanceTypeLimitsResponsePrivate
  * \brief The DescribeElasticsearchInstanceTypeLimitsResponsePrivate class provides private implementation for DescribeElasticsearchInstanceTypeLimitsResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a DescribeElasticsearchInstanceTypeLimitsResponsePrivate object with public implementation \a q.
  */
 DescribeElasticsearchInstanceTypeLimitsResponsePrivate::DescribeElasticsearchInstanceTypeLimitsResponsePrivate(
-    DescribeElasticsearchInstanceTypeLimitsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    DescribeElasticsearchInstanceTypeLimitsResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService DescribeElasticsearchInstanceTypeLimits response element from \a xml.
+ * Parses a Elasticsearch DescribeElasticsearchInstanceTypeLimits response element from \a xml.
  */
 void DescribeElasticsearchInstanceTypeLimitsResponsePrivate::parseDescribeElasticsearchInstanceTypeLimitsResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DescribeElasticsearchInstanceTypeLimitsResponsePrivate::parseDescribeElasti
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

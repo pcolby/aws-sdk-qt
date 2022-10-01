@@ -20,26 +20,26 @@
 #include "getresourcesrequest.h"
 #include "getresourcesrequest_p.h"
 #include "getresourcesresponse.h"
-#include "resourcegroupstaggingapirequest_p.h"
+#include "resourcegroupstaggingrequest_p.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::GetResourcesRequest
- * \brief The GetResourcesRequest class provides an interface for ResourceGroupsTaggingApi GetResources requests.
+ * \class QtAws::ResourceGroupsTagging::GetResourcesRequest
+ * \brief The GetResourcesRequest class provides an interface for ResourceGroupsTagging GetResources requests.
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  *
  *
- * \sa ResourceGroupsTaggingApiClient::getResources
+ * \sa ResourceGroupsTaggingClient::getResources
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetResourcesRequest::GetResourcesRequest(const GetResourcesRequest &other)
-    : ResourceGroupsTaggingApiRequest(new GetResourcesRequestPrivate(*other.d_func(), this))
+    : ResourceGroupsTaggingRequest(new GetResourcesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ GetResourcesRequest::GetResourcesRequest(const GetResourcesRequest &other)
  * Constructs a GetResourcesRequest object.
  */
 GetResourcesRequest::GetResourcesRequest()
-    : ResourceGroupsTaggingApiRequest(new GetResourcesRequestPrivate(ResourceGroupsTaggingApiRequest::GetResourcesAction, this))
+    : ResourceGroupsTaggingRequest(new GetResourcesRequestPrivate(ResourceGroupsTaggingRequest::GetResourcesAction, this))
 {
 
 }
@@ -73,20 +73,20 @@ QtAws::Core::AwsAbstractResponse * GetResourcesRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::GetResourcesRequestPrivate
+ * \class QtAws::ResourceGroupsTagging::GetResourcesRequestPrivate
  * \brief The GetResourcesRequestPrivate class provides private implementation for GetResourcesRequest.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  */
 
 /*!
- * Constructs a GetResourcesRequestPrivate object for ResourceGroupsTaggingApi \a action,
+ * Constructs a GetResourcesRequestPrivate object for ResourceGroupsTagging \a action,
  * with public implementation \a q.
  */
 GetResourcesRequestPrivate::GetResourcesRequestPrivate(
-    const ResourceGroupsTaggingApiRequest::Action action, GetResourcesRequest * const q)
-    : ResourceGroupsTaggingApiRequestPrivate(action, q)
+    const ResourceGroupsTaggingRequest::Action action, GetResourcesRequest * const q)
+    : ResourceGroupsTaggingRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +99,10 @@ GetResourcesRequestPrivate::GetResourcesRequestPrivate(
  */
 GetResourcesRequestPrivate::GetResourcesRequestPrivate(
     const GetResourcesRequestPrivate &other, GetResourcesRequest * const q)
-    : ResourceGroupsTaggingApiRequestPrivate(other, q)
+    : ResourceGroupsTaggingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws

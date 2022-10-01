@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "resourcegroupstaggingapiresponse.h"
-#include "resourcegroupstaggingapiresponse_p.h"
+#include "resourcegroupstaggingresponse.h"
+#include "resourcegroupstaggingresponse_p.h"
 
 #include <QDebug>
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::ResourceGroupsTaggingApiResponse
- * \brief The ResourceGroupsTaggingApiResponse class provides an interface for ResourceGroupsTaggingApi responses.
+ * \class QtAws::ResourceGroupsTagging::ResourceGroupsTaggingResponse
+ * \brief The ResourceGroupsTaggingResponse class provides an interface for ResourceGroupsTagging responses.
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  */
 
 /*!
- * Constructs a ResourceGroupsTaggingApiResponse object with parent \a parent.
+ * Constructs a ResourceGroupsTaggingResponse object with parent \a parent.
  */
-ResourceGroupsTaggingApiResponse::ResourceGroupsTaggingApiResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ResourceGroupsTaggingApiResponsePrivate(this), parent)
+ResourceGroupsTaggingResponse::ResourceGroupsTaggingResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new ResourceGroupsTaggingResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a ResourceGroupsTaggingApiResponse object with private implementation \a d,
+ * Constructs a ResourceGroupsTaggingResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from ResourceGroupsTaggingApiResponsePrivate.
+ * implementation that inherits from ResourceGroupsTaggingResponsePrivate.
  */
-ResourceGroupsTaggingApiResponse::ResourceGroupsTaggingApiResponse(ResourceGroupsTaggingApiResponsePrivate * const d, QObject * const parent)
+ResourceGroupsTaggingResponse::ResourceGroupsTaggingResponse(ResourceGroupsTaggingResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ ResourceGroupsTaggingApiResponse::ResourceGroupsTaggingApiResponse(ResourceGroup
 /*!
  * \reimp
  */
-void ResourceGroupsTaggingApiResponse::parseFailure(QIODevice &response)
+void ResourceGroupsTaggingResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(ResourceGroupsTaggingApiResponse);
+    //Q_D(ResourceGroupsTaggingResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void ResourceGroupsTaggingApiResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::ResourceGroupsTaggingApiResponsePrivate
- * \brief The ResourceGroupsTaggingApiResponsePrivate class provides private implementation for ResourceGroupsTaggingApiResponse.
+ * \class QtAws::ResourceGroupsTagging::ResourceGroupsTaggingResponsePrivate
+ * \brief The ResourceGroupsTaggingResponsePrivate class provides private implementation for ResourceGroupsTaggingResponse.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  */
 
 /*!
- * Constructs a ResourceGroupsTaggingApiResponsePrivate object with public implementation \a q.
+ * Constructs a ResourceGroupsTaggingResponsePrivate object with public implementation \a q.
  */
-ResourceGroupsTaggingApiResponsePrivate::ResourceGroupsTaggingApiResponsePrivate(
-    ResourceGroupsTaggingApiResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+ResourceGroupsTaggingResponsePrivate::ResourceGroupsTaggingResponsePrivate(
+    ResourceGroupsTaggingResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws

@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::UntagResourceResponse
- * \brief The UntagResourceResponse class provides an interace for IoT1ClickDevicesService UntagResource responses.
+ * \class QtAws::IoT1ClickDevices::UntagResourceResponse
+ * \brief The UntagResourceResponse class provides an interace for IoT1ClickDevices UntagResource responses.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::untagResource
+ * \sa IoT1ClickDevicesClient::untagResource
  */
 
 /*!
@@ -46,7 +46,7 @@ UntagResourceResponse::UntagResourceResponse(
         const UntagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoT1ClickDevicesServiceResponse(new UntagResourceResponsePrivate(this), parent)
+    : IoT1ClickDevicesResponse(new UntagResourceResponsePrivate(this), parent)
 {
     setRequest(new UntagResourceRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IoT1ClickDevicesService UntagResource \a response.
+ * Parses a successful IoT1ClickDevices UntagResource \a response.
  */
 void UntagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::UntagResourceResponsePrivate
+ * \class QtAws::IoT1ClickDevices::UntagResourceResponsePrivate
  * \brief The UntagResourceResponsePrivate class provides private implementation for UntagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
  * Constructs a UntagResourceResponsePrivate object with public implementation \a q.
  */
 UntagResourceResponsePrivate::UntagResourceResponsePrivate(
-    UntagResourceResponse * const q) : IoT1ClickDevicesServiceResponsePrivate(q)
+    UntagResourceResponse * const q) : IoT1ClickDevicesResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a IoT1ClickDevicesService UntagResource response element from \a xml.
+ * Parses a IoT1ClickDevices UntagResource response element from \a xml.
  */
 void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

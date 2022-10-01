@@ -20,14 +20,14 @@
 #ifndef QTAWS_STARTCONTINUOUSEXPORTRESPONSE_P_H
 #define QTAWS_STARTCONTINUOUSEXPORTRESPONSE_P_H
 
-#include "applicationdiscoveryserviceresponse_p.h"
+#include "applicationdiscoveryresponse_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class StartContinuousExportResponse;
 
-class StartContinuousExportResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+class StartContinuousExportResponsePrivate : public ApplicationDiscoveryResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

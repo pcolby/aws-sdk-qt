@@ -20,30 +20,30 @@
 #include "untagresourcerequest.h"
 #include "untagresourcerequest_p.h"
 #include "untagresourceresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::UntagResourceRequest
- * \brief The UntagResourceRequest class provides an interface for LexModelBuildingService UntagResource requests.
+ * \class QtAws::LexModelBuilding::UntagResourceRequest
+ * \brief The UntagResourceRequest class provides an interface for LexModelBuilding UntagResource requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::untagResource
+ * \sa LexModelBuildingClient::untagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
-    : LexModelBuildingServiceRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
  * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
-    : LexModelBuildingServiceRequest(new UntagResourceRequestPrivate(LexModelBuildingServiceRequest::UntagResourceAction, this))
+    : LexModelBuildingRequest(new UntagResourceRequestPrivate(LexModelBuildingRequest::UntagResourceAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::UntagResourceRequestPrivate
+ * \class QtAws::LexModelBuilding::UntagResourceRequestPrivate
  * \brief The UntagResourceRequestPrivate class provides private implementation for UntagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a UntagResourceRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a UntagResourceRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, UntagResourceRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, UntagResourceRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

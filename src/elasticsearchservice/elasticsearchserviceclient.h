@@ -17,19 +17,19 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_ELASTICSEARCHSERVICECLIENT_H
-#define QTAWS_ELASTICSEARCHSERVICECLIENT_H
+#ifndef QTAWS_ELASTICSEARCHCLIENT_H
+#define QTAWS_ELASTICSEARCHCLIENT_H
 
 #include "core/awsabstractclient.h"
 
-#include "qtawselasticsearchserviceglobal.h"
+#include "qtawselasticsearchglobal.h"
 
 class QNetworkReply;
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
-class ElasticsearchServiceClientPrivate;
+class ElasticsearchClientPrivate;
 class AcceptInboundCrossClusterSearchConnectionRequest;
 class AcceptInboundCrossClusterSearchConnectionResponse;
 class AddTagsRequest;
@@ -113,17 +113,17 @@ class UpdatePackageResponse;
 class UpgradeElasticsearchDomainRequest;
 class UpgradeElasticsearchDomainResponse;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT ElasticsearchServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSELASTICSEARCH_EXPORT ElasticsearchClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    ElasticsearchServiceClient(
+    ElasticsearchClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit ElasticsearchServiceClient(
+    explicit ElasticsearchClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -172,12 +172,12 @@ public slots:
     UpgradeElasticsearchDomainResponse * upgradeElasticsearchDomain(const UpgradeElasticsearchDomainRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(ElasticsearchServiceClient)
-    Q_DISABLE_COPY(ElasticsearchServiceClient)
+    Q_DECLARE_PRIVATE(ElasticsearchClient)
+    Q_DISABLE_COPY(ElasticsearchClient)
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

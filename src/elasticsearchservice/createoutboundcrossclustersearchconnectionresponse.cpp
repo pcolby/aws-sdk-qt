@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::CreateOutboundCrossClusterSearchConnectionResponse
- * \brief The CreateOutboundCrossClusterSearchConnectionResponse class provides an interace for ElasticsearchService CreateOutboundCrossClusterSearchConnection responses.
+ * \class QtAws::Elasticsearch::CreateOutboundCrossClusterSearchConnectionResponse
+ * \brief The CreateOutboundCrossClusterSearchConnectionResponse class provides an interace for Elasticsearch CreateOutboundCrossClusterSearchConnection responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::createOutboundCrossClusterSearchConnection
+ * \sa ElasticsearchClient::createOutboundCrossClusterSearchConnection
  */
 
 /*!
@@ -61,7 +61,7 @@ CreateOutboundCrossClusterSearchConnectionResponse::CreateOutboundCrossClusterSe
         const CreateOutboundCrossClusterSearchConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new CreateOutboundCrossClusterSearchConnectionResponsePrivate(this), parent)
+    : ElasticsearchResponse(new CreateOutboundCrossClusterSearchConnectionResponsePrivate(this), parent)
 {
     setRequest(new CreateOutboundCrossClusterSearchConnectionRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const CreateOutboundCrossClusterSearchConnectionRequest * CreateOutboundCrossClu
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService CreateOutboundCrossClusterSearchConnection \a response.
+ * Parses a successful Elasticsearch CreateOutboundCrossClusterSearchConnection \a response.
  */
 void CreateOutboundCrossClusterSearchConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void CreateOutboundCrossClusterSearchConnectionResponse::parseSuccess(QIODevice 
 }
 
 /*!
- * \class QtAws::ElasticsearchService::CreateOutboundCrossClusterSearchConnectionResponsePrivate
+ * \class QtAws::Elasticsearch::CreateOutboundCrossClusterSearchConnectionResponsePrivate
  * \brief The CreateOutboundCrossClusterSearchConnectionResponsePrivate class provides private implementation for CreateOutboundCrossClusterSearchConnectionResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a CreateOutboundCrossClusterSearchConnectionResponsePrivate object with public implementation \a q.
  */
 CreateOutboundCrossClusterSearchConnectionResponsePrivate::CreateOutboundCrossClusterSearchConnectionResponsePrivate(
-    CreateOutboundCrossClusterSearchConnectionResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    CreateOutboundCrossClusterSearchConnectionResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService CreateOutboundCrossClusterSearchConnection response element from \a xml.
+ * Parses a Elasticsearch CreateOutboundCrossClusterSearchConnection response element from \a xml.
  */
 void CreateOutboundCrossClusterSearchConnectionResponsePrivate::parseCreateOutboundCrossClusterSearchConnectionResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void CreateOutboundCrossClusterSearchConnectionResponsePrivate::parseCreateOutbo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

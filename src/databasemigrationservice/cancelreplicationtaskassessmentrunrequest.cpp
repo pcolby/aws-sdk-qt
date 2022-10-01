@@ -20,16 +20,16 @@
 #include "cancelreplicationtaskassessmentrunrequest.h"
 #include "cancelreplicationtaskassessmentrunrequest_p.h"
 #include "cancelreplicationtaskassessmentrunresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::CancelReplicationTaskAssessmentRunRequest
- * \brief The CancelReplicationTaskAssessmentRunRequest class provides an interface for DatabaseMigrationService CancelReplicationTaskAssessmentRun requests.
+ * \class QtAws::DatabaseMigration::CancelReplicationTaskAssessmentRunRequest
+ * \brief The CancelReplicationTaskAssessmentRunRequest class provides an interface for DatabaseMigration CancelReplicationTaskAssessmentRun requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::cancelReplicationTaskAssessmentRun
+ * \sa DatabaseMigrationClient::cancelReplicationTaskAssessmentRun
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CancelReplicationTaskAssessmentRunRequest::CancelReplicationTaskAssessmentRunRequest(const CancelReplicationTaskAssessmentRunRequest &other)
-    : DatabaseMigrationServiceRequest(new CancelReplicationTaskAssessmentRunRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new CancelReplicationTaskAssessmentRunRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ CancelReplicationTaskAssessmentRunRequest::CancelReplicationTaskAssessmentRunReq
  * Constructs a CancelReplicationTaskAssessmentRunRequest object.
  */
 CancelReplicationTaskAssessmentRunRequest::CancelReplicationTaskAssessmentRunRequest()
-    : DatabaseMigrationServiceRequest(new CancelReplicationTaskAssessmentRunRequestPrivate(DatabaseMigrationServiceRequest::CancelReplicationTaskAssessmentRunAction, this))
+    : DatabaseMigrationRequest(new CancelReplicationTaskAssessmentRunRequestPrivate(DatabaseMigrationRequest::CancelReplicationTaskAssessmentRunAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * CancelReplicationTaskAssessmentRunRequest::re
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::CancelReplicationTaskAssessmentRunRequestPrivate
+ * \class QtAws::DatabaseMigration::CancelReplicationTaskAssessmentRunRequestPrivate
  * \brief The CancelReplicationTaskAssessmentRunRequestPrivate class provides private implementation for CancelReplicationTaskAssessmentRunRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a CancelReplicationTaskAssessmentRunRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a CancelReplicationTaskAssessmentRunRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 CancelReplicationTaskAssessmentRunRequestPrivate::CancelReplicationTaskAssessmentRunRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, CancelReplicationTaskAssessmentRunRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, CancelReplicationTaskAssessmentRunRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ CancelReplicationTaskAssessmentRunRequestPrivate::CancelReplicationTaskAssessmen
  */
 CancelReplicationTaskAssessmentRunRequestPrivate::CancelReplicationTaskAssessmentRunRequestPrivate(
     const CancelReplicationTaskAssessmentRunRequestPrivate &other, CancelReplicationTaskAssessmentRunRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

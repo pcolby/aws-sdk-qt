@@ -20,18 +20,18 @@
 #ifndef QTAWS_LISTDEVICEEVENTSREQUEST_P_H
 #define QTAWS_LISTDEVICEEVENTSREQUEST_P_H
 
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 #include "listdeviceeventsrequest.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 class ListDeviceEventsRequest;
 
-class ListDeviceEventsRequestPrivate : public IoT1ClickDevicesServiceRequestPrivate {
+class ListDeviceEventsRequestPrivate : public IoT1ClickDevicesRequestPrivate {
 
 public:
-    ListDeviceEventsRequestPrivate(const IoT1ClickDevicesServiceRequest::Action action,
+    ListDeviceEventsRequestPrivate(const IoT1ClickDevicesRequest::Action action,
                                    ListDeviceEventsRequest * const q);
     ListDeviceEventsRequestPrivate(const ListDeviceEventsRequestPrivate &other,
                                    ListDeviceEventsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

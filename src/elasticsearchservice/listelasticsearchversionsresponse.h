@@ -20,15 +20,15 @@
 #ifndef QTAWS_LISTELASTICSEARCHVERSIONSRESPONSE_H
 #define QTAWS_LISTELASTICSEARCHVERSIONSRESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "listelasticsearchversionsrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class ListElasticsearchVersionsResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT ListElasticsearchVersionsResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT ListElasticsearchVersionsResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

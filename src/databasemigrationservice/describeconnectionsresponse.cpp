@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeConnectionsResponse
- * \brief The DescribeConnectionsResponse class provides an interace for DatabaseMigrationService DescribeConnections responses.
+ * \class QtAws::DatabaseMigration::DescribeConnectionsResponse
+ * \brief The DescribeConnectionsResponse class provides an interace for DatabaseMigration DescribeConnections responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeConnections
+ * \sa DatabaseMigrationClient::describeConnections
  */
 
 /*!
@@ -55,7 +55,7 @@ DescribeConnectionsResponse::DescribeConnectionsResponse(
         const DescribeConnectionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeConnectionsResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DescribeConnectionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeConnectionsRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DescribeConnectionsRequest * DescribeConnectionsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DescribeConnections \a response.
+ * Parses a successful DatabaseMigration DescribeConnections \a response.
  */
 void DescribeConnectionsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DescribeConnectionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeConnectionsResponsePrivate
+ * \class QtAws::DatabaseMigration::DescribeConnectionsResponsePrivate
  * \brief The DescribeConnectionsResponsePrivate class provides private implementation for DescribeConnectionsResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DescribeConnectionsResponsePrivate object with public implementation \a q.
  */
 DescribeConnectionsResponsePrivate::DescribeConnectionsResponsePrivate(
-    DescribeConnectionsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DescribeConnectionsResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DescribeConnections response element from \a xml.
+ * Parses a DatabaseMigration DescribeConnections response element from \a xml.
  */
 void DescribeConnectionsResponsePrivate::parseDescribeConnectionsResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribeConnectionsResponsePrivate::parseDescribeConnectionsResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

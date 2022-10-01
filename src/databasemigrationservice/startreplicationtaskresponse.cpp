@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::StartReplicationTaskResponse
- * \brief The StartReplicationTaskResponse class provides an interace for DatabaseMigrationService StartReplicationTask responses.
+ * \class QtAws::DatabaseMigration::StartReplicationTaskResponse
+ * \brief The StartReplicationTaskResponse class provides an interace for DatabaseMigration StartReplicationTask responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::startReplicationTask
+ * \sa DatabaseMigrationClient::startReplicationTask
  */
 
 /*!
@@ -55,7 +55,7 @@ StartReplicationTaskResponse::StartReplicationTaskResponse(
         const StartReplicationTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new StartReplicationTaskResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new StartReplicationTaskResponsePrivate(this), parent)
 {
     setRequest(new StartReplicationTaskRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const StartReplicationTaskRequest * StartReplicationTaskResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService StartReplicationTask \a response.
+ * Parses a successful DatabaseMigration StartReplicationTask \a response.
  */
 void StartReplicationTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void StartReplicationTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::StartReplicationTaskResponsePrivate
+ * \class QtAws::DatabaseMigration::StartReplicationTaskResponsePrivate
  * \brief The StartReplicationTaskResponsePrivate class provides private implementation for StartReplicationTaskResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a StartReplicationTaskResponsePrivate object with public implementation \a q.
  */
 StartReplicationTaskResponsePrivate::StartReplicationTaskResponsePrivate(
-    StartReplicationTaskResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    StartReplicationTaskResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService StartReplicationTask response element from \a xml.
+ * Parses a DatabaseMigration StartReplicationTask response element from \a xml.
  */
 void StartReplicationTaskResponsePrivate::parseStartReplicationTaskResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void StartReplicationTaskResponsePrivate::parseStartReplicationTaskResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

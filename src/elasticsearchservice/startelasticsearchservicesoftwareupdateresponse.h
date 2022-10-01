@@ -20,15 +20,15 @@
 #ifndef QTAWS_STARTELASTICSEARCHSERVICESOFTWAREUPDATERESPONSE_H
 #define QTAWS_STARTELASTICSEARCHSERVICESOFTWAREUPDATERESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "startelasticsearchservicesoftwareupdaterequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class StartElasticsearchServiceSoftwareUpdateResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT StartElasticsearchServiceSoftwareUpdateResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT StartElasticsearchServiceSoftwareUpdateResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

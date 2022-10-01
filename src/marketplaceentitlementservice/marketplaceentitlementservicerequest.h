@@ -17,12 +17,12 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_MARKETPLACEENTITLEMENTSERVICEREQUEST_H
-#define QTAWS_MARKETPLACEENTITLEMENTSERVICEREQUEST_H
+#ifndef QTAWS_MARKETPLACEENTITLEMENTREQUEST_H
+#define QTAWS_MARKETPLACEENTITLEMENTREQUEST_H
 
 #include "core/awsabstractrequest.h"
 
-#include "qtawsmarketplaceentitlementserviceglobal.h"
+#include "qtawsmarketplaceentitlementglobal.h"
 
 #include <QFlags>
 #include <QObject>
@@ -30,22 +30,22 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
-class MarketplaceEntitlementServiceRequestPrivate;
+class MarketplaceEntitlementRequestPrivate;
 
-class QTAWSMARKETPLACEENTITLEMENTSERVICE_EXPORT MarketplaceEntitlementServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMARKETPLACEENTITLEMENT_EXPORT MarketplaceEntitlementRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by MarketplaceEntitlementService.
+    /// Actions supported by MarketplaceEntitlement.
     enum Action {
         GetEntitlementsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    MarketplaceEntitlementServiceRequest(const Action action);
-    MarketplaceEntitlementServiceRequest(const MarketplaceEntitlementServiceRequest &other);
-    MarketplaceEntitlementServiceRequest &operator=(const MarketplaceEntitlementServiceRequest &other);
+    MarketplaceEntitlementRequest(const Action action);
+    MarketplaceEntitlementRequest(const MarketplaceEntitlementRequest &other);
+    MarketplaceEntitlementRequest &operator=(const MarketplaceEntitlementRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -54,12 +54,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const MarketplaceEntitlementServiceRequest &other) const;
+    virtual bool operator==(const MarketplaceEntitlementRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit MarketplaceEntitlementServiceRequest(MarketplaceEntitlementServiceRequestPrivate * const d);
+    explicit MarketplaceEntitlementRequest(MarketplaceEntitlementRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -72,11 +72,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(MarketplaceEntitlementServiceRequest)
+    Q_DECLARE_PRIVATE(MarketplaceEntitlementRequest)
 
 };
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws
 
 #endif

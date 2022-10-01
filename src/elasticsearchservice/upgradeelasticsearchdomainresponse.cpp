@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::UpgradeElasticsearchDomainResponse
- * \brief The UpgradeElasticsearchDomainResponse class provides an interace for ElasticsearchService UpgradeElasticsearchDomain responses.
+ * \class QtAws::Elasticsearch::UpgradeElasticsearchDomainResponse
+ * \brief The UpgradeElasticsearchDomainResponse class provides an interace for Elasticsearch UpgradeElasticsearchDomain responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::upgradeElasticsearchDomain
+ * \sa ElasticsearchClient::upgradeElasticsearchDomain
  */
 
 /*!
@@ -61,7 +61,7 @@ UpgradeElasticsearchDomainResponse::UpgradeElasticsearchDomainResponse(
         const UpgradeElasticsearchDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new UpgradeElasticsearchDomainResponsePrivate(this), parent)
+    : ElasticsearchResponse(new UpgradeElasticsearchDomainResponsePrivate(this), parent)
 {
     setRequest(new UpgradeElasticsearchDomainRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const UpgradeElasticsearchDomainRequest * UpgradeElasticsearchDomainResponse::re
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService UpgradeElasticsearchDomain \a response.
+ * Parses a successful Elasticsearch UpgradeElasticsearchDomain \a response.
  */
 void UpgradeElasticsearchDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void UpgradeElasticsearchDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::UpgradeElasticsearchDomainResponsePrivate
+ * \class QtAws::Elasticsearch::UpgradeElasticsearchDomainResponsePrivate
  * \brief The UpgradeElasticsearchDomainResponsePrivate class provides private implementation for UpgradeElasticsearchDomainResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a UpgradeElasticsearchDomainResponsePrivate object with public implementation \a q.
  */
 UpgradeElasticsearchDomainResponsePrivate::UpgradeElasticsearchDomainResponsePrivate(
-    UpgradeElasticsearchDomainResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    UpgradeElasticsearchDomainResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService UpgradeElasticsearchDomain response element from \a xml.
+ * Parses a Elasticsearch UpgradeElasticsearchDomain response element from \a xml.
  */
 void UpgradeElasticsearchDomainResponsePrivate::parseUpgradeElasticsearchDomainResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void UpgradeElasticsearchDomainResponsePrivate::parseUpgradeElasticsearchDomainR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

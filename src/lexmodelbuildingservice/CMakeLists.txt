@@ -1,13 +1,13 @@
-add_compile_definitions(QTAWSLEXMODELBUILDINGSERVICE_LIBRARY)
+add_compile_definitions(QTAWSLEXMODELBUILDING_LIBRARY)
 
-add_library(QtAwsLexModelBuildingService
-  qtawslexmodelbuildingserviceglobal.h
-  lexmodelbuildingserviceclient.h
-  lexmodelbuildingserviceclient_p.h
-  lexmodelbuildingservicerequest.h
-  lexmodelbuildingservicerequest_p.h
-  lexmodelbuildingserviceresponse.h
-  lexmodelbuildingserviceresponse_p.h
+add_library(QtAwsLexModelBuilding
+  qtawslexmodelbuildingglobal.h
+  lexmodelbuildingclient.h
+  lexmodelbuildingclient_p.h
+  lexmodelbuildingrequest.h
+  lexmodelbuildingrequest_p.h
+  lexmodelbuildingresponse.h
+  lexmodelbuildingresponse_p.h
   createbotversionrequest.h
   createbotversionrequest_p.h
   createbotversionresponse.h
@@ -176,9 +176,9 @@ add_library(QtAwsLexModelBuildingService
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
-  lexmodelbuildingserviceclient.cpp
-  lexmodelbuildingservicerequest.cpp
-  lexmodelbuildingserviceresponse.cpp
+  lexmodelbuildingclient.cpp
+  lexmodelbuildingrequest.cpp
+  lexmodelbuildingresponse.cpp
   createbotversionrequest.cpp
   createbotversionresponse.cpp
   createintentversionrequest.cpp
@@ -264,7 +264,7 @@ add_library(QtAwsLexModelBuildingService
   untagresourcerequest.cpp
   untagresourceresponse.cpp)
 
-target_link_libraries(QtAwsLexModelBuildingService
+target_link_libraries(QtAwsLexModelBuilding
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

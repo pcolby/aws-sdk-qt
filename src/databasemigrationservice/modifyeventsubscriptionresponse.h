@@ -20,15 +20,15 @@
 #ifndef QTAWS_MODIFYEVENTSUBSCRIPTIONRESPONSE_H
 #define QTAWS_MODIFYEVENTSUBSCRIPTIONRESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "modifyeventsubscriptionrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class ModifyEventSubscriptionResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT ModifyEventSubscriptionResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT ModifyEventSubscriptionResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

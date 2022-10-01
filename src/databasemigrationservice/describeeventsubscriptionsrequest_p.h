@@ -20,18 +20,18 @@
 #ifndef QTAWS_DESCRIBEEVENTSUBSCRIPTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTSUBSCRIPTIONSREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "describeeventsubscriptionsrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DescribeEventSubscriptionsRequest;
 
-class DescribeEventSubscriptionsRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class DescribeEventSubscriptionsRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    DescribeEventSubscriptionsRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    DescribeEventSubscriptionsRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    DescribeEventSubscriptionsRequest * const q);
     DescribeEventSubscriptionsRequestPrivate(const DescribeEventSubscriptionsRequestPrivate &other,
                                    DescribeEventSubscriptionsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

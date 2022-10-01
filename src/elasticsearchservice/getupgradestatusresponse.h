@@ -20,15 +20,15 @@
 #ifndef QTAWS_GETUPGRADESTATUSRESPONSE_H
 #define QTAWS_GETUPGRADESTATUSRESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "getupgradestatusrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class GetUpgradeStatusResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT GetUpgradeStatusResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT GetUpgradeStatusResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

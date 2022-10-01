@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 /*!
- * \class QtAws::CostandUsageReportService::DeleteReportDefinitionResponse
- * \brief The DeleteReportDefinitionResponse class provides an interace for CostandUsageReportService DeleteReportDefinition responses.
+ * \class QtAws::CostandUsageReport::DeleteReportDefinitionResponse
+ * \brief The DeleteReportDefinitionResponse class provides an interace for CostandUsageReport DeleteReportDefinition responses.
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  *
  *  The AWS Cost and Usage Report API enables you to programmatically create, query, and delete AWS Cost and Usage report
  * 
@@ -51,7 +51,7 @@ namespace CostandUsageReportService {
  * 
  *  endpoint> <ul> <li>
  *
- * \sa CostandUsageReportServiceClient::deleteReportDefinition
+ * \sa CostandUsageReportClient::deleteReportDefinition
  */
 
 /*!
@@ -61,7 +61,7 @@ DeleteReportDefinitionResponse::DeleteReportDefinitionResponse(
         const DeleteReportDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CostandUsageReportServiceResponse(new DeleteReportDefinitionResponsePrivate(this), parent)
+    : CostandUsageReportResponse(new DeleteReportDefinitionResponsePrivate(this), parent)
 {
     setRequest(new DeleteReportDefinitionRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DeleteReportDefinitionRequest * DeleteReportDefinitionResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful CostandUsageReportService DeleteReportDefinition \a response.
+ * Parses a successful CostandUsageReport DeleteReportDefinition \a response.
  */
 void DeleteReportDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DeleteReportDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CostandUsageReportService::DeleteReportDefinitionResponsePrivate
+ * \class QtAws::CostandUsageReport::DeleteReportDefinitionResponsePrivate
  * \brief The DeleteReportDefinitionResponsePrivate class provides private implementation for DeleteReportDefinitionResponse.
  * \internal
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  */
 
 /*!
  * Constructs a DeleteReportDefinitionResponsePrivate object with public implementation \a q.
  */
 DeleteReportDefinitionResponsePrivate::DeleteReportDefinitionResponsePrivate(
-    DeleteReportDefinitionResponse * const q) : CostandUsageReportServiceResponsePrivate(q)
+    DeleteReportDefinitionResponse * const q) : CostandUsageReportResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CostandUsageReportService DeleteReportDefinition response element from \a xml.
+ * Parses a CostandUsageReport DeleteReportDefinition response element from \a xml.
  */
 void DeleteReportDefinitionResponsePrivate::parseDeleteReportDefinitionResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DeleteReportDefinitionResponsePrivate::parseDeleteReportDefinitionResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws

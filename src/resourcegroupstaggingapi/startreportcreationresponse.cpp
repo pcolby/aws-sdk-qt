@@ -25,16 +25,16 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::StartReportCreationResponse
- * \brief The StartReportCreationResponse class provides an interace for ResourceGroupsTaggingApi StartReportCreation responses.
+ * \class QtAws::ResourceGroupsTagging::StartReportCreationResponse
+ * \brief The StartReportCreationResponse class provides an interace for ResourceGroupsTagging StartReportCreation responses.
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  *
  *
- * \sa ResourceGroupsTaggingApiClient::startReportCreation
+ * \sa ResourceGroupsTaggingClient::startReportCreation
  */
 
 /*!
@@ -44,7 +44,7 @@ StartReportCreationResponse::StartReportCreationResponse(
         const StartReportCreationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResourceGroupsTaggingApiResponse(new StartReportCreationResponsePrivate(this), parent)
+    : ResourceGroupsTaggingResponse(new StartReportCreationResponsePrivate(this), parent)
 {
     setRequest(new StartReportCreationRequest(request));
     setReply(reply);
@@ -61,7 +61,7 @@ const StartReportCreationRequest * StartReportCreationResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ResourceGroupsTaggingApi StartReportCreation \a response.
+ * Parses a successful ResourceGroupsTagging StartReportCreation \a response.
  */
 void StartReportCreationResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +71,24 @@ void StartReportCreationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::StartReportCreationResponsePrivate
+ * \class QtAws::ResourceGroupsTagging::StartReportCreationResponsePrivate
  * \brief The StartReportCreationResponsePrivate class provides private implementation for StartReportCreationResponse.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  */
 
 /*!
  * Constructs a StartReportCreationResponsePrivate object with public implementation \a q.
  */
 StartReportCreationResponsePrivate::StartReportCreationResponsePrivate(
-    StartReportCreationResponse * const q) : ResourceGroupsTaggingApiResponsePrivate(q)
+    StartReportCreationResponse * const q) : ResourceGroupsTaggingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ResourceGroupsTaggingApi StartReportCreation response element from \a xml.
+ * Parses a ResourceGroupsTagging StartReportCreation response element from \a xml.
  */
 void StartReportCreationResponsePrivate::parseStartReportCreationResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +96,5 @@ void StartReportCreationResponsePrivate::parseStartReportCreationResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws

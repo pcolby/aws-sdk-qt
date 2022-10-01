@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteReplicationSubnetGroupResponse
- * \brief The DeleteReplicationSubnetGroupResponse class provides an interace for DatabaseMigrationService DeleteReplicationSubnetGroup responses.
+ * \class QtAws::DatabaseMigration::DeleteReplicationSubnetGroupResponse
+ * \brief The DeleteReplicationSubnetGroupResponse class provides an interace for DatabaseMigration DeleteReplicationSubnetGroup responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteReplicationSubnetGroup
+ * \sa DatabaseMigrationClient::deleteReplicationSubnetGroup
  */
 
 /*!
@@ -55,7 +55,7 @@ DeleteReplicationSubnetGroupResponse::DeleteReplicationSubnetGroupResponse(
         const DeleteReplicationSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DeleteReplicationSubnetGroupResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DeleteReplicationSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteReplicationSubnetGroupRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DeleteReplicationSubnetGroupRequest * DeleteReplicationSubnetGroupResponse
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DeleteReplicationSubnetGroup \a response.
+ * Parses a successful DatabaseMigration DeleteReplicationSubnetGroup \a response.
  */
 void DeleteReplicationSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DeleteReplicationSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteReplicationSubnetGroupResponsePrivate
+ * \class QtAws::DatabaseMigration::DeleteReplicationSubnetGroupResponsePrivate
  * \brief The DeleteReplicationSubnetGroupResponsePrivate class provides private implementation for DeleteReplicationSubnetGroupResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DeleteReplicationSubnetGroupResponsePrivate object with public implementation \a q.
  */
 DeleteReplicationSubnetGroupResponsePrivate::DeleteReplicationSubnetGroupResponsePrivate(
-    DeleteReplicationSubnetGroupResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DeleteReplicationSubnetGroupResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DeleteReplicationSubnetGroup response element from \a xml.
+ * Parses a DatabaseMigration DeleteReplicationSubnetGroup response element from \a xml.
  */
 void DeleteReplicationSubnetGroupResponsePrivate::parseDeleteReplicationSubnetGroupResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DeleteReplicationSubnetGroupResponsePrivate::parseDeleteReplicationSubnetGr
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

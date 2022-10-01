@@ -20,28 +20,28 @@
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourcerequest_p.h"
 #include "listtagsforresourceresponse.h"
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::ListTagsForResourceRequest
- * \brief The ListTagsForResourceRequest class provides an interface for IoT1ClickDevicesService ListTagsForResource requests.
+ * \class QtAws::IoT1ClickDevices::ListTagsForResourceRequest
+ * \brief The ListTagsForResourceRequest class provides an interface for IoT1ClickDevices ListTagsForResource requests.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::listTagsForResource
+ * \sa IoT1ClickDevicesClient::listTagsForResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
-    : IoT1ClickDevicesServiceRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
+    : IoT1ClickDevicesRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
  * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
-    : IoT1ClickDevicesServiceRequest(new ListTagsForResourceRequestPrivate(IoT1ClickDevicesServiceRequest::ListTagsForResourceAction, this))
+    : IoT1ClickDevicesRequest(new ListTagsForResourceRequestPrivate(IoT1ClickDevicesRequest::ListTagsForResourceAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::ListTagsForResourceRequestPrivate
+ * \class QtAws::IoT1ClickDevices::ListTagsForResourceRequestPrivate
  * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a ListTagsForResourceRequestPrivate object for IoT1ClickDevicesService \a action,
+ * Constructs a ListTagsForResourceRequestPrivate object for IoT1ClickDevices \a action,
  * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
-    const IoT1ClickDevicesServiceRequest::Action action, ListTagsForResourceRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(action, q)
+    const IoT1ClickDevicesRequest::Action action, ListTagsForResourceRequest * const q)
+    : IoT1ClickDevicesRequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(other, q)
+    : IoT1ClickDevicesRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 /*!
- * \class QtAws::CostandUsageReportService::ModifyReportDefinitionResponse
- * \brief The ModifyReportDefinitionResponse class provides an interace for CostandUsageReportService ModifyReportDefinition responses.
+ * \class QtAws::CostandUsageReport::ModifyReportDefinitionResponse
+ * \brief The ModifyReportDefinitionResponse class provides an interace for CostandUsageReport ModifyReportDefinition responses.
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  *
  *  The AWS Cost and Usage Report API enables you to programmatically create, query, and delete AWS Cost and Usage report
  * 
@@ -51,7 +51,7 @@ namespace CostandUsageReportService {
  * 
  *  endpoint> <ul> <li>
  *
- * \sa CostandUsageReportServiceClient::modifyReportDefinition
+ * \sa CostandUsageReportClient::modifyReportDefinition
  */
 
 /*!
@@ -61,7 +61,7 @@ ModifyReportDefinitionResponse::ModifyReportDefinitionResponse(
         const ModifyReportDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CostandUsageReportServiceResponse(new ModifyReportDefinitionResponsePrivate(this), parent)
+    : CostandUsageReportResponse(new ModifyReportDefinitionResponsePrivate(this), parent)
 {
     setRequest(new ModifyReportDefinitionRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const ModifyReportDefinitionRequest * ModifyReportDefinitionResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful CostandUsageReportService ModifyReportDefinition \a response.
+ * Parses a successful CostandUsageReport ModifyReportDefinition \a response.
  */
 void ModifyReportDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void ModifyReportDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CostandUsageReportService::ModifyReportDefinitionResponsePrivate
+ * \class QtAws::CostandUsageReport::ModifyReportDefinitionResponsePrivate
  * \brief The ModifyReportDefinitionResponsePrivate class provides private implementation for ModifyReportDefinitionResponse.
  * \internal
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  */
 
 /*!
  * Constructs a ModifyReportDefinitionResponsePrivate object with public implementation \a q.
  */
 ModifyReportDefinitionResponsePrivate::ModifyReportDefinitionResponsePrivate(
-    ModifyReportDefinitionResponse * const q) : CostandUsageReportServiceResponsePrivate(q)
+    ModifyReportDefinitionResponse * const q) : CostandUsageReportResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CostandUsageReportService ModifyReportDefinition response element from \a xml.
+ * Parses a CostandUsageReport ModifyReportDefinition response element from \a xml.
  */
 void ModifyReportDefinitionResponsePrivate::parseModifyReportDefinitionResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void ModifyReportDefinitionResponsePrivate::parseModifyReportDefinitionResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws

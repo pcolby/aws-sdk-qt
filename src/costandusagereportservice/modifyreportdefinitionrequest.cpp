@@ -20,16 +20,16 @@
 #include "modifyreportdefinitionrequest.h"
 #include "modifyreportdefinitionrequest_p.h"
 #include "modifyreportdefinitionresponse.h"
-#include "costandusagereportservicerequest_p.h"
+#include "costandusagereportrequest_p.h"
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
 /*!
- * \class QtAws::CostandUsageReportService::ModifyReportDefinitionRequest
- * \brief The ModifyReportDefinitionRequest class provides an interface for CostandUsageReportService ModifyReportDefinition requests.
+ * \class QtAws::CostandUsageReport::ModifyReportDefinitionRequest
+ * \brief The ModifyReportDefinitionRequest class provides an interface for CostandUsageReport ModifyReportDefinition requests.
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  *
  *  The AWS Cost and Usage Report API enables you to programmatically create, query, and delete AWS Cost and Usage report
  * 
@@ -49,14 +49,14 @@ namespace CostandUsageReportService {
  * 
  *  endpoint> <ul> <li>
  *
- * \sa CostandUsageReportServiceClient::modifyReportDefinition
+ * \sa CostandUsageReportClient::modifyReportDefinition
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ModifyReportDefinitionRequest::ModifyReportDefinitionRequest(const ModifyReportDefinitionRequest &other)
-    : CostandUsageReportServiceRequest(new ModifyReportDefinitionRequestPrivate(*other.d_func(), this))
+    : CostandUsageReportRequest(new ModifyReportDefinitionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ ModifyReportDefinitionRequest::ModifyReportDefinitionRequest(const ModifyReportD
  * Constructs a ModifyReportDefinitionRequest object.
  */
 ModifyReportDefinitionRequest::ModifyReportDefinitionRequest()
-    : CostandUsageReportServiceRequest(new ModifyReportDefinitionRequestPrivate(CostandUsageReportServiceRequest::ModifyReportDefinitionAction, this))
+    : CostandUsageReportRequest(new ModifyReportDefinitionRequestPrivate(CostandUsageReportRequest::ModifyReportDefinitionAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * ModifyReportDefinitionRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::CostandUsageReportService::ModifyReportDefinitionRequestPrivate
+ * \class QtAws::CostandUsageReport::ModifyReportDefinitionRequestPrivate
  * \brief The ModifyReportDefinitionRequestPrivate class provides private implementation for ModifyReportDefinitionRequest.
  * \internal
  *
- * \inmodule QtAwsCostandUsageReportService
+ * \inmodule QtAwsCostandUsageReport
  */
 
 /*!
- * Constructs a ModifyReportDefinitionRequestPrivate object for CostandUsageReportService \a action,
+ * Constructs a ModifyReportDefinitionRequestPrivate object for CostandUsageReport \a action,
  * with public implementation \a q.
  */
 ModifyReportDefinitionRequestPrivate::ModifyReportDefinitionRequestPrivate(
-    const CostandUsageReportServiceRequest::Action action, ModifyReportDefinitionRequest * const q)
-    : CostandUsageReportServiceRequestPrivate(action, q)
+    const CostandUsageReportRequest::Action action, ModifyReportDefinitionRequest * const q)
+    : CostandUsageReportRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ ModifyReportDefinitionRequestPrivate::ModifyReportDefinitionRequestPrivate(
  */
 ModifyReportDefinitionRequestPrivate::ModifyReportDefinitionRequestPrivate(
     const ModifyReportDefinitionRequestPrivate &other, ModifyReportDefinitionRequest * const q)
-    : CostandUsageReportServiceRequestPrivate(other, q)
+    : CostandUsageReportRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws

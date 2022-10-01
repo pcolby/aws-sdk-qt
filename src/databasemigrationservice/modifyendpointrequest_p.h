@@ -20,18 +20,18 @@
 #ifndef QTAWS_MODIFYENDPOINTREQUEST_P_H
 #define QTAWS_MODIFYENDPOINTREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "modifyendpointrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class ModifyEndpointRequest;
 
-class ModifyEndpointRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class ModifyEndpointRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    ModifyEndpointRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    ModifyEndpointRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    ModifyEndpointRequest * const q);
     ModifyEndpointRequestPrivate(const ModifyEndpointRequestPrivate &other,
                                    ModifyEndpointRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

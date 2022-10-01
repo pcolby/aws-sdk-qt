@@ -20,18 +20,18 @@
 #ifndef QTAWS_PURCHASERESERVEDELASTICSEARCHINSTANCEOFFERINGREQUEST_P_H
 #define QTAWS_PURCHASERESERVEDELASTICSEARCHINSTANCEOFFERINGREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "purchasereservedelasticsearchinstanceofferingrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class PurchaseReservedElasticsearchInstanceOfferingRequest;
 
-class PurchaseReservedElasticsearchInstanceOfferingRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class PurchaseReservedElasticsearchInstanceOfferingRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    PurchaseReservedElasticsearchInstanceOfferingRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    PurchaseReservedElasticsearchInstanceOfferingRequestPrivate(const ElasticsearchRequest::Action action,
                                    PurchaseReservedElasticsearchInstanceOfferingRequest * const q);
     PurchaseReservedElasticsearchInstanceOfferingRequestPrivate(const PurchaseReservedElasticsearchInstanceOfferingRequestPrivate &other,
                                    PurchaseReservedElasticsearchInstanceOfferingRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

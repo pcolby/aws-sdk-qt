@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::RefreshSchemasResponse
- * \brief The RefreshSchemasResponse class provides an interace for DatabaseMigrationService RefreshSchemas responses.
+ * \class QtAws::DatabaseMigration::RefreshSchemasResponse
+ * \brief The RefreshSchemasResponse class provides an interace for DatabaseMigration RefreshSchemas responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::refreshSchemas
+ * \sa DatabaseMigrationClient::refreshSchemas
  */
 
 /*!
@@ -55,7 +55,7 @@ RefreshSchemasResponse::RefreshSchemasResponse(
         const RefreshSchemasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new RefreshSchemasResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new RefreshSchemasResponsePrivate(this), parent)
 {
     setRequest(new RefreshSchemasRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const RefreshSchemasRequest * RefreshSchemasResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService RefreshSchemas \a response.
+ * Parses a successful DatabaseMigration RefreshSchemas \a response.
  */
 void RefreshSchemasResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void RefreshSchemasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::RefreshSchemasResponsePrivate
+ * \class QtAws::DatabaseMigration::RefreshSchemasResponsePrivate
  * \brief The RefreshSchemasResponsePrivate class provides private implementation for RefreshSchemasResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a RefreshSchemasResponsePrivate object with public implementation \a q.
  */
 RefreshSchemasResponsePrivate::RefreshSchemasResponsePrivate(
-    RefreshSchemasResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    RefreshSchemasResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService RefreshSchemas response element from \a xml.
+ * Parses a DatabaseMigration RefreshSchemas response element from \a xml.
  */
 void RefreshSchemasResponsePrivate::parseRefreshSchemasResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void RefreshSchemasResponsePrivate::parseRefreshSchemasResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -20,14 +20,14 @@
 #ifndef QTAWS_DESCRIBEREPLICATIONINSTANCETASKLOGSREQUEST_H
 #define QTAWS_DESCRIBEREPLICATIONINSTANCETASKLOGSREQUEST_H
 
-#include "databasemigrationservicerequest.h"
+#include "databasemigrationrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DescribeReplicationInstanceTaskLogsRequestPrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribeReplicationInstanceTaskLogsRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATION_EXPORT DescribeReplicationInstanceTaskLogsRequest : public DatabaseMigrationRequest {
 
 public:
     DescribeReplicationInstanceTaskLogsRequest(const DescribeReplicationInstanceTaskLogsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

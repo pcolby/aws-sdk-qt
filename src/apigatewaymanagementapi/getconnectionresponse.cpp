@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::GetConnectionResponse
- * \brief The GetConnectionResponse class provides an interace for ApiGatewayManagementApi GetConnection responses.
+ * \class QtAws::ApiGatewayManagement::GetConnectionResponse
+ * \brief The GetConnectionResponse class provides an interace for ApiGatewayManagement GetConnection responses.
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  *
  *  The Amazon API Gateway Management API allows you to directly manage runtime aspects of your deployed APIs. To use it,
  *  you must explicitly set the SDK's endpoint to point to the endpoint of your deployed API. The endpoint will be of the
  *  form https://{api-id}.execute-api.{region}.amazonaws.com/{stage}, or will be the endpoint corresponding to your API's
  *  custom domain and base path, if
  *
- * \sa ApiGatewayManagementApiClient::getConnection
+ * \sa ApiGatewayManagementClient::getConnection
  */
 
 /*!
@@ -48,7 +48,7 @@ GetConnectionResponse::GetConnectionResponse(
         const GetConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApiGatewayManagementApiResponse(new GetConnectionResponsePrivate(this), parent)
+    : ApiGatewayManagementResponse(new GetConnectionResponsePrivate(this), parent)
 {
     setRequest(new GetConnectionRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const GetConnectionRequest * GetConnectionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApiGatewayManagementApi GetConnection \a response.
+ * Parses a successful ApiGatewayManagement GetConnection \a response.
  */
 void GetConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void GetConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::GetConnectionResponsePrivate
+ * \class QtAws::ApiGatewayManagement::GetConnectionResponsePrivate
  * \brief The GetConnectionResponsePrivate class provides private implementation for GetConnectionResponse.
  * \internal
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  */
 
 /*!
  * Constructs a GetConnectionResponsePrivate object with public implementation \a q.
  */
 GetConnectionResponsePrivate::GetConnectionResponsePrivate(
-    GetConnectionResponse * const q) : ApiGatewayManagementApiResponsePrivate(q)
+    GetConnectionResponse * const q) : ApiGatewayManagementResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApiGatewayManagementApi GetConnection response element from \a xml.
+ * Parses a ApiGatewayManagement GetConnection response element from \a xml.
  */
 void GetConnectionResponsePrivate::parseGetConnectionResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void GetConnectionResponsePrivate::parseGetConnectionResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws

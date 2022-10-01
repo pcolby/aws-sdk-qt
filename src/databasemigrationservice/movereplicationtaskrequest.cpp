@@ -20,16 +20,16 @@
 #include "movereplicationtaskrequest.h"
 #include "movereplicationtaskrequest_p.h"
 #include "movereplicationtaskresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::MoveReplicationTaskRequest
- * \brief The MoveReplicationTaskRequest class provides an interface for DatabaseMigrationService MoveReplicationTask requests.
+ * \class QtAws::DatabaseMigration::MoveReplicationTaskRequest
+ * \brief The MoveReplicationTaskRequest class provides an interface for DatabaseMigration MoveReplicationTask requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::moveReplicationTask
+ * \sa DatabaseMigrationClient::moveReplicationTask
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 MoveReplicationTaskRequest::MoveReplicationTaskRequest(const MoveReplicationTaskRequest &other)
-    : DatabaseMigrationServiceRequest(new MoveReplicationTaskRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new MoveReplicationTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ MoveReplicationTaskRequest::MoveReplicationTaskRequest(const MoveReplicationTask
  * Constructs a MoveReplicationTaskRequest object.
  */
 MoveReplicationTaskRequest::MoveReplicationTaskRequest()
-    : DatabaseMigrationServiceRequest(new MoveReplicationTaskRequestPrivate(DatabaseMigrationServiceRequest::MoveReplicationTaskAction, this))
+    : DatabaseMigrationRequest(new MoveReplicationTaskRequestPrivate(DatabaseMigrationRequest::MoveReplicationTaskAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * MoveReplicationTaskRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::MoveReplicationTaskRequestPrivate
+ * \class QtAws::DatabaseMigration::MoveReplicationTaskRequestPrivate
  * \brief The MoveReplicationTaskRequestPrivate class provides private implementation for MoveReplicationTaskRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a MoveReplicationTaskRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a MoveReplicationTaskRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 MoveReplicationTaskRequestPrivate::MoveReplicationTaskRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, MoveReplicationTaskRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, MoveReplicationTaskRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ MoveReplicationTaskRequestPrivate::MoveReplicationTaskRequestPrivate(
  */
 MoveReplicationTaskRequestPrivate::MoveReplicationTaskRequestPrivate(
     const MoveReplicationTaskRequestPrivate &other, MoveReplicationTaskRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

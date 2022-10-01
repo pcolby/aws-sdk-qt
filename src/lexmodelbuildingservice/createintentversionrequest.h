@@ -20,14 +20,14 @@
 #ifndef QTAWS_CREATEINTENTVERSIONREQUEST_H
 #define QTAWS_CREATEINTENTVERSIONREQUEST_H
 
-#include "lexmodelbuildingservicerequest.h"
+#include "lexmodelbuildingrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class CreateIntentVersionRequestPrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT CreateIntentVersionRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDING_EXPORT CreateIntentVersionRequest : public LexModelBuildingRequest {
 
 public:
     CreateIntentVersionRequest(const CreateIntentVersionRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

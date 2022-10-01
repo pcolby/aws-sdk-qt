@@ -17,32 +17,32 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_IOT1CLICKDEVICESSERVICERESPONSE_P_H
-#define QTAWS_IOT1CLICKDEVICESSERVICERESPONSE_P_H
+#ifndef QTAWS_IOT1CLICKDEVICESRESPONSE_P_H
+#define QTAWS_IOT1CLICKDEVICESRESPONSE_P_H
 
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
-class IoT1ClickDevicesServiceResponse;
+class IoT1ClickDevicesResponse;
 
-class IoT1ClickDevicesServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoT1ClickDevicesResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit IoT1ClickDevicesServiceResponsePrivate(IoT1ClickDevicesServiceResponse * const q);
+    explicit IoT1ClickDevicesResponsePrivate(IoT1ClickDevicesResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(IoT1ClickDevicesServiceResponse)
-    Q_DISABLE_COPY(IoT1ClickDevicesServiceResponsePrivate)
+    Q_DECLARE_PUBLIC(IoT1ClickDevicesResponse)
+    Q_DISABLE_COPY(IoT1ClickDevicesResponsePrivate)
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

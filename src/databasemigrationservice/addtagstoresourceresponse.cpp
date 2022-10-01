@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::AddTagsToResourceResponse
- * \brief The AddTagsToResourceResponse class provides an interace for DatabaseMigrationService AddTagsToResource responses.
+ * \class QtAws::DatabaseMigration::AddTagsToResourceResponse
+ * \brief The AddTagsToResourceResponse class provides an interace for DatabaseMigration AddTagsToResource responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::addTagsToResource
+ * \sa DatabaseMigrationClient::addTagsToResource
  */
 
 /*!
@@ -55,7 +55,7 @@ AddTagsToResourceResponse::AddTagsToResourceResponse(
         const AddTagsToResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new AddTagsToResourceResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new AddTagsToResourceResponsePrivate(this), parent)
 {
     setRequest(new AddTagsToResourceRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService AddTagsToResource \a response.
+ * Parses a successful DatabaseMigration AddTagsToResource \a response.
  */
 void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::AddTagsToResourceResponsePrivate
+ * \class QtAws::DatabaseMigration::AddTagsToResourceResponsePrivate
  * \brief The AddTagsToResourceResponsePrivate class provides private implementation for AddTagsToResourceResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a AddTagsToResourceResponsePrivate object with public implementation \a q.
  */
 AddTagsToResourceResponsePrivate::AddTagsToResourceResponsePrivate(
-    AddTagsToResourceResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    AddTagsToResourceResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService AddTagsToResource response element from \a xml.
+ * Parses a DatabaseMigration AddTagsToResource response element from \a xml.
  */
 void AddTagsToResourceResponsePrivate::parseAddTagsToResourceResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void AddTagsToResourceResponsePrivate::parseAddTagsToResourceResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

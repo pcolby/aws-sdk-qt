@@ -20,18 +20,18 @@
 #ifndef QTAWS_CREATEELASTICSEARCHDOMAINREQUEST_P_H
 #define QTAWS_CREATEELASTICSEARCHDOMAINREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "createelasticsearchdomainrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class CreateElasticsearchDomainRequest;
 
-class CreateElasticsearchDomainRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class CreateElasticsearchDomainRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    CreateElasticsearchDomainRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    CreateElasticsearchDomainRequestPrivate(const ElasticsearchRequest::Action action,
                                    CreateElasticsearchDomainRequest * const q);
     CreateElasticsearchDomainRequestPrivate(const CreateElasticsearchDomainRequestPrivate &other,
                                    CreateElasticsearchDomainRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

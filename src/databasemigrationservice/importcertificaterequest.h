@@ -20,14 +20,14 @@
 #ifndef QTAWS_IMPORTCERTIFICATEREQUEST_H
 #define QTAWS_IMPORTCERTIFICATEREQUEST_H
 
-#include "databasemigrationservicerequest.h"
+#include "databasemigrationrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class ImportCertificateRequestPrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT ImportCertificateRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATION_EXPORT ImportCertificateRequest : public DatabaseMigrationRequest {
 
 public:
     ImportCertificateRequest(const ImportCertificateRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

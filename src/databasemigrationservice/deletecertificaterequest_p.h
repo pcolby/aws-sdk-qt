@@ -20,18 +20,18 @@
 #ifndef QTAWS_DELETECERTIFICATEREQUEST_P_H
 #define QTAWS_DELETECERTIFICATEREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "deletecertificaterequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DeleteCertificateRequest;
 
-class DeleteCertificateRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class DeleteCertificateRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    DeleteCertificateRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    DeleteCertificateRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    DeleteCertificateRequest * const q);
     DeleteCertificateRequestPrivate(const DeleteCertificateRequestPrivate &other,
                                    DeleteCertificateRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

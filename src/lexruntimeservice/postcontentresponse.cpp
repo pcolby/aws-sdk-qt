@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 /*!
- * \class QtAws::LexRuntimeService::PostContentResponse
- * \brief The PostContentResponse class provides an interace for LexRuntimeService PostContent responses.
+ * \class QtAws::LexRuntime::PostContentResponse
+ * \brief The PostContentResponse class provides an interace for LexRuntime PostContent responses.
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  *
  *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
  *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
@@ -41,7 +41,7 @@ namespace LexRuntimeService {
  *  then performs fulfillment activity (that you configured when you created the bot). You use the build-time API to create
  *  and manage your Amazon Lex bot. For a list of build-time operations, see the build-time API, .
  *
- * \sa LexRuntimeServiceClient::postContent
+ * \sa LexRuntimeClient::postContent
  */
 
 /*!
@@ -51,7 +51,7 @@ PostContentResponse::PostContentResponse(
         const PostContentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexRuntimeServiceResponse(new PostContentResponsePrivate(this), parent)
+    : LexRuntimeResponse(new PostContentResponsePrivate(this), parent)
 {
     setRequest(new PostContentRequest(request));
     setReply(reply);
@@ -68,7 +68,7 @@ const PostContentRequest * PostContentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexRuntimeService PostContent \a response.
+ * Parses a successful LexRuntime PostContent \a response.
  */
 void PostContentResponse::parseSuccess(QIODevice &response)
 {
@@ -78,24 +78,24 @@ void PostContentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexRuntimeService::PostContentResponsePrivate
+ * \class QtAws::LexRuntime::PostContentResponsePrivate
  * \brief The PostContentResponsePrivate class provides private implementation for PostContentResponse.
  * \internal
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  */
 
 /*!
  * Constructs a PostContentResponsePrivate object with public implementation \a q.
  */
 PostContentResponsePrivate::PostContentResponsePrivate(
-    PostContentResponse * const q) : LexRuntimeServiceResponsePrivate(q)
+    PostContentResponse * const q) : LexRuntimeResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexRuntimeService PostContent response element from \a xml.
+ * Parses a LexRuntime PostContent response element from \a xml.
  */
 void PostContentResponsePrivate::parsePostContentResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void PostContentResponsePrivate::parsePostContentResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::CreateTagsResponse
- * \brief The CreateTagsResponse class provides an interace for ApplicationDiscoveryService CreateTags responses.
+ * \class QtAws::ApplicationDiscovery::CreateTagsResponse
+ * \brief The CreateTagsResponse class provides an interace for ApplicationDiscovery CreateTags responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::createTags
+ * \sa ApplicationDiscoveryClient::createTags
  */
 
 /*!
@@ -152,7 +152,7 @@ CreateTagsResponse::CreateTagsResponse(
         const CreateTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new CreateTagsResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new CreateTagsResponsePrivate(this), parent)
 {
     setRequest(new CreateTagsRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const CreateTagsRequest * CreateTagsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService CreateTags \a response.
+ * Parses a successful ApplicationDiscovery CreateTags \a response.
  */
 void CreateTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void CreateTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::CreateTagsResponsePrivate
+ * \class QtAws::ApplicationDiscovery::CreateTagsResponsePrivate
  * \brief The CreateTagsResponsePrivate class provides private implementation for CreateTagsResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a CreateTagsResponsePrivate object with public implementation \a q.
  */
 CreateTagsResponsePrivate::CreateTagsResponsePrivate(
-    CreateTagsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    CreateTagsResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService CreateTags response element from \a xml.
+ * Parses a ApplicationDiscovery CreateTags response element from \a xml.
  */
 void CreateTagsResponsePrivate::parseCreateTagsResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void CreateTagsResponsePrivate::parseCreateTagsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

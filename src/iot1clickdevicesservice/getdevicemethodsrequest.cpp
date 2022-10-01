@@ -20,28 +20,28 @@
 #include "getdevicemethodsrequest.h"
 #include "getdevicemethodsrequest_p.h"
 #include "getdevicemethodsresponse.h"
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::GetDeviceMethodsRequest
- * \brief The GetDeviceMethodsRequest class provides an interface for IoT1ClickDevicesService GetDeviceMethods requests.
+ * \class QtAws::IoT1ClickDevices::GetDeviceMethodsRequest
+ * \brief The GetDeviceMethodsRequest class provides an interface for IoT1ClickDevices GetDeviceMethods requests.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::getDeviceMethods
+ * \sa IoT1ClickDevicesClient::getDeviceMethods
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetDeviceMethodsRequest::GetDeviceMethodsRequest(const GetDeviceMethodsRequest &other)
-    : IoT1ClickDevicesServiceRequest(new GetDeviceMethodsRequestPrivate(*other.d_func(), this))
+    : IoT1ClickDevicesRequest(new GetDeviceMethodsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ GetDeviceMethodsRequest::GetDeviceMethodsRequest(const GetDeviceMethodsRequest &
  * Constructs a GetDeviceMethodsRequest object.
  */
 GetDeviceMethodsRequest::GetDeviceMethodsRequest()
-    : IoT1ClickDevicesServiceRequest(new GetDeviceMethodsRequestPrivate(IoT1ClickDevicesServiceRequest::GetDeviceMethodsAction, this))
+    : IoT1ClickDevicesRequest(new GetDeviceMethodsRequestPrivate(IoT1ClickDevicesRequest::GetDeviceMethodsAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * GetDeviceMethodsRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::GetDeviceMethodsRequestPrivate
+ * \class QtAws::IoT1ClickDevices::GetDeviceMethodsRequestPrivate
  * \brief The GetDeviceMethodsRequestPrivate class provides private implementation for GetDeviceMethodsRequest.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a GetDeviceMethodsRequestPrivate object for IoT1ClickDevicesService \a action,
+ * Constructs a GetDeviceMethodsRequestPrivate object for IoT1ClickDevices \a action,
  * with public implementation \a q.
  */
 GetDeviceMethodsRequestPrivate::GetDeviceMethodsRequestPrivate(
-    const IoT1ClickDevicesServiceRequest::Action action, GetDeviceMethodsRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(action, q)
+    const IoT1ClickDevicesRequest::Action action, GetDeviceMethodsRequest * const q)
+    : IoT1ClickDevicesRequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ GetDeviceMethodsRequestPrivate::GetDeviceMethodsRequestPrivate(
  */
 GetDeviceMethodsRequestPrivate::GetDeviceMethodsRequestPrivate(
     const GetDeviceMethodsRequestPrivate &other, GetDeviceMethodsRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(other, q)
+    : IoT1ClickDevicesRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

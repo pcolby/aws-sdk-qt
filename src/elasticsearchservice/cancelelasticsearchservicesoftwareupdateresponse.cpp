@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::CancelElasticsearchServiceSoftwareUpdateResponse
- * \brief The CancelElasticsearchServiceSoftwareUpdateResponse class provides an interace for ElasticsearchService CancelElasticsearchServiceSoftwareUpdate responses.
+ * \class QtAws::Elasticsearch::CancelElasticsearchServiceSoftwareUpdateResponse
+ * \brief The CancelElasticsearchServiceSoftwareUpdateResponse class provides an interace for Elasticsearch CancelElasticsearchServiceSoftwareUpdate responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::cancelElasticsearchServiceSoftwareUpdate
+ * \sa ElasticsearchClient::cancelElasticsearchServiceSoftwareUpdate
  */
 
 /*!
@@ -61,7 +61,7 @@ CancelElasticsearchServiceSoftwareUpdateResponse::CancelElasticsearchServiceSoft
         const CancelElasticsearchServiceSoftwareUpdateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new CancelElasticsearchServiceSoftwareUpdateResponsePrivate(this), parent)
+    : ElasticsearchResponse(new CancelElasticsearchServiceSoftwareUpdateResponsePrivate(this), parent)
 {
     setRequest(new CancelElasticsearchServiceSoftwareUpdateRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const CancelElasticsearchServiceSoftwareUpdateRequest * CancelElasticsearchServi
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService CancelElasticsearchServiceSoftwareUpdate \a response.
+ * Parses a successful Elasticsearch CancelElasticsearchServiceSoftwareUpdate \a response.
  */
 void CancelElasticsearchServiceSoftwareUpdateResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void CancelElasticsearchServiceSoftwareUpdateResponse::parseSuccess(QIODevice &r
 }
 
 /*!
- * \class QtAws::ElasticsearchService::CancelElasticsearchServiceSoftwareUpdateResponsePrivate
+ * \class QtAws::Elasticsearch::CancelElasticsearchServiceSoftwareUpdateResponsePrivate
  * \brief The CancelElasticsearchServiceSoftwareUpdateResponsePrivate class provides private implementation for CancelElasticsearchServiceSoftwareUpdateResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a CancelElasticsearchServiceSoftwareUpdateResponsePrivate object with public implementation \a q.
  */
 CancelElasticsearchServiceSoftwareUpdateResponsePrivate::CancelElasticsearchServiceSoftwareUpdateResponsePrivate(
-    CancelElasticsearchServiceSoftwareUpdateResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    CancelElasticsearchServiceSoftwareUpdateResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService CancelElasticsearchServiceSoftwareUpdate response element from \a xml.
+ * Parses a Elasticsearch CancelElasticsearchServiceSoftwareUpdate response element from \a xml.
  */
 void CancelElasticsearchServiceSoftwareUpdateResponsePrivate::parseCancelElasticsearchServiceSoftwareUpdateResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void CancelElasticsearchServiceSoftwareUpdateResponsePrivate::parseCancelElastic
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

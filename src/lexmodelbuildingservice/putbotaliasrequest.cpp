@@ -20,30 +20,30 @@
 #include "putbotaliasrequest.h"
 #include "putbotaliasrequest_p.h"
 #include "putbotaliasresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::PutBotAliasRequest
- * \brief The PutBotAliasRequest class provides an interface for LexModelBuildingService PutBotAlias requests.
+ * \class QtAws::LexModelBuilding::PutBotAliasRequest
+ * \brief The PutBotAliasRequest class provides an interface for LexModelBuilding PutBotAlias requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::putBotAlias
+ * \sa LexModelBuildingClient::putBotAlias
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutBotAliasRequest::PutBotAliasRequest(const PutBotAliasRequest &other)
-    : LexModelBuildingServiceRequest(new PutBotAliasRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new PutBotAliasRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ PutBotAliasRequest::PutBotAliasRequest(const PutBotAliasRequest &other)
  * Constructs a PutBotAliasRequest object.
  */
 PutBotAliasRequest::PutBotAliasRequest()
-    : LexModelBuildingServiceRequest(new PutBotAliasRequestPrivate(LexModelBuildingServiceRequest::PutBotAliasAction, this))
+    : LexModelBuildingRequest(new PutBotAliasRequestPrivate(LexModelBuildingRequest::PutBotAliasAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * PutBotAliasRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::PutBotAliasRequestPrivate
+ * \class QtAws::LexModelBuilding::PutBotAliasRequestPrivate
  * \brief The PutBotAliasRequestPrivate class provides private implementation for PutBotAliasRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a PutBotAliasRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a PutBotAliasRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 PutBotAliasRequestPrivate::PutBotAliasRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, PutBotAliasRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, PutBotAliasRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ PutBotAliasRequestPrivate::PutBotAliasRequestPrivate(
  */
 PutBotAliasRequestPrivate::PutBotAliasRequestPrivate(
     const PutBotAliasRequestPrivate &other, PutBotAliasRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

@@ -20,16 +20,16 @@
 #include "cancelelasticsearchservicesoftwareupdaterequest.h"
 #include "cancelelasticsearchservicesoftwareupdaterequest_p.h"
 #include "cancelelasticsearchservicesoftwareupdateresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::CancelElasticsearchServiceSoftwareUpdateRequest
- * \brief The CancelElasticsearchServiceSoftwareUpdateRequest class provides an interface for ElasticsearchService CancelElasticsearchServiceSoftwareUpdate requests.
+ * \class QtAws::Elasticsearch::CancelElasticsearchServiceSoftwareUpdateRequest
+ * \brief The CancelElasticsearchServiceSoftwareUpdateRequest class provides an interface for Elasticsearch CancelElasticsearchServiceSoftwareUpdate requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::cancelElasticsearchServiceSoftwareUpdate
+ * \sa ElasticsearchClient::cancelElasticsearchServiceSoftwareUpdate
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CancelElasticsearchServiceSoftwareUpdateRequest::CancelElasticsearchServiceSoftwareUpdateRequest(const CancelElasticsearchServiceSoftwareUpdateRequest &other)
-    : ElasticsearchServiceRequest(new CancelElasticsearchServiceSoftwareUpdateRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new CancelElasticsearchServiceSoftwareUpdateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ CancelElasticsearchServiceSoftwareUpdateRequest::CancelElasticsearchServiceSoftw
  * Constructs a CancelElasticsearchServiceSoftwareUpdateRequest object.
  */
 CancelElasticsearchServiceSoftwareUpdateRequest::CancelElasticsearchServiceSoftwareUpdateRequest()
-    : ElasticsearchServiceRequest(new CancelElasticsearchServiceSoftwareUpdateRequestPrivate(ElasticsearchServiceRequest::CancelElasticsearchServiceSoftwareUpdateAction, this))
+    : ElasticsearchRequest(new CancelElasticsearchServiceSoftwareUpdateRequestPrivate(ElasticsearchRequest::CancelElasticsearchServiceSoftwareUpdateAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * CancelElasticsearchServiceSoftwareUpdateReque
 }
 
 /*!
- * \class QtAws::ElasticsearchService::CancelElasticsearchServiceSoftwareUpdateRequestPrivate
+ * \class QtAws::Elasticsearch::CancelElasticsearchServiceSoftwareUpdateRequestPrivate
  * \brief The CancelElasticsearchServiceSoftwareUpdateRequestPrivate class provides private implementation for CancelElasticsearchServiceSoftwareUpdateRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a CancelElasticsearchServiceSoftwareUpdateRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a CancelElasticsearchServiceSoftwareUpdateRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 CancelElasticsearchServiceSoftwareUpdateRequestPrivate::CancelElasticsearchServiceSoftwareUpdateRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, CancelElasticsearchServiceSoftwareUpdateRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, CancelElasticsearchServiceSoftwareUpdateRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ CancelElasticsearchServiceSoftwareUpdateRequestPrivate::CancelElasticsearchServi
  */
 CancelElasticsearchServiceSoftwareUpdateRequestPrivate::CancelElasticsearchServiceSoftwareUpdateRequestPrivate(
     const CancelElasticsearchServiceSoftwareUpdateRequestPrivate &other, CancelElasticsearchServiceSoftwareUpdateRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

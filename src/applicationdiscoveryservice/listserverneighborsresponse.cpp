@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ListServerNeighborsResponse
- * \brief The ListServerNeighborsResponse class provides an interace for ApplicationDiscoveryService ListServerNeighbors responses.
+ * \class QtAws::ApplicationDiscovery::ListServerNeighborsResponse
+ * \brief The ListServerNeighborsResponse class provides an interace for ApplicationDiscovery ListServerNeighbors responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::listServerNeighbors
+ * \sa ApplicationDiscoveryClient::listServerNeighbors
  */
 
 /*!
@@ -152,7 +152,7 @@ ListServerNeighborsResponse::ListServerNeighborsResponse(
         const ListServerNeighborsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new ListServerNeighborsResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new ListServerNeighborsResponsePrivate(this), parent)
 {
     setRequest(new ListServerNeighborsRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const ListServerNeighborsRequest * ListServerNeighborsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService ListServerNeighbors \a response.
+ * Parses a successful ApplicationDiscovery ListServerNeighbors \a response.
  */
 void ListServerNeighborsResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void ListServerNeighborsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ListServerNeighborsResponsePrivate
+ * \class QtAws::ApplicationDiscovery::ListServerNeighborsResponsePrivate
  * \brief The ListServerNeighborsResponsePrivate class provides private implementation for ListServerNeighborsResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a ListServerNeighborsResponsePrivate object with public implementation \a q.
  */
 ListServerNeighborsResponsePrivate::ListServerNeighborsResponsePrivate(
-    ListServerNeighborsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    ListServerNeighborsResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService ListServerNeighbors response element from \a xml.
+ * Parses a ApplicationDiscovery ListServerNeighbors response element from \a xml.
  */
 void ListServerNeighborsResponsePrivate::parseListServerNeighborsResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void ListServerNeighborsResponsePrivate::parseListServerNeighborsResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

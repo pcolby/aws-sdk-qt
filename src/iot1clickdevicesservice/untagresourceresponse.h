@@ -20,15 +20,15 @@
 #ifndef QTAWS_UNTAGRESOURCERESPONSE_H
 #define QTAWS_UNTAGRESOURCERESPONSE_H
 
-#include "iot1clickdevicesserviceresponse.h"
+#include "iot1clickdevicesresponse.h"
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 class UntagResourceResponsePrivate;
 
-class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT UntagResourceResponse : public IoT1ClickDevicesServiceResponse {
+class QTAWSIOT1CLICKDEVICES_EXPORT UntagResourceResponse : public IoT1ClickDevicesResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

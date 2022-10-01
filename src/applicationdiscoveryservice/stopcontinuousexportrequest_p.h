@@ -20,18 +20,18 @@
 #ifndef QTAWS_STOPCONTINUOUSEXPORTREQUEST_P_H
 #define QTAWS_STOPCONTINUOUSEXPORTREQUEST_P_H
 
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 #include "stopcontinuousexportrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class StopContinuousExportRequest;
 
-class StopContinuousExportRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
+class StopContinuousExportRequestPrivate : public ApplicationDiscoveryRequestPrivate {
 
 public:
-    StopContinuousExportRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
+    StopContinuousExportRequestPrivate(const ApplicationDiscoveryRequest::Action action,
                                    StopContinuousExportRequest * const q);
     StopContinuousExportRequestPrivate(const StopContinuousExportRequestPrivate &other,
                                    StopContinuousExportRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

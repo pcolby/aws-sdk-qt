@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBotVersionsResponse
- * \brief The GetBotVersionsResponse class provides an interace for LexModelBuildingService GetBotVersions responses.
+ * \class QtAws::LexModelBuilding::GetBotVersionsResponse
+ * \brief The GetBotVersionsResponse class provides an interace for LexModelBuilding GetBotVersions responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getBotVersions
+ * \sa LexModelBuildingClient::getBotVersions
  */
 
 /*!
@@ -48,7 +48,7 @@ GetBotVersionsResponse::GetBotVersionsResponse(
         const GetBotVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetBotVersionsResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new GetBotVersionsResponsePrivate(this), parent)
 {
     setRequest(new GetBotVersionsRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const GetBotVersionsRequest * GetBotVersionsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService GetBotVersions \a response.
+ * Parses a successful LexModelBuilding GetBotVersions \a response.
  */
 void GetBotVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void GetBotVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetBotVersionsResponsePrivate
+ * \class QtAws::LexModelBuilding::GetBotVersionsResponsePrivate
  * \brief The GetBotVersionsResponsePrivate class provides private implementation for GetBotVersionsResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a GetBotVersionsResponsePrivate object with public implementation \a q.
  */
 GetBotVersionsResponsePrivate::GetBotVersionsResponsePrivate(
-    GetBotVersionsResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    GetBotVersionsResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService GetBotVersions response element from \a xml.
+ * Parses a LexModelBuilding GetBotVersions response element from \a xml.
  */
 void GetBotVersionsResponsePrivate::parseGetBotVersionsResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void GetBotVersionsResponsePrivate::parseGetBotVersionsResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

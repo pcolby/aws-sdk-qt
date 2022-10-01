@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_APPLICATIONDISCOVERYSERVICERESPONSE_H
-#define QTAWS_APPLICATIONDISCOVERYSERVICERESPONSE_H
+#ifndef QTAWS_APPLICATIONDISCOVERYRESPONSE_H
+#define QTAWS_APPLICATIONDISCOVERYRESPONSE_H
 
 #include "core/awsabstractresponse.h"
 
-#include "qtawsapplicationdiscoveryserviceglobal.h"
+#include "qtawsapplicationdiscoveryglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
-class ApplicationDiscoveryServiceResponsePrivate;
+class ApplicationDiscoveryResponsePrivate;
 
-class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT ApplicationDiscoveryServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPPLICATIONDISCOVERY_EXPORT ApplicationDiscoveryResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    ApplicationDiscoveryServiceResponse(QObject * const parent = 0);
+    ApplicationDiscoveryResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    ApplicationDiscoveryServiceResponse(ApplicationDiscoveryServiceResponsePrivate * const d, QObject * const parent);
+    ApplicationDiscoveryResponse(ApplicationDiscoveryResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(ApplicationDiscoveryServiceResponse)
-    Q_DISABLE_COPY(ApplicationDiscoveryServiceResponse)
+    Q_DECLARE_PRIVATE(ApplicationDiscoveryResponse)
+    Q_DISABLE_COPY(ApplicationDiscoveryResponse)
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

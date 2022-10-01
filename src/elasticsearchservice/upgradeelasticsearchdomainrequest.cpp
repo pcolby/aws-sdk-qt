@@ -20,16 +20,16 @@
 #include "upgradeelasticsearchdomainrequest.h"
 #include "upgradeelasticsearchdomainrequest_p.h"
 #include "upgradeelasticsearchdomainresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::UpgradeElasticsearchDomainRequest
- * \brief The UpgradeElasticsearchDomainRequest class provides an interface for ElasticsearchService UpgradeElasticsearchDomain requests.
+ * \class QtAws::Elasticsearch::UpgradeElasticsearchDomainRequest
+ * \brief The UpgradeElasticsearchDomainRequest class provides an interface for Elasticsearch UpgradeElasticsearchDomain requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::upgradeElasticsearchDomain
+ * \sa ElasticsearchClient::upgradeElasticsearchDomain
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpgradeElasticsearchDomainRequest::UpgradeElasticsearchDomainRequest(const UpgradeElasticsearchDomainRequest &other)
-    : ElasticsearchServiceRequest(new UpgradeElasticsearchDomainRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new UpgradeElasticsearchDomainRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ UpgradeElasticsearchDomainRequest::UpgradeElasticsearchDomainRequest(const Upgra
  * Constructs a UpgradeElasticsearchDomainRequest object.
  */
 UpgradeElasticsearchDomainRequest::UpgradeElasticsearchDomainRequest()
-    : ElasticsearchServiceRequest(new UpgradeElasticsearchDomainRequestPrivate(ElasticsearchServiceRequest::UpgradeElasticsearchDomainAction, this))
+    : ElasticsearchRequest(new UpgradeElasticsearchDomainRequestPrivate(ElasticsearchRequest::UpgradeElasticsearchDomainAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * UpgradeElasticsearchDomainRequest::response(Q
 }
 
 /*!
- * \class QtAws::ElasticsearchService::UpgradeElasticsearchDomainRequestPrivate
+ * \class QtAws::Elasticsearch::UpgradeElasticsearchDomainRequestPrivate
  * \brief The UpgradeElasticsearchDomainRequestPrivate class provides private implementation for UpgradeElasticsearchDomainRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a UpgradeElasticsearchDomainRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a UpgradeElasticsearchDomainRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 UpgradeElasticsearchDomainRequestPrivate::UpgradeElasticsearchDomainRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, UpgradeElasticsearchDomainRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, UpgradeElasticsearchDomainRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ UpgradeElasticsearchDomainRequestPrivate::UpgradeElasticsearchDomainRequestPriva
  */
 UpgradeElasticsearchDomainRequestPrivate::UpgradeElasticsearchDomainRequestPrivate(
     const UpgradeElasticsearchDomainRequestPrivate &other, UpgradeElasticsearchDomainRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

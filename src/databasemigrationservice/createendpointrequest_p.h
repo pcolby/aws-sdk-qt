@@ -20,18 +20,18 @@
 #ifndef QTAWS_CREATEENDPOINTREQUEST_P_H
 #define QTAWS_CREATEENDPOINTREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "createendpointrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class CreateEndpointRequest;
 
-class CreateEndpointRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class CreateEndpointRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    CreateEndpointRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    CreateEndpointRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    CreateEndpointRequest * const q);
     CreateEndpointRequestPrivate(const CreateEndpointRequestPrivate &other,
                                    CreateEndpointRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

@@ -20,14 +20,14 @@
 #ifndef QTAWS_DESCRIBEFLEETADVISORDATABASESRESPONSE_P_H
 #define QTAWS_DESCRIBEFLEETADVISORDATABASESRESPONSE_P_H
 
-#include "databasemigrationserviceresponse_p.h"
+#include "databasemigrationresponse_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DescribeFleetAdvisorDatabasesResponse;
 
-class DescribeFleetAdvisorDatabasesResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+class DescribeFleetAdvisorDatabasesResponsePrivate : public DatabaseMigrationResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

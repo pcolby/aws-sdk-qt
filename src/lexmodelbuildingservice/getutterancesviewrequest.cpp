@@ -20,30 +20,30 @@
 #include "getutterancesviewrequest.h"
 #include "getutterancesviewrequest_p.h"
 #include "getutterancesviewresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::GetUtterancesViewRequest
- * \brief The GetUtterancesViewRequest class provides an interface for LexModelBuildingService GetUtterancesView requests.
+ * \class QtAws::LexModelBuilding::GetUtterancesViewRequest
+ * \brief The GetUtterancesViewRequest class provides an interface for LexModelBuilding GetUtterancesView requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::getUtterancesView
+ * \sa LexModelBuildingClient::getUtterancesView
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetUtterancesViewRequest::GetUtterancesViewRequest(const GetUtterancesViewRequest &other)
-    : LexModelBuildingServiceRequest(new GetUtterancesViewRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new GetUtterancesViewRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetUtterancesViewRequest::GetUtterancesViewRequest(const GetUtterancesViewReques
  * Constructs a GetUtterancesViewRequest object.
  */
 GetUtterancesViewRequest::GetUtterancesViewRequest()
-    : LexModelBuildingServiceRequest(new GetUtterancesViewRequestPrivate(LexModelBuildingServiceRequest::GetUtterancesViewAction, this))
+    : LexModelBuildingRequest(new GetUtterancesViewRequestPrivate(LexModelBuildingRequest::GetUtterancesViewAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * GetUtterancesViewRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::GetUtterancesViewRequestPrivate
+ * \class QtAws::LexModelBuilding::GetUtterancesViewRequestPrivate
  * \brief The GetUtterancesViewRequestPrivate class provides private implementation for GetUtterancesViewRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a GetUtterancesViewRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a GetUtterancesViewRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 GetUtterancesViewRequestPrivate::GetUtterancesViewRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, GetUtterancesViewRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, GetUtterancesViewRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ GetUtterancesViewRequestPrivate::GetUtterancesViewRequestPrivate(
  */
 GetUtterancesViewRequestPrivate::GetUtterancesViewRequestPrivate(
     const GetUtterancesViewRequestPrivate &other, GetUtterancesViewRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

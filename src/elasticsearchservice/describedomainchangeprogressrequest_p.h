@@ -20,18 +20,18 @@
 #ifndef QTAWS_DESCRIBEDOMAINCHANGEPROGRESSREQUEST_P_H
 #define QTAWS_DESCRIBEDOMAINCHANGEPROGRESSREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "describedomainchangeprogressrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class DescribeDomainChangeProgressRequest;
 
-class DescribeDomainChangeProgressRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class DescribeDomainChangeProgressRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    DescribeDomainChangeProgressRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    DescribeDomainChangeProgressRequestPrivate(const ElasticsearchRequest::Action action,
                                    DescribeDomainChangeProgressRequest * const q);
     DescribeDomainChangeProgressRequestPrivate(const DescribeDomainChangeProgressRequestPrivate &other,
                                    DescribeDomainChangeProgressRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

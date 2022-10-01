@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeEventCategoriesResponse
- * \brief The DescribeEventCategoriesResponse class provides an interace for DatabaseMigrationService DescribeEventCategories responses.
+ * \class QtAws::DatabaseMigration::DescribeEventCategoriesResponse
+ * \brief The DescribeEventCategoriesResponse class provides an interace for DatabaseMigration DescribeEventCategories responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeEventCategories
+ * \sa DatabaseMigrationClient::describeEventCategories
  */
 
 /*!
@@ -55,7 +55,7 @@ DescribeEventCategoriesResponse::DescribeEventCategoriesResponse(
         const DescribeEventCategoriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeEventCategoriesResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DescribeEventCategoriesResponsePrivate(this), parent)
 {
     setRequest(new DescribeEventCategoriesRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DescribeEventCategoriesRequest * DescribeEventCategoriesResponse::request(
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DescribeEventCategories \a response.
+ * Parses a successful DatabaseMigration DescribeEventCategories \a response.
  */
 void DescribeEventCategoriesResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DescribeEventCategoriesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeEventCategoriesResponsePrivate
+ * \class QtAws::DatabaseMigration::DescribeEventCategoriesResponsePrivate
  * \brief The DescribeEventCategoriesResponsePrivate class provides private implementation for DescribeEventCategoriesResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DescribeEventCategoriesResponsePrivate object with public implementation \a q.
  */
 DescribeEventCategoriesResponsePrivate::DescribeEventCategoriesResponsePrivate(
-    DescribeEventCategoriesResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DescribeEventCategoriesResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DescribeEventCategories response element from \a xml.
+ * Parses a DatabaseMigration DescribeEventCategories response element from \a xml.
  */
 void DescribeEventCategoriesResponsePrivate::parseDescribeEventCategoriesResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribeEventCategoriesResponsePrivate::parseDescribeEventCategoriesRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

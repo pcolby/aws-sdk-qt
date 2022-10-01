@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteCertificateResponse
- * \brief The DeleteCertificateResponse class provides an interace for DatabaseMigrationService DeleteCertificate responses.
+ * \class QtAws::DatabaseMigration::DeleteCertificateResponse
+ * \brief The DeleteCertificateResponse class provides an interace for DatabaseMigration DeleteCertificate responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteCertificate
+ * \sa DatabaseMigrationClient::deleteCertificate
  */
 
 /*!
@@ -55,7 +55,7 @@ DeleteCertificateResponse::DeleteCertificateResponse(
         const DeleteCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DeleteCertificateResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DeleteCertificateResponsePrivate(this), parent)
 {
     setRequest(new DeleteCertificateRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DeleteCertificateRequest * DeleteCertificateResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DeleteCertificate \a response.
+ * Parses a successful DatabaseMigration DeleteCertificate \a response.
  */
 void DeleteCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DeleteCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteCertificateResponsePrivate
+ * \class QtAws::DatabaseMigration::DeleteCertificateResponsePrivate
  * \brief The DeleteCertificateResponsePrivate class provides private implementation for DeleteCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DeleteCertificateResponsePrivate object with public implementation \a q.
  */
 DeleteCertificateResponsePrivate::DeleteCertificateResponsePrivate(
-    DeleteCertificateResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DeleteCertificateResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DeleteCertificate response element from \a xml.
+ * Parses a DatabaseMigration DeleteCertificate response element from \a xml.
  */
 void DeleteCertificateResponsePrivate::parseDeleteCertificateResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DeleteCertificateResponsePrivate::parseDeleteCertificateResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -20,15 +20,15 @@
 #ifndef QTAWS_GETCOMPATIBLEELASTICSEARCHVERSIONSRESPONSE_H
 #define QTAWS_GETCOMPATIBLEELASTICSEARCHVERSIONSRESPONSE_H
 
-#include "elasticsearchserviceresponse.h"
+#include "elasticsearchresponse.h"
 #include "getcompatibleelasticsearchversionsrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class GetCompatibleElasticsearchVersionsResponsePrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT GetCompatibleElasticsearchVersionsResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCH_EXPORT GetCompatibleElasticsearchVersionsResponse : public ElasticsearchResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

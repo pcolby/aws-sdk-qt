@@ -17,19 +17,19 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_IOT1CLICKDEVICESSERVICECLIENT_H
-#define QTAWS_IOT1CLICKDEVICESSERVICECLIENT_H
+#ifndef QTAWS_IOT1CLICKDEVICESCLIENT_H
+#define QTAWS_IOT1CLICKDEVICESCLIENT_H
 
 #include "core/awsabstractclient.h"
 
-#include "qtawsiot1clickdevicesserviceglobal.h"
+#include "qtawsiot1clickdevicesglobal.h"
 
 class QNetworkReply;
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
-class IoT1ClickDevicesServiceClientPrivate;
+class IoT1ClickDevicesClientPrivate;
 class ClaimDevicesByClaimCodeRequest;
 class ClaimDevicesByClaimCodeResponse;
 class DescribeDeviceRequest;
@@ -57,17 +57,17 @@ class UntagResourceResponse;
 class UpdateDeviceStateRequest;
 class UpdateDeviceStateResponse;
 
-class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT IoT1ClickDevicesServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOT1CLICKDEVICES_EXPORT IoT1ClickDevicesClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    IoT1ClickDevicesServiceClient(
+    IoT1ClickDevicesClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit IoT1ClickDevicesServiceClient(
+    explicit IoT1ClickDevicesClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -88,12 +88,12 @@ public slots:
     UpdateDeviceStateResponse * updateDeviceState(const UpdateDeviceStateRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(IoT1ClickDevicesServiceClient)
-    Q_DISABLE_COPY(IoT1ClickDevicesServiceClient)
+    Q_DECLARE_PRIVATE(IoT1ClickDevicesClient)
+    Q_DISABLE_COPY(IoT1ClickDevicesClient)
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

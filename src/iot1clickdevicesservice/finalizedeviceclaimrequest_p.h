@@ -20,18 +20,18 @@
 #ifndef QTAWS_FINALIZEDEVICECLAIMREQUEST_P_H
 #define QTAWS_FINALIZEDEVICECLAIMREQUEST_P_H
 
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 #include "finalizedeviceclaimrequest.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 class FinalizeDeviceClaimRequest;
 
-class FinalizeDeviceClaimRequestPrivate : public IoT1ClickDevicesServiceRequestPrivate {
+class FinalizeDeviceClaimRequestPrivate : public IoT1ClickDevicesRequestPrivate {
 
 public:
-    FinalizeDeviceClaimRequestPrivate(const IoT1ClickDevicesServiceRequest::Action action,
+    FinalizeDeviceClaimRequestPrivate(const IoT1ClickDevicesRequest::Action action,
                                    FinalizeDeviceClaimRequest * const q);
     FinalizeDeviceClaimRequestPrivate(const FinalizeDeviceClaimRequestPrivate &other,
                                    FinalizeDeviceClaimRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

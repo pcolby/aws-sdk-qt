@@ -20,18 +20,18 @@
 #ifndef QTAWS_GETSESSIONREQUEST_P_H
 #define QTAWS_GETSESSIONREQUEST_P_H
 
-#include "lexruntimeservicerequest_p.h"
+#include "lexruntimerequest_p.h"
 #include "getsessionrequest.h"
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 class GetSessionRequest;
 
-class GetSessionRequestPrivate : public LexRuntimeServiceRequestPrivate {
+class GetSessionRequestPrivate : public LexRuntimeRequestPrivate {
 
 public:
-    GetSessionRequestPrivate(const LexRuntimeServiceRequest::Action action,
+    GetSessionRequestPrivate(const LexRuntimeRequest::Action action,
                                    GetSessionRequest * const q);
     GetSessionRequestPrivate(const GetSessionRequestPrivate &other,
                                    GetSessionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws
 
 #endif

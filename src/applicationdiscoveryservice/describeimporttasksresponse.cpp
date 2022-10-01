@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeImportTasksResponse
- * \brief The DescribeImportTasksResponse class provides an interace for ApplicationDiscoveryService DescribeImportTasks responses.
+ * \class QtAws::ApplicationDiscovery::DescribeImportTasksResponse
+ * \brief The DescribeImportTasksResponse class provides an interace for ApplicationDiscovery DescribeImportTasks responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::describeImportTasks
+ * \sa ApplicationDiscoveryClient::describeImportTasks
  */
 
 /*!
@@ -152,7 +152,7 @@ DescribeImportTasksResponse::DescribeImportTasksResponse(
         const DescribeImportTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new DescribeImportTasksResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new DescribeImportTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeImportTasksRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const DescribeImportTasksRequest * DescribeImportTasksResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService DescribeImportTasks \a response.
+ * Parses a successful ApplicationDiscovery DescribeImportTasks \a response.
  */
 void DescribeImportTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void DescribeImportTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeImportTasksResponsePrivate
+ * \class QtAws::ApplicationDiscovery::DescribeImportTasksResponsePrivate
  * \brief The DescribeImportTasksResponsePrivate class provides private implementation for DescribeImportTasksResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a DescribeImportTasksResponsePrivate object with public implementation \a q.
  */
 DescribeImportTasksResponsePrivate::DescribeImportTasksResponsePrivate(
-    DescribeImportTasksResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    DescribeImportTasksResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService DescribeImportTasks response element from \a xml.
+ * Parses a ApplicationDiscovery DescribeImportTasks response element from \a xml.
  */
 void DescribeImportTasksResponsePrivate::parseDescribeImportTasksResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void DescribeImportTasksResponsePrivate::parseDescribeImportTasksResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

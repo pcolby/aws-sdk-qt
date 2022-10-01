@@ -20,16 +20,16 @@
 #include "disassociateconfigurationitemsfromapplicationrequest.h"
 #include "disassociateconfigurationitemsfromapplicationrequest_p.h"
 #include "disassociateconfigurationitemsfromapplicationresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DisassociateConfigurationItemsFromApplicationRequest
- * \brief The DisassociateConfigurationItemsFromApplicationRequest class provides an interface for ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication requests.
+ * \class QtAws::ApplicationDiscovery::DisassociateConfigurationItemsFromApplicationRequest
+ * \brief The DisassociateConfigurationItemsFromApplicationRequest class provides an interface for ApplicationDiscovery DisassociateConfigurationItemsFromApplication requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::disassociateConfigurationItemsFromApplication
+ * \sa ApplicationDiscoveryClient::disassociateConfigurationItemsFromApplication
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DisassociateConfigurationItemsFromApplicationRequest::DisassociateConfigurationItemsFromApplicationRequest(const DisassociateConfigurationItemsFromApplicationRequest &other)
-    : ApplicationDiscoveryServiceRequest(new DisassociateConfigurationItemsFromApplicationRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new DisassociateConfigurationItemsFromApplicationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ DisassociateConfigurationItemsFromApplicationRequest::DisassociateConfigurationI
  * Constructs a DisassociateConfigurationItemsFromApplicationRequest object.
  */
 DisassociateConfigurationItemsFromApplicationRequest::DisassociateConfigurationItemsFromApplicationRequest()
-    : ApplicationDiscoveryServiceRequest(new DisassociateConfigurationItemsFromApplicationRequestPrivate(ApplicationDiscoveryServiceRequest::DisassociateConfigurationItemsFromApplicationAction, this))
+    : ApplicationDiscoveryRequest(new DisassociateConfigurationItemsFromApplicationRequestPrivate(ApplicationDiscoveryRequest::DisassociateConfigurationItemsFromApplicationAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * DisassociateConfigurationItemsFromApplication
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DisassociateConfigurationItemsFromApplicationRequestPrivate
+ * \class QtAws::ApplicationDiscovery::DisassociateConfigurationItemsFromApplicationRequestPrivate
  * \brief The DisassociateConfigurationItemsFromApplicationRequestPrivate class provides private implementation for DisassociateConfigurationItemsFromApplicationRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a DisassociateConfigurationItemsFromApplicationRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a DisassociateConfigurationItemsFromApplicationRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 DisassociateConfigurationItemsFromApplicationRequestPrivate::DisassociateConfigurationItemsFromApplicationRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, DisassociateConfigurationItemsFromApplicationRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, DisassociateConfigurationItemsFromApplicationRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ DisassociateConfigurationItemsFromApplicationRequestPrivate::DisassociateConfigu
  */
 DisassociateConfigurationItemsFromApplicationRequestPrivate::DisassociateConfigurationItemsFromApplicationRequestPrivate(
     const DisassociateConfigurationItemsFromApplicationRequestPrivate &other, DisassociateConfigurationItemsFromApplicationRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

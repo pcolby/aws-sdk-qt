@@ -20,18 +20,18 @@
 #ifndef QTAWS_DELETETAGSREQUEST_P_H
 #define QTAWS_DELETETAGSREQUEST_P_H
 
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 #include "deletetagsrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class DeleteTagsRequest;
 
-class DeleteTagsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
+class DeleteTagsRequestPrivate : public ApplicationDiscoveryRequestPrivate {
 
 public:
-    DeleteTagsRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
+    DeleteTagsRequestPrivate(const ApplicationDiscoveryRequest::Action action,
                                    DeleteTagsRequest * const q);
     DeleteTagsRequestPrivate(const DeleteTagsRequestPrivate &other,
                                    DeleteTagsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

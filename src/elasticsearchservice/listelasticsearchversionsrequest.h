@@ -20,14 +20,14 @@
 #ifndef QTAWS_LISTELASTICSEARCHVERSIONSREQUEST_H
 #define QTAWS_LISTELASTICSEARCHVERSIONSREQUEST_H
 
-#include "elasticsearchservicerequest.h"
+#include "elasticsearchrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class ListElasticsearchVersionsRequestPrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT ListElasticsearchVersionsRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCH_EXPORT ListElasticsearchVersionsRequest : public ElasticsearchRequest {
 
 public:
     ListElasticsearchVersionsRequest(const ListElasticsearchVersionsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

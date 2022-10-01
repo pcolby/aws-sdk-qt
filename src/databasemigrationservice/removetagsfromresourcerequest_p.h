@@ -20,18 +20,18 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCEREQUEST_P_H
 #define QTAWS_REMOVETAGSFROMRESOURCEREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "removetagsfromresourcerequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class RemoveTagsFromResourceRequest;
 
-class RemoveTagsFromResourceRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class RemoveTagsFromResourceRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    RemoveTagsFromResourceRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    RemoveTagsFromResourceRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    RemoveTagsFromResourceRequest * const q);
     RemoveTagsFromResourceRequestPrivate(const RemoveTagsFromResourceRequestPrivate &other,
                                    RemoveTagsFromResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

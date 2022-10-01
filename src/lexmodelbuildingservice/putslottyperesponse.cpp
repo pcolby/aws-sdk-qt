@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::PutSlotTypeResponse
- * \brief The PutSlotTypeResponse class provides an interace for LexModelBuildingService PutSlotType responses.
+ * \class QtAws::LexModelBuilding::PutSlotTypeResponse
+ * \brief The PutSlotTypeResponse class provides an interace for LexModelBuilding PutSlotType responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::putSlotType
+ * \sa LexModelBuildingClient::putSlotType
  */
 
 /*!
@@ -48,7 +48,7 @@ PutSlotTypeResponse::PutSlotTypeResponse(
         const PutSlotTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new PutSlotTypeResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new PutSlotTypeResponsePrivate(this), parent)
 {
     setRequest(new PutSlotTypeRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const PutSlotTypeRequest * PutSlotTypeResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService PutSlotType \a response.
+ * Parses a successful LexModelBuilding PutSlotType \a response.
  */
 void PutSlotTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void PutSlotTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::PutSlotTypeResponsePrivate
+ * \class QtAws::LexModelBuilding::PutSlotTypeResponsePrivate
  * \brief The PutSlotTypeResponsePrivate class provides private implementation for PutSlotTypeResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a PutSlotTypeResponsePrivate object with public implementation \a q.
  */
 PutSlotTypeResponsePrivate::PutSlotTypeResponsePrivate(
-    PutSlotTypeResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    PutSlotTypeResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService PutSlotType response element from \a xml.
+ * Parses a LexModelBuilding PutSlotType response element from \a xml.
  */
 void PutSlotTypeResponsePrivate::parsePutSlotTypeResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void PutSlotTypeResponsePrivate::parsePutSlotTypeResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

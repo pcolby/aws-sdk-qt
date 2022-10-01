@@ -20,16 +20,16 @@
 #include "deleteendpointrequest.h"
 #include "deleteendpointrequest_p.h"
 #include "deleteendpointresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteEndpointRequest
- * \brief The DeleteEndpointRequest class provides an interface for DatabaseMigrationService DeleteEndpoint requests.
+ * \class QtAws::DatabaseMigration::DeleteEndpointRequest
+ * \brief The DeleteEndpointRequest class provides an interface for DatabaseMigration DeleteEndpoint requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteEndpoint
+ * \sa DatabaseMigrationClient::deleteEndpoint
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteEndpointRequest::DeleteEndpointRequest(const DeleteEndpointRequest &other)
-    : DatabaseMigrationServiceRequest(new DeleteEndpointRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DeleteEndpointRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteEndpointRequest::DeleteEndpointRequest(const DeleteEndpointRequest &other)
  * Constructs a DeleteEndpointRequest object.
  */
 DeleteEndpointRequest::DeleteEndpointRequest()
-    : DatabaseMigrationServiceRequest(new DeleteEndpointRequestPrivate(DatabaseMigrationServiceRequest::DeleteEndpointAction, this))
+    : DatabaseMigrationRequest(new DeleteEndpointRequestPrivate(DatabaseMigrationRequest::DeleteEndpointAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteEndpointRequestPrivate
+ * \class QtAws::DatabaseMigration::DeleteEndpointRequestPrivate
  * \brief The DeleteEndpointRequestPrivate class provides private implementation for DeleteEndpointRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DeleteEndpointRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DeleteEndpointRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DeleteEndpointRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DeleteEndpointRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
     const DeleteEndpointRequestPrivate &other, DeleteEndpointRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

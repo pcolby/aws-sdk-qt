@@ -17,35 +17,35 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_MARKETPLACEENTITLEMENTSERVICEREQUEST_P_H
-#define QTAWS_MARKETPLACEENTITLEMENTSERVICEREQUEST_P_H
+#ifndef QTAWS_MARKETPLACEENTITLEMENTREQUEST_P_H
+#define QTAWS_MARKETPLACEENTITLEMENTREQUEST_P_H
 
 #include "core/awsabstractrequest_p.h"
-#include "marketplaceentitlementservicerequest.h"
+#include "marketplaceentitlementrequest.h"
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
-class MarketplaceEntitlementServiceRequest;
+class MarketplaceEntitlementRequest;
 
-class MarketplaceEntitlementServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MarketplaceEntitlementRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    MarketplaceEntitlementServiceRequest::Action action; ///< MarketplaceEntitlementService action to be performed.
-    QString apiVersion;        ///< MarketplaceEntitlementService API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< MarketplaceEntitlementService request (query string) parameters. @todo?
+    MarketplaceEntitlementRequest::Action action; ///< MarketplaceEntitlement action to be performed.
+    QString apiVersion;        ///< MarketplaceEntitlement API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< MarketplaceEntitlement request (query string) parameters. @todo?
 
-    MarketplaceEntitlementServiceRequestPrivate(const MarketplaceEntitlementServiceRequest::Action action, MarketplaceEntitlementServiceRequest * const q);
-    MarketplaceEntitlementServiceRequestPrivate(const MarketplaceEntitlementServiceRequestPrivate &other, MarketplaceEntitlementServiceRequest * const q);
+    MarketplaceEntitlementRequestPrivate(const MarketplaceEntitlementRequest::Action action, MarketplaceEntitlementRequest * const q);
+    MarketplaceEntitlementRequestPrivate(const MarketplaceEntitlementRequestPrivate &other, MarketplaceEntitlementRequest * const q);
 
-    static QString toString(const MarketplaceEntitlementServiceRequest::Action &action);
+    static QString toString(const MarketplaceEntitlementRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(MarketplaceEntitlementServiceRequest)
+    Q_DECLARE_PUBLIC(MarketplaceEntitlementRequest)
 
 };
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws
 
 #endif

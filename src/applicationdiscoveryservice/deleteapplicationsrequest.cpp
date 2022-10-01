@@ -20,16 +20,16 @@
 #include "deleteapplicationsrequest.h"
 #include "deleteapplicationsrequest_p.h"
 #include "deleteapplicationsresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DeleteApplicationsRequest
- * \brief The DeleteApplicationsRequest class provides an interface for ApplicationDiscoveryService DeleteApplications requests.
+ * \class QtAws::ApplicationDiscovery::DeleteApplicationsRequest
+ * \brief The DeleteApplicationsRequest class provides an interface for ApplicationDiscovery DeleteApplications requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::deleteApplications
+ * \sa ApplicationDiscoveryClient::deleteApplications
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteApplicationsRequest::DeleteApplicationsRequest(const DeleteApplicationsRequest &other)
-    : ApplicationDiscoveryServiceRequest(new DeleteApplicationsRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new DeleteApplicationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ DeleteApplicationsRequest::DeleteApplicationsRequest(const DeleteApplicationsReq
  * Constructs a DeleteApplicationsRequest object.
  */
 DeleteApplicationsRequest::DeleteApplicationsRequest()
-    : ApplicationDiscoveryServiceRequest(new DeleteApplicationsRequestPrivate(ApplicationDiscoveryServiceRequest::DeleteApplicationsAction, this))
+    : ApplicationDiscoveryRequest(new DeleteApplicationsRequestPrivate(ApplicationDiscoveryRequest::DeleteApplicationsAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationsRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DeleteApplicationsRequestPrivate
+ * \class QtAws::ApplicationDiscovery::DeleteApplicationsRequestPrivate
  * \brief The DeleteApplicationsRequestPrivate class provides private implementation for DeleteApplicationsRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a DeleteApplicationsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a DeleteApplicationsRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 DeleteApplicationsRequestPrivate::DeleteApplicationsRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, DeleteApplicationsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, DeleteApplicationsRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ DeleteApplicationsRequestPrivate::DeleteApplicationsRequestPrivate(
  */
 DeleteApplicationsRequestPrivate::DeleteApplicationsRequestPrivate(
     const DeleteApplicationsRequestPrivate &other, DeleteApplicationsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

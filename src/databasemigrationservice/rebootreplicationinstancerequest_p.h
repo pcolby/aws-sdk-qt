@@ -20,18 +20,18 @@
 #ifndef QTAWS_REBOOTREPLICATIONINSTANCEREQUEST_P_H
 #define QTAWS_REBOOTREPLICATIONINSTANCEREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "rebootreplicationinstancerequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class RebootReplicationInstanceRequest;
 
-class RebootReplicationInstanceRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class RebootReplicationInstanceRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    RebootReplicationInstanceRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    RebootReplicationInstanceRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    RebootReplicationInstanceRequest * const q);
     RebootReplicationInstanceRequestPrivate(const RebootReplicationInstanceRequestPrivate &other,
                                    RebootReplicationInstanceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

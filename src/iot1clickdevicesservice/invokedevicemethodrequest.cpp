@@ -20,28 +20,28 @@
 #include "invokedevicemethodrequest.h"
 #include "invokedevicemethodrequest_p.h"
 #include "invokedevicemethodresponse.h"
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::InvokeDeviceMethodRequest
- * \brief The InvokeDeviceMethodRequest class provides an interface for IoT1ClickDevicesService InvokeDeviceMethod requests.
+ * \class QtAws::IoT1ClickDevices::InvokeDeviceMethodRequest
+ * \brief The InvokeDeviceMethodRequest class provides an interface for IoT1ClickDevices InvokeDeviceMethod requests.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::invokeDeviceMethod
+ * \sa IoT1ClickDevicesClient::invokeDeviceMethod
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 InvokeDeviceMethodRequest::InvokeDeviceMethodRequest(const InvokeDeviceMethodRequest &other)
-    : IoT1ClickDevicesServiceRequest(new InvokeDeviceMethodRequestPrivate(*other.d_func(), this))
+    : IoT1ClickDevicesRequest(new InvokeDeviceMethodRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ InvokeDeviceMethodRequest::InvokeDeviceMethodRequest(const InvokeDeviceMethodReq
  * Constructs a InvokeDeviceMethodRequest object.
  */
 InvokeDeviceMethodRequest::InvokeDeviceMethodRequest()
-    : IoT1ClickDevicesServiceRequest(new InvokeDeviceMethodRequestPrivate(IoT1ClickDevicesServiceRequest::InvokeDeviceMethodAction, this))
+    : IoT1ClickDevicesRequest(new InvokeDeviceMethodRequestPrivate(IoT1ClickDevicesRequest::InvokeDeviceMethodAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * InvokeDeviceMethodRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::InvokeDeviceMethodRequestPrivate
+ * \class QtAws::IoT1ClickDevices::InvokeDeviceMethodRequestPrivate
  * \brief The InvokeDeviceMethodRequestPrivate class provides private implementation for InvokeDeviceMethodRequest.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a InvokeDeviceMethodRequestPrivate object for IoT1ClickDevicesService \a action,
+ * Constructs a InvokeDeviceMethodRequestPrivate object for IoT1ClickDevices \a action,
  * with public implementation \a q.
  */
 InvokeDeviceMethodRequestPrivate::InvokeDeviceMethodRequestPrivate(
-    const IoT1ClickDevicesServiceRequest::Action action, InvokeDeviceMethodRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(action, q)
+    const IoT1ClickDevicesRequest::Action action, InvokeDeviceMethodRequest * const q)
+    : IoT1ClickDevicesRequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ InvokeDeviceMethodRequestPrivate::InvokeDeviceMethodRequestPrivate(
  */
 InvokeDeviceMethodRequestPrivate::InvokeDeviceMethodRequestPrivate(
     const InvokeDeviceMethodRequestPrivate &other, InvokeDeviceMethodRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(other, q)
+    : IoT1ClickDevicesRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

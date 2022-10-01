@@ -20,18 +20,18 @@
 #ifndef QTAWS_GETPACKAGEVERSIONHISTORYREQUEST_P_H
 #define QTAWS_GETPACKAGEVERSIONHISTORYREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "getpackageversionhistoryrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class GetPackageVersionHistoryRequest;
 
-class GetPackageVersionHistoryRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class GetPackageVersionHistoryRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    GetPackageVersionHistoryRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    GetPackageVersionHistoryRequestPrivate(const ElasticsearchRequest::Action action,
                                    GetPackageVersionHistoryRequest * const q);
     GetPackageVersionHistoryRequestPrivate(const GetPackageVersionHistoryRequestPrivate &other,
                                    GetPackageVersionHistoryRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

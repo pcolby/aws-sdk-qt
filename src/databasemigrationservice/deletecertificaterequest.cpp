@@ -20,16 +20,16 @@
 #include "deletecertificaterequest.h"
 #include "deletecertificaterequest_p.h"
 #include "deletecertificateresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteCertificateRequest
- * \brief The DeleteCertificateRequest class provides an interface for DatabaseMigrationService DeleteCertificate requests.
+ * \class QtAws::DatabaseMigration::DeleteCertificateRequest
+ * \brief The DeleteCertificateRequest class provides an interface for DatabaseMigration DeleteCertificate requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteCertificate
+ * \sa DatabaseMigrationClient::deleteCertificate
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteCertificateRequest::DeleteCertificateRequest(const DeleteCertificateRequest &other)
-    : DatabaseMigrationServiceRequest(new DeleteCertificateRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DeleteCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteCertificateRequest::DeleteCertificateRequest(const DeleteCertificateReques
  * Constructs a DeleteCertificateRequest object.
  */
 DeleteCertificateRequest::DeleteCertificateRequest()
-    : DatabaseMigrationServiceRequest(new DeleteCertificateRequestPrivate(DatabaseMigrationServiceRequest::DeleteCertificateAction, this))
+    : DatabaseMigrationRequest(new DeleteCertificateRequestPrivate(DatabaseMigrationRequest::DeleteCertificateAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteCertificateRequestPrivate
+ * \class QtAws::DatabaseMigration::DeleteCertificateRequestPrivate
  * \brief The DeleteCertificateRequestPrivate class provides private implementation for DeleteCertificateRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DeleteCertificateRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DeleteCertificateRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DeleteCertificateRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DeleteCertificateRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
  */
 DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
     const DeleteCertificateRequestPrivate &other, DeleteCertificateRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

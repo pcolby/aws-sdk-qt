@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeReplicationTaskAssessmentRunsResponse
- * \brief The DescribeReplicationTaskAssessmentRunsResponse class provides an interace for DatabaseMigrationService DescribeReplicationTaskAssessmentRuns responses.
+ * \class QtAws::DatabaseMigration::DescribeReplicationTaskAssessmentRunsResponse
+ * \brief The DescribeReplicationTaskAssessmentRunsResponse class provides an interace for DatabaseMigration DescribeReplicationTaskAssessmentRuns responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeReplicationTaskAssessmentRuns
+ * \sa DatabaseMigrationClient::describeReplicationTaskAssessmentRuns
  */
 
 /*!
@@ -55,7 +55,7 @@ DescribeReplicationTaskAssessmentRunsResponse::DescribeReplicationTaskAssessment
         const DescribeReplicationTaskAssessmentRunsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeReplicationTaskAssessmentRunsResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DescribeReplicationTaskAssessmentRunsResponsePrivate(this), parent)
 {
     setRequest(new DescribeReplicationTaskAssessmentRunsRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DescribeReplicationTaskAssessmentRunsRequest * DescribeReplicationTaskAsse
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DescribeReplicationTaskAssessmentRuns \a response.
+ * Parses a successful DatabaseMigration DescribeReplicationTaskAssessmentRuns \a response.
  */
 void DescribeReplicationTaskAssessmentRunsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DescribeReplicationTaskAssessmentRunsResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeReplicationTaskAssessmentRunsResponsePrivate
+ * \class QtAws::DatabaseMigration::DescribeReplicationTaskAssessmentRunsResponsePrivate
  * \brief The DescribeReplicationTaskAssessmentRunsResponsePrivate class provides private implementation for DescribeReplicationTaskAssessmentRunsResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DescribeReplicationTaskAssessmentRunsResponsePrivate object with public implementation \a q.
  */
 DescribeReplicationTaskAssessmentRunsResponsePrivate::DescribeReplicationTaskAssessmentRunsResponsePrivate(
-    DescribeReplicationTaskAssessmentRunsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DescribeReplicationTaskAssessmentRunsResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DescribeReplicationTaskAssessmentRuns response element from \a xml.
+ * Parses a DatabaseMigration DescribeReplicationTaskAssessmentRuns response element from \a xml.
  */
 void DescribeReplicationTaskAssessmentRunsResponsePrivate::parseDescribeReplicationTaskAssessmentRunsResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribeReplicationTaskAssessmentRunsResponsePrivate::parseDescribeReplicat
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

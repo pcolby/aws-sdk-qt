@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::AcceptInboundCrossClusterSearchConnectionResponse
- * \brief The AcceptInboundCrossClusterSearchConnectionResponse class provides an interace for ElasticsearchService AcceptInboundCrossClusterSearchConnection responses.
+ * \class QtAws::Elasticsearch::AcceptInboundCrossClusterSearchConnectionResponse
+ * \brief The AcceptInboundCrossClusterSearchConnectionResponse class provides an interace for Elasticsearch AcceptInboundCrossClusterSearchConnection responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::acceptInboundCrossClusterSearchConnection
+ * \sa ElasticsearchClient::acceptInboundCrossClusterSearchConnection
  */
 
 /*!
@@ -61,7 +61,7 @@ AcceptInboundCrossClusterSearchConnectionResponse::AcceptInboundCrossClusterSear
         const AcceptInboundCrossClusterSearchConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new AcceptInboundCrossClusterSearchConnectionResponsePrivate(this), parent)
+    : ElasticsearchResponse(new AcceptInboundCrossClusterSearchConnectionResponsePrivate(this), parent)
 {
     setRequest(new AcceptInboundCrossClusterSearchConnectionRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const AcceptInboundCrossClusterSearchConnectionRequest * AcceptInboundCrossClust
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService AcceptInboundCrossClusterSearchConnection \a response.
+ * Parses a successful Elasticsearch AcceptInboundCrossClusterSearchConnection \a response.
  */
 void AcceptInboundCrossClusterSearchConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void AcceptInboundCrossClusterSearchConnectionResponse::parseSuccess(QIODevice &
 }
 
 /*!
- * \class QtAws::ElasticsearchService::AcceptInboundCrossClusterSearchConnectionResponsePrivate
+ * \class QtAws::Elasticsearch::AcceptInboundCrossClusterSearchConnectionResponsePrivate
  * \brief The AcceptInboundCrossClusterSearchConnectionResponsePrivate class provides private implementation for AcceptInboundCrossClusterSearchConnectionResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a AcceptInboundCrossClusterSearchConnectionResponsePrivate object with public implementation \a q.
  */
 AcceptInboundCrossClusterSearchConnectionResponsePrivate::AcceptInboundCrossClusterSearchConnectionResponsePrivate(
-    AcceptInboundCrossClusterSearchConnectionResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    AcceptInboundCrossClusterSearchConnectionResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService AcceptInboundCrossClusterSearchConnection response element from \a xml.
+ * Parses a Elasticsearch AcceptInboundCrossClusterSearchConnection response element from \a xml.
  */
 void AcceptInboundCrossClusterSearchConnectionResponsePrivate::parseAcceptInboundCrossClusterSearchConnectionResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void AcceptInboundCrossClusterSearchConnectionResponsePrivate::parseAcceptInboun
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

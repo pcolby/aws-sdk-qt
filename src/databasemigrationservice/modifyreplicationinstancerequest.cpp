@@ -20,16 +20,16 @@
 #include "modifyreplicationinstancerequest.h"
 #include "modifyreplicationinstancerequest_p.h"
 #include "modifyreplicationinstanceresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::ModifyReplicationInstanceRequest
- * \brief The ModifyReplicationInstanceRequest class provides an interface for DatabaseMigrationService ModifyReplicationInstance requests.
+ * \class QtAws::DatabaseMigration::ModifyReplicationInstanceRequest
+ * \brief The ModifyReplicationInstanceRequest class provides an interface for DatabaseMigration ModifyReplicationInstance requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::modifyReplicationInstance
+ * \sa DatabaseMigrationClient::modifyReplicationInstance
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ModifyReplicationInstanceRequest::ModifyReplicationInstanceRequest(const ModifyReplicationInstanceRequest &other)
-    : DatabaseMigrationServiceRequest(new ModifyReplicationInstanceRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new ModifyReplicationInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ ModifyReplicationInstanceRequest::ModifyReplicationInstanceRequest(const ModifyR
  * Constructs a ModifyReplicationInstanceRequest object.
  */
 ModifyReplicationInstanceRequest::ModifyReplicationInstanceRequest()
-    : DatabaseMigrationServiceRequest(new ModifyReplicationInstanceRequestPrivate(DatabaseMigrationServiceRequest::ModifyReplicationInstanceAction, this))
+    : DatabaseMigrationRequest(new ModifyReplicationInstanceRequestPrivate(DatabaseMigrationRequest::ModifyReplicationInstanceAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationInstanceRequest::response(QN
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::ModifyReplicationInstanceRequestPrivate
+ * \class QtAws::DatabaseMigration::ModifyReplicationInstanceRequestPrivate
  * \brief The ModifyReplicationInstanceRequestPrivate class provides private implementation for ModifyReplicationInstanceRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a ModifyReplicationInstanceRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a ModifyReplicationInstanceRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 ModifyReplicationInstanceRequestPrivate::ModifyReplicationInstanceRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, ModifyReplicationInstanceRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, ModifyReplicationInstanceRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ ModifyReplicationInstanceRequestPrivate::ModifyReplicationInstanceRequestPrivate
  */
 ModifyReplicationInstanceRequestPrivate::ModifyReplicationInstanceRequestPrivate(
     const ModifyReplicationInstanceRequestPrivate &other, ModifyReplicationInstanceRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

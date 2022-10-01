@@ -20,16 +20,16 @@
 #include "putsessionrequest.h"
 #include "putsessionrequest_p.h"
 #include "putsessionresponse.h"
-#include "lexruntimeservicerequest_p.h"
+#include "lexruntimerequest_p.h"
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 /*!
- * \class QtAws::LexRuntimeService::PutSessionRequest
- * \brief The PutSessionRequest class provides an interface for LexRuntimeService PutSession requests.
+ * \class QtAws::LexRuntime::PutSessionRequest
+ * \brief The PutSessionRequest class provides an interface for LexRuntime PutSession requests.
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  *
  *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
  *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
@@ -39,14 +39,14 @@ namespace LexRuntimeService {
  *  then performs fulfillment activity (that you configured when you created the bot). You use the build-time API to create
  *  and manage your Amazon Lex bot. For a list of build-time operations, see the build-time API, .
  *
- * \sa LexRuntimeServiceClient::putSession
+ * \sa LexRuntimeClient::putSession
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutSessionRequest::PutSessionRequest(const PutSessionRequest &other)
-    : LexRuntimeServiceRequest(new PutSessionRequestPrivate(*other.d_func(), this))
+    : LexRuntimeRequest(new PutSessionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -55,7 +55,7 @@ PutSessionRequest::PutSessionRequest(const PutSessionRequest &other)
  * Constructs a PutSessionRequest object.
  */
 PutSessionRequest::PutSessionRequest()
-    : LexRuntimeServiceRequest(new PutSessionRequestPrivate(LexRuntimeServiceRequest::PutSessionAction, this))
+    : LexRuntimeRequest(new PutSessionRequestPrivate(LexRuntimeRequest::PutSessionAction, this))
 {
 
 }
@@ -80,20 +80,20 @@ QtAws::Core::AwsAbstractResponse * PutSessionRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::LexRuntimeService::PutSessionRequestPrivate
+ * \class QtAws::LexRuntime::PutSessionRequestPrivate
  * \brief The PutSessionRequestPrivate class provides private implementation for PutSessionRequest.
  * \internal
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  */
 
 /*!
- * Constructs a PutSessionRequestPrivate object for LexRuntimeService \a action,
+ * Constructs a PutSessionRequestPrivate object for LexRuntime \a action,
  * with public implementation \a q.
  */
 PutSessionRequestPrivate::PutSessionRequestPrivate(
-    const LexRuntimeServiceRequest::Action action, PutSessionRequest * const q)
-    : LexRuntimeServiceRequestPrivate(action, q)
+    const LexRuntimeRequest::Action action, PutSessionRequest * const q)
+    : LexRuntimeRequestPrivate(action, q)
 {
 
 }
@@ -106,10 +106,10 @@ PutSessionRequestPrivate::PutSessionRequestPrivate(
  */
 PutSessionRequestPrivate::PutSessionRequestPrivate(
     const PutSessionRequestPrivate &other, PutSessionRequest * const q)
-    : LexRuntimeServiceRequestPrivate(other, q)
+    : LexRuntimeRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws

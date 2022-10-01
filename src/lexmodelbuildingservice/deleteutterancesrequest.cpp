@@ -20,30 +20,30 @@
 #include "deleteutterancesrequest.h"
 #include "deleteutterancesrequest_p.h"
 #include "deleteutterancesresponse.h"
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteUtterancesRequest
- * \brief The DeleteUtterancesRequest class provides an interface for LexModelBuildingService DeleteUtterances requests.
+ * \class QtAws::LexModelBuilding::DeleteUtterancesRequest
+ * \brief The DeleteUtterancesRequest class provides an interface for LexModelBuilding DeleteUtterances requests.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::deleteUtterances
+ * \sa LexModelBuildingClient::deleteUtterances
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteUtterancesRequest::DeleteUtterancesRequest(const DeleteUtterancesRequest &other)
-    : LexModelBuildingServiceRequest(new DeleteUtterancesRequestPrivate(*other.d_func(), this))
+    : LexModelBuildingRequest(new DeleteUtterancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteUtterancesRequest::DeleteUtterancesRequest(const DeleteUtterancesRequest &
  * Constructs a DeleteUtterancesRequest object.
  */
 DeleteUtterancesRequest::DeleteUtterancesRequest()
-    : LexModelBuildingServiceRequest(new DeleteUtterancesRequestPrivate(LexModelBuildingServiceRequest::DeleteUtterancesAction, this))
+    : LexModelBuildingRequest(new DeleteUtterancesRequestPrivate(LexModelBuildingRequest::DeleteUtterancesAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * DeleteUtterancesRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::DeleteUtterancesRequestPrivate
+ * \class QtAws::LexModelBuilding::DeleteUtterancesRequestPrivate
  * \brief The DeleteUtterancesRequestPrivate class provides private implementation for DeleteUtterancesRequest.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
- * Constructs a DeleteUtterancesRequestPrivate object for LexModelBuildingService \a action,
+ * Constructs a DeleteUtterancesRequestPrivate object for LexModelBuilding \a action,
  * with public implementation \a q.
  */
 DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
-    const LexModelBuildingServiceRequest::Action action, DeleteUtterancesRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(action, q)
+    const LexModelBuildingRequest::Action action, DeleteUtterancesRequest * const q)
+    : LexModelBuildingRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
  */
 DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
     const DeleteUtterancesRequestPrivate &other, DeleteUtterancesRequest * const q)
-    : LexModelBuildingServiceRequestPrivate(other, q)
+    : LexModelBuildingRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

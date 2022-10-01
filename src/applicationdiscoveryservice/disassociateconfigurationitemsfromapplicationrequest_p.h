@@ -20,18 +20,18 @@
 #ifndef QTAWS_DISASSOCIATECONFIGURATIONITEMSFROMAPPLICATIONREQUEST_P_H
 #define QTAWS_DISASSOCIATECONFIGURATIONITEMSFROMAPPLICATIONREQUEST_P_H
 
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 #include "disassociateconfigurationitemsfromapplicationrequest.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 class DisassociateConfigurationItemsFromApplicationRequest;
 
-class DisassociateConfigurationItemsFromApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
+class DisassociateConfigurationItemsFromApplicationRequestPrivate : public ApplicationDiscoveryRequestPrivate {
 
 public:
-    DisassociateConfigurationItemsFromApplicationRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,
+    DisassociateConfigurationItemsFromApplicationRequestPrivate(const ApplicationDiscoveryRequest::Action action,
                                    DisassociateConfigurationItemsFromApplicationRequest * const q);
     DisassociateConfigurationItemsFromApplicationRequestPrivate(const DisassociateConfigurationItemsFromApplicationRequestPrivate &other,
                                    DisassociateConfigurationItemsFromApplicationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws
 
 #endif

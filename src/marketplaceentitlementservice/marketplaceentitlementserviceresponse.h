@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_MARKETPLACEENTITLEMENTSERVICERESPONSE_H
-#define QTAWS_MARKETPLACEENTITLEMENTSERVICERESPONSE_H
+#ifndef QTAWS_MARKETPLACEENTITLEMENTRESPONSE_H
+#define QTAWS_MARKETPLACEENTITLEMENTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
 
-#include "qtawsmarketplaceentitlementserviceglobal.h"
+#include "qtawsmarketplaceentitlementglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
-class MarketplaceEntitlementServiceResponsePrivate;
+class MarketplaceEntitlementResponsePrivate;
 
-class QTAWSMARKETPLACEENTITLEMENTSERVICE_EXPORT MarketplaceEntitlementServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMARKETPLACEENTITLEMENT_EXPORT MarketplaceEntitlementResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    MarketplaceEntitlementServiceResponse(QObject * const parent = 0);
+    MarketplaceEntitlementResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    MarketplaceEntitlementServiceResponse(MarketplaceEntitlementServiceResponsePrivate * const d, QObject * const parent);
+    MarketplaceEntitlementResponse(MarketplaceEntitlementResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(MarketplaceEntitlementServiceResponse)
-    Q_DISABLE_COPY(MarketplaceEntitlementServiceResponse)
+    Q_DECLARE_PRIVATE(MarketplaceEntitlementResponse)
+    Q_DISABLE_COPY(MarketplaceEntitlementResponse)
 
 };
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws
 
 #endif

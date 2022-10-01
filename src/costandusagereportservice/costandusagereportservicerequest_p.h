@@ -17,35 +17,35 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_COSTANDUSAGEREPORTSERVICEREQUEST_P_H
-#define QTAWS_COSTANDUSAGEREPORTSERVICEREQUEST_P_H
+#ifndef QTAWS_COSTANDUSAGEREPORTREQUEST_P_H
+#define QTAWS_COSTANDUSAGEREPORTREQUEST_P_H
 
 #include "core/awsabstractrequest_p.h"
-#include "costandusagereportservicerequest.h"
+#include "costandusagereportrequest.h"
 
 namespace QtAws {
-namespace CostandUsageReportService {
+namespace CostandUsageReport {
 
-class CostandUsageReportServiceRequest;
+class CostandUsageReportRequest;
 
-class CostandUsageReportServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CostandUsageReportRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    CostandUsageReportServiceRequest::Action action; ///< CostandUsageReportService action to be performed.
-    QString apiVersion;        ///< CostandUsageReportService API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< CostandUsageReportService request (query string) parameters. @todo?
+    CostandUsageReportRequest::Action action; ///< CostandUsageReport action to be performed.
+    QString apiVersion;        ///< CostandUsageReport API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CostandUsageReport request (query string) parameters. @todo?
 
-    CostandUsageReportServiceRequestPrivate(const CostandUsageReportServiceRequest::Action action, CostandUsageReportServiceRequest * const q);
-    CostandUsageReportServiceRequestPrivate(const CostandUsageReportServiceRequestPrivate &other, CostandUsageReportServiceRequest * const q);
+    CostandUsageReportRequestPrivate(const CostandUsageReportRequest::Action action, CostandUsageReportRequest * const q);
+    CostandUsageReportRequestPrivate(const CostandUsageReportRequestPrivate &other, CostandUsageReportRequest * const q);
 
-    static QString toString(const CostandUsageReportServiceRequest::Action &action);
+    static QString toString(const CostandUsageReportRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(CostandUsageReportServiceRequest)
+    Q_DECLARE_PUBLIC(CostandUsageReportRequest)
 
 };
 
-} // namespace CostandUsageReportService
+} // namespace CostandUsageReport
 } // namespace QtAws
 
 #endif

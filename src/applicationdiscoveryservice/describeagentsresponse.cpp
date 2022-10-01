@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeAgentsResponse
- * \brief The DescribeAgentsResponse class provides an interace for ApplicationDiscoveryService DescribeAgents responses.
+ * \class QtAws::ApplicationDiscovery::DescribeAgentsResponse
+ * \brief The DescribeAgentsResponse class provides an interace for ApplicationDiscovery DescribeAgents responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::describeAgents
+ * \sa ApplicationDiscoveryClient::describeAgents
  */
 
 /*!
@@ -152,7 +152,7 @@ DescribeAgentsResponse::DescribeAgentsResponse(
         const DescribeAgentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new DescribeAgentsResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new DescribeAgentsResponsePrivate(this), parent)
 {
     setRequest(new DescribeAgentsRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const DescribeAgentsRequest * DescribeAgentsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService DescribeAgents \a response.
+ * Parses a successful ApplicationDiscovery DescribeAgents \a response.
  */
 void DescribeAgentsResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void DescribeAgentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::DescribeAgentsResponsePrivate
+ * \class QtAws::ApplicationDiscovery::DescribeAgentsResponsePrivate
  * \brief The DescribeAgentsResponsePrivate class provides private implementation for DescribeAgentsResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a DescribeAgentsResponsePrivate object with public implementation \a q.
  */
 DescribeAgentsResponsePrivate::DescribeAgentsResponsePrivate(
-    DescribeAgentsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    DescribeAgentsResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService DescribeAgents response element from \a xml.
+ * Parses a ApplicationDiscovery DescribeAgents response element from \a xml.
  */
 void DescribeAgentsResponsePrivate::parseDescribeAgentsResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void DescribeAgentsResponsePrivate::parseDescribeAgentsResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteReplicationInstanceResponse
- * \brief The DeleteReplicationInstanceResponse class provides an interace for DatabaseMigrationService DeleteReplicationInstance responses.
+ * \class QtAws::DatabaseMigration::DeleteReplicationInstanceResponse
+ * \brief The DeleteReplicationInstanceResponse class provides an interace for DatabaseMigration DeleteReplicationInstance responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::deleteReplicationInstance
+ * \sa DatabaseMigrationClient::deleteReplicationInstance
  */
 
 /*!
@@ -55,7 +55,7 @@ DeleteReplicationInstanceResponse::DeleteReplicationInstanceResponse(
         const DeleteReplicationInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DeleteReplicationInstanceResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DeleteReplicationInstanceResponsePrivate(this), parent)
 {
     setRequest(new DeleteReplicationInstanceRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DeleteReplicationInstanceRequest * DeleteReplicationInstanceResponse::requ
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DeleteReplicationInstance \a response.
+ * Parses a successful DatabaseMigration DeleteReplicationInstance \a response.
  */
 void DeleteReplicationInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DeleteReplicationInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DeleteReplicationInstanceResponsePrivate
+ * \class QtAws::DatabaseMigration::DeleteReplicationInstanceResponsePrivate
  * \brief The DeleteReplicationInstanceResponsePrivate class provides private implementation for DeleteReplicationInstanceResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DeleteReplicationInstanceResponsePrivate object with public implementation \a q.
  */
 DeleteReplicationInstanceResponsePrivate::DeleteReplicationInstanceResponsePrivate(
-    DeleteReplicationInstanceResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DeleteReplicationInstanceResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DeleteReplicationInstance response element from \a xml.
+ * Parses a DatabaseMigration DeleteReplicationInstance response element from \a xml.
  */
 void DeleteReplicationInstanceResponsePrivate::parseDeleteReplicationInstanceResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DeleteReplicationInstanceResponsePrivate::parseDeleteReplicationInstanceRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

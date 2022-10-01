@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::CreateApplicationResponse
- * \brief The CreateApplicationResponse class provides an interace for ApplicationDiscoveryService CreateApplication responses.
+ * \class QtAws::ApplicationDiscovery::CreateApplicationResponse
+ * \brief The CreateApplicationResponse class provides an interace for ApplicationDiscovery CreateApplication responses.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -142,7 +142,7 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::createApplication
+ * \sa ApplicationDiscoveryClient::createApplication
  */
 
 /*!
@@ -152,7 +152,7 @@ CreateApplicationResponse::CreateApplicationResponse(
         const CreateApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new CreateApplicationResponsePrivate(this), parent)
+    : ApplicationDiscoveryResponse(new CreateApplicationResponsePrivate(this), parent)
 {
     setRequest(new CreateApplicationRequest(request));
     setReply(reply);
@@ -169,7 +169,7 @@ const CreateApplicationRequest * CreateApplicationResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ApplicationDiscoveryService CreateApplication \a response.
+ * Parses a successful ApplicationDiscovery CreateApplication \a response.
  */
 void CreateApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -179,24 +179,24 @@ void CreateApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::CreateApplicationResponsePrivate
+ * \class QtAws::ApplicationDiscovery::CreateApplicationResponsePrivate
  * \brief The CreateApplicationResponsePrivate class provides private implementation for CreateApplicationResponse.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
  * Constructs a CreateApplicationResponsePrivate object with public implementation \a q.
  */
 CreateApplicationResponsePrivate::CreateApplicationResponsePrivate(
-    CreateApplicationResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
+    CreateApplicationResponse * const q) : ApplicationDiscoveryResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ApplicationDiscoveryService CreateApplication response element from \a xml.
+ * Parses a ApplicationDiscovery CreateApplication response element from \a xml.
  */
 void CreateApplicationResponsePrivate::parseCreateApplicationResponse(QXmlStreamReader &xml)
 {
@@ -204,5 +204,5 @@ void CreateApplicationResponsePrivate::parseCreateApplicationResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

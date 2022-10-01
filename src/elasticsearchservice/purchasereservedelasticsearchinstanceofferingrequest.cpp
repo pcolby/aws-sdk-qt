@@ -20,16 +20,16 @@
 #include "purchasereservedelasticsearchinstanceofferingrequest.h"
 #include "purchasereservedelasticsearchinstanceofferingrequest_p.h"
 #include "purchasereservedelasticsearchinstanceofferingresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::PurchaseReservedElasticsearchInstanceOfferingRequest
- * \brief The PurchaseReservedElasticsearchInstanceOfferingRequest class provides an interface for ElasticsearchService PurchaseReservedElasticsearchInstanceOffering requests.
+ * \class QtAws::Elasticsearch::PurchaseReservedElasticsearchInstanceOfferingRequest
+ * \brief The PurchaseReservedElasticsearchInstanceOfferingRequest class provides an interface for Elasticsearch PurchaseReservedElasticsearchInstanceOffering requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::purchaseReservedElasticsearchInstanceOffering
+ * \sa ElasticsearchClient::purchaseReservedElasticsearchInstanceOffering
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PurchaseReservedElasticsearchInstanceOfferingRequest::PurchaseReservedElasticsearchInstanceOfferingRequest(const PurchaseReservedElasticsearchInstanceOfferingRequest &other)
-    : ElasticsearchServiceRequest(new PurchaseReservedElasticsearchInstanceOfferingRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new PurchaseReservedElasticsearchInstanceOfferingRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ PurchaseReservedElasticsearchInstanceOfferingRequest::PurchaseReservedElasticsea
  * Constructs a PurchaseReservedElasticsearchInstanceOfferingRequest object.
  */
 PurchaseReservedElasticsearchInstanceOfferingRequest::PurchaseReservedElasticsearchInstanceOfferingRequest()
-    : ElasticsearchServiceRequest(new PurchaseReservedElasticsearchInstanceOfferingRequestPrivate(ElasticsearchServiceRequest::PurchaseReservedElasticsearchInstanceOfferingAction, this))
+    : ElasticsearchRequest(new PurchaseReservedElasticsearchInstanceOfferingRequestPrivate(ElasticsearchRequest::PurchaseReservedElasticsearchInstanceOfferingAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedElasticsearchInstanceOffering
 }
 
 /*!
- * \class QtAws::ElasticsearchService::PurchaseReservedElasticsearchInstanceOfferingRequestPrivate
+ * \class QtAws::Elasticsearch::PurchaseReservedElasticsearchInstanceOfferingRequestPrivate
  * \brief The PurchaseReservedElasticsearchInstanceOfferingRequestPrivate class provides private implementation for PurchaseReservedElasticsearchInstanceOfferingRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a PurchaseReservedElasticsearchInstanceOfferingRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a PurchaseReservedElasticsearchInstanceOfferingRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 PurchaseReservedElasticsearchInstanceOfferingRequestPrivate::PurchaseReservedElasticsearchInstanceOfferingRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, PurchaseReservedElasticsearchInstanceOfferingRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, PurchaseReservedElasticsearchInstanceOfferingRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ PurchaseReservedElasticsearchInstanceOfferingRequestPrivate::PurchaseReservedEla
  */
 PurchaseReservedElasticsearchInstanceOfferingRequestPrivate::PurchaseReservedElasticsearchInstanceOfferingRequestPrivate(
     const PurchaseReservedElasticsearchInstanceOfferingRequestPrivate &other, PurchaseReservedElasticsearchInstanceOfferingRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

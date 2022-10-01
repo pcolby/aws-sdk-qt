@@ -17,12 +17,12 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_DATABASEMIGRATIONSERVICEREQUEST_H
-#define QTAWS_DATABASEMIGRATIONSERVICEREQUEST_H
+#ifndef QTAWS_DATABASEMIGRATIONREQUEST_H
+#define QTAWS_DATABASEMIGRATIONREQUEST_H
 
 #include "core/awsabstractrequest.h"
 
-#include "qtawsdatabasemigrationserviceglobal.h"
+#include "qtawsdatabasemigrationglobal.h"
 
 #include <QFlags>
 #include <QObject>
@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
-class DatabaseMigrationServiceRequestPrivate;
+class DatabaseMigrationRequestPrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DatabaseMigrationServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDATABASEMIGRATION_EXPORT DatabaseMigrationRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by DatabaseMigrationService.
+    /// Actions supported by DatabaseMigration.
     enum Action {
         AddTagsToResourceAction,
         ApplyPendingMaintenanceActionAction,
@@ -107,9 +107,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    DatabaseMigrationServiceRequest(const Action action);
-    DatabaseMigrationServiceRequest(const DatabaseMigrationServiceRequest &other);
-    DatabaseMigrationServiceRequest &operator=(const DatabaseMigrationServiceRequest &other);
+    DatabaseMigrationRequest(const Action action);
+    DatabaseMigrationRequest(const DatabaseMigrationRequest &other);
+    DatabaseMigrationRequest &operator=(const DatabaseMigrationRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -118,12 +118,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const DatabaseMigrationServiceRequest &other) const;
+    virtual bool operator==(const DatabaseMigrationRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit DatabaseMigrationServiceRequest(DatabaseMigrationServiceRequestPrivate * const d);
+    explicit DatabaseMigrationRequest(DatabaseMigrationRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -136,11 +136,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(DatabaseMigrationServiceRequest)
+    Q_DECLARE_PRIVATE(DatabaseMigrationRequest)
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

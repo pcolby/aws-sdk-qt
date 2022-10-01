@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::UnclaimDeviceResponse
- * \brief The UnclaimDeviceResponse class provides an interace for IoT1ClickDevicesService UnclaimDevice responses.
+ * \class QtAws::IoT1ClickDevices::UnclaimDeviceResponse
+ * \brief The UnclaimDeviceResponse class provides an interace for IoT1ClickDevices UnclaimDevice responses.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::unclaimDevice
+ * \sa IoT1ClickDevicesClient::unclaimDevice
  */
 
 /*!
@@ -46,7 +46,7 @@ UnclaimDeviceResponse::UnclaimDeviceResponse(
         const UnclaimDeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoT1ClickDevicesServiceResponse(new UnclaimDeviceResponsePrivate(this), parent)
+    : IoT1ClickDevicesResponse(new UnclaimDeviceResponsePrivate(this), parent)
 {
     setRequest(new UnclaimDeviceRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const UnclaimDeviceRequest * UnclaimDeviceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IoT1ClickDevicesService UnclaimDevice \a response.
+ * Parses a successful IoT1ClickDevices UnclaimDevice \a response.
  */
 void UnclaimDeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void UnclaimDeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::UnclaimDeviceResponsePrivate
+ * \class QtAws::IoT1ClickDevices::UnclaimDeviceResponsePrivate
  * \brief The UnclaimDeviceResponsePrivate class provides private implementation for UnclaimDeviceResponse.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
  * Constructs a UnclaimDeviceResponsePrivate object with public implementation \a q.
  */
 UnclaimDeviceResponsePrivate::UnclaimDeviceResponsePrivate(
-    UnclaimDeviceResponse * const q) : IoT1ClickDevicesServiceResponsePrivate(q)
+    UnclaimDeviceResponse * const q) : IoT1ClickDevicesResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a IoT1ClickDevicesService UnclaimDevice response element from \a xml.
+ * Parses a IoT1ClickDevices UnclaimDevice response element from \a xml.
  */
 void UnclaimDeviceResponsePrivate::parseUnclaimDeviceResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void UnclaimDeviceResponsePrivate::parseUnclaimDeviceResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

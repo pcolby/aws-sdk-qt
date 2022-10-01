@@ -20,14 +20,14 @@
 #ifndef QTAWS_GETCOMPLIANCESUMMARYREQUEST_H
 #define QTAWS_GETCOMPLIANCESUMMARYREQUEST_H
 
-#include "resourcegroupstaggingapirequest.h"
+#include "resourcegroupstaggingrequest.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 class GetComplianceSummaryRequestPrivate;
 
-class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT GetComplianceSummaryRequest : public ResourceGroupsTaggingApiRequest {
+class QTAWSRESOURCEGROUPSTAGGING_EXPORT GetComplianceSummaryRequest : public ResourceGroupsTaggingRequest {
 
 public:
     GetComplianceSummaryRequest(const GetComplianceSummaryRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws
 
 #endif

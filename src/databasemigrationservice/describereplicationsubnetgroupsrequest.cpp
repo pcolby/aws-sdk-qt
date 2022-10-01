@@ -20,16 +20,16 @@
 #include "describereplicationsubnetgroupsrequest.h"
 #include "describereplicationsubnetgroupsrequest_p.h"
 #include "describereplicationsubnetgroupsresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeReplicationSubnetGroupsRequest
- * \brief The DescribeReplicationSubnetGroupsRequest class provides an interface for DatabaseMigrationService DescribeReplicationSubnetGroups requests.
+ * \class QtAws::DatabaseMigration::DescribeReplicationSubnetGroupsRequest
+ * \brief The DescribeReplicationSubnetGroupsRequest class provides an interface for DatabaseMigration DescribeReplicationSubnetGroups requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeReplicationSubnetGroups
+ * \sa DatabaseMigrationClient::describeReplicationSubnetGroups
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeReplicationSubnetGroupsRequest::DescribeReplicationSubnetGroupsRequest(const DescribeReplicationSubnetGroupsRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribeReplicationSubnetGroupsRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribeReplicationSubnetGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeReplicationSubnetGroupsRequest::DescribeReplicationSubnetGroupsRequest(c
  * Constructs a DescribeReplicationSubnetGroupsRequest object.
  */
 DescribeReplicationSubnetGroupsRequest::DescribeReplicationSubnetGroupsRequest()
-    : DatabaseMigrationServiceRequest(new DescribeReplicationSubnetGroupsRequestPrivate(DatabaseMigrationServiceRequest::DescribeReplicationSubnetGroupsAction, this))
+    : DatabaseMigrationRequest(new DescribeReplicationSubnetGroupsRequestPrivate(DatabaseMigrationRequest::DescribeReplicationSubnetGroupsAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationSubnetGroupsRequest::respo
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeReplicationSubnetGroupsRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribeReplicationSubnetGroupsRequestPrivate
  * \brief The DescribeReplicationSubnetGroupsRequestPrivate class provides private implementation for DescribeReplicationSubnetGroupsRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribeReplicationSubnetGroupsRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribeReplicationSubnetGroupsRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribeReplicationSubnetGroupsRequestPrivate::DescribeReplicationSubnetGroupsRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribeReplicationSubnetGroupsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribeReplicationSubnetGroupsRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribeReplicationSubnetGroupsRequestPrivate::DescribeReplicationSubnetGroupsRe
  */
 DescribeReplicationSubnetGroupsRequestPrivate::DescribeReplicationSubnetGroupsRequestPrivate(
     const DescribeReplicationSubnetGroupsRequestPrivate &other, DescribeReplicationSubnetGroupsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

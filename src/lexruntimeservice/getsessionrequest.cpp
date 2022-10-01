@@ -20,16 +20,16 @@
 #include "getsessionrequest.h"
 #include "getsessionrequest_p.h"
 #include "getsessionresponse.h"
-#include "lexruntimeservicerequest_p.h"
+#include "lexruntimerequest_p.h"
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 /*!
- * \class QtAws::LexRuntimeService::GetSessionRequest
- * \brief The GetSessionRequest class provides an interface for LexRuntimeService GetSession requests.
+ * \class QtAws::LexRuntime::GetSessionRequest
+ * \brief The GetSessionRequest class provides an interface for LexRuntime GetSession requests.
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  *
  *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
  *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
@@ -39,14 +39,14 @@ namespace LexRuntimeService {
  *  then performs fulfillment activity (that you configured when you created the bot). You use the build-time API to create
  *  and manage your Amazon Lex bot. For a list of build-time operations, see the build-time API, .
  *
- * \sa LexRuntimeServiceClient::getSession
+ * \sa LexRuntimeClient::getSession
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetSessionRequest::GetSessionRequest(const GetSessionRequest &other)
-    : LexRuntimeServiceRequest(new GetSessionRequestPrivate(*other.d_func(), this))
+    : LexRuntimeRequest(new GetSessionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -55,7 +55,7 @@ GetSessionRequest::GetSessionRequest(const GetSessionRequest &other)
  * Constructs a GetSessionRequest object.
  */
 GetSessionRequest::GetSessionRequest()
-    : LexRuntimeServiceRequest(new GetSessionRequestPrivate(LexRuntimeServiceRequest::GetSessionAction, this))
+    : LexRuntimeRequest(new GetSessionRequestPrivate(LexRuntimeRequest::GetSessionAction, this))
 {
 
 }
@@ -80,20 +80,20 @@ QtAws::Core::AwsAbstractResponse * GetSessionRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::LexRuntimeService::GetSessionRequestPrivate
+ * \class QtAws::LexRuntime::GetSessionRequestPrivate
  * \brief The GetSessionRequestPrivate class provides private implementation for GetSessionRequest.
  * \internal
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  */
 
 /*!
- * Constructs a GetSessionRequestPrivate object for LexRuntimeService \a action,
+ * Constructs a GetSessionRequestPrivate object for LexRuntime \a action,
  * with public implementation \a q.
  */
 GetSessionRequestPrivate::GetSessionRequestPrivate(
-    const LexRuntimeServiceRequest::Action action, GetSessionRequest * const q)
-    : LexRuntimeServiceRequestPrivate(action, q)
+    const LexRuntimeRequest::Action action, GetSessionRequest * const q)
+    : LexRuntimeRequestPrivate(action, q)
 {
 
 }
@@ -106,10 +106,10 @@ GetSessionRequestPrivate::GetSessionRequestPrivate(
  */
 GetSessionRequestPrivate::GetSessionRequestPrivate(
     const GetSessionRequestPrivate &other, GetSessionRequest * const q)
-    : LexRuntimeServiceRequestPrivate(other, q)
+    : LexRuntimeRequestPrivate(other, q)
 {
 
 }
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws

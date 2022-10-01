@@ -20,18 +20,18 @@
 #ifndef QTAWS_GETBOTREQUEST_P_H
 #define QTAWS_GETBOTREQUEST_P_H
 
-#include "lexmodelbuildingservicerequest_p.h"
+#include "lexmodelbuildingrequest_p.h"
 #include "getbotrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class GetBotRequest;
 
-class GetBotRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class GetBotRequestPrivate : public LexModelBuildingRequestPrivate {
 
 public:
-    GetBotRequestPrivate(const LexModelBuildingServiceRequest::Action action,
+    GetBotRequestPrivate(const LexModelBuildingRequest::Action action,
                                    GetBotRequest * const q);
     GetBotRequestPrivate(const GetBotRequestPrivate &other,
                                    GetBotRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

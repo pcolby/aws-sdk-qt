@@ -20,15 +20,15 @@
 #ifndef QTAWS_CANCELREPLICATIONTASKASSESSMENTRUNRESPONSE_H
 #define QTAWS_CANCELREPLICATIONTASKASSESSMENTRUNRESPONSE_H
 
-#include "databasemigrationserviceresponse.h"
+#include "databasemigrationresponse.h"
 #include "cancelreplicationtaskassessmentrunrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class CancelReplicationTaskAssessmentRunResponsePrivate;
 
-class QTAWSDATABASEMIGRATIONSERVICE_EXPORT CancelReplicationTaskAssessmentRunResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATION_EXPORT CancelReplicationTaskAssessmentRunResponse : public DatabaseMigrationResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

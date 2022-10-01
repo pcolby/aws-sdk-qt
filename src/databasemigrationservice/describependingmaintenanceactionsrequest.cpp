@@ -20,16 +20,16 @@
 #include "describependingmaintenanceactionsrequest.h"
 #include "describependingmaintenanceactionsrequest_p.h"
 #include "describependingmaintenanceactionsresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribePendingMaintenanceActionsRequest
- * \brief The DescribePendingMaintenanceActionsRequest class provides an interface for DatabaseMigrationService DescribePendingMaintenanceActions requests.
+ * \class QtAws::DatabaseMigration::DescribePendingMaintenanceActionsRequest
+ * \brief The DescribePendingMaintenanceActionsRequest class provides an interface for DatabaseMigration DescribePendingMaintenanceActions requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describePendingMaintenanceActions
+ * \sa DatabaseMigrationClient::describePendingMaintenanceActions
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribePendingMaintenanceActionsRequest::DescribePendingMaintenanceActionsRequest(const DescribePendingMaintenanceActionsRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribePendingMaintenanceActionsRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribePendingMaintenanceActionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribePendingMaintenanceActionsRequest::DescribePendingMaintenanceActionsReque
  * Constructs a DescribePendingMaintenanceActionsRequest object.
  */
 DescribePendingMaintenanceActionsRequest::DescribePendingMaintenanceActionsRequest()
-    : DatabaseMigrationServiceRequest(new DescribePendingMaintenanceActionsRequestPrivate(DatabaseMigrationServiceRequest::DescribePendingMaintenanceActionsAction, this))
+    : DatabaseMigrationRequest(new DescribePendingMaintenanceActionsRequestPrivate(DatabaseMigrationRequest::DescribePendingMaintenanceActionsAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribePendingMaintenanceActionsRequest::res
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribePendingMaintenanceActionsRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribePendingMaintenanceActionsRequestPrivate
  * \brief The DescribePendingMaintenanceActionsRequestPrivate class provides private implementation for DescribePendingMaintenanceActionsRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribePendingMaintenanceActionsRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribePendingMaintenanceActionsRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActionsRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribePendingMaintenanceActionsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribePendingMaintenanceActionsRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActio
  */
 DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActionsRequestPrivate(
     const DescribePendingMaintenanceActionsRequestPrivate &other, DescribePendingMaintenanceActionsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

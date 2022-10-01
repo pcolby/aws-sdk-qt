@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeReplicationSubnetGroupsResponse
- * \brief The DescribeReplicationSubnetGroupsResponse class provides an interace for DatabaseMigrationService DescribeReplicationSubnetGroups responses.
+ * \class QtAws::DatabaseMigration::DescribeReplicationSubnetGroupsResponse
+ * \brief The DescribeReplicationSubnetGroupsResponse class provides an interace for DatabaseMigration DescribeReplicationSubnetGroups responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeReplicationSubnetGroups
+ * \sa DatabaseMigrationClient::describeReplicationSubnetGroups
  */
 
 /*!
@@ -55,7 +55,7 @@ DescribeReplicationSubnetGroupsResponse::DescribeReplicationSubnetGroupsResponse
         const DescribeReplicationSubnetGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeReplicationSubnetGroupsResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DescribeReplicationSubnetGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeReplicationSubnetGroupsRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DescribeReplicationSubnetGroupsRequest * DescribeReplicationSubnetGroupsRe
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DescribeReplicationSubnetGroups \a response.
+ * Parses a successful DatabaseMigration DescribeReplicationSubnetGroups \a response.
  */
 void DescribeReplicationSubnetGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DescribeReplicationSubnetGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeReplicationSubnetGroupsResponsePrivate
+ * \class QtAws::DatabaseMigration::DescribeReplicationSubnetGroupsResponsePrivate
  * \brief The DescribeReplicationSubnetGroupsResponsePrivate class provides private implementation for DescribeReplicationSubnetGroupsResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DescribeReplicationSubnetGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeReplicationSubnetGroupsResponsePrivate::DescribeReplicationSubnetGroupsResponsePrivate(
-    DescribeReplicationSubnetGroupsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DescribeReplicationSubnetGroupsResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DescribeReplicationSubnetGroups response element from \a xml.
+ * Parses a DatabaseMigration DescribeReplicationSubnetGroups response element from \a xml.
  */
 void DescribeReplicationSubnetGroupsResponsePrivate::parseDescribeReplicationSubnetGroupsResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribeReplicationSubnetGroupsResponsePrivate::parseDescribeReplicationSub
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -20,18 +20,18 @@
 #ifndef QTAWS_DELETEELASTICSEARCHSERVICEROLEREQUEST_P_H
 #define QTAWS_DELETEELASTICSEARCHSERVICEROLEREQUEST_P_H
 
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 #include "deleteelasticsearchservicerolerequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class DeleteElasticsearchServiceRoleRequest;
 
-class DeleteElasticsearchServiceRoleRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class DeleteElasticsearchServiceRoleRequestPrivate : public ElasticsearchRequestPrivate {
 
 public:
-    DeleteElasticsearchServiceRoleRequestPrivate(const ElasticsearchServiceRequest::Action action,
+    DeleteElasticsearchServiceRoleRequestPrivate(const ElasticsearchRequest::Action action,
                                    DeleteElasticsearchServiceRoleRequest * const q);
     DeleteElasticsearchServiceRoleRequestPrivate(const DeleteElasticsearchServiceRoleRequestPrivate &other,
                                    DeleteElasticsearchServiceRoleRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

@@ -25,16 +25,16 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::GetTagKeysResponse
- * \brief The GetTagKeysResponse class provides an interace for ResourceGroupsTaggingApi GetTagKeys responses.
+ * \class QtAws::ResourceGroupsTagging::GetTagKeysResponse
+ * \brief The GetTagKeysResponse class provides an interace for ResourceGroupsTagging GetTagKeys responses.
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  *
  *
- * \sa ResourceGroupsTaggingApiClient::getTagKeys
+ * \sa ResourceGroupsTaggingClient::getTagKeys
  */
 
 /*!
@@ -44,7 +44,7 @@ GetTagKeysResponse::GetTagKeysResponse(
         const GetTagKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResourceGroupsTaggingApiResponse(new GetTagKeysResponsePrivate(this), parent)
+    : ResourceGroupsTaggingResponse(new GetTagKeysResponsePrivate(this), parent)
 {
     setRequest(new GetTagKeysRequest(request));
     setReply(reply);
@@ -61,7 +61,7 @@ const GetTagKeysRequest * GetTagKeysResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ResourceGroupsTaggingApi GetTagKeys \a response.
+ * Parses a successful ResourceGroupsTagging GetTagKeys \a response.
  */
 void GetTagKeysResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +71,24 @@ void GetTagKeysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingApi::GetTagKeysResponsePrivate
+ * \class QtAws::ResourceGroupsTagging::GetTagKeysResponsePrivate
  * \brief The GetTagKeysResponsePrivate class provides private implementation for GetTagKeysResponse.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingApi
+ * \inmodule QtAwsResourceGroupsTagging
  */
 
 /*!
  * Constructs a GetTagKeysResponsePrivate object with public implementation \a q.
  */
 GetTagKeysResponsePrivate::GetTagKeysResponsePrivate(
-    GetTagKeysResponse * const q) : ResourceGroupsTaggingApiResponsePrivate(q)
+    GetTagKeysResponse * const q) : ResourceGroupsTaggingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ResourceGroupsTaggingApi GetTagKeys response element from \a xml.
+ * Parses a ResourceGroupsTagging GetTagKeys response element from \a xml.
  */
 void GetTagKeysResponsePrivate::parseGetTagKeysResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +96,5 @@ void GetTagKeysResponsePrivate::parseGetTagKeysResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws

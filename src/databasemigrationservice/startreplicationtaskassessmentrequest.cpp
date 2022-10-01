@@ -20,16 +20,16 @@
 #include "startreplicationtaskassessmentrequest.h"
 #include "startreplicationtaskassessmentrequest_p.h"
 #include "startreplicationtaskassessmentresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::StartReplicationTaskAssessmentRequest
- * \brief The StartReplicationTaskAssessmentRequest class provides an interface for DatabaseMigrationService StartReplicationTaskAssessment requests.
+ * \class QtAws::DatabaseMigration::StartReplicationTaskAssessmentRequest
+ * \brief The StartReplicationTaskAssessmentRequest class provides an interface for DatabaseMigration StartReplicationTaskAssessment requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::startReplicationTaskAssessment
+ * \sa DatabaseMigrationClient::startReplicationTaskAssessment
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartReplicationTaskAssessmentRequest::StartReplicationTaskAssessmentRequest(const StartReplicationTaskAssessmentRequest &other)
-    : DatabaseMigrationServiceRequest(new StartReplicationTaskAssessmentRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new StartReplicationTaskAssessmentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ StartReplicationTaskAssessmentRequest::StartReplicationTaskAssessmentRequest(con
  * Constructs a StartReplicationTaskAssessmentRequest object.
  */
 StartReplicationTaskAssessmentRequest::StartReplicationTaskAssessmentRequest()
-    : DatabaseMigrationServiceRequest(new StartReplicationTaskAssessmentRequestPrivate(DatabaseMigrationServiceRequest::StartReplicationTaskAssessmentAction, this))
+    : DatabaseMigrationRequest(new StartReplicationTaskAssessmentRequestPrivate(DatabaseMigrationRequest::StartReplicationTaskAssessmentAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * StartReplicationTaskAssessmentRequest::respon
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::StartReplicationTaskAssessmentRequestPrivate
+ * \class QtAws::DatabaseMigration::StartReplicationTaskAssessmentRequestPrivate
  * \brief The StartReplicationTaskAssessmentRequestPrivate class provides private implementation for StartReplicationTaskAssessmentRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a StartReplicationTaskAssessmentRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a StartReplicationTaskAssessmentRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 StartReplicationTaskAssessmentRequestPrivate::StartReplicationTaskAssessmentRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, StartReplicationTaskAssessmentRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, StartReplicationTaskAssessmentRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ StartReplicationTaskAssessmentRequestPrivate::StartReplicationTaskAssessmentRequ
  */
 StartReplicationTaskAssessmentRequestPrivate::StartReplicationTaskAssessmentRequestPrivate(
     const StartReplicationTaskAssessmentRequestPrivate &other, StartReplicationTaskAssessmentRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

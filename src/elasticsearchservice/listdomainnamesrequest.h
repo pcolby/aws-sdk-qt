@@ -20,14 +20,14 @@
 #ifndef QTAWS_LISTDOMAINNAMESREQUEST_H
 #define QTAWS_LISTDOMAINNAMESREQUEST_H
 
-#include "elasticsearchservicerequest.h"
+#include "elasticsearchrequest.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 class ListDomainNamesRequestPrivate;
 
-class QTAWSELASTICSEARCHSERVICE_EXPORT ListDomainNamesRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCH_EXPORT ListDomainNamesRequest : public ElasticsearchRequest {
 
 public:
     ListDomainNamesRequest(const ListDomainNamesRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws
 
 #endif

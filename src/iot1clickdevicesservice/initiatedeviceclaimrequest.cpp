@@ -20,28 +20,28 @@
 #include "initiatedeviceclaimrequest.h"
 #include "initiatedeviceclaimrequest_p.h"
 #include "initiatedeviceclaimresponse.h"
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::InitiateDeviceClaimRequest
- * \brief The InitiateDeviceClaimRequest class provides an interface for IoT1ClickDevicesService InitiateDeviceClaim requests.
+ * \class QtAws::IoT1ClickDevices::InitiateDeviceClaimRequest
+ * \brief The InitiateDeviceClaimRequest class provides an interface for IoT1ClickDevices InitiateDeviceClaim requests.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::initiateDeviceClaim
+ * \sa IoT1ClickDevicesClient::initiateDeviceClaim
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 InitiateDeviceClaimRequest::InitiateDeviceClaimRequest(const InitiateDeviceClaimRequest &other)
-    : IoT1ClickDevicesServiceRequest(new InitiateDeviceClaimRequestPrivate(*other.d_func(), this))
+    : IoT1ClickDevicesRequest(new InitiateDeviceClaimRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ InitiateDeviceClaimRequest::InitiateDeviceClaimRequest(const InitiateDeviceClaim
  * Constructs a InitiateDeviceClaimRequest object.
  */
 InitiateDeviceClaimRequest::InitiateDeviceClaimRequest()
-    : IoT1ClickDevicesServiceRequest(new InitiateDeviceClaimRequestPrivate(IoT1ClickDevicesServiceRequest::InitiateDeviceClaimAction, this))
+    : IoT1ClickDevicesRequest(new InitiateDeviceClaimRequestPrivate(IoT1ClickDevicesRequest::InitiateDeviceClaimAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * InitiateDeviceClaimRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::InitiateDeviceClaimRequestPrivate
+ * \class QtAws::IoT1ClickDevices::InitiateDeviceClaimRequestPrivate
  * \brief The InitiateDeviceClaimRequestPrivate class provides private implementation for InitiateDeviceClaimRequest.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
- * Constructs a InitiateDeviceClaimRequestPrivate object for IoT1ClickDevicesService \a action,
+ * Constructs a InitiateDeviceClaimRequestPrivate object for IoT1ClickDevices \a action,
  * with public implementation \a q.
  */
 InitiateDeviceClaimRequestPrivate::InitiateDeviceClaimRequestPrivate(
-    const IoT1ClickDevicesServiceRequest::Action action, InitiateDeviceClaimRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(action, q)
+    const IoT1ClickDevicesRequest::Action action, InitiateDeviceClaimRequest * const q)
+    : IoT1ClickDevicesRequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ InitiateDeviceClaimRequestPrivate::InitiateDeviceClaimRequestPrivate(
  */
 InitiateDeviceClaimRequestPrivate::InitiateDeviceClaimRequestPrivate(
     const InitiateDeviceClaimRequestPrivate &other, InitiateDeviceClaimRequest * const q)
-    : IoT1ClickDevicesServiceRequestPrivate(other, q)
+    : IoT1ClickDevicesRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

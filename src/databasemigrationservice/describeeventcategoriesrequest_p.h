@@ -20,18 +20,18 @@
 #ifndef QTAWS_DESCRIBEEVENTCATEGORIESREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTCATEGORIESREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "describeeventcategoriesrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class DescribeEventCategoriesRequest;
 
-class DescribeEventCategoriesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class DescribeEventCategoriesRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    DescribeEventCategoriesRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    DescribeEventCategoriesRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    DescribeEventCategoriesRequest * const q);
     DescribeEventCategoriesRequestPrivate(const DescribeEventCategoriesRequestPrivate &other,
                                    DescribeEventCategoriesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

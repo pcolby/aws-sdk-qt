@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::GetUpgradeStatusResponse
- * \brief The GetUpgradeStatusResponse class provides an interace for ElasticsearchService GetUpgradeStatus responses.
+ * \class QtAws::Elasticsearch::GetUpgradeStatusResponse
+ * \brief The GetUpgradeStatusResponse class provides an interace for Elasticsearch GetUpgradeStatus responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::getUpgradeStatus
+ * \sa ElasticsearchClient::getUpgradeStatus
  */
 
 /*!
@@ -61,7 +61,7 @@ GetUpgradeStatusResponse::GetUpgradeStatusResponse(
         const GetUpgradeStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new GetUpgradeStatusResponsePrivate(this), parent)
+    : ElasticsearchResponse(new GetUpgradeStatusResponsePrivate(this), parent)
 {
     setRequest(new GetUpgradeStatusRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const GetUpgradeStatusRequest * GetUpgradeStatusResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService GetUpgradeStatus \a response.
+ * Parses a successful Elasticsearch GetUpgradeStatus \a response.
  */
 void GetUpgradeStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void GetUpgradeStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::GetUpgradeStatusResponsePrivate
+ * \class QtAws::Elasticsearch::GetUpgradeStatusResponsePrivate
  * \brief The GetUpgradeStatusResponsePrivate class provides private implementation for GetUpgradeStatusResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a GetUpgradeStatusResponsePrivate object with public implementation \a q.
  */
 GetUpgradeStatusResponsePrivate::GetUpgradeStatusResponsePrivate(
-    GetUpgradeStatusResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    GetUpgradeStatusResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService GetUpgradeStatus response element from \a xml.
+ * Parses a Elasticsearch GetUpgradeStatus response element from \a xml.
  */
 void GetUpgradeStatusResponsePrivate::parseGetUpgradeStatusResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void GetUpgradeStatusResponsePrivate::parseGetUpgradeStatusResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

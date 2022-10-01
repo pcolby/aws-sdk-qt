@@ -20,16 +20,16 @@
 #include "describefleetadvisorlsaanalysisrequest.h"
 #include "describefleetadvisorlsaanalysisrequest_p.h"
 #include "describefleetadvisorlsaanalysisresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeFleetAdvisorLsaAnalysisRequest
- * \brief The DescribeFleetAdvisorLsaAnalysisRequest class provides an interface for DatabaseMigrationService DescribeFleetAdvisorLsaAnalysis requests.
+ * \class QtAws::DatabaseMigration::DescribeFleetAdvisorLsaAnalysisRequest
+ * \brief The DescribeFleetAdvisorLsaAnalysisRequest class provides an interface for DatabaseMigration DescribeFleetAdvisorLsaAnalysis requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeFleetAdvisorLsaAnalysis
+ * \sa DatabaseMigrationClient::describeFleetAdvisorLsaAnalysis
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeFleetAdvisorLsaAnalysisRequest::DescribeFleetAdvisorLsaAnalysisRequest(const DescribeFleetAdvisorLsaAnalysisRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribeFleetAdvisorLsaAnalysisRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribeFleetAdvisorLsaAnalysisRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeFleetAdvisorLsaAnalysisRequest::DescribeFleetAdvisorLsaAnalysisRequest(c
  * Constructs a DescribeFleetAdvisorLsaAnalysisRequest object.
  */
 DescribeFleetAdvisorLsaAnalysisRequest::DescribeFleetAdvisorLsaAnalysisRequest()
-    : DatabaseMigrationServiceRequest(new DescribeFleetAdvisorLsaAnalysisRequestPrivate(DatabaseMigrationServiceRequest::DescribeFleetAdvisorLsaAnalysisAction, this))
+    : DatabaseMigrationRequest(new DescribeFleetAdvisorLsaAnalysisRequestPrivate(DatabaseMigrationRequest::DescribeFleetAdvisorLsaAnalysisAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetAdvisorLsaAnalysisRequest::respo
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeFleetAdvisorLsaAnalysisRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribeFleetAdvisorLsaAnalysisRequestPrivate
  * \brief The DescribeFleetAdvisorLsaAnalysisRequestPrivate class provides private implementation for DescribeFleetAdvisorLsaAnalysisRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribeFleetAdvisorLsaAnalysisRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribeFleetAdvisorLsaAnalysisRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribeFleetAdvisorLsaAnalysisRequestPrivate::DescribeFleetAdvisorLsaAnalysisRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribeFleetAdvisorLsaAnalysisRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribeFleetAdvisorLsaAnalysisRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribeFleetAdvisorLsaAnalysisRequestPrivate::DescribeFleetAdvisorLsaAnalysisRe
  */
 DescribeFleetAdvisorLsaAnalysisRequestPrivate::DescribeFleetAdvisorLsaAnalysisRequestPrivate(
     const DescribeFleetAdvisorLsaAnalysisRequestPrivate &other, DescribeFleetAdvisorLsaAnalysisRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

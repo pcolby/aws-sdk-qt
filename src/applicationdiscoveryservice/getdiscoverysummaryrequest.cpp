@@ -20,16 +20,16 @@
 #include "getdiscoverysummaryrequest.h"
 #include "getdiscoverysummaryrequest_p.h"
 #include "getdiscoverysummaryresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::GetDiscoverySummaryRequest
- * \brief The GetDiscoverySummaryRequest class provides an interface for ApplicationDiscoveryService GetDiscoverySummary requests.
+ * \class QtAws::ApplicationDiscovery::GetDiscoverySummaryRequest
+ * \brief The GetDiscoverySummaryRequest class provides an interface for ApplicationDiscovery GetDiscoverySummary requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::getDiscoverySummary
+ * \sa ApplicationDiscoveryClient::getDiscoverySummary
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetDiscoverySummaryRequest::GetDiscoverySummaryRequest(const GetDiscoverySummaryRequest &other)
-    : ApplicationDiscoveryServiceRequest(new GetDiscoverySummaryRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new GetDiscoverySummaryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ GetDiscoverySummaryRequest::GetDiscoverySummaryRequest(const GetDiscoverySummary
  * Constructs a GetDiscoverySummaryRequest object.
  */
 GetDiscoverySummaryRequest::GetDiscoverySummaryRequest()
-    : ApplicationDiscoveryServiceRequest(new GetDiscoverySummaryRequestPrivate(ApplicationDiscoveryServiceRequest::GetDiscoverySummaryAction, this))
+    : ApplicationDiscoveryRequest(new GetDiscoverySummaryRequestPrivate(ApplicationDiscoveryRequest::GetDiscoverySummaryAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * GetDiscoverySummaryRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::GetDiscoverySummaryRequestPrivate
+ * \class QtAws::ApplicationDiscovery::GetDiscoverySummaryRequestPrivate
  * \brief The GetDiscoverySummaryRequestPrivate class provides private implementation for GetDiscoverySummaryRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a GetDiscoverySummaryRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a GetDiscoverySummaryRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, GetDiscoverySummaryRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, GetDiscoverySummaryRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
  */
 GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
     const GetDiscoverySummaryRequestPrivate &other, GetDiscoverySummaryRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DescribePackagesResponse
- * \brief The DescribePackagesResponse class provides an interace for ElasticsearchService DescribePackages responses.
+ * \class QtAws::Elasticsearch::DescribePackagesResponse
+ * \brief The DescribePackagesResponse class provides an interace for Elasticsearch DescribePackages responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::describePackages
+ * \sa ElasticsearchClient::describePackages
  */
 
 /*!
@@ -61,7 +61,7 @@ DescribePackagesResponse::DescribePackagesResponse(
         const DescribePackagesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DescribePackagesResponsePrivate(this), parent)
+    : ElasticsearchResponse(new DescribePackagesResponsePrivate(this), parent)
 {
     setRequest(new DescribePackagesRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DescribePackagesRequest * DescribePackagesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService DescribePackages \a response.
+ * Parses a successful Elasticsearch DescribePackages \a response.
  */
 void DescribePackagesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DescribePackagesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DescribePackagesResponsePrivate
+ * \class QtAws::Elasticsearch::DescribePackagesResponsePrivate
  * \brief The DescribePackagesResponsePrivate class provides private implementation for DescribePackagesResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a DescribePackagesResponsePrivate object with public implementation \a q.
  */
 DescribePackagesResponsePrivate::DescribePackagesResponsePrivate(
-    DescribePackagesResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    DescribePackagesResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService DescribePackages response element from \a xml.
+ * Parses a Elasticsearch DescribePackages response element from \a xml.
  */
 void DescribePackagesResponsePrivate::parseDescribePackagesResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DescribePackagesResponsePrivate::parseDescribePackagesResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

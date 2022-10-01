@@ -17,12 +17,12 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_APIGATEWAYMANAGEMENTAPIREQUEST_H
-#define QTAWS_APIGATEWAYMANAGEMENTAPIREQUEST_H
+#ifndef QTAWS_APIGATEWAYMANAGEMENTREQUEST_H
+#define QTAWS_APIGATEWAYMANAGEMENTREQUEST_H
 
 #include "core/awsabstractrequest.h"
 
-#include "qtawsapigatewaymanagementapiglobal.h"
+#include "qtawsapigatewaymanagementglobal.h"
 
 #include <QFlags>
 #include <QObject>
@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
-class ApiGatewayManagementApiRequestPrivate;
+class ApiGatewayManagementRequestPrivate;
 
-class QTAWSAPIGATEWAYMANAGEMENTAPI_EXPORT ApiGatewayManagementApiRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPIGATEWAYMANAGEMENT_EXPORT ApiGatewayManagementRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by ApiGatewayManagementApi.
+    /// Actions supported by ApiGatewayManagement.
     enum Action {
         DeleteConnectionAction,
         GetConnectionAction,
@@ -45,9 +45,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    ApiGatewayManagementApiRequest(const Action action);
-    ApiGatewayManagementApiRequest(const ApiGatewayManagementApiRequest &other);
-    ApiGatewayManagementApiRequest &operator=(const ApiGatewayManagementApiRequest &other);
+    ApiGatewayManagementRequest(const Action action);
+    ApiGatewayManagementRequest(const ApiGatewayManagementRequest &other);
+    ApiGatewayManagementRequest &operator=(const ApiGatewayManagementRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -56,12 +56,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const ApiGatewayManagementApiRequest &other) const;
+    virtual bool operator==(const ApiGatewayManagementRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit ApiGatewayManagementApiRequest(ApiGatewayManagementApiRequestPrivate * const d);
+    explicit ApiGatewayManagementRequest(ApiGatewayManagementRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -74,11 +74,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(ApiGatewayManagementApiRequest)
+    Q_DECLARE_PRIVATE(ApiGatewayManagementRequest)
 
 };
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws
 
 #endif

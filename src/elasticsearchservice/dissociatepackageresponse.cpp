@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DissociatePackageResponse
- * \brief The DissociatePackageResponse class provides an interace for ElasticsearchService DissociatePackage responses.
+ * \class QtAws::Elasticsearch::DissociatePackageResponse
+ * \brief The DissociatePackageResponse class provides an interace for Elasticsearch DissociatePackage responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::dissociatePackage
+ * \sa ElasticsearchClient::dissociatePackage
  */
 
 /*!
@@ -61,7 +61,7 @@ DissociatePackageResponse::DissociatePackageResponse(
         const DissociatePackageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DissociatePackageResponsePrivate(this), parent)
+    : ElasticsearchResponse(new DissociatePackageResponsePrivate(this), parent)
 {
     setRequest(new DissociatePackageRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DissociatePackageRequest * DissociatePackageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService DissociatePackage \a response.
+ * Parses a successful Elasticsearch DissociatePackage \a response.
  */
 void DissociatePackageResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DissociatePackageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DissociatePackageResponsePrivate
+ * \class QtAws::Elasticsearch::DissociatePackageResponsePrivate
  * \brief The DissociatePackageResponsePrivate class provides private implementation for DissociatePackageResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a DissociatePackageResponsePrivate object with public implementation \a q.
  */
 DissociatePackageResponsePrivate::DissociatePackageResponsePrivate(
-    DissociatePackageResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    DissociatePackageResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService DissociatePackage response element from \a xml.
+ * Parses a Elasticsearch DissociatePackage response element from \a xml.
  */
 void DissociatePackageResponsePrivate::parseDissociatePackageResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DissociatePackageResponsePrivate::parseDissociatePackageResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

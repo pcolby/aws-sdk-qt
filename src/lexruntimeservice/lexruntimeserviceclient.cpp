@@ -17,8 +17,8 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "lexruntimeserviceclient.h"
-#include "lexruntimeserviceclient_p.h"
+#include "lexruntimeclient.h"
+#include "lexruntimeclient_p.h"
 
 #include "core/awssignaturev4.h"
 #include "deletesessionrequest.h"
@@ -36,23 +36,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::LexRuntimeService
+ * \namespace QtAws::LexRuntime
  * \brief Contains classess for accessing Amazon Lex Runtime Service.
  *
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
 /*!
- * \class QtAws::LexRuntimeService::LexRuntimeServiceClient
- * \brief The LexRuntimeServiceClient class provides access to the Amazon Lex Runtime Service service.
+ * \class QtAws::LexRuntime::LexRuntimeClient
+ * \brief The LexRuntimeClient class provides access to the Amazon Lex Runtime Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  *
  *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
  *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
@@ -64,21 +64,21 @@ namespace LexRuntimeService {
  */
 
 /*!
- * \brief Constructs a LexRuntimeServiceClient object.
+ * \brief Constructs a LexRuntimeClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-LexRuntimeServiceClient::LexRuntimeServiceClient(
+LexRuntimeClient::LexRuntimeClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new LexRuntimeServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new LexRuntimeClientPrivate(this), parent)
 {
-    Q_D(LexRuntimeServiceClient);
+    Q_D(LexRuntimeClient);
     d->apiVersion = QStringLiteral("2016-11-28");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("runtime.lex");
@@ -89,7 +89,7 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
 }
 
 /*!
- * \overload LexRuntimeServiceClient()
+ * \overload LexRuntimeClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -99,14 +99,14 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-LexRuntimeServiceClient::LexRuntimeServiceClient(
+LexRuntimeClient::LexRuntimeClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new LexRuntimeServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new LexRuntimeClientPrivate(this), parent)
 {
-    Q_D(LexRuntimeServiceClient);
+    Q_D(LexRuntimeClient);
     d->apiVersion = QStringLiteral("2016-11-28");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -117,33 +117,33 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
 }
 
 /*!
- * Sends \a request to the LexRuntimeServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexRuntimeClient service, and returns a pointer to an
  * DeleteSessionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes session information for a specified bot, alias, and user ID.
  */
-DeleteSessionResponse * LexRuntimeServiceClient::deleteSession(const DeleteSessionRequest &request)
+DeleteSessionResponse * LexRuntimeClient::deleteSession(const DeleteSessionRequest &request)
 {
     return qobject_cast<DeleteSessionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexRuntimeServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexRuntimeClient service, and returns a pointer to an
  * GetSessionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns session information for a specified bot, alias, and user
  */
-GetSessionResponse * LexRuntimeServiceClient::getSession(const GetSessionRequest &request)
+GetSessionResponse * LexRuntimeClient::getSession(const GetSessionRequest &request)
 {
     return qobject_cast<GetSessionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexRuntimeServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexRuntimeClient service, and returns a pointer to an
  * PostContentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -219,13 +219,13 @@ GetSessionResponse * LexRuntimeServiceClient::getSession(const GetSessionRequest
  * In addition, Amazon Lex also returns your application-specific <code>sessionAttributes</code>. For more information, see
  * <a href="https://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html">Managing Conversation Context</a>.
  */
-PostContentResponse * LexRuntimeServiceClient::postContent(const PostContentRequest &request)
+PostContentResponse * LexRuntimeClient::postContent(const PostContentRequest &request)
 {
     return qobject_cast<PostContentResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexRuntimeServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexRuntimeClient service, and returns a pointer to an
  * PostTextResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -296,13 +296,13 @@ PostContentResponse * LexRuntimeServiceClient::postContent(const PostContentRequ
  * In addition, Amazon Lex also returns your application-specific <code>sessionAttributes</code>. For more information, see
  * <a href="https://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html">Managing Conversation Context</a>.
  */
-PostTextResponse * LexRuntimeServiceClient::postText(const PostTextRequest &request)
+PostTextResponse * LexRuntimeClient::postText(const PostTextRequest &request)
 {
     return qobject_cast<PostTextResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the LexRuntimeServiceClient service, and returns a pointer to an
+ * Sends \a request to the LexRuntimeClient service, and returns a pointer to an
  * PutSessionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -314,28 +314,28 @@ PostTextResponse * LexRuntimeServiceClient::postText(const PostTextRequest &requ
  *
  * For more information, see <a href="https://docs.aws.amazon.com/lex/latest/dg/how-session-api.html">Managing
  */
-PutSessionResponse * LexRuntimeServiceClient::putSession(const PutSessionRequest &request)
+PutSessionResponse * LexRuntimeClient::putSession(const PutSessionRequest &request)
 {
     return qobject_cast<PutSessionResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::LexRuntimeService::LexRuntimeServiceClientPrivate
- * \brief The LexRuntimeServiceClientPrivate class provides private implementation for LexRuntimeServiceClient.
+ * \class QtAws::LexRuntime::LexRuntimeClientPrivate
+ * \brief The LexRuntimeClientPrivate class provides private implementation for LexRuntimeClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsLexRuntimeService
+ * \inmodule QtAwsLexRuntime
  */
 
 /*!
- * Constructs a LexRuntimeServiceClientPrivate object with public implementation \a q.
+ * Constructs a LexRuntimeClientPrivate object with public implementation \a q.
  */
-LexRuntimeServiceClientPrivate::LexRuntimeServiceClientPrivate(LexRuntimeServiceClient * const q)
+LexRuntimeClientPrivate::LexRuntimeClientPrivate(LexRuntimeClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws

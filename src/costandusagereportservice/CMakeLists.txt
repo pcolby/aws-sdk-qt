@@ -1,13 +1,13 @@
-add_compile_definitions(QTAWSCOSTANDUSAGEREPORTSERVICE_LIBRARY)
+add_compile_definitions(QTAWSCOSTANDUSAGEREPORT_LIBRARY)
 
-add_library(QtAwsCostandUsageReportService
-  qtawscostandusagereportserviceglobal.h
-  costandusagereportserviceclient.h
-  costandusagereportserviceclient_p.h
-  costandusagereportservicerequest.h
-  costandusagereportservicerequest_p.h
-  costandusagereportserviceresponse.h
-  costandusagereportserviceresponse_p.h
+add_library(QtAwsCostandUsageReport
+  qtawscostandusagereportglobal.h
+  costandusagereportclient.h
+  costandusagereportclient_p.h
+  costandusagereportrequest.h
+  costandusagereportrequest_p.h
+  costandusagereportresponse.h
+  costandusagereportresponse_p.h
   deletereportdefinitionrequest.h
   deletereportdefinitionrequest_p.h
   deletereportdefinitionresponse.h
@@ -24,9 +24,9 @@ add_library(QtAwsCostandUsageReportService
   putreportdefinitionrequest_p.h
   putreportdefinitionresponse.h
   putreportdefinitionresponse_p.h
-  costandusagereportserviceclient.cpp
-  costandusagereportservicerequest.cpp
-  costandusagereportserviceresponse.cpp
+  costandusagereportclient.cpp
+  costandusagereportrequest.cpp
+  costandusagereportresponse.cpp
   deletereportdefinitionrequest.cpp
   deletereportdefinitionresponse.cpp
   describereportdefinitionsrequest.cpp
@@ -36,7 +36,7 @@ add_library(QtAwsCostandUsageReportService
   putreportdefinitionrequest.cpp
   putreportdefinitionresponse.cpp)
 
-target_link_libraries(QtAwsCostandUsageReportService
+target_link_libraries(QtAwsCostandUsageReport
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

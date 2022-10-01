@@ -20,16 +20,16 @@
 #include "describefleetadvisorschemaobjectsummaryrequest.h"
 #include "describefleetadvisorschemaobjectsummaryrequest_p.h"
 #include "describefleetadvisorschemaobjectsummaryresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeFleetAdvisorSchemaObjectSummaryRequest
- * \brief The DescribeFleetAdvisorSchemaObjectSummaryRequest class provides an interface for DatabaseMigrationService DescribeFleetAdvisorSchemaObjectSummary requests.
+ * \class QtAws::DatabaseMigration::DescribeFleetAdvisorSchemaObjectSummaryRequest
+ * \brief The DescribeFleetAdvisorSchemaObjectSummaryRequest class provides an interface for DatabaseMigration DescribeFleetAdvisorSchemaObjectSummary requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeFleetAdvisorSchemaObjectSummary
+ * \sa DatabaseMigrationClient::describeFleetAdvisorSchemaObjectSummary
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeFleetAdvisorSchemaObjectSummaryRequest::DescribeFleetAdvisorSchemaObjectSummaryRequest(const DescribeFleetAdvisorSchemaObjectSummaryRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeFleetAdvisorSchemaObjectSummaryRequest::DescribeFleetAdvisorSchemaObject
  * Constructs a DescribeFleetAdvisorSchemaObjectSummaryRequest object.
  */
 DescribeFleetAdvisorSchemaObjectSummaryRequest::DescribeFleetAdvisorSchemaObjectSummaryRequest()
-    : DatabaseMigrationServiceRequest(new DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate(DatabaseMigrationServiceRequest::DescribeFleetAdvisorSchemaObjectSummaryAction, this))
+    : DatabaseMigrationRequest(new DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate(DatabaseMigrationRequest::DescribeFleetAdvisorSchemaObjectSummaryAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetAdvisorSchemaObjectSummaryReques
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate
  * \brief The DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate class provides private implementation for DescribeFleetAdvisorSchemaObjectSummaryRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate::DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribeFleetAdvisorSchemaObjectSummaryRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribeFleetAdvisorSchemaObjectSummaryRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate::DescribeFleetAdvisorSchem
  */
 DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate::DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate(
     const DescribeFleetAdvisorSchemaObjectSummaryRequestPrivate &other, DescribeFleetAdvisorSchemaObjectSummaryRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

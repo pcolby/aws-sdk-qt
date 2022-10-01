@@ -20,16 +20,16 @@
 #include "getentitlementsrequest.h"
 #include "getentitlementsrequest_p.h"
 #include "getentitlementsresponse.h"
-#include "marketplaceentitlementservicerequest_p.h"
+#include "marketplaceentitlementrequest_p.h"
 
 namespace QtAws {
-namespace MarketplaceEntitlementService {
+namespace MarketplaceEntitlement {
 
 /*!
- * \class QtAws::MarketplaceEntitlementService::GetEntitlementsRequest
- * \brief The GetEntitlementsRequest class provides an interface for MarketplaceEntitlementService GetEntitlements requests.
+ * \class QtAws::MarketplaceEntitlement::GetEntitlementsRequest
+ * \brief The GetEntitlementsRequest class provides an interface for MarketplaceEntitlement GetEntitlements requests.
  *
- * \inmodule QtAwsMarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlement
  *
  *  <fullname>AWS Marketplace Entitlement Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace MarketplaceEntitlementService {
  * 
  *  <i>GetEntitlements</i>- Gets the entitlements for a Marketplace
  *
- * \sa MarketplaceEntitlementServiceClient::getEntitlements
+ * \sa MarketplaceEntitlementClient::getEntitlements
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetEntitlementsRequest::GetEntitlementsRequest(const GetEntitlementsRequest &other)
-    : MarketplaceEntitlementServiceRequest(new GetEntitlementsRequestPrivate(*other.d_func(), this))
+    : MarketplaceEntitlementRequest(new GetEntitlementsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ GetEntitlementsRequest::GetEntitlementsRequest(const GetEntitlementsRequest &oth
  * Constructs a GetEntitlementsRequest object.
  */
 GetEntitlementsRequest::GetEntitlementsRequest()
-    : MarketplaceEntitlementServiceRequest(new GetEntitlementsRequestPrivate(MarketplaceEntitlementServiceRequest::GetEntitlementsAction, this))
+    : MarketplaceEntitlementRequest(new GetEntitlementsRequestPrivate(MarketplaceEntitlementRequest::GetEntitlementsAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * GetEntitlementsRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::MarketplaceEntitlementService::GetEntitlementsRequestPrivate
+ * \class QtAws::MarketplaceEntitlement::GetEntitlementsRequestPrivate
  * \brief The GetEntitlementsRequestPrivate class provides private implementation for GetEntitlementsRequest.
  * \internal
  *
- * \inmodule QtAwsMarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlement
  */
 
 /*!
- * Constructs a GetEntitlementsRequestPrivate object for MarketplaceEntitlementService \a action,
+ * Constructs a GetEntitlementsRequestPrivate object for MarketplaceEntitlement \a action,
  * with public implementation \a q.
  */
 GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
-    const MarketplaceEntitlementServiceRequest::Action action, GetEntitlementsRequest * const q)
-    : MarketplaceEntitlementServiceRequestPrivate(action, q)
+    const MarketplaceEntitlementRequest::Action action, GetEntitlementsRequest * const q)
+    : MarketplaceEntitlementRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
  */
 GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
     const GetEntitlementsRequestPrivate &other, GetEntitlementsRequest * const q)
-    : MarketplaceEntitlementServiceRequestPrivate(other, q)
+    : MarketplaceEntitlementRequestPrivate(other, q)
 {
 
 }
 
-} // namespace MarketplaceEntitlementService
+} // namespace MarketplaceEntitlement
 } // namespace QtAws

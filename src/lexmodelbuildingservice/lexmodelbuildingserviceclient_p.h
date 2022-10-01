@@ -17,30 +17,30 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_LEXMODELBUILDINGSERVICECLIENT_P_H
-#define QTAWS_LEXMODELBUILDINGSERVICECLIENT_P_H
+#ifndef QTAWS_LEXMODELBUILDINGCLIENT_P_H
+#define QTAWS_LEXMODELBUILDINGCLIENT_P_H
 
 #include "core/awsabstractclient_p.h"
 
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
-class LexModelBuildingServiceClient;
+class LexModelBuildingClient;
 
-class LexModelBuildingServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LexModelBuildingClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit LexModelBuildingServiceClientPrivate(LexModelBuildingServiceClient * const q);
+    explicit LexModelBuildingClientPrivate(LexModelBuildingClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(LexModelBuildingServiceClient)
-    Q_DISABLE_COPY(LexModelBuildingServiceClientPrivate)
+    Q_DECLARE_PUBLIC(LexModelBuildingClient)
+    Q_DISABLE_COPY(LexModelBuildingClientPrivate)
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

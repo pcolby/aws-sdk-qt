@@ -9,7 +9,7 @@ amplify/doc/qtawsamplify.qdocconf
 amplifybackend/doc/qtawsamplifybackend.qdocconf
 amplifyuibuilder/doc/qtawsamplifyuibuilder.qdocconf
 apigateway/doc/qtawsapigateway.qdocconf
-apigatewaymanagementapi/doc/qtawsapigatewaymanagementapi.qdocconf
+apigatewaymanagement/doc/qtawsapigatewaymanagement.qdocconf
 apigatewayv2/doc/qtawsapigatewayv2.qdocconf
 appconfig/doc/qtawsappconfig.qdocconf
 appconfigdata/doc/qtawsappconfigdata.qdocconf
@@ -17,7 +17,7 @@ appflow/doc/qtawsappflow.qdocconf
 appintegrations/doc/qtawsappintegrations.qdocconf
 applicationautoscaling/doc/qtawsapplicationautoscaling.qdocconf
 applicationcostprofiler/doc/qtawsapplicationcostprofiler.qdocconf
-applicationdiscoveryservice/doc/qtawsapplicationdiscoveryservice.qdocconf
+applicationdiscovery/doc/qtawsapplicationdiscovery.qdocconf
 applicationinsights/doc/qtawsapplicationinsights.qdocconf
 appmesh/doc/qtawsappmesh.qdocconf
 apprunner/doc/qtawsapprunner.qdocconf
@@ -74,10 +74,10 @@ connectcampaigns/doc/qtawsconnectcampaigns.qdocconf
 connectcontactlens/doc/qtawsconnectcontactlens.qdocconf
 connectparticipant/doc/qtawsconnectparticipant.qdocconf
 controltower/doc/qtawscontroltower.qdocconf
-costandusagereportservice/doc/qtawscostandusagereportservice.qdocconf
+costandusagereport/doc/qtawscostandusagereport.qdocconf
 costexplorer/doc/qtawscostexplorer.qdocconf
 customerprofiles/doc/qtawscustomerprofiles.qdocconf
-databasemigrationservice/doc/qtawsdatabasemigrationservice.qdocconf
+databasemigration/doc/qtawsdatabasemigration.qdocconf
 databrew/doc/qtawsdatabrew.qdocconf
 dataexchange/doc/qtawsdataexchange.qdocconf
 datapipeline/doc/qtawsdatapipeline.qdocconf
@@ -106,7 +106,7 @@ elasticbeanstalk/doc/qtawselasticbeanstalk.qdocconf
 elasticinference/doc/qtawselasticinference.qdocconf
 elasticloadbalancing/doc/qtawselasticloadbalancing.qdocconf
 elasticloadbalancingv2/doc/qtawselasticloadbalancingv2.qdocconf
-elasticsearchservice/doc/qtawselasticsearchservice.qdocconf
+elasticsearch/doc/qtawselasticsearch.qdocconf
 elastictranscoder/doc/qtawselastictranscoder.qdocconf
 emr/doc/qtawsemr.qdocconf
 emrcontainers/doc/qtawsemrcontainers.qdocconf
@@ -140,7 +140,7 @@ identitystore/doc/qtawsidentitystore.qdocconf
 imagebuilder/doc/qtawsimagebuilder.qdocconf
 inspector2/doc/qtawsinspector2.qdocconf
 inspector/doc/qtawsinspector.qdocconf
-iot1clickdevicesservice/doc/qtawsiot1clickdevicesservice.qdocconf
+iot1clickdevices/doc/qtawsiot1clickdevices.qdocconf
 iot1clickprojects/doc/qtawsiot1clickprojects.qdocconf
 iot/doc/qtawsiot.qdocconf
 iotanalytics/doc/qtawsiotanalytics.qdocconf
@@ -171,9 +171,9 @@ kinesisvideosignaling/doc/qtawskinesisvideosignaling.qdocconf
 kms/doc/qtawskms.qdocconf
 lakeformation/doc/qtawslakeformation.qdocconf
 lambda/doc/qtawslambda.qdocconf
-lexmodelbuildingservice/doc/qtawslexmodelbuildingservice.qdocconf
+lexmodelbuilding/doc/qtawslexmodelbuilding.qdocconf
 lexmodelsv2/doc/qtawslexmodelsv2.qdocconf
-lexruntimeservice/doc/qtawslexruntimeservice.qdocconf
+lexruntime/doc/qtawslexruntime.qdocconf
 lexruntimev2/doc/qtawslexruntimev2.qdocconf
 licensemanager/doc/qtawslicensemanager.qdocconf
 licensemanagerusersubscriptions/doc/qtawslicensemanagerusersubscriptions.qdocconf
@@ -189,7 +189,7 @@ macie/doc/qtawsmacie.qdocconf
 managedblockchain/doc/qtawsmanagedblockchain.qdocconf
 marketplacecatalog/doc/qtawsmarketplacecatalog.qdocconf
 marketplacecommerceanalytics/doc/qtawsmarketplacecommerceanalytics.qdocconf
-marketplaceentitlementservice/doc/qtawsmarketplaceentitlementservice.qdocconf
+marketplaceentitlement/doc/qtawsmarketplaceentitlement.qdocconf
 marketplacemetering/doc/qtawsmarketplacemetering.qdocconf
 mediaconnect/doc/qtawsmediaconnect.qdocconf
 mediaconvert/doc/qtawsmediaconvert.qdocconf
@@ -244,7 +244,7 @@ redshiftserverless/doc/qtawsredshiftserverless.qdocconf
 rekognition/doc/qtawsrekognition.qdocconf
 resiliencehub/doc/qtawsresiliencehub.qdocconf
 resourcegroups/doc/qtawsresourcegroups.qdocconf
-resourcegroupstaggingapi/doc/qtawsresourcegroupstaggingapi.qdocconf
+resourcegroupstagging/doc/qtawsresourcegroupstagging.qdocconf
 robomaker/doc/qtawsrobomaker.qdocconf
 rolesanywhere/doc/qtawsrolesanywhere.qdocconf
 route53/doc/qtawsroute53.qdocconf

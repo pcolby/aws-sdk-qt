@@ -17,40 +17,40 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_RESOURCEGROUPSTAGGINGAPIRESPONSE_H
-#define QTAWS_RESOURCEGROUPSTAGGINGAPIRESPONSE_H
+#ifndef QTAWS_RESOURCEGROUPSTAGGINGRESPONSE_H
+#define QTAWS_RESOURCEGROUPSTAGGINGRESPONSE_H
 
 #include "core/awsabstractresponse.h"
 
-#include "qtawsresourcegroupstaggingapiglobal.h"
+#include "qtawsresourcegroupstaggingglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
-class ResourceGroupsTaggingApiResponsePrivate;
+class ResourceGroupsTaggingResponsePrivate;
 
-class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT ResourceGroupsTaggingApiResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSRESOURCEGROUPSTAGGING_EXPORT ResourceGroupsTaggingResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    ResourceGroupsTaggingApiResponse(QObject * const parent = 0);
+    ResourceGroupsTaggingResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    ResourceGroupsTaggingApiResponse(ResourceGroupsTaggingApiResponsePrivate * const d, QObject * const parent);
+    ResourceGroupsTaggingResponse(ResourceGroupsTaggingResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(ResourceGroupsTaggingApiResponse)
-    Q_DISABLE_COPY(ResourceGroupsTaggingApiResponse)
+    Q_DECLARE_PRIVATE(ResourceGroupsTaggingResponse)
+    Q_DISABLE_COPY(ResourceGroupsTaggingResponse)
 
 };
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws
 
 #endif

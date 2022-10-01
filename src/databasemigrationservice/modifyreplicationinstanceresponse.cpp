@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::ModifyReplicationInstanceResponse
- * \brief The ModifyReplicationInstanceResponse class provides an interace for DatabaseMigrationService ModifyReplicationInstance responses.
+ * \class QtAws::DatabaseMigration::ModifyReplicationInstanceResponse
+ * \brief The ModifyReplicationInstanceResponse class provides an interace for DatabaseMigration ModifyReplicationInstance responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::modifyReplicationInstance
+ * \sa DatabaseMigrationClient::modifyReplicationInstance
  */
 
 /*!
@@ -55,7 +55,7 @@ ModifyReplicationInstanceResponse::ModifyReplicationInstanceResponse(
         const ModifyReplicationInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new ModifyReplicationInstanceResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new ModifyReplicationInstanceResponsePrivate(this), parent)
 {
     setRequest(new ModifyReplicationInstanceRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const ModifyReplicationInstanceRequest * ModifyReplicationInstanceResponse::requ
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService ModifyReplicationInstance \a response.
+ * Parses a successful DatabaseMigration ModifyReplicationInstance \a response.
  */
 void ModifyReplicationInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void ModifyReplicationInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::ModifyReplicationInstanceResponsePrivate
+ * \class QtAws::DatabaseMigration::ModifyReplicationInstanceResponsePrivate
  * \brief The ModifyReplicationInstanceResponsePrivate class provides private implementation for ModifyReplicationInstanceResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a ModifyReplicationInstanceResponsePrivate object with public implementation \a q.
  */
 ModifyReplicationInstanceResponsePrivate::ModifyReplicationInstanceResponsePrivate(
-    ModifyReplicationInstanceResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    ModifyReplicationInstanceResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService ModifyReplicationInstance response element from \a xml.
+ * Parses a DatabaseMigration ModifyReplicationInstance response element from \a xml.
  */
 void ModifyReplicationInstanceResponsePrivate::parseModifyReplicationInstanceResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void ModifyReplicationInstanceResponsePrivate::parseModifyReplicationInstanceRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -20,15 +20,15 @@
 #ifndef QTAWS_GETCOMPLIANCESUMMARYRESPONSE_H
 #define QTAWS_GETCOMPLIANCESUMMARYRESPONSE_H
 
-#include "resourcegroupstaggingapiresponse.h"
+#include "resourcegroupstaggingresponse.h"
 #include "getcompliancesummaryrequest.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingApi {
+namespace ResourceGroupsTagging {
 
 class GetComplianceSummaryResponsePrivate;
 
-class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT GetComplianceSummaryResponse : public ResourceGroupsTaggingApiResponse {
+class QTAWSRESOURCEGROUPSTAGGING_EXPORT GetComplianceSummaryResponse : public ResourceGroupsTaggingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ResourceGroupsTaggingApi
+} // namespace ResourceGroupsTagging
 } // namespace QtAws
 
 #endif

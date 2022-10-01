@@ -20,16 +20,16 @@
 #include "getupgradehistoryrequest.h"
 #include "getupgradehistoryrequest_p.h"
 #include "getupgradehistoryresponse.h"
-#include "elasticsearchservicerequest_p.h"
+#include "elasticsearchrequest_p.h"
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::GetUpgradeHistoryRequest
- * \brief The GetUpgradeHistoryRequest class provides an interface for ElasticsearchService GetUpgradeHistory requests.
+ * \class QtAws::Elasticsearch::GetUpgradeHistoryRequest
+ * \brief The GetUpgradeHistoryRequest class provides an interface for Elasticsearch GetUpgradeHistory requests.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -49,14 +49,14 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::getUpgradeHistory
+ * \sa ElasticsearchClient::getUpgradeHistory
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetUpgradeHistoryRequest::GetUpgradeHistoryRequest(const GetUpgradeHistoryRequest &other)
-    : ElasticsearchServiceRequest(new GetUpgradeHistoryRequestPrivate(*other.d_func(), this))
+    : ElasticsearchRequest(new GetUpgradeHistoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ GetUpgradeHistoryRequest::GetUpgradeHistoryRequest(const GetUpgradeHistoryReques
  * Constructs a GetUpgradeHistoryRequest object.
  */
 GetUpgradeHistoryRequest::GetUpgradeHistoryRequest()
-    : ElasticsearchServiceRequest(new GetUpgradeHistoryRequestPrivate(ElasticsearchServiceRequest::GetUpgradeHistoryAction, this))
+    : ElasticsearchRequest(new GetUpgradeHistoryRequestPrivate(ElasticsearchRequest::GetUpgradeHistoryAction, this))
 {
 
 }
@@ -90,20 +90,20 @@ QtAws::Core::AwsAbstractResponse * GetUpgradeHistoryRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::ElasticsearchService::GetUpgradeHistoryRequestPrivate
+ * \class QtAws::Elasticsearch::GetUpgradeHistoryRequestPrivate
  * \brief The GetUpgradeHistoryRequestPrivate class provides private implementation for GetUpgradeHistoryRequest.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
- * Constructs a GetUpgradeHistoryRequestPrivate object for ElasticsearchService \a action,
+ * Constructs a GetUpgradeHistoryRequestPrivate object for Elasticsearch \a action,
  * with public implementation \a q.
  */
 GetUpgradeHistoryRequestPrivate::GetUpgradeHistoryRequestPrivate(
-    const ElasticsearchServiceRequest::Action action, GetUpgradeHistoryRequest * const q)
-    : ElasticsearchServiceRequestPrivate(action, q)
+    const ElasticsearchRequest::Action action, GetUpgradeHistoryRequest * const q)
+    : ElasticsearchRequestPrivate(action, q)
 {
 
 }
@@ -116,10 +116,10 @@ GetUpgradeHistoryRequestPrivate::GetUpgradeHistoryRequestPrivate(
  */
 GetUpgradeHistoryRequestPrivate::GetUpgradeHistoryRequestPrivate(
     const GetUpgradeHistoryRequestPrivate &other, GetUpgradeHistoryRequest * const q)
-    : ElasticsearchServiceRequestPrivate(other, q)
+    : ElasticsearchRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

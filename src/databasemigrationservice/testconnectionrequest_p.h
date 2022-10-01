@@ -20,18 +20,18 @@
 #ifndef QTAWS_TESTCONNECTIONREQUEST_P_H
 #define QTAWS_TESTCONNECTIONREQUEST_P_H
 
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 #include "testconnectionrequest.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 class TestConnectionRequest;
 
-class TestConnectionRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class TestConnectionRequestPrivate : public DatabaseMigrationRequestPrivate {
 
 public:
-    TestConnectionRequestPrivate(const DatabaseMigrationServiceRequest::Action action,
+    TestConnectionRequestPrivate(const DatabaseMigrationRequest::Action action,
                                    TestConnectionRequest * const q);
     TestConnectionRequestPrivate(const TestConnectionRequestPrivate &other,
                                    TestConnectionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws
 
 #endif

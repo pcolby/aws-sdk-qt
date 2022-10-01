@@ -20,14 +20,14 @@
 #ifndef QTAWS_STARTMIGRATIONREQUEST_H
 #define QTAWS_STARTMIGRATIONREQUEST_H
 
-#include "lexmodelbuildingservicerequest.h"
+#include "lexmodelbuildingrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class StartMigrationRequestPrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT StartMigrationRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDING_EXPORT StartMigrationRequest : public LexModelBuildingRequest {
 
 public:
     StartMigrationRequest(const StartMigrationRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

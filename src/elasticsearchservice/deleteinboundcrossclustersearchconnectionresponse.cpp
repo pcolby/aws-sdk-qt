@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ElasticsearchService {
+namespace Elasticsearch {
 
 /*!
- * \class QtAws::ElasticsearchService::DeleteInboundCrossClusterSearchConnectionResponse
- * \brief The DeleteInboundCrossClusterSearchConnectionResponse class provides an interace for ElasticsearchService DeleteInboundCrossClusterSearchConnection responses.
+ * \class QtAws::Elasticsearch::DeleteInboundCrossClusterSearchConnectionResponse
+ * \brief The DeleteInboundCrossClusterSearchConnectionResponse class provides an interace for Elasticsearch DeleteInboundCrossClusterSearchConnection responses.
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -51,7 +51,7 @@ namespace ElasticsearchService {
  *  es.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see <a
  *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticsearch-service-regions" target="_blank">Regions and
  *
- * \sa ElasticsearchServiceClient::deleteInboundCrossClusterSearchConnection
+ * \sa ElasticsearchClient::deleteInboundCrossClusterSearchConnection
  */
 
 /*!
@@ -61,7 +61,7 @@ DeleteInboundCrossClusterSearchConnectionResponse::DeleteInboundCrossClusterSear
         const DeleteInboundCrossClusterSearchConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DeleteInboundCrossClusterSearchConnectionResponsePrivate(this), parent)
+    : ElasticsearchResponse(new DeleteInboundCrossClusterSearchConnectionResponsePrivate(this), parent)
 {
     setRequest(new DeleteInboundCrossClusterSearchConnectionRequest(request));
     setReply(reply);
@@ -78,7 +78,7 @@ const DeleteInboundCrossClusterSearchConnectionRequest * DeleteInboundCrossClust
 
 /*!
  * \reimp
- * Parses a successful ElasticsearchService DeleteInboundCrossClusterSearchConnection \a response.
+ * Parses a successful Elasticsearch DeleteInboundCrossClusterSearchConnection \a response.
  */
 void DeleteInboundCrossClusterSearchConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,24 +88,24 @@ void DeleteInboundCrossClusterSearchConnectionResponse::parseSuccess(QIODevice &
 }
 
 /*!
- * \class QtAws::ElasticsearchService::DeleteInboundCrossClusterSearchConnectionResponsePrivate
+ * \class QtAws::Elasticsearch::DeleteInboundCrossClusterSearchConnectionResponsePrivate
  * \brief The DeleteInboundCrossClusterSearchConnectionResponsePrivate class provides private implementation for DeleteInboundCrossClusterSearchConnectionResponse.
  * \internal
  *
- * \inmodule QtAwsElasticsearchService
+ * \inmodule QtAwsElasticsearch
  */
 
 /*!
  * Constructs a DeleteInboundCrossClusterSearchConnectionResponsePrivate object with public implementation \a q.
  */
 DeleteInboundCrossClusterSearchConnectionResponsePrivate::DeleteInboundCrossClusterSearchConnectionResponsePrivate(
-    DeleteInboundCrossClusterSearchConnectionResponse * const q) : ElasticsearchServiceResponsePrivate(q)
+    DeleteInboundCrossClusterSearchConnectionResponse * const q) : ElasticsearchResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ElasticsearchService DeleteInboundCrossClusterSearchConnection response element from \a xml.
+ * Parses a Elasticsearch DeleteInboundCrossClusterSearchConnection response element from \a xml.
  */
 void DeleteInboundCrossClusterSearchConnectionResponsePrivate::parseDeleteInboundCrossClusterSearchConnectionResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void DeleteInboundCrossClusterSearchConnectionResponsePrivate::parseDeleteInboun
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ElasticsearchService
+} // namespace Elasticsearch
 } // namespace QtAws

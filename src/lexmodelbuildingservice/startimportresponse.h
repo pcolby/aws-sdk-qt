@@ -20,15 +20,15 @@
 #ifndef QTAWS_STARTIMPORTRESPONSE_H
 #define QTAWS_STARTIMPORTRESPONSE_H
 
-#include "lexmodelbuildingserviceresponse.h"
+#include "lexmodelbuildingresponse.h"
 #include "startimportrequest.h"
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 class StartImportResponsePrivate;
 
-class QTAWSLEXMODELBUILDINGSERVICE_EXPORT StartImportResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDING_EXPORT StartImportResponse : public LexModelBuildingResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws
 
 #endif

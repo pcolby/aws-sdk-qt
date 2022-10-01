@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::InvokeDeviceMethodResponse
- * \brief The InvokeDeviceMethodResponse class provides an interace for IoT1ClickDevicesService InvokeDeviceMethod responses.
+ * \class QtAws::IoT1ClickDevices::InvokeDeviceMethodResponse
+ * \brief The InvokeDeviceMethodResponse class provides an interace for IoT1ClickDevices InvokeDeviceMethod responses.
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  *
  *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
  *  responses, and errors for the supported web services
  *
- * \sa IoT1ClickDevicesServiceClient::invokeDeviceMethod
+ * \sa IoT1ClickDevicesClient::invokeDeviceMethod
  */
 
 /*!
@@ -46,7 +46,7 @@ InvokeDeviceMethodResponse::InvokeDeviceMethodResponse(
         const InvokeDeviceMethodRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoT1ClickDevicesServiceResponse(new InvokeDeviceMethodResponsePrivate(this), parent)
+    : IoT1ClickDevicesResponse(new InvokeDeviceMethodResponsePrivate(this), parent)
 {
     setRequest(new InvokeDeviceMethodRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const InvokeDeviceMethodRequest * InvokeDeviceMethodResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IoT1ClickDevicesService InvokeDeviceMethod \a response.
+ * Parses a successful IoT1ClickDevices InvokeDeviceMethod \a response.
  */
 void InvokeDeviceMethodResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void InvokeDeviceMethodResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoT1ClickDevicesService::InvokeDeviceMethodResponsePrivate
+ * \class QtAws::IoT1ClickDevices::InvokeDeviceMethodResponsePrivate
  * \brief The InvokeDeviceMethodResponsePrivate class provides private implementation for InvokeDeviceMethodResponse.
  * \internal
  *
- * \inmodule QtAwsIoT1ClickDevicesService
+ * \inmodule QtAwsIoT1ClickDevices
  */
 
 /*!
  * Constructs a InvokeDeviceMethodResponsePrivate object with public implementation \a q.
  */
 InvokeDeviceMethodResponsePrivate::InvokeDeviceMethodResponsePrivate(
-    InvokeDeviceMethodResponse * const q) : IoT1ClickDevicesServiceResponsePrivate(q)
+    InvokeDeviceMethodResponse * const q) : IoT1ClickDevicesResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a IoT1ClickDevicesService InvokeDeviceMethod response element from \a xml.
+ * Parses a IoT1ClickDevices InvokeDeviceMethod response element from \a xml.
  */
 void InvokeDeviceMethodResponsePrivate::parseInvokeDeviceMethodResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void InvokeDeviceMethodResponsePrivate::parseInvokeDeviceMethodResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws

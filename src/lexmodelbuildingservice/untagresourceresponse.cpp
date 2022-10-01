@@ -25,20 +25,20 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace LexModelBuildingService {
+namespace LexModelBuilding {
 
 /*!
- * \class QtAws::LexModelBuildingService::UntagResourceResponse
- * \brief The UntagResourceResponse class provides an interace for LexModelBuildingService UntagResource responses.
+ * \class QtAws::LexModelBuilding::UntagResourceResponse
+ * \brief The UntagResourceResponse class provides an interace for LexModelBuilding UntagResource responses.
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
  *  Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update,
  *  and delete conversational bots for new and existing client applications.
  *
- * \sa LexModelBuildingServiceClient::untagResource
+ * \sa LexModelBuildingClient::untagResource
  */
 
 /*!
@@ -48,7 +48,7 @@ UntagResourceResponse::UntagResourceResponse(
         const UntagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new UntagResourceResponsePrivate(this), parent)
+    : LexModelBuildingResponse(new UntagResourceResponsePrivate(this), parent)
 {
     setRequest(new UntagResourceRequest(request));
     setReply(reply);
@@ -65,7 +65,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful LexModelBuildingService UntagResource \a response.
+ * Parses a successful LexModelBuilding UntagResource \a response.
  */
 void UntagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -75,24 +75,24 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::LexModelBuildingService::UntagResourceResponsePrivate
+ * \class QtAws::LexModelBuilding::UntagResourceResponsePrivate
  * \brief The UntagResourceResponsePrivate class provides private implementation for UntagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsLexModelBuildingService
+ * \inmodule QtAwsLexModelBuilding
  */
 
 /*!
  * Constructs a UntagResourceResponsePrivate object with public implementation \a q.
  */
 UntagResourceResponsePrivate::UntagResourceResponsePrivate(
-    UntagResourceResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
+    UntagResourceResponse * const q) : LexModelBuildingResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a LexModelBuildingService UntagResource response element from \a xml.
+ * Parses a LexModelBuilding UntagResource response element from \a xml.
  */
 void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace LexModelBuildingService
+} // namespace LexModelBuilding
 } // namespace QtAws

@@ -20,16 +20,16 @@
 #include "describereplicationinstancetasklogsrequest.h"
 #include "describereplicationinstancetasklogsrequest_p.h"
 #include "describereplicationinstancetasklogsresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeReplicationInstanceTaskLogsRequest
- * \brief The DescribeReplicationInstanceTaskLogsRequest class provides an interface for DatabaseMigrationService DescribeReplicationInstanceTaskLogs requests.
+ * \class QtAws::DatabaseMigration::DescribeReplicationInstanceTaskLogsRequest
+ * \brief The DescribeReplicationInstanceTaskLogsRequest class provides an interface for DatabaseMigration DescribeReplicationInstanceTaskLogs requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeReplicationInstanceTaskLogs
+ * \sa DatabaseMigrationClient::describeReplicationInstanceTaskLogs
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeReplicationInstanceTaskLogsRequest::DescribeReplicationInstanceTaskLogsRequest(const DescribeReplicationInstanceTaskLogsRequest &other)
-    : DatabaseMigrationServiceRequest(new DescribeReplicationInstanceTaskLogsRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new DescribeReplicationInstanceTaskLogsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeReplicationInstanceTaskLogsRequest::DescribeReplicationInstanceTaskLogsR
  * Constructs a DescribeReplicationInstanceTaskLogsRequest object.
  */
 DescribeReplicationInstanceTaskLogsRequest::DescribeReplicationInstanceTaskLogsRequest()
-    : DatabaseMigrationServiceRequest(new DescribeReplicationInstanceTaskLogsRequestPrivate(DatabaseMigrationServiceRequest::DescribeReplicationInstanceTaskLogsAction, this))
+    : DatabaseMigrationRequest(new DescribeReplicationInstanceTaskLogsRequestPrivate(DatabaseMigrationRequest::DescribeReplicationInstanceTaskLogsAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationInstanceTaskLogsRequest::r
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeReplicationInstanceTaskLogsRequestPrivate
+ * \class QtAws::DatabaseMigration::DescribeReplicationInstanceTaskLogsRequestPrivate
  * \brief The DescribeReplicationInstanceTaskLogsRequestPrivate class provides private implementation for DescribeReplicationInstanceTaskLogsRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a DescribeReplicationInstanceTaskLogsRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a DescribeReplicationInstanceTaskLogsRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 DescribeReplicationInstanceTaskLogsRequestPrivate::DescribeReplicationInstanceTaskLogsRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, DescribeReplicationInstanceTaskLogsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, DescribeReplicationInstanceTaskLogsRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ DescribeReplicationInstanceTaskLogsRequestPrivate::DescribeReplicationInstanceTa
  */
 DescribeReplicationInstanceTaskLogsRequestPrivate::DescribeReplicationInstanceTaskLogsRequestPrivate(
     const DescribeReplicationInstanceTaskLogsRequestPrivate &other, DescribeReplicationInstanceTaskLogsRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

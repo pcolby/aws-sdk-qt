@@ -20,18 +20,18 @@
 #ifndef QTAWS_INVOKEDEVICEMETHODREQUEST_P_H
 #define QTAWS_INVOKEDEVICEMETHODREQUEST_P_H
 
-#include "iot1clickdevicesservicerequest_p.h"
+#include "iot1clickdevicesrequest_p.h"
 #include "invokedevicemethodrequest.h"
 
 namespace QtAws {
-namespace IoT1ClickDevicesService {
+namespace IoT1ClickDevices {
 
 class InvokeDeviceMethodRequest;
 
-class InvokeDeviceMethodRequestPrivate : public IoT1ClickDevicesServiceRequestPrivate {
+class InvokeDeviceMethodRequestPrivate : public IoT1ClickDevicesRequestPrivate {
 
 public:
-    InvokeDeviceMethodRequestPrivate(const IoT1ClickDevicesServiceRequest::Action action,
+    InvokeDeviceMethodRequestPrivate(const IoT1ClickDevicesRequest::Action action,
                                    InvokeDeviceMethodRequest * const q);
     InvokeDeviceMethodRequestPrivate(const InvokeDeviceMethodRequestPrivate &other,
                                    InvokeDeviceMethodRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IoT1ClickDevicesService
+} // namespace IoT1ClickDevices
 } // namespace QtAws
 
 #endif

@@ -20,30 +20,30 @@
 #include "getconnectionrequest.h"
 #include "getconnectionrequest_p.h"
 #include "getconnectionresponse.h"
-#include "apigatewaymanagementapirequest_p.h"
+#include "apigatewaymanagementrequest_p.h"
 
 namespace QtAws {
-namespace ApiGatewayManagementApi {
+namespace ApiGatewayManagement {
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::GetConnectionRequest
- * \brief The GetConnectionRequest class provides an interface for ApiGatewayManagementApi GetConnection requests.
+ * \class QtAws::ApiGatewayManagement::GetConnectionRequest
+ * \brief The GetConnectionRequest class provides an interface for ApiGatewayManagement GetConnection requests.
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  *
  *  The Amazon API Gateway Management API allows you to directly manage runtime aspects of your deployed APIs. To use it,
  *  you must explicitly set the SDK's endpoint to point to the endpoint of your deployed API. The endpoint will be of the
  *  form https://{api-id}.execute-api.{region}.amazonaws.com/{stage}, or will be the endpoint corresponding to your API's
  *  custom domain and base path, if
  *
- * \sa ApiGatewayManagementApiClient::getConnection
+ * \sa ApiGatewayManagementClient::getConnection
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetConnectionRequest::GetConnectionRequest(const GetConnectionRequest &other)
-    : ApiGatewayManagementApiRequest(new GetConnectionRequestPrivate(*other.d_func(), this))
+    : ApiGatewayManagementRequest(new GetConnectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetConnectionRequest::GetConnectionRequest(const GetConnectionRequest &other)
  * Constructs a GetConnectionRequest object.
  */
 GetConnectionRequest::GetConnectionRequest()
-    : ApiGatewayManagementApiRequest(new GetConnectionRequestPrivate(ApiGatewayManagementApiRequest::GetConnectionAction, this))
+    : ApiGatewayManagementRequest(new GetConnectionRequestPrivate(ApiGatewayManagementRequest::GetConnectionAction, this))
 {
 
 }
@@ -77,20 +77,20 @@ QtAws::Core::AwsAbstractResponse * GetConnectionRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::ApiGatewayManagementApi::GetConnectionRequestPrivate
+ * \class QtAws::ApiGatewayManagement::GetConnectionRequestPrivate
  * \brief The GetConnectionRequestPrivate class provides private implementation for GetConnectionRequest.
  * \internal
  *
- * \inmodule QtAwsApiGatewayManagementApi
+ * \inmodule QtAwsApiGatewayManagement
  */
 
 /*!
- * Constructs a GetConnectionRequestPrivate object for ApiGatewayManagementApi \a action,
+ * Constructs a GetConnectionRequestPrivate object for ApiGatewayManagement \a action,
  * with public implementation \a q.
  */
 GetConnectionRequestPrivate::GetConnectionRequestPrivate(
-    const ApiGatewayManagementApiRequest::Action action, GetConnectionRequest * const q)
-    : ApiGatewayManagementApiRequestPrivate(action, q)
+    const ApiGatewayManagementRequest::Action action, GetConnectionRequest * const q)
+    : ApiGatewayManagementRequestPrivate(action, q)
 {
 
 }
@@ -103,10 +103,10 @@ GetConnectionRequestPrivate::GetConnectionRequestPrivate(
  */
 GetConnectionRequestPrivate::GetConnectionRequestPrivate(
     const GetConnectionRequestPrivate &other, GetConnectionRequest * const q)
-    : ApiGatewayManagementApiRequestPrivate(other, q)
+    : ApiGatewayManagementRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApiGatewayManagementApi
+} // namespace ApiGatewayManagement
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeTableStatisticsResponse
- * \brief The DescribeTableStatisticsResponse class provides an interace for DatabaseMigrationService DescribeTableStatistics responses.
+ * \class QtAws::DatabaseMigration::DescribeTableStatisticsResponse
+ * \brief The DescribeTableStatisticsResponse class provides an interace for DatabaseMigration DescribeTableStatistics responses.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -45,7 +45,7 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::describeTableStatistics
+ * \sa DatabaseMigrationClient::describeTableStatistics
  */
 
 /*!
@@ -55,7 +55,7 @@ DescribeTableStatisticsResponse::DescribeTableStatisticsResponse(
         const DescribeTableStatisticsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeTableStatisticsResponsePrivate(this), parent)
+    : DatabaseMigrationResponse(new DescribeTableStatisticsResponsePrivate(this), parent)
 {
     setRequest(new DescribeTableStatisticsRequest(request));
     setReply(reply);
@@ -72,7 +72,7 @@ const DescribeTableStatisticsRequest * DescribeTableStatisticsResponse::request(
 
 /*!
  * \reimp
- * Parses a successful DatabaseMigrationService DescribeTableStatistics \a response.
+ * Parses a successful DatabaseMigration DescribeTableStatistics \a response.
  */
 void DescribeTableStatisticsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,24 +82,24 @@ void DescribeTableStatisticsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::DescribeTableStatisticsResponsePrivate
+ * \class QtAws::DatabaseMigration::DescribeTableStatisticsResponsePrivate
  * \brief The DescribeTableStatisticsResponsePrivate class provides private implementation for DescribeTableStatisticsResponse.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
  * Constructs a DescribeTableStatisticsResponsePrivate object with public implementation \a q.
  */
 DescribeTableStatisticsResponsePrivate::DescribeTableStatisticsResponsePrivate(
-    DescribeTableStatisticsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
+    DescribeTableStatisticsResponse * const q) : DatabaseMigrationResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DatabaseMigrationService DescribeTableStatistics response element from \a xml.
+ * Parses a DatabaseMigration DescribeTableStatistics response element from \a xml.
  */
 void DescribeTableStatisticsResponsePrivate::parseDescribeTableStatisticsResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribeTableStatisticsResponsePrivate::parseDescribeTableStatisticsRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

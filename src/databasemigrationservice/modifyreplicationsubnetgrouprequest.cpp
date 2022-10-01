@@ -20,16 +20,16 @@
 #include "modifyreplicationsubnetgrouprequest.h"
 #include "modifyreplicationsubnetgrouprequest_p.h"
 #include "modifyreplicationsubnetgroupresponse.h"
-#include "databasemigrationservicerequest_p.h"
+#include "databasemigrationrequest_p.h"
 
 namespace QtAws {
-namespace DatabaseMigrationService {
+namespace DatabaseMigration {
 
 /*!
- * \class QtAws::DatabaseMigrationService::ModifyReplicationSubnetGroupRequest
- * \brief The ModifyReplicationSubnetGroupRequest class provides an interface for DatabaseMigrationService ModifyReplicationSubnetGroup requests.
+ * \class QtAws::DatabaseMigration::ModifyReplicationSubnetGroupRequest
+ * \brief The ModifyReplicationSubnetGroupRequest class provides an interface for DatabaseMigration ModifyReplicationSubnetGroup requests.
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  *
  *  <fullname>Database Migration Service</fullname>
  * 
@@ -43,14 +43,14 @@ namespace DatabaseMigrationService {
  *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  *
- * \sa DatabaseMigrationServiceClient::modifyReplicationSubnetGroup
+ * \sa DatabaseMigrationClient::modifyReplicationSubnetGroup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ModifyReplicationSubnetGroupRequest::ModifyReplicationSubnetGroupRequest(const ModifyReplicationSubnetGroupRequest &other)
-    : DatabaseMigrationServiceRequest(new ModifyReplicationSubnetGroupRequestPrivate(*other.d_func(), this))
+    : DatabaseMigrationRequest(new ModifyReplicationSubnetGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ ModifyReplicationSubnetGroupRequest::ModifyReplicationSubnetGroupRequest(const M
  * Constructs a ModifyReplicationSubnetGroupRequest object.
  */
 ModifyReplicationSubnetGroupRequest::ModifyReplicationSubnetGroupRequest()
-    : DatabaseMigrationServiceRequest(new ModifyReplicationSubnetGroupRequestPrivate(DatabaseMigrationServiceRequest::ModifyReplicationSubnetGroupAction, this))
+    : DatabaseMigrationRequest(new ModifyReplicationSubnetGroupRequestPrivate(DatabaseMigrationRequest::ModifyReplicationSubnetGroupAction, this))
 {
 
 }
@@ -84,20 +84,20 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationSubnetGroupRequest::response
 }
 
 /*!
- * \class QtAws::DatabaseMigrationService::ModifyReplicationSubnetGroupRequestPrivate
+ * \class QtAws::DatabaseMigration::ModifyReplicationSubnetGroupRequestPrivate
  * \brief The ModifyReplicationSubnetGroupRequestPrivate class provides private implementation for ModifyReplicationSubnetGroupRequest.
  * \internal
  *
- * \inmodule QtAwsDatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigration
  */
 
 /*!
- * Constructs a ModifyReplicationSubnetGroupRequestPrivate object for DatabaseMigrationService \a action,
+ * Constructs a ModifyReplicationSubnetGroupRequestPrivate object for DatabaseMigration \a action,
  * with public implementation \a q.
  */
 ModifyReplicationSubnetGroupRequestPrivate::ModifyReplicationSubnetGroupRequestPrivate(
-    const DatabaseMigrationServiceRequest::Action action, ModifyReplicationSubnetGroupRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(action, q)
+    const DatabaseMigrationRequest::Action action, ModifyReplicationSubnetGroupRequest * const q)
+    : DatabaseMigrationRequestPrivate(action, q)
 {
 
 }
@@ -110,10 +110,10 @@ ModifyReplicationSubnetGroupRequestPrivate::ModifyReplicationSubnetGroupRequestP
  */
 ModifyReplicationSubnetGroupRequestPrivate::ModifyReplicationSubnetGroupRequestPrivate(
     const ModifyReplicationSubnetGroupRequestPrivate &other, ModifyReplicationSubnetGroupRequest * const q)
-    : DatabaseMigrationServiceRequestPrivate(other, q)
+    : DatabaseMigrationRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DatabaseMigrationService
+} // namespace DatabaseMigration
 } // namespace QtAws

@@ -20,16 +20,16 @@
 #include "listserverneighborsrequest.h"
 #include "listserverneighborsrequest_p.h"
 #include "listserverneighborsresponse.h"
-#include "applicationdiscoveryservicerequest_p.h"
+#include "applicationdiscoveryrequest_p.h"
 
 namespace QtAws {
-namespace ApplicationDiscoveryService {
+namespace ApplicationDiscovery {
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ListServerNeighborsRequest
- * \brief The ListServerNeighborsRequest class provides an interface for ApplicationDiscoveryService ListServerNeighbors requests.
+ * \class QtAws::ApplicationDiscovery::ListServerNeighborsRequest
+ * \brief The ListServerNeighborsRequest class provides an interface for ApplicationDiscovery ListServerNeighbors requests.
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  *
  *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
@@ -140,14 +140,14 @@ namespace ApplicationDiscoveryService {
  *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
  *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
- * \sa ApplicationDiscoveryServiceClient::listServerNeighbors
+ * \sa ApplicationDiscoveryClient::listServerNeighbors
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListServerNeighborsRequest::ListServerNeighborsRequest(const ListServerNeighborsRequest &other)
-    : ApplicationDiscoveryServiceRequest(new ListServerNeighborsRequestPrivate(*other.d_func(), this))
+    : ApplicationDiscoveryRequest(new ListServerNeighborsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -156,7 +156,7 @@ ListServerNeighborsRequest::ListServerNeighborsRequest(const ListServerNeighbors
  * Constructs a ListServerNeighborsRequest object.
  */
 ListServerNeighborsRequest::ListServerNeighborsRequest()
-    : ApplicationDiscoveryServiceRequest(new ListServerNeighborsRequestPrivate(ApplicationDiscoveryServiceRequest::ListServerNeighborsAction, this))
+    : ApplicationDiscoveryRequest(new ListServerNeighborsRequestPrivate(ApplicationDiscoveryRequest::ListServerNeighborsAction, this))
 {
 
 }
@@ -181,20 +181,20 @@ QtAws::Core::AwsAbstractResponse * ListServerNeighborsRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::ApplicationDiscoveryService::ListServerNeighborsRequestPrivate
+ * \class QtAws::ApplicationDiscovery::ListServerNeighborsRequestPrivate
  * \brief The ListServerNeighborsRequestPrivate class provides private implementation for ListServerNeighborsRequest.
  * \internal
  *
- * \inmodule QtAwsApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscovery
  */
 
 /*!
- * Constructs a ListServerNeighborsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * Constructs a ListServerNeighborsRequestPrivate object for ApplicationDiscovery \a action,
  * with public implementation \a q.
  */
 ListServerNeighborsRequestPrivate::ListServerNeighborsRequestPrivate(
-    const ApplicationDiscoveryServiceRequest::Action action, ListServerNeighborsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(action, q)
+    const ApplicationDiscoveryRequest::Action action, ListServerNeighborsRequest * const q)
+    : ApplicationDiscoveryRequestPrivate(action, q)
 {
 
 }
@@ -207,10 +207,10 @@ ListServerNeighborsRequestPrivate::ListServerNeighborsRequestPrivate(
  */
 ListServerNeighborsRequestPrivate::ListServerNeighborsRequestPrivate(
     const ListServerNeighborsRequestPrivate &other, ListServerNeighborsRequest * const q)
-    : ApplicationDiscoveryServiceRequestPrivate(other, q)
+    : ApplicationDiscoveryRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ApplicationDiscoveryService
+} // namespace ApplicationDiscovery
 } // namespace QtAws

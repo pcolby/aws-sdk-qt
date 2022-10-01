@@ -17,19 +17,19 @@
     along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWS_LEXRUNTIMESERVICECLIENT_H
-#define QTAWS_LEXRUNTIMESERVICECLIENT_H
+#ifndef QTAWS_LEXRUNTIMECLIENT_H
+#define QTAWS_LEXRUNTIMECLIENT_H
 
 #include "core/awsabstractclient.h"
 
-#include "qtawslexruntimeserviceglobal.h"
+#include "qtawslexruntimeglobal.h"
 
 class QNetworkReply;
 
 namespace QtAws {
-namespace LexRuntimeService {
+namespace LexRuntime {
 
-class LexRuntimeServiceClientPrivate;
+class LexRuntimeClientPrivate;
 class DeleteSessionRequest;
 class DeleteSessionResponse;
 class GetSessionRequest;
@@ -41,17 +41,17 @@ class PostTextResponse;
 class PutSessionRequest;
 class PutSessionResponse;
 
-class QTAWSLEXRUNTIMESERVICE_EXPORT LexRuntimeServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSLEXRUNTIME_EXPORT LexRuntimeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    LexRuntimeServiceClient(
+    LexRuntimeClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit LexRuntimeServiceClient(
+    explicit LexRuntimeClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -64,12 +64,12 @@ public slots:
     PutSessionResponse * putSession(const PutSessionRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(LexRuntimeServiceClient)
-    Q_DISABLE_COPY(LexRuntimeServiceClient)
+    Q_DECLARE_PRIVATE(LexRuntimeClient)
+    Q_DISABLE_COPY(LexRuntimeClient)
 
 };
 
-} // namespace LexRuntimeService
+} // namespace LexRuntime
 } // namespace QtAws
 
 #endif
