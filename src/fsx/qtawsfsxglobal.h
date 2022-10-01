@@ -18,5 +18,4 @@
 #    define QTAWSFSX_EXPORT
 #endif
 
-
 #endif // QTAWSFSXGLOBAL_H

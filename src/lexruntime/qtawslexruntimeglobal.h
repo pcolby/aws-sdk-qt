@@ -18,5 +18,4 @@
 #    define QTAWSLEXRUNTIME_EXPORT
 #endif
 
-
 #endif // QTAWSLEXRUNTIMEGLOBAL_H

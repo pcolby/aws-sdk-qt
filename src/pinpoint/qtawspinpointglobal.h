@@ -18,5 +18,4 @@
 #    define QTAWSPINPOINT_EXPORT
 #endif
 
-
 #endif // QTAWSPINPOINTGLOBAL_H

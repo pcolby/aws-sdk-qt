@@ -18,5 +18,4 @@
 #    define QTAWSMEMORYDB_EXPORT
 #endif
 
-
 #endif // QTAWSMEMORYDBGLOBAL_H

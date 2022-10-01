@@ -18,5 +18,4 @@
 #    define QTAWSDEVICEFARM_EXPORT
 #endif
 
-
 #endif // QTAWSDEVICEFARMGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSKAFKA_EXPORT
 #endif
 
-
 #endif // QTAWSKAFKAGLOBAL_H

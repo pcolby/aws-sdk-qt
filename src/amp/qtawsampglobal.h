@@ -18,5 +18,4 @@
 #    define QTAWSAMP_EXPORT
 #endif
 
-
 #endif // QTAWSAMPGLOBAL_H

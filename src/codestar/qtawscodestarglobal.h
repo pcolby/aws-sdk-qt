@@ -18,5 +18,4 @@
 #    define QTAWSCODESTAR_EXPORT
 #endif
 
-
 #endif // QTAWSCODESTARGLOBAL_H

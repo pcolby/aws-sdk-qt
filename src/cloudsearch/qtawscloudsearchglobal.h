@@ -18,5 +18,4 @@
 #    define QTAWSCLOUDSEARCH_EXPORT
 #endif
 
-
 #endif // QTAWSCLOUDSEARCHGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSKEYSPACES_EXPORT
 #endif
 
-
 #endif // QTAWSKEYSPACESGLOBAL_H

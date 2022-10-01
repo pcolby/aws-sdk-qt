@@ -18,5 +18,4 @@
 #    define QTAWSSCHEMAS_EXPORT
 #endif
 
-
 #endif // QTAWSSCHEMASGLOBAL_H

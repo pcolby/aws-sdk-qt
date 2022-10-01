@@ -18,5 +18,4 @@
 #    define QTAWSMTURK_EXPORT
 #endif
 
-
 #endif // QTAWSMTURKGLOBAL_H

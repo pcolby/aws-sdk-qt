@@ -18,5 +18,4 @@
 #    define QTAWSSAGEMAKER_EXPORT
 #endif
 
-
 #endif // QTAWSSAGEMAKERGLOBAL_H

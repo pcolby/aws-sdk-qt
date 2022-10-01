@@ -18,5 +18,4 @@
 #    define QTAWSBACKUP_EXPORT
 #endif
 
-
 #endif // QTAWSBACKUPGLOBAL_H

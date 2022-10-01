@@ -18,5 +18,4 @@
 #    define QTAWSCODEDEPLOY_EXPORT
 #endif
 
-
 #endif // QTAWSCODEDEPLOYGLOBAL_H

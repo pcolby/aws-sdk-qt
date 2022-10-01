@@ -18,5 +18,4 @@
 #    define QTAWSFORECAST_EXPORT
 #endif
 
-
 #endif // QTAWSFORECASTGLOBAL_H

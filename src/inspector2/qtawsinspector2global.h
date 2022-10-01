@@ -18,5 +18,4 @@
 #    define QTAWSINSPECTOR2_EXPORT
 #endif
 
-
 #endif // QTAWSINSPECTOR2GLOBAL_H

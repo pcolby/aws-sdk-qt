@@ -18,5 +18,4 @@
 #    define QTAWSMOBILE_EXPORT
 #endif
 
-
 #endif // QTAWSMOBILEGLOBAL_H

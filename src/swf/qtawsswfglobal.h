@@ -18,5 +18,4 @@
 #    define QTAWSSWF_EXPORT
 #endif
 
-
 #endif // QTAWSSWFGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSCLOUD9_EXPORT
 #endif
 
-
 #endif // QTAWSCLOUD9GLOBAL_H

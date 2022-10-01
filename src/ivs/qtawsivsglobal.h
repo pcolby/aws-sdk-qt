@@ -18,5 +18,4 @@
 #    define QTAWSIVS_EXPORT
 #endif
 
-
 #endif // QTAWSIVSGLOBAL_H

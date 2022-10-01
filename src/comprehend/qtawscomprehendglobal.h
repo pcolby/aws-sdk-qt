@@ -18,5 +18,4 @@
 #    define QTAWSCOMPREHEND_EXPORT
 #endif
 
-
 #endif // QTAWSCOMPREHENDGLOBAL_H

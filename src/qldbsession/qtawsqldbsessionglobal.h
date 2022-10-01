@@ -18,5 +18,4 @@
 #    define QTAWSQLDBSESSION_EXPORT
 #endif
 
-
 #endif // QTAWSQLDBSESSIONGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSREKOGNITION_EXPORT
 #endif
 
-
 #endif // QTAWSREKOGNITIONGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSIOT_EXPORT
 #endif
 
-
 #endif // QTAWSIOTGLOBAL_H

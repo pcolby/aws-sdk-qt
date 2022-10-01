@@ -18,5 +18,4 @@
 #    define QTAWSREDSHIFT_EXPORT
 #endif
 
-
 #endif // QTAWSREDSHIFTGLOBAL_H

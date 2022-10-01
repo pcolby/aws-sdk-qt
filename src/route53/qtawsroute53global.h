@@ -18,5 +18,4 @@
 #    define QTAWSROUTE53_EXPORT
 #endif
 
-
 #endif // QTAWSROUTE53GLOBAL_H

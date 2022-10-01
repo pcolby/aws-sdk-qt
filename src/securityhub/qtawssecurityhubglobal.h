@@ -18,5 +18,4 @@
 #    define QTAWSSECURITYHUB_EXPORT
 #endif
 
-
 #endif // QTAWSSECURITYHUBGLOBAL_H

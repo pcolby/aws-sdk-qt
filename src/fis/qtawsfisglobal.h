@@ -18,5 +18,4 @@
 #    define QTAWSFIS_EXPORT
 #endif
 
-
 #endif // QTAWSFISGLOBAL_H

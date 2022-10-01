@@ -18,5 +18,4 @@
 #    define QTAWSSSOOIDC_EXPORT
 #endif
 
-
 #endif // QTAWSSSOOIDCGLOBAL_H

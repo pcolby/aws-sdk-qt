@@ -18,5 +18,4 @@
 #    define QTAWSAPPSYNC_EXPORT
 #endif
 
-
 #endif // QTAWSAPPSYNCGLOBAL_H

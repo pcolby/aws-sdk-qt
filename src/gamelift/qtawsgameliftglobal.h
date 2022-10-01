@@ -18,5 +18,4 @@
 #    define QTAWSGAMELIFT_EXPORT
 #endif
 
-
 #endif // QTAWSGAMELIFTGLOBAL_H

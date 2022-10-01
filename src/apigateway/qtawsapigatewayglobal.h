@@ -18,5 +18,4 @@
 #    define QTAWSAPIGATEWAY_EXPORT
 #endif
 
-
 #endif // QTAWSAPIGATEWAYGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSQLDB_EXPORT
 #endif
 
-
 #endif // QTAWSQLDBGLOBAL_H

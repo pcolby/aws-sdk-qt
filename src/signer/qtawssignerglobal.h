@@ -18,5 +18,4 @@
 #    define QTAWSSIGNER_EXPORT
 #endif
 
-
 #endif // QTAWSSIGNERGLOBAL_H

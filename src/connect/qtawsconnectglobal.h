@@ -18,5 +18,4 @@
 #    define QTAWSCONNECT_EXPORT
 #endif
 
-
 #endif // QTAWSCONNECTGLOBAL_H

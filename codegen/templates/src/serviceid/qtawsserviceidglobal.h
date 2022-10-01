@@ -19,6 +19,5 @@
 #    define QTAWS{{ServiceName|upper}}_EXPORT
 #endif
 
-
 #endif // QTAWS{{ServiceName|upper}}GLOBAL_H
 {% endwith %}

@@ -18,5 +18,4 @@
 #    define QTAWSPROTON_EXPORT
 #endif
 
-
 #endif // QTAWSPROTONGLOBAL_H

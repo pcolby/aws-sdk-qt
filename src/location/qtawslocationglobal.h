@@ -18,5 +18,4 @@
 #    define QTAWSLOCATION_EXPORT
 #endif
 
-
 #endif // QTAWSLOCATIONGLOBAL_H

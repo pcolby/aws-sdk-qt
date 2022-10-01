@@ -18,5 +18,4 @@
 #    define QTAWSCHIME_EXPORT
 #endif
 
-
 #endif // QTAWSCHIMEGLOBAL_H

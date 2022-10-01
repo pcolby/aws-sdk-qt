@@ -18,5 +18,4 @@
 #    define QTAWSPERSONALIZE_EXPORT
 #endif
 
-
 #endif // QTAWSPERSONALIZEGLOBAL_H

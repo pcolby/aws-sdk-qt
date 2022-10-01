@@ -18,5 +18,4 @@
 #    define QTAWSRDSDATA_EXPORT
 #endif
 
-
 #endif // QTAWSRDSDATAGLOBAL_H

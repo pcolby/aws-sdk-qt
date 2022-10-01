@@ -18,5 +18,4 @@
 #    define QTAWSGLUE_EXPORT
 #endif
 
-
 #endif // QTAWSGLUEGLOBAL_H

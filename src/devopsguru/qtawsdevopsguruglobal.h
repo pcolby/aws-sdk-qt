@@ -18,5 +18,4 @@
 #    define QTAWSDEVOPSGURU_EXPORT
 #endif
 
-
 #endif // QTAWSDEVOPSGURUGLOBAL_H

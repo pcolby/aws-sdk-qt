@@ -18,5 +18,4 @@
 #    define QTAWSWISDOM_EXPORT
 #endif
 
-
 #endif // QTAWSWISDOMGLOBAL_H

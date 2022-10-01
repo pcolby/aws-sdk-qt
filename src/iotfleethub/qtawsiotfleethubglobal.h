@@ -18,5 +18,4 @@
 #    define QTAWSIOTFLEETHUB_EXPORT
 #endif
 
-
 #endif // QTAWSIOTFLEETHUBGLOBAL_H

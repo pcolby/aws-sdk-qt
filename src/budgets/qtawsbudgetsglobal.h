@@ -18,5 +18,4 @@
 #    define QTAWSBUDGETS_EXPORT
 #endif
 
-
 #endif // QTAWSBUDGETSGLOBAL_H

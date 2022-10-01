@@ -18,5 +18,4 @@
 #    define QTAWSEVIDENTLY_EXPORT
 #endif
 
-
 #endif // QTAWSEVIDENTLYGLOBAL_H

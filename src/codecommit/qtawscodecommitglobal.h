@@ -18,5 +18,4 @@
 #    define QTAWSCODECOMMIT_EXPORT
 #endif
 
-
 #endif // QTAWSCODECOMMITGLOBAL_H

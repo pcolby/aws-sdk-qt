@@ -18,5 +18,4 @@
 #    define QTAWSPANORAMA_EXPORT
 #endif
 
-
 #endif // QTAWSPANORAMAGLOBAL_H

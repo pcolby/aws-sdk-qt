@@ -18,5 +18,4 @@
 #    define QTAWSLIGHTSAIL_EXPORT
 #endif
 
-
 #endif // QTAWSLIGHTSAILGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSNEPTUNE_EXPORT
 #endif
 
-
 #endif // QTAWSNEPTUNEGLOBAL_H

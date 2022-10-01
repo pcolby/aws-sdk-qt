@@ -18,5 +18,4 @@
 #    define QTAWSFINSPACE_EXPORT
 #endif
 
-
 #endif // QTAWSFINSPACEGLOBAL_H

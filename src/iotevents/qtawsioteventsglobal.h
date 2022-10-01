@@ -18,5 +18,4 @@
 #    define QTAWSIOTEVENTS_EXPORT
 #endif
 
-
 #endif // QTAWSIOTEVENTSGLOBAL_H

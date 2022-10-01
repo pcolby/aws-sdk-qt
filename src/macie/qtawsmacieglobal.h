@@ -18,5 +18,4 @@
 #    define QTAWSMACIE_EXPORT
 #endif
 
-
 #endif // QTAWSMACIEGLOBAL_H

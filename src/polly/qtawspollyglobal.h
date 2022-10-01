@@ -18,5 +18,4 @@
 #    define QTAWSPOLLY_EXPORT
 #endif
 
-
 #endif // QTAWSPOLLYGLOBAL_H

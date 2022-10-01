@@ -18,5 +18,4 @@
 #    define QTAWSIOTWIRELESS_EXPORT
 #endif
 
-
 #endif // QTAWSIOTWIRELESSGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSS3CONTROL_EXPORT
 #endif
 
-
 #endif // QTAWSS3CONTROLGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSOPENSEARCH_EXPORT
 #endif
 
-
 #endif // QTAWSOPENSEARCHGLOBAL_H

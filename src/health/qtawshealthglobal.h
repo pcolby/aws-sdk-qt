@@ -18,5 +18,4 @@
 #    define QTAWSHEALTH_EXPORT
 #endif
 
-
 #endif // QTAWSHEALTHGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSFIREHOSE_EXPORT
 #endif
 
-
 #endif // QTAWSFIREHOSEGLOBAL_H

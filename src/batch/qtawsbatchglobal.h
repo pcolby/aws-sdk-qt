@@ -18,5 +18,4 @@
 #    define QTAWSBATCH_EXPORT
 #endif
 
-
 #endif // QTAWSBATCHGLOBAL_H

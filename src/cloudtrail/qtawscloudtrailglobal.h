@@ -18,5 +18,4 @@
 #    define QTAWSCLOUDTRAIL_EXPORT
 #endif
 
-
 #endif // QTAWSCLOUDTRAILGLOBAL_H

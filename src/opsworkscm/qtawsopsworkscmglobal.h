@@ -18,5 +18,4 @@
 #    define QTAWSOPSWORKSCM_EXPORT
 #endif
 
-
 #endif // QTAWSOPSWORKSCMGLOBAL_H

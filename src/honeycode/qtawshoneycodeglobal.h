@@ -18,5 +18,4 @@
 #    define QTAWSHONEYCODE_EXPORT
 #endif
 
-
 #endif // QTAWSHONEYCODEGLOBAL_H

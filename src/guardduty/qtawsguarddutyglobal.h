@@ -18,5 +18,4 @@
 #    define QTAWSGUARDDUTY_EXPORT
 #endif
 
-
 #endif // QTAWSGUARDDUTYGLOBAL_H

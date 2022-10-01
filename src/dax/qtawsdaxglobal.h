@@ -18,5 +18,4 @@
 #    define QTAWSDAX_EXPORT
 #endif
 
-
 #endif // QTAWSDAXGLOBAL_H

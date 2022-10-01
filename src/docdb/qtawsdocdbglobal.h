@@ -18,5 +18,4 @@
 #    define QTAWSDOCDB_EXPORT
 #endif
 
-
 #endif // QTAWSDOCDBGLOBAL_H

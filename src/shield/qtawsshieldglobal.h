@@ -18,5 +18,4 @@
 #    define QTAWSSHIELD_EXPORT
 #endif
 
-
 #endif // QTAWSSHIELDGLOBAL_H

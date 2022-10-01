@@ -18,5 +18,4 @@
 #    define QTAWSNIMBLE_EXPORT
 #endif
 
-
 #endif // QTAWSNIMBLEGLOBAL_H

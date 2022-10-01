@@ -18,5 +18,4 @@
 #    define QTAWSECR_EXPORT
 #endif
 
-
 #endif // QTAWSECRGLOBAL_H

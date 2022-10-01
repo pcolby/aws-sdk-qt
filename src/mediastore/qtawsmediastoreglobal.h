@@ -18,5 +18,4 @@
 #    define QTAWSMEDIASTORE_EXPORT
 #endif
 
-
 #endif // QTAWSMEDIASTOREGLOBAL_H

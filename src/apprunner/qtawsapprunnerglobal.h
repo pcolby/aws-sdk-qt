@@ -18,5 +18,4 @@
 #    define QTAWSAPPRUNNER_EXPORT
 #endif
 
-
 #endif // QTAWSAPPRUNNERGLOBAL_H

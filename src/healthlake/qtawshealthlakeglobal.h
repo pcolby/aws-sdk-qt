@@ -18,5 +18,4 @@
 #    define QTAWSHEALTHLAKE_EXPORT
 #endif
 
-
 #endif // QTAWSHEALTHLAKEGLOBAL_H

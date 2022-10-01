@@ -18,5 +18,4 @@
 #    define QTAWSKMS_EXPORT
 #endif
 
-
 #endif // QTAWSKMSGLOBAL_H

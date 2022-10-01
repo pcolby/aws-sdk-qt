@@ -18,5 +18,4 @@
 #    define QTAWSROBOMAKER_EXPORT
 #endif
 
-
 #endif // QTAWSROBOMAKERGLOBAL_H

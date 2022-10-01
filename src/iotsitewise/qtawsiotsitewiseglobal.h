@@ -18,5 +18,4 @@
 #    define QTAWSIOTSITEWISE_EXPORT
 #endif
 
-
 #endif // QTAWSIOTSITEWISEGLOBAL_H

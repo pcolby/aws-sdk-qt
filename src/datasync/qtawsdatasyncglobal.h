@@ -18,5 +18,4 @@
 #    define QTAWSDATASYNC_EXPORT
 #endif
 
-
 #endif // QTAWSDATASYNCGLOBAL_H

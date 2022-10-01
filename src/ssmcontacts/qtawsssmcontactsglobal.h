@@ -18,5 +18,4 @@
 #    define QTAWSSSMCONTACTS_EXPORT
 #endif
 
-
 #endif // QTAWSSSMCONTACTSGLOBAL_H

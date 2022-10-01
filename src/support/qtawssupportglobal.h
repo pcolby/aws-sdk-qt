@@ -18,5 +18,4 @@
 #    define QTAWSSUPPORT_EXPORT
 #endif
 
-
 #endif // QTAWSSUPPORTGLOBAL_H

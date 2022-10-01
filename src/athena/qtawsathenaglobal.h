@@ -18,5 +18,4 @@
 #    define QTAWSATHENA_EXPORT
 #endif
 
-
 #endif // QTAWSATHENAGLOBAL_H

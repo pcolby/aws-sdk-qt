@@ -18,5 +18,4 @@
 #    define QTAWSLEXMODELSV2_EXPORT
 #endif
 
-
 #endif // QTAWSLEXMODELSV2GLOBAL_H

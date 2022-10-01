@@ -18,5 +18,4 @@
 #    define QTAWSCLOUDFRONT_EXPORT
 #endif
 
-
 #endif // QTAWSCLOUDFRONTGLOBAL_H

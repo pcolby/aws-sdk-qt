@@ -18,5 +18,4 @@
 #    define QTAWSSES_EXPORT
 #endif
 
-
 #endif // QTAWSSESGLOBAL_H

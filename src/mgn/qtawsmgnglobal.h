@@ -18,5 +18,4 @@
 #    define QTAWSMGN_EXPORT
 #endif
 
-
 #endif // QTAWSMGNGLOBAL_H

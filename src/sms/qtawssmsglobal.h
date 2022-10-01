@@ -18,5 +18,4 @@
 #    define QTAWSSMS_EXPORT
 #endif
 
-
 #endif // QTAWSSMSGLOBAL_H

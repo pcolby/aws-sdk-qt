@@ -18,5 +18,4 @@
 #    define QTAWSELASTICACHE_EXPORT
 #endif
 
-
 #endif // QTAWSELASTICACHEGLOBAL_H

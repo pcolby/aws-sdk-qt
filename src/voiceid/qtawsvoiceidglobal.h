@@ -18,5 +18,4 @@
 #    define QTAWSVOICEID_EXPORT
 #endif
 
-
 #endif // QTAWSVOICEIDGLOBAL_H

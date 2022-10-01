@@ -18,5 +18,4 @@
 #    define QTAWSSSOADMIN_EXPORT
 #endif
 
-
 #endif // QTAWSSSOADMINGLOBAL_H

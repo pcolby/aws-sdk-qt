@@ -18,5 +18,4 @@
 #    define QTAWSWAF_EXPORT
 #endif
 
-
 #endif // QTAWSWAFGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSDETECTIVE_EXPORT
 #endif
 
-
 #endif // QTAWSDETECTIVEGLOBAL_H

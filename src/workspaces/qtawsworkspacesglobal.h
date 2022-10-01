@@ -18,5 +18,4 @@
 #    define QTAWSWORKSPACES_EXPORT
 #endif
 
-
 #endif // QTAWSWORKSPACESGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSPI_EXPORT
 #endif
 
-
 #endif // QTAWSPIGLOBAL_H

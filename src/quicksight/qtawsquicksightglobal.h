@@ -18,5 +18,4 @@
 #    define QTAWSQUICKSIGHT_EXPORT
 #endif
 
-
 #endif // QTAWSQUICKSIGHTGLOBAL_H

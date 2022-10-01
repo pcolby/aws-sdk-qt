@@ -18,5 +18,4 @@
 #    define QTAWSGAMESPARKS_EXPORT
 #endif
 
-
 #endif // QTAWSGAMESPARKSGLOBAL_H

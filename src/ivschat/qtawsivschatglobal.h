@@ -18,5 +18,4 @@
 #    define QTAWSIVSCHAT_EXPORT
 #endif
 
-
 #endif // QTAWSIVSCHATGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSWAFREGIONAL_EXPORT
 #endif
 
-
 #endif // QTAWSWAFREGIONALGLOBAL_H

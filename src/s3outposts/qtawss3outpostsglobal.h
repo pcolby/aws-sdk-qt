@@ -18,5 +18,4 @@
 #    define QTAWSS3OUTPOSTS_EXPORT
 #endif
 
-
 #endif // QTAWSS3OUTPOSTSGLOBAL_H

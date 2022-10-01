@@ -18,5 +18,4 @@
 #    define QTAWSAUTOSCALING_EXPORT
 #endif
 
-
 #endif // QTAWSAUTOSCALINGGLOBAL_H

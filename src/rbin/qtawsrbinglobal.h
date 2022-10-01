@@ -18,5 +18,4 @@
 #    define QTAWSRBIN_EXPORT
 #endif
 
-
 #endif // QTAWSRBINGLOBAL_H

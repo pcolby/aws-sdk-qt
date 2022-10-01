@@ -18,5 +18,4 @@
 #    define QTAWSACCOUNT_EXPORT
 #endif
 
-
 #endif // QTAWSACCOUNTGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSDYNAMODB_EXPORT
 #endif
 
-
 #endif // QTAWSDYNAMODBGLOBAL_H

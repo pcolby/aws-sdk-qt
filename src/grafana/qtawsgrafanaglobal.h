@@ -18,5 +18,4 @@
 #    define QTAWSGRAFANA_EXPORT
 #endif
 
-
 #endif // QTAWSGRAFANAGLOBAL_H

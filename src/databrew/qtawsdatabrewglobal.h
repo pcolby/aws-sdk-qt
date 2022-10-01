@@ -18,5 +18,4 @@
 #    define QTAWSDATABREW_EXPORT
 #endif
 
-
 #endif // QTAWSDATABREWGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSAPPCONFIG_EXPORT
 #endif
 
-
 #endif // QTAWSAPPCONFIGGLOBAL_H

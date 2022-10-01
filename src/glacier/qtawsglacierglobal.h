@@ -18,5 +18,4 @@
 #    define QTAWSGLACIER_EXPORT
 #endif
 
-
 #endif // QTAWSGLACIERGLOBAL_H

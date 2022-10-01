@@ -18,5 +18,4 @@
 #    define QTAWSAPPSTREAM_EXPORT
 #endif
 
-
 #endif // QTAWSAPPSTREAMGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSCLOUDWATCH_EXPORT
 #endif
 
-
 #endif // QTAWSCLOUDWATCHGLOBAL_H

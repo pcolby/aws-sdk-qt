@@ -18,5 +18,4 @@
 #    define QTAWSXRAY_EXPORT
 #endif
 
-
 #endif // QTAWSXRAYGLOBAL_H

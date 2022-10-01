@@ -18,5 +18,4 @@
 #    define QTAWSRAM_EXPORT
 #endif
 
-
 #endif // QTAWSRAMGLOBAL_H

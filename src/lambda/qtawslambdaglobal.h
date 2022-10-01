@@ -18,5 +18,4 @@
 #    define QTAWSLAMBDA_EXPORT
 #endif
 
-
 #endif // QTAWSLAMBDAGLOBAL_H

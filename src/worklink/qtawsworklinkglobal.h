@@ -18,5 +18,4 @@
 #    define QTAWSWORKLINK_EXPORT
 #endif
 
-
 #endif // QTAWSWORKLINKGLOBAL_H

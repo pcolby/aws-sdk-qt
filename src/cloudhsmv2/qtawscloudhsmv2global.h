@@ -18,5 +18,4 @@
 #    define QTAWSCLOUDHSMV2_EXPORT
 #endif
 
-
 #endif // QTAWSCLOUDHSMV2GLOBAL_H

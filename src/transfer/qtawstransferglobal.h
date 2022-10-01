@@ -18,5 +18,4 @@
 #    define QTAWSTRANSFER_EXPORT
 #endif
 
-
 #endif // QTAWSTRANSFERGLOBAL_H

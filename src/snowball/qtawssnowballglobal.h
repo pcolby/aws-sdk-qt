@@ -18,5 +18,4 @@
 #    define QTAWSSNOWBALL_EXPORT
 #endif
 
-
 #endif // QTAWSSNOWBALLGLOBAL_H

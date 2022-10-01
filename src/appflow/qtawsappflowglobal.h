@@ -18,5 +18,4 @@
 #    define QTAWSAPPFLOW_EXPORT
 #endif
 
-
 #endif // QTAWSAPPFLOWGLOBAL_H

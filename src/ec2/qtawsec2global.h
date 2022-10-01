@@ -18,5 +18,4 @@
 #    define QTAWSEC2_EXPORT
 #endif
 
-
 #endif // QTAWSEC2GLOBAL_H

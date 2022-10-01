@@ -18,5 +18,4 @@
 #    define QTAWSCOGNITOSYNC_EXPORT
 #endif
 
-
 #endif // QTAWSCOGNITOSYNCGLOBAL_H

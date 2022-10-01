@@ -18,5 +18,4 @@
 #    define QTAWSCLOUDHSM_EXPORT
 #endif
 
-
 #endif // QTAWSCLOUDHSMGLOBAL_H

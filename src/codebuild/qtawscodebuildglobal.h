@@ -18,5 +18,4 @@
 #    define QTAWSCODEBUILD_EXPORT
 #endif
 
-
 #endif // QTAWSCODEBUILDGLOBAL_H

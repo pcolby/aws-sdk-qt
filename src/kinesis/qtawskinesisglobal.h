@@ -18,5 +18,4 @@
 #    define QTAWSKINESIS_EXPORT
 #endif
 
-
 #endif // QTAWSKINESISGLOBAL_H

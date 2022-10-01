@@ -18,5 +18,4 @@
 #    define QTAWSPRICING_EXPORT
 #endif
 
-
 #endif // QTAWSPRICINGGLOBAL_H

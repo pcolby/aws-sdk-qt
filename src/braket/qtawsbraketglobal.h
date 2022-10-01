@@ -18,5 +18,4 @@
 #    define QTAWSBRAKET_EXPORT
 #endif
 
-
 #endif // QTAWSBRAKETGLOBAL_H

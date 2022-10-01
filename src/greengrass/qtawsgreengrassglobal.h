@@ -18,5 +18,4 @@
 #    define QTAWSGREENGRASS_EXPORT
 #endif
 
-
 #endif // QTAWSGREENGRASSGLOBAL_H

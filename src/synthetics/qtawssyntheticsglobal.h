@@ -18,5 +18,4 @@
 #    define QTAWSSYNTHETICS_EXPORT
 #endif
 
-
 #endif // QTAWSSYNTHETICSGLOBAL_H

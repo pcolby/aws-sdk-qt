@@ -18,5 +18,4 @@
 #    define QTAWSWORKDOCS_EXPORT
 #endif
 
-
 #endif // QTAWSWORKDOCSGLOBAL_H

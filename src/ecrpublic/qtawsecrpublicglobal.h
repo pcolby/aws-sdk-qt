@@ -18,5 +18,4 @@
 #    define QTAWSECRPUBLIC_EXPORT
 #endif
 
-
 #endif // QTAWSECRPUBLICGLOBAL_H

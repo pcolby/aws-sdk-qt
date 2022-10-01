@@ -18,5 +18,4 @@
 #    define QTAWSTEXTRACT_EXPORT
 #endif
 
-
 #endif // QTAWSTEXTRACTGLOBAL_H

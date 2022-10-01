@@ -18,5 +18,4 @@
 #    define QTAWSAPPMESH_EXPORT
 #endif
 
-
 #endif // QTAWSAPPMESHGLOBAL_H

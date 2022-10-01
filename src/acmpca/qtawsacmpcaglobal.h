@@ -18,5 +18,4 @@
 #    define QTAWSACMPCA_EXPORT
 #endif
 
-
 #endif // QTAWSACMPCAGLOBAL_H

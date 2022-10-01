@@ -18,5 +18,4 @@
 #    define QTAWSAMPLIFY_EXPORT
 #endif
 
-
 #endif // QTAWSAMPLIFYGLOBAL_H

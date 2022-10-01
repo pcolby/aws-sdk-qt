@@ -18,5 +18,4 @@
 #    define QTAWSWORKMAIL_EXPORT
 #endif
 
-
 #endif // QTAWSWORKMAILGLOBAL_H

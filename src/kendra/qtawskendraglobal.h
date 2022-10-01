@@ -18,5 +18,4 @@
 #    define QTAWSKENDRA_EXPORT
 #endif
 
-
 #endif // QTAWSKENDRAGLOBAL_H

@@ -18,5 +18,4 @@
 #    define QTAWSEVENTBRIDGE_EXPORT
 #endif
 
-
 #endif // QTAWSEVENTBRIDGEGLOBAL_H

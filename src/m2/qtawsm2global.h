@@ -18,5 +18,4 @@
 #    define QTAWSM2_EXPORT
 #endif
 
-
 #endif // QTAWSM2GLOBAL_H

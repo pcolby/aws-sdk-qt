@@ -18,5 +18,4 @@
 #    define QTAWSDLM_EXPORT
 #endif
 
-
 #endif // QTAWSDLMGLOBAL_H

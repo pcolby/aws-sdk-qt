@@ -18,5 +18,4 @@
 #    define QTAWSRUM_EXPORT
 #endif
 
-
 #endif // QTAWSRUMGLOBAL_H

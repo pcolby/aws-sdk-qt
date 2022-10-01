@@ -18,5 +18,4 @@
 #    define QTAWSOUTPOSTS_EXPORT
 #endif
 
-
 #endif // QTAWSOUTPOSTSGLOBAL_H
