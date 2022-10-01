@@ -1,0 +1,34 @@
+// SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
+// SPDX-License-Identifier: LGPL-3.0-or-later
+
+#ifndef QTAWS_UPDATEPRICINGPLANREQUEST_H
+#define QTAWS_UPDATEPRICINGPLANREQUEST_H
+
+#include "billingconductorrequest.h"
+
+namespace QtAws {
+namespace BillingConductor {
+
+class UpdatePricingPlanRequestPrivate;
+
+class QTAWSBILLINGCONDUCTOR_EXPORT UpdatePricingPlanRequest : public BillingConductorRequest {
+
+public:
+    UpdatePricingPlanRequest(const UpdatePricingPlanRequest &other);
+    UpdatePricingPlanRequest();
+
+    virtual bool isValid() const Q_DECL_OVERRIDE;
+
+
+protected:
+    virtual QtAws::Core::AwsAbstractResponse * response(QNetworkReply * const reply) const Q_DECL_OVERRIDE;
+
+private:
+    Q_DECLARE_PRIVATE(UpdatePricingPlanRequest)
+
+};
+
+} // namespace BillingConductor
+} // namespace QtAws
+
+#endif
