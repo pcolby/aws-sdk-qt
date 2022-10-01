@@ -1,5 +1,5 @@
 {% include "license.txt" %}
-{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
+{% with service.canonicalId as ServiceName %}
 #ifndef QTAWS{{ServiceName|upper}}GLOBAL_H
 #define QTAWS{{ServiceName|upper}}GLOBAL_H
 

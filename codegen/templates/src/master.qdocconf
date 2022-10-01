@@ -1,5 +1,5 @@
 core/doc/qtawscore.qdocconf
 {% for id,service in services.items %}
-{{service.traits.awsApi_service.sdkId|cut:" "|lower}}/doc/qtaws{{service.traits.awsApi_service.sdkId|cut:" "|lower}}.qdocconf
+{{service.canonicalId|lower}}/doc/qtaws{{service.canonicalId|lower}}.qdocconf
 {% endfor %}
 ../doc/qtaws.qdocconf

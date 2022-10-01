@@ -1,5 +1,5 @@
 {% include "license.txt" %}
-{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
+{% with service.canonicalId as ServiceName %}
 {% with ServiceName|add:"Response" as ClassName %}
 #include "{{ClassName|lower}}.h"
 #include "{{ClassName|lower}}_p.h"

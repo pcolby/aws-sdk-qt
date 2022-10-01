@@ -1,5 +1,5 @@
 {% include "license.txt" %}
-{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
+{% with service.canonicalId as ServiceName %}
 {% with service.traits.smithyApi_title as ServiceTitle %}
 {% with ServiceName|add:"Client" as ClassName %}
 #include "{{ClassName|lower}}.h"

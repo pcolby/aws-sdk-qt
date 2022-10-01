@@ -1,4 +1,4 @@
-{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}add_compile_definitions(QTAWS{{ServiceName|upper}}_LIBRARY)
+{% with service.canonicalId as ServiceName %}add_compile_definitions(QTAWS{{ServiceName|upper}}_LIBRARY)
 
 add_library(QtAws{{ServiceName}}
   qtaws{{ServiceName|lower}}global.h
