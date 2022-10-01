@@ -1,4 +1,6 @@
-{% include "license.txt" %}
+// SPDX-FileCopyrightText: 2013-2022 Paul Colby <git@colby.id.au>
+// SPDX-License-Identifier: LGPL-3.0-or-later
+
 {% with service.canonicalId as ServiceName %}
 #ifndef QTAWS{{ServiceName|upper}}GLOBAL_H
 #define QTAWS{{ServiceName|upper}}GLOBAL_H
