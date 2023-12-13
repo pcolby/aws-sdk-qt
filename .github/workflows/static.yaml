@@ -10,7 +10,7 @@ jobs:
       run: sudo apt install libgrantlee5-dev
     - uses: actions/checkout@v4
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v2
+      uses: github/codeql-action/init@v3
       with:
         languages: cpp
     - name: Build
@@ -18,7 +18,7 @@ jobs:
         cmake -D BUILD_CODEGEN=YES -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v2
+      uses: github/codeql-action/analyze@v3
 
   Cppcheck:
     runs-on: ubuntu-latest
