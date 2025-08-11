@@ -12,7 +12,7 @@ jobs:
         - { cc: clang, cxx: clang++ }
         - { cc: gcc, cxx: g++ }
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Install Grantlee
       run: sudo apt install libgrantlee5-dev
     - name: Build
@@ -33,7 +33,7 @@ jobs:
         - { cc: clang, cxx: clang++ }
         - { cc: gcc, cxx: g++ }
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Install Tools
       run: sudo apt install clang
     - name: Install Qt
@@ -60,7 +60,7 @@ jobs:
         - { cc: clang, cxx: clang++ }
         - { cc: gcc-11, cxx: g++-11 }
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Install Qt
       uses: jurplel/install-qt-action@v3
       with:
@@ -87,7 +87,7 @@ jobs:
         - qt: '5.15.2'
           arch: win64_mingw81
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Install Qt (mingw)
       if: ${{ contains(matrix.generator, 'mingw') }}
       uses: jurplel/install-qt-action@v3
